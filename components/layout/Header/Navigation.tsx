@@ -29,7 +29,7 @@ const Navigation = ({ navItems, onShopHover, onDineHover, onStayHover, onEnterta
         <Box
           key={index}
           component={Link}
-          href={item === 'Shop' ? '/shop' : item === 'Dine' ? '/dine' : item === 'Stay' ? '/stay' : item === 'Entertain' ? '/entertain' : '#'}
+          href={item === 'Shop' ? '/shop' : item === 'Dine' ? '/dine' : item === 'Stay' ? '/stay' : item === 'Entertain' ? '/entertain' : item === 'Services' ? '/services' : '#'}
           onMouseEnter={() => {
             if (item === "Shop") onShopHover();
             if (item === "Dine") onDineHover();

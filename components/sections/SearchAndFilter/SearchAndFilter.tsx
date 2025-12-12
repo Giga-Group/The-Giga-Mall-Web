@@ -5,13 +5,77 @@ import { useSearchParams } from 'next/navigation';
 import { Box, TextField, Select, MenuItem, FormControl, InputLabel, Checkbox, FormControlLabel, Typography } from '@mui/material';
 import { Search, LocalOffer, CardGiftcard } from '@mui/icons-material';
 
-const SearchAndFilter = () => {
+interface CategoryOption {
+  value: string;
+  label: string;
+}
+
+interface SearchAndFilterProps {
+  pageType?: 'shop' | 'dine';
+  categories?: CategoryOption[];
+  subcategories?: CategoryOption[];
+  searchPlaceholder?: string;
+  offersLabel?: string;
+}
+
+const defaultShopCategories: CategoryOption[] = [
+  { value: '', label: 'All Categories' },
+  { value: 'electronics', label: 'Electronics' },
+  { value: 'fashion-men', label: 'Fashion - Men' },
+  { value: 'fashion-women', label: 'Fashion - Women' },
+  { value: 'fashion-children', label: 'Fashion - Children' },
+  { value: 'beauty', label: 'Beauty & Fragrances' },
+  { value: 'home', label: 'Home' },
+  { value: 'toys', label: 'Toys' }
+];
+
+const defaultDineCategories: CategoryOption[] = [
+  { value: '', label: 'View All' },
+  { value: 'cafe', label: 'Cafe' },
+  { value: 'fast-food', label: 'Fast Food' },
+  { value: 'food-drink', label: 'Food & Drink' },
+  { value: 'icecream', label: 'Icecream' },
+  { value: 'restaurant', label: 'Restaurant' }
+];
+
+const defaultShopSubcategories: CategoryOption[] = [
+  { value: '', label: 'All Subcategories' },
+  { value: 'clothing', label: 'Clothing' },
+  { value: 'shoes', label: 'Shoes' },
+  { value: 'accessories', label: 'Accessories' },
+  { value: 'watches', label: 'Watches' },
+  { value: 'jewelry', label: 'Jewelry' }
+];
+
+const defaultDineSubcategories: CategoryOption[] = [
+  { value: '', label: 'All Subcategories' },
+  { value: 'italian', label: 'Italian' },
+  { value: 'chinese', label: 'Chinese' },
+  { value: 'japanese', label: 'Japanese' },
+  { value: 'indian', label: 'Indian' },
+  { value: 'american', label: 'American' },
+  { value: 'middle-eastern', label: 'Middle Eastern' }
+];
+
+const SearchAndFilter = ({ 
+  pageType = 'shop',
+  categories,
+  subcategories,
+  searchPlaceholder,
+  offersLabel
+}: SearchAndFilterProps) => {
   const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState('');
   const [category, setCategory] = useState('');
   const [subcategory, setSubcategory] = useState('');
   const [viewBy, setViewBy] = useState('');
   const [showOffersOnly, setShowOffersOnly] = useState(false);
+
+  // Determine which categories and subcategories to use
+  const categoryOptions = categories || (pageType === 'dine' ? defaultDineCategories : defaultShopCategories);
+  const subcategoryOptions = subcategories || (pageType === 'dine' ? defaultDineSubcategories : defaultShopSubcategories);
+  const placeholder = searchPlaceholder || (pageType === 'dine' ? 'Search for restaurant' : 'Search for shop or brand');
+  const offersText = offersLabel || (pageType === 'dine' ? 'Show restaurants only with offers' : 'Show stores only with offers');
 
   useEffect(() => {
     const categoryParam = searchParams.get('category');
@@ -52,7 +116,7 @@ const SearchAndFilter = () => {
           <Box sx={{ flex: 1, maxWidth: { md: '400px' } }}>
             <TextField
               fullWidth
-              placeholder="Search for shop or brand"
+              placeholder={placeholder}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               variant="standard"
@@ -98,7 +162,7 @@ const SearchAndFilter = () => {
                   color: '#333333'
                 }}
               >
-                Show stores only with offers
+                {offersText}
               </Typography>
             }
             sx={{ 
@@ -152,14 +216,11 @@ const SearchAndFilter = () => {
                   }
                 }}
               >
-                <MenuItem value="">All Categories</MenuItem>
-                <MenuItem value="electronics">Electronics</MenuItem>
-                <MenuItem value="fashion-men">Fashion - Men</MenuItem>
-                <MenuItem value="fashion-women">Fashion - Women</MenuItem>
-                <MenuItem value="fashion-children">Fashion - Children</MenuItem>
-                <MenuItem value="beauty">Beauty & Fragrances</MenuItem>
-                <MenuItem value="home">Home</MenuItem>
-                <MenuItem value="toys">Toys</MenuItem>
+                {categoryOptions.map((cat) => (
+                  <MenuItem key={cat.value} value={cat.value}>
+                    {cat.label}
+                  </MenuItem>
+                ))}
               </Select>
             </FormControl>
 
@@ -183,12 +244,11 @@ const SearchAndFilter = () => {
                   }
                 }}
               >
-                <MenuItem value="">All Subcategories</MenuItem>
-                <MenuItem value="clothing">Clothing</MenuItem>
-                <MenuItem value="shoes">Shoes</MenuItem>
-                <MenuItem value="accessories">Accessories</MenuItem>
-                <MenuItem value="watches">Watches</MenuItem>
-                <MenuItem value="jewelry">Jewelry</MenuItem>
+                {subcategoryOptions.map((subcat) => (
+                  <MenuItem key={subcat.value} value={subcat.value}>
+                    {subcat.label}
+                  </MenuItem>
+                ))}
               </Select>
             </FormControl>
 

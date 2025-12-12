@@ -4,15 +4,20 @@ import { useState } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import Link from 'next/link';
 
-interface Store {
+export interface Store {
   name: string;
   slug?: string;
   hasOffers?: boolean;
   acceptsGiftCard?: boolean;
 }
 
+interface StoreGridProps {
+  items?: Store[];
+  basePath?: string;
+}
+
 // Sample store data - in a real app, this would come from an API
-const stores: Store[] = [
+const defaultStores: Store[] = [
   { name: '& Other Stories', slug: 'other-stories', hasOffers: true },
   { name: '100% Capri', slug: '100-capri' },
   { name: '12 STOREEZ', slug: '12-storeez' },
@@ -37,7 +42,7 @@ const stores: Store[] = [
   { name: 'Zara', slug: 'zara', hasOffers: true }
 ];
 
-const StoreGrid = () => {
+const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps) => {
   const [visibleCount, setVisibleCount] = useState(12);
   const itemsPerPage = 12;
 
@@ -45,8 +50,8 @@ const StoreGrid = () => {
     setVisibleCount(prev => prev + itemsPerPage);
   };
 
-  const visibleStores = stores.slice(0, visibleCount);
-  const hasMore = visibleCount < stores.length;
+  const visibleStores = items.slice(0, visibleCount);
+  const hasMore = visibleCount < items.length;
 
   return (
     <Box
@@ -79,7 +84,7 @@ const StoreGrid = () => {
           {visibleStores.map((store, index) => (
             <Link
               key={index}
-              href={`/shop/${store.slug || store.name.toLowerCase().replace(/\s+/g, '-')}`}
+              href={`${basePath}/${store.slug || store.name.toLowerCase().replace(/\s+/g, '-')}`}
               style={{ textDecoration: 'none' }}
             >
               <Box

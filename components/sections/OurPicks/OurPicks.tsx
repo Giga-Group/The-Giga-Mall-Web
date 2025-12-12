@@ -4,13 +4,18 @@ import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 
-interface PickItem {
+export interface PickItem {
   image: string;
   name: string;
   slug?: string;
 }
 
-const picks: PickItem[] = [
+interface OurPicksProps {
+  picks?: PickItem[];
+  basePath?: string;
+}
+
+const defaultPicks: PickItem[] = [
   {
     image: '/picture1.jpg',
     name: 'Almirah',
@@ -28,7 +33,7 @@ const picks: PickItem[] = [
   }
 ];
 
-const OurPicks = () => {
+const OurPicks = ({ picks = defaultPicks, basePath = '/shop' }: OurPicksProps) => {
   return (
     <Box
       sx={{
@@ -206,7 +211,7 @@ const OurPicks = () => {
         {picks.map((pick, index) => (
           <Link
             key={index}
-            href={`/shop/${pick.slug || pick.name.toLowerCase().replace(/\s+/g, '-')}`}
+            href={`${basePath}/${pick.slug || pick.name.toLowerCase().replace(/\s+/g, '-')}`}
             style={{ textDecoration: 'none' }}
           >
             <Box
