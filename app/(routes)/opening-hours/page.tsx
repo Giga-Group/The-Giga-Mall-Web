@@ -9,10 +9,184 @@ import { useRouter, useSearchParams } from 'next/navigation';
 
 const tabItems = ['OPENING HOURS', 'GETTING HERE', 'PARKING'] as const;
 
+// Opening hours data for each category
+interface OpeningHours {
+  [key: string]: {
+    mon: string;
+    tues: string;
+    wed: string;
+    thu: string;
+    fri: string;
+    sat: string;
+    sun: string;
+  };
+}
+
+const openingHoursData: OpeningHours = {
+  'ALL RETAILERS': {
+    mon: '10:00 AM - 11:00 PM',
+    tues: '10:00 AM - 11:00 PM',
+    wed: '10:00 AM - 11:00 PM',
+    thu: '10:00 AM - 11:00 PM',
+    fri: '10:00 AM - 11:00 PM',
+    sat: '10:00 AM - 11:00 PM',
+    sun: '10:00 AM - 11:00 PM',
+  },
+  'RESTAURANTS & FOOD COURTS': {
+    mon: '10:00 AM - 11:30 PM',
+    tues: '10:00 AM - 11:30 PM',
+    wed: '10:00 AM - 11:30 PM',
+    thu: '10:00 AM - 11:30 PM',
+    fri: '10:00 AM - 12:00 AM',
+    sat: '10:00 AM - 12:00 AM',
+    sun: '10:00 AM - 11:30 PM',
+  },
+  'METRO LINK BRIDGE OUTLETS': {
+    mon: '10:00 AM - 12:00 AM',
+    tues: '10:00 AM - 12:00 AM',
+    wed: '10:00 AM - 12:00 AM',
+    thu: '10:00 AM - 12:00 AM',
+    fri: '10:00 AM - 12:00 AM',
+    sat: '10:00 AM - 12:00 AM',
+    sun: '10:00 AM - 12:00 AM',
+  },
+  'SOCIAL DISTRKT RETAILERS': {
+    mon: '10:00 AM - 10:00 PM',
+    tues: '10:00 AM - 10:00 PM',
+    wed: '10:00 AM - 10:00 PM',
+    thu: '10:00 AM - 10:00 PM',
+    fri: '10:00 AM - 11:00 PM',
+    sat: '10:00 AM - 11:00 PM',
+    sun: '10:00 AM - 10:00 PM',
+  },
+  'SAB - PHARMACY AND STARBUCKS COFFEE': {
+    mon: '8:00 AM - 12:00 AM',
+    tues: '8:00 AM - 12:00 AM',
+    wed: '8:00 AM - 12:00 AM',
+    thu: '8:00 AM - 12:00 AM',
+    fri: '8:00 AM - 12:00 AM',
+    sat: '8:00 AM - 12:00 AM',
+    sun: '8:00 AM - 12:00 AM',
+  },
+  'SAB - FUN RIDERS': {
+    mon: '10:00 AM - 10:00 PM',
+    tues: '10:00 AM - 10:00 PM',
+    wed: '10:00 AM - 10:00 PM',
+    thu: '10:00 AM - 10:00 PM',
+    fri: '10:00 AM - 11:00 PM',
+    sat: '10:00 AM - 11:00 PM',
+    sun: '10:00 AM - 10:00 PM',
+  },
+  'SAB - SUPERMARKET': {
+    mon: '8:00 AM - 12:00 AM',
+    tues: '8:00 AM - 12:00 AM',
+    wed: '8:00 AM - 12:00 AM',
+    thu: '8:00 AM - 12:00 AM',
+    fri: '8:00 AM - 12:00 AM',
+    sat: '8:00 AM - 12:00 AM',
+    sun: '8:00 AM - 12:00 AM',
+  },
+  'BANKS': {
+    mon: '9:00 AM - 5:00 PM',
+    tues: '9:00 AM - 5:00 PM',
+    wed: '9:00 AM - 5:00 PM',
+    thu: '9:00 AM - 5:00 PM',
+    fri: '9:00 AM - 5:00 PM',
+    sat: '9:00 AM - 2:00 PM',
+    sun: 'Closed',
+  },
+  'REEL CINEMAS': {
+    mon: '10:00 AM - 12:00 AM',
+    tues: '10:00 AM - 12:00 AM',
+    wed: '10:00 AM - 12:00 AM',
+    thu: '10:00 AM - 12:00 AM',
+    fri: '10:00 AM - 1:00 AM',
+    sat: '10:00 AM - 1:00 AM',
+    sun: '10:00 AM - 12:00 AM',
+  },
+  'MEDICLINIC': {
+    mon: '8:00 AM - 10:00 PM',
+    tues: '8:00 AM - 10:00 PM',
+    wed: '8:00 AM - 10:00 PM',
+    thu: '8:00 AM - 10:00 PM',
+    fri: '8:00 AM - 10:00 PM',
+    sat: '9:00 AM - 6:00 PM',
+    sun: '9:00 AM - 6:00 PM',
+  },
+};
+
+const categoryList = [
+  'ALL RETAILERS',
+  'RESTAURANTS & FOOD COURTS',
+  'METRO LINK BRIDGE OUTLETS',
+  'SOCIAL DISTRKT RETAILERS',
+  'SAB - PHARMACY AND STARBUCKS COFFEE',
+  'SAB - FUN RIDERS',
+  'SAB - SUPERMARKET',
+  'BANKS',
+  'REEL CINEMAS',
+  'MEDICLINIC',
+];
+
+// Transportation data for "Getting Here" section
+interface TransportationData {
+  paragraphs: string[];
+  linkText?: string;
+  linkUrl?: string;
+}
+
+const transportationData: Record<string, TransportationData> = {
+  'BY METRO': {
+    paragraphs: [
+      'Getting to Giga Mall using the metro is easy. The nearest metro station is conveniently located within walking distance, with frequent passenger drop-offs daily.',
+      'The glass tunnel travelator link between the metro station and Giga Mall is fully temperature controlled, making it a pleasure to walk across while enjoying views of the city.',
+      'The metro link bridge is aligned with the mall\'s opening hours, operating from 10 AM to 12 AM on weekdays and extended hours on weekends.',
+    ],
+    linkText: 'Plan your journey to Giga Mall',
+    linkUrl: 'https://www.google.com/maps?q=Giga+Mall+Islamabad',
+  },
+  'BY BUS': {
+    paragraphs: [
+      'Giga Mall is easily accessible by bus with multiple bus routes serving the area. The main bus stop is located just a 2-minute walk from the mall entrance.',
+      'Several public bus routes connect Giga Mall to major areas of the city, with buses running every 15-20 minutes during peak hours and every 30 minutes during off-peak times.',
+      'For your convenience, bus schedules are aligned with mall opening hours. The bus stop features covered waiting areas and real-time arrival information displays.',
+    ],
+    linkText: 'View bus routes and schedules',
+    linkUrl: 'https://www.google.com/maps?q=Giga+Mall+Islamabad',
+  },
+  'BY CAR': {
+    paragraphs: [
+      'Giga Mall offers convenient parking facilities with over 5,000 parking spaces available across multiple levels. The parking areas are well-lit, secure, and easily accessible.',
+      'Multiple entrances and exits ensure smooth traffic flow. The parking system includes electric vehicle charging stations and designated spaces for families and disabled visitors.',
+      'Parking is free for the first 3 hours, with reasonable rates for extended stays. Valet parking services are also available at the main entrance for your convenience.',
+    ],
+    linkText: 'Get directions to Giga Mall',
+    linkUrl: 'https://www.google.com/maps?q=Giga+Mall+Islamabad',
+  },
+  'BY TAXI – CAREEM – UBER': {
+    paragraphs: [
+      'Giga Mall is easily reachable via taxi, Careem, or Uber. The designated drop-off and pick-up points are located at the main entrance for quick and convenient access.',
+      'Ride-hailing services operate 24/7 in the area, making it easy to get to and from the mall at any time. The drop-off zone is covered and well-marked for easy identification.',
+      'For your return journey, simply request a ride from the pick-up point located near the main entrance. Wait times are typically 5-10 minutes during peak hours.',
+    ],
+    linkText: 'Book a ride to Giga Mall',
+    linkUrl: 'https://www.google.com/maps?q=Giga+Mall+Islamabad',
+  },
+};
+
+const transportationOptions = [
+  'BY METRO',
+  'BY BUS',
+  'BY CAR',
+  'BY TAXI – CAREEM – UBER',
+];
+
 function OpeningHoursContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState(0);
+  const [selectedCategory, setSelectedCategory] = useState('ALL RETAILERS');
+  const [selectedTransportation, setSelectedTransportation] = useState('BY METRO');
 
   // Set initial tab from query param, e.g. ?tab=getting-here
   useEffect(() => {
@@ -203,20 +377,10 @@ function OpeningHoursContent() {
                   borderTop: '1px solid #f0f0f0',
                 }}
               >
-                {[
-                  'ALL RETAILERS',
-                  'RESTAURANTS & FOOD COURTS',
-                  'METRO LINK BRIDGE OUTLETS',
-                  'SOCIAL DISTRKT RETAILERS',
-                  'SAB - PHARMACY AND STARBUCKS COFFEE',
-                  'SAB - FUN RIDERS',
-                  'SAB - SUPERMARKET',
-                  'BANKS',
-                  'REEL CINEMAS',
-                  'MEDICLINIC',
-                ].map((item, idx) => (
+                {categoryList.map((item) => (
                   <Box
                     key={item}
+                    onClick={() => setSelectedCategory(item)}
                     sx={{
                       borderBottom: '1px solid #f0f0f0',
                       py: 1.5,
@@ -224,8 +388,12 @@ function OpeningHoursContent() {
                       fontSize: '0.85rem',
                       letterSpacing: '0.12em',
                       textTransform: 'uppercase',
-                      color: idx === 0 ? '#000000' : '#999999',
-                      fontWeight: idx === 0 ? 600 : 400,
+                      color: selectedCategory === item ? '#000000' : '#999999',
+                      fontWeight: selectedCategory === item ? 600 : 400,
+                      transition: 'color 0.2s ease, font-weight 0.2s ease',
+                      '&:hover': {
+                        color: '#000000',
+                      },
                     }}
                   >
                     {item}
@@ -238,11 +406,13 @@ function OpeningHoursContent() {
                 sx={{
                   flex: 1,
                   overflowX: 'auto',
+                  width: '100%',
                 }}
               >
                 <Box
                   sx={{
-                    minWidth: 600,
+                    minWidth: { xs: '100%', sm: 700, md: 800, lg: 600 },
+                    width: '100%',
                     borderTop: '1px solid #f0f0f0',
                     borderBottom: '1px solid #f0f0f0',
                   }}
@@ -261,8 +431,9 @@ function OpeningHoursContent() {
                         key={day}
                         sx={{
                           textAlign: 'center',
-                          py: 1.5,
-                          fontSize: '0.75rem',
+                          py: { xs: 1.5, sm: 2, md: 2.5 },
+                          px: { xs: 1, sm: 1.5, md: 2 },
+                          fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem' },
                           letterSpacing: '0.16em',
                           textTransform: 'uppercase',
                           color: '#777777',
@@ -277,38 +448,35 @@ function OpeningHoursContent() {
                     ))}
                   </Box>
 
-                  {/* Hours rows */}
-                  {[
-                    { label: '10:00 AM' },
-                    { label: '11:00 PM' },
-                  ].map((row, rowIndex) => (
-                    <Box
-                      key={rowIndex}
-                      sx={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(7, 1fr)',
-                        borderBottom: rowIndex === 1 ? 'none' : '1px solid #f9f9f9',
-                      }}
-                    >
-                      {Array.from({ length: 7 }).map((_, colIndex) => (
+                  {/* Hours row */}
+                  <Box
+                    sx={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(7, 1fr)',
+                    }}
+                  >
+                    {(['mon', 'tues', 'wed', 'thu', 'fri', 'sat', 'sun'] as const).map((day) => {
+                      const hours = openingHoursData[selectedCategory]?.[day] || 'Closed';
+                      return (
                         <Box
-                          key={colIndex}
+                          key={day}
                           sx={{
                             textAlign: 'center',
-                            py: 1.25,
-                            fontSize: '0.8rem',
-                            color: '#000000',
+                            py: { xs: 1.5, sm: 2, md: 2.5 },
+                            px: { xs: 1, sm: 1.5, md: 2 },
+                            fontSize: { xs: '0.8rem', sm: '0.85rem', md: '0.9rem' },
+                            color: hours === 'Closed' ? '#999999' : '#000000',
                             borderLeft: '1px solid #f9f9f9',
                             '&:first-of-type': {
                               borderLeft: 'none',
                             },
                           }}
                         >
-                          {row.label}
+                          {hours}
                         </Box>
-                      ))}
-                    </Box>
-                  ))}
+                      );
+                    })}
+                  </Box>
                 </Box>
               </Box>
             </Box>
@@ -335,9 +503,10 @@ function OpeningHoursContent() {
                     borderTop: '1px solid #f0f0f0',
                   }}
                 >
-                  {['BY METRO', 'BY BUS', 'BY CAR', 'BY TAXI – CAREEM – UBER'].map((item, idx) => (
+                  {transportationOptions.map((item) => (
                     <Box
                       key={item}
+                      onClick={() => setSelectedTransportation(item)}
                       sx={{
                         borderBottom: '1px solid #f0f0f0',
                         py: 1.5,
@@ -345,8 +514,12 @@ function OpeningHoursContent() {
                         fontSize: '0.85rem',
                         letterSpacing: '0.12em',
                         textTransform: 'uppercase',
-                        color: idx === 0 ? '#000000' : '#999999',
-                        fontWeight: idx === 0 ? 600 : 400,
+                        color: selectedTransportation === item ? '#000000' : '#999999',
+                        fontWeight: selectedTransportation === item ? 600 : 400,
+                        transition: 'color 0.2s ease, font-weight 0.2s ease',
+                        '&:hover': {
+                          color: '#000000',
+                        },
                       }}
                     >
                       {item}
@@ -363,50 +536,39 @@ function OpeningHoursContent() {
                     color: '#000000',
                   }}
                 >
-                  <Typography
-                    component="p"
-                    sx={{ mb: 2 }}
-                  >
-                    Getting to Giga Mall using the metro is easy. The nearest metro station is conveniently
-                    located within walking distance, with frequent passenger drop-offs daily.
-                  </Typography>
-                  <Typography
-                    component="p"
-                    sx={{ mb: 2 }}
-                  >
-                    The glass tunnel travelator link between the metro station and Giga Mall is fully
-                    temperature controlled, making it a pleasure to walk across while enjoying views of the
-                    city.
-                  </Typography>
-                  <Typography
-                    component="p"
-                    sx={{ mb: 2 }}
-                  >
-                    The metro link bridge is aligned with the mall&apos;s opening hours, operating from 10 AM
-                    to 12 AM on weekdays and extended hours on weekends.
-                  </Typography>
-                  <Typography
-                    component="p"
-                    sx={{ mb: 2 }}
-                  >
-                    Click here to plan your journey using the metro:
-                    {' '}
-                    <Box
-                      component="a"
-                      href="https://www.google.com/maps?q=Giga+Mall+Islamabad"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      sx={{
-                        textDecoration: 'underline',
-                        fontWeight: 600,
-                        ml: 0.5,
-                        color: '#000000',
-                      }}
+                  {transportationData[selectedTransportation]?.paragraphs.map((paragraph, index) => (
+                    <Typography
+                      key={index}
+                      component="p"
+                      sx={{ mb: 2 }}
                     >
-                      Plan your journey to Giga Mall
-                    </Box>
-                    .
-                  </Typography>
+                      {paragraph}
+                    </Typography>
+                  ))}
+                  {transportationData[selectedTransportation]?.linkText && (
+                    <Typography
+                      component="p"
+                      sx={{ mb: 2 }}
+                    >
+                      Click here to {selectedTransportation === 'BY METRO' ? 'plan your journey using the metro' : selectedTransportation === 'BY BUS' ? 'view bus routes and schedules' : selectedTransportation === 'BY CAR' ? 'get directions to Giga Mall' : 'book a ride to Giga Mall'}:
+                      {' '}
+                      <Box
+                        component="a"
+                        href={transportationData[selectedTransportation]?.linkUrl || 'https://www.google.com/maps?q=Giga+Mall+Islamabad'}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        sx={{
+                          textDecoration: 'underline',
+                          fontWeight: 600,
+                          ml: 0.5,
+                          color: '#000000',
+                        }}
+                      >
+                        {transportationData[selectedTransportation]?.linkText}
+                      </Box>
+                      .
+                    </Typography>
+                  )}
                 </Box>
               </Box>
 

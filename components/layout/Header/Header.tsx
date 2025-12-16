@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { AppBar, Toolbar, Button, IconButton, Box, useMediaQuery, useTheme } from '@mui/material';
-import { Public, AccountCircle } from '@mui/icons-material';
+import { Public, AccountCircle, Menu } from '@mui/icons-material';
 import Link from 'next/link';
 import Logo from '@/components/shared/Logo';
 import Navigation from './Navigation';
@@ -12,6 +12,7 @@ import StayDropdown from './StayDropdown';
 import EntertainDropdown from './EntertainDropdown';
 import PlanVisitDropdown from './PlanVisitDropdown';
 import SecondaryHeader from './SecondaryHeader';
+import MobileMenu from './MobileMenu';
 import { NAV_ITEMS } from '@/lib/utils/constants';
 
 const Header = () => {
@@ -22,6 +23,7 @@ const Header = () => {
   const [stayHovered, setStayHovered] = useState(false);
   const [entertainHovered, setEntertainHovered] = useState(false);
   const [planVisitHovered, setPlanVisitHovered] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <Box
@@ -65,15 +67,33 @@ const Header = () => {
         }}
       >
       <Toolbar sx={{ 
-        justifyContent: 'space-between',
+        justifyContent: isSmallScreen ? 'center' : 'space-between',
         padding: { xs: '0 12px', sm: '0 16px', md: '0 24px' },
         minHeight: { xs: '60px !important', md: '90px !important' },
         transition: 'padding 0.3s ease-in-out',
         width: '100%',
         maxWidth: '100%',
         overflow: 'hidden',
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
+        position: 'relative'
       }}>
+        {/* Hamburger Menu Icon - Mobile Only */}
+        {isSmallScreen && (
+          <IconButton
+            onClick={() => setMobileMenuOpen(true)}
+            sx={{
+              position: 'absolute',
+              left: '12px',
+              color: '#000000',
+              padding: '8px',
+              zIndex: 1,
+            }}
+          >
+            <Menu sx={{ fontSize: '28px' }} />
+          </IconButton>
+        )}
+
+        {/* Logo - Centered on Mobile */}
         <Box 
           component={Link}
           href="/"
@@ -86,9 +106,12 @@ const Header = () => {
             flexShrink: 1,
             transition: 'opacity 0.3s ease-in-out',
             opacity: 1,
-            position: 'relative',
+            position: isSmallScreen ? 'absolute' : 'relative',
+            left: isSmallScreen ? '50%' : 'auto',
+            transform: isSmallScreen ? 'translateX(-50%)' : 'none',
             display: 'flex',
-            alignItems: 'center'
+            alignItems: 'center',
+            zIndex: 1
           }}
         >
           <Logo 
@@ -144,7 +167,10 @@ const Header = () => {
             alignItems: 'center', 
             gap: { xs: 1, sm: 1.5 }, 
             flexShrink: 0,
-            minWidth: 0
+            minWidth: 0,
+            position: 'absolute',
+            right: '12px',
+            zIndex: 1
           }}>
             <IconButton
               sx={{
@@ -171,7 +197,7 @@ const Header = () => {
 
             <IconButton
               sx={{
-                border: '1px solid #ffffff',
+                border: '1px solid #000000',
                 borderRadius: { xs: '28px' },
                 padding: { xs: '6px' },
                 display: 'flex',
@@ -184,12 +210,12 @@ const Header = () => {
                 visibility: 'visible',
                 opacity: 1,
                 '&:hover': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  backgroundColor: 'rgba(0, 0, 0, 0.05)',
                 },
               }}
             >
               <AccountCircle sx={{ 
-                color: '#ffffff', 
+                color: '#000000', 
                 fontSize: { xs: '22px' },
                 display: 'block',
                 visibility: 'visible',
@@ -307,6 +333,11 @@ const Header = () => {
       isHidden={
         (shopHovered || dineHovered || stayHovered || entertainHovered || planVisitHovered) && !isSmallScreen
       }
+    />
+    
+    <MobileMenu 
+      isOpen={mobileMenuOpen}
+      onClose={() => setMobileMenuOpen(false)}
     />
     </Box>
   );

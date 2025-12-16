@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { Box, TextField, Select, MenuItem, FormControl, InputLabel, Checkbox, FormControlLabel, Typography } from '@mui/material';
+import { Box, TextField, Select, MenuItem, FormControl, InputLabel, Checkbox, FormControlLabel, Typography, Chip } from '@mui/material';
 import { Search, LocalOffer, CardGiftcard } from '@mui/icons-material';
 
 interface CategoryOption {
@@ -176,6 +176,196 @@ const SearchAndFilter = ({
           />
         </Box>
 
+        {/* Mobile Category Section - Horizontal Scrollable Chips */}
+        <Box
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            width: '100%',
+            overflowX: 'auto',
+            pb: 1,
+            '&::-webkit-scrollbar': {
+              height: '4px'
+            },
+            '&::-webkit-scrollbar-track': {
+              backgroundColor: '#f1f1f1'
+            },
+            '&::-webkit-scrollbar-thumb': {
+              backgroundColor: '#D19F3B',
+              borderRadius: '2px'
+            }
+          }}
+        >
+          <Typography
+            sx={{
+              fontSize: '0.875rem',
+              fontWeight: 600,
+              color: '#333333',
+              mb: 1.5,
+              textTransform: 'uppercase',
+              letterSpacing: '0.5px'
+            }}
+          >
+            Categories
+          </Typography>
+          <Box
+            sx={{
+              display: 'flex',
+              gap: 1,
+              pb: 0.5,
+              minWidth: 'max-content'
+            }}
+          >
+            {categoryOptions.map((cat) => (
+              <Chip
+                key={cat.value}
+                label={cat.label}
+                onClick={() => setCategory(cat.value)}
+                sx={{
+                  backgroundColor: category === cat.value ? '#D19F3B' : '#f5f5f5',
+                  color: category === cat.value ? '#ffffff' : '#333333',
+                  fontWeight: category === cat.value ? 600 : 400,
+                  fontSize: '0.875rem',
+                  height: '36px',
+                  cursor: 'pointer',
+                  '&:hover': {
+                    backgroundColor: category === cat.value ? '#B88A2A' : '#e0e0e0'
+                  },
+                  transition: 'all 0.2s ease'
+                }}
+              />
+            ))}
+          </Box>
+        </Box>
+
+        {/* Mobile Subcategory Section - Horizontal Scrollable Chips */}
+        <Box
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            width: '100%',
+            overflowX: 'auto',
+            pb: 1,
+            '&::-webkit-scrollbar': {
+              height: '4px'
+            },
+            '&::-webkit-scrollbar-track': {
+              backgroundColor: '#f1f1f1'
+            },
+            '&::-webkit-scrollbar-thumb': {
+              backgroundColor: '#D19F3B',
+              borderRadius: '2px'
+            }
+          }}
+        >
+          <Typography
+            sx={{
+              fontSize: '0.875rem',
+              fontWeight: 600,
+              color: '#333333',
+              mb: 1.5,
+              textTransform: 'uppercase',
+              letterSpacing: '0.5px'
+            }}
+          >
+            Subcategories
+          </Typography>
+          <Box
+            sx={{
+              display: 'flex',
+              gap: 1,
+              pb: 0.5,
+              minWidth: 'max-content'
+            }}
+          >
+            {subcategoryOptions.map((subcat) => (
+              <Chip
+                key={subcat.value}
+                label={subcat.label}
+                onClick={() => setSubcategory(subcat.value)}
+                sx={{
+                  backgroundColor: subcategory === subcat.value ? '#D19F3B' : '#f5f5f5',
+                  color: subcategory === subcat.value ? '#ffffff' : '#333333',
+                  fontWeight: subcategory === subcat.value ? 600 : 400,
+                  fontSize: '0.875rem',
+                  height: '36px',
+                  cursor: 'pointer',
+                  '&:hover': {
+                    backgroundColor: subcategory === subcat.value ? '#B88A2A' : '#e0e0e0'
+                  },
+                  transition: 'all 0.2s ease'
+                }}
+              />
+            ))}
+          </Box>
+        </Box>
+
+        {/* Mobile View By Section - Horizontal Scrollable Chips */}
+        <Box
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            width: '100%',
+            overflowX: 'auto',
+            pb: 1,
+            '&::-webkit-scrollbar': {
+              height: '4px'
+            },
+            '&::-webkit-scrollbar-track': {
+              backgroundColor: '#f1f1f1'
+            },
+            '&::-webkit-scrollbar-thumb': {
+              backgroundColor: '#D19F3B',
+              borderRadius: '2px'
+            }
+          }}
+        >
+          <Typography
+            sx={{
+              fontSize: '0.875rem',
+              fontWeight: 600,
+              color: '#333333',
+              mb: 1.5,
+              textTransform: 'uppercase',
+              letterSpacing: '0.5px'
+            }}
+          >
+            View By
+          </Typography>
+          <Box
+            sx={{
+              display: 'flex',
+              gap: 1,
+              pb: 0.5,
+              minWidth: 'max-content'
+            }}
+          >
+            {[
+              { value: '', label: 'All' },
+              { value: '0-9', label: '0-9' },
+              { value: 'a-f', label: 'A-F' },
+              { value: 'g-l', label: 'G-L' },
+              { value: 'm-r', label: 'M-R' },
+              { value: 's-z', label: 'S-Z' }
+            ].map((option) => (
+              <Chip
+                key={option.value}
+                label={option.label}
+                onClick={() => setViewBy(option.value)}
+                sx={{
+                  backgroundColor: viewBy === option.value ? '#D19F3B' : '#f5f5f5',
+                  color: viewBy === option.value ? '#ffffff' : '#333333',
+                  fontWeight: viewBy === option.value ? 600 : 400,
+                  fontSize: '0.875rem',
+                  height: '36px',
+                  cursor: 'pointer',
+                  '&:hover': {
+                    backgroundColor: viewBy === option.value ? '#B88A2A' : '#e0e0e0'
+                  },
+                  transition: 'all 0.2s ease'
+                }}
+              />
+            ))}
+          </Box>
+        </Box>
+
         {/* Row 2: Categories on Left, Store Offers Links on Right */}
         <Box
           sx={{
@@ -189,20 +379,20 @@ const SearchAndFilter = ({
           {/* Left Side - Category, Subcategory, View By */}
           <Box
             sx={{
-              display: 'flex',
-              flexDirection: { xs: 'column', sm: 'row' },
-              gap: { xs: 2, sm: 3 },
+              display: { xs: 'none', sm: 'flex' },
+              flexDirection: { sm: 'row' },
+              gap: { sm: 3 },
               alignItems: { sm: 'flex-end' },
               flex: 1
             }}
           >
             {/* Category Dropdown */}
-            <FormControl sx={{ minWidth: { xs: '100%', sm: '150px' }, maxWidth: { sm: '180px' } }} variant="standard">
-              <InputLabel id="category-label">Category</InputLabel>
+            <FormControl sx={{ minWidth: { sm: '150px' }, maxWidth: { sm: '180px' } }} variant="standard">
+              <InputLabel id="category-label" sx={{ fontSize: { sm: '0.875rem' } }}>Category</InputLabel>
               <Select
                 labelId="category-label"
                 value={category}
-                label="CATEGORY"
+                label="Category"
                 onChange={(e) => setCategory(e.target.value)}
                 sx={{
                   '& .MuiInput-underline:before': {
@@ -213,7 +403,8 @@ const SearchAndFilter = ({
                   },
                   '& .MuiInput-underline:after': {
                     borderBottomColor: '#D19F3B'
-                  }
+                  },
+                  fontSize: { sm: '0.875rem' }
                 }}
               >
                 {categoryOptions.map((cat) => (
@@ -225,12 +416,12 @@ const SearchAndFilter = ({
             </FormControl>
 
             {/* Subcategory Dropdown */}
-            <FormControl sx={{ minWidth: { xs: '100%', sm: '150px' }, maxWidth: { sm: '180px' } }} variant="standard">
-              <InputLabel id="subcategory-label">Subcategory</InputLabel>
+            <FormControl sx={{ minWidth: { sm: '150px' }, maxWidth: { sm: '180px' } }} variant="standard">
+              <InputLabel id="subcategory-label" sx={{ fontSize: { sm: '0.875rem' } }}>Subcategory</InputLabel>
               <Select
                 labelId="subcategory-label"
                 value={subcategory}
-                label="SUBCATEGORY"
+                label="Subcategory"
                 onChange={(e) => setSubcategory(e.target.value)}
                 sx={{
                   '& .MuiInput-underline:before': {
@@ -241,7 +432,8 @@ const SearchAndFilter = ({
                   },
                   '& .MuiInput-underline:after': {
                     borderBottomColor: '#D19F3B'
-                  }
+                  },
+                  fontSize: { sm: '0.875rem' }
                 }}
               >
                 {subcategoryOptions.map((subcat) => (
@@ -253,12 +445,12 @@ const SearchAndFilter = ({
             </FormControl>
 
             {/* View By Dropdown */}
-            <FormControl sx={{ minWidth: { xs: '100%', sm: '120px' }, maxWidth: { sm: '150px' } }} variant="standard">
-              <InputLabel id="viewby-label">View by 0-9</InputLabel>
+            <FormControl sx={{ minWidth: { sm: '120px' }, maxWidth: { sm: '150px' } }} variant="standard">
+              <InputLabel id="viewby-label" sx={{ fontSize: { sm: '0.875rem' } }}>View by 0-9</InputLabel>
               <Select
                 labelId="viewby-label"
                 value={viewBy}
-                label="VIEW BY 0-9"
+                label="View by 0-9"
                 onChange={(e) => setViewBy(e.target.value)}
                 sx={{
                   '& .MuiInput-underline:before': {
@@ -269,7 +461,8 @@ const SearchAndFilter = ({
                   },
                   '& .MuiInput-underline:after': {
                     borderBottomColor: '#D19F3B'
-                  }
+                  },
+                  fontSize: { sm: '0.875rem' }
                 }}
               >
                 <MenuItem value="">All</MenuItem>
