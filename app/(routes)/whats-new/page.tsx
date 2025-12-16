@@ -2,9 +2,7 @@
 
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { Box, Typography, Breadcrumbs, Link as MuiLink } from '@mui/material';
-import { NavigateNext } from '@mui/icons-material';
-import Link from 'next/link';
+import { Box, Typography } from '@mui/material';
 import TopPicksSection from '@/components/sections/TopPicksSection/TopPicksSection';
 import FirstLookSection from '@/components/sections/FirstLookSection';
 import ExploreTheMall from '@/components/sections/ExploreTheMall';
@@ -44,7 +42,7 @@ export default function WhatsNewPage() {
                 mb: { xs: 2, sm: 3, md: 4, lg: 2 }
               }}
             >
-              What's New
+              What&apos;s New
             </Typography>
 
             {/* Introductory Text */}
@@ -61,7 +59,7 @@ export default function WhatsNewPage() {
                 px: { xs: 2, sm: 0 }
               }}
             >
-              With our diverse range of shopping, dining and entertainment options, What's New at Giga Mall will keep you up to date on our latest products, events and store openings.
+              With our diverse range of shopping, dining and entertainment options, What&apos;s New at Giga Mall will keep you up to date on our latest products, events and store openings.
             </Typography>
           </Box>
 

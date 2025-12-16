@@ -4,12 +4,12 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Box, Typography, Tabs, Tab } from '@mui/material';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 
 const tabItems = ['OPENING HOURS', 'GETTING HERE', 'PARKING'] as const;
 
-export default function OpeningHoursPage() {
+function OpeningHoursContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState(0);
@@ -169,7 +169,7 @@ export default function OpeningHoursPage() {
                   },
                 }}
               >
-                {tabItems.map((label, index) => (
+                {tabItems.map((label) => (
                   <Tab
                     key={label}
                     label={label}
@@ -569,6 +569,32 @@ export default function OpeningHoursPage() {
       </main>
       <Footer />
     </>
+  );
+}
+
+export default function OpeningHoursPage() {
+  return (
+    <Suspense fallback={
+      <>
+        <Header />
+        <main>
+          <Box
+            sx={{
+              minHeight: '100vh',
+              backgroundColor: '#ffffff',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            <Typography>Loading...</Typography>
+          </Box>
+        </main>
+        <Footer />
+      </>
+    }>
+      <OpeningHoursContent />
+    </Suspense>
   );
 }
 

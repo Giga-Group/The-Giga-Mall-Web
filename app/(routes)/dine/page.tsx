@@ -8,6 +8,7 @@ import StoreGrid from '@/components/sections/StoreGrid';
 import DiscoverEventsOffers from '@/components/sections/DiscoverEventsOffers';
 import ExploreTheMall from '@/components/sections/ExploreTheMall';
 import { Box, Typography } from '@mui/material';
+import { Suspense } from 'react';
 import type { PickItem } from '@/components/sections/OurPicks/OurPicks';
 import type { Store } from '@/components/sections/StoreGrid/StoreGrid';
 
@@ -94,7 +95,9 @@ export default function DinePage() {
           <OurPicks picks={restaurantPicks} basePath="/dine" />
 
           {/* Search and Filter Section */}
-          <SearchAndFilter pageType="dine" />
+          <Suspense fallback={<Box sx={{ py: 4, px: { xs: 2, sm: 4, md: 6, lg: 10 } }}>Loading filters...</Box>}>
+            <SearchAndFilter pageType="dine" />
+          </Suspense>
 
           {/* Store Grid Section */}
           <StoreGrid items={restaurants} basePath="/dine" />

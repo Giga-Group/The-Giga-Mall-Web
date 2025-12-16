@@ -193,7 +193,7 @@ const DineLocation = ({ dine }: DineLocationProps) => {
                 fontFamily: 'monospace',
               }}
             >
-              Nando's
+              Nando&apos;s
             </Box>
             <Box
               sx={{

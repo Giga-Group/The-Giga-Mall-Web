@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Container, Grid, Typography, Link, Collapse } from '@mui/material';
+import { Box, Container, Typography, Link, Collapse } from '@mui/material';
 import { ChevronRight } from '@mui/icons-material';
 import { useState } from 'react';
 import Image from 'next/image';
@@ -20,8 +20,18 @@ const Footer = () => {
       }}
     >
       <Container maxWidth="xl">
-        <Grid container spacing={{ xs: 3, md: 4 }}>
-          <Grid item xs={12} md={5} lg={6} sx={{ flexBasis: { lg: '48.666667%' }, maxWidth: { lg: '48.666667%' } }}>
+        <Box
+          sx={{
+            display: 'grid',
+            gridTemplateColumns: {
+              xs: '1fr',
+              md: 'repeat(12, 1fr)',
+              lg: '48.666667% 23% 1fr'
+            },
+            gap: { xs: 3, md: 4 },
+          }}
+        >
+          <Box sx={{ gridColumn: { xs: '1', md: 'span 5', lg: 'auto' } }}>
             <Typography
               sx={{
                 fontFamily: 'Georgia, "Times New Roman", Times, serif',
@@ -61,7 +71,7 @@ const Footer = () => {
                 <br /><br />
                 <strong>At the Heart of the Community</strong>
                 <br /><br />
-                Giga Mall is more than a destination—it's a place where the community comes together. As a center of inspiration, entertainment, and connection, we strive to deliver memorable experiences that enrich everyday life.
+                Giga Mall is more than a destination—it&apos;s a place where the community comes together. As a center of inspiration, entertainment, and connection, we strive to deliver memorable experiences that enrich everyday life.
                 <br /><br />
                 <strong>Visit Giga Mall</strong>
                 <br /><br />
@@ -109,9 +119,14 @@ const Footer = () => {
                 <Logo width={750} height={350} />
               </Box>
             </Box>
-          </Grid>
+          </Box>
 
-          <Grid item xs={12} md={4} lg={3} sx={{ flexBasis: { lg: '23%' }, maxWidth: { lg: '23%' }, display: 'flex', flexDirection: 'column', marginTop: { xs: 2, md: 0 } }}>
+          <Box sx={{ 
+            display: 'flex', 
+            flexDirection: 'column', 
+            marginTop: { xs: 2, md: 0 },
+            gridColumn: { xs: '1', md: 'span 4', lg: 'auto' }
+          }}>
             <Typography
               sx={{
                 fontFamily: 'Georgia, "Times New Roman", Times, serif',
@@ -177,9 +192,14 @@ const Footer = () => {
             >
               © 2025, Giga Mall
             </Typography>
-          </Grid>
+          </Box>
 
-          <Grid item xs={12} md={3} lg={3} sx={{ flexBasis: { lg: '23%' }, maxWidth: { lg: '23%' }, display: 'flex', flexDirection: 'column', marginTop: { xs: 2, md: 0 } }}>
+          <Box sx={{ 
+            display: 'flex', 
+            flexDirection: 'column', 
+            marginTop: { xs: 2, md: 0 },
+            gridColumn: { xs: '1', md: 'span 3', lg: 'auto' }
+          }}>
             <Typography
               sx={{
                 fontFamily: 'Georgia, "Times New Roman", Times, serif',
@@ -299,8 +319,8 @@ const Footer = () => {
                 <ScrollToTop />
               </Box>
             </Box>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Container>
     </Box>
   );

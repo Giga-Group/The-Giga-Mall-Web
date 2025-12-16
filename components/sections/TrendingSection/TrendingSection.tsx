@@ -246,8 +246,8 @@ const TrendingSection = () => {
             >
               <Card 
                 variant="trending" 
-                data={item as any} 
-                isHeroVideo={(item as any).isVideo && index === 0}
+                data={item} 
+                isHeroVideo={item.isVideo && index === 0}
                 showOverlay={true}
                 showLogo={true}
               />

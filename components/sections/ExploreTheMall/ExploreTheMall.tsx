@@ -1,13 +1,9 @@
 'use client';
 
-import { useState } from 'react';
-import { Box, Typography, Button, Select, MenuItem, FormControl, IconButton } from '@mui/material';
-import { KeyboardArrowUp, KeyboardArrowDown, MyLocation } from '@mui/icons-material';
+import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
 
 const ExploreTheMall = () => {
-  const [selectedFloor, setSelectedFloor] = useState('ground');
-
   return (
     <Box
       sx={{
@@ -52,151 +48,6 @@ const ExploreTheMall = () => {
           >
             Every store covered. Plan your visit with our interactive map.
           </Typography>
-
-          {/* Map Container */}
-          <Box
-            sx={{
-              position: 'relative',
-              width: '100%',
-              height: { xs: '300px', sm: '400px', md: '500px' },
-              backgroundColor: '#f5f5f5',
-              borderRadius: '8px',
-              overflow: 'hidden',
-              border: '1px solid #e0e0e0',
-              mb: 2
-            }}
-          >
-            {/* Floor Selector */}
-            <Box
-              sx={{
-                position: 'absolute',
-                top: 16,
-                left: 16,
-                zIndex: 10
-              }}
-            >
-              <FormControl
-                variant="standard"
-                sx={{
-                  minWidth: 150,
-                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                  borderRadius: '20px',
-                  px: 1.5,
-                  py: 0.5
-                }}
-              >
-                <Select
-                  value={selectedFloor}
-                  onChange={(e) => setSelectedFloor(e.target.value)}
-                  sx={{
-                    '&:before': { display: 'none' },
-                    '&:after': { display: 'none' },
-                    '& .MuiSelect-select': {
-                      padding: '4px 8px',
-                      fontSize: '0.9rem',
-                      fontWeight: 500
-                    },
-                    '& .MuiSelect-icon': {
-                      right: 8
-                    }
-                  }}
-                  IconComponent={KeyboardArrowDown}
-                >
-                  <MenuItem value="ground">Ground Floor</MenuItem>
-                  <MenuItem value="first">First Floor</MenuItem>
-                  <MenuItem value="second">Second Floor</MenuItem>
-                </Select>
-              </FormControl>
-            </Box>
-
-            {/* Map Controls */}
-            <Box
-              sx={{
-                position: 'absolute',
-                top: 70,
-                left: 16,
-                zIndex: 10,
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 1,
-                backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                borderRadius: '20px',
-                padding: '4px'
-              }}
-            >
-              <IconButton
-                size="small"
-                sx={{
-                  width: 32,
-                  height: 32,
-                  color: '#333333'
-                }}
-              >
-                <KeyboardArrowUp />
-              </IconButton>
-              <IconButton
-                size="small"
-                sx={{
-                  width: 32,
-                  height: 32,
-                  color: '#333333'
-                }}
-              >
-                <KeyboardArrowDown />
-              </IconButton>
-              <IconButton
-                size="small"
-                sx={{
-                  width: 32,
-                  height: 32,
-                  color: '#333333'
-                }}
-              >
-                <MyLocation />
-              </IconButton>
-            </Box>
-
-            {/* Placeholder Map */}
-            <Box
-              sx={{
-                width: '100%',
-                height: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: '#e8e8e8',
-                backgroundImage: 'linear-gradient(45deg, #f0f0f0 25%, transparent 25%), linear-gradient(-45deg, #f0f0f0 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #f0f0f0 75%), linear-gradient(-45deg, transparent 75%, #f0f0f0 75%)',
-                backgroundSize: '20px 20px',
-                backgroundPosition: '0 0, 0 10px, 10px -10px, -10px 0px'
-              }}
-            >
-              <Typography
-                sx={{
-                  color: '#999999',
-                  fontSize: '0.9rem'
-                }}
-              >
-                Interactive Map
-              </Typography>
-            </Box>
-          </Box>
-
-          <Link href="/map" style={{ textDecoration: 'none' }}>
-            <Typography
-              sx={{
-                fontSize: { xs: '0.9rem', sm: '1rem', md: '0.9rem', lg: '0.9rem' },
-                color: '#D19F3B',
-                fontWeight: 500,
-                textDecoration: 'underline',
-                cursor: 'pointer',
-                '&:hover': {
-                  opacity: 0.7
-                }
-              }}
-            >
-              View interactive map
-            </Typography>
-          </Link>
         </Box>
 
         {/* Right Side - Visitor Info */}

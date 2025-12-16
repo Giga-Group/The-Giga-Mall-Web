@@ -7,7 +7,6 @@ import Image from 'next/image';
 const ExperienceSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [hasScrolledPast100vh, setHasScrolledPast100vh] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const [animationCompleted, setAnimationCompleted] = useState(false);
 
@@ -33,9 +32,6 @@ const ExperienceSection = () => {
       const inView = sectionTop <= 0 && sectionBottom > windowHeight;
       setIsInView(inView);
 
-      const scrolledPastThreshold = sectionTop <= -windowHeight;
-      setHasScrolledPast100vh(scrolledPastThreshold);
-
       let progress = 0;
       
       if (inView) {
@@ -59,7 +55,7 @@ const ExperienceSection = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-  const getImagePosition = (position: string, progress: number, index: number) => {
+  const getImagePosition = (position: string, progress: number) => {
     const rawProgress = Math.max(0, Math.min(1, progress));
     const imageProgress = rawProgress;
     
@@ -161,7 +157,7 @@ EXPERIENCE`}
       </Box>
 
       {(isInView || animationCompleted) && images.map((image, index) => {
-        const position = getImagePosition(image.position, scrollProgress, index);
+        const position = getImagePosition(image.position, scrollProgress);
         return (
           <Box
             key={index}

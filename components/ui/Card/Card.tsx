@@ -16,6 +16,9 @@ const Card = ({
   const isBrand = variant === 'brand';
 
   if (isBrand) {
+    const brandData = 'name' in data ? data : null;
+    if (!brandData) return null;
+    
     return (
       <>
         <Box
@@ -41,8 +44,8 @@ const Card = ({
           }}
         >
           <Image 
-            src={(data as any).image} 
-            alt={(data as any).name} 
+            src={brandData.image} 
+            alt={brandData.name} 
             fill
             style={{ objectFit: 'cover' }}
           />
@@ -56,13 +59,14 @@ const Card = ({
             padding: { xs: '0 4px', sm: '0', md: '0' }
           }}
         >
-          {(data as any).name}
+          {brandData.name}
         </Typography>
       </>
     );
   }
 
-  const trendingData = data as any;
+  const trendingData = 'title' in data ? data : null;
+  if (!trendingData) return null;
 
   return (
     <Box
@@ -95,7 +99,7 @@ const Card = ({
           position: 'relative'
         }}
       >
-        {trendingData.isVideo ? (
+        {('isVideo' in trendingData && trendingData.isVideo) ? (
           <>
             <motion.video
               layoutId={isHeroVideo ? "heroVideo" : undefined}
@@ -121,15 +125,15 @@ const Card = ({
                 transition: 'transform 0.3s ease-in-out'
               }}
             >
-              <source src={trendingData.video} type="video/mp4" />
+              <source src={('video' in trendingData ? trendingData.video : '') || ''} type="video/mp4" />
               Your browser does not support the video tag.
             </motion.video>
           </>
         ) : (
           <>
             <Image 
-              src={trendingData.image} 
-              alt={trendingData.title}
+              src={trendingData.image || ''} 
+              alt={trendingData.title || ''}
               fill
               style={{ objectFit: 'cover', transition: 'transform 0.3s ease-in-out' }}
             />
@@ -171,7 +175,7 @@ const Card = ({
         )}
       </Box>
 
-      {!trendingData.isVideo && (
+      {!('isVideo' in trendingData && trendingData.isVideo) && (
         <Box
           sx={{
             padding: { xs: '16px', md: '20px', lg: '24px' },
@@ -191,7 +195,7 @@ const Card = ({
               lineHeight: 1.2
             }}
           >
-            {isTrending ? 'Giga Mall' : trendingData.category}
+            {isTrending ? 'Giga Mall' : ('category' in trendingData ? trendingData.category : '')}
           </Typography>
 
           <Typography
@@ -215,7 +219,7 @@ const Card = ({
               lineHeight: 1.4
             }}
           >
-            {trendingData.dates}
+            {('dates' in trendingData ? trendingData.dates : '')}
           </Typography>
         </Box>
       )}

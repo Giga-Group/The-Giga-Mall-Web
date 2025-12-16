@@ -91,17 +91,6 @@ const textFadeUp = keyframes`
   }
 `;
 
-const logoFadeIn = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(-8px) scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-`;
-
 const imageFadeIn = keyframes`
   0% {
     opacity: 0;
@@ -110,28 +99,6 @@ const imageFadeIn = keyframes`
   100% {
     opacity: 1;
     transform: scale(1);
-  }
-`;
-
-const slideInFromRight = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateX(30px) scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-  }
-`;
-
-const slideInFromLeft = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateX(-30px) scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0) scale(1);
   }
 `;
 

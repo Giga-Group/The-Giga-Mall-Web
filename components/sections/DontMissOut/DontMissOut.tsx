@@ -38,7 +38,7 @@ const DontMissOut = () => {
             lineHeight: 1.2,
           }}
         >
-          Don't miss out
+          Don&apos;t miss out
         </Typography>
 
         {/* Buttons */}

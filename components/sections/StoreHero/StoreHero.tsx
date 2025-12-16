@@ -3,7 +3,6 @@
 import { Box, Typography, Link } from '@mui/material';
 import { Phone } from '@mui/icons-material';
 import Image from 'next/image';
-import NextLink from 'next/link';
 import { StoreDetail } from '@/lib/utils/storeData';
 
 interface StoreHeroProps {

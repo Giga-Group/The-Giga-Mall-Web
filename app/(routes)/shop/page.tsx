@@ -7,9 +7,8 @@ import SearchAndFilter from '@/components/sections/SearchAndFilter';
 import StoreGrid from '@/components/sections/StoreGrid';
 import DiscoverEventsOffers from '@/components/sections/DiscoverEventsOffers';
 import ExploreTheMall from '@/components/sections/ExploreTheMall';
-import { Box, Typography, Breadcrumbs, Link as MuiLink } from '@mui/material';
-import { NavigateNext } from '@mui/icons-material';
-import Link from 'next/link';
+import { Box, Typography } from '@mui/material';
+import { Suspense } from 'react';
 
 export default function ShopPage() {
   return (
@@ -51,7 +50,9 @@ export default function ShopPage() {
           <OurPicks />
 
           {/* Search and Filter Section */}
-          <SearchAndFilter />
+          <Suspense fallback={<Box sx={{ py: 4, px: { xs: 2, sm: 4, md: 6, lg: 10 } }}>Loading filters...</Box>}>
+            <SearchAndFilter />
+          </Suspense>
 
           {/* Store Grid Section */}
           <StoreGrid />
