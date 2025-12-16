@@ -57,33 +57,42 @@ const SecondaryHeader = ({ isHidden = false }: SecondaryHeaderProps) => {
           scrollbarWidth: 'none'
         }}
       >
-        {SECONDARY_NAV_ITEMS.map((item, index) => (
-          <Box
-            key={index}
-            component={Link}
-            href="#"
-            sx={{
-              color: '#ffffff',
-              textDecoration: 'none',
-              fontSize: { md: '13px', lg: '14px' },
-              fontWeight: 500,
-              textTransform: 'uppercase',
-              letterSpacing: '0.5px',
-              padding: '8px 12px',
-              cursor: 'pointer',
-              transition: 'color 0.3s ease',
-              whiteSpace: 'nowrap',
-              display: 'flex',
-              alignItems: 'center',
-              height: '100%',
-              '&:hover': {
+        {SECONDARY_NAV_ITEMS.map((item, index) => {
+          const href =
+            item === 'OFFERS'
+              ? '/offers'
+              : item === 'EVENTS'
+              ? '/events'
+              : '#';
+
+          return (
+            <Box
+              key={index}
+              component={Link}
+              href={href}
+              sx={{
                 color: '#ffffff',
-              },
-            }}
-          >
-            {item}
-          </Box>
-        ))}
+                textDecoration: 'none',
+                fontSize: { md: '13px', lg: '14px' },
+                fontWeight: 500,
+                textTransform: 'uppercase',
+                letterSpacing: '0.5px',
+                padding: '8px 12px',
+                cursor: 'pointer',
+                transition: 'color 0.3s ease',
+                whiteSpace: 'nowrap',
+                display: 'flex',
+                alignItems: 'center',
+                height: '100%',
+                '&:hover': {
+                  color: '#ffffff',
+                },
+              }}
+            >
+              {item}
+            </Box>
+          );
+        })}
       </Box>
     </Box>
   );
