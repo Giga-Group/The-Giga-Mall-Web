@@ -1,6 +1,7 @@
 'use client';
 
 import { Box } from '@mui/material';
+import Link from 'next/link';
 
 interface PlanVisitDropdownProps {
   isOpen: boolean;
@@ -10,10 +11,10 @@ interface PlanVisitDropdownProps {
 
 const PlanVisitDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: PlanVisitDropdownProps) => {
   const planVisitItems = [
-    "Opening hours",
-    "Getting here",
-    "Giga Extension",
-    "Parking"
+    { label: "Opening hours", href: "/opening-hours" },
+    { label: "Getting here", href: "/opening-hours?tab=getting-here" },
+    { label: "Giga Extension", href: "/opening-hours?tab=opening-hours" },
+    { label: "Parking", href: "/opening-hours?tab=parking" }
   ];
 
   if (!isOpen) return null;
@@ -58,8 +59,8 @@ const PlanVisitDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: PlanVisitDrop
         {planVisitItems.map((item, index) => (
           <Box
             key={index}
-            component="a"
-            href="#"
+            component={Link}
+            href={item.href}
             sx={{
               color: '#000000',
               textDecoration: 'none',
@@ -72,7 +73,7 @@ const PlanVisitDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: PlanVisitDrop
               }
             }}
           >
-            {item}
+            {item.label}
           </Box>
         ))}
       </Box>

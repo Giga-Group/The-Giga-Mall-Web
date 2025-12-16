@@ -25,11 +25,29 @@ const Navigation = ({ navItems, onShopHover, onDineHover, onStayHover, onEnterta
       justifyContent: 'center',
       mx: { md: 2, lg: 4 }
     }}>
-      {navItems.map((item, index) => (
+      {navItems.map((item, index) => {
+        const href =
+          item === "What's New"
+            ? '/whats-new'
+            : item === 'Shop'
+            ? '/shop'
+            : item === 'Dine'
+            ? '/dine'
+            : item === 'Stay'
+            ? '/stay'
+            : item === 'Entertain'
+            ? '/entertain'
+            : item === 'Services'
+            ? '/services'
+            : item === 'Plan your visit'
+            ? '/opening-hours'
+            : '#';
+
+        return (
         <Box
           key={index}
           component={Link}
-          href={item === 'Shop' ? '/shop' : item === 'Dine' ? '/dine' : item === 'Stay' ? '/stay' : item === 'Entertain' ? '/entertain' : item === 'Services' ? '/services' : '#'}
+          href={href}
           onMouseEnter={() => {
             if (item === "Shop") onShopHover();
             if (item === "Dine") onDineHover();
@@ -79,7 +97,7 @@ const Navigation = ({ navItems, onShopHover, onDineHover, onStayHover, onEnterta
         >
           {item}
         </Box>
-      ))}
+      )})}
     </Box>
   );
 };
