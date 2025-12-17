@@ -195,6 +195,8 @@ const FeaturedSection = () => {
   return (
     <Box
       sx={{
+        position: 'relative',
+        overflow: 'hidden',
         width: '100%',
         backgroundColor: '#ffffff',
         py: { xs: 4, sm: 5, md: 6 },
@@ -204,6 +206,21 @@ const FeaturedSection = () => {
         gap: { xs: 3, sm: 4 }
       }}
     >
+      {/* Decorative corner gradients to match footer */}
+      <Box
+        sx={{
+          position: 'absolute',
+          inset: 0,
+          pointerEvents: 'none',
+          zIndex: 0,
+          opacity: 0.9,
+          backgroundImage: `
+            radial-gradient(circle at top left, rgba(209, 159, 59, 0.18), transparent 55%),
+            radial-gradient(circle at bottom right, rgba(209, 159, 59, 0.18), transparent 65%)
+          `,
+          backgroundBlendMode: 'soft-light, normal',
+        }}
+      />
       <Typography
         variant="h2"
         sx={{

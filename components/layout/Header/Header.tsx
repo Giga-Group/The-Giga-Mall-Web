@@ -25,6 +25,14 @@ const Header = () => {
   const [planVisitHovered, setPlanVisitHovered] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const clearAllDropdowns = () => {
+    setShopHovered(false);
+    setDineHovered(false);
+    setStayHovered(false);
+    setEntertainHovered(false);
+    setPlanVisitHovered(false);
+  };
+
   return (
     <Box
       sx={{
@@ -32,13 +40,7 @@ const Header = () => {
         width: '100%',
         zIndex: 9999
       }}
-      onMouseLeave={() => {
-        setShopHovered(false);
-        setDineHovered(false);
-        setStayHovered(false);
-        setEntertainHovered(false);
-        setPlanVisitHovered(false);
-      }}
+      onMouseLeave={clearAllDropdowns}
     >
       <AppBar 
         position="fixed"
@@ -66,6 +68,21 @@ const Header = () => {
           willChange: 'transform'
         }}
       >
+      {/* Decorative corner gradients to match footer & featured section */}
+      <Box
+        sx={{
+          position: 'absolute',
+          inset: 0,
+          pointerEvents: 'none',
+          zIndex: 0,
+          opacity: 0.9,
+          backgroundImage: `
+            radial-gradient(circle at top left, rgba(209, 159, 59, 0.18), transparent 55%),
+            radial-gradient(circle at bottom right, rgba(209, 159, 59, 0.18), transparent 65%)
+          `,
+          backgroundBlendMode: 'soft-light, normal',
+        }}
+      />
       <Toolbar sx={{ 
         justifyContent: isSmallScreen ? 'center' : 'space-between',
         padding: { xs: '0 12px', sm: '0 16px', md: '0 24px' },
@@ -75,7 +92,8 @@ const Header = () => {
         maxWidth: '100%',
         overflow: 'hidden',
         boxSizing: 'border-box',
-        position: 'relative'
+        position: 'relative',
+        zIndex: 1
       }}>
         {/* Hamburger Menu Icon - Mobile Only */}
         {isSmallScreen && (
@@ -158,6 +176,7 @@ const Header = () => {
             setEntertainHovered(false);
             setPlanVisitHovered(true);
           }}
+          onClearHover={clearAllDropdowns}
           isSmallScreen={isSmallScreen}
         />
 

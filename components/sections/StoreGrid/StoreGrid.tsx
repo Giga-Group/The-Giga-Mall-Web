@@ -143,14 +143,13 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
               onClick={handleLoadMore}
               variant="outlined"
               sx={{
-                border: '1px solid #e0e0e0',
-                color: '#333333',
+                border: '1px solid #D19F3B',
+                color: '#D19F3B',
                 textTransform: 'uppercase',
                 fontSize: { xs: '0.85rem', sm: '0.9rem' },
                 fontWeight: 500,
                 padding: { xs: '10px 40px', sm: '12px 50px' },
                 borderRadius: 0,
-                backgroundColor: '#fafafa',
                 transition: 'all 0.3s ease',
                 '&:hover': {
                   borderColor: '#D19F3B',

@@ -48,8 +48,8 @@ const DiscoverEventsOffers = () => {
             href="/events"
             variant="outlined"
             sx={{
-              border: '1px solid #000000',
-              color: '#000000',
+              border: '1px solid #D19F3B',
+              color: '#D19F3B',
               textTransform: 'uppercase',
               fontSize: { xs: '0.85rem', sm: '0.9rem', md: '1rem' },
               fontWeight: 500,
@@ -71,8 +71,8 @@ const DiscoverEventsOffers = () => {
             href="/offers"
             variant="outlined"
             sx={{
-              border: '1px solid #000000',
-              color: '#000000',
+              border: '1px solid #D19F3B',
+              color: '#D19F3B',
               textTransform: 'uppercase',
               fontSize: { xs: '0.85rem', sm: '0.9rem', md: '1rem' },
               fontWeight: 500,

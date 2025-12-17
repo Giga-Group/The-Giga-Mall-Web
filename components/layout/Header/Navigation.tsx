@@ -10,10 +10,11 @@ interface NavigationProps {
   onStayHover: () => void;
   onEntertainHover: () => void;
   onPlanVisitHover: () => void;
+  onClearHover: () => void;
   isSmallScreen: boolean;
 }
 
-const Navigation = ({ navItems, onShopHover, onDineHover, onStayHover, onEntertainHover, onPlanVisitHover, isSmallScreen }: NavigationProps) => {
+const Navigation = ({ navItems, onShopHover, onDineHover, onStayHover, onEntertainHover, onPlanVisitHover, onClearHover, isSmallScreen }: NavigationProps) => {
   if (isSmallScreen) return null;
 
   return (
@@ -43,17 +44,29 @@ const Navigation = ({ navItems, onShopHover, onDineHover, onStayHover, onEnterta
             ? '/opening-hours'
             : '#';
 
+        const hasDropdown =
+          item === 'Shop' ||
+          item === 'Dine' ||
+          item === 'Stay' ||
+          item === 'Entertain' ||
+          item === 'Plan your visit';
+
         return (
         <Box
           key={index}
           component={Link}
           href={href}
           onMouseEnter={() => {
-            if (item === "Shop") onShopHover();
-            if (item === "Dine") onDineHover();
-            if (item === "Stay") onStayHover();
-            if (item === "Entertain") onEntertainHover();
-            if (item === "Plan your visit") onPlanVisitHover();
+            if (item === 'Shop') onShopHover();
+            if (item === 'Dine') onDineHover();
+            if (item === 'Stay') onStayHover();
+            if (item === 'Entertain') onEntertainHover();
+            if (item === 'Plan your visit') onPlanVisitHover();
+
+            // For items without dropdowns (e.g., What's New, Services), clear any open dropdown
+            if (!hasDropdown) {
+              onClearHover();
+            }
           }}
           sx={{
             position: 'relative',

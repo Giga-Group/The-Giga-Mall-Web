@@ -166,6 +166,8 @@ const TrendingSection = () => {
     <Box
       ref={sectionRef}
       sx={{
+        position: 'relative',
+        overflow: 'hidden',
         width: '100%',
         height: { xs: 'auto', sm: '120vh' },
         minHeight: { xs: 'auto', sm: '120vh' },

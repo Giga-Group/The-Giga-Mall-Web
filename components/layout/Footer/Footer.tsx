@@ -14,12 +14,30 @@ const Footer = () => {
     <Box
       component="footer"
       sx={{
+        position: 'relative',
+        overflow: 'hidden',
         backgroundColor: '#ffffff',
         padding: { xs: '32px 16px', sm: '40px 24px', md: '60px 24px 10px' },
-        borderTop: '1px solid #e0e0e0',
+        borderTop: '1px solid #D19F3B',
       }}
     >
-      <Container maxWidth="xl">
+      {/* Decorative gradient & line background */}
+      <Box
+        sx={{
+          position: 'absolute',
+          inset: 0,
+          pointerEvents: 'none',
+          zIndex: 0,
+          opacity: 0.9,
+          backgroundImage: `
+            radial-gradient(circle at top left, rgba(209, 159, 59, 0.18), transparent 55%),
+            radial-gradient(circle at bottom right, rgba(209, 159, 59, 0.18), transparent 65%)
+          `,
+          backgroundBlendMode: 'soft-light, normal',
+        }}
+      />
+
+      <Container maxWidth="xl" sx={{ position: 'relative', zIndex: 1 }}>
         <Box
           sx={{
             display: 'grid',

@@ -496,8 +496,8 @@ function EventsContent() {
                   onClick={handleLoadMore}
                   variant="outlined"
                   sx={{
-                    border: '1px solid #000000',
-                    color: '#000000',
+                    border: '1px solid #D19F3B',
+                    color: '#D19F3B',
                     textTransform: 'uppercase',
                     fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem' },
                     fontWeight: 400,
