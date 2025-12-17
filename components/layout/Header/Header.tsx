@@ -80,16 +80,16 @@ const Header = () => {
         {/* Hamburger Menu Icon - Mobile Only */}
         {isSmallScreen && (
           <IconButton
-            onClick={() => setMobileMenuOpen(true)}
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
             sx={{
               position: 'absolute',
               left: '12px',
-              color: '#000000',
+              color: '#D19F3B',
               padding: '8px',
               zIndex: 1,
             }}
           >
-            <Menu sx={{ fontSize: '28px' }} />
+            <Menu sx={{ fontSize: '28px', color: '#D19F3B' }} />
           </IconButton>
         )}
 
@@ -174,7 +174,7 @@ const Header = () => {
           }}>
             <IconButton
               sx={{
-                backgroundColor: '#000000',
+                backgroundColor: '#D19F3B',
                 color: '#ffffff',
                 borderRadius: '50%',
                 padding: { xs: '8px' },
@@ -191,13 +191,14 @@ const Header = () => {
             >
               <Public sx={{ 
                 fontSize: { xs: '20px' },
-                display: 'block'
+                display: 'block',
+                color: '#ffffff'
               }} />
             </IconButton>
 
             <IconButton
               sx={{
-                border: '1px solid #000000',
+                border: '1px solid #D19F3B',
                 borderRadius: { xs: '28px' },
                 padding: { xs: '6px' },
                 display: 'flex',
@@ -206,16 +207,16 @@ const Header = () => {
                 minHeight: { xs: '40px' },
                 width: { xs: '40px' },
                 height: { xs: '40px' },
-                backgroundColor: 'transparent',
+                backgroundColor: '#D19F3B',
                 visibility: 'visible',
                 opacity: 1,
                 '&:hover': {
-                  backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                  backgroundColor: '#D19F3B',
                 },
               }}
             >
               <AccountCircle sx={{ 
-                color: '#000000', 
+                color: '#ffffff', 
                 fontSize: { xs: '22px' },
                 display: 'block',
                 visibility: 'visible',

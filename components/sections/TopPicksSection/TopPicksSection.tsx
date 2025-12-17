@@ -296,6 +296,7 @@ const TopPicksSection = () => {
           onClick={goToPrev}
           disabled={isTransitioning}
           sx={{
+            display: { xs: 'none', sm: 'flex' },
             position: 'absolute',
             left: { xs: '-20px', sm: '-30px', md: '-40px', lg: '-70px' },
             top: '50%',
@@ -325,6 +326,7 @@ const TopPicksSection = () => {
           onClick={goToNext}
           disabled={isTransitioning}
           sx={{
+            display: { xs: 'none', sm: 'flex' },
             position: 'absolute',
             right: { xs: '-20px', sm: '-30px', md: '-40px', lg: '-70px' },
             top: '50%',

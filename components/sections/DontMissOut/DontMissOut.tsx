@@ -14,7 +14,7 @@ const DontMissOut = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
       }}
     >
       <Box
@@ -140,97 +140,32 @@ const DontMissOut = () => {
               sx={{
                 display: 'flex',
                 flexDirection: { xs: 'column', lg: 'row' },
-                gap: { xs: 3, lg: 4 },
-                alignItems: { xs: 'center', lg: 'flex-start' },
+                alignItems: 'flex-start',
+                rowGap: { xs: 3, lg: 0 },
+                columnGap: { lg: 4 },
               }}
             >
-              {/* Phone Mockups - Left Side */}
+              {/* Mobile Screen Image Only */}
               <Box
                 sx={{
-                  position: 'relative',
-                  width: { xs: '180px', sm: '220px', md: '260px', lg: '280px' },
-                  height: { xs: '360px', sm: '440px', md: '520px', lg: '420px' },
-                  flexShrink: 0,
+                  // flexShrink: 0,
+                  width: { xs: '220px', sm: '260px', md: '300px', lg: '340px' },
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'flex-start',
                 }}
               >
-                {/* Black Android Phone (Behind) */}
-                <Box
-                  sx={{
-                    position: 'absolute',
-                    left: { xs: '20px', sm: '25px', md: '30px', lg: '40px' },
-                    top: { xs: '20px', sm: '25px', md: '30px', lg: '40px' },
-                    width: { xs: '140px', sm: '170px', md: '200px', lg: '220px' },
-                    height: { xs: '280px', sm: '340px', md: '400px', lg: '340px' },
-                    backgroundColor: '#1a1a1a',
-                    borderRadius: { xs: '18px', sm: '22px', md: '26px', lg: '28px' },
-                    border: { xs: '6px', sm: '7px', md: '8px' },
-                    borderColor: '#000000',
-                    borderStyle: 'solid',
-                    zIndex: 1,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    boxSizing: 'border-box',
+                <Image
+                  src="/mobile%20screen.png"
+                  alt="Giga Mall app screen preview"
+                  width={340}
+                  height={780}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    display: 'block',
                   }}
-                >
-                  <Box
-                    sx={{
-                      width: '100%',
-                      height: '100%',
-                      backgroundColor: '#2a2a2a',
-                      borderRadius: { xs: '12px', sm: '15px', md: '18px', lg: '20px' },
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontSize: '0.7rem',
-                      color: '#ffffff',
-                      textAlign: 'center',
-                      padding: 1,
-                    }}
-                  >
-                    App Screen
-                  </Box>
-                </Box>
-
-                {/* White iPhone (Front) */}
-                <Box
-                  sx={{
-                    position: 'absolute',
-                    left: 0,
-                    top: 0,
-                    width: { xs: '140px', sm: '170px', md: '200px', lg: '220px' },
-                    height: { xs: '280px', sm: '340px', md: '400px', lg: '340px' },
-                    backgroundColor: '#ffffff',
-                    borderRadius: { xs: '18px', sm: '22px', md: '26px', lg: '28px' },
-                    border: { xs: '6px', sm: '7px', md: '8px' },
-                    borderColor: '#000000',
-                    borderStyle: 'solid',
-                    zIndex: 2,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
-                    boxSizing: 'border-box',
-                  }}
-                >
-                  <Box
-                    sx={{
-                      width: '100%',
-                      height: '100%',
-                      backgroundColor: '#f5f5f5',
-                      borderRadius: { xs: '12px', sm: '15px', md: '18px', lg: '20px' },
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontSize: '0.7rem',
-                      color: '#000000',
-                      textAlign: 'center',
-                      padding: 1,
-                    }}
-                  >
-                    App Screen
-                  </Box>
-                </Box>
+                />
               </Box>
 
               {/* Text Content and Badges - Right Side */}

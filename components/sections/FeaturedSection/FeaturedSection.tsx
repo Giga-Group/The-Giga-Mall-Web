@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Typography, IconButton } from '@mui/material';
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import { keyframes } from '@mui/system';
@@ -109,6 +109,42 @@ const FeaturedSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState('');
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    setTouchStartX(e.touches[0].clientX);
+    setTouchEndX(null);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStartX === null) return;
+    setTouchEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX === null || touchEndX === null || isTransitioning) {
+      setTouchStartX(null);
+      setTouchEndX(null);
+      return;
+    }
+
+    const deltaX = touchStartX - touchEndX;
+    const SWIPE_THRESHOLD = 40;
+
+    if (Math.abs(deltaX) > SWIPE_THRESHOLD) {
+      if (deltaX > 0) {
+        // Swiped left → move carousel left (show next item on the right)
+        goToPrevious();
+      } else {
+        // Swiped right → move carousel right (show previous item on the left)
+        goToNext();
+      }
+    }
+
+    setTouchStartX(null);
+    setTouchEndX(null);
+  };
 
   const total = featuredItems.length;
   const centerIndex = currentIndex;
@@ -197,13 +233,16 @@ const FeaturedSection = () => {
           overflow: 'hidden',
           height: { xs: 480, sm: 480, md: 480, lg: 660 }
         }}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
-        {/* Left peek */}
+        {/* Left peek - hidden on mobile, visible from md+ */}
         <Box
           key={`left-${prevIndex}`}
           sx={{
             position: 'relative',
-            display: 'block',
+            display: { xs: 'none', sm: 'none', md: 'block' },
             flex: '0 0 auto',
             width: isTransitioning && slideDirection === 'right' 
               ? { xs: '70%', sm: '80%', md: '80%', lg: '95%' }
@@ -318,27 +357,27 @@ const FeaturedSection = () => {
           )}
         </Box>
 
-        {/* Center main image */}
+        {/* Center main image - full width on mobile */}
         <Box
           key={`center-${centerIndex}`}
           sx={{
             position: 'relative',
             flex: '0 1 auto',
             width: isTransitioning && slideDirection === 'right'
-              ? { xs: '56%', sm: '64%', md: '64%', lg: '76%' }
+              ? { xs: '100%', sm: '100%', md: '64%', lg: '76%' }
               : isTransitioning && slideDirection === 'left'
-              ? { xs: '56%', sm: '64%', md: '64%', lg: '76%' }
-              : { xs: '70%', sm: '80%', md: '80%', lg: '95%' },
+              ? { xs: '100%', sm: '100%', md: '64%', lg: '76%' }
+              : { xs: '100%', sm: '100%', md: '80%', lg: '95%' },
             minWidth: isTransitioning && slideDirection === 'right'
-              ? { xs: '56%', sm: '64%', md: '64%', lg: '76%' }
+              ? { xs: '100%', sm: '100%', md: '64%', lg: '76%' }
               : isTransitioning && slideDirection === 'left'
-              ? { xs: '56%', sm: '64%', md: '64%', lg: '76%' }
-              : { xs: '70%', sm: '80%', md: '80%', lg: '95%' },
+              ? { xs: '100%', sm: '100%', md: '64%', lg: '76%' }
+              : { xs: '100%', sm: '100%', md: '80%', lg: '95%' },
             maxWidth: isTransitioning && slideDirection === 'right'
-              ? { xs: '56%', sm: '64%', md: '64%', lg: '76%' }
+              ? { xs: '100%', sm: '100%', md: '64%', lg: '76%' }
               : isTransitioning && slideDirection === 'left'
-              ? { xs: '56%', sm: '64%', md: '64%', lg: '76%' }
-              : { xs: '70%', sm: '80%' },
+              ? { xs: '100%', sm: '100%', md: '64%', lg: '76%' }
+              : { xs: '100%', sm: '100%', md: '80%' },
             borderRadius: { xs: '12px', sm: '18px' },
             overflow: 'hidden',
             boxShadow: 'none',
@@ -346,15 +385,15 @@ const FeaturedSection = () => {
             transition: `all ${TRANSITION_DURATION}ms cubic-bezier(0.4, 0, 0.2, 1)`,
             transform: isTransitioning && slideDirection === 'right'
               ? { 
-                  xs: 'translateX(calc(56% + 8px)) scale(0.98)',
-                  sm: 'translateX(calc(64% + 16px)) scale(0.98)',
+                  xs: 'translateX(0) scale(0.98)',
+                  sm: 'translateX(0) scale(0.98)',
                   md: 'translateX(calc(64% + 24px)) scale(0.98)',
                   lg: 'translateX(calc(76% + 24px)) scale(0.98)'
                 }
               : isTransitioning && slideDirection === 'left'
               ? { 
-                  xs: 'translateX(calc(-56% - 8px)) scale(0.98)',
-                  sm: 'translateX(calc(-64% - 16px)) scale(0.98)',
+                  xs: 'translateX(0) scale(0.98)',
+                  sm: 'translateX(0) scale(0.98)',
                   md: 'translateX(calc(-64% - 24px)) scale(0.98)',
                   lg: 'translateX(calc(-76% - 24px)) scale(0.98)'
                 }
@@ -510,12 +549,12 @@ const FeaturedSection = () => {
           )}
         </Box>
 
-        {/* Right peek */}
+        {/* Right peek - hidden on mobile, visible from md+ */}
         <Box
           key={`right-${nextIndex}`}
           sx={{
             position: 'relative',
-            display: 'block',
+            display: { xs: 'none', sm: 'none', md: 'block' },
             flex: '0 0 auto',
             width: isTransitioning && slideDirection === 'left'
               ? { xs: '70%', sm: '80%', md: '80%', lg: '95%' }
