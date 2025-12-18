@@ -215,8 +215,8 @@ const FeaturedSection = () => {
           zIndex: 0,
           opacity: 0.9,
           backgroundImage: `
-            radial-gradient(circle at top left, rgba(209, 159, 59, 0.18), transparent 55%),
-            radial-gradient(circle at bottom right, rgba(209, 159, 59, 0.18), transparent 65%)
+            radial-gradient(circle at top left, rgba(209, 159, 59, 0.4), transparent 55%),
+            radial-gradient(circle at bottom right, rgba(209, 159, 59, 0.4), transparent 65%)
           `,
           backgroundBlendMode: 'soft-light, normal',
         }}
