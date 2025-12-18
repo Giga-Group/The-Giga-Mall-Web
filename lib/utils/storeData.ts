@@ -48,7 +48,12 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/2-ES---WLaMaquinista_OK.jpg'
+    backgroundImage: '/2-ES---WLaMaquinista_OK.jpg',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 35, y: 50 }
+    }
   },
   {
     name: 'Aesop',
@@ -59,7 +64,12 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Beauty',
     acceptsGiftCard: true,
-    backgroundImage: '/Aesop_Westfield_Stratford_City.jpg'
+    backgroundImage: '/Aesop_Westfield_Stratford_City.jpg',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 40, y: 65 }
+    }
   },
   {
     name: 'Adidas',
@@ -70,7 +80,12 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Sports & Fitness',
     hasOffers: true,
-    backgroundImage: '/ADIDAS.jpg'
+    backgroundImage: '/ADIDAS.jpg',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 45, y: 55 }
+    }
   },
   {
     name: 'Nike',
@@ -81,7 +96,12 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Sports & Fitness',
     hasOffers: true,
-    backgroundImage: '/NIKE_-_WMoN.jpg'
+    backgroundImage: '/NIKE_-_WMoN.jpg',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 50, y: 55 }
+    }
   },
   {
     name: 'Sephora',

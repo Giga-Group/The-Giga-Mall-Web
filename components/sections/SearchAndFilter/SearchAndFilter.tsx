@@ -112,7 +112,9 @@ const SearchAndFilter = ({
             backgroundColor: { xs: 'transparent', lg: '#D19F3B' },
             color: { xs: '#333333', lg: '#ffffff' },
             px: { xs: 0, lg: 33 },
-            py: { xs: 0, lg: 2 },
+            // py: { xs: 0, lg: 2 },
+            paddingTop: 4,
+            paddingBottom:2,
             borderRadius: 0
           }}
         >
@@ -387,7 +389,8 @@ const SearchAndFilter = ({
             backgroundColor: { xs: 'transparent', lg: '#D19F3B' },
             color: { xs: '#333333', lg: '#ffffff' },
             px: { xs: 0, lg: 33 },
-            py: { xs: 0, lg: 2 },
+            // py: { xs: 0, lg: 2 },
+            paddingBottom: 6,
             borderRadius: 0
           }}
         >

@@ -294,7 +294,6 @@ const TopPicksSection = () => {
         {/* Left Arrow */}
         <IconButton
           onClick={goToPrev}
-          disabled={isTransitioning}
           sx={{
             display: { xs: 'none', sm: 'flex' },
             position: 'absolute',
@@ -305,10 +304,13 @@ const TopPicksSection = () => {
             width: { xs: '36px', sm: '40px', md: '44px' },
             height: { xs: '36px', sm: '40px', md: '44px' },
             borderRadius: '50%',
-            backgroundColor: '#E5E5E5',
-            border: '1px solid #e0e0e0',
+            backgroundColor: '#D19F3B',
+            border: '1px solid #D19F3B',
             '&:hover': {
-              backgroundColor: '#d0d0d0'
+              backgroundColor: '#D19F3B'
+            },
+            '&:active': {
+              backgroundColor: '#D19F3B'
             },
             '&:disabled': {
               opacity: 0.5,
@@ -318,13 +320,12 @@ const TopPicksSection = () => {
             boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)'
           }}
         >
-          <ArrowBackIos sx={{ fontSize: { xs: '16px', sm: '18px', md: '20px' }, color: '#000000' }} />
+          <ArrowBackIos sx={{ fontSize: { xs: '16px', sm: '18px', md: '20px' }, color: '#ffffff' }} />
         </IconButton>
 
         {/* Right Arrow */}
         <IconButton
           onClick={goToNext}
-          disabled={isTransitioning}
           sx={{
             display: { xs: 'none', sm: 'flex' },
             position: 'absolute',
@@ -335,10 +336,13 @@ const TopPicksSection = () => {
             width: { xs: '36px', sm: '40px', md: '44px' },
             height: { xs: '36px', sm: '40px', md: '44px' },
             borderRadius: '50%',
-            backgroundColor: '#E5E5E5',
-            border: '1px solid #e0e0e0',
+            backgroundColor: '#D19F3B',
+            border: '1px solid #D19F3B',
             '&:hover': {
-              backgroundColor: '#d0d0d0'
+              backgroundColor: '#D19F3B'
+            },
+            '&:active': {
+              backgroundColor: '#D19F3B'
             },
             '&:disabled': {
               opacity: 0.5,
@@ -348,7 +352,7 @@ const TopPicksSection = () => {
             boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)'
           }}
         >
-          <ArrowForwardIos sx={{ fontSize: { xs: '16px', sm: '18px', md: '20px' }, color: '#000000' }} />
+          <ArrowForwardIos sx={{ fontSize: { xs: '16px', sm: '18px', md: '20px' }, color: '#ffffff' }} />
         </IconButton>
 
         {/* Grid Layout - 2x2 structure */}
@@ -424,7 +428,7 @@ const TopPicksSection = () => {
                     fontFamily: '"Arial", "Helvetica", sans-serif',
                     fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2.2rem', lg: '2.5rem' },
                     fontWeight: 700,
-                    color: '#ffffff',
+                    color: '#D19F3B',
                     textTransform: 'uppercase',
                     marginBottom: { xs: '10px', sm: '12px', md: '16px' },
                     textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
@@ -439,8 +443,8 @@ const TopPicksSection = () => {
                   href={currentSet[0].link || '#'}
                   sx={{
                     backgroundColor: 'transparent',
-                    border: '1px solid #ffffff',
-                    color: '#ffffff',
+                    border: '1px solid #D19F3B',
+                    color: '#D19F3B',
                     padding: { xs: '6px 16px', sm: '8px 20px', md: '10px 24px' },
                     fontSize: { xs: '11px', sm: '12px', md: '14px' },
                     fontWeight: 500,
@@ -448,8 +452,8 @@ const TopPicksSection = () => {
                     letterSpacing: '0.1em',
                     borderRadius: '0',
                     '&:hover': {
-                      backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                      borderColor: '#ffffff'
+                      backgroundColor: 'rgba(209, 159, 59, 0.1)',
+                      borderColor: '#D19F3B'
                     },
                     transition: 'all 0.3s ease'
                   }}
@@ -516,7 +520,7 @@ const TopPicksSection = () => {
                     fontFamily: '"Arial", "Helvetica", sans-serif',
                     fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2.2rem', lg: '2.5rem' },
                     fontWeight: 700,
-                    color: '#ffffff',
+                    color: '#D19F3B',
                     textTransform: 'uppercase',
                     marginBottom: { xs: '10px', sm: '12px', md: '16px' },
                     textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
@@ -531,8 +535,8 @@ const TopPicksSection = () => {
                   href={currentSet[1].link || '#'}
                   sx={{
                     backgroundColor: 'transparent',
-                    border: '1px solid #ffffff',
-                    color: '#ffffff',
+                    border: '1px solid #D19F3B',
+                    color: '#D19F3B',
                     padding: { xs: '6px 16px', sm: '8px 20px', md: '10px 24px' },
                     fontSize: { xs: '11px', sm: '12px', md: '14px' },
                     fontWeight: 500,
@@ -540,8 +544,8 @@ const TopPicksSection = () => {
                     letterSpacing: '0.1em',
                     borderRadius: '0',
                     '&:hover': {
-                      backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                      borderColor: '#ffffff'
+                      backgroundColor: 'rgba(209, 159, 59, 0.1)',
+                      borderColor: '#D19F3B'
                     },
                     transition: 'all 0.3s ease'
                   }}
@@ -608,7 +612,7 @@ const TopPicksSection = () => {
                     fontFamily: '"Arial", "Helvetica", sans-serif',
                     fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2.2rem', lg: '2.5rem' },
                     fontWeight: 700,
-                    color: '#ffffff',
+                    color: '#D19F3B',
                     textTransform: 'uppercase',
                     marginBottom: { xs: '10px', sm: '12px', md: '16px' },
                     textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
@@ -623,8 +627,8 @@ const TopPicksSection = () => {
                   href={currentSet[2].link || '#'}
                   sx={{
                     backgroundColor: 'transparent',
-                    border: '1px solid #ffffff',
-                    color: '#ffffff',
+                    border: '1px solid #D19F3B',
+                    color: '#D19F3B',
                     padding: { xs: '6px 16px', sm: '8px 20px', md: '10px 24px' },
                     fontSize: { xs: '11px', sm: '12px', md: '14px' },
                     fontWeight: 500,
@@ -632,8 +636,8 @@ const TopPicksSection = () => {
                     letterSpacing: '0.1em',
                     borderRadius: '0',
                     '&:hover': {
-                      backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                      borderColor: '#ffffff'
+                      backgroundColor: 'rgba(209, 159, 59, 0.1)',
+                      borderColor: '#D19F3B'
                     },
                     transition: 'all 0.3s ease'
                   }}

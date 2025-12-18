@@ -2,6 +2,7 @@
 
 import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
+import MallMapStandalone from '../MallMapStandalone';
 
 const ExploreTheMall = () => {
   return (
@@ -48,6 +49,16 @@ const ExploreTheMall = () => {
           >
             Every store covered. Plan your visit with our interactive map.
           </Typography>
+
+          {/* Interactive Map Section */}
+          <Box
+            sx={{
+              width: '100%',
+              mt: { xs: 2, sm: 3 },
+            }}
+          >
+            <MallMapStandalone />
+          </Box>
         </Box>
 
         {/* Right Side - Visitor Info */}
