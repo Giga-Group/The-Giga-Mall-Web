@@ -19,7 +19,7 @@ const Hero = () => {
       {/* Background video with logo animation */}
       <Box
         component="video"
-        src="/logo animations.mp4"
+        src="/LOGO ANIMATIONS.mp4"
         autoPlay
         muted
         loop
