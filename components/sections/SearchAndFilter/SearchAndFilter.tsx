@@ -89,17 +89,16 @@ const SearchAndFilter = ({
       sx={{
         width: '100%',
         py: { xs: 3, sm: 4 },
-        px: { xs: 2, sm: 4, md: 6, lg: 10 },
+        // px: { xs: 2, sm: 4, md: 6, lg: 10 },
         backgroundColor: '#ffffff'
       }}
     >
       <Box
         sx={{
-          maxWidth: '1400px',
-          margin: '0 auto',
+          width: '100vw',
           display: 'flex',
           flexDirection: 'column',
-          gap: { xs: 2, sm: 3 }
+          gap: { xs: 2, sm: 3, md: 0 }
         }}
       >
         {/* Row 1: Search and Show Offers Only Checkbox */}
@@ -109,11 +108,16 @@ const SearchAndFilter = ({
             flexDirection: { xs: 'column', md: 'row' },
             justifyContent: 'space-between',
             alignItems: { xs: 'flex-start', md: 'flex-end' },
-            gap: { xs: 2, sm: 3 }
+            gap: { xs: 2, sm: 3 },
+            backgroundColor: { xs: 'transparent', lg: '#D19F3B' },
+            color: { xs: '#333333', lg: '#ffffff' },
+            px: { xs: 0, lg: 33 },
+            py: { xs: 0, lg: 2 },
+            borderRadius: 0
           }}
         >
           {/* Search Bar */}
-          <Box sx={{ flex: 1, maxWidth: { md: '400px' } }}>
+          <Box sx={{ flex: 1, maxWidth: { md: '400px', lg: '470px' } }}>
             <TextField
               fullWidth
               placeholder={placeholder}
@@ -122,19 +126,25 @@ const SearchAndFilter = ({
               variant="standard"
               sx={{
                 '& .MuiInput-underline:before': {
-                  borderBottomColor: '#e0e0e0'
+                  borderBottomColor: { xs: '#e0e0e0', lg: '#ffffff' }
                 },
-                '& .MuiInput-underline:hover:before': {
-                  borderBottomColor: '#bdbdbd'
+                '& .MuiInput-underline:hover:not(.Mui-disabled):before': {
+                  borderBottomColor: { xs: '#bdbdbd', lg: '#ffffff' }
                 },
                 '& .MuiInput-underline:after': {
-                  borderBottomColor: '#D19F3B'
+                  borderBottomColor: { xs: '#D19F3B', lg: '#ffffff' }
+                },
+                '& .MuiInputBase-input': {
+                  color: { xs: '#333333', lg: '#ffffff' }
+                },
+                '& .MuiInputBase-input::placeholder': {
+                  color: { xs: '#999999', lg: 'rgba(255,255,255,0.8)' }
                 }
               }}
               InputProps={{
                 endAdornment: (
                   <Box sx={{ display: 'flex', alignItems: 'center', pr: 1 }}>
-                    <Search sx={{ color: '#666666' }} />
+                    <Search sx={{ color: { xs: '#666666', lg: '#ffffff' } }} />
                   </Box>
                 )
               }}
@@ -148,9 +158,9 @@ const SearchAndFilter = ({
                 checked={showOffersOnly}
                 onChange={(e) => setShowOffersOnly(e.target.checked)}
                 sx={{
-                  color: '#D19F3B',
+                  color: '#ffffff',
                   '&.Mui-checked': {
-                    color: '#D19F3B'
+                    color: '#ffffff'
                   }
                 }}
               />
@@ -159,7 +169,7 @@ const SearchAndFilter = ({
               <Typography
                 sx={{
                   fontSize: { xs: '0.85rem', sm: '0.9rem' },
-                  color: '#333333'
+                  color: { xs: '#333333', lg: '#ffffff' }
                 }}
               >
                 {offersText}
@@ -373,7 +383,12 @@ const SearchAndFilter = ({
             flexDirection: { xs: 'column', md: 'row' },
             justifyContent: 'space-between',
             alignItems: { xs: 'flex-start', md: 'flex-end' },
-            gap: { xs: 2, sm: 3 }
+            gap: { xs: 2, sm: 3 },
+            backgroundColor: { xs: 'transparent', lg: '#D19F3B' },
+            color: { xs: '#333333', lg: '#ffffff' },
+            px: { xs: 0, lg: 33 },
+            py: { xs: 0, lg: 2 },
+            borderRadius: 0
           }}
         >
           {/* Left Side - Category, Subcategory, View By */}
@@ -388,23 +403,35 @@ const SearchAndFilter = ({
           >
             {/* Category Dropdown */}
             <FormControl sx={{ minWidth: { sm: '150px' }, maxWidth: { sm: '180px' } }} variant="standard">
-              <InputLabel id="category-label" sx={{ fontSize: { sm: '0.875rem' } }}>Category</InputLabel>
+              <InputLabel 
+                id="category-label" 
+                sx={{ 
+                  fontSize: { sm: '0.875rem' },
+                  color: { sm: '#666666', lg: '#ffffff' }
+                }}
+              >
+                Category
+              </InputLabel>
               <Select
                 labelId="category-label"
                 value={category}
                 label="Category"
                 onChange={(e) => setCategory(e.target.value)}
                 sx={{
-                  '& .MuiInput-underline:before': {
-                    borderBottomColor: '#e0e0e0'
+                  '&:before': {
+                    borderBottomColor: { xs: '#e0e0e0', lg: '#ffffff' }
                   },
-                  '& .MuiInput-underline:hover:before': {
-                    borderBottomColor: '#bdbdbd'
+                  '&:hover:not(.Mui-disabled):before': {
+                    borderBottomColor: { xs: '#bdbdbd', lg: '#ffffff' }
                   },
-                  '& .MuiInput-underline:after': {
-                    borderBottomColor: '#D19F3B'
+                  '&:after': {
+                    borderBottomColor: { xs: '#D19F3B', lg: '#ffffff' }
                   },
-                  fontSize: { sm: '0.875rem' }
+                  fontSize: { sm: '0.875rem' },
+                  color: { sm: '#333333', lg: '#ffffff' },
+                  '& .MuiSvgIcon-root': {
+                    color: { sm: '#333333', lg: '#ffffff' }
+                  }
                 }}
               >
                 {categoryOptions.map((cat) => (
@@ -417,23 +444,35 @@ const SearchAndFilter = ({
 
             {/* Subcategory Dropdown */}
             <FormControl sx={{ minWidth: { sm: '150px' }, maxWidth: { sm: '180px' } }} variant="standard">
-              <InputLabel id="subcategory-label" sx={{ fontSize: { sm: '0.875rem' } }}>Subcategory</InputLabel>
+              <InputLabel 
+                id="subcategory-label" 
+                sx={{ 
+                  fontSize: { sm: '0.875rem' },
+                  color: { sm: '#666666', lg: '#ffffff' }
+                }}
+              >
+                Subcategory
+              </InputLabel>
               <Select
                 labelId="subcategory-label"
                 value={subcategory}
                 label="Subcategory"
                 onChange={(e) => setSubcategory(e.target.value)}
                 sx={{
-                  '& .MuiInput-underline:before': {
-                    borderBottomColor: '#e0e0e0'
+                  '&:before': {
+                    borderBottomColor: { xs: '#e0e0e0', lg: '#ffffff' }
                   },
-                  '& .MuiInput-underline:hover:before': {
-                    borderBottomColor: '#bdbdbd'
+                  '&:hover:not(.Mui-disabled):before': {
+                    borderBottomColor: { xs: '#bdbdbd', lg: '#ffffff' }
                   },
-                  '& .MuiInput-underline:after': {
-                    borderBottomColor: '#D19F3B'
+                  '&:after': {
+                    borderBottomColor: { xs: '#D19F3B', lg: '#ffffff' }
                   },
-                  fontSize: { sm: '0.875rem' }
+                  fontSize: { sm: '0.875rem' },
+                  color: { sm: '#333333', lg: '#ffffff' },
+                  '& .MuiSvgIcon-root': {
+                    color: { sm: '#333333', lg: '#ffffff' }
+                  }
                 }}
               >
                 {subcategoryOptions.map((subcat) => (
@@ -446,23 +485,35 @@ const SearchAndFilter = ({
 
             {/* View By Dropdown */}
             <FormControl sx={{ minWidth: { sm: '120px' }, maxWidth: { sm: '150px' } }} variant="standard">
-              <InputLabel id="viewby-label" sx={{ fontSize: { sm: '0.875rem' } }}>View by 0-9</InputLabel>
+              <InputLabel 
+                id="viewby-label" 
+                sx={{ 
+                  fontSize: { sm: '0.875rem' },
+                  color: { sm: '#666666', lg: '#ffffff' }
+                }}
+              >
+                View by 0-9
+              </InputLabel>
               <Select
                 labelId="viewby-label"
                 value={viewBy}
                 label="View by 0-9"
                 onChange={(e) => setViewBy(e.target.value)}
                 sx={{
-                  '& .MuiInput-underline:before': {
-                    borderBottomColor: '#e0e0e0'
+                  '&:before': {
+                    borderBottomColor: { xs: '#e0e0e0', lg: '#ffffff' }
                   },
-                  '& .MuiInput-underline:hover:before': {
-                    borderBottomColor: '#bdbdbd'
+                  '&:hover:not(.Mui-disabled):before': {
+                    borderBottomColor: { xs: '#bdbdbd', lg: '#ffffff' }
                   },
-                  '& .MuiInput-underline:after': {
-                    borderBottomColor: '#D19F3B'
+                  '&:after': {
+                    borderBottomColor: { xs: '#D19F3B', lg: '#ffffff' }
                   },
-                  fontSize: { sm: '0.875rem' }
+                  fontSize: { sm: '0.875rem' },
+                  color: { sm: '#333333', lg: '#ffffff' },
+                  '& .MuiSvgIcon-root': {
+                    color: { sm: '#333333', lg: '#ffffff' }
+                  }
                 }}
               >
                 <MenuItem value="">All</MenuItem>
@@ -495,11 +546,11 @@ const SearchAndFilter = ({
                 }
               }}
             >
-              <LocalOffer sx={{ color: '#D19F3B', fontSize: { xs: '18px', sm: '20px' } }} />
+              <LocalOffer sx={{ color: { xs: '#D19F3B', lg: '#ffffff' }, fontSize: { xs: '18px', sm: '20px' } }} />
               <Typography
                 sx={{
                   fontSize: { xs: '0.85rem', sm: '0.9rem' },
-                  color: '#333333',
+                  color: { xs: '#333333', lg: '#ffffff' },
                   fontWeight: 500
                 }}
               >
@@ -518,11 +569,11 @@ const SearchAndFilter = ({
                 }
               }}
             >
-              <CardGiftcard sx={{ color: '#D19F3B', fontSize: { xs: '18px', sm: '20px' } }} />
+              <CardGiftcard sx={{ color: { xs: '#D19F3B', lg: '#ffffff' }, fontSize: { xs: '18px', sm: '20px' } }} />
               <Typography
                 sx={{
                   fontSize: { xs: '0.85rem', sm: '0.9rem' },
-                  color: '#333333',
+                  color: { xs: '#333333', lg: '#ffffff' },
                   fontWeight: 500
                 }}
               >

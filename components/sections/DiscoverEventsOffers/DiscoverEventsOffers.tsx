@@ -10,7 +10,7 @@ const DiscoverEventsOffers = () => {
         width: '100%',
         py: { xs: 4, sm: 5, md: 6 },
         px: { xs: 2, sm: 4, md: 6, lg: 10 },
-        backgroundColor: '#ffffff'
+        backgroundColor: '#D19F3B'
       }}
     >
       <Box
@@ -26,7 +26,7 @@ const DiscoverEventsOffers = () => {
             fontFamily: '"Playfair Display", "Georgia", serif',
             fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.8rem', lg: '3.2rem' },
             fontWeight: 400,
-            color: '#D19F3B',
+            color: '#ffffff',
             mb: { xs: 3, sm: 4, md: 5 },
             letterSpacing: '0.02em'
           }}
@@ -48,8 +48,8 @@ const DiscoverEventsOffers = () => {
             href="/events"
             variant="outlined"
             sx={{
-              border: '1px solid #D19F3B',
-              color: '#D19F3B',
+              border: '1px solid #ffffff',
+              color: '#ffffff',
               textTransform: 'uppercase',
               fontSize: { xs: '0.85rem', sm: '0.9rem', md: '1rem' },
               fontWeight: 500,
@@ -57,9 +57,9 @@ const DiscoverEventsOffers = () => {
               borderRadius: 0,
               transition: 'all 0.3s ease',
               '&:hover': {
-                borderColor: '#D19F3B',
-                color: '#ffffff',
-                backgroundColor: '#D19F3B'
+                borderColor: '#ffffff',
+                color: '#D19F3B',
+                backgroundColor: '#ffffff'
               }
             }}
           >
@@ -71,8 +71,8 @@ const DiscoverEventsOffers = () => {
             href="/offers"
             variant="outlined"
             sx={{
-              border: '1px solid #D19F3B',
-              color: '#D19F3B',
+              border: '1px solid #ffffff',
+              color: '#ffffff',
               textTransform: 'uppercase',
               fontSize: { xs: '0.85rem', sm: '0.9rem', md: '1rem' },
               fontWeight: 500,
@@ -80,9 +80,9 @@ const DiscoverEventsOffers = () => {
               borderRadius: 0,
               transition: 'all 0.3s ease',
               '&:hover': {
-                borderColor: '#D19F3B',
-                color: '#ffffff',
-                backgroundColor: '#D19F3B'
+                borderColor: '#ffffff',
+                color: '#D19F3B',
+                backgroundColor: '#ffffff'
               }
             }}
           >
