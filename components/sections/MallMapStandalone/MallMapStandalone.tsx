@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { Box, Typography, IconButton } from '@mui/material';
+import { Box, IconButton } from '@mui/material';
 import { ZoomIn, ZoomOut } from '@mui/icons-material';
 import { storeDetails, StoreDetail } from '@/lib/utils/storeData';
 
@@ -185,12 +185,6 @@ const MallMapStandalone = () => {
   const handleZoomOut = () => {
     if (!isMapFocused) return;
     setZoom((prev) => Math.max(prev - ZOOM_STEP, MIN_ZOOM));
-  };
-
-  const handleReset = () => {
-    if (!isMapFocused) return;
-    setZoom(1);
-    setPan({ x: 0, y: 0 });
   };
 
   // Mouse wheel zoom
