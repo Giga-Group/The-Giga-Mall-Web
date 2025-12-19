@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { AppBar, Toolbar, Button, IconButton, Box, useMediaQuery, useTheme } from '@mui/material';
 import { Public, AccountCircle, Menu } from '@mui/icons-material';
 import Link from 'next/link';
@@ -17,7 +17,14 @@ import { NAV_ITEMS } from '@/lib/utils/constants';
 
 const Header = () => {
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
+  const muiIsSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
+  // Default to mobile view to prevent flash on initial load
+  const [isSmallScreen, setIsSmallScreen] = useState(true);
+  
+  useEffect(() => {
+    // Update after mount to match actual screen size
+    setIsSmallScreen(muiIsSmallScreen);
+  }, [muiIsSmallScreen]);
   const [shopHovered, setShopHovered] = useState(false);
   const [dineHovered, setDineHovered] = useState(false);
   const [stayHovered, setStayHovered] = useState(false);
