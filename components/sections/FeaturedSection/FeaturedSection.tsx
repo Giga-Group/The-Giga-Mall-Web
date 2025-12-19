@@ -9,7 +9,7 @@ import { FeaturedItem } from '@/types';
 
 const featuredItems: FeaturedItem[] = [
   {
-    image: '/Sephora_2_1.jpg',
+    image: '/361 picture.jpg',
     name: 'Sephora',
     description: 'The ultimate beauty playground featuring makeup, skincare, and fragrance icons.',
   },
@@ -160,17 +160,21 @@ export default function FeaturedSection() {
   /* ------------------ RENDER ------------------ */
 
   return (
-    <Box sx={{ py: { xs: 4, md: 6 }, px: { xs: 2, md: 0 }, backgroundColor: '#fff' }}>
+    <Box sx={{ backgroundColor: '#fff' }}>
       <Typography
         variant="h2"
         sx={{
-          textAlign: 'center',
-          mb: { xs: 3, md: 4 },
-          color: '#D19F3B',
-          fontFamily: 'Georgia',
+          fontFamily: 'Georgia, "Times New Roman", Times, serif',
+          fontStyle: 'normal',
           fontWeight: 700,
-          letterSpacing: '0.1em',
-          fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2.2rem' },
+          fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem', xl: '3.5rem' },
+          textTransform: 'uppercase',
+          textAlign: { xs: 'center', md: 'left' },
+          marginBottom: { xs: '32px', sm: '40px', md: '30px', lg: '50px' },
+          marginTop: { xs: '20px', sm: '24px', md: '40px' },
+          paddingLeft: { xs: '16px', sm: '20px', md: '40px', lg: '130px' },
+          paddingRight: { xs: '16px', sm: '20px', md: '40px' },
+          color: '#D19F3B',
         }}
       >
         FEATURED SECTION
