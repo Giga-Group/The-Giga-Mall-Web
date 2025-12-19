@@ -77,7 +77,7 @@ const ExperienceSection = () => {
       startX = distance * 0.7;
       startY = distance * 0.7;
     } else if (position === 'bottom-center') {
-      startY = distance;
+      startY = distance * (1.2);
     } else if (position === 'middle-left') {
       startX = -distance;
     } else if (position === 'top-left') {
