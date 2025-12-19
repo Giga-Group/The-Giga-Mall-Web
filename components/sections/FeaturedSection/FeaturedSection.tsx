@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { Box, Typography, IconButton } from '@mui/material';
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import { keyframes } from '@mui/system';
@@ -49,7 +49,6 @@ export default function FeaturedSection() {
 
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState<'next' | 'prev'>('prev'); // 👈 default LEFT → CENTER
-  const [isAnimating, setIsAnimating] = useState(false);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const isAnimatingRef = useRef(false);
@@ -60,29 +59,25 @@ export default function FeaturedSection() {
 
   /* ------------------ CONTROLS ------------------ */
 
-  const goNext = () => {
+  const goNext = useCallback(() => {
     if (isAnimatingRef.current) return;
     setDirection('next');
-    setIsAnimating(true);
     isAnimatingRef.current = true;
     setCurrent((c) => (c + 1) % total);
     setTimeout(() => {
-      setIsAnimating(false);
       isAnimatingRef.current = false;
     }, TRANSITION_MS);
-  };
+  }, [total]);
 
-  const goPrev = () => {
+  const goPrev = useCallback(() => {
     if (isAnimatingRef.current) return;
     setDirection('prev');
-    setIsAnimating(true);
     isAnimatingRef.current = true;
     setCurrent((c) => (c - 1 + total) % total);
     setTimeout(() => {
-      setIsAnimating(false);
       isAnimatingRef.current = false;
     }, TRANSITION_MS);
-  };
+  }, [total]);
 
   /* ------------------ AUTO PLAY ------------------ */
   // ✅ LEFT → CENTER (same movement as left arrow click)
@@ -94,7 +89,7 @@ export default function FeaturedSection() {
     }, INTERVAL_MS);
 
     return () => clearInterval(id);
-  }, []);
+  }, [goPrev]);
 
   /* ------------------ POSITION LOGIC ------------------ */
 
@@ -200,7 +195,7 @@ export default function FeaturedSection() {
             setTouchEnd(e.touches[0].clientX);
           }
         }}
-        onTouchEnd={(e) => {
+        onTouchEnd={() => {
           if (!touchStart || touchEnd === null) {
             setTouchStart(null);
             setTouchEnd(null);
