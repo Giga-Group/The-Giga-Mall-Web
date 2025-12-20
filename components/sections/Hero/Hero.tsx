@@ -69,15 +69,17 @@ const Hero = () => {
             fontStyle: 'normal',
             fontWeight: 400,
             color: '#D19F3B',
-            fontSize: { xs: '1.4rem', sm: '2rem', md: '2.4rem', lg: '2.8rem' },
-            lineHeight: { xs: '1.2', sm: '1.25', md: '1.3' },
+            fontSize: { xs: '0.9rem', sm: '1.5rem', md: '2rem', lg: '2.4rem', xl: '2.8rem' },
+            lineHeight: { xs: '1.4', sm: '1.25', md: '1.3' },
             textAlign: 'center',
             textTransform: 'none',
-            padding: { xs: '10px 18px', sm: '12px 28px', md: '14px 36px' },
-            backgroundColor: 'rgba(255, 255, 255, 0.8)',
-            borderRadius: 0,
+            padding: { xs: '12px 16px', sm: '12px 28px', md: '14px 36px' },
+            backgroundColor: 'rgba(118, 117, 117, 0.7)',
+            borderRadius: { xs: '4px', sm: 0 },
             display: 'inline-block',
-            whiteSpace: 'nowrap',
+            whiteSpace: { xs: 'normal', sm: 'nowrap' },
+            maxWidth: { xs: '90%', sm: 'auto' },
+            wordBreak: { xs: 'break-word', sm: 'normal' },
           }}
         >
           Visit Giga Mall At Giga City, DHA Islamabad

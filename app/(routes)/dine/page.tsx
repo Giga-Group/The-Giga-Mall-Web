@@ -14,23 +14,28 @@ import type { Store } from '@/components/sections/StoreGrid/StoreGrid';
 
 const restaurantPicks: PickItem[] = [
   {
-    image: '/DSC05412Food_OK_1.jpg',
-    name: 'ANGELINA',
-    slug: 'angelina'
+    image: '/cheezious.jpeg',
+    name: 'Cheezious',
+    slug: 'cheezious'
   },
   {
-    image: '/Starbucks.jpg',
-    name: 'Starbucks',
-    slug: 'starbucks'
+    image: '/pizzahut.jpeg',
+    name: 'Pizza Hut',
+    slug: 'pizzahut'
   },
   {
-    image: '/2-OK.jpg',
-    name: 'Eataly',
-    slug: 'eataly'
+    image: '/wild-wings.jpeg',
+    name: 'Wild Wings',
+    slug: 'wild-wings'
   }
 ];
 
 const restaurants: Store[] = [
+  { name: 'McDonald\'s', slug: 'mcdonalds' },
+  { name: 'Hardee\'s', slug: 'hardees' },
+  { name: 'Cheezious', slug: 'cheezious' },
+  { name: 'Pizza Hut', slug: 'pizzahut' },
+  { name: 'Wild Wings', slug: 'wild-wings' },
   { name: 'ANGELINA', slug: 'angelina' },
   { name: 'Eataly', slug: 'eataly' },
   { name: 'Starbucks', slug: 'starbucks' },
@@ -46,7 +51,6 @@ const restaurants: Store[] = [
   { name: 'Cold Stone Creamery', slug: 'cold-stone-creamery' },
   { name: 'Dunkin\'', slug: 'dunkin' },
   { name: 'KFC', slug: 'kfc' },
-  { name: 'McDonald\'s', slug: 'mcdonalds' },
   { name: 'Subway', slug: 'subway' },
   { name: 'Burger King', slug: 'burger-king' },
   { name: 'Papa John\'s', slug: 'papa-johns' },

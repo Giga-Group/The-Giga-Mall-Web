@@ -25,6 +25,171 @@ export interface StoreDetail {
 // Store data - in a real app, this would come from an API
 export const storeDetails: StoreDetail[] = [
   {
+    name: 'Alkaram',
+    slug: 'alkaram',
+    description: 'Elegant fashion and premium textiles for the modern wardrobe.',
+    backgroundImage: '/alkaram.jpg',
+    category: 'Fashion',
+    contact: {
+      phone: '+971-50-501-8600'
+    },
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 30, y: 40 }
+    }
+  },
+  {
+    name: 'Almas',
+    slug: 'almas',
+    description: 'Discover timeless elegance with our curated collection of premium fashion.',
+    backgroundImage: '/almas.jpeg',
+    category: 'Fashion',
+    contact: {
+      phone: '+971-50-501-8601'
+    },
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 35, y: 45 }
+    }
+  },
+  {
+    name: 'Almirah',
+    slug: 'almirah',
+    description: 'Your destination for contemporary fashion and style essentials.',
+    backgroundImage: '/almirah.jpeg',
+    category: 'Fashion',
+    contact: {
+      phone: '+971-50-501-8602'
+    },
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 40, y: 50 }
+    }
+  },
+  {
+    name: 'Batik Studio',
+    slug: 'batik-studio',
+    description: 'Traditional artistry meets modern fashion in our unique batik collections.',
+    backgroundImage: '/batik-studio.jpg',
+    category: 'Fashion',
+    contact: {
+      phone: '+971-50-501-8603'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 25, y: 35 }
+    }
+  },
+  {
+    name: 'Bloon',
+    slug: 'bloon',
+    description: 'Fresh styles and vibrant fashion for every occasion.',
+    backgroundImage: '/bloon.jpg',
+    category: 'Fashion',
+    contact: {
+      phone: '+971-50-501-8604'
+    },
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 45, y: 55 }
+    }
+  },
+  {
+    name: 'Bonanza',
+    slug: 'bonanza',
+    description: 'Quality clothing and accessories for the whole family.',
+    backgroundImage: '/bonanza.jpeg',
+    category: 'Fashion',
+    contact: {
+      phone: '+971-50-501-8605'
+    },
+    location: {
+      level: 'Second Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 50, y: 30 }
+    }
+  },
+  {
+    name: 'Breakout',
+    slug: 'breakout',
+    description: 'Break free with bold designs and contemporary fashion statements.',
+    backgroundImage: '/breakout.jpeg',
+    category: 'Fashion',
+    contact: {
+      phone: '+971-50-501-8606'
+    },
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 55, y: 60 }
+    }
+  },
+  {
+    name: 'Cambridge',
+    slug: 'cambridge',
+    description: 'Classic British style meets modern sophistication.',
+    backgroundImage: '/cambridge.jpeg',
+    category: 'Fashion',
+    contact: {
+      phone: '+971-50-501-8607'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 60, y: 40 }
+    }
+  },
+  {
+    name: 'Junaid Jamshed',
+    slug: 'junaid-jamshed',
+    description: 'Traditional elegance reimagined for the modern lifestyle.',
+    backgroundImage: '/junaid-jamshed.jpeg',
+    category: 'Fashion',
+    contact: {
+      phone: '+971-50-501-8608'
+    },
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 65, y: 50 }
+    }
+  },
+  {
+    name: 'Kayseria',
+    slug: 'kayseria',
+    description: 'Premium fashion and luxury textiles for the sophisticated shopper.',
+    backgroundImage: '/kayseria.jpeg',
+    category: 'Fashion',
+    contact: {
+      phone: '+971-50-501-8609'
+    },
+    location: {
+      level: 'Second Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 70, y: 35 }
+    }
+  },
+  {
+    name: 'Miniso',
+    slug: 'miniso',
+    description: 'Japanese-inspired lifestyle products and accessories for everyday living.',
+    backgroundImage: '/miniso.jpeg',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
     name: '12 STOREEZ',
     slug: '12-storeez',
     description: 'An international fashion brand with a clear design DNA and goal to create limited capsules that would easily fit into your life. Perfect cuts, elevated fabrics, attention to detail and composition allow us to provide our customers with a well-curated wardrobe, driven by our client\'s lifestyle rather than trends.',

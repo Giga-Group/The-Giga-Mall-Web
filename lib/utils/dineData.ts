@@ -25,14 +25,60 @@ export interface DineDetail {
 // Restaurant data - in a real app, this would come from an API
 export const dineDetails: DineDetail[] = [
   {
+    name: 'Cheezious',
+    slug: 'cheezious',
+    description: 'Delicious cheesy delights and comfort food favorites. Experience the perfect blend of flavors in every bite.',
+    backgroundImage: '/cheezious.jpeg',
+    category: 'Fast Food',
+    contact: {
+      phone: '+971-50-501-8599'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 25, y: 40 }
+    }
+  },
+  {
+    name: 'Pizza Hut',
+    slug: 'pizzahut',
+    description: 'World-famous pizza with fresh ingredients and signature flavors. Dine in, carry out, or enjoy delivery.',
+    backgroundImage: '/pizzahut.jpeg',
+    category: 'Restaurant',
+    contact: {
+      phone: '+971-50-501-8598'
+    },
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 30, y: 45 }
+    }
+  },
+  {
+    name: 'Wild Wings',
+    slug: 'wild-wings',
+    description: 'Bold flavors and crispy wings in a vibrant atmosphere. Perfect for sharing with friends and family.',
+    backgroundImage: '/wild-wings.jpeg',
+    category: 'Restaurant',
+    contact: {
+      phone: '+971-50-501-8597'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 35, y: 50 }
+    }
+  },
+  {
     name: 'ANGELINA',
     slug: 'angelina',
     description: 'Experience the authentic taste of Paris at ANGELINA. Known for our legendary hot chocolate and exquisite pastries, we bring French elegance to every dining experience.',
+    logo: '/service potrait.jpg',
     contact: {
       phone: '+971-50-501-8501'
     },
     category: 'Fine Dining',
-    backgroundImage: '/DSC05412Food_OK_1.jpg',
+    backgroundImage: '/service landscape.jpg',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -257,11 +303,26 @@ export const dineDetails: DineDetail[] = [
       phone: '+971-50-501-8516'
     },
     category: 'Fast Food',
-    backgroundImage: '/NIKE_-_WMoN.jpg',
+    backgroundImage: '/macdonalds.jpeg',
     location: {
       level: 'Ground Floor',
       parking: 'P1, Main Parking',
       mapPosition: { x: 39, y: 63 }
+    }
+  },
+  {
+    name: 'Hardee\'s',
+    slug: 'hardees',
+    description: 'Made from scratch. Fresh, quality ingredients in every burger, sandwich, and breakfast item. Bold flavors you\'ll love.',
+    contact: {
+      phone: '+971-50-501-8523'
+    },
+    category: 'Fast Food',
+    backgroundImage: '/hardees.jpeg',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 40, y: 64 }
     }
   },
   {
@@ -363,4 +424,5 @@ export function getDineBySlug(slug: string): DineDetail | undefined {
 export function getAllDineSlugs(): string[] {
   return dineDetails.map(dine => dine.slug);
 }
+
 

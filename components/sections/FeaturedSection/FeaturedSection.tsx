@@ -9,24 +9,59 @@ import { FeaturedItem } from '@/types';
 
 const featuredItems: FeaturedItem[] = [
   {
-    image: '/361 picture.jpg',
-    name: 'Sephora',
-    description: 'The ultimate beauty playground featuring makeup, skincare, and fragrance icons.',
+    image: '/alkaram.jpg',
+    name: 'Alkaram',
+    description: 'Elegant fashion and premium textiles for the modern wardrobe.',
   },
   {
-    image: '/NIKE_-_WMoN.jpg',
-    name: 'Nike',
-    description: 'Performance meets style with the latest sneakers, sportswear, and innovations.',
+    image: '/almas.jpeg',
+    name: 'Almas',
+    description: 'Discover timeless elegance with our curated collection of premium fashion.',
   },
   {
-    image: '/ADIDAS.jpg',
-    name: 'Adidas',
-    description: 'Sport-inspired streetwear and footwear designed for game changers.',
+    image: '/almirah.jpeg',
+    name: 'Almirah',
+    description: 'Your destination for contemporary fashion and style essentials.',
   },
   {
-    image: '/zara-forum6257.jpg',
-    name: 'Zara',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style.',
+    image: '/batik-studio.jpg',
+    name: 'Batik Studio',
+    description: 'Traditional artistry meets modern fashion in our unique batik collections.',
+  },
+  {
+    image: '/bloon.jpg',
+    name: 'Bloon',
+    description: 'Fresh styles and vibrant fashion for every occasion.',
+  },
+  {
+    image: '/bonanza.jpeg',
+    name: 'Bonanza',
+    description: 'Quality clothing and accessories for the whole family.',
+  },
+  {
+    image: '/breakout.jpeg',
+    name: 'Breakout',
+    description: 'Break free with bold designs and contemporary fashion statements.',
+  },
+  {
+    image: '/cambridge.jpeg',
+    name: 'Cambridge',
+    description: 'Classic British style meets modern sophistication.',
+  },
+  {
+    image: '/junaid-jamshed.jpeg',
+    name: 'Junaid Jamshed',
+    description: 'Traditional elegance reimagined for the modern lifestyle.',
+  },
+  {
+    image: '/kayseria.jpeg',
+    name: 'Kayseria',
+    description: 'Premium fashion and luxury textiles for the sophisticated shopper.',
+  },
+  {
+    image: '/miniso.jpeg',
+    name: 'Miniso',
+    description: 'Japanese-inspired lifestyle products and accessories for everyday living.',
   },
 ];
 

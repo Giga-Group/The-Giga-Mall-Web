@@ -14,16 +14,17 @@ interface ShopDropdownProps {
 // Helper function to convert brand name to slug
 const brandToSlug = (brandName: string): string => {
   const brandSlugMap: { [key: string]: string } = {
-    'Bvlgari': 'bvlgari',
-    'Cartier': 'cartier',
-    'Chloé': 'chloe',
-    'Chopard': 'chopard',
-    'Christian Louboutin': 'christian-louboutin',
-    'Henry Jacques': 'henry-jacques',
-    'Level Shoes': 'level-shoes',
-    'Louis Vuitton': 'louis-vuitton',
-    'Tiffany & Co.': 'tiffany-co',
-    'CHANEL': 'chanel'
+    'Alkaram': 'alkaram',
+    'Almas': 'almas',
+    'Almirah': 'almirah',
+    'Batik Studio': 'batik-studio',
+    'Bloon': 'bloon',
+    'Bonanza': 'bonanza',
+    'Breakout': 'breakout',
+    'Cambridge': 'cambridge',
+    'Junaid Jamshed': 'junaid-jamshed',
+    'Kayseria': 'kayseria',
+    'Miniso': 'miniso'
   };
   
   return brandSlugMap[brandName] || brandName.toLowerCase().replace(/\s+/g, '-').replace(/&/g, '').replace(/\./g, '');
@@ -60,16 +61,17 @@ const ShopDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: ShopDropdownProps)
       "Toys"
     ],
     brands: [
-      "Bvlgari",
-      "Cartier",
-      "Chloé",
-      "Chopard",
-      "Christian Louboutin",
-      "Henry Jacques",
-      "Level Shoes",
-      "Louis Vuitton",
-      "Tiffany & Co.",
-      "CHANEL"
+      "Alkaram",
+      "Almas",
+      "Almirah",
+      "Batik Studio",
+      "Bloon",
+      "Bonanza",
+      "Breakout",
+      "Cambridge",
+      "Junaid Jamshed",
+      "Kayseria",
+      "Miniso"
     ],
     occasions: [
       "Anniversary",

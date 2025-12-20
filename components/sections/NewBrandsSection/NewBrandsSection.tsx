@@ -7,72 +7,56 @@ import { Brand } from '@/types';
 
 const brands: Brand[] = [
   {
-    name: "Victoria's Secret",
-    image: '/Victoria_s_Secret_Westfield_Stratford_City.jpg'
+    name: 'Alkaram',
+    image: '/alkaram.jpg'
   },
   {
-    name: 'H&M',
-    image: '/H and M.jpg'
+    name: 'Almas',
+    image: '/almas.jpeg'
+  },
+  {
+    name: 'Almirah',
+    image: '/almirah.jpeg'
+  },
+  {
+    name: 'Bareeze',
+    image: '/bareeze.jpeg'
+  },
+  {
+    name: 'Batik Studio',
+    image: '/batik-studio.jpg'
+  },
+  {
+    name: 'Bloon',
+    image: '/bloon.jpg'
+  },
+  {
+    name: 'Bonanza',
+    image: '/bonanza.jpeg'
+  },
+  {
+    name: 'Breakout',
+    image: '/breakout.jpeg'
+  },
+  {
+    name: 'Cambridge',
+    image: '/cambridge.jpeg'
+  },
+  {
+    name: 'Junaid Jamshed',
+    image: '/junaid-jamshed.jpeg'
+  },
+  {
+    name: 'Kayseria',
+    image: '/kayseria.jpeg'
+  },
+  {
+    name: 'Little Explorer',
+    image: '/little-explorer.jpeg'
   },
   {
     name: 'Miniso',
-    image: '/minisoo.jpg'
-  },
-  {
-    name: 'Sephora',
-    image: '/Sephora_2_1.jpg'
-  },
-  {
-    name: 'Nike',
-    image: '/NIKE_-_WMoN.jpg'
-  },
-  {
-    name: 'Adidas',
-    image: '/ADIDAS.jpg'
-  },
-  {
-    name: 'Zara',
-    image: '/zara-forum6257.jpg'
-  },
-  {
-    name: 'Aesop',
-    image: '/Aesop_Westfield_Stratford_City.jpg'
-  },
-  {
-    name: 'Starbucks',
-    image: '/Starbucks.jpg'
-  },
-  {
-    name: 'Brand 1',
-    image: '/picture1.jpg'
-  },
-  {
-    name: 'Brand 23',
-    image: '/23.jpg'
-  },
-  {
-    name: 'Brand 346',
-    image: '/346.jpg'
-  },
-  {
-    name: 'Brand 365',
-    image: '/365.jpg'
-  },
-  {
-    name: 'Brand 584',
-    image: '/584.jpg'
-  },
-  {
-    name: 'Brand 745',
-    image: '/745.jpg'
-  },
-  {
-    name: 'Brand 4631',
-    image: '/4631.jpg'
-  },
-  {
-    name: 'Brand 6485',
-    image: '/6485.jpg'
+    image: '/miniso.jpeg'
   },
 ];
 

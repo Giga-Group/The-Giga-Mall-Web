@@ -18,6 +18,17 @@ interface StoreGridProps {
 
 // Sample store data - in a real app, this would come from an API
 const defaultStores: Store[] = [
+  { name: 'Alkaram', slug: 'alkaram' },
+  { name: 'Almas', slug: 'almas' },
+  { name: 'Almirah', slug: 'almirah' },
+  { name: 'Batik Studio', slug: 'batik-studio' },
+  { name: 'Bloon', slug: 'bloon' },
+  { name: 'Bonanza', slug: 'bonanza' },
+  { name: 'Breakout', slug: 'breakout' },
+  { name: 'Cambridge', slug: 'cambridge' },
+  { name: 'Junaid Jamshed', slug: 'junaid-jamshed' },
+  { name: 'Kayseria', slug: 'kayseria' },
+  { name: 'Miniso', slug: 'miniso' },
   { name: '& Other Stories', slug: 'other-stories', hasOffers: true },
   { name: '100% Capri', slug: '100-capri' },
   { name: '12 STOREEZ', slug: '12-storeez' },
