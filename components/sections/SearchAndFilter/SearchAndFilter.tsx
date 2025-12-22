@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { Box, TextField, Select, MenuItem, FormControl, InputLabel, Checkbox, FormControlLabel, Typography, Chip } from '@mui/material';
-import { Search, LocalOffer, CardGiftcard } from '@mui/icons-material';
+import { Box, TextField, Select, MenuItem, FormControl, InputLabel, Checkbox, FormControlLabel, Typography, Chip, IconButton, Drawer, Button } from '@mui/material';
+import { Search, LocalOffer, CardGiftcard, FilterList, Close } from '@mui/icons-material';
 
 interface CategoryOption {
   value: string;
@@ -70,6 +70,7 @@ const SearchAndFilter = ({
   const [subcategory, setSubcategory] = useState('');
   const [viewBy, setViewBy] = useState('');
   const [showOffersOnly, setShowOffersOnly] = useState(false);
+  const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
 
   // Determine which categories and subcategories to use
   const categoryOptions = categories || (pageType === 'dine' ? defaultDineCategories : defaultShopCategories);
@@ -88,37 +89,110 @@ const SearchAndFilter = ({
     <Box
       sx={{
         width: '100%',
-        py: { xs: 3, sm: 4 },
-        // px: { xs: 2, sm: 4, md: 6, lg: 10 },
+        py: { xs: 2, sm: 4 },
         backgroundColor: '#ffffff'
       }}
     >
       <Box
         sx={{
-          width: '100vw',
+          width: '100%',
+          maxWidth: '1400px',
+          margin: '0 auto',
+          px: { xs: 2, sm: 4, md: 6, lg: 10 },
           display: 'flex',
           flexDirection: 'column',
           gap: { xs: 2, sm: 3, md: 0 }
         }}
       >
-        {/* Row 1: Search and Show Offers Only Checkbox */}
+        {/* Mobile: Search Bar with Filter Button */}
         <Box
           sx={{
-            display: 'flex',
-            flexDirection: { xs: 'column', md: 'row' },
+            display: { xs: 'flex', md: 'none' },
+            gap: 1.5,
+            alignItems: 'center',
+            width: '100%'
+          }}
+        >
+          {/* Search Bar - Mobile */}
+          <Box sx={{ flex: 1 }}>
+            <TextField
+              fullWidth
+              placeholder={placeholder}
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              variant="outlined"
+              sx={{
+                '& .MuiOutlinedInput-root': {
+                  backgroundColor: '#f5f5f5',
+                  borderRadius: '12px',
+                  '& fieldset': {
+                    borderColor: '#e0e0e0',
+                    borderWidth: '1px'
+                  },
+                  '&:hover fieldset': {
+                    borderColor: '#D19F3B'
+                  },
+                  '&.Mui-focused fieldset': {
+                    borderColor: '#D19F3B',
+                    borderWidth: '2px'
+                  }
+                },
+                '& .MuiInputBase-input': {
+                  padding: '14px 16px',
+                  fontSize: '0.95rem',
+                  color: '#333333'
+                },
+                '& .MuiInputBase-input::placeholder': {
+                  color: '#999999',
+                  opacity: 1
+                }
+              }}
+              InputProps={{
+                startAdornment: (
+                  <Box sx={{ display: 'flex', alignItems: 'center', pl: 1.5, pr: 1 }}>
+                    <Search sx={{ color: '#666666', fontSize: '20px' }} />
+                  </Box>
+                )
+              }}
+            />
+          </Box>
+
+          {/* Filter Button - Mobile */}
+          <IconButton
+            onClick={() => setMobileFilterOpen(true)}
+            sx={{
+              backgroundColor: '#D19F3B',
+              color: '#ffffff',
+              width: '48px',
+              height: '48px',
+              borderRadius: '12px',
+              '&:hover': {
+                backgroundColor: '#B88A2A'
+              },
+              boxShadow: '0 2px 8px rgba(209, 159, 59, 0.3)'
+            }}
+          >
+            <FilterList />
+          </IconButton>
+        </Box>
+
+        {/* Desktop: Row 1: Search and Show Offers Only Checkbox */}
+        <Box
+          sx={{
+            display: { xs: 'none', md: 'flex' },
+            flexDirection: 'row',
             justifyContent: 'space-between',
-            alignItems: { xs: 'flex-start', md: 'flex-end' },
-            gap: { xs: 2, sm: 3 },
-            backgroundColor: { xs: 'transparent', lg: '#D19F3B' },
-            color: { xs: '#333333', lg: '#ffffff' },
-            px: { xs: 0, lg: 33 },
-            // py: { xs: 0, lg: 2 },
+            alignItems: 'flex-end',
+            gap: 3,
+            backgroundColor: { md: 'transparent', lg: '#D19F3B' },
+            color: { md: '#333333', lg: '#ffffff' },
+            px: { md: 0, lg: 8 },
             paddingTop: 4,
-            paddingBottom:2,
+            paddingBottom: 2,
             borderRadius: 0
           }}
         >
-          {/* Search Bar */}
+          {/* Search Bar - Desktop */}
           <Box sx={{ flex: 1, maxWidth: { md: '400px', lg: '470px' } }}>
             <TextField
               fullWidth
@@ -128,32 +202,32 @@ const SearchAndFilter = ({
               variant="standard"
               sx={{
                 '& .MuiInput-underline:before': {
-                  borderBottomColor: { xs: '#e0e0e0', lg: '#ffffff' }
+                  borderBottomColor: { md: '#e0e0e0', lg: '#ffffff' }
                 },
                 '& .MuiInput-underline:hover:not(.Mui-disabled):before': {
-                  borderBottomColor: { xs: '#bdbdbd', lg: '#ffffff' }
+                  borderBottomColor: { md: '#bdbdbd', lg: '#ffffff' }
                 },
                 '& .MuiInput-underline:after': {
-                  borderBottomColor: { xs: '#D19F3B', lg: '#ffffff' }
+                  borderBottomColor: { md: '#D19F3B', lg: '#ffffff' }
                 },
                 '& .MuiInputBase-input': {
-                  color: { xs: '#333333', lg: '#ffffff' }
+                  color: { md: '#333333', lg: '#ffffff' }
                 },
                 '& .MuiInputBase-input::placeholder': {
-                  color: { xs: '#999999', lg: 'rgba(255,255,255,0.8)' }
+                  color: { md: '#999999', lg: 'rgba(255,255,255,0.8)' }
                 }
               }}
               InputProps={{
                 endAdornment: (
                   <Box sx={{ display: 'flex', alignItems: 'center', pr: 1 }}>
-                    <Search sx={{ color: { xs: '#666666', lg: '#ffffff' } }} />
+                    <Search sx={{ color: { md: '#666666', lg: '#ffffff' } }} />
                   </Box>
                 )
               }}
             />
           </Box>
 
-          {/* Show Offers Only Checkbox */}
+          {/* Show Offers Only Checkbox - Desktop */}
           <FormControlLabel
             control={
               <Checkbox
@@ -170,8 +244,8 @@ const SearchAndFilter = ({
             label={
               <Typography
                 sx={{
-                  fontSize: { xs: '0.85rem', sm: '0.9rem' },
-                  color: { xs: '#333333', lg: '#ffffff' }
+                  fontSize: '0.9rem',
+                  color: { md: '#333333', lg: '#ffffff' }
                 }}
               >
                 {offersText}
@@ -179,7 +253,7 @@ const SearchAndFilter = ({
             }
             sx={{ 
               whiteSpace: 'nowrap', 
-              alignSelf: { xs: 'flex-start', md: 'flex-end' },
+              alignSelf: 'flex-end',
               margin: 0,
               '& .MuiFormControlLabel-label': {
                 margin: 0
@@ -188,208 +262,326 @@ const SearchAndFilter = ({
           />
         </Box>
 
-        {/* Mobile Category Section - Horizontal Scrollable Chips */}
-        <Box
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            width: '100%',
-            overflowX: 'auto',
-            pb: 1,
-            '&::-webkit-scrollbar': {
-              height: '4px'
-            },
-            '&::-webkit-scrollbar-track': {
-              backgroundColor: '#f1f1f1'
-            },
-            '&::-webkit-scrollbar-thumb': {
-              backgroundColor: '#D19F3B',
-              borderRadius: '2px'
+        {/* Mobile Filter Drawer */}
+        <Drawer
+          anchor="bottom"
+          open={mobileFilterOpen}
+          onClose={() => setMobileFilterOpen(false)}
+          PaperProps={{
+            sx: {
+              borderTopLeftRadius: '20px',
+              borderTopRightRadius: '20px',
+              maxHeight: '85vh'
             }
           }}
         >
-          <Typography
-            sx={{
-              fontSize: '0.875rem',
-              fontWeight: 600,
-              color: '#333333',
-              mb: 1.5,
-              textTransform: 'uppercase',
-              letterSpacing: '0.5px'
-            }}
-          >
-            Categories
-          </Typography>
           <Box
             sx={{
+              width: '100%',
+              p: 3,
               display: 'flex',
-              gap: 1,
-              pb: 0.5,
-              minWidth: 'max-content'
+              flexDirection: 'column',
+              gap: 3
             }}
           >
-            {categoryOptions.map((cat) => (
-              <Chip
-                key={cat.value}
-                label={cat.label}
-                onClick={() => setCategory(cat.value)}
+            {/* Drawer Header */}
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                pb: 2,
+                borderBottom: '1px solid #e0e0e0'
+              }}
+            >
+              <Typography
                 sx={{
-                  backgroundColor: category === cat.value ? '#D19F3B' : '#f5f5f5',
-                  color: category === cat.value ? '#ffffff' : '#333333',
-                  fontWeight: category === cat.value ? 600 : 400,
+                  fontSize: '1.25rem',
+                  fontWeight: 600,
+                  color: '#333333'
+                }}
+              >
+                Filters
+              </Typography>
+              <IconButton
+                onClick={() => setMobileFilterOpen(false)}
+                sx={{
+                  color: '#666666'
+                }}
+              >
+                <Close />
+              </IconButton>
+            </Box>
+
+            {/* Show Offers Only Checkbox - Mobile */}
+            <Box>
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={showOffersOnly}
+                    onChange={(e) => setShowOffersOnly(e.target.checked)}
+                    sx={{
+                      color: '#D19F3B',
+                      '&.Mui-checked': {
+                        color: '#D19F3B'
+                      }
+                    }}
+                  />
+                }
+                label={
+                  <Typography
+                    sx={{
+                      fontSize: '0.95rem',
+                      color: '#333333',
+                      fontWeight: 500
+                    }}
+                  >
+                    {offersText}
+                  </Typography>
+                }
+              />
+            </Box>
+
+            {/* Category Section - Mobile Drawer */}
+            <Box>
+              <Typography
+                sx={{
                   fontSize: '0.875rem',
-                  height: '36px',
+                  fontWeight: 600,
+                  color: '#333333',
+                  mb: 2,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.5px'
+                }}
+              >
+                Categories
+              </Typography>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: 1.5
+                }}
+              >
+                {categoryOptions.map((cat) => (
+                  <Chip
+                    key={cat.value}
+                    label={cat.label}
+                    onClick={() => {
+                      setCategory(cat.value);
+                      setMobileFilterOpen(false);
+                    }}
+                    sx={{
+                      backgroundColor: category === cat.value ? '#D19F3B' : '#f5f5f5',
+                      color: category === cat.value ? '#ffffff' : '#333333',
+                      fontWeight: category === cat.value ? 600 : 400,
+                      fontSize: '0.9rem',
+                      height: '40px',
+                      cursor: 'pointer',
+                      borderRadius: '10px',
+                      '&:hover': {
+                        backgroundColor: category === cat.value ? '#B88A2A' : '#e0e0e0'
+                      },
+                      transition: 'all 0.2s ease'
+                    }}
+                  />
+                ))}
+              </Box>
+            </Box>
+
+            {/* Subcategory Section - Mobile Drawer */}
+            <Box>
+              <Typography
+                sx={{
+                  fontSize: '0.875rem',
+                  fontWeight: 600,
+                  color: '#333333',
+                  mb: 2,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.5px'
+                }}
+              >
+                Subcategories
+              </Typography>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: 1.5
+                }}
+              >
+                {subcategoryOptions.map((subcat) => (
+                  <Chip
+                    key={subcat.value}
+                    label={subcat.label}
+                    onClick={() => {
+                      setSubcategory(subcat.value);
+                      setMobileFilterOpen(false);
+                    }}
+                    sx={{
+                      backgroundColor: subcategory === subcat.value ? '#D19F3B' : '#f5f5f5',
+                      color: subcategory === subcat.value ? '#ffffff' : '#333333',
+                      fontWeight: subcategory === subcat.value ? 600 : 400,
+                      fontSize: '0.9rem',
+                      height: '40px',
+                      cursor: 'pointer',
+                      borderRadius: '10px',
+                      '&:hover': {
+                        backgroundColor: subcategory === subcat.value ? '#B88A2A' : '#e0e0e0'
+                      },
+                      transition: 'all 0.2s ease'
+                    }}
+                  />
+                ))}
+              </Box>
+            </Box>
+
+            {/* View By Section - Mobile Drawer */}
+            <Box>
+              <Typography
+                sx={{
+                  fontSize: '0.875rem',
+                  fontWeight: 600,
+                  color: '#333333',
+                  mb: 2,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.5px'
+                }}
+              >
+                View By
+              </Typography>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: 1.5
+                }}
+              >
+                {[
+                  { value: '', label: 'All' },
+                  { value: '0-9', label: '0-9' },
+                  { value: 'a-f', label: 'A-F' },
+                  { value: 'g-l', label: 'G-L' },
+                  { value: 'm-r', label: 'M-R' },
+                  { value: 's-z', label: 'S-Z' }
+                ].map((option) => (
+                  <Chip
+                    key={option.value}
+                    label={option.label}
+                    onClick={() => {
+                      setViewBy(option.value);
+                      setMobileFilterOpen(false);
+                    }}
+                    sx={{
+                      backgroundColor: viewBy === option.value ? '#D19F3B' : '#f5f5f5',
+                      color: viewBy === option.value ? '#ffffff' : '#333333',
+                      fontWeight: viewBy === option.value ? 600 : 400,
+                      fontSize: '0.9rem',
+                      height: '40px',
+                      cursor: 'pointer',
+                      borderRadius: '10px',
+                      '&:hover': {
+                        backgroundColor: viewBy === option.value ? '#B88A2A' : '#e0e0e0'
+                      },
+                      transition: 'all 0.2s ease'
+                    }}
+                  />
+                ))}
+              </Box>
+            </Box>
+
+            {/* Store Offers Links - Mobile Drawer */}
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 2,
+                pt: 2,
+                borderTop: '1px solid #e0e0e0'
+              }}
+            >
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1.5,
                   cursor: 'pointer',
                   '&:hover': {
-                    backgroundColor: category === cat.value ? '#B88A2A' : '#e0e0e0'
-                  },
-                  transition: 'all 0.2s ease'
+                    opacity: 0.7
+                  }
                 }}
-              />
-            ))}
-          </Box>
-        </Box>
+              >
+                <LocalOffer sx={{ color: '#D19F3B', fontSize: '22px' }} />
+                <Typography
+                  sx={{
+                    fontSize: '0.95rem',
+                    color: '#333333',
+                    fontWeight: 500
+                  }}
+                >
+                  Store Offers
+                </Typography>
+              </Box>
 
-        {/* Mobile Subcategory Section - Horizontal Scrollable Chips */}
-        <Box
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            width: '100%',
-            overflowX: 'auto',
-            pb: 1,
-            '&::-webkit-scrollbar': {
-              height: '4px'
-            },
-            '&::-webkit-scrollbar-track': {
-              backgroundColor: '#f1f1f1'
-            },
-            '&::-webkit-scrollbar-thumb': {
-              backgroundColor: '#D19F3B',
-              borderRadius: '2px'
-            }
-          }}
-        >
-          <Typography
-            sx={{
-              fontSize: '0.875rem',
-              fontWeight: 600,
-              color: '#333333',
-              mb: 1.5,
-              textTransform: 'uppercase',
-              letterSpacing: '0.5px'
-            }}
-          >
-            Subcategories
-          </Typography>
-          <Box
-            sx={{
-              display: 'flex',
-              gap: 1,
-              pb: 0.5,
-              minWidth: 'max-content'
-            }}
-          >
-            {subcategoryOptions.map((subcat) => (
-              <Chip
-                key={subcat.value}
-                label={subcat.label}
-                onClick={() => setSubcategory(subcat.value)}
+              <Box
                 sx={{
-                  backgroundColor: subcategory === subcat.value ? '#D19F3B' : '#f5f5f5',
-                  color: subcategory === subcat.value ? '#ffffff' : '#333333',
-                  fontWeight: subcategory === subcat.value ? 600 : 400,
-                  fontSize: '0.875rem',
-                  height: '36px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1.5,
                   cursor: 'pointer',
                   '&:hover': {
-                    backgroundColor: subcategory === subcat.value ? '#B88A2A' : '#e0e0e0'
-                  },
-                  transition: 'all 0.2s ease'
+                    opacity: 0.7
+                  }
                 }}
-              />
-            ))}
-          </Box>
-        </Box>
+              >
+                <CardGiftcard sx={{ color: '#D19F3B', fontSize: '22px' }} />
+                <Typography
+                  sx={{
+                    fontSize: '0.95rem',
+                    color: '#333333',
+                    fontWeight: 500
+                  }}
+                >
+                  Accepts Giga Gift Card
+                </Typography>
+              </Box>
+            </Box>
 
-        {/* Mobile View By Section - Horizontal Scrollable Chips */}
+            {/* Apply Button - Mobile Drawer */}
+            <Button
+              variant="contained"
+              fullWidth
+              onClick={() => setMobileFilterOpen(false)}
+              sx={{
+                backgroundColor: '#D19F3B',
+                color: '#ffffff',
+                py: 1.5,
+                borderRadius: '12px',
+                fontSize: '1rem',
+                fontWeight: 600,
+                textTransform: 'none',
+                '&:hover': {
+                  backgroundColor: '#B88A2A'
+                },
+                mt: 2
+              }}
+            >
+              Apply Filters
+            </Button>
+          </Box>
+        </Drawer>
+
+        {/* Row 2: Categories on Left, Store Offers Links on Right - Desktop Only */}
         <Box
           sx={{
-            display: { xs: 'block', sm: 'none' },
-            width: '100%',
-            overflowX: 'auto',
-            pb: 1,
-            '&::-webkit-scrollbar': {
-              height: '4px'
-            },
-            '&::-webkit-scrollbar-track': {
-              backgroundColor: '#f1f1f1'
-            },
-            '&::-webkit-scrollbar-thumb': {
-              backgroundColor: '#D19F3B',
-              borderRadius: '2px'
-            }
-          }}
-        >
-          <Typography
-            sx={{
-              fontSize: '0.875rem',
-              fontWeight: 600,
-              color: '#333333',
-              mb: 1.5,
-              textTransform: 'uppercase',
-              letterSpacing: '0.5px'
-            }}
-          >
-            View By
-          </Typography>
-          <Box
-            sx={{
-              display: 'flex',
-              gap: 1,
-              pb: 0.5,
-              minWidth: 'max-content'
-            }}
-          >
-            {[
-              { value: '', label: 'All' },
-              { value: '0-9', label: '0-9' },
-              { value: 'a-f', label: 'A-F' },
-              { value: 'g-l', label: 'G-L' },
-              { value: 'm-r', label: 'M-R' },
-              { value: 's-z', label: 'S-Z' }
-            ].map((option) => (
-              <Chip
-                key={option.value}
-                label={option.label}
-                onClick={() => setViewBy(option.value)}
-                sx={{
-                  backgroundColor: viewBy === option.value ? '#D19F3B' : '#f5f5f5',
-                  color: viewBy === option.value ? '#ffffff' : '#333333',
-                  fontWeight: viewBy === option.value ? 600 : 400,
-                  fontSize: '0.875rem',
-                  height: '36px',
-                  cursor: 'pointer',
-                  '&:hover': {
-                    backgroundColor: viewBy === option.value ? '#B88A2A' : '#e0e0e0'
-                  },
-                  transition: 'all 0.2s ease'
-                }}
-              />
-            ))}
-          </Box>
-        </Box>
-
-        {/* Row 2: Categories on Left, Store Offers Links on Right */}
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: { xs: 'column', md: 'row' },
+            display: { xs: 'none', md: 'flex' },
+            flexDirection: 'row',
             justifyContent: 'space-between',
-            alignItems: { xs: 'flex-start', md: 'flex-end' },
-            gap: { xs: 2, sm: 3 },
-            backgroundColor: { xs: 'transparent', lg: '#D19F3B' },
-            color: { xs: '#333333', lg: '#ffffff' },
-            px: { xs: 0, lg: 33 },
-            // py: { xs: 0, lg: 2 },
+            alignItems: 'flex-end',
+            gap: 3,
+            backgroundColor: { md: 'transparent', lg: '#D19F3B' },
+            color: { md: '#333333', lg: '#ffffff' },
+            px: { md: 0, lg: 8 },
             paddingBottom: 6,
             borderRadius: 0
           }}
@@ -529,13 +721,13 @@ const SearchAndFilter = ({
             </FormControl>
           </Box>
 
-          {/* Right Side - Store Offers Links */}
+          {/* Right Side - Store Offers Links - Desktop Only */}
           <Box
             sx={{
               display: 'flex',
-              flexDirection: { xs: 'column', sm: 'row' },
-              gap: { xs: 1.5, sm: 2, md: 3 },
-              alignItems: { xs: 'flex-start', md: 'flex-end' }
+              flexDirection: 'row',
+              gap: 3,
+              alignItems: 'flex-end'
             }}
           >
             <Box
@@ -549,11 +741,11 @@ const SearchAndFilter = ({
                 }
               }}
             >
-              <LocalOffer sx={{ color: { xs: '#D19F3B', lg: '#ffffff' }, fontSize: { xs: '18px', sm: '20px' } }} />
+              <LocalOffer sx={{ color: { md: '#D19F3B', lg: '#ffffff' }, fontSize: '20px' }} />
               <Typography
                 sx={{
-                  fontSize: { xs: '0.85rem', sm: '0.9rem' },
-                  color: { xs: '#333333', lg: '#ffffff' },
+                  fontSize: '0.9rem',
+                  color: { md: '#333333', lg: '#ffffff' },
                   fontWeight: 500
                 }}
               >
@@ -572,11 +764,11 @@ const SearchAndFilter = ({
                 }
               }}
             >
-              <CardGiftcard sx={{ color: { xs: '#D19F3B', lg: '#ffffff' }, fontSize: { xs: '18px', sm: '20px' } }} />
+              <CardGiftcard sx={{ color: { md: '#D19F3B', lg: '#ffffff' }, fontSize: '20px' }} />
               <Typography
                 sx={{
-                  fontSize: { xs: '0.85rem', sm: '0.9rem' },
-                  color: { xs: '#333333', lg: '#ffffff' },
+                  fontSize: '0.9rem',
+                  color: { md: '#333333', lg: '#ffffff' },
                   fontWeight: 500
                 }}
               >

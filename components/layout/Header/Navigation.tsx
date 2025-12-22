@@ -7,14 +7,14 @@ interface NavigationProps {
   navItems: string[];
   onShopHover: () => void;
   onDineHover: () => void;
-  onStayHover: () => void;
+  // onStayHover: () => void;
   onEntertainHover: () => void;
   onPlanVisitHover: () => void;
   onClearHover: () => void;
   isSmallScreen: boolean;
 }
 
-const Navigation = ({ navItems, onShopHover, onDineHover, onStayHover, onEntertainHover, onPlanVisitHover, onClearHover, isSmallScreen }: NavigationProps) => {
+const Navigation = ({ navItems, onShopHover, onDineHover, /* onStayHover, */ onEntertainHover, onPlanVisitHover, onClearHover, isSmallScreen }: NavigationProps) => {
   if (isSmallScreen) return null;
 
   return (
@@ -26,7 +26,9 @@ const Navigation = ({ navItems, onShopHover, onDineHover, onStayHover, onEnterta
       justifyContent: 'center',
       mx: { md: 2, lg: 4 }
     }}>
-      {navItems.map((item, index) => {
+      {navItems
+        .filter((item) => item !== 'Stay') // Filter out Stay items
+        .map((item, index) => {
         const href =
           item === "What's New"
             ? '/whats-new'
@@ -34,8 +36,8 @@ const Navigation = ({ navItems, onShopHover, onDineHover, onStayHover, onEnterta
             ? '/shop'
             : item === 'Dine'
             ? '/dine'
-            : item === 'Stay'
-            ? '/stay'
+            // : item === 'Stay'
+            // ? '/stay'
             : item === 'Entertain'
             ? '/entertain'
             : item === 'Services'
@@ -47,7 +49,7 @@ const Navigation = ({ navItems, onShopHover, onDineHover, onStayHover, onEnterta
         const hasDropdown =
           item === 'Shop' ||
           item === 'Dine' ||
-          item === 'Stay' ||
+          // item === 'Stay' ||
           item === 'Entertain' ||
           item === 'Plan your visit';
 
@@ -59,7 +61,7 @@ const Navigation = ({ navItems, onShopHover, onDineHover, onStayHover, onEnterta
           onMouseEnter={() => {
             if (item === 'Shop') onShopHover();
             if (item === 'Dine') onDineHover();
-            if (item === 'Stay') onStayHover();
+            // if (item === 'Stay') onStayHover();
             if (item === 'Entertain') onEntertainHover();
             if (item === 'Plan your visit') onPlanVisitHover();
 

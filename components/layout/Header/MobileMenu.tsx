@@ -34,8 +34,8 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         return '/shop';
       case 'Dine':
         return '/dine';
-      case 'Stay':
-        return '/stay';
+      // case 'Stay':
+      //   return '/stay';
       case 'Entertain':
         return '/entertain';
       case 'Services':
@@ -124,7 +124,9 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             width: '100%',
           }}
         >
-          {NAV_ITEMS.map((item, index) => (
+          {NAV_ITEMS
+            .filter((item) => item !== 'Stay') // Filter out Stay items
+            .map((item, index) => (
             <Box
               key={index}
               component={Link}

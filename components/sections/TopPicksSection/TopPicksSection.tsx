@@ -11,55 +11,39 @@ interface TopPick {
   link?: string;
 }
 
-// Group items into sets of 3 for the grid layout
+// Top picks from shop and dine sections
 const allTopPicks: TopPick[] = [
-  // Set 1
+  // Shop picks
   {
-    brand: 'LONGINES',
-    image: '/_F1A0822.jpg',
-    link: '/shop/longines'
+    brand: 'Alkaram',
+    image: '/alkaram.jpg',
+    link: '/shop/alkaram'
   },
   {
-    brand: 'CHANEL',
-    image: '/WESTFIELD_CENTURY_CITY_TAYLOR_SWIFT_2.jpg',
-    link: '/shop/chanel'
+    brand: 'Batik Studio',
+    image: '/batik-studio.jpg',
+    link: '/shop/batik-studio'
   },
   {
-    brand: 'GIUSEPPE ZANOTTI',
-    image: '/DSC07901.jpg',
-    link: '/shop/giuseppe-zanotti'
+    brand: 'Kayseria',
+    image: '/kayseria.jpeg',
+    link: '/shop/kayseria'
   },
-  // Set 2
+  // Dine picks
   {
-    brand: 'H&M',
-    image: '/H and M.jpg',
-    link: '/shop/hm'
-  },
-  {
-    brand: 'ZARA',
-    image: '/zara-forum6257.jpg',
-    link: '/shop/zara'
+    brand: 'Cheezious',
+    image: '/cheezious.jpeg',
+    link: '/dine/cheezious'
   },
   {
-    brand: 'NIKE',
-    image: '/NIKE_-_WMoN.jpg',
-    link: '/shop/nike'
-  },
-  // Set 3
-  {
-    brand: 'ADIDAS',
-    image: '/ADIDAS.jpg',
-    link: '/shop/adidas'
+    brand: 'Pizza Hut',
+    image: '/pizzahut.jpeg',
+    link: '/dine/pizzahut'
   },
   {
-    brand: 'SEPHORA',
-    image: '/Sephora_2_1.jpg',
-    link: '/shop/sephora'
-  },
-  {
-    brand: 'VICTORIA\'S SECRET',
-    image: '/Victoria_s_Secret_Westfield_Stratford_City.jpg',
-    link: '/shop/victorias-secret'
+    brand: 'Wild Wings',
+    image: '/wild-wings.jpeg',
+    link: '/dine/wild-wings'
   }
 ];
 
