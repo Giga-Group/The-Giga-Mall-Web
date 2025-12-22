@@ -5,8 +5,7 @@ import { StoreDetail } from '@/lib/utils/storeData';
 import StoreHero from '@/components/sections/StoreHero';
 import StoreLocation from '@/components/sections/StoreLocation';
 import DontMissOut from '@/components/sections/DontMissOut';
-import DownloadGigaMallApp from '@/components/sections/DownloadGigaMallApp';
-import VisitorInfo from '@/components/sections/VisitorInfo';
+import AppAndVisitorInfo from '@/components/sections/AppAndVisitorInfo';
 
 interface StorePageContentProps {
   store: StoreDetail;
@@ -29,11 +28,8 @@ const StorePageContent = ({ store }: StorePageContentProps) => {
       {/* Don't Miss Out Section */}
       <DontMissOut />
 
-      {/* Download Giga Mall App Section */}
-      <DownloadGigaMallApp />
-
-      {/* Visitor Info Section */}
-      <VisitorInfo />
+      {/* Download Giga Mall App and Visitor Info Section (Side by Side) */}
+      <AppAndVisitorInfo />
     </Box>
   );
 };

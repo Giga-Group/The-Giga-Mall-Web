@@ -96,9 +96,9 @@ const SearchAndFilter = ({
       <Box
         sx={{
           width: '100%',
-          maxWidth: '1400px',
-          margin: '0 auto',
-          px: { xs: 2, sm: 4, md: 6, lg: 10 },
+          maxWidth: { xs: '1400px', lg: '100%' },
+          margin: { xs: '0 auto', lg: 0 },
+          px: { xs: 2, sm: 4, md: 6, lg: 0 },
           display: 'flex',
           flexDirection: 'column',
           gap: { xs: 2, sm: 3, md: 0 }
@@ -186,10 +186,12 @@ const SearchAndFilter = ({
             gap: 3,
             backgroundColor: { md: 'transparent', lg: '#D19F3B' },
             color: { md: '#333333', lg: '#ffffff' },
-            px: { md: 0, lg: 8 },
+            px: { md: 0, lg: 22 },
             paddingTop: 4,
             paddingBottom: 2,
-            borderRadius: 0
+            borderRadius: 0,
+            width: '100%',
+            maxWidth: { lg: '100%' }
           }}
         >
           {/* Search Bar - Desktop */}
@@ -581,9 +583,11 @@ const SearchAndFilter = ({
             gap: 3,
             backgroundColor: { md: 'transparent', lg: '#D19F3B' },
             color: { md: '#333333', lg: '#ffffff' },
-            px: { md: 0, lg: 8 },
+            px: { md: 0, lg: 22 },
             paddingBottom: 6,
-            borderRadius: 0
+            borderRadius: 0,
+            width: '100%',
+            maxWidth: { lg: '100%' }
           }}
         >
           {/* Left Side - Category, Subcategory, View By */}

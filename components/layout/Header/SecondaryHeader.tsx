@@ -4,13 +4,13 @@ import { Box, useMediaQuery, useTheme } from '@mui/material';
 import Link from 'next/link';
 
 const SECONDARY_NAV_ITEMS = [
-  'FASHION AVENUE',
-  'FOUNTAIN VIEWS',
-  'CHINATOWN',
-  'SOUK AL BAHAR',
+  'EXHIBITIONS',
+  'FASHION SHOWS',
+  'CELEBRATION',
+  'MODEL APARTMENTS',
+  'CARREFOUR',
   'OFFERS',
-  'EVENTS',
-  'EXHIBITION CENTER'
+  'EVENTS'
 ];
 
 interface SecondaryHeaderProps {
@@ -63,6 +63,16 @@ const SecondaryHeader = ({ isHidden = false }: SecondaryHeaderProps) => {
               ? '/offers'
               : item === 'EVENTS'
               ? '/events'
+              : item === 'EXHIBITIONS'
+              ? '/exhibitions'
+              : item === 'FASHION SHOWS'
+              ? '/fashion-shows'
+              : item === 'CELEBRATION'
+              ? '/celebration'
+              : item === 'MODEL APARTMENTS'
+              ? '/model-apartments'
+              : item === 'CARREFOUR'
+              ? '/carrefour'
               : '#';
 
           return (

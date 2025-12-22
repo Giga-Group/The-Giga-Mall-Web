@@ -8,7 +8,7 @@ const DontMissOut = () => {
     <Box
       sx={{
         width: '100%',
-        backgroundColor: '#ffffff',
+        backgroundColor: '#D19F3B',
         padding: { xs: 6, sm: 8, md: 10 },
         paddingTop: { xs: 8, sm: 10, md: 12 },
         display: 'flex',
@@ -34,7 +34,7 @@ const DontMissOut = () => {
             fontFamily: 'Georgia, "Times New Roman", Times, serif',
             fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
             fontWeight: 400,
-            color: '#D19F3B',
+            color: '#ffffff',
             textAlign: 'center',
             lineHeight: 1.2,
           }}
@@ -59,8 +59,8 @@ const DontMissOut = () => {
             href="/entertain"
             variant="outlined"
             sx={{
-              border: '1px solid #000000',
-              color: '#000000',
+              border: '1px solid #ffffff',
+              color: '#ffffff',
               textTransform: 'uppercase',
               fontSize: { xs: '0.75rem', sm: '0.85rem', md: '0.9rem', lg: '0.7rem' },
               fontWeight: 400,
@@ -71,9 +71,9 @@ const DontMissOut = () => {
               width: { xs: '100%', sm: 'auto' },
               maxWidth: { xs: '200px', sm: '250px', md: '280px', lg: '200px' },
               '&:hover': {
-                borderColor: '#D19F3B',
-                backgroundColor: '#D19F3B',
-                color: '#ffffff',
+                borderColor: '#ffffff',
+                backgroundColor: '#ffffff',
+                color: '#D19F3B',
               }
             }}
           >
@@ -85,8 +85,8 @@ const DontMissOut = () => {
             href="/shop"
             variant="outlined"
             sx={{
-              border: '1px solid #000000',
-              color: '#000000',
+              border: '1px solid #ffffff',
+              color: '#ffffff',
               textTransform: 'uppercase',
               fontSize: { xs: '0.75rem', sm: '0.85rem', md: '0.9rem', lg: '0.7rem' },
               fontWeight: 400,
@@ -97,9 +97,9 @@ const DontMissOut = () => {
               width: { xs: '100%', sm: 'auto' },
               maxWidth: { xs: '200px', sm: '250px', md: '280px', lg: '220px' },
               '&:hover': {
-                borderColor: '#D19F3B',
-                backgroundColor: '#D19F3B',
-                color: '#ffffff',
+                borderColor: '#ffffff',
+                backgroundColor: '#ffffff',
+                color: '#D19F3B',
               }
             }}
           >
