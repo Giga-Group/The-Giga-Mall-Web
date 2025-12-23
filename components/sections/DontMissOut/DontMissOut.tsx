@@ -10,7 +10,7 @@ const DontMissOut = () => {
         width: '100%',
         backgroundColor: '#D19F3B',
         padding: { xs: 6, sm: 8, md: 10 },
-        paddingTop: { xs: 8, sm: 10, md: 12 },
+        paddingTop: { xs: 8, sm: 10, md: 12, lg: 8 },
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',

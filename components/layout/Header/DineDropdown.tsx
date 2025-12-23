@@ -295,7 +295,7 @@ const DineDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: DineDropdownProps)
             }}
           >
             <Image
-              src="/2-OK.jpg"
+              src="/macdonalds.jpeg"
               alt="Featured Restaurant"
               width={400}
               height={200}
