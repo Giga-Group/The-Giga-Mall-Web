@@ -5,6 +5,15 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Box, Typography, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import { ExpandMore, ShoppingBag, DirectionsBus, Luggage, HelpOutline, Mosque } from '@mui/icons-material';
+import DeliveryDiningIcon from '@mui/icons-material/DeliveryDining';
+import NearMeIcon from '@mui/icons-material/NearMe';
+import WifiIcon from '@mui/icons-material/Wifi';
+import LocalTaxiIcon from '@mui/icons-material/LocalTaxi';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+
+
 
 interface Service {
   id: string;
@@ -23,32 +32,38 @@ const services: Service[] = [
   {
     id: 'concierge-service',
     title: 'Concierge Service',
-    description: 'Our dedicated concierge team is here to assist you with any inquiries, directions, recommendations, or special requests to make your visit to Giga Mall seamless and enjoyable.'
+    description: 'Our dedicated concierge team is here to assist you with any inquiries, directions, recommendations, or special requests to make your visit to Giga Mall seamless and enjoyable.',
+    icon: <SupportAgentIcon/>
   },
   {
     id: 'shop-deliver',
     title: 'Shop & Deliver',
-    description: 'Shop at your convenience and have your purchases delivered directly to your location. Our shop and deliver service ensures your items reach you safely and on time.'
+    description: 'Shop at your convenience and have your purchases delivered directly to your location. Our shop and deliver service ensures your items reach you safely and on time.',
+    icon: <DeliveryDiningIcon />
   },
   {
     id: 'directories',
     title: 'Directories',
-    description: 'Find your way around Giga Mall with our comprehensive directory services. Locate stores, restaurants, entertainment venues, and facilities with ease using our interactive directories.'
+    description: 'Find your way around Giga Mall with our comprehensive directory services. Locate stores, restaurants, entertainment venues, and facilities with ease using our interactive directories.',
+    icon: <NearMeIcon />
   },
   {
     id: 'wifi',
     title: 'WiFi',
-    description: 'Stay connected throughout your visit with our complimentary high-speed WiFi service available throughout Giga Mall. Connect seamlessly and enjoy free internet access.'
+    description: 'Stay connected throughout your visit with our complimentary high-speed WiFi service available throughout Giga Mall. Connect seamlessly and enjoy free internet access.',
+    icon: <WifiIcon/>
   },
   {
     id: 'in-mall-chauffeur',
     title: 'In-Mall Chauffeur',
-    description: 'Enjoy the convenience of our in-mall chauffeur service. Get assistance with your shopping bags and navigate the mall comfortably with our dedicated service.'
+    description: 'Enjoy the convenience of our in-mall chauffeur service. Get assistance with your shopping bags and navigate the mall comfortably with our dedicated service.',
+    icon: <AirportShuttleIcon />
   },
   {
     id: 'taxi-services',
     title: 'Taxi Services',
-    description: 'Need a ride? Our taxi service desk can help you arrange transportation. Conveniently located taxi services are available to take you to your next destination.'
+    description: 'Need a ride? Our taxi service desk can help you arrange transportation. Conveniently located taxi services are available to take you to your next destination.',
+    icon: <LocalTaxiIcon/>
   },
   {
     id: 'public-transport',
@@ -65,7 +80,8 @@ const services: Service[] = [
   {
     id: 'personalized-touch',
     title: 'Personalized Touch',
-    description: 'Experience personalized service tailored to your needs. Our team provides customized assistance to ensure your visit meets all your expectations and preferences.'
+    description: 'Experience personalized service tailored to your needs. Our team provides customized assistance to ensure your visit meets all your expectations and preferences.',
+    icon: <AutoAwesomeIcon/>
   },
   {
     id: 'travelers-delight',

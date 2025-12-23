@@ -6,13 +6,13 @@ import Link from 'next/link';
 import { NAV_ITEMS } from '@/lib/utils/constants';
 
 const SECONDARY_NAV_ITEMS = [
-  'FASHION AVENUE',
-  'FOUNTAIN VIEWS',
-  'CHINATOWN',
-  'SOUK AL BAHAR',
+  'EXHIBITIONS',
+  'FASHION SHOWS',
+  'CELEBRATIONS',
+  'MODEL APARTMENTS',
+  'CARREFOUR',
   'OFFERS',
-  'EVENTS',
-  'EXHIBITION CENTER'
+  'EVENTS'
 ];
 
 interface MobileMenuProps {

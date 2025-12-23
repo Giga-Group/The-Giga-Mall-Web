@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import { Box, Typography, Button } from '@mui/material';
-import Image from 'next/image';
-import Link from 'next/link';
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import { Box, Typography, Button } from "@mui/material";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function ModelApartmentsPage() {
   return (
@@ -14,24 +14,24 @@ export default function ModelApartmentsPage() {
         {/* Hero Section - Model Apartments */}
         <Box
           sx={{
-            position: 'relative',
-            width: '100vw',
-            minHeight: { xs: '60vh', md: '70vh', lg: '70vh' },
-            paddingTop: { xs: '90px', md: '100px' },
-            overflow: 'hidden',
-            display: 'flex',
-            alignItems: 'flex-end'
+            position: "relative",
+            width: "100vw",
+            minHeight: { xs: "100vh", md: "70vh", lg: "70vh" },
+            paddingTop: { xs: "90px", md: "100px" },
+            overflow: "hidden",
+            display: "flex",
+            alignItems: "flex-end",
           }}
         >
           {/* Full Width Image */}
           <Box
             sx={{
-              position: 'absolute',
+              position: "absolute",
               top: 0,
               left: 0,
-              width: '100%',
-              height: '100%',
-              zIndex: 0
+              width: "100%",
+              height: "100%",
+              zIndex: 0,
             }}
           >
             <Image
@@ -39,8 +39,8 @@ export default function ModelApartmentsPage() {
               alt="Model Apartments"
               fill
               style={{
-                objectFit: 'cover',
-                objectPosition: 'center'
+                objectFit: "cover",
+                objectPosition: "center",
               }}
               priority
             />
@@ -49,52 +49,68 @@ export default function ModelApartmentsPage() {
           {/* Overlay Gradient */}
           <Box
             sx={{
-              position: 'absolute',
+              position: "absolute",
               bottom: 0,
               left: 0,
               right: 0,
-              height: '70%',
-              background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, transparent 100%)',
-              zIndex: 1
+              height: "70%",
+              background:
+                "linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, transparent 100%)",
+              zIndex: 1,
             }}
           />
 
           {/* Text Content at Bottom */}
           <Box
             sx={{
-              position: 'relative',
-              width: '100%',
-              maxWidth: '1400px',
-              margin: '0 auto',
-              padding: { xs: '40px 20px', sm: '60px 40px', md: '80px 60px', lg: '50px 80px' },
-              zIndex: 2
+              position: "relative",
+              width: "100%",
+              maxWidth: "1400px",
+              margin: "0 auto",
+              padding: {
+                xs: "40px 20px",
+                sm: "60px 40px",
+                md: "80px 60px",
+                lg: "50px 80px",
+              },
+              zIndex: 2,
             }}
           >
             <Typography
               variant="h1"
               sx={{
                 fontFamily: '"Playfair Display", "Georgia", serif',
-                fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem', lg: '4rem' },
+                fontSize: {
+                  xs: "2.5rem",
+                  sm: "3rem",
+                  md: "3.5rem",
+                  lg: "4rem",
+                },
                 fontWeight: 400,
-                color: '#D19F3B',
-                marginBottom: { xs: '16px', md: '20px' },
-                letterSpacing: '0.02em',
-                lineHeight: 1.2
+                color: "#D19F3B",
+                marginBottom: { xs: "16px", md: "20px" },
+                letterSpacing: "0.02em",
+                lineHeight: 1.2,
               }}
             >
               MODEL APARTMENTS
             </Typography>
-            
+
             <Typography
               variant="h2"
               sx={{
                 fontFamily: '"Playfair Display", "Georgia", serif',
-                fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem', lg: '3rem' },
+                fontSize: {
+                  xs: "1.8rem",
+                  sm: "2.2rem",
+                  md: "2.5rem",
+                  lg: "3rem",
+                },
                 fontWeight: 300,
-                color: '#D19F3B',
-                marginBottom: { xs: '24px', md: '32px' },
-                letterSpacing: '0.05em',
-                lineHeight: 1.3
+                color: "#D19F3B",
+                marginBottom: { xs: "24px", md: "32px" },
+                letterSpacing: "0.05em",
+                lineHeight: 1.3,
               }}
             >
               Exquisite Living Spaces
@@ -103,11 +119,11 @@ export default function ModelApartmentsPage() {
             {/* Simple Divider */}
             <Box
               sx={{
-                width: '100%',
-                maxWidth: '600px',
-                height: '2px',
-                backgroundColor: '#D19F3B',
-                marginBottom: { xs: '24px', md: '32px' }
+                width: "100%",
+                maxWidth: "600px",
+                height: "2px",
+                backgroundColor: "#D19F3B",
+                marginBottom: { xs: "24px", md: "32px" },
               }}
             />
 
@@ -115,15 +131,22 @@ export default function ModelApartmentsPage() {
               variant="body1"
               sx={{
                 fontFamily: '"Jost", "Mulish", system-ui, sans-serif',
-                fontSize: { xs: '1rem', sm: '1.1rem', md: '1.2rem', lg: '1.3rem' },
+                fontSize: {
+                  xs: "1rem",
+                  sm: "1.1rem",
+                  md: "1.2rem",
+                  lg: "1.3rem",
+                },
                 fontWeight: 300,
-                color: '#D19F3B',
+                color: "#D19F3B",
                 lineHeight: 1.7,
-                maxWidth: '600px',
-                opacity: 0.95
+                maxWidth: "600px",
+                opacity: 0.95,
               }}
             >
-              Discover our stunning model apartments, showcasing the finest in modern living. Each space is thoughtfully designed to inspire and reflect the epitome of luxury and comfort.
+              Discover our stunning model apartments, showcasing the finest in
+              modern living. Each space is thoughtfully designed to inspire and
+              reflect the epitome of luxury and comfort.
             </Typography>
           </Box>
         </Box>
@@ -131,135 +154,158 @@ export default function ModelApartmentsPage() {
         {/* Second Section - Split Layout (Image Left, Text Right) */}
         <Box
           sx={{
-            position: 'relative',
-            width: '100%',
-            minHeight: { xs: '50vh', md: '60vh', lg: '70vh' },
-            backgroundColor: '#ffffff',
-            padding: { xs: '20px 0', md: '40px 0', lg: '60px 0' },
-            overflow: 'hidden'
+            position: "relative",
+            width: "100%",
+            minHeight: { xs: "70vh", md: "60vh", lg: "70vh" },
+            backgroundColor: "#ffffff",
+            padding: { xs: "20px 0", md: "40px 0", lg: "60px 0" },
+            overflow: "hidden",
           }}
         >
           <Box
             sx={{
-              position: 'relative',
-              width: '100%',
-              maxWidth: '1400px',
-              margin: '0 auto',
-              display: 'flex',
-              flexDirection: { xs: 'column', md: 'row' },
-              alignItems: { md: 'center' }
+              position: "relative",
+              width: "100%",
+              maxWidth: "1400px",
+              margin: "0 auto",
+              display: "flex",
+              flexDirection: { xs: "column", md: "row" },
+              alignItems: { md: "center" },
             }}
           >
-            {/* Left Side - Image (2/3 width) */}
+            {/* Left Side - Image */}
             <Box
               sx={{
-                position: 'relative',
-                width: { xs: '100%', md: '66.666%' },
-                minHeight: { xs: '300px', md: '400px', lg: '550px' },
-                height: { xs: '300px', md: '400px', lg: '550px' },
-                overflow: 'hidden',
-                marginLeft: { xs: 0, md: '40px', lg: '60px' }
+                position: "relative",
+                width: { xs: "100%", md: "66.666%" },
+                minHeight: { xs: "500px", md: "400px", lg: "550px" },
+                height: { xs: "500px", md: "400px", lg: "550px" },
+                overflow: "hidden",
+                marginLeft: { xs: 0, md: "40px", lg: "60px" },
               }}
             >
               <Image
-                src="/stay6.jpg"
+                src="/stay 3.jpeg"
                 alt="Model Apartment Interior"
                 fill
                 style={{
-                  objectFit: 'cover',
-                  objectPosition: 'center'
+                  objectFit: "cover",
+                  objectPosition: "center",
                 }}
               />
             </Box>
 
-            {/* Right Side - Text Content (1/3 width) - Overlapping */}
+            {/* Text Content - Strictly top-right on mobile, right overlap on desktop */}
             <Box
               sx={{
-                position: { xs: 'relative', md: 'absolute' },
-                right: { xs: 0, md: '40px', lg: '60px' },
-                width: { xs: '100%', md: '35%', lg: '32%' },
-                maxWidth: { md: '500px' },
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                padding: { xs: '40px 20px', sm: '50px 30px', md: '60px 40px', lg: '80px 60px' },
-                backgroundColor: '#ffffff',
-                boxShadow: { xs: 'none', md: '0 4px 20px rgba(0,0,0,0.1)' },
-                marginTop: { xs: '-40px', md: 0 },
-                marginLeft: { xs: '20px', md: 0 },
-                marginRight: { xs: '20px', md: 0 },
-                zIndex: 2
+                position: "absolute", // Always absolute for precise control
+                top: { xs: "40px", md: 0 }, // 40px from top on mobile
+                right: { xs: "20px", md: "40px", lg: "60px" }, // aligned to right edge
+                left: "auto", // Important: prevents stretching to left
+                width: { xs: "min(90%, 460px)", md: "35%", lg: "32%" }, // 90% max on small phones, capped at 460px
+                maxWidth: { xs: "460px", md: "500px" },
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                padding: {
+                  xs: "36px 32px",
+                  sm: "44px 40px",
+                  md: "60px 40px",
+                  lg: "80px 60px",
+                },
+                backgroundColor: "#ffffff",
+                boxShadow: "0 4px 25px rgba(0,0,0,0.15)",
+                zIndex: 2,
+                borderRadius: { xs: "16px", md: "0" }, // soft rounded card on mobile
               }}
             >
-            <Typography
-              variant="h6"
-              sx={{
-                fontFamily: '"Jost", "Mulish", system-ui, sans-serif',
-                fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' },
-                fontWeight: 400,
-                color: '#D19F3B',
-                textTransform: 'uppercase',
-                letterSpacing: '0.1em',
-                marginBottom: { xs: '16px', md: '20px' }
-              }}
-            >
-              LUXURY APARTMENTS
-            </Typography>
+              <Typography
+                variant="h6"
+                sx={{
+                  fontFamily: '"Jost", "Mulish", system-ui, sans-serif',
+                  fontSize: { xs: "0.95rem", sm: "1rem", md: "1.1rem" },
+                  fontWeight: 500,
+                  color: "#D19F3B",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.15em",
+                  marginBottom: { xs: "14px", md: "20px" },
+                }}
+              >
+                LUXURY APARTMENTS
+              </Typography>
 
-            <Typography
-              variant="h2"
-              sx={{
-                fontFamily: '"Playfair Display", "Georgia", serif',
-                fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem', lg: '3rem' },
-                fontWeight: 400,
-                color: '#D19F3B',
-                marginBottom: { xs: '20px', md: '24px' },
-                letterSpacing: '0.02em',
-                lineHeight: 1.2
-              }}
-            >
-              Designed for Excellence
-            </Typography>
+              <Typography
+                variant="h2"
+                sx={{
+                  fontFamily: '"Playfair Display", "Georgia", serif',
+                  fontSize: {
+                    xs: "2rem",
+                    sm: "2.4rem",
+                    md: "2.5rem",
+                    lg: "3rem",
+                  },
+                  fontWeight: 400,
+                  color: "#D19F3B",
+                  marginBottom: { xs: "18px", md: "24px" },
+                  letterSpacing: "0.02em",
+                  lineHeight: { xs: 1.25, md: 1.2 },
+                }}
+              >
+                Designed for Excellence
+              </Typography>
 
-            <Typography
-              variant="body1"
-              sx={{
-                fontFamily: '"Jost", "Mulish", system-ui, sans-serif',
-                fontSize: { xs: '0.9rem', sm: '1rem', md: '1.05rem', lg: '1.1rem' },
-                fontWeight: 300,
-                color: '#D19F3B',
-                lineHeight: 1.7,
-                marginBottom: { xs: '32px', md: '40px' }
-              }}
-            >
-              Experience unparalleled luxury with a touch of elegance. Our model apartments showcase sleek, tailored design and world-class amenities. Each space features opulent interiors, premium furnishings, and exceptional attention to detail that offers a subtle nod to a sophisticated life of refined comfort.
-            </Typography>
+              <Typography
+                variant="body1"
+                sx={{
+                  fontFamily: '"Jost", "Mulish", system-ui, sans-serif',
+                  fontSize: {
+                    xs: "0.95rem",
+                    sm: "1rem",
+                    md: "1.05rem",
+                    lg: "1.1rem",
+                  },
+                  fontWeight: 300,
+                  color: "#D19F3B",
+                  lineHeight: 1.7,
+                  marginBottom: { xs: "32px", md: "40px" },
+                }}
+              >
+                Experience unparalleled luxury with a touch of elegance. Our
+                model apartments showcase sleek, tailored design and world-class
+                amenities. Each space features opulent interiors, premium
+                furnishings, and exceptional attention to detail that offers a
+                subtle nod to a sophisticated life of refined comfort.
+              </Typography>
 
-            <Button
-              component={Link}
-              href="#"
-              variant="outlined"
-              sx={{
-                border: '1px solid #D19F3B',
-                color: '#ffffff',
-                textTransform: 'uppercase',
-                fontSize: { xs: '0.8rem', sm: '0.85rem', md: '0.9rem' },
-                fontWeight: 400,
-                letterSpacing: '0.1em',
-                padding: { xs: '12px 28px', sm: '14px 36px', md: '16px 44px' },
-                borderRadius: 0,
-                maxWidth: 'fit-content',
-                transition: 'all 0.3s ease',
-                backgroundColor: '#D19F3B',
-                '&:hover': {
-                  border: '1px solid #D19F3B',
-                  color: '#D19F3B',
-                  backgroundColor: 'transparent'
-                }
-              }}
-            >
-              FIND IT AT GIGA MALL
-            </Button>
+              <Button
+                component={Link}
+                href="#"
+                variant="outlined"
+                sx={{
+                  border: "1px solid #D19F3B",
+                  color: "#ffffff",
+                  textTransform: "uppercase",
+                  fontSize: { xs: "0.85rem", sm: "0.9rem", md: "0.9rem" },
+                  fontWeight: 500,
+                  letterSpacing: "0.15em",
+                  padding: {
+                    xs: "14px 36px",
+                    sm: "16px 44px",
+                    md: "16px 44px",
+                  },
+                  borderRadius: 0,
+                  maxWidth: "fit-content",
+                  transition: "all 0.3s ease",
+                  backgroundColor: "#D19F3B",
+                  "&:hover": {
+                    border: "1px solid #D19F3B",
+                    color: "#D19F3B",
+                    backgroundColor: "transparent",
+                  },
+                }}
+              >
+                FIND IT AT GIGA MALL
+              </Button>
             </Box>
           </Box>
         </Box>
@@ -267,23 +313,23 @@ export default function ModelApartmentsPage() {
         {/* Third Section - Additional Showcase */}
         <Box
           sx={{
-            position: 'relative',
-            width: '100vw',
-            minHeight: { xs: '60vh', md: '70vh', lg: '70vh' },
-            overflow: 'hidden',
-            display: 'flex',
-            alignItems: 'flex-end'
+            position: "relative",
+            width: "100vw",
+            minHeight: { xs: "100vh", md: "70vh", lg: "70vh" },
+            overflow: "hidden",
+            display: "flex",
+            alignItems: "flex-end",
           }}
         >
           {/* Full Width Image */}
           <Box
             sx={{
-              position: 'absolute',
+              position: "absolute",
               top: 0,
               left: 0,
-              width: '100%',
-              height: '100%',
-              zIndex: 0
+              width: "100%",
+              height: "100%",
+              zIndex: 0,
             }}
           >
             <Image
@@ -291,8 +337,8 @@ export default function ModelApartmentsPage() {
               alt="Model Apartment Showcase"
               fill
               style={{
-                objectFit: 'cover',
-                objectPosition: 'center'
+                objectFit: "cover",
+                objectPosition: "center",
               }}
             />
           </Box>
@@ -300,37 +346,48 @@ export default function ModelApartmentsPage() {
           {/* Overlay Gradient */}
           <Box
             sx={{
-              position: 'absolute',
+              position: "absolute",
               bottom: 0,
               left: 0,
               right: 0,
-              height: '70%',
-              background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, transparent 100%)',
-              zIndex: 1
+              height: "70%",
+              background:
+                "linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 50%, transparent 100%)",
+              zIndex: 1,
             }}
           />
 
           {/* Text Content at Bottom */}
           <Box
             sx={{
-              position: 'relative',
-              width: '100%',
-              maxWidth: '1400px',
-              margin: '0 auto',
-              padding: { xs: '40px 20px', sm: '60px 40px', md: '80px 60px', lg: '50px 80px' },
-              zIndex: 2
+              position: "relative",
+              width: "100%",
+              maxWidth: "1400px",
+              margin: "0 auto",
+              padding: {
+                xs: "40px 20px",
+                sm: "60px 40px",
+                md: "80px 60px",
+                lg: "50px 80px",
+              },
+              zIndex: 2,
             }}
           >
             <Typography
               variant="h2"
               sx={{
                 fontFamily: '"Playfair Display", "Georgia", serif',
-                fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
+                fontSize: {
+                  xs: "2rem",
+                  sm: "2.5rem",
+                  md: "3rem",
+                  lg: "3.5rem",
+                },
                 fontWeight: 400,
-                color: '#D19F3B',
-                marginBottom: { xs: '20px', md: '24px' },
-                letterSpacing: '0.02em',
-                lineHeight: 1.2
+                color: "#D19F3B",
+                marginBottom: { xs: "20px", md: "24px" },
+                letterSpacing: "0.02em",
+                lineHeight: 1.2,
               }}
             >
               Your Dream Home Awaits
@@ -339,11 +396,11 @@ export default function ModelApartmentsPage() {
             {/* Simple Divider */}
             <Box
               sx={{
-                width: '100%',
-                maxWidth: '600px',
-                height: '2px',
-                backgroundColor: '#D19F3B',
-                marginBottom: { xs: '24px', md: '32px' }
+                width: "100%",
+                maxWidth: "600px",
+                height: "2px",
+                backgroundColor: "#D19F3B",
+                marginBottom: { xs: "24px", md: "32px" },
               }}
             />
 
@@ -351,16 +408,23 @@ export default function ModelApartmentsPage() {
               variant="body1"
               sx={{
                 fontFamily: '"Jost", "Mulish", system-ui, sans-serif',
-                fontSize: { xs: '0.95rem', sm: '1rem', md: '1.1rem', lg: '1.15rem' },
+                fontSize: {
+                  xs: "0.95rem",
+                  sm: "1rem",
+                  md: "1.1rem",
+                  lg: "1.15rem",
+                },
                 fontWeight: 300,
-                color: '#D19F3B',
+                color: "#D19F3B",
                 lineHeight: 1.7,
-                maxWidth: '600px',
-                marginBottom: { xs: '32px', md: '40px' },
-                opacity: 0.95
+                maxWidth: "600px",
+                marginBottom: { xs: "32px", md: "40px" },
+                opacity: 0.95,
               }}
             >
-              Visit our model apartments to experience the perfect blend of luxury, comfort, and style. Each space tells a story of sophisticated living and timeless elegance.
+              Visit our model apartments to experience the perfect blend of
+              luxury, comfort, and style. Each space tells a story of
+              sophisticated living and timeless elegance.
             </Typography>
 
             <Button
@@ -368,22 +432,22 @@ export default function ModelApartmentsPage() {
               href="#"
               variant="outlined"
               sx={{
-                border: '1px solid #D19F3B',
-                color: '#D19F3B',
-                textTransform: 'uppercase',
-                fontSize: { xs: '0.85rem', sm: '0.9rem', md: '0.95rem' },
+                border: "1px solid #D19F3B",
+                color: "#D19F3B",
+                textTransform: "uppercase",
+                fontSize: { xs: "0.85rem", sm: "0.9rem", md: "0.95rem" },
                 fontWeight: 400,
-                letterSpacing: '0.1em',
-                padding: { xs: '12px 32px', sm: '14px 40px', md: '16px 48px' },
+                letterSpacing: "0.1em",
+                padding: { xs: "12px 32px", sm: "14px 40px", md: "16px 48px" },
                 borderRadius: 0,
-                maxWidth: 'fit-content',
-                transition: 'all 0.3s ease',
-                backgroundColor: 'transparent',
-                '&:hover': {
-                  border: '1px solid #D19F3B',
-                  color: '#D19F3B',
-                  backgroundColor: 'transparent'
-                }
+                maxWidth: "fit-content",
+                transition: "all 0.3s ease",
+                backgroundColor: "transparent",
+                "&:hover": {
+                  border: "1px solid #D19F3B",
+                  color: "#D19F3B",
+                  backgroundColor: "transparent",
+                },
               }}
             >
               SCHEDULE A VISIT
@@ -394,136 +458,158 @@ export default function ModelApartmentsPage() {
         {/* Fourth Section - Split Layout (Text Left, Image Right) */}
         <Box
           sx={{
-            position: 'relative',
-            width: '100%',
-            minHeight: { xs: '50vh', md: '60vh', lg: '70vh' },
-            backgroundColor: '#ffffff',
-            padding: { xs: '20px 0', md: '40px 0', lg: '60px 0' },
-            overflow: 'hidden'
+            position: "relative",
+            width: "100%",
+            minHeight: { xs: "70vh", md: "60vh", lg: "70vh" }, // increased on mobile for better overlap & image visibility
+            backgroundColor: "#ffffff",
+            padding: { xs: "20px 0", md: "40px 0", lg: "60px 0" },
+            overflow: "hidden",
           }}
         >
           <Box
             sx={{
-              position: 'relative',
-              width: '100%',
-              maxWidth: '1400px',
-              margin: '0 auto',
-              display: 'flex',
-              flexDirection: { xs: 'column', md: 'row' },
-              alignItems: { md: 'center' }
+              position: "relative",
+              width: "100%",
+              maxWidth: "1400px",
+              margin: "0 auto",
+              display: "flex",
+              flexDirection: { xs: "column", md: "row" },
+              alignItems: { md: "center" },
             }}
           >
-            {/* Left Side - Text Content (1/3 width) - Overlapping */}
+            {/* Right Side - Image (placed first in DOM so text overlaps it properly) */}
             <Box
               sx={{
-                position: { xs: 'relative', md: 'absolute' },
-                left: { xs: 0, md: '40px', lg: '60px' },
-                width: { xs: '100%', md: '35%', lg: '32%' },
-                maxWidth: { md: '500px' },
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                padding: { xs: '40px 20px', sm: '50px 30px', md: '60px 40px', lg: '80px 60px' },
-                backgroundColor: '#ffffff',
-                boxShadow: { xs: 'none', md: '0 4px 20px rgba(0,0,0,0.1)' },
-                marginTop: { xs: '-40px', md: 0 },
-                marginLeft: { xs: '20px', md: 0 },
-                marginRight: { xs: '20px', md: 0 },
-                zIndex: 2
-              }}
-            >
-            <Typography
-              variant="h6"
-              sx={{
-                fontFamily: '"Jost", "Mulish", system-ui, sans-serif',
-                fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' },
-                fontWeight: 400,
-                color: '#D19F3B',
-                textTransform: 'uppercase',
-                letterSpacing: '0.1em',
-                marginBottom: { xs: '16px', md: '20px' }
-              }}
-            >
-              PREMIUM LIVING
-            </Typography>
-
-            <Typography
-              variant="h2"
-              sx={{
-                fontFamily: '"Playfair Display", "Georgia", serif',
-                fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem', lg: '3rem' },
-                fontWeight: 400,
-                color: '#D19F3B',
-                marginBottom: { xs: '20px', md: '24px' },
-                letterSpacing: '0.02em',
-                lineHeight: 1.2
-              }}
-            >
-              Premium Living Experience
-            </Typography>
-
-            <Typography
-              variant="body1"
-              sx={{
-                fontFamily: '"Jost", "Mulish", system-ui, sans-serif',
-                fontSize: { xs: '0.9rem', sm: '1rem', md: '1.05rem', lg: '1.1rem' },
-                fontWeight: 300,
-                color: '#D19F3B',
-                lineHeight: 1.7,
-                marginBottom: { xs: '32px', md: '40px' }
-              }}
-            >
-              Step into a world of refined elegance where every detail has been carefully curated. Our model apartments feature sophisticated design, premium finishes, and spacious layouts that redefine modern living.
-            </Typography>
-
-            <Button
-              component={Link}
-              href="#"
-              variant="outlined"
-              sx={{
-                border: '1px solid #D19F3B',
-                color: '#ffffff',
-                textTransform: 'uppercase',
-                fontSize: { xs: '0.8rem', sm: '0.85rem', md: '0.9rem' },
-                fontWeight: 400,
-                letterSpacing: '0.1em',
-                padding: { xs: '12px 28px', sm: '14px 36px', md: '16px 44px' },
-                borderRadius: 0,
-                maxWidth: 'fit-content',
-                transition: 'all 0.3s ease',
-                backgroundColor: '#D19F3B',
-                '&:hover': {
-                  border: '1px solid #D19F3B',
-                  color: '#D19F3B',
-                  backgroundColor: 'transparent'
-                }
-              }}
-            >
-              EXPLORE MORE
-            </Button>
-            </Box>
-
-            {/* Right Side - Image (2/3 width) */}
-            <Box
-              sx={{
-                position: 'relative',
-                width: { xs: '100%', md: '66.666%' },
-                minHeight: { xs: '300px', md: '400px', lg: '550px' },
-                height: { xs: '300px', md: '400px', lg: '550px' },
-                overflow: 'hidden',
-                marginRight: { xs: 0, md: '40px', lg: '60px' },
-                marginLeft: { xs: 0, md: 'auto' }
+                position: "relative",
+                width: { xs: "100%", md: "66.666%" },
+                minHeight: { xs: "500px", md: "400px", lg: "550px" },
+                height: { xs: "500px", md: "400px", lg: "550px" },
+                overflow: "hidden",
+                marginRight: { xs: 0, md: "40px", lg: "60px" },
+                marginLeft: { xs: 0, md: "auto" },
               }}
             >
               <Image
-                src="/stay8.jpg"
+                src="/stay2.jpeg"
                 alt="Luxury Model Apartment"
                 fill
                 style={{
-                  objectFit: 'cover',
-                  objectPosition: 'center'
+                  objectFit: "cover",
+                  objectPosition: "center",
                 }}
               />
+            </Box>
+
+            {/* Left Side - Text Content - Now overlapping top-left on mobile, left overlap on desktop */}
+            <Box
+              sx={{
+                position: "absolute", // absolute on all breakpoints for consistent overlap
+                top: { xs: "40px", md: 0 }, // top-left on mobile
+                left: { xs: "20px", md: "40px", lg: "60px" }, // aligned to left edge
+                right: "auto",
+                width: { xs: "min(90%, 460px)", md: "35%", lg: "32%" },
+                maxWidth: { xs: "460px", md: "500px" },
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                padding: {
+                  xs: "36px 32px",
+                  sm: "44px 40px",
+                  md: "60px 40px",
+                  lg: "80px 60px",
+                },
+                backgroundColor: "#ffffff",
+                boxShadow: "0 4px 25px rgba(0,0,0,0.15)", // same strong shadow as previous card
+                zIndex: 2,
+                borderRadius: { xs: "16px", md: "0" }, // same soft rounded corners on mobile, sharp on desktop
+              }}
+            >
+              <Typography
+                variant="h6"
+                sx={{
+                  fontFamily: '"Jost", "Mulish", system-ui, sans-serif',
+                  fontSize: { xs: "0.95rem", sm: "1rem", md: "1.1rem" },
+                  fontWeight: 500,
+                  color: "#D19F3B",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.15em",
+                  marginBottom: { xs: "14px", md: "20px" },
+                }}
+              >
+                PREMIUM LIVING
+              </Typography>
+
+              <Typography
+                variant="h2"
+                sx={{
+                  fontFamily: '"Playfair Display", "Georgia", serif',
+                  fontSize: {
+                    xs: "2rem",
+                    sm: "2.4rem",
+                    md: "2.5rem",
+                    lg: "3rem",
+                  },
+                  fontWeight: 400,
+                  color: "#D19F3B",
+                  marginBottom: { xs: "18px", md: "24px" },
+                  letterSpacing: "0.02em",
+                  lineHeight: { xs: 1.25, md: 1.2 },
+                }}
+              >
+                Premium Living Experience
+              </Typography>
+
+              <Typography
+                variant="body1"
+                sx={{
+                  fontFamily: '"Jost", "Mulish", system-ui, sans-serif',
+                  fontSize: {
+                    xs: "0.95rem",
+                    sm: "1rem",
+                    md: "1.05rem",
+                    lg: "1.1rem",
+                  },
+                  fontWeight: 300,
+                  color: "#D19F3B",
+                  lineHeight: 1.7,
+                  marginBottom: { xs: "32px", md: "40px" },
+                }}
+              >
+                Step into a world of refined elegance where every detail has
+                been carefully curated. Our model apartments feature
+                sophisticated design, premium finishes, and spacious layouts
+                that redefine modern living.
+              </Typography>
+
+              <Button
+                component={Link}
+                href="#"
+                variant="outlined"
+                sx={{
+                  border: "1px solid #D19F3B",
+                  color: "#ffffff",
+                  textTransform: "uppercase",
+                  fontSize: { xs: "0.85rem", sm: "0.9rem", md: "0.9rem" },
+                  fontWeight: 500,
+                  letterSpacing: "0.15em",
+                  padding: {
+                    xs: "14px 36px",
+                    sm: "16px 44px",
+                    md: "16px 44px",
+                  },
+                  borderRadius: 0,
+                  maxWidth: "fit-content",
+                  transition: "all 0.3s ease",
+                  backgroundColor: "#D19F3B",
+                  "&:hover": {
+                    border: "1px solid #D19F3B",
+                    color: "#D19F3B",
+                    backgroundColor: "transparent",
+                  },
+                }}
+              >
+                EXPLORE MORE
+              </Button>
             </Box>
           </Box>
         </Box>
@@ -532,4 +618,3 @@ export default function ModelApartmentsPage() {
     </>
   );
 }
-
