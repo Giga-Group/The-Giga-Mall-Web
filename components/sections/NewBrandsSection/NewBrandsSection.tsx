@@ -5,7 +5,28 @@ import { keyframes } from '@mui/system';
 import Image from 'next/image';
 import { Brand } from '@/types';
 
-const brands: Brand[] = [
+// Brands for first carousel (left to right)
+const brandsRow1: Brand[] = [
+  {
+    name: 'Cheezious',
+    image: '/cheezious.jpeg'
+  },
+  {
+    name: 'McDonalds',
+    image: '/macdonalds.jpeg'
+  },
+  {
+    name: 'Wild Wings',
+    image: '/wild-wings.jpeg'
+  },
+  {
+    name: 'Hardees',
+    image: '/hardees.jpeg'
+  },
+  {
+    name: 'Pizza Hut',
+    image: '/pizzahut.jpeg'
+  },
   {
     name: 'Alkaram',
     image: '/alkaram.jpg'
@@ -26,6 +47,10 @@ const brands: Brand[] = [
     name: 'Batik Studio',
     image: '/batik-studio.jpg'
   },
+];
+
+// Brands for second carousel (right to left)
+const brandsRow2: Brand[] = [
   {
     name: 'Bloon',
     image: '/bloon.jpg'
@@ -58,6 +83,14 @@ const brands: Brand[] = [
     name: 'Miniso',
     image: '/miniso.jpeg'
   },
+  {
+    name: 'Cheezious',
+    image: '/cheezious.jpeg'
+  },
+  {
+    name: 'McDonalds',
+    image: '/macdonalds.jpeg'
+  },
 ];
 
 const marqueeRight = keyframes`
@@ -79,14 +112,20 @@ const marqueeLeft = keyframes`
 `;
 
 const NewBrandsSection = () => {
-  const scrollingBrands = [...brands, ...brands];
+  const scrollingBrandsRow1 = [...brandsRow1, ...brandsRow1];
+  const scrollingBrandsRow2 = [...brandsRow2, ...brandsRow2];
 
   return (
     <Box
       sx={{
         width: '100%',
         backgroundColor: '#ffffff',
-        py: { xs: 4, sm: 6, md: 8 }
+        pt: { xs: 4, sm: 6, md: 8 },
+        pb: { xs: 4, sm: 0, md: 0, },
+        minHeight: { xs: '90vh', sm: 'auto', md: 'auto' },
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: { xs: 'center', sm: 'flex-start', md: 'flex-start' }
       }}
     >
       <Typography
@@ -98,7 +137,7 @@ const NewBrandsSection = () => {
           fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem', xl: '3.5rem' },
           textTransform: 'uppercase',
           textAlign: { xs: 'center', md: 'left' },
-          marginBottom: { xs: '24px', sm: '32px', md: '40px' },
+          marginBottom: { xs: '54px', sm: '32px', md: '40px' },
           paddingLeft: { xs: '16px', sm: '20px', md: '40px', lg: '130px' },
           paddingRight: { xs: '16px', sm: '20px', md: '40px' },
           color: '#D19F3B'
@@ -112,7 +151,8 @@ const NewBrandsSection = () => {
         sx={{
           overflow: 'hidden',
           width: '100%',
-          mb: { xs: 2, sm: 3, md: 4 }
+          mb: { xs: 0, sm: 0, md: 2 },
+          flex: { xs: '0.25 0.25 auto', sm: '0 0 auto', md: '0 0 auto' }
         }}
       >
         <Box
@@ -125,7 +165,7 @@ const NewBrandsSection = () => {
             }
           }}
         >
-          {scrollingBrands.map((brand, index) => (
+          {scrollingBrandsRow1.map((brand, index) => (
             <Box
               key={`row1-${brand.name}-${index}`}
               sx={{
@@ -161,7 +201,8 @@ const NewBrandsSection = () => {
       <Box
         sx={{
           overflow: 'hidden',
-          width: '100%'
+          width: '100%',
+          flex: { xs: '1 1 auto', sm: '0 0 auto', md: '0 0 auto' }
         }}
       >
         <Box
@@ -174,7 +215,7 @@ const NewBrandsSection = () => {
             }
           }}
         >
-          {scrollingBrands.map((brand, index) => (
+          {scrollingBrandsRow2.map((brand, index) => (
             <Box
               key={`row2-${brand.name}-${index}`}
               sx={{

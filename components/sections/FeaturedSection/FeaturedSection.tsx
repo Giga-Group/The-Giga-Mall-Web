@@ -129,10 +129,19 @@ export default function FeaturedSection() {
   /* ------------------ POSITION LOGIC ------------------ */
 
   const getPosition = (index: number) => {
-    if (index === current) return 'center';
-    if (index === prev) return 'left';
-    if (index === next) return 'right';
-    return 'hidden';
+    if (direction === 'next') {
+      // When going forward: prev (old current) moves left, current (new) comes from right to center
+      if (index === current) return 'center';
+      if (index === prev) return 'left';
+      if (index === next) return 'right';
+      return 'hidden';
+    } else {
+      // When going backward: prev comes from left to center, current moves right
+      if (index === current) return 'center';
+      if (index === prev) return 'left';
+      if (index === next) return 'right';
+      return 'hidden';
+    }
   };
 
   const slideStyle = {
@@ -140,9 +149,9 @@ export default function FeaturedSection() {
       position: 'absolute',
       top: 0,
       left: '50%',
-      width: { xs: '100%', md: '94%' },
+      width: { xs: 'calc(100% - 32px)', sm: 'calc(100% - 48px)', md: '94%' },
       height: '100%',
-      borderRadius: { xs: 6, md: 10 },
+      borderRadius: { xs: 8, sm: 4, md: 10 },
       overflow: 'hidden',
       transformOrigin: 'center',
       transition: `transform ${TRANSITION_MS}ms ease, opacity ${TRANSITION_MS}ms ease`,
@@ -156,24 +165,28 @@ export default function FeaturedSection() {
 
     left: {
       transform: {
-        xs: direction === 'prev'
+        xs: direction === 'next'
+          ? 'translateX(-100%) scale(1)' // Current going out when forward
+          : direction === 'prev'
           ? 'translateX(-100%) scale(1)' // On mobile, hide completely when coming in
           : 'translateX(-100%) scale(1)', // Always hidden on mobile
-        md: direction === 'prev'
+        md: direction === 'next'
+          ? 'translateX(-180%) scale(0.9)' // Current going out when forward
+          : direction === 'prev'
           ? 'translateX(-180%) scale(0.9)' // coming IN on desktop
           : 'translateX(-70%) scale(0.9)',
       },
-      opacity: { xs: 0, md: 0.5 }, // Hidden on mobile, visible on desktop
+      opacity: { xs: 0, md: direction === 'next' ? 0 : 0.5 }, // Hidden when going forward
       zIndex: 2,
     },
 
     right: {
       transform: {
-        xs: direction === 'prev'
-          ? 'translateX(100%) scale(1)' // Always hidden on mobile
-          : 'translateX(100%) scale(1)', // Always hidden on mobile
-        md: direction === 'prev'
-          ? 'translateX(80%) scale(0.9)'
+        xs: 'translateX(100%) scale(1)', // Always hidden on mobile
+        md: direction === 'next'
+          ? 'translateX(180%) scale(0.9)' // Next coming from right when forward
+          : direction === 'prev'
+          ? 'translateX(80%) scale(0.9)' // Current going out when backward
           : 'translateX(180%) scale(0.9)', // going OUT on desktop
       },
       opacity: { xs: 0, md: 0.5 }, // Hidden on mobile, visible on desktop
@@ -214,11 +227,12 @@ export default function FeaturedSection() {
         sx={{
           position: 'relative',
           width: '100%',
-          height: { xs: 480, lg: 640 },
+          height: { xs: 680, sm: 640, md: 600, lg: 720 },
           overflow: 'hidden',
           touchAction: 'pan-y', // Allow vertical scrolling but handle horizontal swipes
           mx: 'auto',
           maxWidth: { xs: '100%', md: '95%' },
+          px: { xs: 2, sm: 3, md: 0 },
         }}
         onTouchStart={(e) => {
           autoPlayPausedRef.current = true; // Pause auto-play on touch
@@ -280,12 +294,12 @@ export default function FeaturedSection() {
                   <Box
                     sx={{
                       position: 'absolute',
-                      top: { xs: 10, sm: 12, md: 14 },
-                      right: { xs: 12, sm: 16, md: 24 },
+                      top: { xs: 8, sm: 10, md: 14 },
+                      right: { xs: 8, sm: 12, md: 24 },
                       zIndex: 10,
-                      width: { xs: 48, sm: 72, md: 84, lg: 120 },
+                      width: { xs: 40, sm: 56, md: 84, lg: 120 },
                       height: 'auto',
-                      maxWidth: { xs: 'calc(100% - 24px)', sm: 'none' },
+                      maxWidth: { xs: 'calc(100% - 80px)', sm: 'none' },
                       boxSizing: 'border-box',
                     }}
                   >
@@ -310,7 +324,7 @@ export default function FeaturedSection() {
                       bottom: 0,
                       left: 0,
                       right: 0,
-                      p: { xs: 2, md: 3 },
+                      p: { xs: 1.5, sm: 2, md: 3 },
                       background:
                         'linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 85%)',
                       animation: `${textFadeUp} 500ms ease`,
@@ -323,8 +337,9 @@ export default function FeaturedSection() {
                         fontFamily: 'Georgia',
                         fontWeight: 'bold',
                         letterSpacing: '0.08em',
-                        fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' },
-                        mb: { xs: 0.5, md: 1 },
+                        fontSize: { xs: '0.875rem', sm: '1rem', md: '1.25rem' },
+                        mb: { xs: 0.25, sm: 0.5, md: 1 },
+                        lineHeight: { xs: 1.2, md: 1.3 },
                       }}
                     >
                       {featuredItems[index].name}
@@ -333,8 +348,12 @@ export default function FeaturedSection() {
                       variant="body2" 
                       sx={{ 
                         color: '#D19F3B',
-                        fontSize: { xs: '0.75rem', sm: '0.85rem', md: '0.9rem' },
-                        lineHeight: { xs: 1.4, md: 1.5 },
+                        fontSize: { xs: '0.7rem', sm: '0.8rem', md: '0.9rem' },
+                        lineHeight: { xs: 1.3, sm: 1.4, md: 1.5 },
+                        display: { xs: '-webkit-box', md: 'block' },
+                        WebkitLineClamp: { xs: 2, md: 'none' },
+                        WebkitBoxOrient: 'vertical',
+                        overflow: 'hidden',
                       }}
                     >
                       {featuredItems[index].description}
@@ -351,13 +370,14 @@ export default function FeaturedSection() {
                     }}
                     sx={{
                       position: 'absolute',
-                      left: { xs: 8, md: 16 },
+                      left: { xs: 4, sm: 8, md: 16 },
                       top: '50%',
                       transform: 'translateY(-50%)',
                       background: 'rgba(255, 255, 255, 0.9)',
                       color: '#D19F3B',
-                      width: { xs: 36, md: 48 },
-                      height: { xs: 36, md: 48 },
+                      width: { xs: 32, sm: 36, md: 48 },
+                      height: { xs: 32, sm: 36, md: 48 },
+                      minWidth: { xs: 32, sm: 36, md: 48 },
                       '&:hover': {
                         background: 'rgba(255, 255, 255, 1)',
                       },
@@ -366,7 +386,7 @@ export default function FeaturedSection() {
                       },
                     }}
                   >
-                    <ArrowBack sx={{ fontSize: { xs: 20, md: 24 } }} />
+                    <ArrowBack sx={{ fontSize: { xs: 18, sm: 20, md: 24 } }} />
                   </IconButton>
 
                   <IconButton
@@ -379,13 +399,14 @@ export default function FeaturedSection() {
                     }}
                     sx={{
                       position: 'absolute',
-                      right: { xs: 8, md: 16 },
+                      right: { xs: 4, sm: 8, md: 16 },
                       top: '50%',
                       transform: 'translateY(-50%)',
                       background: 'rgba(255, 255, 255, 0.9)',
                       color: '#D19F3B',
-                      width: { xs: 36, md: 48 },
-                      height: { xs: 36, md: 48 },
+                      width: { xs: 32, sm: 36, md: 48 },
+                      height: { xs: 32, sm: 36, md: 48 },
+                      minWidth: { xs: 32, sm: 36, md: 48 },
                       '&:hover': {
                         background: 'rgba(255, 255, 255, 1)',
                       },
@@ -394,7 +415,7 @@ export default function FeaturedSection() {
                       },
                     }}
                   >
-                    <ArrowForward sx={{ fontSize: { xs: 20, md: 24 } }} />
+                    <ArrowForward sx={{ fontSize: { xs: 18, sm: 20, md: 24 } }} />
                   </IconButton>
                 </>
               )}
