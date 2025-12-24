@@ -28,6 +28,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Alkaram',
     slug: 'alkaram',
     description: 'Elegant fashion and premium textiles for the modern wardrobe.',
+    logo: '/alkaram.jpg',
     backgroundImage: '/alkaram.jpg',
     category: 'Fashion',
     contact: {
@@ -43,6 +44,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Almas',
     slug: 'almas',
     description: 'Discover timeless elegance with our curated collection of premium fashion.',
+    logo: '/almas logo.png',
     backgroundImage: '/almas.jpeg',
     category: 'Fashion',
     contact: {
@@ -58,6 +60,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Almirah',
     slug: 'almirah',
     description: 'Your destination for contemporary fashion and style essentials.',
+    logo: '/almirah logo.png',
     backgroundImage: '/almirah.jpeg',
     category: 'Fashion',
     contact: {
@@ -118,6 +121,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Breakout',
     slug: 'breakout',
     description: 'Break free with bold designs and contemporary fashion statements.',
+    logo: '/Breakout logo.png',
     backgroundImage: '/breakout.jpeg',
     category: 'Fashion',
     contact: {
@@ -148,6 +152,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Junaid Jamshed',
     slug: 'junaid-jamshed',
     description: 'Traditional elegance reimagined for the modern lifestyle.',
+    logo: '/junaid jamshed logo.png',
     backgroundImage: '/junaid-jamshed.jpeg',
     category: 'Fashion',
     contact: {
@@ -163,6 +168,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Kayseria',
     slug: 'kayseria',
     description: 'Premium fashion and luxury textiles for the sophisticated shopper.',
+    logo: '/Kayseria logo.png',
     backgroundImage: '/kayseria.jpeg',
     category: 'Fashion',
     contact: {
@@ -178,6 +184,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Miniso',
     slug: 'miniso',
     description: 'Japanese-inspired lifestyle products and accessories for everyday living.',
+    logo: '/miniso logo.png',
     backgroundImage: '/miniso.jpeg',
     category: 'Lifestyle',
     contact: {
@@ -256,6 +263,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Nike',
     slug: 'nike',
     description: 'Performance meets style with the latest sneakers, sportswear, and innovations. Just Do It.',
+    logo: '/NIKE_-_WMoN.jpg',
     contact: {
       phone: '+971-50-501-8575'
     },
@@ -289,6 +297,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Zara',
     slug: 'zara',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/zara-forum6257.jpg',
     contact: {
       phone: '+971-50-501-8573'
     },

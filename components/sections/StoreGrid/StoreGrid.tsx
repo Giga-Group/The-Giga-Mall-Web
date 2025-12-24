@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export interface Store {
   name: string;
@@ -15,6 +16,40 @@ interface StoreGridProps {
   items?: Store[];
   basePath?: string;
 }
+
+// Helper function to get logo path from store slug
+const getStoreLogo = (slug?: string): string | null => {
+  if (!slug) return null;
+  
+  // Map of slug to logo filename - prioritizing dedicated logo files
+  const logoMap: Record<string, string> = {
+    'alkaram': '/alkaram.jpg', // Using alkaram.jpg as logo
+    'almas': '/almas logo.png',
+    'almirah': '/almirah logo.png',
+    'batik-studio': '/batik-studio.jpg',
+    'bloon': '/bloon.jpg',
+    'bonanza': '/bonanza.jpeg',
+    'breakout': '/Breakout logo.png',
+    'cambridge': '/cambridge.jpeg',
+    'junaid-jamshed': '/junaid jamshed logo.png',
+    'kayseria': '/Kayseria logo.png',
+    'miniso': '/miniso logo.png',
+    'nike': '/NIKE_-_WMoN.jpg',
+    'zara': '/zara-forum6257.jpg',
+    'other-stories': '/2-ES---WLaMaquinista_OK.jpg',
+    '100-capri': '/2-OK.jpg',
+    '12-storeez': '/1.png',
+    '1847-executive-grooming': '/DSC05412Food_OK_1.jpg',
+    'macdonalds': '/macdonalds logo.png',
+    'hardees': '/Hardees logo.png',
+    'pizzahut': '/pizza hut logo.png',
+    'pizza-hut': '/pizza hut logo.png',
+    'cheezious': '/cheezious logo.png',
+    'wild-wings': '/wild wings logo.png',
+  };
+  
+  return logoMap[slug] || null;
+};
 
 // Sample store data - in a real app, this would come from an API
 const defaultStores: Store[] = [
@@ -54,8 +89,8 @@ const defaultStores: Store[] = [
 ];
 
 const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps) => {
-  const [visibleCount, setVisibleCount] = useState(12);
-  const itemsPerPage = 12;
+  const [visibleCount, setVisibleCount] = useState(10);
+  const itemsPerPage = 5;
 
   const handleLoadMore = () => {
     setVisibleCount(prev => prev + itemsPerPage);
@@ -92,56 +127,71 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
             mb: { xs: 3, sm: 4 }
           }}
         >
-          {visibleStores.map((store, index) => (
-            <Link
-              key={index}
-              href={`${basePath}/${store.slug || store.name.toLowerCase().replace(/\s+/g, '-')}`}
-              style={{ textDecoration: 'none' }}
-            >
-              <Box
-                sx={{
-                  p: { xs: 1.5, sm: 2 },
-                  border: '1px solid #e0e0e0',
-                  borderRadius: '4px',
-                  backgroundColor: '#ffffff',
-                  transition: 'all 0.3s ease',
-                  cursor: 'pointer',
-                  minHeight: { xs: '60px', sm: '70px' },
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  textAlign: 'center',
-                  '&:hover': {
-                    borderColor: '#D19F3B',
-                    backgroundColor: '#fafafa',
-                    transform: 'translateY(-2px)',
-                    boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-                    '& .store-name': {
-                      color: '#D19F3B'
-                    }
-                  }
-                }}
+          {visibleStores.map((store, index) => {
+            const logoPath = getStoreLogo(store.slug || store.name.toLowerCase().replace(/\s+/g, '-'));
+            
+            return (
+              <Link
+                key={index}
+                href={`${basePath}/${store.slug || store.name.toLowerCase().replace(/\s+/g, '-')}`}
+                style={{ textDecoration: 'none' }}
               >
-                <Typography
-                  className="store-name"
+                <Box
                   sx={{
-                    fontFamily: 'Georgia, serif',
-                    fontSize: { xs: '0.75rem', sm: '0.85rem', md: '0.9rem' },
-                    color: '#333333',
-                    fontWeight: 400,
-                    lineHeight: 1.4,
-                    wordBreak: 'break-word',
-                    transition: 'color 0.3s ease'
+                    position: 'relative',
+                    aspectRatio: '1 / 1',
+                    border: '1px solid #e0e0e0',
+                    borderRadius: '4px',
+                    backgroundColor: '#ffffff',
+                    transition: 'all 0.3s ease',
+                    cursor: 'pointer',
+                    overflow: 'hidden',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    '&:hover': {
+                      borderColor: '#D19F3B',
+                      transform: 'translateY(-2px)',
+                      boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                    }
                   }}
                 >
-                  {store.name}
-                </Typography>
-              </Box>
-            </Link>
-          ))}
+                  {logoPath ? (
+                    <Image
+                      src={logoPath}
+                      alt={store.name}
+                      fill
+                      sizes="(max-width: 600px) 50vw, (max-width: 960px) 33vw, (max-width: 1280px) 25vw, 20vw"
+                      style={{
+                        objectFit: 'contain',
+                        padding: '12px'
+                      }}
+                    />
+                  ) : (
+                    <Typography
+                      className="store-name"
+                      sx={{
+                        fontFamily: 'Georgia, serif',
+                        fontSize: { xs: '0.75rem', sm: '0.85rem', md: '0.9rem' },
+                        color: '#333333',
+                        fontWeight: 400,
+                        lineHeight: 1.4,
+                        wordBreak: 'break-word',
+                        transition: 'color 0.3s ease',
+                        padding: { xs: 1.5, sm: 2 },
+                        textAlign: 'center'
+                      }}
+                    >
+                      {store.name}
+                    </Typography>
+                  )}
+                </Box>
+              </Link>
+            );
+          })}
         </Box>
 
-        {/* Load More Button */}
+        {/* Show More Button */}
         {hasMore && (
           <Box
             sx={{
@@ -169,7 +219,7 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
                 }
               }}
             >
-              Load More
+              Show More
             </Button>
           </Box>
         )}

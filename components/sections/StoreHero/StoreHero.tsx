@@ -91,13 +91,26 @@ const StoreHero = ({ store }: StoreHeroProps) => {
           }}
         >
           {store.logo ? (
-            <Image
-              src={store.logo}
-              alt={store.name}
-              width={180}
-              height={180}
-              style={{ objectFit: 'contain', width: '100%', height: '100%', filter: 'brightness(0) invert(1)' }}
-            />
+            <Box
+              sx={{
+                width: '100%',
+                height: '100%',
+                borderRadius: '50%',
+                backgroundColor: '#ffffff',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: { xs: '12px', sm: '15px', md: '18px', lg: '20px' }
+              }}
+            >
+              <Image
+                src={store.logo}
+                alt={store.name}
+                width={180}
+                height={180}
+                style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+              />
+            </Box>
           ) : (
             <Box
               sx={{

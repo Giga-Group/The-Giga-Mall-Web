@@ -11,34 +11,55 @@ interface FirstLookItem {
 
 const firstLookItems: FirstLookItem[] = [
   {
-    title: 'MARCO VERONESE AT FTNFT PHYGITAL SPACE!',
-    description:
-      'From October 5 to November 5, visitors to the ftNFT Phygital Space can...',
-    image: '/20241019_WestfieldDays-JoniIsraeli-053-SWR60051-retouche-OK.jpg'
+    title: 'UPCOMING EVENT 10',
+    description: 'Stay tuned for exciting updates and news from Giga Mall.',
+    image: '/upcoming10.jpg'
+  },
+  // {
+  //   title: 'UPCOMING EVENT 1',
+  //   description: 'Stay tuned for exciting updates and news from Giga Mall.',
+  //   image: '/upcoming1.jpg'
+  // },
+  {
+    title: 'UPCOMING EVENT 2',
+    description: 'Stay tuned for exciting updates and news from Giga Mall.',
+    image: '/upcoming2.JPG'
+  },
+  // {
+  //   title: 'UPCOMING EVENT 3',
+  //   description: 'Stay tuned for exciting updates and news from Giga Mall.',
+  //   image: '/upcoming3.jpg'
+  // },
+  {
+    title: 'UPCOMING EVENT 4',
+    description: 'Stay tuned for exciting updates and news from Giga Mall.',
+    image: '/upcoming4.jpg'
   },
   {
-    title: 'SECRET GARDEN NEW MENU.',
-    description: 'Time to create delicious memories.',
-    image: '/DSC05412Food_OK_1.jpg'
+    title: 'UPCOMING EVENT 5',
+    description: 'Stay tuned for exciting updates and news from Giga Mall.',
+    image: '/upcoming5.jpg'
   },
   {
-    title: 'PARFUMS DE MARLY UNVEILS ALTHAÏR.',
-    description:
-      'A singular new trail brimming with contrast that is rooted in French h...',
-    image: '/EU_US_-_Good_Festival.jpg'
+    title: 'UPCOMING EVENT 6',
+    description: 'Stay tuned for exciting updates and news from Giga Mall.',
+    image: '/upcoming6.jpg'
   },
   {
-    title: 'KURT GEIGER X MATTHEW WILLIAMSON COLLECTION',
-    description:
-      'Discover Kurt Geiger X Matthew Williamson Collaboration and enjoy quil...',
-    image: '/Westfield_Days_2024_Tag-1_052_OK.jpg'
+    title: 'UPCOMING EVENT 7',
+    description: 'Stay tuned for exciting updates and news from Giga Mall.',
+    image: '/upcoming7.jpg'
   },
   {
-    title: 'BLOOMINGDALES KILIAN PARIS 15 YEARS EXCLUSIVE',
-    description:
-      "Join Kilian Paris' celebration of its 15-year anniversary with a limit...",
-    image: '/ASC_2024_3.jpg'
-  }
+    title: 'UPCOMING EVENT 8',
+    description: 'Stay tuned for exciting updates and news from Giga Mall.',
+    image: '/upcoming8.jpg'
+  },
+  // {
+  //   title: 'UPCOMING EVENT 9',
+  //   description: 'Stay tuned for exciting updates and news from Giga Mall.',
+  //   image: '/upcoming9.jpg'
+  // },
 ];
 
 const FirstLookSection = () => {
@@ -153,7 +174,7 @@ const FirstLookSection = () => {
             px: { xs: 1, sm: 1.5, md: 2 }
           }}
         >
-          FIRST LOOK
+          UPCOMING EVENTS AND NEWS
         </Typography>
 
         {/* Right divider (mirrored) */}
@@ -239,7 +260,7 @@ const FirstLookSection = () => {
             xs: '1fr',
             sm: 'repeat(2, 1fr)',
             md: 'repeat(3, 1fr)',
-            lg: 'repeat(4, 1fr)'
+            lg: 'repeat(3, 1fr)'
           },
           columnGap: { xs: 4, sm: 6, md: 8 },
           rowGap: { xs: 6, sm: 8 }
@@ -257,8 +278,8 @@ const FirstLookSection = () => {
           >
             <Box
               sx={{
-                width: { xs: 180, sm: 200, md: 220 },
-                height: { xs: 180, sm: 200, md: 220 },
+                width: { xs: 280, sm: 320, md: 360 },
+                height: { xs: 280, sm: 320, md: 360 },
                 mb: 3,
                 position: 'relative'
               }}
@@ -267,9 +288,9 @@ const FirstLookSection = () => {
                 src={item.image}
                 alt={item.title}
                 fill
-                sizes="(max-width: 768px) 60vw, 220px"
+                sizes="(max-width: 768px) 60vw, 360px"
                 style={{
-                  objectFit: 'cover'
+                  objectFit: index >= 4 && index <= 6 ? 'contain' : 'cover'
                 }}
               />
             </Box>

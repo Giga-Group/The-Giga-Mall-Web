@@ -91,13 +91,26 @@ const DineHero = ({ dine }: DineHeroProps) => {
           }}
         >
           {dine.logo ? (
-            <Image
-              src={dine.logo}
-              alt={dine.name}
-              width={180}
-              height={180}
-              style={{ objectFit: 'contain', width: '100%', height: '100%', filter: 'brightness(0) invert(1)' }}
-            />
+            <Box
+              sx={{
+                width: '100%',
+                height: '100%',
+                borderRadius: '50%',
+                backgroundColor: '#ffffff',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: { xs: '12px', sm: '15px', md: '18px', lg: '20px' }
+              }}
+            >
+              <Image
+                src={dine.logo}
+                alt={dine.name}
+                width={180}
+                height={180}
+                style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+              />
+            </Box>
           ) : (
             <Box
               sx={{

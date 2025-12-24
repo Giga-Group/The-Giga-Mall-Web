@@ -22,84 +22,66 @@ interface Event {
 const allEvents: Event[] = [
   {
     id: 1,
-    image: '/WESTFIELD_CENTURY_CITY_TAYLOR_SWIFT_2.jpg',
-    dates: '31 Dec - 01 Jan 2026',
-    title: 'SKY VIEWS OBSERVATORY',
-    description: 'Ring in the New Year in true elegance at Sky Views Observatory! Enjoy an exquisite celebration with breathtaking views, premium dining, and unforgettable moments.',
-    slug: 'sky-views-observatory',
+    image: '/trending1.jpg',
+    dates: '6th September 2025',
+    title: '6th September Defence Day Celebration',
+    description: 'Join us in honoring our nation\'s heroes with a special Defence Day celebration. Experience patriotic displays, cultural performances, and community activities that pay tribute to the brave defenders of our country.',
+    slug: 'defence-day-celebration',
     type: 'entertainment'
   },
   {
     id: 2,
-    image: '/23.jpg',
-    dates: '13 Dec - 28 Dec 2025',
-    title: 'House of Hype just flipped the holidays. From December 13 until 28, The Winter WonderVerse House of Hype',
-    description: 'Experience the magic of the holidays at House of Hype! Immerse yourself in a winter wonderland with festive decorations, special performances, and exclusive holiday experiences.',
-    slug: 'winter-wonderverse',
+    image: '/trending8.jpg',
+    dates: '15th March 2025',
+    title: 'Eid ul Adha Celebration',
+    description: 'Celebrate the spirit of sacrifice and togetherness with our grand Eid ul Adha festivities. Enjoy special performances, traditional activities, and a joyful atmosphere for the entire family.',
+    slug: 'eid-ul-adha-celebration',
     type: 'entertainment'
   },
   {
     id: 3,
-    image: '/DSC07836.jpg',
-    dates: '08 Dec - 28 Dec 2025',
-    title: 'Festive Shopping Experience',
-    description: 'Step into a festive shopping experience featuring premium brands and seasonal activities. Discover exclusive holiday collections and special offers throughout the mall.',
-    slug: 'festive-shopping',
-    type: 'shopping'
-  },
-  {
-    id: 4,
-    image: '/DSC05412Food_OK_1.jpg',
-    dates: '15 Dec - 31 Dec 2025',
-    title: 'Holiday Dining Special',
-    description: 'Indulge in festive flavors with our special holiday dining experience. Enjoy curated menus from top restaurants and seasonal treats throughout the mall.',
-    slug: 'holiday-dining',
-    type: 'dining'
-  },
-  {
-    id: 5,
-    image: '/DSC07199.jpg',
-    dates: '20 Dec - 05 Jan 2026',
-    title: 'Winter Wonderland Festival',
-    description: 'Join us for a magical winter wonderland festival featuring live performances, interactive installations, and family-friendly activities for all ages.',
-    slug: 'winter-wonderland',
+    image: '/trending3.jpg',
+    dates: '14th August 2025',
+    title: '14th August Independence Day Celebration',
+    description: 'Celebrate Pakistan\'s Independence Day with pride and joy. Join us for flag hoisting ceremonies, patriotic performances, cultural displays, and special activities that honor our nation\'s freedom.',
+    slug: 'independence-day-celebration',
     type: 'entertainment'
   },
   {
+    id: 4,
+    image: '/trending31.jpg',
+    dates: '1st January 2025 - 31st December 2025',
+    title: 'Giga Mall 5th Anniversary Celebration',
+    description: 'Marking five incredible years of excellence! Join us throughout the year as we celebrate Giga Mall\'s 5th anniversary with special events, exclusive offers, and memorable experiences for all our valued visitors.',
+    slug: 'giga-mall-5th-anniversary',
+    type: 'entertainment'
+  },
+  {
+    id: 5,
+    image: '/trending13.jpg',
+    dates: '18th May 2025',
+    title: 'Mothers Day Celebration',
+    description: 'Honor the most important women in our lives with a special Mother\'s Day celebration. Enjoy heartwarming activities, special performances, and create beautiful memories with your loved ones.',
+    slug: 'mothers-day-celebration',
+    type: 'family'
+  },
+  {
     id: 6,
-    image: '/DSC07876.jpg',
-    dates: '01 Dec - 15 Dec 2025',
-    title: 'Art & Culture Exhibition',
-    description: 'Explore stunning art installations and cultural exhibits showcasing local and international artists. A celebration of creativity and artistic expression.',
-    slug: 'art-culture-exhibition',
+    image: '/trending17.jpg',
+    dates: '1st January 2025 - 31st December 2025',
+    title: 'MOU Signing Ceremony With The Last Tribe',
+    description: 'Witness a significant partnership milestone as Giga Mall signs a Memorandum of Understanding with The Last Tribe. This collaboration brings exciting new experiences and opportunities to our visitors.',
+    slug: 'mou-signing-ceremony',
     type: 'culture'
   },
   {
     id: 7,
-    image: '/DSC07901.jpg',
-    dates: '10 Dec - 24 Dec 2025',
-    title: 'Kids Holiday Workshop',
-    description: 'Fun-filled workshops for children featuring crafts, games, and educational activities. Create memories and holiday keepsakes with your little ones.',
-    slug: 'kids-holiday-workshop',
-    type: 'family'
-  },
-  {
-    id: 8,
-    image: '/DSC08041.jpg',
-    dates: '05 Dec - 20 Dec 2025',
-    title: 'Live Music & Performances',
-    description: 'Enjoy live music performances from talented artists every weekend. From jazz to contemporary, experience the rhythm of the holidays.',
-    slug: 'live-music-performances',
+    image: '/trending 19.JPG',
+    dates: '1st January 2025 - 31st December 2025',
+    title: 'Giga Tribal Beats 2025',
+    description: 'Experience the rhythm and energy of Giga Tribal Beats 2025! Immerse yourself in vibrant cultural performances, traditional music, and dynamic entertainment that celebrates our rich heritage.',
+    slug: 'giga-tribal-beats-2025',
     type: 'entertainment'
-  },
-  {
-    id: 9,
-    image: '/DSC08196.jpg',
-    dates: '12 Dec - 30 Dec 2025',
-    title: 'Fashion Week Showcase',
-    description: 'Discover the latest fashion trends with exclusive runway shows and designer showcases. Get inspired by the season&apos;s most stylish collections.',
-    slug: 'fashion-week-showcase',
-    type: 'fashion'
   }
 ];
 
