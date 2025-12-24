@@ -23,24 +23,27 @@ const getStoreLogo = (slug?: string): string | null => {
   
   // Map of slug to logo filename - prioritizing dedicated logo files
   const logoMap: Record<string, string> = {
-    'alkaram': '/alkaram.jpg', // Using alkaram.jpg as logo
+    // Shop logos - using dedicated logo files
+    'alkaram': '/alkaram logo.jpg',
     'almas': '/almas logo.png',
     'almirah': '/almirah logo.png',
-    'batik-studio': '/batik-studio.jpg',
-    'bloon': '/bloon.jpg',
-    'bonanza': '/bonanza.jpeg',
+    'batik-studio': '/batik studio logo.jpg',
+    'bloon': '/bloon logo.jpg',
+    'bonanza': '/bonanza satrangi logo.jpg',
     'breakout': '/Breakout logo.png',
-    'cambridge': '/cambridge.jpeg',
+    'cambridge': '/cambridge logo.jpg',
     'junaid-jamshed': '/junaid jamshed logo.png',
-    'kayseria': '/Kayseria logo.png',
-    'miniso': '/miniso logo.png',
+    'kayseria': '/kayseria logo.jpg',
+    'miniso': '/miniso logo.jpg',
     'nike': '/NIKE_-_WMoN.jpg',
     'zara': '/zara-forum6257.jpg',
     'other-stories': '/2-ES---WLaMaquinista_OK.jpg',
     '100-capri': '/2-OK.jpg',
     '12-storeez': '/1.png',
     '1847-executive-grooming': '/DSC05412Food_OK_1.jpg',
+    // Restaurant/Dine logos
     'macdonalds': '/macdonalds logo.png',
+    'mcdonalds': '/macdonalds logo.png',
     'hardees': '/Hardees logo.png',
     'pizzahut': '/pizza hut logo.png',
     'pizza-hut': '/pizza hut logo.png',
@@ -63,29 +66,7 @@ const defaultStores: Store[] = [
   { name: 'Cambridge', slug: 'cambridge' },
   { name: 'Junaid Jamshed', slug: 'junaid-jamshed' },
   { name: 'Kayseria', slug: 'kayseria' },
-  { name: 'Miniso', slug: 'miniso' },
-  { name: '& Other Stories', slug: 'other-stories', hasOffers: true },
-  { name: '100% Capri', slug: '100-capri' },
-  { name: '12 STOREEZ', slug: '12-storeez' },
-  { name: '1847 Executive Grooming for Men', slug: '1847-executive-grooming' },
-  { name: 'Aesop', slug: 'aesop', acceptsGiftCard: true },
-  { name: 'Adidas', slug: 'adidas', hasOffers: true },
-  { name: 'Bvlgari', slug: 'bvlgari', acceptsGiftCard: true },
-  { name: 'Cartier', slug: 'cartier', acceptsGiftCard: true },
-  { name: 'Chloé', slug: 'chloe', hasOffers: true },
-  { name: 'Chopard', slug: 'chopard' },
-  { name: 'Christian Louboutin', slug: 'christian-louboutin', acceptsGiftCard: true },
-  { name: 'CHANEL', slug: 'chanel', acceptsGiftCard: true },
-  { name: 'Henry Jacques', slug: 'henry-jacques' },
-  { name: 'Level Shoes', slug: 'level-shoes', hasOffers: true },
-  { name: 'Louis Vuitton', slug: 'louis-vuitton', acceptsGiftCard: true },
-  { name: 'LONGINES', slug: 'longines', hasOffers: true },
-  { name: 'Nike', slug: 'nike', hasOffers: true },
-  { name: 'Sephora', slug: 'sephora', hasOffers: true, acceptsGiftCard: true },
-  { name: 'Starbucks', slug: 'starbucks' },
-  { name: 'Tiffany & Co.', slug: 'tiffany-co', acceptsGiftCard: true },
-  { name: 'Tommy Hilfiger Kids', slug: 'tommy-hilfiger-kids', hasOffers: true },
-  { name: 'Zara', slug: 'zara', hasOffers: true }
+  { name: 'Miniso', slug: 'miniso' }
 ];
 
 const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps) => {

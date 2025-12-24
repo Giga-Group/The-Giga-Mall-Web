@@ -28,7 +28,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Alkaram',
     slug: 'alkaram',
     description: 'Elegant fashion and premium textiles for the modern wardrobe.',
-    logo: '/alkaram.jpg',
+    logo: '/alkaram logo.jpg',
     backgroundImage: '/alkaram.jpg',
     category: 'Fashion',
     contact: {
@@ -76,6 +76,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Batik Studio',
     slug: 'batik-studio',
     description: 'Traditional artistry meets modern fashion in our unique batik collections.',
+    logo: '/batik studio logo.jpg',
     backgroundImage: '/batik-studio.jpg',
     category: 'Fashion',
     contact: {
@@ -91,6 +92,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Bloon',
     slug: 'bloon',
     description: 'Fresh styles and vibrant fashion for every occasion.',
+    logo: '/bloon logo.jpg',
     backgroundImage: '/bloon.jpg',
     category: 'Fashion',
     contact: {
@@ -106,6 +108,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Bonanza',
     slug: 'bonanza',
     description: 'Quality clothing and accessories for the whole family.',
+    logo: '/bonanza satrangi logo.jpg',
     backgroundImage: '/bonanza.jpeg',
     category: 'Fashion',
     contact: {
@@ -137,6 +140,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Cambridge',
     slug: 'cambridge',
     description: 'Classic British style meets modern sophistication.',
+    logo: '/cambridge logo.jpg',
     backgroundImage: '/cambridge.jpeg',
     category: 'Fashion',
     contact: {
@@ -168,7 +172,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Kayseria',
     slug: 'kayseria',
     description: 'Premium fashion and luxury textiles for the sophisticated shopper.',
-    logo: '/Kayseria logo.png',
+    logo: '/kayseria logo.jpg',
     backgroundImage: '/kayseria.jpeg',
     category: 'Fashion',
     contact: {
@@ -184,7 +188,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Miniso',
     slug: 'miniso',
     description: 'Japanese-inspired lifestyle products and accessories for everyday living.',
-    logo: '/miniso logo.png',
+    logo: '/miniso logo.jpg',
     backgroundImage: '/miniso.jpeg',
     category: 'Lifestyle',
     contact: {

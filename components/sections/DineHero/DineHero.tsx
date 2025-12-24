@@ -100,15 +100,17 @@ const DineHero = ({ dine }: DineHeroProps) => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                padding: { xs: '12px', sm: '15px', md: '18px', lg: '20px' }
+                padding: { xs: '12px', sm: '15px', md: '18px', lg: '20px' },
+                position: 'relative',
+                overflow: 'hidden'
               }}
             >
               <Image
                 src={dine.logo}
                 alt={dine.name}
-                width={180}
-                height={180}
-                style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+                fill
+                sizes="(max-width: 600px) 100px, (max-width: 960px) 120px, (max-width: 1280px) 150px, 180px"
+                style={{ objectFit: 'contain' }}
               />
             </Box>
           ) : (

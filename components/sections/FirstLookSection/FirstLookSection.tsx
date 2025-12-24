@@ -11,9 +11,14 @@ interface FirstLookItem {
 
 const firstLookItems: FirstLookItem[] = [
   {
-    title: 'UPCOMING EVENT 10',
+    title: 'Quaid e Azam Day Celebration',
     description: 'Stay tuned for exciting updates and news from Giga Mall.',
     image: '/upcoming10.jpg'
+  },
+  {
+    title: 'New Year 2026 Celebration',
+    description: 'Stay tuned for exciting updates and news from Giga Mall.',
+    image: '/upcoming8.jpg'
   },
   // {
   //   title: 'UPCOMING EVENT 1',
@@ -21,7 +26,7 @@ const firstLookItems: FirstLookItem[] = [
   //   image: '/upcoming1.jpg'
   // },
   {
-    title: 'UPCOMING EVENT 2',
+    title: 'Tribal Beats 2025',
     description: 'Stay tuned for exciting updates and news from Giga Mall.',
     image: '/upcoming2.JPG'
   },
@@ -31,30 +36,26 @@ const firstLookItems: FirstLookItem[] = [
   //   image: '/upcoming3.jpg'
   // },
   {
-    title: 'UPCOMING EVENT 4',
+    title: 'Goldcrest Poolside',
     description: 'Stay tuned for exciting updates and news from Giga Mall.',
     image: '/upcoming4.jpg'
   },
   {
-    title: 'UPCOMING EVENT 5',
+    title: 'Shop with joy',
     description: 'Stay tuned for exciting updates and news from Giga Mall.',
     image: '/upcoming5.jpg'
   },
   {
-    title: 'UPCOMING EVENT 6',
+    title: 'Fun And Learning',
     description: 'Stay tuned for exciting updates and news from Giga Mall.',
     image: '/upcoming6.jpg'
   },
   {
-    title: 'UPCOMING EVENT 7',
+    title: 'Hub of Shopping',
     description: 'Stay tuned for exciting updates and news from Giga Mall.',
     image: '/upcoming7.jpg'
   },
-  {
-    title: 'UPCOMING EVENT 8',
-    description: 'Stay tuned for exciting updates and news from Giga Mall.',
-    image: '/upcoming8.jpg'
-  },
+  
   // {
   //   title: 'UPCOMING EVENT 9',
   //   description: 'Stay tuned for exciting updates and news from Giga Mall.',
@@ -290,7 +291,7 @@ const FirstLookSection = () => {
                 fill
                 sizes="(max-width: 768px) 60vw, 360px"
                 style={{
-                  objectFit: index >= 4 && index <= 6 ? 'contain' : 'cover'
+                  objectFit: index <= 6 ? 'contain' : 'cover'
                 }}
               />
             </Box>

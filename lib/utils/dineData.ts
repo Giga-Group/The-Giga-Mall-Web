@@ -28,6 +28,7 @@ export const dineDetails: DineDetail[] = [
     name: 'Cheezious',
     slug: 'cheezious',
     description: 'Delicious cheesy delights and comfort food favorites. Experience the perfect blend of flavors in every bite.',
+    logo: '/cheezious logo.png',
     backgroundImage: '/cheezious.jpeg',
     category: 'Fast Food',
     contact: {
@@ -43,6 +44,7 @@ export const dineDetails: DineDetail[] = [
     name: 'Pizza Hut',
     slug: 'pizzahut',
     description: 'World-famous pizza with fresh ingredients and signature flavors. Dine in, carry out, or enjoy delivery.',
+    logo: '/pizza hut logo.png',
     backgroundImage: '/pizzahut.jpeg',
     category: 'Restaurant',
     contact: {
@@ -58,6 +60,7 @@ export const dineDetails: DineDetail[] = [
     name: 'Wild Wings',
     slug: 'wild-wings',
     description: 'Bold flavors and crispy wings in a vibrant atmosphere. Perfect for sharing with friends and family.',
+    logo: '/wild wings logo.png',
     backgroundImage: '/wild-wings.jpeg',
     category: 'Restaurant',
     contact: {
@@ -299,6 +302,7 @@ export const dineDetails: DineDetail[] = [
     name: 'McDonald\'s',
     slug: 'mcdonalds',
     description: 'I\'m lovin\' it! Enjoy your favorite burgers, fries, and more. Fast, friendly service in a clean, comfortable environment.',
+    logo: '/macdonalds logo.png',
     contact: {
       phone: '+971-50-501-8516'
     },
@@ -314,6 +318,7 @@ export const dineDetails: DineDetail[] = [
     name: 'Hardee\'s',
     slug: 'hardees',
     description: 'Made from scratch. Fresh, quality ingredients in every burger, sandwich, and breakfast item. Bold flavors you\'ll love.',
+    logo: '/Hardees logo.png',
     contact: {
       phone: '+971-50-501-8523'
     },
