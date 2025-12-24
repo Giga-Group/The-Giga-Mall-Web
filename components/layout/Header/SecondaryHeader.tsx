@@ -10,7 +10,8 @@ const SECONDARY_NAV_ITEMS = [
   'MODEL APARTMENTS',
   'CARREFOUR',
   'OFFERS',
-  'EVENTS'
+  'PROJECTS',
+  'EVENTS',
 ];
 
 interface SecondaryHeaderProps {
@@ -73,7 +74,11 @@ const SecondaryHeader = ({ isHidden = false }: SecondaryHeaderProps) => {
               ? '/model-apartments'
               : item === 'CARREFOUR'
               ? '/carrefour'
-              : '#';
+              : item === 'PROJECTS'
+              ? '/projects'
+              : '#'
+              ;
+
 
           return (
             <Box

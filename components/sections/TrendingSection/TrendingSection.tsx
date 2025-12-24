@@ -301,7 +301,8 @@ const TrendingSection = () => {
           alignItems: 'center',
           justifyContent: 'space-between',
           padding: { xs: '0 16px', sm: '0 20px', md: '0 40px', lg: '0 130px' },
-          marginTop: { xs: '24px', sm: '32px', md: '40px' }
+          marginTop: { xs: '24px', sm: '32px', md: '40px' },
+          marginBottom: { xs: '0', sm: '0', md: '0', lg: '20px' }
         }}
       >
         <Box
