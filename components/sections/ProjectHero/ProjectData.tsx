@@ -593,7 +593,7 @@ export const projects = {
     slug: "gold-crest-bay-sands-karachi",
     title: "Gold Crest Bay Sands - Karachi",
     description: "Waterfront Luxury Living",
-    backgroundImage: "/p16.jpg",
+    backgroundImage: "/p16.jpeg",
     overview: `Gold Crest Bay Sands - Karachi brings the successful Goldcrest brand to Pakistan's economic capital, offering premium waterfront living with breathtaking views of the Arabian Sea. This landmark development combines luxury residential towers with commercial spaces, creating a self-contained community along Karachi's prestigious coastline with direct beach access and marine views.`,
 
     detailedContent: `The project features luxury apartments, penthouses, and commercial spaces designed to maximize sea views and waterfront living experiences. With amenities including private beach access, marine sports facilities, waterfront promenades, and luxury retail, Gold Crest Bay Sands establishes a new standard for coastal living in Karachi, catering to residents seeking premium lifestyle options in Pakistan's largest metropolitan city.`,
@@ -691,7 +691,7 @@ export const projects = {
     slug: "gold-crest-high-life-I",
     title: "Gold Crest High Life I",
     description: "Modern Residential Living",
-    backgroundImage: "/p14.jpg",
+    backgroundImage: "/p14.jpeg",
     overview: `Gold Crest High Life offers contemporary residential living designed for modern urban professionals and families seeking quality homes with smart features and community amenities. This development focuses on efficient space utilization, modern design aesthetics, and practical living solutions that cater to the needs of today's urban residents in Islamabad's growing residential sectors.`,
 
     detailedContent: `The project features thoughtfully designed apartments with efficient layouts, modern finishes, and smart home features at accessible price points. With amenities including community spaces, recreational facilities, and convenient location access, Gold Crest High Life provides quality living options for middle-income families and professionals looking for modern residential solutions in well-planned communities.`,
@@ -784,7 +784,7 @@ export const projects = {
     slug: "gold-crest-high-life-II-and-III",
     title: "Goldcrest HighLife II & III",
     description: "Modern Residential Living",
-    backgroundImage: "/p5.jpg",
+    backgroundImage: "/p5.jpeg",
     overview: `Giga Group is proud to bring another farsighted residential project, Goldcrest Highlife. Centrally located in DHA 2 Islamabad, Goldcrest Highlife is a planned 3-tower residential development offering exceptional views of the verdant greens surrounding the locality. The project provides excellent features, fixtures, and lifestyle choices that were previously unheard of in Pakistan.`,
 
     detailedContent: `Each tower of Goldcrest Highlife is designed on modern lines with multiple levels of vehicle parking, state-of-the-art conveniences on the rooftop, and various residential layouts that suit everyone's unique budget and requirements. This development represents Giga Group's commitment to bringing world-class residential living to Islamabad's most prestigious address.`,
