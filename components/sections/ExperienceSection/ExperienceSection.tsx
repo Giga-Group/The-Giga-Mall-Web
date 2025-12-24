@@ -11,13 +11,13 @@ const ExperienceSection = () => {
   const [animationCompleted, setAnimationCompleted] = useState(false);
 
   const images = [
-    { src: '/20241019_WestfieldDays-JoniIsraeli-053-SWR60051-retouche-OK.jpg', position: 'top-center' },
-    { src: '/Westfield_Days_2024_Tag-1_052_OK.jpg', position: 'top-right' },
-    { src: '/DSC05412Food_OK_1.jpg', position: 'middle-right' },
-    { src: '/c_Dragan_Dok_WF_DZ_0811-6445.jpg', position: 'bottom-right' },
-    { src: '/ASC_2024_3.jpg', position: 'bottom-center' },
-    { src: '/EU_US_-_Good_Festival.jpg', position: 'middle-left' },
-    { src: '/WESTFIELD_CENTURY_CITY_TAYLOR_SWIFT_2.jpg', position: 'top-left' }
+    { src: '/trending1.jpg', position: 'top-center' },
+    { src: '/trending20.jpg', position: 'top-right' },
+    { src: '/trending3.jpg', position: 'middle-right' },
+    { src: '/trending9.jpg', position: 'bottom-right' },
+    { src: '/trending2.jpg', position: 'bottom-center' },
+    { src: '/trending8.jpg', position: 'middle-left' },
+    { src: '/trending21.jpg', position: 'top-left' }
   ];
 
   useEffect(() => {

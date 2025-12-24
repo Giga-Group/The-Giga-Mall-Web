@@ -1,5 +1,6 @@
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import ContactSection from '@/components/sections/ContactSection';
 import LandingVideo from '@/components/sections/LandingVideo';
 import TrendingSection from '@/components/sections/TrendingSection';
 import FeaturedSection from '@/components/sections/FeaturedSection';
@@ -19,6 +20,7 @@ export default function Home() {
         <NewBrandsSection />
         <Hero />
       </main>
+      <ContactSection />
       <Footer />
     </>
   );

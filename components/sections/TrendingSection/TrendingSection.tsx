@@ -21,71 +21,108 @@ const TrendingSection = () => {
 
   const trendingItems: TrendingItem[] = [
     {
-      image: '/Westfield_Days_2024_Tag-1_052_OK.jpg',
-      category: 'WESTFIELD',
-      title: 'Giga Mall Days 2025: Where Future Meets Style',
-      dates: '1st October 2025 - 31st October 2025'
+      image: '/trending1.jpg',
+      category: 'GIGA MALL',
+      title: '6th September Defence Day Celebration',
+      dates: '6th September 2025'
     },
     {
-      image: '/3-Mall-of-Scandinavia-OK.jpg',
-      category: 'WESTFIELD MALL OF SCANDINAVIA',
-      title: 'Giga Mall of Scandinavia turns 10 and celebrates in style',
-      dates: '7th November 2025 - 16th November 2025'
+      image: '/trending8.jpg',
+      category: 'GIGA MALL',
+      title: 'Eid ul Adha Celebration',
+      dates: '15th March 2025'
     },
+    // {
+    //   image: '/trending2.jpg',
+    //   category: 'GIGA MALL',
+    //   title: 'Experience Style and Innovation',
+    //   dates: '1st January 2025 - 31st December 2025'
+    // },
     {
-      image: '/WESTFIELD_CENTURY_CITY_TAYLOR_SWIFT_2.jpg',
-      category: 'WESTFIELD CENTURY CITY',
-      title: 'Inside the Taylor Swift Experience at Giga Mall Century City',
-      dates: '3rd October 2025 - 9th October 2025'
+      image: '/trending3.jpg',
+      category: 'GIGA MALL',
+      title: '14th August Independence Day Celebration',
+      dates: '14th August 2025'
     },
+    // {
+    //   image: '/trending5.jpg',
+    //   category: 'GIGA MALL',
+    //   title: 'Trending Now: Fashion Forward',
+    //   dates: '1st January 2025 - 31st December 2025'
+    // },
+    // {
+    //   image: '/trending7.jpg',
+    //   category: 'GIGA MALL',
+    //   title: 'Explore New Collections',
+    //   dates: '1st January 2025 - 31st December 2025'
+    // },
+    
+    // {
+    //   image: '/trending9.jpg',
+    //   category: 'GIGA MALL',
+    //   title: 'Shop the Hottest Trends',
+    //   dates: '1st January 2025 - 31st December 2025'
+    // },
     {
-      image: '/Jok_Air_4TEMPS_CNIT_carrousel_homepage_2732x1436px.jpg',
-      category: 'WESTFIELD FORUM DES HALLES',
-      title: 'Art comes to shopping centres The Louvre x Giga Mall',
-      dates: '21st March 2025 - 1st November 2025'
-    },
-    {
-      image: '/20241019_WestfieldDays-JoniIsraeli-053-SWR60051-retouche-OK.jpg',
-      category: 'WESTFIELD',
-      title: 'Giga Mall Days 2024: Celebrating Style and Innovation',
-      dates: '1st September 2024 - 30th September 2024'
-    },
-    {
-      image: '/1-WL_inside-_2732_x_1436_rijsgy-OK.jpg',
-      category: 'WESTFIELD LONDON',
-      title: 'Discover the Ultimate Shopping Experience at Giga Mall',
+      image: '/trending31.jpg',
+      category: 'GIGA MALL',
+      title: 'Giga Mall 5th Anniversary Celebration',
       dates: '1st January 2025 - 31st December 2025'
     },
+    // {
+    //   image: '/trending 11.jpg',
+    //   category: 'GIGA MALL',
+    //   title: 'Trending Collections 2025',
+    //   dates: '1st January 2025 - 31st December 2025'
+    // },
     {
-      image: '/2-ES---WLaMaquinista_OK.jpg',
-      category: 'WESTFIELD LA MAQUINISTA',
-      title: 'Experience Spanish Style at Giga Mall La Maquinista',
+      image: '/trending13.jpg',
+      category: 'GIGA MALL',
+      title: 'Mothers Day Celebration',
+      dates: '18th May 2025'
+    },
+    // {
+    //   image: '/trending14.jpg',
+    //   category: 'GIGA MALL',
+    //   title: 'Stay Ahead of the Trends',
+    //   dates: '1st January 2025 - 31st December 2025'
+    // },
+    // {
+    //   image: '/trending16.jpg',
+    //   category: 'GIGA MALL',
+    //   title: 'Latest Fashion Trends',
+    //   dates: '1st January 2025 - 31st December 2025'
+    // },
+    {
+      image: '/trending17.jpg',
+      category: 'GIGA MALL',
+      title: 'MOU Signing Ceremony With The Last Tribe',
       dates: '1st January 2025 - 31st December 2025'
     },
+    // {
+    //   image: '/trending18.JPG',
+    //   category: 'GIGA MALL',
+    //   title: 'Explore Trending Styles',
+    //   dates: '1st January 2025 - 31st December 2025'
+    // },
     {
-      image: '/4-WChodov-OK.jpg',
-      category: 'WESTFIELD CHODOV',
-      title: 'Explore Westfield Chodov: Your Shopping Destination',
+      image: '/trending 19.JPG',
+      category: 'GIGA MALL',
+      title: 'Giga Tribal Beats 2025',
       dates: '1st January 2025 - 31st December 2025'
     },
-    {
-      image: '/ZWestfield-WTC-OK.jpg',
-      category: 'WESTFIELD WORLD TRADE CENTER',
-      title: 'Shop at the Heart of New York: Giga Mall WTC',
-      dates: '1st January 2025 - 31st December 2025'
-    },
-    {
-      image: '/Westfield_Shopping_City_Sud_-_Sunset_Sound_-_2025.jpg',
-      category: 'WESTFIELD SHOPPING CITY SUD',
-      title: 'Sunset Sound: Music and Shopping at Giga Mall',
-      dates: '15th August 2025 - 30th September 2025'
-    },
-    {
-      image: '/Montage_-_Homepage_-_30sec_v11.jpg',
-      category: 'WESTFIELD',
-      title: 'Giga Mall Moments: Capturing Life\'s Best Experiences',
-      dates: '1st January 2025 - 31st December 2025'
-    }
+    // {
+    //   image: '/trending20.JPG',
+    //   category: 'GIGA MALL',
+    //   title: 'Latest Trends and Fashion',
+    //   dates: '1st January 2025 - 31st December 2025'
+    // },
+    // {
+    //   image: '/trending21.JPG',
+    //   category: 'GIGA MALL',
+    //   title: 'Giga Tribal Beats 2025',
+    //   dates: '10 December 2025'
+    // }
   ];
 
   const [emblaRef, emblaApi] = useEmblaCarousel(

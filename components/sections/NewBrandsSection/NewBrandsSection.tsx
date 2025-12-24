@@ -121,7 +121,7 @@ const NewBrandsSection = () => {
         width: '100%',
         backgroundColor: '#ffffff',
         pt: { xs: 4, sm: 6, md: 8 },
-        pb: { xs: 4, sm: 0, md: 0, },
+        pb: { xs: 4, sm: 4, md: 6, lg: 8, xl: 10 },
         minHeight: { xs: '90vh', sm: 'auto', md: 'auto' },
         display: 'flex',
         flexDirection: 'column',
@@ -202,7 +202,8 @@ const NewBrandsSection = () => {
         sx={{
           overflow: 'hidden',
           width: '100%',
-          flex: { xs: '1 1 auto', sm: '0 0 auto', md: '0 0 auto' }
+          flex: { xs: '1 1 auto', sm: '0 0 auto', md: '0 0 auto' },
+          mb: { xs: 0, sm: 0, md: 0, lg: 0 }
         }}
       >
         <Box
