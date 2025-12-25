@@ -212,7 +212,7 @@ export default function CarrefourPage() {
                   fontFamily: '"Muli", sans-serif',
                 }}
               >
-                Whether you're stocking up on groceries, looking for the latest electronics, or searching for 
+                Whether you&apos;re stocking up on groceries, looking for the latest electronics, or searching for 
                 household essentials, Carrefour at Giga Mall has everything you need. Our commitment to quality 
                 and customer satisfaction makes us the preferred choice for shoppers in Islamabad.
               </Typography>
@@ -533,9 +533,9 @@ export default function CarrefourPage() {
                 mb: { xs: 3, md: 4 },
               }}
             >
-              Experience the ultimate shopping convenience at Carrefour Giga Mall. Whether you're looking for 
+              Experience the ultimate shopping convenience at Carrefour Giga Mall. Whether you&apos;re looking for 
               daily groceries, household essentials, or the latest products, Carrefour at Giga Mall is your 
-              one-stop destination. Visit us today and discover why we're the preferred shopping choice for 
+              one-stop destination. Visit us today and discover why we&apos;re the preferred shopping choice for 
               families in Islamabad.
             </Typography>
             <Typography

@@ -6,7 +6,6 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ProjectHero from "@/components/sections/ProjectHero/ProjectHero";
 import { notFound } from "next/navigation";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import Image from "next/image";
 import Link from "next/link";
@@ -41,6 +40,11 @@ export default function ProjectDetailPage({
   const typedProject = project as unknown as Project & {
     worldClassAmenities?: WorldClassAmenity[];
     constructionUpdates?: ConstructionUpdate[];
+    designPhilosophyImage?: string;
+    amenityImage1?: string;
+    amenityImage2?: string;
+    constructionImage1?: string;
+    constructionImage2?: string;
   };
 
   // Form state
@@ -216,7 +220,7 @@ export default function ProjectDetailPage({
         </Box>
 
         {/* Design Philosophy - Image Only */}
-        {(typedProject as any).designPhilosophyImage && (
+        {typedProject.designPhilosophyImage && (
           <Box
             sx={{
               mb: { xs: 6, md: 8 },
@@ -235,7 +239,7 @@ export default function ProjectDetailPage({
               }}
             >
               <Image
-                src={(typedProject as any).designPhilosophyImage}
+                src={typedProject.designPhilosophyImage}
                 alt="Design Philosophy"
                 fill
                 style={{ objectFit: "cover" }}
@@ -336,7 +340,7 @@ export default function ProjectDetailPage({
         )}
 
         {/* Two Images Section with Text Columns */}
-        {((typedProject as any).amenityImage1 || (typedProject as any).amenityImage2) && (
+        {(typedProject.amenityImage1 || typedProject.amenityImage2) && (
           <Box sx={{ mb: { xs: 6, md: 8 }, width: { xs: "100%", md: "70%" }, margin: "0 auto" }}>
             {/* Two Images */}
             <Box
@@ -348,7 +352,7 @@ export default function ProjectDetailPage({
               }}
             >
               {/* Left Image */}
-              {(typedProject as any).amenityImage1 && (
+              {typedProject.amenityImage1 && (
                 <Box
                   sx={{
                     width: { xs: "100%", md: "50%" },
@@ -359,7 +363,7 @@ export default function ProjectDetailPage({
                   }}
                 >
                   <Image
-                    src={(typedProject as any).amenityImage1}
+                    src={typedProject.amenityImage1}
                     alt="Amenity"
                     fill
                     style={{ objectFit: "cover" }}
@@ -368,7 +372,7 @@ export default function ProjectDetailPage({
               )}
 
               {/* Right Image */}
-              {(typedProject as any).amenityImage2 && (
+              {typedProject.amenityImage2 && (
                 <Box
                   sx={{
                     width: { xs: "100%", md: "50%" },
@@ -379,7 +383,7 @@ export default function ProjectDetailPage({
                   }}
                 >
                   <Image
-                    src={(typedProject as any).amenityImage2}
+                    src={typedProject.amenityImage2}
                     alt="Amenity"
                     fill
                     style={{ objectFit: "cover" }}
@@ -609,7 +613,7 @@ export default function ProjectDetailPage({
                       </Box>
 
                       {/* Construction Image */}
-                      {(typedProject as any)[`constructionImage${index + 1}`] && (
+                      {((index === 0 && typedProject.constructionImage1) || (index === 1 && typedProject.constructionImage2)) && (
                         <Box
                           sx={{
                             width: "100%",
@@ -618,7 +622,7 @@ export default function ProjectDetailPage({
                           }}
                         >
                           <Image
-                            src={(typedProject as any)[`constructionImage${index + 1}`]}
+                            src={index === 0 ? typedProject.constructionImage1! : typedProject.constructionImage2!}
                             alt={`Construction Progress ${index + 1}`}
                             fill
                             style={{ objectFit: "cover" }}

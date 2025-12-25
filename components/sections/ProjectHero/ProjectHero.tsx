@@ -5,16 +5,14 @@ import Image from 'next/image';
 
 interface ProjectHeroProps {
   title: string;
-  description: string;
+  description?: string;
   backgroundImage?: string;
   logo?: string;
 }
 
 const ProjectHero = ({
   title,
-  description,
   backgroundImage,
-  logo,
 }: ProjectHeroProps) => {
   return (
     <Box
