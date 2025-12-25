@@ -5,7 +5,7 @@ export const projects = {
     slug: "gold-crest-views",
     title: "Goldcrest Views",
     description: "Luxury Residential Complex",
-    backgroundImage: "/p4.jpeg",
+    backgroundImage: "/projects/delivered-projects/WTC.webp",
     overview: `Goldcrest Views is a landmark luxury residential project by Al-Ghurair Giga, featuring seven magnificent 40-storey towers that redefine Islamabad's skyline. Located in the prime heart of Giga City adjacent to Giga Mall, this Dubai-inspired development offers studios, 1-4 bedroom apartments, penthouses, and duplexes with smart-home technology, rooftop pools, and world-class amenities.`,
 
     detailedContent: `With flexible 5-year payment plans and dedicated rental management services for overseas investors, Goldcrest Views combines luxury living with smart investment opportunities. The project features central HVAC, high-speed elevators, podium gardens, daycare facilities, and gourmet services, creating a self-sustained premium community with excellent connectivity to twin cities.`,
@@ -27,6 +27,9 @@ export const projects = {
     },
 
     designPhilosophy: `Our architectural vision combines Dubai-inspired luxury with Islamabad's natural beauty, creating a harmonious blend of modern sophistication and timeless elegance. We integrate cutting-edge technology with sustainable design principles, ensuring every element serves both aesthetic and functional purposes while maintaining environmental responsibility and community harmony.`,
+    designPhilosophyImage: "/projects/gcv.jpg",
+    amenityImage1: "/projects/gcv.jpg",
+    amenityImage2: "/projects/gcv.jpg",
 
     premiumAmenities: [
       "Seven 40-storey residential towers with Dubai-inspired architecture",
@@ -94,6 +97,8 @@ export const projects = {
       { title: "MEP Works Started", date: "Current", progress: "30%" },
       { title: "Exterior Finishing", date: "Upcoming", progress: "0%" },
     ],
+    constructionImage1: "/projects/gcv.jpg",
+    constructionImage2: "/projects/gcv.jpg",
 
     investmentDetails: {
       "Payment Plan": "5 Years",
@@ -127,6 +132,9 @@ export const projects = {
     },
 
     designPhilosophy: `Our commercial design philosophy focuses on creating flexible, efficient spaces that adapt to modern business needs while maintaining aesthetic appeal and professional standards. We prioritize technology integration, sustainable practices, and community harmony to ensure long-term operational efficiency and business success.`,
+    designPhilosophyImage: "/p12.jpeg",
+    amenityImage1: "/p12.jpeg",
+    amenityImage2: "/p12.jpeg",
 
     premiumAmenities: [
       "Prime location in Giga City with high foot traffic",
@@ -185,6 +193,8 @@ export const projects = {
       { title: "Structural Development", date: "Current", progress: "40%" },
       { title: "Interior Finishing", date: "Upcoming", progress: "0%" },
     ],
+    constructionImage1: "/p12.jpeg",
+    constructionImage2: "/p12.jpeg",
 
     investmentDetails: {
       "Payment Plan": "4 Years",
@@ -220,6 +230,9 @@ export const projects = {
     },
 
     designPhilosophy: `Our mixed-use design philosophy creates a harmonious integration of multiple functions, blending commercial, residential, and spiritual spaces into one cohesive development that serves diverse community needs. We focus on innovative vertical integration, seamless functional flow, and sustainable development principles to create a landmark destination.`,
+    designPhilosophyImage: "/projects/gme.jpg",
+    amenityImage1: "/projects/gme.jpg",
+    amenityImage2: "/projects/gme.jpg",
 
     premiumAmenities: [
       "30-storey mixed-use tower with luxury hotel apartments",
@@ -279,6 +292,8 @@ export const projects = {
       { title: "Foundation Work", date: "Current", progress: "60%" },
       { title: "Vertical Construction", date: "Upcoming", progress: "0%" },
     ],
+    constructionImage1: "/projects/gme.jpg",
+    constructionImage2: "/projects/gme.jpg",
 
     investmentDetails: {
       "Payment Plan": "5 Years",
@@ -314,6 +329,9 @@ export const projects = {
     },
 
     designPhilosophy: `Our corporate design blends professional credibility, efficient space use, modern technology, and flexible layouts. Positioned above Giga Mall, it fosters networking, enhances brand image, and offers future-ready infrastructure to support evolving business needs in Islamabad\'s most successful commercial district.`,
+    designPhilosophyImage: "/p26.jpeg",
+    amenityImage1: "/p26.jpeg",
+    amenityImage2: "/p26.jpeg",
 
     premiumAmenities: [
       "Flexible office spaces located above successful Giga Mall",
@@ -388,6 +406,8 @@ export const projects = {
       { title: "Construction Start", date: "Current", progress: "25%" },
       { title: "Completion Phase", date: "Upcoming", progress: "0%" },
     ],
+    constructionImage1: "/p26.jpeg",
+    constructionImage2: "/p26.jpeg",
 
     investmentDetails: {
       "Payment Plan": "4 Years",
@@ -423,6 +443,9 @@ export const projects = {
     },
 
     designPhilosophy: `Our ultra-luxury design philosophy centers on exclusivity, personalized experiences, and uncompromising quality. We focus on creating intimate, refined spaces that offer privacy, sophistication, and bespoke amenities tailored to the most discerning residents seeking the ultimate residential experience in Islamabad.`,
+    designPhilosophyImage: "/projects/cpr-grid.jpg",
+    amenityImage1: "/projects/cpr-grid.jpg",
+    amenityImage2: "/projects/cpr-grid.jpg",
 
     premiumAmenities: [
       "Limited edition ultra-luxury residences",
@@ -482,6 +505,8 @@ export const projects = {
       { title: "Structural Work", date: "Current", progress: "50%" },
       { title: "Luxury Finishes", date: "Upcoming", progress: "0%" },
     ],
+    constructionImage1: "/projects/cpr-grid.jpg",
+    constructionImage2: "/projects/cpr-grid.jpg",
 
     investmentDetails: {
       "Payment Plan": "Customized",
@@ -517,6 +542,9 @@ export const projects = {
     },
 
     designPhilosophy: `Our World Trade Center design embraces global business standards, international architectural excellence, and functional efficiency for cross-border commerce. We focus on creating spaces that facilitate international trade, business networking, and global connectivity while maintaining local cultural relevance and sustainable development principles.`,
+    designPhilosophyImage: "/projects/wtc-grid.jpg",
+    amenityImage1: "/projects/wtc-grid.jpg",
+    amenityImage2: "/projects/wtc-grid.jpg",
 
     premiumAmenities: [
       "Official World Trade Center affiliation and branding",
@@ -579,6 +607,8 @@ export const projects = {
       { title: "Construction Start", date: "Current", progress: "35%" },
       { title: "Global Certification", date: "Upcoming", progress: "0%" },
     ],
+    constructionImage1: "/projects/wtc-grid.jpg",
+    constructionImage2: "/projects/wtc-grid.jpg",
 
     investmentDetails: {
       "Payment Plan": "International Standards",
@@ -614,6 +644,9 @@ export const projects = {
     },
 
     designPhilosophy: `Our waterfront design philosophy celebrates coastal living, marine environments, and sustainable development along Karachi's shoreline. We focus on maximizing sea views, incorporating marine elements, creating beach access, and ensuring environmental responsibility while delivering luxury living experiences unique to Karachi's coastal landscape.`,
+    designPhilosophyImage: "/p16.jpeg",
+    amenityImage1: "/p16.jpeg",
+    amenityImage2: "/p16.jpeg",
 
     premiumAmenities: [
       "Direct private beach access for residents",
@@ -677,6 +710,8 @@ export const projects = {
       { title: "Foundation Work", date: "Current", progress: "45%" },
       { title: "Tower Construction", date: "Upcoming", progress: "0%" },
     ],
+    constructionImage1: "/p16.jpeg",
+    constructionImage2: "/p16.jpeg",
 
     investmentDetails: {
       "Payment Plan": "5 Years",
@@ -712,6 +747,9 @@ export const projects = {
     },
 
     designPhilosophy: `Our modern residential design emphasizes practicality, efficiency, community living, and contemporary aesthetics. We focus on creating functional spaces, smart features, community integration, and value-driven solutions that meet the needs of today\'s urban residents while maintaining quality construction and sensible pricing.`,
+    designPhilosophyImage: "/projects/gc-highlife-grid-1.jpg",
+    amenityImage1: "/projects/gc-highlife-grid-1.jpg",
+    amenityImage2: "/projects/gc-highlife-grid-1.jpg",
 
     premiumAmenities: [
       "Efficient apartment layouts for modern living",
@@ -770,6 +808,8 @@ export const projects = {
       { title: "Construction Progress", date: "Current", progress: "55%" },
       { title: "Finishing Work", date: "Upcoming", progress: "0%" },
     ],
+    constructionImage1: "/projects/gc-highlife-grid-1.jpg",
+    constructionImage2: "/projects/gc-highlife-grid-1.jpg",
 
     investmentDetails: {
       "Payment Plan": "3-4 Years",
@@ -805,6 +845,9 @@ export const projects = {
     },
 
     designPhilosophy: `Goldcrest Highlife is designed on modern lines with a farsighted approach to residential living. Each tower features contemporary architectural design that maximizes views of the verdant surroundings while providing practical solutions like multiple levels of parking and rooftop conveniences. The project offers various residential layouts to accommodate different budgets and requirements, delivering features and lifestyle choices that set new standards in Pakistan's residential development landscape.`,
+    designPhilosophyImage: "/projects/gc-highlife-grid-2-3.jpg",
+    amenityImage1: "/projects/gc-highlife-grid-2-3.jpg",
+    amenityImage2: "/projects/gc-highlife-grid-2-3.jpg",
 
     premiumAmenities: [
       "3-tower residential development with modern design",
@@ -860,6 +903,8 @@ export const projects = {
       { title: "Foundation Work", date: "Current", progress: "65%" },
       { title: "Tower Construction", date: "Upcoming", progress: "0%" },
     ],
+    constructionImage1: "/projects/gc-highlife-grid-2-3.jpg",
+    constructionImage2: "/projects/gc-highlife-grid-2-3.jpg",
 
     investmentDetails: {
       "Payment Plan": "3-4 Years",

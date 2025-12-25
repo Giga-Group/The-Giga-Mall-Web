@@ -44,6 +44,8 @@ const Navigation = ({ navItems, onShopHover, onDineHover, /* onStayHover, */ onE
             ? '/services'
             : item === 'Plan your visit'
             ? '/opening-hours'
+            : item === 'Projects'
+            ? '/projects'
             : '#';
 
         const hasDropdown =

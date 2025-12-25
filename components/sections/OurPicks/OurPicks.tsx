@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useCallback, useEffect, useRef } from 'react';
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -34,6 +35,75 @@ const defaultPicks: PickItem[] = [
 ];
 
 const OurPicks = ({ picks = defaultPicks, basePath = '/shop' }: OurPicksProps) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const autoPlayPausedRef = useRef(false);
+
+  const goToNext = useCallback(() => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => (prev + 1) % picks.length);
+    setTimeout(() => setIsTransitioning(false), 500);
+  }, [isTransitioning, picks.length]);
+
+  const goToPrev = useCallback(() => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => (prev - 1 + picks.length) % picks.length);
+    setTimeout(() => setIsTransitioning(false), 500);
+  }, [isTransitioning, picks.length]);
+
+  // Auto-scroll every 5 seconds (only on mobile)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isTransitioning && !autoPlayPausedRef.current) {
+        goToNext();
+      }
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [goToNext, isTransitioning]);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    autoPlayPausedRef.current = true;
+    setTouchStart(e.touches[0].clientX);
+    setTouchEnd(null);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (touchStart !== null) {
+      setTouchEnd(e.touches[0].clientX);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || touchEnd === null) {
+      setTouchStart(null);
+      setTouchEnd(null);
+      setTimeout(() => {
+        autoPlayPausedRef.current = false;
+      }, 5000);
+      return;
+    }
+
+    const delta = touchStart - touchEnd;
+    const minSwipeDistance = 50;
+
+    if (Math.abs(delta) > minSwipeDistance) {
+      if (delta > 0) {
+        goToNext();
+      } else {
+        goToPrev();
+      }
+    }
+
+    setTouchStart(null);
+    setTouchEnd(null);
+    setTimeout(() => {
+      autoPlayPausedRef.current = false;
+    }, 5000);
+  };
   return (
     <Box
       sx={{
@@ -199,11 +269,137 @@ const OurPicks = ({ picks = defaultPicks, basePath = '/shop' }: OurPicksProps) =
         </Box>
       </Box>
 
+      {/* Mobile Carousel View (xs only) */}
       <Box
         sx={{
-          display: 'grid',
-          gridTemplateColumns: { xs: '1fr', sm: 'repeat(3, 1fr)' },
-          gap: { xs: 2, sm: 2.5, md: 3 },
+          display: { xs: 'block', lg: 'none' },
+          maxWidth: '1400px',
+          margin: '0 auto',
+          position: 'relative'
+        }}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        {/* Carousel Container */}
+        <Box
+          sx={{
+            position: 'relative',
+            width: '100%',
+            overflow: 'hidden',
+            touchAction: 'pan-y'
+          }}
+        >
+          <Box
+            sx={{
+              display: 'flex',
+              transform: `translateX(-${currentIndex * 100}%)`,
+              transition: isTransitioning ? 'transform 0.5s ease-in-out' : 'none',
+              willChange: 'transform'
+            }}
+          >
+            {picks.map((pick, index) => (
+              <Box
+                key={index}
+                sx={{
+                  minWidth: '100%',
+                  width: '100%',
+                  flexShrink: 0,
+                  px: 1
+                }}
+              >
+                <Link
+                  href={`${basePath}/${pick.slug || pick.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  style={{ textDecoration: 'none' }}
+                >
+                  <Box
+                    sx={{
+                      position: 'relative',
+                      width: '100%',
+                      aspectRatio: '4/3',
+                      borderRadius: '8px',
+                      overflow: 'hidden',
+                      boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                      transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                      '&:active': {
+                        transform: 'scale(0.98)'
+                      }
+                    }}
+                  >
+                    <Image
+                      src={pick.image}
+                      alt={pick.name}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                    />
+                    <Box
+                      sx={{
+                        position: 'absolute',
+                        bottom: 0,
+                        left: 0,
+                        right: 0,
+                        p: 1.5,
+                        background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%)'
+                      }}
+                    >
+                      <Typography
+                        variant="body1"
+                        sx={{
+                          color: '#ffffff',
+                          fontWeight: 500,
+                          fontSize: '0.9rem',
+                          textAlign: 'center'
+                        }}
+                      >
+                        {pick.name}
+                      </Typography>
+                    </Box>
+                  </Box>
+                </Link>
+              </Box>
+            ))}
+          </Box>
+        </Box>
+
+        {/* Carousel Indicators */}
+        <Box
+          sx={{
+            display: { xs: 'flex', lg: 'none' },
+            justifyContent: 'center',
+            gap: 1,
+            mt: 2
+          }}
+        >
+          {picks.map((_, index) => (
+            <Box
+              key={index}
+              onClick={() => {
+                if (!isTransitioning) {
+                  setIsTransitioning(true);
+                  setCurrentIndex(index);
+                  setTimeout(() => setIsTransitioning(false), 500);
+                }
+              }}
+              sx={{
+                width: currentIndex === index ? '24px' : '8px',
+                height: '8px',
+                borderRadius: '4px',
+                backgroundColor: currentIndex === index ? '#D19F3B' : '#D19F3B',
+                opacity: currentIndex === index ? 1 : 0.3,
+                cursor: 'pointer',
+                transition: 'all 0.3s ease'
+              }}
+            />
+          ))}
+        </Box>
+      </Box>
+
+      {/* Grid View (lg and above) */}
+      <Box
+        sx={{
+          display: { xs: 'none', lg: 'grid' },
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          gap: 3,
           maxWidth: '1400px',
           margin: '0 auto'
         }}
@@ -219,7 +415,7 @@ const OurPicks = ({ picks = defaultPicks, basePath = '/shop' }: OurPicksProps) =
                 position: 'relative',
                 width: '100%',
                 aspectRatio: '4/3',
-                borderRadius: { xs: '8px', sm: '12px' },
+                borderRadius: '12px',
                 overflow: 'hidden',
                 boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
                 transition: 'transform 0.3s ease, box-shadow 0.3s ease',
@@ -241,7 +437,7 @@ const OurPicks = ({ picks = defaultPicks, basePath = '/shop' }: OurPicksProps) =
                   bottom: 0,
                   left: 0,
                   right: 0,
-                  p: { xs: 1.5, sm: 2 },
+                  p: 2,
                   background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%)'
                 }}
               >
@@ -250,7 +446,7 @@ const OurPicks = ({ picks = defaultPicks, basePath = '/shop' }: OurPicksProps) =
                   sx={{
                     color: '#ffffff',
                     fontWeight: 500,
-                    fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' },
+                    fontSize: '1.1rem',
                     textAlign: 'center'
                   }}
                 >

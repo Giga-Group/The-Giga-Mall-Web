@@ -44,7 +44,7 @@ export const dineDetails: DineDetail[] = [
     name: 'Pizza Hut',
     slug: 'pizzahut',
     description: 'World-famous pizza with fresh ingredients and signature flavors. Dine in, carry out, or enjoy delivery.',
-    logo: '/pizza hut logo.png',
+    logo: '/pizza hut logo.jpg',
     backgroundImage: '/pizzahut.jpeg',
     category: 'Restaurant',
     contact: {
@@ -60,7 +60,7 @@ export const dineDetails: DineDetail[] = [
     name: 'Wild Wings',
     slug: 'wild-wings',
     description: 'Bold flavors and crispy wings in a vibrant atmosphere. Perfect for sharing with friends and family.',
-    logo: '/wild wings logo.png',
+    logo: '/wings logo.jpg',
     backgroundImage: '/wild-wings.jpeg',
     category: 'Restaurant',
     contact: {
@@ -318,7 +318,7 @@ export const dineDetails: DineDetail[] = [
     name: 'Hardee\'s',
     slug: 'hardees',
     description: 'Made from scratch. Fresh, quality ingredients in every burger, sandwich, and breakfast item. Bold flavors you\'ll love.',
-    logo: '/Hardees logo.png',
+    logo: '/hardees logo.jpg',
     contact: {
       phone: '+971-50-501-8523'
     },
@@ -418,6 +418,134 @@ export const dineDetails: DineDetail[] = [
       level: 'First Floor',
       parking: 'P2, Grand Parking',
       mapPosition: { x: 34, y: 46 }
+    }
+  },
+  {
+    name: 'Red Apple',
+    slug: 'redapple',
+    description: 'A delightful dining experience offering fresh and flavorful dishes in a welcoming atmosphere.',
+    logo: '/red apple logo.jpg',
+    contact: {
+      phone: '+971-50-501-8524'
+    },
+    category: 'Restaurant',
+    backgroundImage: '/redapple.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 38, y: 55 }
+    }
+  },
+  {
+    name: 'OPTP',
+    slug: 'optp',
+    description: 'Experience authentic flavors and traditional cuisine in a modern setting.',
+    logo: '/optp logo.jpg',
+    contact: {
+      phone: '+971-50-501-8525'
+    },
+    category: 'Restaurant',
+    backgroundImage: '/optp.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 42, y: 52 }
+    }
+  },
+  {
+    name: 'Chachajee',
+    slug: 'chachajee',
+    description: 'A beloved local favorite serving delicious traditional dishes with a modern twist.',
+    logo: '/chachajee logo.jpg',
+    contact: {
+      phone: '+971-50-501-8526'
+    },
+    category: 'Restaurant',
+    backgroundImage: '/chachajee.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 44, y: 48 }
+    }
+  },
+  {
+    name: 'Simply Sufi',
+    slug: 'simplysufi',
+    description: 'Authentic flavors and traditional recipes served in a warm and inviting atmosphere.',
+    logo: '/simplysufi logo.jpg',
+    contact: {
+      phone: '+971-50-501-8527'
+    },
+    category: 'Restaurant',
+    backgroundImage: '/simplysufi.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 36, y: 57 }
+    }
+  },
+  {
+    name: 'Rewayat',
+    slug: 'rewayat',
+    description: 'Traditional cuisine with a contemporary touch, bringing heritage flavors to your table.',
+    logo: '/rewayat logo.jpg',
+    contact: {
+      phone: '+971-50-501-8528'
+    },
+    category: 'Restaurant',
+    backgroundImage: '/rewayat.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 40, y: 44 }
+    }
+  },
+  {
+    name: 'Spice Factory',
+    slug: 'spicefactory',
+    description: 'Bold flavors and aromatic spices come together to create an unforgettable dining experience.',
+    logo: '/spice factory logo.jpg',
+    contact: {
+      phone: '+971-50-501-8529'
+    },
+    category: 'Restaurant',
+    backgroundImage: '/spicefactory.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 41, y: 56 }
+    }
+  },
+  {
+    name: 'China Grill',
+    slug: 'chinagrill',
+    description: 'Authentic Chinese cuisine with grilled specialties and traditional favorites.',
+    logo: '/china grill logo.jpg',
+    contact: {
+      phone: '+971-50-501-8530'
+    },
+    category: 'Restaurant',
+    backgroundImage: '/chinagrill.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 43, y: 51 }
+    }
+  },
+  {
+    name: 'Kababjees',
+    slug: 'kababjees',
+    description: 'Premium kebabs and grilled specialties made with the finest ingredients and traditional techniques.',
+    logo: '/kabab jees logo.jpg',
+    contact: {
+      phone: '+971-50-501-8531'
+    },
+    category: 'Restaurant',
+    backgroundImage: '/kababjees.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 39, y: 54 }
     }
   }
 ];

@@ -6,9 +6,9 @@ import Link from 'next/link';
 import { NAV_ITEMS } from '@/lib/utils/constants';
 
 const SECONDARY_NAV_ITEMS = [
-  'EXHIBITIONS',
   'FASHION SHOWS',
   'CELEBRATIONS',
+  'CINEPAX',
   'MODEL APARTMENTS',
   'CARREFOUR',
   'OFFERS',
@@ -42,6 +42,8 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         return '/services';
       case 'Plan your visit':
         return '/opening-hours';
+      case 'Projects':
+        return '/projects';
       default:
         return '#';
     }
@@ -53,6 +55,16 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         return '/offers';
       case 'EVENTS':
         return '/events';
+      case 'CINEPAX':
+        return '/cinepax';
+      case 'FASHION SHOWS':
+        return '/fashion-shows';
+      case 'CELEBRATIONS':
+        return '/celebration';
+      case 'MODEL APARTMENTS':
+        return '/model-apartments';
+      case 'CARREFOUR':
+        return '/carrefour';
       default:
         return '#';
     }
@@ -133,6 +145,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
               href={getMainNavHref(item)}
               onClick={onClose}
               sx={{
+                position: 'relative',
                 padding: '16px 20px',
                 borderBottom: '1px solid rgba(0, 0, 0, 0.08)',
                 color: '#000000',
@@ -141,12 +154,40 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                 fontWeight: 500,
                 textTransform: 'uppercase',
                 letterSpacing: '0.5px',
-                transition: 'background-color 0.2s ease',
+                transition: 'color 0.3s ease, background-color 0.3s ease',
+                cursor: 'pointer',
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '0%',
+                  height: '2px',
+                  backgroundColor: '#D19F3B',
+                  transition: 'width 0.3s ease-in-out',
+                },
+                '&::after': {
+                  content: '""',
+                  position: 'absolute',
+                  bottom: 0,
+                  right: 0,
+                  width: '0%',
+                  height: '2px',
+                  backgroundColor: '#D19F3B',
+                  transition: 'width 0.3s ease-in-out',
+                },
                 '&:hover': {
-                  backgroundColor: 'rgba(0, 0, 0, 0.02)',
+                  color: '#D19F3B',
+                  backgroundColor: 'rgba(0, 0, 0, 0.03)',
+                  '&::before': {
+                    width: '100%',
+                  },
+                  '&::after': {
+                    width: '100%',
+                  },
                 },
                 '&:active': {
-                  backgroundColor: 'rgba(0, 0, 0, 0.05)',
+                  color: '#D19F3B',
                 },
               }}
             >
@@ -172,6 +213,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
               href={getSecondaryNavHref(item)}
               onClick={onClose}
               sx={{
+                position: 'relative',
                 padding: '16px 20px',
                 borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
                 color: '#ffffff',
@@ -180,12 +222,40 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                 fontWeight: 500,
                 textTransform: 'uppercase',
                 letterSpacing: '0.5px',
-                transition: 'background-color 0.2s ease',
+                transition: 'color 0.3s ease, background-color 0.3s ease',
+                cursor: 'pointer',
+                '&::before': {
+                  content: '""',
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '0%',
+                  height: '2px',
+                  backgroundColor: '#ffffff',
+                  transition: 'width 0.3s ease-in-out',
+                },
+                '&::after': {
+                  content: '""',
+                  position: 'absolute',
+                  bottom: 0,
+                  right: 0,
+                  width: '0%',
+                  height: '2px',
+                  backgroundColor: '#ffffff',
+                  transition: 'width 0.3s ease-in-out',
+                },
                 '&:hover': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                  color: '#ffffff',
+                  backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                  '&::before': {
+                    width: '100%',
+                  },
+                  '&::after': {
+                    width: '100%',
+                  },
                 },
                 '&:active': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.15)',
+                  color: '#ffffff',
                 },
               }}
             >

@@ -11,15 +11,15 @@ import Image from 'next/image';
    FEATURED PROJECTS
 ======================= */
 const projects = [
-  { slug: 'gold-crest-views', title: 'Gold Crest Views', description: 'Luxury Residential Complex', image: '/p4.jpeg' },
+  { slug: 'gold-crest-views', title: 'Gold Crest Views', description: 'Luxury Residential Complex', image: '/projects/gcv.jpg' },
   { slug: 'gold-crest-commercial', title: 'Gold Crest Commercial', description: 'Premium Commercial Complex', image: '/p12.jpeg' },
-  { slug: 'giga-mall-extension', title: 'Giga Mall Extension', description: 'Mixed-Use Development', image: '/p7.jpeg' },
+  { slug: 'giga-mall-extension', title: 'Giga Mall Extension', description: 'Mixed-Use Development', image: '/projects/gme.jpg' },
   { slug: 'giga-business-complex', title: 'Giga Business Complex', description: 'Corporate Hub', image: '/p26.jpeg' },
-  { slug: 'central-palace-residence', title: 'Central Palace Residence', description: 'Ultra-Luxury Living', image: '/p15.jpeg' },
-  { slug: 'giga-mall-wtc', title: 'Giga Mall WTC', description: 'World Trade Center', image: '/p6.jpeg' },
-  { slug: 'gold-crest-bay-sands-karachi', title: 'Gold Crest Bay Sands - Karachi', description: 'Luxury Seafront Living', image: '/p16.jpeg' },
-  { slug: 'gold-crest-high-life-I', title: 'Gold Crest High Life I', description: 'Modern Residential Living', image: '/p14.jpeg' },
-  { slug: 'gold-crest-high-life-II-and-III', title: 'Gold Crest High Life II & III', description: 'Modern Residential Living', image: '/p5.jpeg' },
+  { slug: 'central-palace-residence', title: 'Central Palace Residence', description: 'Ultra-Luxury Living', image: '/projects/cpr-grid.jpg' },
+  { slug: 'giga-mall-wtc', title: 'Giga Mall WTC', description: 'World Trade Center', image: '/projects/wtc-grid.jpg' },
+  // { slug: 'gold-crest-bay-sands-karachi', title: 'Gold Crest Bay Sands - Karachi', description: 'Luxury Seafront Living', image: '/p16.jpeg' },
+  { slug: 'gold-crest-high-life-I', title: 'Goldcrest Height I', description: 'Modern Residential Living', image: '/projects/gc-highlife-grid-1.jpg' },
+  { slug: 'gold-crest-high-life-II-and-III', title: 'Goldcrest Height II & III', description: 'Modern Residential Living', image: '/projects/gc-highlife-grid-2-3.jpg' },
 ];
 
 /* =======================
@@ -79,9 +79,32 @@ export default function ProjectsPage() {
           FEATURED PROJECTS
       ======================= */}
       <Box sx={{ maxWidth: '1400px', mx: 'auto', px: { xs: 2, md: 4 }, mt: 10 }}>
-        <Typography sx={{ color: '#D19F3B', fontSize: '2rem', fontWeight: 600, textAlign: 'center' }}>
-          Our Projects
-        </Typography>
+        <Box sx={{ textAlign: 'center', mb: 2 }}>
+          <Typography 
+            sx={{ 
+              color: '#D19F3B', 
+              fontSize: { xs: '0.9rem', md: '1rem' }, 
+              fontWeight: 400, 
+              fontFamily: '"Muli", sans-serif',
+              textTransform: 'uppercase',
+              letterSpacing: '0.1em',
+              mb: 1,
+            }}
+          >
+            FEATURED WORKS
+          </Typography>
+          <Typography 
+            sx={{ 
+              color: '#1a237e', 
+              fontSize: { xs: '2rem', md: '2.5rem', lg: '3rem' }, 
+              fontWeight: 700, 
+              fontFamily: '"Jost", sans-serif',
+              textAlign: 'center',
+            }}
+          >
+            Our Projects
+          </Typography>
+        </Box>
 
         <Box
           sx={{
@@ -100,7 +123,18 @@ export default function ProjectsPage() {
                   overflow: 'hidden',
                   cursor: 'pointer',
                   transition: 'transform 0.4s ease',
-                  '&:hover': { transform: 'translateY(-6px)' },
+                  '&:hover': { 
+                    transform: 'translateY(-6px)',
+                    '& .hover-overlay': {
+                      opacity: 1,
+                      '&::before': {
+                        opacity: 1,
+                      },
+                      '&::after': {
+                        opacity: 1,
+                      },
+                    },
+                  },
                 }}
               >
                 <Image
@@ -110,22 +144,77 @@ export default function ProjectsPage() {
                   style={{ objectFit: 'cover' }}
                 />
 
+                {/* Hover Overlay with Text and L-shaped Brackets */}
                 <Box
+                  className="hover-overlay"
                   sx={{
                     position: 'absolute',
                     inset: 0,
-                    background:
-                      'linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2))',
                     display: 'flex',
                     flexDirection: 'column',
-                    justifyContent: 'flex-end',
-                    p: 3,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    backgroundColor: 'rgba(0, 0, 0, 0.45)',
+                    opacity: 0,
+                    transition: 'opacity 0.4s ease',
+                    // Top-left L-shaped bracket
+                    '&::before': {
+                      content: '""',
+                      position: 'absolute',
+                      top: '20px',
+                      left: '20px',
+                      width: '120px',
+                      height: '120px',
+                      borderTop: '2px solid #ffffff',
+                      borderLeft: '2px solid #ffffff',
+                      opacity: 0,
+                      transition: 'opacity 0.4s ease',
+                    },
+                    // Bottom-right L-shaped bracket
+                    '&::after': {
+                      content: '""',
+                      position: 'absolute',
+                      bottom: '20px',
+                      right: '20px',
+                      width: '120px',
+                      height: '120px',
+                      borderBottom: '2px solid #ffffff',
+                      borderRight: '2px solid #ffffff',
+                      opacity: 0,
+                      transition: 'opacity 0.4s ease',
+                    },
                   }}
                 >
-                  <Typography sx={{ color: '#fff', fontSize: '1.3rem', fontWeight: 600 }}>
+                  <Typography
+                    className="project-title-text"
+                    sx={{
+                      color: '#ffffff',
+                      fontSize: { xs: '1.8rem', md: '2.2rem', lg: '2.5rem' },
+                      fontWeight: 700,
+                      textAlign: 'center',
+                      fontFamily: '"Jost", sans-serif',
+                      letterSpacing: '0.05em',
+                      mb: 1,
+                      maxWidth: '70%',
+                      transition: 'color 0.4s ease',
+                      '&:hover': {
+                        color: '#D19F3B',
+                      },
+                    }}
+                  >
                     {project.title}
                   </Typography>
-                  <Typography sx={{ color: '#fff', fontSize: '14px', mt: 1 }}>
+                  <Typography
+                    className="project-description-text"
+                    sx={{
+                      color: '#ffffff',
+                      fontSize: { xs: '1.1rem', md: '1.2rem' },
+                      textAlign: 'center',
+                      fontFamily: '"Muli", sans-serif',
+                      fontWeight: 400,
+                      maxWidth: '80%',
+                    }}
+                  >
                     {project.description}
                   </Typography>
                 </Box>
@@ -138,10 +227,33 @@ export default function ProjectsPage() {
       {/* =======================
           COMPLETED PROJECTS
       ======================= */}
-      <Box sx={{ maxWidth: '1400px', mx: 'auto', px: { xs: 2, md: 4 }, mt: 16 }}>
-        <Typography sx={{ color: '#D19F3B', fontSize: '2rem', fontWeight: 600, textAlign: 'center' }}>
-          Our Delivered Projects
-        </Typography>
+      <Box sx={{ maxWidth: '1400px', mx: 'auto', px: { xs: 2, md: 4 }, mt: 16, pb: { xs: 6, md: 8, lg: 10 } }}>
+        <Box sx={{ textAlign: 'center', mb: 2 }}>
+          <Typography 
+            sx={{ 
+              color: '#D19F3B', 
+              fontSize: { xs: '0.9rem', md: '1rem' }, 
+              fontWeight: 400, 
+              fontFamily: '"Muli", sans-serif',
+              textTransform: 'uppercase',
+              letterSpacing: '0.1em',
+              mb: 1,
+            }}
+          >
+            FEATURED WORKS
+          </Typography>
+          <Typography 
+            sx={{ 
+              color: '#1a237e', 
+              fontSize: { xs: '2rem', md: '2.5rem', lg: '3rem' }, 
+              fontWeight: 700, 
+              fontFamily: '"Jost", sans-serif',
+              textAlign: 'center',
+            }}
+          >
+            Our Delivered Projects
+          </Typography>
+        </Box>
 
         <Box
           sx={{
@@ -160,108 +272,100 @@ export default function ProjectsPage() {
                 overflow: 'hidden',
                 cursor: 'pointer',
                 transition: 'transform 0.4s ease',
-
-               '&:hover': {
-  transform: 'translateY(-4px)',
-  '& .content-overlay': {
-    opacity: 1,
-    backgroundColor: 'rgba(209,159,59,0.95)',
-  },
-  '& .project-description': {
-    opacity: 1,
-  },
-  '& .content-overlay::before': {
-    opacity: 1,
-  },
-  '& .content-overlay::after': {
-    opacity: 1,
-  },
-},
-
+                '&:hover': { 
+                  transform: 'translateY(-6px)',
+                  '& .hover-overlay': {
+                    opacity: 1,
+                    '&::before': {
+                      opacity: 1,
+                    },
+                    '&::after': {
+                      opacity: 1,
+                    },
+                  },
+                },
               }}
             >
               <Image src={project.image} alt={project.title} fill style={{ objectFit: 'cover' }} />
 
-              {/* Default Title */}
+              {/* Hover Overlay with Text and L-shaped Brackets */}
               <Box
-                className="project-title"
+                className="hover-overlay"
                 sx={{
                   position: 'absolute',
                   inset: 0,
                   display: 'flex',
+                  flexDirection: 'column',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  backgroundColor: 'rgba(0, 0, 0, 0.16)',
+                  backgroundColor: 'rgba(26, 35, 126, 0.85)',
+                  opacity: 0,
                   transition: 'opacity 0.4s ease',
+                  padding: { xs: '24px', md: '32px', lg: '40px' },
+                  // Top-left L-shaped bracket
+                  '&::before': {
+                    content: '""',
+                    position: 'absolute',
+                    top: '20px',
+                    left: '20px',
+                    width: '80px',
+                    height: '80px',
+                    borderTop: '2px solid #ffffff',
+                    borderLeft: '2px solid #ffffff',
+                    opacity: 0,
+                    transition: 'opacity 0.4s ease',
+                  },
+                  // Bottom-right L-shaped bracket
+                  '&::after': {
+                    content: '""',
+                    position: 'absolute',
+                    bottom: '20px',
+                    right: '20px',
+                    width: '80px',
+                    height: '80px',
+                    borderBottom: '2px solid #ffffff',
+                    borderRight: '2px solid #ffffff',
+                    opacity: 0,
+                    transition: 'opacity 0.4s ease',
+                  },
                 }}
               >
-                <Typography sx={{ color: '#fff', fontSize: '1.4rem', fontWeight: 600 }}>
+                <Typography
+                  className="project-title-text"
+                  sx={{
+                    color: '#ffffff',
+                    fontSize: { xs: '1.1rem', md: '1.2rem', lg: '1.2rem' },
+                    fontWeight: 600,
+                    textAlign: 'center',
+                    fontFamily: '"Jost", sans-serif',
+                    letterSpacing: '0.02em',
+                    mb: 2,
+                    maxWidth: { xs: '85%', md: '75%', lg: '70%' },
+                    lineHeight: 1.3,
+                  }}
+                >
                   {project.title}
                 </Typography>
+                <Typography
+                  className="project-description-text"
+                  sx={{
+                    color: '#ffffff',
+                    fontSize: { xs: '0.75rem', md: '0.85rem', lg: '0.9rem' },
+                    textAlign: 'center',
+                    fontFamily: '"Muli", sans-serif',
+                    fontWeight: 400,
+                    maxWidth: { xs: '90%', md: '90%', lg: '90%' },
+                    lineHeight: 1.6,
+                    maxHeight: { xs: '180px', md: '200px' },
+                    overflow: 'hidden',
+                    display: '-webkit-box',
+                    WebkitLineClamp: { xs: 10, md: 12 },
+                    WebkitBoxOrient: 'vertical',
+                  }}
+                >
+                  {project.description}
+                </Typography>
               </Box>
-
-              {/* Hover Overlay */}
-            <Box
-  className="content-overlay"
-  sx={{
-    position: 'absolute',
-    inset: 0,
-    zIndex: 3,
-    padding: '30px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    opacity: 0,
-    transition: 'all 0.4s ease',
-
-    /* TOP-RIGHT CORNER */
-    '&::before': {
-      content: '""',
-      position: 'absolute',
-      top: 20,
-      right: 20,
-      width: 40,
-      height: 40,
-      borderTop: '2px solid #ffffff',
-      borderRight: '2px solid #ffffff',
-      opacity: 0,
-      transition: 'opacity 0.4s ease',
-    },
-
-    /* BOTTOM-LEFT CORNER */
-    '&::after': {
-      content: '""',
-      position: 'absolute',
-      bottom: 20,
-      left: 20,
-      width: 40,
-      height: 40,
-      borderBottom: '2px solid #ffffff',
-      borderLeft: '2px solid #ffffff',
-      opacity: 0,
-      transition: 'opacity 0.4s ease',
-    },
-  }}
->
-  <Typography
-    className="project-description"
-    sx={{
-      fontFamily: 'Georgia, "Times New Roman", Times, serif',
-      fontSize: '16px',
-      color: '#ffffff',
-      textAlign: 'center',
-      opacity: 0,
-      transition: 'opacity 0.4s ease 0.1s',
-      overflow: 'hidden',
-      display: '-webkit-box',
-      WebkitLineClamp: 8,
-      WebkitBoxOrient: 'vertical',
-    }}
-  >
-    {project.description}
-  </Typography>
-</Box>
-
             </Box>
           ))}
         </Box>

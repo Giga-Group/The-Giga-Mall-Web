@@ -42,13 +42,21 @@ const getStoreLogo = (slug?: string): string | null => {
     '12-storeez': '/1.png',
     '1847-executive-grooming': '/DSC05412Food_OK_1.jpg',
     // Restaurant/Dine logos
-    'macdonalds': '/macdonalds logo.png',
-    'mcdonalds': '/macdonalds logo.png',
-    'hardees': '/Hardees logo.png',
-    'pizzahut': '/pizza hut logo.png',
-    'pizza-hut': '/pizza hut logo.png',
-    'cheezious': '/cheezious logo.png',
-    'wild-wings': '/wild wings logo.png',
+    'macdonalds': '/macdonalds logo.jpg',
+    'mcdonalds': '/macdonalds logo.jpg',
+    'hardees': '/hardees logo.jpg',
+    'pizzahut': '/pizza hut logo.jpg',
+    'pizza-hut': '/pizza hut logo.jpg',
+    'cheezious': '/cheezious logo.jpg',
+    'wild-wings': '/wings logo.jpg',
+    'redapple': '/red apple logo.jpg',
+    'optp': '/optp logo.jpg',
+    'chachajee': '/chachajee logo.jpg',
+    'simplysufi': '/simplysufi logo.jpg',
+    'rewayat': '/rewayat logo.jpg',
+    'spicefactory': '/spice factory logo.jpg',
+    'chinagrill': '/china grill logo.jpg',
+    'kababjees': '/kabab jees logo.jpg',
   };
   
   return logoMap[slug] || null;

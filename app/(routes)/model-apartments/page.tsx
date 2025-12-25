@@ -158,7 +158,7 @@ export default function ModelApartmentsPage() {
             width: "100%",
             minHeight: { xs: "50vh", md: "60vh", lg: "70vh" },
             backgroundColor: "#ffffff",
-            padding: { xs: "0px 0", md: "40px 0", lg: "60px 0" },
+            padding: { xs: "20px 0", md: "40px 0", lg: "60px 0" },
             overflow: "hidden",
           }}
         >
@@ -204,8 +204,7 @@ export default function ModelApartmentsPage() {
                 maxWidth: { md: "500px" },
                 display: "flex",
                 flexDirection: "column",
-                top: { xs: 0, md: "40px", lg: "60px" },
-                justifyContent: "flex-start",
+                justifyContent: "center",
                 padding: {
                   xs: "40px 20px",
                   sm: "50px 30px",

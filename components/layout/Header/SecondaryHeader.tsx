@@ -4,13 +4,12 @@ import { Box, useMediaQuery, useTheme } from '@mui/material';
 import Link from 'next/link';
 
 const SECONDARY_NAV_ITEMS = [
-  'EXHIBITIONS',
   'FASHION SHOWS',
   'CELEBRATION',
+  'CINEPAX',
   'MODEL APARTMENTS',
   'CARREFOUR',
   'OFFERS',
-  'PROJECTS',
   'EVENTS',
 ];
 
@@ -64,8 +63,8 @@ const SecondaryHeader = ({ isHidden = false }: SecondaryHeaderProps) => {
               ? '/offers'
               : item === 'EVENTS'
               ? '/events'
-              : item === 'EXHIBITIONS'
-              ? '/exhibitions'
+              : item === 'CINEPAX'
+              ? '/cinepax'
               : item === 'FASHION SHOWS'
               ? '/fashion-shows'
               : item === 'CELEBRATION'
@@ -74,8 +73,6 @@ const SecondaryHeader = ({ isHidden = false }: SecondaryHeaderProps) => {
               ? '/model-apartments'
               : item === 'CARREFOUR'
               ? '/carrefour'
-              : item === 'PROJECTS'
-              ? '/projects'
               : '#'
               ;
 

@@ -12,7 +12,8 @@ const ProjectsHero = () => {
         height: '60vh',
         overflow: 'hidden',
         display: 'flex',
-        alignItems: 'flex-end',
+        alignItems: 'center',
+        justifyContent: 'center',
         backgroundColor: '#f5f5f5',
       }}
     >
@@ -22,18 +23,10 @@ const ProjectsHero = () => {
           position: 'absolute',
           inset: 0,
           zIndex: 1,
-          '&::after': {
-            content: '""',
-            position: 'absolute',
-            inset: 0,
-            background:
-              'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.2) 70%, transparent 100%)',
-            zIndex: 2,
-          },
         }}
       >
         <Image
-          src="/p13.jpeg" 
+          src="/giga mall night.png" 
           alt="Projects"
           fill
           priority
@@ -51,30 +44,33 @@ const ProjectsHero = () => {
           maxWidth: '1400px',
           margin: '0 auto',
           padding: {
-            xs: '20px 20px 30px',
-            sm: '30px 40px 40px',
-            md: '40px 60px 50px',
-            lg: '50px 80px 60px',
+            xs: '20px',
+            sm: '30px 40px',
+            md: '40px 60px',
+            lg: '50px 80px',
           },
+          textAlign: 'center',
         }}
       >
         <Typography
           sx={{
-            fontFamily: 'Georgia, "Times New Roman", Times, serif',
+            fontFamily: '"Jost", sans-serif',
             fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
             fontWeight: 700,
             color: '#ffffff',
-            textTransform: 'uppercase',
+            // textTransform: 'uppercase',
           }}
         >
-          Our Projects
+          Projects
         </Typography>
 
         <Typography
           sx={{
             marginTop: { xs: 2, md: 3 },
             maxWidth: '600px',
-            fontFamily: 'Georgia, "Times New Roman", Times, serif',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            fontFamily: '"Muli", sans-serif',
             fontSize: { xs: '14px', sm: '15px', md: '16px' },
             lineHeight: 1.7,
             color: '#ffffff',
