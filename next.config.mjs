@@ -3,7 +3,13 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     unoptimized: false,
-    remotePatterns: [],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "www.impawards.com",
+        pathname: "/**", // Allows all paths on this domain
+      },
+    ],
   },
   // Optimize for production
   compress: true,
