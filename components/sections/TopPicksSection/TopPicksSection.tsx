@@ -53,43 +53,43 @@ const allTopPicks: TopPick[] = [
 // Mobile-specific top picks images
 const mobileTopPicks: TopPick[] = [
   {
-    brand: 'Top Pick 1',
-    image: '/toppick1.jpg',
+    brand: 'Red Apple',
+    image: '/toppick1.JPG',
     link: '#'
   },
   {
-    brand: 'Top Pick 2',
-    image: '/toppick2.jpg',
+    brand: 'OPTP',
+    image: '/toppick2.JPG',
     link: '#'
   },
   {
-    brand: 'Top Pick 3',
-    image: '/toppick3.jpg',
+    brand: 'Chachajee',
+    image: '/toppick3.JPG',
     link: '#'
   },
   {
-    brand: 'Top Pick 4',
-    image: '/toppick4.jpg',
+    brand: 'Simply Sufi',
+    image: '/toppick4.JPG',
     link: '#'
   },
   {
-    brand: 'Top Pick 5',
-    image: '/toppick5.jpg',
+    brand: 'Rewayat',
+    image: '/toppick5.JPG',
     link: '#'
   },
   {
-    brand: 'Top Pick 6',
-    image: '/toppick6.jpg',
+    brand: 'Spice Factory',
+    image: '/toppick6.JPG',
     link: '#'
   },
   {
-    brand: 'Top Pick 7',
-    image: '/toppick7.jpg',
+    brand: 'China Grill',
+    image: '/toppick7.JPG',
     link: '#'
   },
   {
-    brand: 'Top Pick 8',
-    image: '/toppick8.jpg',
+    brand: 'Kababjees',
+    image: '/toppick8.JPG',
     link: '#'
   }
 ];

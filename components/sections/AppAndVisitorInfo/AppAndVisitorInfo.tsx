@@ -189,7 +189,7 @@ const AppAndVisitorInfo = () => {
           >
             {[
               'Free WiFi',
-              'Emaar gift cards',
+              'Giga gift cards',
               'Valet parking',
               'Delivery Service'
             ].map((service, index) => (
