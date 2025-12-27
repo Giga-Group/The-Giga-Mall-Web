@@ -1,6 +1,7 @@
 'use client';
 
 import { Box, Typography } from '@mui/material';
+import { Wifi, CardGiftcard, LocalParking, LocalShipping } from '@mui/icons-material';
 import Link from 'next/link';
 
 const VisitorInfo = () => {
@@ -75,27 +76,39 @@ const VisitorInfo = () => {
             gap: 1,
           }}
         >
-          {['Free WiFi', 'Emaar gift cards', 'Valet parking', 'Delivery Service'].map((service) => (
-            <Box
-              key={service}
-              component="li"
-              sx={{
-                fontFamily: '"Quicksand", sans-serif',
-                fontSize: { xs: '0.875rem', sm: '0.9375rem', md: '1rem', lg: '0.9rem' },
-                fontWeight: 400,
-                color: '#000000',
-                lineHeight: 1.6,
-                display: 'flex',
-                alignItems: 'flex-start',
-                '&::before': {
-                  content: '"-"',
-                  marginRight: '8px',
-                },
-              }}
-            >
-              {service}
-            </Box>
-          ))}
+          {[
+            { name: 'Free WiFi', icon: Wifi },
+            { name: 'Emaar gift cards', icon: CardGiftcard },
+            { name: 'Valet parking', icon: LocalParking },
+            { name: 'Delivery Service', icon: LocalShipping }
+          ].map((service) => {
+            const IconComponent = service.icon;
+            return (
+              <Box
+                key={service.name}
+                component="li"
+                sx={{
+                  fontFamily: '"Quicksand", sans-serif',
+                  fontSize: { xs: '0.875rem', sm: '0.9375rem', md: '1rem', lg: '0.9rem' },
+                  fontWeight: 400,
+                  color: '#000000',
+                  lineHeight: 1.6,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: 1.5,
+                }}
+              >
+                <IconComponent
+                  sx={{
+                    color: '#D19F3B',
+                    fontSize: { xs: '18px', sm: '20px', md: '20px' },
+                    flexShrink: 0
+                  }}
+                />
+                {service.name}
+              </Box>
+            );
+          })}
         </Box>
 
         {/* View all services link */}

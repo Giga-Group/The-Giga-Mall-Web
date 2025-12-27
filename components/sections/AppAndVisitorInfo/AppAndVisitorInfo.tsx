@@ -1,6 +1,7 @@
 'use client';
 
 import { Box, Typography } from '@mui/material';
+import { Wifi, CardGiftcard, LocalParking, LocalShipping } from '@mui/icons-material';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -42,17 +43,17 @@ const AppAndVisitorInfo = () => {
           <Box
             sx={{
               display: 'flex',
-              flexDirection: { xs: 'column', lg: 'row' },
+              flexDirection: { xs: 'row', lg: 'row' },
               alignItems: 'flex-start',
-              rowGap: { xs: 3, lg: 0 },
-              columnGap: { lg: 4 },
+              rowGap: { xs: 0, lg: 0 },
+              columnGap: { xs: 2, sm: 2.5, md: 3, lg: 4 },
               mb: { xs: 2, sm: 3 },
             }}
           >
             {/* Mobile Screen Image Only */}
             <Box
               sx={{
-                width: { xs: '220px', sm: '260px', md: '300px', lg: '340px' },
+                width: { xs: '180px', sm: '220px', md: '260px', lg: '340px' },
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'flex-start',
@@ -66,7 +67,7 @@ const AppAndVisitorInfo = () => {
                 height={780}
                 style={{
                   width: '100%',
-                  height: '100%',
+                  height: 'auto',
                   display: 'block',
                 }}
               />
@@ -77,14 +78,15 @@ const AppAndVisitorInfo = () => {
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: 2,
+                gap: { xs: 1.5, sm: 2 },
                 flex: 1,
+                paddingTop: { xs: 4, sm: 0 },
               }}
             >
               <Typography
                 sx={{
                   fontFamily: '"Quicksand", sans-serif',
-                  fontSize: { xs: '0.9rem', sm: '1rem', md: '0.9rem' },
+                  fontSize: { xs: '0.75rem', sm: '0.85rem', md: '0.8rem' },
                   color: '#666666',
                   lineHeight: 1.6,
                 }}
@@ -96,9 +98,9 @@ const AppAndVisitorInfo = () => {
               <Box
                 sx={{
                   display: 'flex',
-                  flexDirection: { xs: 'column', sm: 'row' },
+                  flexDirection: 'row',
                   flexWrap: 'wrap',
-                  gap: 2,
+                  gap: 1,
                   alignItems: 'flex-start',
                 }}
               >
@@ -112,9 +114,9 @@ const AppAndVisitorInfo = () => {
                   <Image
                     src="/AppStore_Badge_US_English.svg"
                     alt="Download on the App Store"
-                    width={120}
-                    height={40}
-                    style={{ objectFit: 'contain' }}
+                    width={90}
+                    height={30}
+                    style={{ objectFit: 'contain', width: '90px', height: '30px' }}
                   />
                 </Link>
 
@@ -128,9 +130,9 @@ const AppAndVisitorInfo = () => {
                   <Image
                     src="/GooglePlay_Badge_EN-US_English.svg"
                     alt="Get it on Google Play"
-                    width={135}
-                    height={40}
-                    style={{ objectFit: 'contain' }}
+                    width={90}
+                    height={30}
+                    style={{ objectFit: 'contain', width: '90px', height: '30px' }}
                   />
                 </Link>
               </Box>
@@ -188,30 +190,38 @@ const AppAndVisitorInfo = () => {
             }}
           >
             {[
-              'Free WiFi',
-              'Giga gift cards',
-              'Valet parking',
-              'Delivery Service'
-            ].map((service, index) => (
-              <Box
-                key={index}
-                component="li"
-                sx={{
-                  fontFamily: '"Quicksand", sans-serif',
-                  fontSize: { xs: '0.9rem', sm: '1rem', md: '0.9rem' },
-                  color: '#666666',
-                  mb: 1,
-                  lineHeight: 1.6,
-                  '&:before': {
-                    content: '"-"',
-                    marginRight: 1,
-                    color: '#666666'
-                  }
-                }}
-              >
-                {service}
-              </Box>
-            ))}
+              { name: 'Free WiFi', icon: Wifi },
+              { name: 'Giga gift cards', icon: CardGiftcard },
+              { name: 'Valet parking', icon: LocalParking },
+              { name: 'Delivery Service', icon: LocalShipping }
+            ].map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <Box
+                  key={index}
+                  component="li"
+                  sx={{
+                    fontFamily: '"Quicksand", sans-serif',
+                    fontSize: { xs: '0.9rem', sm: '1rem', md: '0.9rem' },
+                    color: '#666666',
+                    mb: 1,
+                    lineHeight: 1.6,
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: 1.5
+                  }}
+                >
+                  <IconComponent
+                    sx={{
+                      color: '#D19F3B',
+                      fontSize: { xs: '18px', sm: '20px', md: '20px' },
+                      flexShrink: 0
+                    }}
+                  />
+                  {service.name}
+                </Box>
+              );
+            })}
           </Box>
 
           <Link href="/services" style={{ textDecoration: 'none' }}>
