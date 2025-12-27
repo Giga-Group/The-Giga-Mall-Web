@@ -139,7 +139,7 @@ function EventsContent() {
             <Typography
               variant="h1"
               sx={{
-                fontFamily: '"Playfair Display", "Georgia", serif',
+                fontFamily: '"Arvo", serif',
                 fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
                 fontWeight: 400,
                 color: '#D19F3B',
@@ -301,7 +301,7 @@ function EventsContent() {
               <Typography
                 variant="h2"
                 sx={{
-                  fontFamily: '"Playfair Display", "Georgia", serif',
+                  fontFamily: '"Arvo", serif',
                   fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2rem', lg: '2.2rem' },
                   fontWeight: 400,
                   color: '#D19F3B',
@@ -417,7 +417,7 @@ function EventsContent() {
                     <Typography
                       variant="h3"
                       sx={{
-                        fontFamily: '"Playfair Display", "Georgia", serif',
+                        fontFamily: '"Arvo", serif',
                         fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.3rem' },
                         fontWeight: 400,
                         color: '#000000',

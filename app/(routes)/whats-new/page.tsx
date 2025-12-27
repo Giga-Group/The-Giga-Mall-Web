@@ -33,7 +33,7 @@ export default function WhatsNewPage() {
             <Typography
               variant="h1"
               sx={{
-                fontFamily: '"Playfair Display", "Georgia", serif',
+                fontFamily: '"Arvo", serif',
                 fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem', lg: '4rem' },
                 fontWeight: 400,
                 color: '#D19F3B',
@@ -48,7 +48,7 @@ export default function WhatsNewPage() {
             {/* Introductory Text */}
             <Typography
               sx={{
-                fontFamily: '"Arial", "Helvetica", sans-serif',
+                fontFamily: '"Quicksand", sans-serif',
                 fontSize: { xs: '14px', sm: '16px', md: '14px' },
                 fontWeight: 400,
                 color: '#666666',

@@ -1,9 +1,12 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
-import { Box, Typography, IconButton, Button } from '@mui/material';
+import { Box, Typography, IconButton, Button, useMediaQuery, useTheme } from '@mui/material';
 import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
 import Image from 'next/image';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
+import { getMobileBrandImage, getMobileDineImage } from '@/lib/utils/constants';
 
 interface TopPick {
   brand: string;
@@ -47,11 +50,82 @@ const allTopPicks: TopPick[] = [
   }
 ];
 
+// Mobile-specific top picks images
+const mobileTopPicks: TopPick[] = [
+  {
+    brand: 'Top Pick 1',
+    image: '/toppick1.jpg',
+    link: '#'
+  },
+  {
+    brand: 'Top Pick 2',
+    image: '/toppick2.jpg',
+    link: '#'
+  },
+  {
+    brand: 'Top Pick 3',
+    image: '/toppick3.jpg',
+    link: '#'
+  },
+  {
+    brand: 'Top Pick 4',
+    image: '/toppick4.jpg',
+    link: '#'
+  },
+  {
+    brand: 'Top Pick 5',
+    image: '/toppick5.jpg',
+    link: '#'
+  },
+  {
+    brand: 'Top Pick 6',
+    image: '/toppick6.jpg',
+    link: '#'
+  },
+  {
+    brand: 'Top Pick 7',
+    image: '/toppick7.jpg',
+    link: '#'
+  },
+  {
+    brand: 'Top Pick 8',
+    image: '/toppick8.jpg',
+    link: '#'
+  }
+];
+
 const TopPicksSection = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobileView = useMediaQuery(theme.breakpoints.down('lg'));
+  
+  // Helper function to get mobile image based on whether it's a dine or brand item
+  const getMobileImage = (item: TopPick) => {
+    if (!isMobileView) return item.image;
+    // Check if it's a dine item by checking the link
+    if (item.link && item.link.startsWith('/dine')) {
+      return getMobileDineImage(item.image, item.brand);
+    }
+    return getMobileBrandImage(item.image, item.brand);
+  };
+  
   const [currentSetIndex, setCurrentSetIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  // Group items into sets of 3
+  // Embla carousel for mobile - continuous slow scroll
+  const [emblaRef] = useEmblaCarousel(
+    {
+      loop: true,
+      align: 'center',
+      slidesToScroll: 1,
+      skipSnaps: false,
+      dragFree: true, // Enable free dragging for smooth movement
+      duration: isMobile ? 30 : 50, // Faster on mobile (lower = faster)
+    },
+    [Autoplay({ delay: isMobile ? 3000 : 4000, stopOnInteraction: false, stopOnMouseEnter: false })]
+  );
+
+  // Group items into sets of 3 for desktop
   const getCurrentSet = useCallback(() => {
     const sets: TopPick[][] = [];
     for (let i = 0; i < allTopPicks.length; i += 3) {
@@ -77,13 +151,14 @@ const TopPicksSection = () => {
     setTimeout(() => setIsTransitioning(false), 500);
   }, [isTransitioning, totalSets]);
 
-  // Auto-scroll every 5 seconds
+  // Auto-scroll every 5 seconds for desktop
   useEffect(() => {
+    if (isMobile) return; // Don't auto-scroll on mobile (embla handles it)
     const interval = setInterval(() => {
       goToNext();
     }, 5000);
     return () => clearInterval(interval);
-  }, [goToNext]);
+  }, [goToNext, isMobile]);
 
   return (
     <Box
@@ -179,7 +254,7 @@ const TopPicksSection = () => {
         <Typography
           variant="h2"
           sx={{
-            fontFamily: '"Arial", "Helvetica", sans-serif',
+            fontFamily: '"Quicksand", sans-serif',
             fontStyle: 'normal',
             fontWeight: 600,
             fontSize: { xs: '1.2rem', sm: '1.5rem', md: '1.8rem', lg: '1.2rem' },
@@ -339,23 +414,123 @@ const TopPicksSection = () => {
           <ArrowForwardIos sx={{ fontSize: { xs: '16px', sm: '18px', md: '20px' }, color: '#ffffff' }} />
         </IconButton>
 
-        {/* Grid Layout - 2x2 structure */}
-        <Box
-          sx={{
-            display: 'grid',
-            gridTemplateColumns: {
-              xs: '1fr',
-              md: '1fr 1fr'
-            },
-            gridTemplateRows: {
-              xs: 'repeat(3, minmax(250px, 1fr))',
-              md: 'repeat(2, minmax(350px, 1fr))'
-            },
-            gap: { xs: '16px', sm: '20px', md: '24px' },
-            opacity: isTransitioning ? 0.7 : 1,
-            transition: 'opacity 0.5s ease-in-out'
-          }}
-        >
+        {/* Mobile Carousel */}
+        {isMobile ? (
+          <Box 
+            ref={emblaRef} 
+            sx={{ 
+              overflow: 'hidden', 
+              position: 'relative',
+              '& .embla__container': {
+                transition: 'transform 1.2s ease-in-out', // Slow, smooth continuous movement
+              }
+            }}
+          >
+            <Box sx={{ display: 'flex', gap: 2 }}>
+              {mobileTopPicks.map((pick, index) => (
+                <Box
+                  key={pick.brand + index}
+                  sx={{
+                    minWidth: '100%',
+                    position: 'relative',
+                    borderRadius: '8px',
+                    overflow: 'hidden',
+                    height: { xs: '530px', sm: '450px' },
+                    cursor: 'pointer',
+                    '&:hover img': {
+                      transform: 'scale(1.05)'
+                    }
+                  }}
+                >
+                  <Image
+                    src={pick.image}
+                    alt={pick.brand}
+                    fill
+                    style={{
+                      objectFit: 'cover',
+                      transition: 'transform 0.5s ease-in-out'
+                    }}
+                    sizes="100vw"
+                  />
+                  
+                  {/* Overlay Gradient */}
+                  <Box
+                    sx={{
+                      position: 'absolute',
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      height: '45%',
+                      background: 'linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.45) 50%, transparent 100%)',
+                      zIndex: 2
+                    }}
+                  />
+
+                  {/* Brand Name and Button */}
+                  <Box
+                    sx={{
+                      position: 'absolute',
+                      bottom: '16px',
+                      left: '16px',
+                      zIndex: 3,
+                      width: 'calc(100% - 32px)'
+                    }}
+                  >
+                    <Typography
+                      sx={{
+                        fontFamily: '"Poppins", sans-serif',
+                        fontSize: '1.5rem',
+                        fontWeight: 600,
+                        color: '#D19F3B',
+                        textTransform: 'uppercase',
+                        marginBottom: '10px',
+                        textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)',
+                        letterSpacing: '0.05em'
+                      }}
+                    >
+                      {pick.brand}
+                    </Typography>
+                    
+                    <Button
+                      component="a"
+                      href={pick.link || '#'}
+                      sx={{
+                        backgroundColor: 'transparent',
+                        border: '1px solid #D19F3B',
+                        color: '#D19F3B',
+                        padding: '6px 16px',
+                        fontSize: '11px',
+                        fontWeight: 500,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.1em',
+                        borderRadius: '0',
+                        fontFamily: '"Quicksand", sans-serif',
+                        '&:hover': {
+                          backgroundColor: 'rgba(209, 159, 59, 0.1)',
+                          borderColor: '#D19F3B'
+                        },
+                        transition: 'all 0.3s ease'
+                      }}
+                    >
+                      EXPLORE MORE
+                    </Button>
+                  </Box>
+                </Box>
+              ))}
+            </Box>
+          </Box>
+        ) : (
+          /* Desktop Grid Layout - 2x2 structure */
+          <Box
+            sx={{
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr',
+              gridTemplateRows: 'repeat(2, minmax(350px, 1fr))',
+              gap: '24px',
+              opacity: isTransitioning ? 0.7 : 1,
+              transition: 'opacity 0.5s ease-in-out'
+            }}
+          >
           {/* Top Left - First item */}
           {currentSet[0] && (
             <Box
@@ -374,7 +549,7 @@ const TopPicksSection = () => {
               }}
             >
               <Image
-                src={currentSet[0].image}
+                src={getMobileImage(currentSet[0])}
                 alt={currentSet[0].brand}
                 fill
                 style={{
@@ -409,7 +584,7 @@ const TopPicksSection = () => {
               >
                 <Typography
                   sx={{
-                    fontFamily: '"Arial", "Helvetica", sans-serif',
+                    fontFamily: '"Quicksand", sans-serif',
                     fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2.2rem', lg: '2.5rem' },
                     fontWeight: 700,
                     color: '#D19F3B',
@@ -466,7 +641,7 @@ const TopPicksSection = () => {
               }}
             >
               <Image
-                src={currentSet[1].image}
+                src={getMobileImage(currentSet[1])}
                 alt={currentSet[1].brand}
                 fill
                 style={{
@@ -501,7 +676,7 @@ const TopPicksSection = () => {
               >
                 <Typography
                   sx={{
-                    fontFamily: '"Arial", "Helvetica", sans-serif',
+                    fontFamily: '"Quicksand", sans-serif',
                     fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2.2rem', lg: '2.5rem' },
                     fontWeight: 700,
                     color: '#D19F3B',
@@ -558,7 +733,7 @@ const TopPicksSection = () => {
               }}
             >
               <Image
-                src={currentSet[2].image}
+                src={getMobileImage(currentSet[2])}
                 alt={currentSet[2].brand}
                 fill
                 style={{
@@ -593,7 +768,7 @@ const TopPicksSection = () => {
               >
                 <Typography
                   sx={{
-                    fontFamily: '"Arial", "Helvetica", sans-serif',
+                    fontFamily: '"Quicksand", sans-serif',
                     fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2.2rem', lg: '2.5rem' },
                     fontWeight: 700,
                     color: '#D19F3B',
@@ -631,7 +806,8 @@ const TopPicksSection = () => {
               </Box>
             </Box>
           )}
-        </Box>
+          </Box>
+        )}
       </Box>
     </Box>
   );

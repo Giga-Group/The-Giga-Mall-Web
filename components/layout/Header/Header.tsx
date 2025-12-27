@@ -199,6 +199,8 @@ const Header = () => {
             zIndex: 1
           }}>
             <IconButton
+              component={Link}
+              href="/map"
               sx={{
                 backgroundColor: '#D19F3B',
                 color: '#ffffff',
@@ -211,7 +213,10 @@ const Header = () => {
                 width: { xs: '40px' },
                 height: { xs: '40px' },
                 '&:hover': {
-                  backgroundColor: '#000000',
+                  backgroundColor: '#D19F3B',
+                },
+                '&:active': {
+                  backgroundColor: '#D19F3B',
                 },
               }}
             >
@@ -223,6 +228,8 @@ const Header = () => {
             </IconButton>
 
             <IconButton
+              component={Link}
+              href="/login"
               sx={{
                 border: '1px solid #D19F3B',
                 borderRadius: { xs: '28px' },
@@ -253,6 +260,8 @@ const Header = () => {
         ) : (
           <Box sx={{ display: 'flex', alignItems: 'center', gap: { sm: 1.5, md: 2 }, flexShrink: 0 }}>
             <Button
+              component={Link}
+              href="/map"
               variant="contained"
               endIcon={<Public />}
               sx={{
@@ -261,6 +270,7 @@ const Header = () => {
                 borderRadius: '28px',
                 padding: { sm: '10px 16px', md: '10px 20px' },
                 textTransform: 'none',
+                fontFamily: '"Poppins", sans-serif',
                 fontSize: { sm: '14px', md: '16px' },
                 fontWeight: 500,
                 '&:hover': {
@@ -272,6 +282,8 @@ const Header = () => {
             </Button>
 
             <IconButton
+              component={Link}
+              href="/login"
               sx={{
                 border: '1px solid #D19F3B',
                 borderRadius: '28px',

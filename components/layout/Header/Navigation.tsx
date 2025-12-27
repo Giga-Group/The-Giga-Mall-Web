@@ -76,6 +76,7 @@ const Navigation = ({ navItems, onShopHover, onDineHover, /* onStayHover, */ onE
             position: 'relative',
             color: '#000000',
             textDecoration: 'none',
+            fontFamily: '"Poppins", sans-serif',
             fontSize: { md: '14px', lg: '16px' },
             fontWeight: 500,
             padding: '8px 12px',

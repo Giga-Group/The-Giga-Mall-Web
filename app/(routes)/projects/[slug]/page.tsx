@@ -106,7 +106,7 @@ export default function ProjectDetailPage({
                   color: "#D19F3B",
                   mb: { xs: 1, md: 1.5 },
                   lineHeight: 1.2,
-                  fontFamily: '"Jost", sans-serif',
+                  fontFamily: '"Arvo", serif',
                 }}
               >
                 {typedProject.title}
@@ -119,7 +119,7 @@ export default function ProjectDetailPage({
                   fontWeight: 400,
                   color: "#D19F3B",
                   mb: { xs: 3, md: 4 },
-                  fontFamily: '"Jost", sans-serif',
+                  fontFamily: '"Arvo", serif',
                 }}
               >
                 {typedProject.description}
@@ -133,7 +133,7 @@ export default function ProjectDetailPage({
                     lineHeight: 1.7,
                     color: "#333",
                     mb: { xs: 2, md: 3 },
-                    fontFamily: '"Muli", sans-serif',
+                    fontFamily: '"Quicksand", sans-serif',
                   }}
                 >
                   {typedProject.overview}
@@ -148,7 +148,7 @@ export default function ProjectDetailPage({
                       fontSize: { xs: "1rem", sm: "1.05rem", md: "1.1rem" },
                       lineHeight: 1.7,
                       color: "#333",
-                      fontFamily: '"Muli", sans-serif',
+                      fontFamily: '"Quicksand", sans-serif',
                     }}
                   >
                     {typedProject.detailedContent}
@@ -194,7 +194,7 @@ export default function ProjectDetailPage({
                             fontSize: { xs: "0.95rem", sm: "1rem", md: "1.05rem" },
                             flex: 1,
                             pr: 1,
-                            fontFamily: '"Muli", sans-serif',
+                            fontFamily: '"Quicksand", sans-serif',
                           }}
                         >
                           {key}:
@@ -206,7 +206,7 @@ export default function ProjectDetailPage({
                             textAlign: "right",
                             flex: 1,
                             fontWeight: 400,
-                            fontFamily: '"Muli", sans-serif',
+                            fontFamily: '"Quicksand", sans-serif',
                           }}
                         >
                           {value as string}
@@ -258,7 +258,7 @@ export default function ProjectDetailPage({
                 fontSize: { xs: "1.8rem", sm: "2rem", md: "2.2rem", lg: "2.5rem" },
                 fontWeight: 400,
                 mb: { xs: 2, md: 3 },
-                fontFamily: '"Jost", sans-serif',
+                fontFamily: '"Arvo", serif',
               }}
             >
               Design Philosophy
@@ -268,7 +268,7 @@ export default function ProjectDetailPage({
                 fontSize: { xs: "1rem", sm: "1.05rem", md: "1.1rem" },
                 lineHeight: 1.7,
                 color: "#000",
-                fontFamily: '"Muli", sans-serif',
+                fontFamily: '"Quicksand", sans-serif',
               }}
             >
               {typedProject.designPhilosophy}
@@ -286,7 +286,7 @@ export default function ProjectDetailPage({
                 fontSize: { xs: "1.8rem", sm: "2rem", md: "2.2rem", lg: "2.5rem" },
                 fontWeight: 400,
                 mb: { xs: 2, md: 3 },
-                fontFamily: '"Jost", sans-serif',
+                fontFamily: '"Arvo", serif',
               }}
             >
               Premium Amenities & Features
@@ -297,7 +297,7 @@ export default function ProjectDetailPage({
                 lineHeight: 1.7,
                 color: "#000",
                 mb: { xs: 3, md: 4 },
-                fontFamily: '"Muli", sans-serif',
+                fontFamily: '"Quicksand", sans-serif',
               }}
             >
               World-class facilities designed to enhance your lifestyle and provide exceptional comfort and convenience.
@@ -327,7 +327,7 @@ export default function ProjectDetailPage({
                         fontSize: { xs: "1rem", sm: "1.05rem", md: "1.1rem" },
                         lineHeight: 1.7,
                         color: "#000",
-                        fontFamily: '"Muli", sans-serif',
+                        fontFamily: '"Quicksand", sans-serif',
                       }}
                     >
                       {amenity}
@@ -410,7 +410,7 @@ export default function ProjectDetailPage({
                       fontSize: { xs: "1.8rem", sm: "2rem", md: "2.2rem", lg: "2.5rem" },
                       fontWeight: 400,
                       mb: { xs: 2, md: 3 },
-                      fontFamily: '"Jost", sans-serif',
+                      fontFamily: '"Arvo", serif',
                     }}
                   >
                     World-Class Amenities
@@ -421,7 +421,7 @@ export default function ProjectDetailPage({
                       lineHeight: 1.7,
                       color: "#000",
                       mb: { xs: 3, md: 4 },
-                      fontFamily: '"Muli", sans-serif',
+                      fontFamily: '"Quicksand", sans-serif',
                     }}
                   >
                     Comprehensive facilities that create a self-sustained premium community.
@@ -452,7 +452,7 @@ export default function ProjectDetailPage({
                                 lineHeight: 1.7,
                                 color: "#000",
                                 fontWeight: 600,
-                                fontFamily: '"Muli", sans-serif',
+                                fontFamily: '"Quicksand", sans-serif',
                                 mb: 0.5,
                               }}
                             >
@@ -463,7 +463,7 @@ export default function ProjectDetailPage({
                                 fontSize: { xs: "0.95rem", sm: "1rem", md: "1.05rem" },
                                 lineHeight: 1.6,
                                 color: "#000",
-                                fontFamily: '"Muli", sans-serif',
+                                fontFamily: '"Quicksand", sans-serif',
                               }}
                             >
                               {amenity.description}
@@ -486,7 +486,7 @@ export default function ProjectDetailPage({
                       fontSize: { xs: "1.8rem", sm: "2rem", md: "2.2rem", lg: "2.5rem" },
                       fontWeight: 400,
                       mb: { xs: 2, md: 3 },
-                      fontFamily: '"Jost", sans-serif',
+                      fontFamily: '"Arvo", serif',
                     }}
                   >
                     Why Choose {typedProject.title}
@@ -497,7 +497,7 @@ export default function ProjectDetailPage({
                       lineHeight: 1.7,
                       color: "#000",
                       mb: { xs: 3, md: 4 },
-                      fontFamily: '"Muli", sans-serif',
+                      fontFamily: '"Quicksand", sans-serif',
                     }}
                   >
                     Unique advantages that make this project the premier choice for luxury living in Islamabad.
@@ -526,7 +526,7 @@ export default function ProjectDetailPage({
                               fontSize: { xs: "1rem", sm: "1.05rem", md: "1.1rem" },
                               lineHeight: 1.7,
                               color: "#000",
-                              fontFamily: '"Muli", sans-serif',
+                              fontFamily: '"Quicksand", sans-serif',
                             }}
                           >
                             {reason}
@@ -551,7 +551,7 @@ export default function ProjectDetailPage({
                 fontSize: { xs: "1.8rem", sm: "2rem", md: "2.2rem", lg: "2.5rem" },
                 fontWeight: 400,
                 mb: { xs: 2, md: 3 },
-                fontFamily: '"Jost", sans-serif',
+                fontFamily: '"Arvo", serif',
               }}
             >
               Construction Updates
@@ -562,7 +562,7 @@ export default function ProjectDetailPage({
                 lineHeight: 1.7,
                 color: "#000",
                 mb: { xs: 4, md: 6 },
-                fontFamily: '"Muli", sans-serif',
+                fontFamily: '"Quicksand", sans-serif',
               }}
             >
               Stay updated with the latest progress on {typedProject.title}. Our construction team is working diligently to deliver this landmark project.
@@ -605,7 +605,7 @@ export default function ProjectDetailPage({
                             color: "#fff",
                             fontSize: { xs: "0.9rem", md: "1rem" },
                             fontWeight: 500,
-                            fontFamily: '"Muli", sans-serif',
+                            fontFamily: '"Quicksand", sans-serif',
                           }}
                         >
                           UAN: 051 111 786 123
@@ -650,7 +650,7 @@ export default function ProjectDetailPage({
                               color: "#fff",
                               fontSize: { xs: "0.8rem", md: "0.9rem" },
                               fontWeight: 700,
-                              fontFamily: '"Jost", sans-serif',
+                              fontFamily: '"Arvo", serif',
                             }}
                           >
                             GIGAGROUP
@@ -672,7 +672,7 @@ export default function ProjectDetailPage({
                                 color: "#000",
                                 fontSize: { xs: "0.7rem", md: "0.8rem" },
                                 fontWeight: 700,
-                                fontFamily: '"Jost", sans-serif',
+                                fontFamily: '"Arvo", serif',
                               }}
                             >
                               CONSTRUCTION UPDATES
@@ -691,7 +691,7 @@ export default function ProjectDetailPage({
                                 color: "#000",
                                 fontSize: { xs: "0.7rem", md: "0.8rem" },
                                 fontWeight: 700,
-                                fontFamily: '"Jost", sans-serif',
+                                fontFamily: '"Arvo", serif',
                               }}
                             >
                               {update.date?.toUpperCase() || "NOV 2025"}
@@ -706,7 +706,7 @@ export default function ProjectDetailPage({
                               color: "#D19F3B",
                               fontSize: { xs: "0.8rem", md: "0.9rem" },
                               fontWeight: 700,
-                              fontFamily: '"Jost", sans-serif',
+                              fontFamily: '"Arvo", serif',
                             }}
                           >
                             GoldCrest VIEWS
@@ -723,7 +723,7 @@ export default function ProjectDetailPage({
                           fontSize: { xs: "1.1rem", md: "1.2rem" },
                           fontWeight: 700,
                           mb: 0.5,
-                          fontFamily: '"Jost", sans-serif',
+                          fontFamily: '"Arvo", serif',
                         }}
                       >
                         Construction Progress {typedProject.title} {index + 1}
@@ -732,7 +732,7 @@ export default function ProjectDetailPage({
                         sx={{
                           color: "#666",
                           fontSize: { xs: "0.9rem", md: "1rem" },
-                          fontFamily: '"Muli", sans-serif',
+                          fontFamily: '"Quicksand", sans-serif',
                         }}
                       >
                         Latest Update
@@ -753,7 +753,7 @@ export default function ProjectDetailPage({
                 color: "#D19F3B", 
                 fontSize: { xs: "2rem", md: "2.5rem", lg: "3rem" }, 
                 fontWeight: 400, 
-                fontFamily: '"Jost", sans-serif',
+                fontFamily: '"Arvo", serif',
                 textAlign: "center",
               }}
             >
@@ -850,7 +850,7 @@ export default function ProjectDetailPage({
                           fontSize: { xs: "1.8rem", md: "2.2rem", lg: "2.5rem" },
                           fontWeight: 700,
                           textAlign: "center",
-                          fontFamily: '"Jost", sans-serif',
+                          fontFamily: '"Arvo", serif',
                           letterSpacing: "0.05em",
                           mb: 1,
                           maxWidth: "70%",
@@ -868,7 +868,7 @@ export default function ProjectDetailPage({
                           color: "#ffffff",
                           fontSize: { xs: "1.1rem", md: "1.2rem" },
                           textAlign: "center",
-                          fontFamily: '"Muli", sans-serif',
+                          fontFamily: '"Quicksand", sans-serif',
                           fontWeight: 400,
                           maxWidth: "80%",
                         }}
@@ -899,7 +899,7 @@ export default function ProjectDetailPage({
                 fontSize: { xs: "1.8rem", sm: "2rem", md: "2.2rem", lg: "2.5rem" },
                 fontWeight: 400,
                 mb: 2,
-                fontFamily: '"Jost", sans-serif',
+                fontFamily: '"Arvo", serif',
                 textAlign: "center",
               }}
             >
@@ -911,7 +911,7 @@ export default function ProjectDetailPage({
                 lineHeight: 1.7,
                 color: "#333",
                 mb: { xs: 4, md: 5 },
-                fontFamily: '"Muli", sans-serif',
+                fontFamily: '"Quicksand", sans-serif',
                 textAlign: "center",
               }}
             >
@@ -947,11 +947,11 @@ export default function ProjectDetailPage({
                         borderBottomColor: "#1a237e",
                       },
                       "& .MuiInputLabel-root": {
-                        fontFamily: '"Muli", sans-serif',
+                        fontFamily: '"Quicksand", sans-serif',
                         color: "#333",
                       },
                       "& .MuiInputBase-input": {
-                        fontFamily: '"Muli", sans-serif',
+                        fontFamily: '"Quicksand", sans-serif',
                         color: "#333",
                       },
                     }}
@@ -974,11 +974,11 @@ export default function ProjectDetailPage({
                         borderBottomColor: "#1a237e",
                       },
                       "& .MuiInputLabel-root": {
-                        fontFamily: '"Muli", sans-serif',
+                        fontFamily: '"Quicksand", sans-serif',
                         color: "#333",
                       },
                       "& .MuiInputBase-input": {
-                        fontFamily: '"Muli", sans-serif',
+                        fontFamily: '"Quicksand", sans-serif',
                         color: "#333",
                       },
                     }}
@@ -1002,11 +1002,11 @@ export default function ProjectDetailPage({
                         borderBottomColor: "#1a237e",
                       },
                       "& .MuiInputLabel-root": {
-                        fontFamily: '"Muli", sans-serif',
+                        fontFamily: '"Quicksand", sans-serif',
                         color: "#333",
                       },
                       "& .MuiInputBase-input": {
-                        fontFamily: '"Muli", sans-serif',
+                        fontFamily: '"Quicksand", sans-serif',
                         color: "#333",
                       },
                     }}
@@ -1034,11 +1034,11 @@ export default function ProjectDetailPage({
                         borderBottomColor: "#1a237e",
                       },
                       "& .MuiInputLabel-root": {
-                        fontFamily: '"Muli", sans-serif',
+                        fontFamily: '"Quicksand", sans-serif',
                         color: "#333",
                       },
                       "& .MuiInputBase-input": {
-                        fontFamily: '"Muli", sans-serif',
+                        fontFamily: '"Quicksand", sans-serif',
                         color: "#333",
                       },
                     }}
@@ -1055,7 +1055,7 @@ export default function ProjectDetailPage({
                         PaperProps: {
                           sx: {
                             "& .MuiMenuItem-root": {
-                              fontFamily: '"Muli", sans-serif',
+                              fontFamily: '"Quicksand", sans-serif',
                             },
                           },
                         },
@@ -1072,11 +1072,11 @@ export default function ProjectDetailPage({
                         borderBottomColor: "#1a237e",
                       },
                       "& .MuiInputLabel-root": {
-                        fontFamily: '"Muli", sans-serif',
+                        fontFamily: '"Quicksand", sans-serif',
                         color: "#333",
                       },
                       "& .MuiInputBase-input": {
-                        fontFamily: '"Muli", sans-serif',
+                        fontFamily: '"Quicksand", sans-serif',
                         color: "#333",
                       },
                     }}
@@ -1101,7 +1101,7 @@ export default function ProjectDetailPage({
                     py: { xs: 1.5, md: 2 },
                     fontSize: { xs: "1rem", md: "1.1rem" },
                     fontWeight: 600,
-                    fontFamily: '"Muli", sans-serif',
+                    fontFamily: '"Quicksand", sans-serif',
                     textTransform: "none",
                     borderRadius: 2,
                     "&:hover": {

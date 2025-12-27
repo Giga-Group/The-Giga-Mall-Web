@@ -137,7 +137,7 @@ const ExperienceSection = () => {
         <Typography
           variant="h1"
           sx={{
-            fontFamily: 'Georgia, "Times New Roman", Times, serif',
+            fontFamily: '"Arvo", serif',
             fontStyle: 'normal',
             fontWeight: 800,
             fontSize: { xs: '2rem', sm: '2.5rem', md: '3.5rem', lg: '76px' },

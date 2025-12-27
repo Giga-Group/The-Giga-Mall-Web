@@ -218,7 +218,7 @@ const TrendingSection = () => {
       <Typography
         variant="h2"
         sx={{
-          fontFamily: 'Georgia, "Times New Roman", Times, serif',
+          fontFamily: '"Arvo", serif',
           fontStyle: 'normal',
           fontWeight: 700,
           fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem', xl: '3.5rem' },

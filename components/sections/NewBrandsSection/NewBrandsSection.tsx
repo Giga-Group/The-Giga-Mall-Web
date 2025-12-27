@@ -1,9 +1,10 @@
 'use client';
 
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { keyframes } from '@mui/system';
 import Image from 'next/image';
 import { Brand } from '@/types';
+import { getMobileBrandImage, getMobileDineImage } from '@/lib/utils/constants';
 
 // Brands for first carousel (left to right)
 const brandsRow1: Brand[] = [
@@ -112,8 +113,23 @@ const marqueeLeft = keyframes`
 `;
 
 const NewBrandsSection = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   const scrollingBrandsRow1 = [...brandsRow1, ...brandsRow1];
   const scrollingBrandsRow2 = [...brandsRow2, ...brandsRow2];
+  
+  // List of dine brand names
+  const dineBrands = ['McDonalds', 'McDonald\'s', 'Wild Wings', 'Hardees', 'Hardee\'s', 'Pizza Hut', 'Cheezious'];
+  
+  // Helper function to get mobile image based on whether it's a dine or brand item
+  const getMobileImage = (brand: Brand) => {
+    if (!isMobile) return brand.image;
+    // Check if it's a dine brand
+    if (dineBrands.includes(brand.name)) {
+      return getMobileDineImage(brand.image, brand.name);
+    }
+    return getMobileBrandImage(brand.image, brand.name);
+  };
 
   return (
     <Box
@@ -131,7 +147,7 @@ const NewBrandsSection = () => {
       <Typography
         variant="h2"
         sx={{
-          fontFamily: 'Georgia, "Times New Roman", Times, serif',
+          fontFamily: '"Arvo", serif',
           fontStyle: 'normal',
           fontWeight: 700,
           fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem', xl: '3.5rem' },
@@ -159,41 +175,45 @@ const NewBrandsSection = () => {
           sx={{
             display: 'flex',
             alignItems: 'center',
-            animation: `${marqueeRight} 45s linear infinite`,
+            animation: `${marqueeRight} ${isMobile ? '30s' : '45s'} linear infinite`,
             '&:hover': {
               animationPlayState: 'paused'
             }
           }}
         >
-          {scrollingBrandsRow1.map((brand, index) => (
-            <Box
-              key={`row1-${brand.name}-${index}`}
-              sx={{
-                flex: '0 0 auto',
-                minWidth: { xs: '200px', sm: '220px', md: '360px' },
-                maxWidth: { xs: '200px', sm: '240px', md: '360px' },
-                mx: { xs: 1.5, sm: 2, md: 2.5 },
-                borderRadius: { xs: '12px', md: '10px' },
-                overflow: 'hidden',
-                boxShadow: '0 6px 18px rgba(0, 0, 0, 0.12)',
-                backgroundColor: '#f9f9f9',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                height: { xs: '280px', sm: '260px', md: '360px' },
-                position: 'relative',
-                '&:hover': {
-                  transform: 'translateY(-4px)',
-                  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.18)'
-                }
-              }}
-            >
-              <Image
-                src={brand.image}
-                alt={brand.name}
-                fill
-                style={{ objectFit: 'cover', display: 'block' }}
-              />
-            </Box>
-          ))}
+          {scrollingBrandsRow1.map((brand, index) => {
+            const imageSrc = getMobileImage(brand);
+            
+            return (
+              <Box
+                key={`row1-${brand.name}-${index}`}
+                sx={{
+                  flex: '0 0 auto',
+                  minWidth: { xs: '200px', sm: '220px', md: '360px' },
+                  maxWidth: { xs: '200px', sm: '240px', md: '360px' },
+                  mx: { xs: 1.5, sm: 2, md: 2.5 },
+                  borderRadius: { xs: '12px', md: '10px' },
+                  overflow: 'hidden',
+                  boxShadow: '0 6px 18px rgba(0, 0, 0, 0.12)',
+                  backgroundColor: '#f9f9f9',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  height: { xs: '280px', sm: '260px', md: '360px' },
+                  position: 'relative',
+                  '&:hover': {
+                    transform: 'translateY(-4px)',
+                    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.18)'
+                  }
+                }}
+              >
+                <Image
+                  src={imageSrc}
+                  alt={brand.name}
+                  fill
+                  style={{ objectFit: 'cover', display: 'block' }}
+                />
+              </Box>
+            );
+          })}
         </Box>
       </Box>
 
@@ -210,41 +230,45 @@ const NewBrandsSection = () => {
           sx={{
             display: 'flex',
             alignItems: 'center',
-            animation: `${marqueeLeft} 45s linear infinite`,
+            animation: `${marqueeLeft} ${isMobile ? '30s' : '45s'} linear infinite`,
             '&:hover': {
               animationPlayState: 'paused'
             }
           }}
         >
-          {scrollingBrandsRow2.map((brand, index) => (
-            <Box
-              key={`row2-${brand.name}-${index}`}
-              sx={{
-                flex: '0 0 auto',
-                minWidth: { xs: '200px', sm: '220px', md: '360px' },
-                maxWidth: { xs: '200px', sm: '240px', md: '360px' },
-                mx: { xs: 1.5, sm: 2, md: 2.5 },
-                borderRadius: { xs: '12px', md: '10px' },
-                overflow: 'hidden',
-                boxShadow: '0 6px 18px rgba(0, 0, 0, 0.12)',
-                backgroundColor: '#f9f9f9',
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                height: { xs: '280px', sm: '260px', md: '360px' },
-                position: 'relative',
-                '&:hover': {
-                  transform: 'translateY(-4px)',
-                  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.18)'
-                }
-              }}
-            >
-              <Image
-                src={brand.image}
-                alt={brand.name}
-                fill
-                style={{ objectFit: 'cover', display: 'block' }}
-              />
-            </Box>
-          ))}
+          {scrollingBrandsRow2.map((brand, index) => {
+            const imageSrc = getMobileImage(brand);
+            
+            return (
+              <Box
+                key={`row2-${brand.name}-${index}`}
+                sx={{
+                  flex: '0 0 auto',
+                  minWidth: { xs: '200px', sm: '220px', md: '360px' },
+                  maxWidth: { xs: '200px', sm: '240px', md: '360px' },
+                  mx: { xs: 1.5, sm: 2, md: 2.5 },
+                  borderRadius: { xs: '12px', md: '10px' },
+                  overflow: 'hidden',
+                  boxShadow: '0 6px 18px rgba(0, 0, 0, 0.12)',
+                  backgroundColor: '#f9f9f9',
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  height: { xs: '280px', sm: '260px', md: '360px' },
+                  position: 'relative',
+                  '&:hover': {
+                    transform: 'translateY(-4px)',
+                    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.18)'
+                  }
+                }}
+              >
+                <Image
+                  src={imageSrc}
+                  alt={brand.name}
+                  fill
+                  style={{ objectFit: 'cover', display: 'block' }}
+                />
+              </Box>
+            );
+          })}
         </Box>
       </Box>
     </Box>

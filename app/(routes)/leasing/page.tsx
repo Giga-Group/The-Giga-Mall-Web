@@ -132,7 +132,7 @@ export default function LeasingPage() {
             <Typography
               variant="h1"
               sx={{
-                fontFamily: '"Playfair Display", "Georgia", serif',
+                fontFamily: '"Arvo", serif',
                 fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem', lg: '4rem' },
                 fontWeight: 400,
                 color: '#D19F3B',
@@ -146,7 +146,7 @@ export default function LeasingPage() {
             <Typography
               variant="h2"
               sx={{
-                fontFamily: '"Playfair Display", "Georgia", serif',
+                fontFamily: '"Arvo", serif',
                 fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem' },
                 fontWeight: 300,
                 color: '#D19F3B',
@@ -177,7 +177,7 @@ export default function LeasingPage() {
           >
             <Typography
               sx={{
-                fontFamily: '"Playfair Display", "Georgia", serif',
+                fontFamily: '"Arvo", serif',
                 fontWeight: 400,
                 fontSize: { xs: '28px', sm: '32px', md: '36px', lg: '40px' },
                 color: '#D19F3B',
@@ -254,7 +254,7 @@ export default function LeasingPage() {
             <Box>
               <Typography
                 sx={{
-                  fontFamily: '"Playfair Display", "Georgia", serif',
+                  fontFamily: '"Arvo", serif',
                   fontWeight: 400,
                   fontSize: { xs: '28px', sm: '32px', md: '36px', lg: '40px' },
                   color: '#D19F3B',
@@ -337,7 +337,7 @@ export default function LeasingPage() {
               >
                 <Typography
                   sx={{
-                    fontFamily: '"Playfair Display", "Georgia", serif',
+                    fontFamily: '"Arvo", serif',
                     fontWeight: 400,
                     fontSize: { xs: '24px', sm: '28px', md: '32px' },
                     color: '#D19F3B',

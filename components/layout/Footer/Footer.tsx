@@ -52,7 +52,7 @@ const Footer = () => {
           <Box sx={{ gridColumn: { xs: '1', md: 'span 5', lg: 'auto' } }}>
             <Typography
               sx={{
-                fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                fontFamily: '"Quicksand", sans-serif',
                 fontSize: { xs: '13px', sm: '14px' },
                 lineHeight: { xs: 1.5, sm: 1.6 },
                 color: '#333333',
@@ -68,7 +68,7 @@ const Footer = () => {
             <Collapse in={showMore}>
               <Typography
                 sx={{
-                  fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                  fontFamily: '"Quicksand", sans-serif',
                   fontSize: { xs: '13px', sm: '14px' },
                   lineHeight: { xs: 1.5, sm: 1.6 },
                   color: '#333333',
@@ -101,7 +101,7 @@ const Footer = () => {
               component="button"
               onClick={() => setShowMore(!showMore)}
               sx={{
-                fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                fontFamily: '"Quicksand", sans-serif',
                 textDecoration: 'underline',
                 color: '#333333',
                 fontSize: { xs: '13px', sm: '14px' },
@@ -147,7 +147,7 @@ const Footer = () => {
           }}>
             <Typography
               sx={{
-                fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                fontFamily: '"Quicksand", sans-serif',
                 fontWeight: 700,
                 fontSize: { xs: '15px', sm: '16px' },
                 color: '#333333',
@@ -160,7 +160,7 @@ const Footer = () => {
               <Link
                 href="#"
                 sx={{
-                  fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                  fontFamily: '"Quicksand", sans-serif',
                   fontSize: { xs: '13px', sm: '14px' },
                   color: '#333333',
                   textDecoration: 'none',
@@ -174,7 +174,7 @@ const Footer = () => {
               <Link
                 href="#"
                 sx={{
-                  fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                  fontFamily: '"Quicksand", sans-serif',
                   fontSize: { xs: '13px', sm: '14px' },
                   color: '#333333',
                   textDecoration: 'none',
@@ -188,7 +188,7 @@ const Footer = () => {
               <Link
                 href="#"
                 sx={{
-                  fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                  fontFamily: '"Quicksand", sans-serif',
                   fontSize: { xs: '13px', sm: '14px' },
                   color: '#333333',
                   textDecoration: 'none',
@@ -202,7 +202,7 @@ const Footer = () => {
             </Box>
             <Typography
               sx={{
-                fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                fontFamily: '"Quicksand", sans-serif',
                 fontSize: { xs: '13px', sm: '14px' },
                 color: '#666666',
                 marginTop: { xs: 2, md: 'auto' },
@@ -220,7 +220,7 @@ const Footer = () => {
           }}>
             <Typography
               sx={{
-                fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                fontFamily: '"Quicksand", sans-serif',
                 fontWeight: 700,
                 fontSize: { xs: '15px', sm: '16px' },
                 color: '#333333',
@@ -233,7 +233,7 @@ const Footer = () => {
               <Link
                 href="#"
                 sx={{
-                  fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                  fontFamily: '"Quicksand", sans-serif',
                   fontSize: { xs: '13px', sm: '14px' },
                   color: '#333333',
                   textDecoration: 'none',
@@ -247,7 +247,7 @@ const Footer = () => {
               <Link
                 href="#"
                 sx={{
-                  fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                  fontFamily: '"Quicksand", sans-serif',
                   fontSize: { xs: '13px', sm: '14px' },
                   color: '#333333',
                   textDecoration: 'none',
@@ -263,7 +263,7 @@ const Footer = () => {
               <Link
                 href="#"
                 sx={{
-                  fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                  fontFamily: '"Quicksand", sans-serif',
                   fontSize: { xs: '13px', sm: '14px' },
                   color: '#333333',
                   textDecoration: 'none',

@@ -74,7 +74,7 @@ export default function EntertainPage() {
             <Typography
               variant="h1"
               sx={{
-                fontFamily: '"Playfair Display", "Georgia", serif',
+                fontFamily: '"Arvo", serif',
                 fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem', lg: '4rem' },
                 fontWeight: 400,
                 color: '#D19F3B',
@@ -89,7 +89,7 @@ export default function EntertainPage() {
             <Typography
               variant="h2"
               sx={{
-                fontFamily: '"Playfair Display", "Georgia", serif',
+                fontFamily: '"Arvo", serif',
                 fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.5rem', lg: '3rem' },
                 fontWeight: 300,
                 color: '#D19F3B',
@@ -263,7 +263,7 @@ export default function EntertainPage() {
                     <Typography
                       variant="h3"
                       sx={{
-                        fontFamily: '"Playfair Display", "Georgia", serif',
+                        fontFamily: '"Arvo", serif',
                         fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2rem', lg: '2.2rem' },
                         fontWeight: 400,
                         color: '#D19F3B',

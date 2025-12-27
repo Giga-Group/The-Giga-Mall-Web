@@ -70,7 +70,7 @@ export default function DinePage() {
             <Typography
               variant="h1"
               sx={{
-                fontFamily: '"Playfair Display", "Georgia", serif',
+                fontFamily: '"Arvo", serif',
                 fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
                 fontWeight: 400,
                 color: '#D19F3B',

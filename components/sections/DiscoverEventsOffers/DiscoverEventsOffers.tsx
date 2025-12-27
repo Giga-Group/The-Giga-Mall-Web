@@ -23,7 +23,7 @@ const DiscoverEventsOffers = () => {
         <Typography
           variant="h2"
           sx={{
-            fontFamily: '"Playfair Display", "Georgia", serif',
+            fontFamily: '"Arvo", serif',
             fontSize: { xs: '1.8rem', sm: '2.2rem', md: '2.8rem', lg: '3.2rem' },
             fontWeight: 400,
             color: '#ffffff',

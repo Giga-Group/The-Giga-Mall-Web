@@ -70,7 +70,7 @@ export default function Hero() {
         <Typography
           variant="h1"
           sx={{
-            fontFamily: '"Playfair Display", "Georgia", serif',
+            fontFamily: '"Arvo", serif',
             fontSize: { xs: "2.5rem", sm: "3rem", md: "3.5rem", lg: "4rem" },
             fontWeight: 400,
             color: "#ffffff",
@@ -85,7 +85,7 @@ export default function Hero() {
         <Typography
           variant="h2"
           sx={{
-            fontFamily: '"Playfair Display", "Georgia", serif',
+            fontFamily: '"Arvo", serif',
             fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.5rem", lg: "3rem" },
             fontWeight: 300,
             color: "#ffffff",
@@ -111,7 +111,7 @@ export default function Hero() {
         <Typography
           variant="body1"
           sx={{
-            fontFamily: '"Jost", "Mulish", system-ui, sans-serif',
+            fontFamily: '"Quicksand", sans-serif',
             fontSize: { xs: "1rem", sm: "1.1rem", md: "1.2rem", lg: "1.3rem" },
             fontWeight: 300,
             color: "#ffffff",

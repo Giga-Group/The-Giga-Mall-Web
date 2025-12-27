@@ -1,21 +1,30 @@
 'use client';
 
-import { Box, Typography, Link } from '@mui/material';
+import { Box, Typography, Link, useMediaQuery, useTheme } from '@mui/material';
 import { Phone } from '@mui/icons-material';
 import Image from 'next/image';
 import { StoreDetail } from '@/lib/utils/storeData';
+import { getMobileBrandImage } from '@/lib/utils/constants';
 
 interface StoreHeroProps {
   store: StoreDetail;
 }
 
 const StoreHero = ({ store }: StoreHeroProps) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  
+  // Get mobile or desktop image based on screen size
+  const backgroundImageSrc = store.backgroundImage 
+    ? (isMobile ? getMobileBrandImage(store.backgroundImage, store.name, store.slug) : store.backgroundImage)
+    : null;
+  
   return (
     <Box
       sx={{
         position: 'relative',
         width: '100%',
-        height: '60vh',
+        height: { xs: '100vh', sm: '75vh', md: '80vh', lg: '85vh' },
         overflow: 'hidden',
         display: 'flex',
         alignItems: 'flex-end',
@@ -43,9 +52,9 @@ const StoreHero = ({ store }: StoreHeroProps) => {
           }
         }}
       >
-        {store.backgroundImage ? (
+        {backgroundImageSrc ? (
           <Image
-            src={store.backgroundImage}
+            src={backgroundImageSrc}
             alt={store.name}
             fill
             style={{ objectFit: 'cover' }}
@@ -128,7 +137,7 @@ const StoreHero = ({ store }: StoreHeroProps) => {
             >
               <Typography
                 sx={{
-                  fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                  fontFamily: '"Arvo", serif',
                   fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
                   color: '#ffffff',
                   fontWeight: 400,
@@ -154,7 +163,7 @@ const StoreHero = ({ store }: StoreHeroProps) => {
           {/* Description */}
           <Typography
             sx={{
-              fontFamily: 'Georgia, "Times New Roman", Times, serif',
+              fontFamily: '"Quicksand", sans-serif',
               fontSize: { xs: '14px', sm: '15px', md: '16px', lg: '17px' },
               lineHeight: { xs: 1.6, md: 1.7 },
               color: '#ffffff',
@@ -178,7 +187,7 @@ const StoreHero = ({ store }: StoreHeroProps) => {
             >
               <Typography
                 sx={{
-                  fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                  fontFamily: '"Poppins", sans-serif',
                   fontSize: { xs: '12px', sm: '13px', md: '14px' },
                   color: '#ffffff',
                   fontWeight: 600,
@@ -204,7 +213,7 @@ const StoreHero = ({ store }: StoreHeroProps) => {
                 <Link
                   href={`tel:${store.contact.phone}`}
                   sx={{
-                    fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                    fontFamily: '"Quicksand", sans-serif',
                     fontSize: { xs: '14px', sm: '15px', md: '16px' },
                     color: '#ffffff',
                     textDecoration: 'none',

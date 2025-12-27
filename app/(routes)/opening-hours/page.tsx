@@ -291,7 +291,7 @@ function OpeningHoursContent() {
                 <Typography
                   variant="h2"
                   sx={{
-                    fontFamily: '"Playfair Display", "Georgia", serif',
+                    fontFamily: '"Arvo", serif',
                     fontWeight: 400,
                     color: '#ffffff',
                     fontSize: { xs: '2.4rem', sm: '3rem', md: '3.4rem', lg: '3.8rem' },
@@ -674,7 +674,7 @@ function OpeningHoursContent() {
                     <Typography
                       component="h3"
                       sx={{
-                        fontFamily: '"Playfair Display", "Georgia", serif',
+                        fontFamily: '"Arvo", serif',
                         fontSize: { xs: '1.2rem', md: '1.4rem' },
                         fontWeight: 400,
                       }}

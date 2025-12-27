@@ -191,7 +191,7 @@ const OurPicks = ({ picks = defaultPicks, basePath = '/shop' }: OurPicksProps) =
         <Typography
           variant="h6"
           sx={{
-            fontFamily: '"Jost", "Mulish", system-ui, sans-serif',
+            fontFamily: '"Poppins", sans-serif',
             fontWeight: 600,
             fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem' },
             textTransform: 'uppercase',

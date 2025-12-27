@@ -1,9 +1,10 @@
 'use client';
 
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { CardProps } from '@/types';
+import { getMobileBrandImage } from '@/lib/utils/constants';
 
 const Card = ({ 
   data, 
@@ -12,12 +13,19 @@ const Card = ({
   showOverlay = true,
   showLogo = true 
 }: CardProps) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
   const isTrending = variant === 'trending';
   const isBrand = variant === 'brand';
 
   if (isBrand) {
     const brandData = 'name' in data ? data : null;
     if (!brandData) return null;
+    
+    // Get mobile or desktop image based on screen size
+    const imageSrc = isMobile 
+      ? getMobileBrandImage(brandData.image, brandData.name)
+      : brandData.image;
     
     return (
       <>
@@ -44,7 +52,7 @@ const Card = ({
           }}
         >
           <Image 
-            src={brandData.image} 
+            src={imageSrc} 
             alt={brandData.name} 
             fill
             style={{ objectFit: 'cover' }}

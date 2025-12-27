@@ -28,7 +28,7 @@ const AppAndVisitorInfo = () => {
           <Typography
             variant="h3"
             sx={{
-              fontFamily: '"Playfair Display", "Georgia", serif',
+              fontFamily: '"Arvo", serif',
               fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2.2rem', lg: '2.5rem' },
               fontWeight: 400,
               color: '#D19F3B',
@@ -83,6 +83,7 @@ const AppAndVisitorInfo = () => {
             >
               <Typography
                 sx={{
+                  fontFamily: '"Quicksand", sans-serif',
                   fontSize: { xs: '0.9rem', sm: '1rem', md: '0.9rem' },
                   color: '#666666',
                   lineHeight: 1.6,
@@ -142,7 +143,7 @@ const AppAndVisitorInfo = () => {
           <Typography
             variant="h3"
             sx={{
-              fontFamily: '"Playfair Display", "Georgia", serif',
+              fontFamily: '"Arvo", serif',
               fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2.2rem', lg: '2.5rem' },
               fontWeight: 400,
               color: '#D19F3B',
@@ -155,6 +156,7 @@ const AppAndVisitorInfo = () => {
 
           <Typography
             sx={{
+              fontFamily: '"Quicksand", sans-serif',
               fontSize: { xs: '0.9rem', sm: '1rem', md: '1.1rem', lg: '0.9rem' },
               color: '#666666',
               mb: { xs: 2, sm: 2.5 },
@@ -166,6 +168,7 @@ const AppAndVisitorInfo = () => {
 
           <Typography
             sx={{
+              fontFamily: '"Quicksand", sans-serif',
               fontSize: { xs: '0.9rem', sm: '1rem', md: '0.9rem' },
               color: '#666666',
               mb: { xs: 2, sm: 2.5 },
@@ -194,6 +197,7 @@ const AppAndVisitorInfo = () => {
                 key={index}
                 component="li"
                 sx={{
+                  fontFamily: '"Quicksand", sans-serif',
                   fontSize: { xs: '0.9rem', sm: '1rem', md: '0.9rem' },
                   color: '#666666',
                   mb: 1,
@@ -213,6 +217,7 @@ const AppAndVisitorInfo = () => {
           <Link href="/services" style={{ textDecoration: 'none' }}>
             <Typography
               sx={{
+                fontFamily: '"Quicksand", sans-serif',
                 fontSize: { xs: '0.9rem', sm: '1rem', md: '0.9rem', lg: '0.9rem' },
                 color: '#D19F3B',
                 fontWeight: 500,

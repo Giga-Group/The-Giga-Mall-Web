@@ -359,7 +359,7 @@ const MallMapStandalone = () => {
   // -------------------- RENDER --------------------
   return (
     <Box ref={containerRef} sx={{ width: "100%", position: "relative" }}>
-      <Box sx={{ position: "relative", height: 500 }}>
+      <Box sx={{ position: "relative", height: { xs: 300, sm: 400, md: 450, lg: 500 } }}>
         <Box
           component="svg"
           ref={svgRef}

@@ -66,7 +66,7 @@ const ProjectHero = ({
         {/* Title */}
         <Typography
           sx={{
-            fontFamily: '"Jost", sans-serif',
+            fontFamily: '"Arvo", serif',
             fontSize: { xs: '2.5rem', sm: '3rem', md: '4rem', lg: '5rem' },
             fontWeight: 700,
             color: '#ffffff',

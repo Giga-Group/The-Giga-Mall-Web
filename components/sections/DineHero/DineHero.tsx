@@ -1,21 +1,59 @@
 'use client';
 
-import { Box, Typography, Link } from '@mui/material';
+import { Box, Typography, Link, useMediaQuery, useTheme } from '@mui/material';
 import { Phone } from '@mui/icons-material';
 import Image from 'next/image';
 import { DineDetail } from '@/lib/utils/dineData';
+import { getMobileDineImage } from '@/lib/utils/constants';
 
 interface DineHeroProps {
   dine: DineDetail;
 }
 
+// Helper function to get logo path from dine slug - matches StoreGrid logic
+const getDineLogo = (slug?: string): string | null => {
+  if (!slug) return null;
+  
+  // Map of slug to logo filename - matching StoreGrid
+  const logoMap: Record<string, string> = {
+    'macdonalds': '/macdonalds logo.jpg',
+    'mcdonalds': '/macdonalds logo.jpg',
+    'hardees': '/hardees logo.jpg',
+    'pizzahut': '/pizza hut logo.jpg',
+    'pizza-hut': '/pizza hut logo.jpg',
+    'cheezious': '/cheezious logo.jpg',
+    'wild-wings': '/wings logo.jpg',
+    'redapple': '/red apple logo.jpg',
+    'optp': '/optp logo.jpg',
+    'chachajee': '/chachajee logo.jpg',
+    'simplysufi': '/simplysufi logo.jpg',
+    'rewayat': '/rewayat logo.jpg',
+    'spicefactory': '/spice factory logo.jpg',
+    'chinagrill': '/china grill logo.jpg',
+    'kababjees': '/kabab jees logo.jpg',
+  };
+  
+  return logoMap[slug] || null;
+};
+
 const DineHero = ({ dine }: DineHeroProps) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  
+  // Get mobile or desktop image based on screen size
+  const backgroundImageSrc = dine.backgroundImage 
+    ? (isMobile ? getMobileDineImage(dine.backgroundImage, dine.name, dine.slug) : dine.backgroundImage)
+    : null;
+  
+  // Get logo from StoreGrid mapping, fallback to dine.logo if available
+  const logoPath = getDineLogo(dine.slug) || dine.logo || null;
+
   return (
     <Box
       sx={{
         position: 'relative',
         width: '100%',
-        height: '60vh',
+        height: { xs: '100vh', sm: '85vh', md: '90vh', lg: '95vh' },
         overflow: 'hidden',
         display: 'flex',
         alignItems: 'flex-end',
@@ -43,9 +81,9 @@ const DineHero = ({ dine }: DineHeroProps) => {
           }
         }}
       >
-        {dine.backgroundImage ? (
+        {backgroundImageSrc ? (
           <Image
-            src={dine.backgroundImage}
+            src={backgroundImageSrc}
             alt={dine.name}
             fill
             style={{ objectFit: 'cover' }}
@@ -90,7 +128,7 @@ const DineHero = ({ dine }: DineHeroProps) => {
             position: 'relative'
           }}
         >
-          {dine.logo ? (
+          {logoPath ? (
             <Box
               sx={{
                 width: '100%',
@@ -106,7 +144,7 @@ const DineHero = ({ dine }: DineHeroProps) => {
               }}
             >
               <Image
-                src={dine.logo}
+                src={logoPath}
                 alt={dine.name}
                 fill
                 sizes="(max-width: 600px) 100px, (max-width: 960px) 120px, (max-width: 1280px) 150px, 180px"
@@ -128,7 +166,7 @@ const DineHero = ({ dine }: DineHeroProps) => {
             >
               <Typography
                 sx={{
-                  fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                  fontFamily: '"Arvo", serif',
                   fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
                   color: '#ffffff',
                   fontWeight: 400,
@@ -154,7 +192,7 @@ const DineHero = ({ dine }: DineHeroProps) => {
           {/* Description */}
           <Typography
             sx={{
-              fontFamily: 'Georgia, "Times New Roman", Times, serif',
+              fontFamily: '"Quicksand", sans-serif',
               fontSize: { xs: '14px', sm: '15px', md: '16px', lg: '17px' },
               lineHeight: { xs: 1.6, md: 1.7 },
               color: '#ffffff',
@@ -178,7 +216,7 @@ const DineHero = ({ dine }: DineHeroProps) => {
             >
               <Typography
                 sx={{
-                  fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                  fontFamily: '"Poppins", sans-serif',
                   fontSize: { xs: '12px', sm: '13px', md: '14px' },
                   color: '#ffffff',
                   fontWeight: 600,
@@ -204,7 +242,7 @@ const DineHero = ({ dine }: DineHeroProps) => {
                 <Link
                   href={`tel:${dine.contact.phone}`}
                   sx={{
-                    fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                    fontFamily: '"Quicksand", sans-serif',
                     fontSize: { xs: '14px', sm: '15px', md: '16px' },
                     color: '#ffffff',
                     textDecoration: 'none',

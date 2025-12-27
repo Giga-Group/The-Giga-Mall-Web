@@ -29,7 +29,7 @@ const VisitorInfo = () => {
       >
         <Typography
           sx={{
-            fontFamily: 'Georgia, "Times New Roman", Times, serif',
+            fontFamily: '"Arvo", serif',
             fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' },
             fontWeight: 400,
             color: '#D19F3B',
@@ -80,7 +80,7 @@ const VisitorInfo = () => {
               key={service}
               component="li"
               sx={{
-                fontFamily: 'Arial, sans-serif',
+                fontFamily: '"Quicksand", sans-serif',
                 fontSize: { xs: '0.875rem', sm: '0.9375rem', md: '1rem', lg: '0.9rem' },
                 fontWeight: 400,
                 color: '#000000',

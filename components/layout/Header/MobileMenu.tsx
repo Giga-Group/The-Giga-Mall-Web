@@ -115,6 +115,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           <Typography
             variant="h6"
             sx={{
+              fontFamily: '"Poppins", sans-serif',
               fontSize: '18px',
               fontWeight: 600,
               color: '#000000',
@@ -150,6 +151,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                 borderBottom: '1px solid rgba(0, 0, 0, 0.08)',
                 color: '#000000',
                 textDecoration: 'none',
+                fontFamily: '"Poppins", sans-serif',
                 fontSize: '16px',
                 fontWeight: 500,
                 textTransform: 'uppercase',
@@ -218,6 +220,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                 borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
                 color: '#ffffff',
                 textDecoration: 'none',
+                fontFamily: '"Poppins", sans-serif',
                 fontSize: '16px',
                 fontWeight: 500,
                 textTransform: 'uppercase',

@@ -79,7 +79,7 @@ export default function ModelApartmentsPage() {
             <Typography
               variant="h1"
               sx={{
-                fontFamily: '"Playfair Display", "Georgia", serif',
+                fontFamily: '"Arvo", serif',
                 fontSize: {
                   xs: "2.5rem",
                   sm: "3rem",
@@ -99,7 +99,7 @@ export default function ModelApartmentsPage() {
             <Typography
               variant="h2"
               sx={{
-                fontFamily: '"Playfair Display", "Georgia", serif',
+                fontFamily: '"Arvo", serif',
                 fontSize: {
                   xs: "1.8rem",
                   sm: "2.2rem",
@@ -237,7 +237,7 @@ export default function ModelApartmentsPage() {
               <Typography
                 variant="h2"
                 sx={{
-                  fontFamily: '"Playfair Display", "Georgia", serif',
+                  fontFamily: '"Arvo", serif',
                   fontSize: {
                     xs: "1.8rem",
                     sm: "2.2rem",
@@ -376,7 +376,7 @@ export default function ModelApartmentsPage() {
             <Typography
               variant="h2"
               sx={{
-                fontFamily: '"Playfair Display", "Georgia", serif',
+                fontFamily: '"Arvo", serif',
                 fontSize: {
                   xs: "2rem",
                   sm: "2.5rem",
@@ -519,7 +519,7 @@ export default function ModelApartmentsPage() {
               <Typography
                 variant="h2"
                 sx={{
-                  fontFamily: '"Playfair Display", "Georgia", serif',
+                  fontFamily: '"Arvo", serif',
                   fontSize: {
                     xs: "1.8rem",
                     sm: "2.2rem",

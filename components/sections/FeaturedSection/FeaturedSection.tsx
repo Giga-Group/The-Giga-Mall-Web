@@ -1,11 +1,12 @@
 'use client';
 
 import React, { useEffect, useState, useRef, useCallback } from 'react';
-import { Box, Typography, IconButton } from '@mui/material';
+import { Box, Typography, IconButton, useMediaQuery, useTheme } from '@mui/material';
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import { keyframes } from '@mui/system';
 import Image from 'next/image';
 import { FeaturedItem } from '@/types';
+import { getMobileBrandImage, getMobileDineImage } from '@/lib/utils/constants';
 
 const featuredItems: FeaturedItem[] = [
   {
@@ -76,10 +77,13 @@ const textFadeUp = keyframes`
   }
 `;
 
-const INTERVAL_MS = 5000;
 const TRANSITION_MS = 600;
 
 export default function FeaturedSection() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  const INTERVAL_MS = isMobile ? 3500 : 5000; // Faster on mobile
+  
   const total = featuredItems.length;
 
   const [current, setCurrent] = useState(0);
@@ -124,7 +128,7 @@ export default function FeaturedSection() {
     }, INTERVAL_MS);
 
     return () => clearInterval(id);
-  }, [goPrev]);
+  }, [goPrev, INTERVAL_MS]);
 
   /* ------------------ POSITION LOGIC ------------------ */
 
@@ -207,7 +211,7 @@ export default function FeaturedSection() {
       <Typography
         variant="h2"
         sx={{
-          fontFamily: 'Georgia, "Times New Roman", Times, serif',
+          fontFamily: '"Arvo", serif',
           fontStyle: 'normal',
           fontWeight: 700,
           fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem', lg: '3rem', xl: '3.5rem' },
@@ -277,12 +281,20 @@ export default function FeaturedSection() {
       >
         {[prev, current, next].map((index) => {
           const pos = getPosition(index);
+          
+          // Get mobile image if on mobile view
+          const item = featuredItems[index];
+          const imageSrc = isMobile 
+            ? (getMobileDineImage(item.image, item.name) !== item.image 
+                ? getMobileDineImage(item.image, item.name)
+                : getMobileBrandImage(item.image, item.name))
+            : item.image;
 
           return (
             <Box key={index} sx={{ ...slideStyle.base, ...slideStyle[pos] }}>
               <Image
-                src={featuredItems[index].image}
-                alt={featuredItems[index].name}
+                src={imageSrc}
+                alt={item.name}
                 fill
                 priority={pos === 'center'}
                 style={{ objectFit: 'cover' }}
@@ -334,7 +346,7 @@ export default function FeaturedSection() {
                       variant="h5"
                       sx={{
                         color: '#D19F3B',
-                        fontFamily: 'Georgia',
+                        fontFamily: '"Arvo", serif',
                         fontWeight: 'bold',
                         letterSpacing: '0.08em',
                         fontSize: { xs: '0.875rem', sm: '1rem', md: '1.25rem' },
@@ -347,6 +359,7 @@ export default function FeaturedSection() {
                     <Typography 
                       variant="body2" 
                       sx={{ 
+                        fontFamily: '"Quicksand", sans-serif',
                         color: '#D19F3B',
                         fontSize: { xs: '0.7rem', sm: '0.8rem', md: '0.9rem' },
                         lineHeight: { xs: 1.3, sm: 1.4, md: 1.5 },

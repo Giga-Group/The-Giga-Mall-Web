@@ -112,7 +112,7 @@ export default function MoviesEvents() {
       {/* Title */}
       <Typography
         sx={{
-          fontFamily: '"Playfair Display", serif',
+          fontFamily: '"Arvo", serif',
           fontSize: { xs: "2.2rem", md: "3rem" },
           color: "#D19F3B",
           textAlign: "center",
@@ -140,7 +140,7 @@ export default function MoviesEvents() {
             key={tab}
             onClick={() => setActiveTab(tab)}
             sx={{
-              fontFamily: '"Playfair Display", serif',
+              fontFamily: '"Arvo", serif',
               fontSize: { xs: "1.1rem", md: "1.4rem" },
               color: activeTab === tab ? "#D19F3B" : "#666",
               textTransform: "none",

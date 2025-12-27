@@ -65,7 +65,7 @@ const ContactSection = () => {
         <Box sx={{ textAlign: 'center', marginBottom: { xs: 4, md: 6 } }}>
           <Typography
             sx={{
-              fontFamily: '"Playfair Display", "Georgia", serif',
+              fontFamily: '"Arvo", serif',
               fontWeight: 400,
               fontSize: { xs: '28px', sm: '32px', md: '36px', lg: '40px' },
               color: '#D19F3B',
@@ -111,7 +111,7 @@ const ContactSection = () => {
           >
             <Typography
               sx={{
-                fontFamily: '"Playfair Display", "Georgia", serif',
+                fontFamily: '"Arvo", serif',
                 fontWeight: 400,
                 fontSize: { xs: '24px', sm: '26px', md: '28px' },
                 color: '#D19F3B',
@@ -161,13 +161,13 @@ const ContactSection = () => {
                     },
                   },
                   '& .MuiInputLabel-root': {
-                    fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                    fontFamily: '"Quicksand", sans-serif',
                     '&.Mui-focused': {
                       color: '#D19F3B',
                     },
                   },
                   '& .MuiInputBase-input': {
-                    fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                    fontFamily: '"Quicksand", sans-serif',
                   },
                 }}
               />
@@ -203,13 +203,13 @@ const ContactSection = () => {
                     },
                   },
                   '& .MuiInputLabel-root': {
-                    fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                    fontFamily: '"Quicksand", sans-serif',
                     '&.Mui-focused': {
                       color: '#D19F3B',
                     },
                   },
                   '& .MuiInputBase-input': {
-                    fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                    fontFamily: '"Quicksand", sans-serif',
                   },
                 }}
               />
@@ -243,13 +243,13 @@ const ContactSection = () => {
                     },
                   },
                   '& .MuiInputLabel-root': {
-                    fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                    fontFamily: '"Quicksand", sans-serif',
                     '&.Mui-focused': {
                       color: '#D19F3B',
                     },
                   },
                   '& .MuiInputBase-input': {
-                    fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                    fontFamily: '"Quicksand", sans-serif',
                   },
                 }}
               />
@@ -286,13 +286,13 @@ const ContactSection = () => {
                     },
                   },
                   '& .MuiInputLabel-root': {
-                    fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                    fontFamily: '"Quicksand", sans-serif',
                     '&.Mui-focused': {
                       color: '#D19F3B',
                     },
                   },
                   '& .MuiInputBase-input': {
-                    fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                    fontFamily: '"Quicksand", sans-serif',
                   },
                 }}
               />
@@ -303,7 +303,7 @@ const ContactSection = () => {
                 sx={{
                   backgroundColor: '#D19F3B',
                   color: '#ffffff',
-                  fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                  fontFamily: '"Poppins", sans-serif',
                   fontSize: { xs: '15px', sm: '16px' },
                   fontWeight: 500,
                   padding: { xs: '10px 24px', sm: '12px 32px', md: '14px 40px' },
@@ -333,7 +333,7 @@ const ContactSection = () => {
             >
               <Typography
                 sx={{
-                  fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                  fontFamily: '"Quicksand", sans-serif',
                   fontSize: { xs: '14px', sm: '15px', md: '16px' },
                   color: '#333333',
                   marginBottom: { xs: 2, md: 2.5 },
@@ -350,7 +350,7 @@ const ContactSection = () => {
                 sx={{
                   borderColor: '#D19F3B',
                   color: '#D19F3B',
-                  fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                  fontFamily: '"Poppins", sans-serif',
                   fontSize: { xs: '14px', sm: '15px' },
                   fontWeight: 500,
                   padding: { xs: '10px 24px', sm: '12px 32px', md: '14px 40px' },
@@ -393,7 +393,7 @@ const ContactSection = () => {
             >
               <Typography
                 sx={{
-                  fontFamily: '"Playfair Display", "Georgia", serif',
+                  fontFamily: '"Arvo", serif',
                   fontWeight: 400,
                   fontSize: { xs: '24px', sm: '26px', md: '28px' },
                   color: '#D19F3B',
@@ -430,7 +430,7 @@ const ContactSection = () => {
                   <Box sx={{ flex: 1 }}>
                     <Typography
                       sx={{
-                        fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                        fontFamily: '"Quicksand", sans-serif',
                         fontSize: { xs: '12px', sm: '13px' },
                         color: '#999999',
                         marginBottom: 0.5,
@@ -443,7 +443,7 @@ const ContactSection = () => {
                     <Link
                       href="tel:+923001234567"
                       sx={{
-                        fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                        fontFamily: '"Quicksand", sans-serif',
                         fontSize: { xs: '15px', sm: '16px' },
                         color: '#333333',
                         textDecoration: 'none',
@@ -484,7 +484,7 @@ const ContactSection = () => {
                   <Box sx={{ flex: 1 }}>
                     <Typography
                       sx={{
-                        fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                        fontFamily: '"Quicksand", sans-serif',
                         fontSize: { xs: '12px', sm: '13px' },
                         color: '#999999',
                         marginBottom: 0.5,
@@ -497,7 +497,7 @@ const ContactSection = () => {
                     <Link
                       href="mailto:info@gigamall.com"
                       sx={{
-                        fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                        fontFamily: '"Quicksand", sans-serif',
                         fontSize: { xs: '15px', sm: '16px' },
                         color: '#333333',
                         textDecoration: 'none',
@@ -538,7 +538,7 @@ const ContactSection = () => {
                   <Box sx={{ flex: 1 }}>
                     <Typography
                       sx={{
-                        fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                        fontFamily: '"Quicksand", sans-serif',
                         fontSize: { xs: '12px', sm: '13px' },
                         color: '#999999',
                         marginBottom: 0.5,
@@ -550,7 +550,7 @@ const ContactSection = () => {
                     </Typography>
                     <Typography
                       sx={{
-                        fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                        fontFamily: '"Quicksand", sans-serif',
                         fontSize: { xs: '15px', sm: '16px' },
                         color: '#333333',
                         lineHeight: 1.7,
@@ -577,7 +577,7 @@ const ContactSection = () => {
             >
               <Typography
                 sx={{
-                  fontFamily: '"Playfair Display", "Georgia", serif',
+                  fontFamily: '"Arvo", serif',
                   fontWeight: 400,
                   fontSize: { xs: '18px', sm: '20px' },
                   color: '#D19F3B',
@@ -591,7 +591,7 @@ const ContactSection = () => {
                 <Box>
                   <Typography
                     sx={{
-                      fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                      fontFamily: '"Quicksand", sans-serif',
                       fontSize: { xs: '14px', sm: '15px' },
                       color: '#333333',
                       fontWeight: 600,
@@ -602,7 +602,7 @@ const ContactSection = () => {
                   </Typography>
                   <Typography
                     sx={{
-                      fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                      fontFamily: '"Quicksand", sans-serif',
                       fontSize: { xs: '14px', sm: '15px' },
                       color: '#666666',
                     }}
@@ -613,7 +613,7 @@ const ContactSection = () => {
                 <Box>
                   <Typography
                     sx={{
-                      fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                      fontFamily: '"Quicksand", sans-serif',
                       fontSize: { xs: '14px', sm: '15px' },
                       color: '#333333',
                       fontWeight: 600,
@@ -624,7 +624,7 @@ const ContactSection = () => {
                   </Typography>
                   <Typography
                     sx={{
-                      fontFamily: 'Georgia, "Times New Roman", Times, serif',
+                      fontFamily: '"Quicksand", sans-serif',
                       fontSize: { xs: '14px', sm: '15px' },
                       color: '#666666',
                     }}
@@ -647,7 +647,7 @@ const ContactSection = () => {
             >
               <Typography
                 sx={{
-                  fontFamily: '"Playfair Display", "Georgia", serif',
+                  fontFamily: '"Arvo", serif',
                   fontWeight: 400,
                   fontSize: { xs: '18px', sm: '20px' },
                   color: '#D19F3B',

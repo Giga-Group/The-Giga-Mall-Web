@@ -54,7 +54,7 @@ const ProjectsHero = () => {
       >
         <Typography
           sx={{
-            fontFamily: '"Jost", sans-serif',
+            fontFamily: '"Arvo", serif',
             fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
             fontWeight: 700,
             color: '#ffffff',
@@ -70,7 +70,7 @@ const ProjectsHero = () => {
             maxWidth: '600px',
             marginLeft: 'auto',
             marginRight: 'auto',
-            fontFamily: '"Muli", sans-serif',
+            fontFamily: '"Quicksand", sans-serif',
             fontSize: { xs: '14px', sm: '15px', md: '16px' },
             lineHeight: 1.7,
             color: '#ffffff',

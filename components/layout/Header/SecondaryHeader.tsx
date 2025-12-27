@@ -85,6 +85,7 @@ const SecondaryHeader = ({ isHidden = false }: SecondaryHeaderProps) => {
               sx={{
                 color: '#ffffff',
                 textDecoration: 'none',
+                fontFamily: '"Poppins", sans-serif',
                 fontSize: { md: '13px', lg: '14px' },
                 fontWeight: 500,
                 textTransform: 'uppercase',

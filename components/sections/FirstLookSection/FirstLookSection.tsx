@@ -1,6 +1,8 @@
 'use client';
 
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography, Button, useMediaQuery, useTheme } from '@mui/material';
+import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
 
 interface FirstLookItem {
@@ -64,6 +66,20 @@ const firstLookItems: FirstLookItem[] = [
 ];
 
 const FirstLookSection = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const [emblaRef] = useEmblaCarousel(
+    {
+      loop: true,
+      align: 'center',
+      slidesToScroll: 1,
+      skipSnaps: false,
+      dragFree: false,
+    },
+    [Autoplay({ delay: 3000, stopOnInteraction: false, stopOnMouseEnter: false })]
+  );
+
   return (
     <Box
       sx={{
@@ -159,7 +175,7 @@ const FirstLookSection = () => {
 
         <Typography
           sx={{
-            fontFamily: '"Arial", "Helvetica", sans-serif',
+            fontFamily: '"Quicksand", sans-serif',
             fontStyle: 'normal',
             fontWeight: 600,
             fontSize: {
@@ -251,102 +267,212 @@ const FirstLookSection = () => {
         </Box>
       </Box>
 
-      {/* Cards row */}
+      {/* Cards row - Carousel for mobile, Grid for desktop */}
       <Box
         sx={{
           maxWidth: '1400px',
           margin: '0 auto',
-          display: 'grid',
-          gridTemplateColumns: {
-            xs: '1fr',
-            sm: 'repeat(2, 1fr)',
-            md: 'repeat(3, 1fr)',
-            lg: 'repeat(3, 1fr)'
-          },
-          columnGap: { xs: 4, sm: 6, md: 8 },
-          rowGap: { xs: 6, sm: 8 }
+          position: 'relative'
         }}
       >
-        {firstLookItems.map((item, index) => (
-          <Box
-            key={item.title + index}
-            sx={{
-              textAlign: 'center',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center'
-            }}
-          >
+        {/* Mobile Carousel */}
+        {isMobile ? (
+          <>
             <Box
+              ref={emblaRef}
               sx={{
-                width: { xs: 280, sm: 320, md: 360 },
-                height: { xs: 280, sm: 320, md: 360 },
-                mb: 3,
+                overflow: 'hidden',
                 position: 'relative'
               }}
             >
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                sizes="(max-width: 768px) 60vw, 360px"
-                style={{
-                  objectFit: index <= 6 ? 'contain' : 'cover'
+              <Box
+                sx={{
+                  display: 'flex',
+                  gap: 4
                 }}
-              />
+              >
+                {firstLookItems.map((item, index) => (
+                  <Box
+                    key={item.title + index}
+                    sx={{
+                      minWidth: '100%',
+                      textAlign: 'center',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      px: 2
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        width: 280,
+                        height: 280,
+                        mb: 3,
+                        position: 'relative',
+                        flexShrink: 0
+                      }}
+                    >
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        sizes="280px"
+                        style={{
+                          objectFit: index <= 6 ? 'contain' : 'cover'
+                        }}
+                      />
+                    </Box>
+
+                    <Typography
+                      sx={{
+                        fontFamily: '"Quicksand", sans-serif',
+                        fontSize: '0.8rem',
+                        fontWeight: 600,
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.10em',
+                        color: '#000000',
+                        lineHeight: 1.5,
+                        mb: 1.5,
+                        maxWidth: 320
+                      }}
+                    >
+                      {item.title}
+                    </Typography>
+
+                    <Typography
+                      sx={{
+                        fontFamily: '"Quicksand", sans-serif',
+                        fontSize: '0.8rem',
+                        fontWeight: 400,
+                        color: '#000000',
+                        lineHeight: 1.6,
+                        mb: 2,
+                        maxWidth: 320
+                      }}
+                    >
+                      {item.description}
+                    </Typography>
+
+                    <Button
+                      disableRipple
+                      sx={{
+                        fontFamily: '"Quicksand", sans-serif',
+                        fontSize: '0.8rem',
+                        fontWeight: 400,
+                        textTransform: 'none',
+                        letterSpacing: '0.18em',
+                        color: '#000000',
+                        padding: 0,
+                        minWidth: 'auto',
+                        '&:hover': {
+                          backgroundColor: 'transparent',
+                          textDecoration: 'underline'
+                        }
+                      }}
+                    >
+                      Find out more
+                    </Button>
+                  </Box>
+                ))}
+              </Box>
             </Box>
+          </>
+        ) : (
+          /* Desktop Grid */
+          <Box
+            sx={{
+              display: 'grid',
+              gridTemplateColumns: {
+                sm: 'repeat(2, 1fr)',
+                md: 'repeat(3, 1fr)',
+                lg: 'repeat(3, 1fr)'
+              },
+              columnGap: { sm: 6, md: 8 },
+              rowGap: { sm: 8 }
+            }}
+          >
+            {firstLookItems.map((item, index) => (
+              <Box
+                key={item.title + index}
+                sx={{
+                  textAlign: 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center'
+                }}
+              >
+                <Box
+                  sx={{
+                    width: { sm: 320, md: 360 },
+                    height: { sm: 320, md: 360 },
+                    mb: 3,
+                    position: 'relative'
+                  }}
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 768px) 60vw, 360px"
+                    style={{
+                      objectFit: index <= 6 ? 'contain' : 'cover'
+                    }}
+                  />
+                </Box>
 
-            <Typography
-              sx={{
-                fontFamily: '"Arial", "Helvetica", sans-serif',
-                fontSize: { xs: '0.8rem', sm: '0.85rem', md: '0.9rem' },
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                letterSpacing: '0.10em',
-                color: '#000000',
-                lineHeight: 1.5,
-                mb: 1.5,
-                maxWidth: 320
-              }}
-            >
-              {item.title}
-            </Typography>
+                <Typography
+                  sx={{
+                    fontFamily: '"Quicksand", sans-serif',
+                    fontSize: { sm: '0.85rem', md: '0.9rem' },
+                    fontWeight: 600,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.10em',
+                    color: '#000000',
+                    lineHeight: 1.5,
+                    mb: 1.5,
+                    maxWidth: 320
+                  }}
+                >
+                  {item.title}
+                </Typography>
 
-            <Typography
-              sx={{
-                fontFamily: '"Arial", "Helvetica", sans-serif',
-                fontSize: { xs: '0.8rem', sm: '0.85rem' },
-                fontWeight: 400,
-                color: '#000000',
-                lineHeight: 1.6,
-                mb: 2,
-                maxWidth: 320
-              }}
-            >
-              {item.description}
-            </Typography>
+                <Typography
+                  sx={{
+                    fontFamily: '"Quicksand", sans-serif',
+                    fontSize: { sm: '0.85rem' },
+                    fontWeight: 400,
+                    color: '#000000',
+                    lineHeight: 1.6,
+                    mb: 2,
+                    maxWidth: 320
+                  }}
+                >
+                  {item.description}
+                </Typography>
 
-            <Button
-              disableRipple
-              sx={{
-                fontFamily: '"Arial", "Helvetica", sans-serif',
-                fontSize: { xs: '0.8rem', sm: '0.8rem' },
-                fontWeight: 400,
-                textTransform: 'none',
-                letterSpacing: '0.18em',
-                color: '#000000',
-                padding: 0,
-                minWidth: 'auto',
-                '&:hover': {
-                  backgroundColor: 'transparent',
-                  textDecoration: 'underline'
-                }
-              }}
-            >
-              Find out more
-            </Button>
+                <Button
+                  disableRipple
+                  sx={{
+                    fontFamily: '"Quicksand", sans-serif',
+                    fontSize: { sm: '0.8rem' },
+                    fontWeight: 400,
+                    textTransform: 'none',
+                    letterSpacing: '0.18em',
+                    color: '#000000',
+                    padding: 0,
+                    minWidth: 'auto',
+                    '&:hover': {
+                      backgroundColor: 'transparent',
+                      textDecoration: 'underline'
+                    }
+                  }}
+                >
+                  Find out more
+                </Button>
+              </Box>
+            ))}
           </Box>
-        ))}
+        )}
       </Box>
     </Box>
   );
