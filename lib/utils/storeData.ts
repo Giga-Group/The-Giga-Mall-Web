@@ -83,7 +83,7 @@ export const storeDetails: StoreDetail[] = [
       phone: '+971-50-501-8603'
     },
     location: {
-      level: 'Ground Floor',
+      level: 'Ground Floor', 
       parking: 'P1, Main Parking',
       mapPosition: { x: 25, y: 35 }
     }
