@@ -27,7 +27,7 @@ const ProjectsHero = () => {
         }}
       >
         <Image
-          src="/giga mall night.png" 
+          src="/projects/projects_page.jpg" 
           alt="Projects"
           fill
           priority

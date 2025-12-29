@@ -5,7 +5,7 @@ export const projects = {
     slug: "gold-crest-views",
     title: "Goldcrest Views",
     description: "Luxury Residential Complex",
-    backgroundImage: "/projects/delivered-projects/WTC.webp",
+    backgroundImage: "/projects/goldcrestviews_1.jpg",
     overview: `Goldcrest Views is a landmark luxury residential project by Al-Ghurair Giga, featuring seven magnificent 40-storey towers that redefine Islamabad's skyline. Located in the prime heart of Giga City adjacent to Giga Mall, this Dubai-inspired development offers studios, 1-4 bedroom apartments, penthouses, and duplexes with smart-home technology, rooftop pools, and world-class amenities.`,
 
     detailedContent: `With flexible 5-year payment plans and dedicated rental management services for overseas investors, Goldcrest Views combines luxury living with smart investment opportunities. The project features central HVAC, high-speed elevators, podium gardens, daycare facilities, and gourmet services, creating a self-sustained premium community with excellent connectivity to twin cities.`,
@@ -27,7 +27,7 @@ export const projects = {
     },
 
     designPhilosophy: `Our architectural vision combines Dubai-inspired luxury with Islamabad's natural beauty, creating a harmonious blend of modern sophistication and timeless elegance. We integrate cutting-edge technology with sustainable design principles, ensuring every element serves both aesthetic and functional purposes while maintaining environmental responsibility and community harmony.`,
-    designPhilosophyImage: "/projects/gcv.jpg",
+    designPhilosophyImage: "/projects/goldcrestview_2.jpg",
     amenityImage1: "/projects/gcv.jpg",
     amenityImage2: "/projects/gcv.jpg",
 
