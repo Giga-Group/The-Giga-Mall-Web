@@ -1442,238 +1442,170 @@ export default function ProjectDetailPage({
         </Box>
 
         {/* Contact Form Section */}
-        <Box sx={{ mb: { xs: 6, md: 8 }, width: { xs: "100%", md: "70%" }, margin: "0 auto", mt: { xs: 8, md: 12 } }}>
-          <Paper
-            elevation={0}
+     <Box
+  sx={{
+    mb: { xs: 6, md: 8 },
+    width: { xs: "100%", md: "70%" },
+    margin: "0 auto",
+    mt: { xs: 6, md: 12 },
+  }}
+>
+  <Paper
+    elevation={0}
+    sx={{
+      backgroundColor: "#f5f5f0",
+      borderRadius: 2,
+      p: { xs: 3, sm: 4, md: 5 },
+    }}
+  >
+    {/* Heading */}
+    <Typography
+      variant="h3"
+      sx={{
+        color: "#D19F3B",
+        fontSize: { xs: "1.6rem", sm: "1.8rem", md: "2.2rem", lg: "2.5rem" },
+        fontWeight: 400,
+        mb: { xs: 1.5, md: 2 },
+        fontFamily: '"Arvo", serif',
+        textAlign: "center",
+        lineHeight: { xs: 1.2, md: 1.3 },
+      }}
+    >
+      Interested in our projects?
+    </Typography>
+
+    {/* Subheading */}
+    <Typography
+      sx={{
+        fontSize: { xs: "0.9rem", sm: "1rem", md: "1.05rem" },
+        lineHeight: { xs: 1.5, md: 1.7 },
+        color: "#333",
+        mb: { xs: 3, md: 5 },
+        fontFamily: '"Quicksand", sans-serif',
+        textAlign: "center",
+      }}
+    >
+      Share your details and our team will contact you with complete information, pricing, and booking options.
+    </Typography>
+
+    {/* Form */}
+    <Box component="form" onSubmit={handleSubmit}>
+      <Box
+        sx={{
+          display: "grid",
+          gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+          gap: { xs: 2.5, md: 4 },
+          mb: 4,
+        }}
+      >
+        {/* Left Column */}
+        <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 2.5, md: 3 } }}>
+          <TextField
+            name="fullName"
+            label="Full Name"
+            value={formData.fullName}
+            onChange={handleInputChange}
+            required
+            variant="standard"
             sx={{
-              backgroundColor: "#f5f5f0",
-              borderRadius: 2,
-              p: { xs: 3, md: 5 },
+              "& .MuiInputBase-input": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
+              "& .MuiInputLabel-root": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
+            }}
+          />
+          <TextField
+            name="contactNumber"
+            label="Contact Number"
+            value={formData.contactNumber}
+            onChange={handleInputChange}
+            required
+            variant="standard"
+            sx={{
+              "& .MuiInputBase-input": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
+              "& .MuiInputLabel-root": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
+            }}
+          />
+          <TextField
+            name="message"
+            label="Message (Optional)"
+            value={formData.message}
+            onChange={handleInputChange}
+            multiline
+            rows={4}
+            variant="standard"
+            sx={{
+              "& .MuiInputBase-input": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
+              "& .MuiInputLabel-root": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
+            }}
+          />
+        </Box>
+
+        {/* Right Column */}
+        <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 2.5, md: 3 } }}>
+          <TextField
+            name="email"
+            label="Email Address"
+            type="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            variant="standard"
+            sx={{
+              "& .MuiInputBase-input": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
+              "& .MuiInputLabel-root": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
+            }}
+          />
+          <TextField
+            name="project"
+            label="Project"
+            value={formData.project}
+            onChange={handleInputChange}
+            select
+            variant="standard"
+            SelectProps={{
+              MenuProps: {
+                PaperProps: {
+                  sx: { "& .MuiMenuItem-root": { fontSize: { xs: "0.875rem", sm: "0.95rem" } } },
+                },
+              },
+            }}
+            sx={{
+              "& .MuiInputBase-input": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
+              "& .MuiInputLabel-root": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
             }}
           >
-            <Typography
-              variant="h3"
-              sx={{
-                color: "#D19F3B",
-                fontSize: { xs: "1.8rem", sm: "2rem", md: "2.2rem", lg: "2.5rem" },
-                fontWeight: 400,
-                mb: 2,
-                fontFamily: '"Arvo", serif',
-                textAlign: "center",
-              }}
-            >
-              Interested in our projects?
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: { xs: "0.95rem", sm: "1rem", md: "1.05rem" },
-                lineHeight: 1.7,
-                color: "#333",
-                mb: { xs: 4, md: 5 },
-                fontFamily: '"Quicksand", sans-serif',
-                textAlign: "center",
-              }}
-            >
-              Share your details and our team will contact you with complete information, pricing, and booking options.
-            </Typography>
-
-            <Box component="form" onSubmit={handleSubmit}>
-              <Box
-                sx={{
-                  display: "grid",
-                  gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
-                  gap: { xs: 3, md: 4 },
-                  mb: 4,
-                }}
-              >
-                {/* Left Column */}
-                <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
-                  <TextField
-                    name="fullName"
-                    label="Full Name"
-                    value={formData.fullName}
-                    onChange={handleInputChange}
-                    required
-                    variant="standard"
-                    sx={{
-                      "& .MuiInput-underline:before": {
-                        borderBottomColor: "#ccc",
-                      },
-                      "& .MuiInput-underline:hover:before": {
-                        borderBottomColor: "#1a237e",
-                      },
-                      "& .MuiInput-underline:after": {
-                        borderBottomColor: "#1a237e",
-                      },
-                      "& .MuiInputLabel-root": {
-                        fontFamily: '"Quicksand", sans-serif',
-                        color: "#333",
-                      },
-                      "& .MuiInputBase-input": {
-                        fontFamily: '"Quicksand", sans-serif',
-                        color: "#333",
-                      },
-                    }}
-                  />
-                  <TextField
-                    name="contactNumber"
-                    label="Contact Number"
-                    value={formData.contactNumber}
-                    onChange={handleInputChange}
-                    required
-                    variant="standard"
-                    sx={{
-                      "& .MuiInput-underline:before": {
-                        borderBottomColor: "#ccc",
-                      },
-                      "& .MuiInput-underline:hover:before": {
-                        borderBottomColor: "#1a237e",
-                      },
-                      "& .MuiInput-underline:after": {
-                        borderBottomColor: "#1a237e",
-                      },
-                      "& .MuiInputLabel-root": {
-                        fontFamily: '"Quicksand", sans-serif',
-                        color: "#333",
-                      },
-                      "& .MuiInputBase-input": {
-                        fontFamily: '"Quicksand", sans-serif',
-                        color: "#333",
-                      },
-                    }}
-                  />
-                  <TextField
-                    name="message"
-                    label="Message (Optional)"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    multiline
-                    rows={4}
-                    variant="standard"
-                    sx={{
-                      "& .MuiInput-underline:before": {
-                        borderBottomColor: "#ccc",
-                      },
-                      "& .MuiInput-underline:hover:before": {
-                        borderBottomColor: "#1a237e",
-                      },
-                      "& .MuiInput-underline:after": {
-                        borderBottomColor: "#1a237e",
-                      },
-                      "& .MuiInputLabel-root": {
-                        fontFamily: '"Quicksand", sans-serif',
-                        color: "#333",
-                      },
-                      "& .MuiInputBase-input": {
-                        fontFamily: '"Quicksand", sans-serif',
-                        color: "#333",
-                      },
-                    }}
-                  />
-                </Box>
-
-                {/* Right Column */}
-                <Box sx={{ display: "flex", flexDirection: "column", gap: 3 }}>
-                  <TextField
-                    name="email"
-                    label="Email Address"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                    variant="standard"
-                    sx={{
-                      "& .MuiInput-underline:before": {
-                        borderBottomColor: "#ccc",
-                      },
-                      "& .MuiInput-underline:hover:before": {
-                        borderBottomColor: "#1a237e",
-                      },
-                      "& .MuiInput-underline:after": {
-                        borderBottomColor: "#1a237e",
-                      },
-                      "& .MuiInputLabel-root": {
-                        fontFamily: '"Quicksand", sans-serif',
-                        color: "#333",
-                      },
-                      "& .MuiInputBase-input": {
-                        fontFamily: '"Quicksand", sans-serif',
-                        color: "#333",
-                      },
-                    }}
-                  />
-                  <TextField
-                    name="project"
-                    label="Project"
-                    value={formData.project}
-                    onChange={handleInputChange}
-                    select
-                    variant="standard"
-                    SelectProps={{
-                      MenuProps: {
-                        PaperProps: {
-                          sx: {
-                            "& .MuiMenuItem-root": {
-                              fontFamily: '"Quicksand", sans-serif',
-                            },
-                          },
-                        },
-                      },
-                    }}
-                    sx={{
-                      "& .MuiInput-underline:before": {
-                        borderBottomColor: "#ccc",
-                      },
-                      "& .MuiInput-underline:hover:before": {
-                        borderBottomColor: "#1a237e",
-                      },
-                      "& .MuiInput-underline:after": {
-                        borderBottomColor: "#1a237e",
-                      },
-                      "& .MuiInputLabel-root": {
-                        fontFamily: '"Quicksand", sans-serif',
-                        color: "#333",
-                      },
-                      "& .MuiInputBase-input": {
-                        fontFamily: '"Quicksand", sans-serif',
-                        color: "#333",
-                      },
-                    }}
-                  >
-                    {Object.values(projects).map((proj) => (
-                      <MenuItem key={proj.slug} value={proj.title}>
-                        {proj.title}
-                      </MenuItem>
-                    ))}
-                  </TextField>
-                </Box>
-              </Box>
-
-              <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
-                <Button
-                  type="submit"
-                  variant="contained"
-                  sx={{
-                    backgroundColor: "#D19F3B",
-                    color: "#ffffff",
-                    px: { xs: 4, md: 6 },
-                    py: { xs: 1.5, md: 2 },
-                    fontSize: { xs: "1rem", md: "1.1rem" },
-                    fontWeight: 600,
-                    fontFamily: '"Quicksand", sans-serif',
-                    textTransform: "none",
-                    borderRadius: 2,
-                    "&:hover": {
-                      backgroundColor: "#b88d2f",
-                    },
-                  }}
-                >
-                  Submit Interest
-                </Button>
-              </Box>
-            </Box>
-          </Paper>
+            {Object.values(projects).map((proj) => (
+              <MenuItem key={proj.slug} value={proj.title}>
+                {proj.title}
+              </MenuItem>
+            ))}
+          </TextField>
         </Box>
+      </Box>
+
+      {/* Submit Button */}
+      <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
+        <Button
+          type="submit"
+          variant="contained"
+          sx={{
+            backgroundColor: "#D19F3B",
+            color: "#fff",
+            px: { xs: 3, md: 6 },
+            py: { xs: 1.25, md: 2 },
+            fontSize: { xs: "0.95rem", md: "1.1rem" },
+            fontWeight: 600,
+            textTransform: "none",
+            borderRadius: 2,
+            "&:hover": { backgroundColor: "#b88d2f" },
+          }}
+        >
+          Submit Interest
+        </Button>
+      </Box>
+    </Box>
+  </Paper>
+</Box>
+
 
       </Container>
 

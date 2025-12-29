@@ -1,7 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Box, Typography, Button } from '@mui/material';
+import { useTheme, useMediaQuery } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -78,15 +79,40 @@ const defaultStores: Store[] = [
 ];
 
 const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps) => {
-  const [visibleCount, setVisibleCount] = useState(10);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  
+  const [visibleCount, setVisibleCount] = useState(10); // Default for desktop
   const itemsPerPage = 5;
+  
+  // Initialize visible count based on mobile/desktop
+  useEffect(() => {
+    if (isMobile) {
+      setVisibleCount(6); // Show only 6 items on mobile initially
+    } else {
+      setVisibleCount(10); // Show all items on desktop
+    }
+  }, [isMobile]);
 
   const handleLoadMore = () => {
-    setVisibleCount(prev => prev + itemsPerPage);
+    if (isMobile) {
+      // On mobile, show all items when "Show More" is clicked
+      setVisibleCount(items.length);
+    } else {
+      // On desktop, use the existing pagination logic
+      setVisibleCount(prev => prev + itemsPerPage);
+    }
   };
 
+  // Determine which stores to show
   const visibleStores = items.slice(0, visibleCount);
-  const hasMore = visibleCount < items.length;
+  
+  // Check if we need to show "Show More" button
+  // On mobile: show button if there are more than 6 items and not all are visible
+  // On desktop: show button if there are more items to load
+  const hasMore = isMobile 
+    ? (items.length > 6 && visibleCount < items.length)
+    : (visibleCount < items.length);
 
   return (
     <Box
@@ -208,7 +234,7 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
                 }
               }}
             >
-              Show More
+              {isMobile && visibleCount === 6 ? 'Show More' : 'Load More'}
             </Button>
           </Box>
         )}
@@ -218,4 +244,3 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
 };
 
 export default StoreGrid;
-

@@ -2,8 +2,8 @@ import { Box, Container, Typography } from "@mui/material";
 import Image from "next/image";
 
 const galleryImages = [
-  { src: "/Cinepax/auditorium.jpg", alt: "Cinepax Premium Auditorium" },
-  { src: "/Cinepax/c4.jpg", alt: "Cinepax Luxury Lounge & Seating" },
+  { src: "/Cinepax/screen.jpg", alt: "Cinepax Premium Auditorium" },
+  { src: "/Cinepax/auditorium.jpg", alt: "Cinepax Luxury Lounge & Seating" },
   // Add more images here
 ];
 

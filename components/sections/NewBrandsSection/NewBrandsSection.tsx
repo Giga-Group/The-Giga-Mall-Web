@@ -124,6 +124,12 @@ const NewBrandsSection = () => {
   // Helper function to get mobile image based on whether it's a dine or brand item
   const getMobileImage = (brand: Brand) => {
     if (!isMobile) return brand.image;
+    
+    // SPECIAL FIX: For Cheezious, always return the original image on mobile
+    if (brand.name === 'Cheezious') {
+      return brand.image;
+    }
+    
     // Check if it's a dine brand
     if (dineBrands.includes(brand.name)) {
       return getMobileDineImage(brand.image, brand.name);
@@ -276,4 +282,3 @@ const NewBrandsSection = () => {
 };
 
 export default NewBrandsSection;
-

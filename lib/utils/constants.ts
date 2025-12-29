@@ -16,6 +16,7 @@ export const BREAKPOINTS = {
 export const getMobileBrandImage = (originalImage: string, brandName?: string, brandSlug?: string): string => {
   // Map of brand slugs to mobile image filenames
   const mobileImageMap: Record<string, string> = {
+    'cheezious': '/chezious.jpg',
     'alkaram': '/alkaram-mobile.jpg',
     'almas': '/almas-mobile.jpg',
     'almirah': '/almirah-mobile.jpg',

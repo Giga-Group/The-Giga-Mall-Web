@@ -3,6 +3,7 @@
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Box, Typography, Tabs, Tab } from '@mui/material';
+import { useRef } from 'react';
 import Image from 'next/image';
 import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
@@ -187,6 +188,8 @@ function OpeningHoursContent() {
   const [activeTab, setActiveTab] = useState(0);
   const [selectedCategory, setSelectedCategory] = useState('ALL RETAILERS');
   const [selectedTransportation, setSelectedTransportation] = useState('BY METRO');
+  const timetableRef = useRef<HTMLDivElement | null>(null);
+
 
   // Set initial tab from query param, e.g. ?tab=getting-here
   useEffect(() => {
@@ -202,6 +205,16 @@ function OpeningHoursContent() {
 
     setActiveTab(index);
   }, [searchParams]);
+// Scroll to timetable smoothly only on mobile whenever category changes
+useEffect(() => {
+  if (!timetableRef.current) return;
+
+  // Check viewport width
+  if (window.innerWidth <= 768) { // mobile breakpoint, adjust if needed
+    timetableRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}, [selectedCategory]);
+
 
   const getTabSlug = (index: number) => {
     if (index === 1) return 'getting-here';
@@ -403,6 +416,7 @@ function OpeningHoursContent() {
 
               {/* Right timetable */}
               <Box
+               ref={timetableRef}
                 sx={{
                   flex: 1,
                   overflowX: 'auto',

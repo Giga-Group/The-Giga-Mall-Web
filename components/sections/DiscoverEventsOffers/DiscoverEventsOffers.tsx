@@ -35,60 +35,88 @@ const DiscoverEventsOffers = () => {
         </Typography>
 
         <Box
-          sx={{
-            display: 'flex',
-            flexDirection: { xs: 'column', sm: 'row' },
-            gap: { xs: 2, sm: 3 },
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}
-        >
-          <Button
-            component={Link}
-            href="/events"
-            variant="outlined"
-            sx={{
-              border: '1px solid #ffffff',
-              color: '#ffffff',
-              textTransform: 'uppercase',
-              fontSize: { xs: '0.85rem', sm: '0.9rem', md: '1rem' },
-              fontWeight: 500,
-              padding: { xs: '10px 30px', sm: '12px 40px', md: '14px 50px' },
-              borderRadius: 0,
-              transition: 'all 0.3s ease',
-              '&:hover': {
-                borderColor: '#ffffff',
-                color: '#D19F3B',
-                backgroundColor: '#ffffff'
-              }
-            }}
-          >
-            Discover Events
-          </Button>
+  sx={{
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: { xs: 'wrap', sm: 'nowrap' },
+    gap: { xs: 1.5, sm: 2, md: 3 },
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%'
+  }}
+>
+  <Button
+    component={Link}
+    href="/events"
+    variant="outlined"
+    sx={{
+      border: '1px solid #ffffff',
+      color: '#ffffff',
+      textTransform: 'uppercase',
+      fontSize: { 
+        xs: '0.75rem',  // Smaller font on very small screens
+        sm: '0.85rem',   // Slightly larger on small screens
+        md: '0.9rem',    // Medium on tablet
+        lg: '1rem'       // Full size on desktop
+      },
+      fontWeight: 500,
+      padding: { 
+        xs: '8px 16px',   // Compact padding on mobile
+        sm: '10px 24px',  // Slightly more on small screens
+        md: '12px 32px',  // Medium padding
+        lg: '14px 40px'   // Full padding on desktop
+      },
+      borderRadius: 0,
+      transition: 'all 0.3s ease',
+      whiteSpace: 'nowrap', // Prevent text from wrapping
+      minWidth: { xs: '120px', sm: '140px', md: '160px' }, // Responsive minimum width
+      flexShrink: 0, // Prevent buttons from shrinking too much
+      '&:hover': {
+        borderColor: '#ffffff',
+        color: '#D19F3B',
+        backgroundColor: '#ffffff'
+      }
+    }}
+  >
+    Discover Events
+  </Button>
 
-          <Button
-            component={Link}
-            href="/offers"
-            variant="outlined"
-            sx={{
-              border: '1px solid #ffffff',
-              color: '#ffffff',
-              textTransform: 'uppercase',
-              fontSize: { xs: '0.85rem', sm: '0.9rem', md: '1rem' },
-              fontWeight: 500,
-              padding: { xs: '10px 30px', sm: '12px 40px', md: '14px 50px' },
-              borderRadius: 0,
-              transition: 'all 0.3s ease',
-              '&:hover': {
-                borderColor: '#ffffff',
-                color: '#D19F3B',
-                backgroundColor: '#ffffff'
-              }
-            }}
-          >
-            Discover Offers
-          </Button>
-        </Box>
+  <Button
+    component={Link}
+    href="/offers"
+    variant="outlined"
+    sx={{
+      border: '1px solid #ffffff',
+      color: '#ffffff',
+      textTransform: 'uppercase',
+      fontSize: { 
+        xs: '0.75rem',
+        sm: '0.85rem',
+        md: '0.9rem',
+        lg: '1rem'
+      },
+      fontWeight: 500,
+      padding: { 
+        xs: '8px 16px',
+        sm: '10px 24px',
+        md: '12px 32px',
+        lg: '14px 40px'
+      },
+      borderRadius: 0,
+      transition: 'all 0.3s ease',
+      whiteSpace: 'nowrap',
+      minWidth: { xs: '120px', sm: '140px', md: '160px' },
+      flexShrink: 0,
+      '&:hover': {
+        borderColor: '#ffffff',
+        color: '#D19F3B',
+        backgroundColor: '#ffffff'
+      }
+    }}
+  >
+    Discover Offers
+  </Button>
+</Box>
       </Box>
     </Box>
   );

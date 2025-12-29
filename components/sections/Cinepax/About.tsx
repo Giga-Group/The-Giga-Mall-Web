@@ -15,8 +15,8 @@ export default function About() {
         {/* Image Section with Hover Effect */}
         <Box
           sx={{
-            width: { xs: "100%", md: "50%" },
-            height: { xs: 320, sm: 400, md: 540 },
+            width: { xs: "100%", md: "80%" },
+            height: { xs: 320, sm: 400, md: 450 },
             position: "relative",
             borderRadius: { xs: "16px", md: "24px" },
             overflow: "hidden",
@@ -29,7 +29,7 @@ export default function About() {
           }}
         >
           <Image
-            src="/Cinepax/screen.jpg"
+            src="/Cinepax/c1.jpg"
             alt="Cinepax Premium Interior"
             fill
             priority

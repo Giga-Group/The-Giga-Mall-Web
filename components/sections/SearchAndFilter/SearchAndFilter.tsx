@@ -786,5 +786,4 @@ const SearchAndFilter = ({
   );
 };
 
-export default SearchAndFilter;
-
+export default SearchAndFilter; 
