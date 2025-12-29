@@ -113,7 +113,7 @@ export const projects = {
     slug: "gold-crest-commercial",
     title: "Gold Crest Commercial",
     description: "Premium Commercial Complex",
-    backgroundImage: "/p12.jpeg",
+    backgroundImage: "/projects/gcc.jpg",
     overview: `Goldcrest Commercial represents the next phase of Al-Ghurair Giga's commercial development strategy, featuring state-of-the-art office spaces and retail outlets designed for modern businesses. Located within the thriving Giga City ecosystem, this premium commercial complex offers cutting-edge infrastructure, high-speed elevators, central air conditioning, and smart building technology to meet contemporary business requirements.`,
 
     detailedContent: `The development provides flexible office layouts, conference facilities, retail spaces, and dedicated parking with excellent connectivity to major business districts. With its strategic location near Giga Mall and residential projects, Goldcrest Commercial creates a perfect work-life balance environment, attracting leading corporations and businesses seeking premium commercial real estate in Islamabad's fastest-growing commercial hub.`,
@@ -132,9 +132,9 @@ export const projects = {
     },
 
     designPhilosophy: `Our commercial design philosophy focuses on creating flexible, efficient spaces that adapt to modern business needs while maintaining aesthetic appeal and professional standards. We prioritize technology integration, sustainable practices, and community harmony to ensure long-term operational efficiency and business success.`,
-    designPhilosophyImage: "/p12.jpeg",
-    amenityImage1: "/p12.jpeg",
-    amenityImage2: "/p12.jpeg",
+    designPhilosophyImage: "/projects/gcc.jpg",
+    amenityImage1: "/projects/gcc.jpg",
+    amenityImage2: "/projects/gcc.jpg",
 
     premiumAmenities: [
       "Prime location in Giga City with high foot traffic",
@@ -193,8 +193,8 @@ export const projects = {
       { title: "Structural Development", date: "Current", progress: "40%" },
       { title: "Interior Finishing", date: "Upcoming", progress: "0%" },
     ],
-    constructionImage1: "/p12.jpeg",
-    constructionImage2: "/p12.jpeg",
+    constructionImage1: "/projects/gcc.jpg",
+    constructionImage2: "/projects/gcc.jpg",
 
     investmentDetails: {
       "Payment Plan": "4 Years",
@@ -209,7 +209,7 @@ export const projects = {
     slug: "giga-mall-extension",
     title: "Giga Mall Extension",
     description: "Mixed-Use Development",
-    backgroundImage: "/p7.jpeg",
+    backgroundImage: "/projects/gme.jpg",
     overview: `Giga Mall Extension is an ambitious 30-storey mixed-use development adjacent to the original Giga Mall in Giga City, Islamabad. This innovative project integrates luxury hotel apartments, premium retail outlets, fine dining restaurants, and Pakistan's first vertical commercial market. The extension features modern amenities and prime location connectivity, making it a landmark destination for shopping, dining, and accommodation.`,
 
     detailedContent: `The development's crown jewel is a beautifully designed mosque on the top floors, offering panoramic views of the twin cities and Margalla Hills. With its unique blend of commercial, hospitality, and retail spaces, Giga Mall Extension aims to redefine urban living and commerce, creating a vibrant hub that attracts both local residents and international visitors to Islamabad's premier lifestyle destination.`,
@@ -308,7 +308,7 @@ export const projects = {
     slug: "giga-business-complex",
     title: "Giga Business Complex",
     description: "Corporate Hub",
-    backgroundImage: "/p26.jpeg",
+    backgroundImage: "/projects/gbc-grid.jpg",
     overview: `Giga Business Complex stands as a premier corporate destination within the Giga City ecosystem, offering world-class office spaces designed for modern enterprises and multinational corporations. The complex features cutting-edge infrastructure, high-speed internet connectivity, advanced security systems, and flexible workspace solutions that cater to diverse business requirements from startups to established corporations seeking premium commercial real estate.`,
 
     detailedContent: `With its strategic location providing excellent connectivity to major business districts and transportation networks, Giga Business Complex creates an ideal environment for business growth and networking. The development includes conference facilities, executive lounges, retail services, and ample parking, establishing itself as Islamabad's preferred business address for companies looking to enhance their corporate presence and operational efficiency.`,
@@ -329,9 +329,9 @@ export const projects = {
     },
 
     designPhilosophy: `Our corporate design blends professional credibility, efficient space use, modern technology, and flexible layouts. Positioned above Giga Mall, it fosters networking, enhances brand image, and offers future-ready infrastructure to support evolving business needs in Islamabad\'s most successful commercial district.`,
-    designPhilosophyImage: "/p26.jpeg",
-    amenityImage1: "/p26.jpeg",
-    amenityImage2: "/p26.jpeg",
+    designPhilosophyImage: "/projects/gbc-grid.jpg",
+    amenityImage1: "/projects/gbc-grid.jpg",
+    amenityImage2: "/projects/gbc-grid.jpg",
 
     premiumAmenities: [
       "Flexible office spaces located above successful Giga Mall",
@@ -406,8 +406,8 @@ export const projects = {
       { title: "Construction Start", date: "Current", progress: "25%" },
       { title: "Completion Phase", date: "Upcoming", progress: "0%" },
     ],
-    constructionImage1: "/p26.jpeg",
-    constructionImage2: "/p26.jpeg",
+    constructionImage1: "/projects/gbc-grid.jpg",
+    constructionImage2: "/projects/gbc-grid.jpg",
 
     investmentDetails: {
       "Payment Plan": "4 Years",

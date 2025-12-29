@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Box, Typography, Container, Button, Paper, TextField, MenuItem } from "@mui/material";
+import { useState, useCallback } from "react";
+import { Box, Typography, Container, Button, Paper, TextField, MenuItem, useTheme, useMediaQuery } from "@mui/material";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ProjectHero from "@/components/sections/ProjectHero/ProjectHero";
@@ -9,6 +9,8 @@ import { notFound } from "next/navigation";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import Image from "next/image";
 import Link from "next/link";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import {
   projects,
   Project,
@@ -31,6 +33,9 @@ export default function ProjectDetailPage({
 }: {
   params: { slug: string };
 }) {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   // Since projects is an object, access it directly
   const project = projects[params.slug as keyof typeof projects];
 
@@ -46,6 +51,42 @@ export default function ProjectDetailPage({
     constructionImage1?: string;
     constructionImage2?: string;
   };
+
+  // Embla carousel for mobile construction updates
+  const [emblaRef] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "center",
+      slidesToScroll: 1,
+      skipSnaps: false,
+      dragFree: false,
+    },
+    [Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: false })]
+  );
+
+  // Embla carousel for mobile related projects
+  const [relatedProjectsEmblaRef] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "center",
+      slidesToScroll: 1,
+      skipSnaps: false,
+      dragFree: false,
+    },
+    [Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: false })]
+  );
+
+  // Embla carousel for mobile amenities section (World-Class Amenities & Why Choose)
+  const [amenitiesCarouselRef] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "center",
+      slidesToScroll: 1,
+      skipSnaps: false,
+      dragFree: false,
+    },
+    [Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: false })]
+  );
 
   // Form state
   const [formData, setFormData] = useState({
@@ -342,202 +383,429 @@ export default function ProjectDetailPage({
         {/* Two Images Section with Text Columns */}
         {(typedProject.amenityImage1 || typedProject.amenityImage2) && (
           <Box sx={{ mb: { xs: 6, md: 8 }, width: { xs: "100%", md: "70%" }, margin: "0 auto" }}>
-            {/* Two Images */}
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: { xs: "column", md: "row" },
-                gap: { xs: 4, md: 4 },
-                mb: { xs: 6, md: 8 },
-              }}
-            >
-              {/* Left Image */}
-              {typedProject.amenityImage1 && (
-                <Box
-                  sx={{
-                    width: { xs: "100%", md: "50%" },
-                    height: { xs: "300px", md: "400px" },
-                    position: "relative",
-                    borderRadius: 2,
-                    overflow: "hidden",
-                  }}
-                >
-                  <Image
-                    src={typedProject.amenityImage1}
-                    alt="Amenity"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
-                </Box>
-              )}
-
-              {/* Right Image */}
-              {typedProject.amenityImage2 && (
-                <Box
-                  sx={{
-                    width: { xs: "100%", md: "50%" },
-                    height: { xs: "300px", md: "400px" },
-                    position: "relative",
-                    borderRadius: 2,
-                    overflow: "hidden",
-                  }}
-                >
-                  <Image
-                    src={typedProject.amenityImage2}
-                    alt="Amenity"
-                    fill
-                    style={{ objectFit: "cover" }}
-                  />
-                </Box>
-              )}
-            </Box>
-
-            {/* Two Columns Text Section */}
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: { xs: "column", md: "row" },
-                gap: { xs: 6, md: 8 },
-              }}
-            >
-              {/* Left Column - World-Class Amenities */}
-              {typedProject.worldClassAmenities && (
-                <Box sx={{ width: { xs: "100%", md: "50%" } }}>
-                  <Typography
-                    variant="h3"
+            {/* Mobile View - Restructured Layout */}
+            {isMobile ? (
+              <>
+                {/* Carousel for World-Class Amenities and Why Choose Sections with Images */}
+                {(typedProject.worldClassAmenities || typedProject.whyChoose) && (
+                  <Box
                     sx={{
-                      color: "#D19F3B",
-                      fontSize: { xs: "1.8rem", sm: "2rem", md: "2.2rem", lg: "2.5rem" },
-                      fontWeight: 400,
-                      mb: { xs: 2, md: 3 },
-                      fontFamily: '"Arvo", serif',
+                      overflow: "hidden",
+                      position: "relative",
+                      width: "100%",
+                      mb: 6,
                     }}
+                    ref={amenitiesCarouselRef}
                   >
-                    World-Class Amenities
-                  </Typography>
-                  <Typography
-                    sx={{
-                      fontSize: { xs: "1rem", sm: "1.05rem", md: "1.1rem" },
-                      lineHeight: 1.7,
-                      color: "#000",
-                      mb: { xs: 3, md: 4 },
-                      fontFamily: '"Quicksand", sans-serif',
-                    }}
-                  >
-                    Comprehensive facilities that create a self-sustained premium community.
-                  </Typography>
-                  <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 2, md: 2.5 } }}>
-                    {typedProject.worldClassAmenities.slice(0, 4).map(
-                      (amenity: WorldClassAmenity, index: number) => (
+                    <Box
+                      sx={{
+                        display: "flex",
+                      }}
+                    >
+                      {/* Slide 1: Image + World-Class Amenities Section */}
+                      {typedProject.worldClassAmenities && (
                         <Box
-                          key={index}
                           sx={{
-                            display: "flex",
-                            alignItems: "flex-start",
+                            flex: "0 0 100%",
+                            minWidth: 0,
+                            width: "100%",
+                            px: 1,
                           }}
                         >
-                          <CheckCircleIcon
-                            sx={{
-                              color: "#D19F3B",
-                              mr: 2,
-                              mt: 0.3,
-                              fontSize: { xs: "1.2rem", md: "1.3rem" },
-                              flexShrink: 0,
-                            }}
-                          />
+                          {/* Image at Top */}
+                          {typedProject.amenityImage2 && (
+                            <Box
+                              sx={{
+                                width: "100%",
+                                height: "300px",
+                                position: "relative",
+                                borderRadius: 2,
+                                overflow: "hidden",
+                                mb: 4,
+                              }}
+                            >
+                              <Image
+                                src={typedProject.amenityImage2}
+                                alt="Amenity"
+                                fill
+                                sizes="100vw"
+                                style={{ objectFit: "cover" }}
+                              />
+                            </Box>
+                          )}
+                          {/* World-Class Amenities Content */}
                           <Box>
                             <Typography
+                              variant="h3"
                               sx={{
-                                fontSize: { xs: "1rem", sm: "1.05rem", md: "1.1rem" },
-                                lineHeight: 1.7,
-                                color: "#000",
-                                fontWeight: 600,
-                                fontFamily: '"Quicksand", sans-serif',
-                                mb: 0.5,
+                                color: "#D19F3B",
+                                fontSize: "1.8rem",
+                                fontWeight: 400,
+                                mb: 2,
+                                fontFamily: '"Arvo", serif',
                               }}
                             >
-                              {amenity.name}
+                              World-Class Amenities
                             </Typography>
                             <Typography
                               sx={{
-                                fontSize: { xs: "0.95rem", sm: "1rem", md: "1.05rem" },
-                                lineHeight: 1.6,
+                                fontSize: "1rem",
+                                lineHeight: 1.7,
                                 color: "#000",
+                                mb: 3,
                                 fontFamily: '"Quicksand", sans-serif',
                               }}
                             >
-                              {amenity.description}
+                              Comprehensive facilities that create a self-sustained premium community.
                             </Typography>
+                            <Box sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}>
+                              {typedProject.worldClassAmenities.slice(0, 4).map(
+                                (amenity: WorldClassAmenity, index: number) => (
+                                  <Box
+                                    key={index}
+                                    sx={{
+                                      display: "flex",
+                                      alignItems: "flex-start",
+                                    }}
+                                  >
+                                    <CheckCircleIcon
+                                      sx={{
+                                        color: "#D19F3B",
+                                        mr: 2,
+                                        mt: 0.3,
+                                        fontSize: "1.2rem",
+                                        flexShrink: 0,
+                                      }}
+                                    />
+                                    <Box>
+                                      <Typography
+                                        sx={{
+                                          fontSize: "1rem",
+                                          lineHeight: 1.7,
+                                          color: "#000",
+                                          fontWeight: 600,
+                                          fontFamily: '"Quicksand", sans-serif',
+                                          mb: 0.5,
+                                        }}
+                                      >
+                                        {amenity.name}
+                                      </Typography>
+                                      <Typography
+                                        sx={{
+                                          fontSize: "0.95rem",
+                                          lineHeight: 1.6,
+                                          color: "#000",
+                                          fontFamily: '"Quicksand", sans-serif',
+                                        }}
+                                      >
+                                        {amenity.description}
+                                      </Typography>
+                                    </Box>
+                                  </Box>
+                                )
+                              )}
+                            </Box>
                           </Box>
                         </Box>
-                      )
-                    )}
-                  </Box>
-                </Box>
-              )}
+                      )}
 
-              {/* Right Column - Why Choose */}
-              {typedProject.whyChoose && (
-                <Box sx={{ width: { xs: "100%", md: "50%" } }}>
-                  <Typography
-                    variant="h3"
-                    sx={{
-                      color: "#D19F3B",
-                      fontSize: { xs: "1.8rem", sm: "2rem", md: "2.2rem", lg: "2.5rem" },
-                      fontWeight: 400,
-                      mb: { xs: 2, md: 3 },
-                      fontFamily: '"Arvo", serif',
-                    }}
-                  >
-                    Why Choose {typedProject.title}
-                  </Typography>
-                  <Typography
-                    sx={{
-                      fontSize: { xs: "1rem", sm: "1.05rem", md: "1.1rem" },
-                      lineHeight: 1.7,
-                      color: "#000",
-                      mb: { xs: 3, md: 4 },
-                      fontFamily: '"Quicksand", sans-serif',
-                    }}
-                  >
-                    Unique advantages that make this project the premier choice for luxury living in Islamabad.
-                  </Typography>
-                  <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 2, md: 2.5 } }}>
-                    {typedProject.whyChoose.slice(0, 4).map(
-                      (reason: string, index: number) => (
+                      {/* Slide 2: Image + Why Choose Section */}
+                      {typedProject.whyChoose && (
                         <Box
-                          key={index}
                           sx={{
-                            display: "flex",
-                            alignItems: "flex-start",
+                            flex: "0 0 100%",
+                            minWidth: 0,
+                            width: "100%",
+                            px: 1,
                           }}
                         >
-                          <CheckCircleIcon
-                            sx={{
-                              color: "#D19F3B",
-                              mr: 2,
-                              mt: 0.3,
-                              fontSize: { xs: "1.2rem", md: "1.3rem" },
-                              flexShrink: 0,
-                            }}
-                          />
-                          <Typography
-                            sx={{
-                              fontSize: { xs: "1rem", sm: "1.05rem", md: "1.1rem" },
-                              lineHeight: 1.7,
-                              color: "#000",
-                              fontFamily: '"Quicksand", sans-serif',
-                            }}
-                          >
-                            {reason}
-                          </Typography>
+                          {/* Image at Top */}
+                          {typedProject.designPhilosophyImage && (
+                            <Box
+                              sx={{
+                                width: "100%",
+                                height: "300px",
+                                position: "relative",
+                                borderRadius: 2,
+                                overflow: "hidden",
+                                mb: 4,
+                              }}
+                            >
+                              <Image
+                                src={typedProject.designPhilosophyImage}
+                                alt="Design Philosophy"
+                                fill
+                                sizes="100vw"
+                                style={{ objectFit: "cover" }}
+                              />
+                            </Box>
+                          )}
+                          {/* Why Choose Content */}
+                          <Box>
+                            <Typography
+                              variant="h3"
+                              sx={{
+                                color: "#D19F3B",
+                                fontSize: "1.8rem",
+                                fontWeight: 400,
+                                mb: 2,
+                                fontFamily: '"Arvo", serif',
+                              }}
+                            >
+                              Why Choose {typedProject.title}
+                            </Typography>
+                            <Typography
+                              sx={{
+                                fontSize: "1rem",
+                                lineHeight: 1.7,
+                                color: "#000",
+                                mb: 3,
+                                fontFamily: '"Quicksand", sans-serif',
+                              }}
+                            >
+                              Unique advantages that make this project the premier choice for luxury living in Islamabad.
+                            </Typography>
+                            <Box sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}>
+                              {typedProject.whyChoose.slice(0, 4).map(
+                                (reason: string, index: number) => (
+                                  <Box
+                                    key={index}
+                                    sx={{
+                                      display: "flex",
+                                      alignItems: "flex-start",
+                                    }}
+                                  >
+                                    <CheckCircleIcon
+                                      sx={{
+                                        color: "#D19F3B",
+                                        mr: 2,
+                                        mt: 0.3,
+                                        fontSize: "1.2rem",
+                                        flexShrink: 0,
+                                      }}
+                                    />
+                                    <Typography
+                                      sx={{
+                                        fontSize: "1rem",
+                                        lineHeight: 1.7,
+                                        color: "#000",
+                                        fontFamily: '"Quicksand", sans-serif',
+                                      }}
+                                    >
+                                      {reason}
+                                    </Typography>
+                                  </Box>
+                                )
+                              )}
+                            </Box>
+                          </Box>
                         </Box>
-                      )
-                    )}
+                      )}
+                    </Box>
                   </Box>
+                )}
+              </>
+            ) : (
+              /* Desktop View - Original Layout */
+              <>
+                {/* Two Images */}
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    gap: 4,
+                    mb: 8,
+                  }}
+                >
+                  {/* Left Image */}
+                  {typedProject.amenityImage1 && (
+                    <Box
+                      sx={{
+                        width: "50%",
+                        height: "400px",
+                        position: "relative",
+                        borderRadius: 2,
+                        overflow: "hidden",
+                      }}
+                    >
+                      <Image
+                        src={typedProject.amenityImage1}
+                        alt="Amenity"
+                        fill
+                        style={{ objectFit: "cover" }}
+                      />
+                    </Box>
+                  )}
+
+                  {/* Right Image */}
+                  {typedProject.amenityImage2 && (
+                    <Box
+                      sx={{
+                        width: "50%",
+                        height: "400px",
+                        position: "relative",
+                        borderRadius: 2,
+                        overflow: "hidden",
+                      }}
+                    >
+                      <Image
+                        src={typedProject.amenityImage2}
+                        alt="Amenity"
+                        fill
+                        style={{ objectFit: "cover" }}
+                      />
+                    </Box>
+                  )}
                 </Box>
-              )}
-            </Box>
+
+                {/* Two Columns Text Section */}
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "row",
+                    gap: 8,
+                  }}
+                >
+                  {/* Left Column - World-Class Amenities */}
+                  {typedProject.worldClassAmenities && (
+                    <Box sx={{ width: "50%" }}>
+                      <Typography
+                        variant="h3"
+                        sx={{
+                          color: "#D19F3B",
+                          fontSize: { md: "2.2rem", lg: "2.5rem" },
+                          fontWeight: 400,
+                          mb: 3,
+                          fontFamily: '"Arvo", serif',
+                        }}
+                      >
+                        World-Class Amenities
+                      </Typography>
+                      <Typography
+                        sx={{
+                          fontSize: "1.1rem",
+                          lineHeight: 1.7,
+                          color: "#000",
+                          mb: 4,
+                          fontFamily: '"Quicksand", sans-serif',
+                        }}
+                      >
+                        Comprehensive facilities that create a self-sustained premium community.
+                      </Typography>
+                      <Box sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}>
+                        {typedProject.worldClassAmenities.slice(0, 4).map(
+                          (amenity: WorldClassAmenity, index: number) => (
+                            <Box
+                              key={index}
+                              sx={{
+                                display: "flex",
+                                alignItems: "flex-start",
+                              }}
+                            >
+                              <CheckCircleIcon
+                                sx={{
+                                  color: "#D19F3B",
+                                  mr: 2,
+                                  mt: 0.3,
+                                  fontSize: "1.3rem",
+                                  flexShrink: 0,
+                                }}
+                              />
+                              <Box>
+                                <Typography
+                                  sx={{
+                                    fontSize: "1.1rem",
+                                    lineHeight: 1.7,
+                                    color: "#000",
+                                    fontWeight: 600,
+                                    fontFamily: '"Quicksand", sans-serif',
+                                    mb: 0.5,
+                                  }}
+                                >
+                                  {amenity.name}
+                                </Typography>
+                                <Typography
+                                  sx={{
+                                    fontSize: "1.05rem",
+                                    lineHeight: 1.6,
+                                    color: "#000",
+                                    fontFamily: '"Quicksand", sans-serif',
+                                  }}
+                                >
+                                  {amenity.description}
+                                </Typography>
+                              </Box>
+                            </Box>
+                          )
+                        )}
+                      </Box>
+                    </Box>
+                  )}
+
+                  {/* Right Column - Why Choose */}
+                  {typedProject.whyChoose && (
+                    <Box sx={{ width: "50%" }}>
+                      <Typography
+                        variant="h3"
+                        sx={{
+                          color: "#D19F3B",
+                          fontSize: { md: "2.2rem", lg: "2.5rem" },
+                          fontWeight: 400,
+                          mb: 3,
+                          fontFamily: '"Arvo", serif',
+                        }}
+                      >
+                        Why Choose {typedProject.title}
+                      </Typography>
+                      <Typography
+                        sx={{
+                          fontSize: "1.1rem",
+                          lineHeight: 1.7,
+                          color: "#000",
+                          mb: 4,
+                          fontFamily: '"Quicksand", sans-serif',
+                        }}
+                      >
+                        Unique advantages that make this project the premier choice for luxury living in Islamabad.
+                      </Typography>
+                      <Box sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}>
+                        {typedProject.whyChoose.slice(0, 4).map(
+                          (reason: string, index: number) => (
+                            <Box
+                              key={index}
+                              sx={{
+                                display: "flex",
+                                alignItems: "flex-start",
+                              }}
+                            >
+                              <CheckCircleIcon
+                                sx={{
+                                  color: "#D19F3B",
+                                  mr: 2,
+                                  mt: 0.3,
+                                  fontSize: "1.3rem",
+                                  flexShrink: 0,
+                                }}
+                              />
+                              <Typography
+                                sx={{
+                                  fontSize: "1.1rem",
+                                  lineHeight: 1.7,
+                                  color: "#000",
+                                  fontFamily: '"Quicksand", sans-serif',
+                                }}
+                              >
+                                {reason}
+                              </Typography>
+                            </Box>
+                          )
+                        )}
+                      </Box>
+                    </Box>
+                  )}
+                </Box>
+              </>
+            )}
           </Box>
         )}
 
@@ -568,180 +836,370 @@ export default function ProjectDetailPage({
               Stay updated with the latest progress on {typedProject.title}. Our construction team is working diligently to deliver this landmark project.
             </Typography>
 
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: { xs: "column", md: "row" },
-                gap: { xs: 4, md: 4 },
-              }}
-            >
-              {typedProject.constructionUpdates.slice(0, 2).map(
-                (update: ConstructionUpdate, index: number) => (
-                  <Box
-                    key={index}
-                    sx={{ 
-                      width: { xs: "100%", md: "50%" },
-                    }}
-                  >
-                    {/* Construction Card */}
-                    <Box
-                      sx={{
-                        backgroundColor: "#fff",
-                        borderRadius: 2,
-                        overflow: "hidden",
-                        boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-                      }}
-                    >
-                      {/* Blue Header Strip */}
+            {/* Mobile Carousel View */}
+            {isMobile ? (
+              <Box
+                sx={{
+                  overflow: "hidden",
+                  position: "relative",
+                  width: "100%",
+                }}
+                ref={emblaRef}
+              >
+                <Box
+                  sx={{
+                    display: "flex",
+                  }}
+                >
+                  {typedProject.constructionUpdates.slice(0, 2).map(
+                    (update: ConstructionUpdate, index: number) => (
                       <Box
+                        key={index}
                         sx={{
-                          backgroundColor: "#1a237e",
-                          py: 1.5,
-                          px: 2,
+                          flex: "0 0 100%",
+                          minWidth: 0,
+                          width: "100%",
                         }}
                       >
-                        <Typography
-                          sx={{
-                            color: "#fff",
-                            fontSize: { xs: "0.9rem", md: "1rem" },
-                            fontWeight: 500,
-                            fontFamily: '"Quicksand", sans-serif',
-                          }}
-                        >
-                          UAN: 051 111 786 123
-                        </Typography>
-                      </Box>
-
-                      {/* Construction Image */}
-                      {((index === 0 && typedProject.constructionImage1) || (index === 1 && typedProject.constructionImage2)) && (
+                        {/* Construction Card */}
                         <Box
                           sx={{
-                            width: "100%",
-                            height: { xs: "300px", md: "400px" },
-                            position: "relative",
+                            backgroundColor: "#fff",
+                            borderRadius: 2,
+                            overflow: "hidden",
+                            boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
                           }}
                         >
-                          <Image
-                            src={index === 0 ? typedProject.constructionImage1! : typedProject.constructionImage2!}
-                            alt={`Construction Progress ${index + 1}`}
-                            fill
-                            style={{ objectFit: "cover" }}
-                          />
-                        </Box>
-                      )}
+                          {/* Blue Header Strip */}
+                          <Box
+                            sx={{
+                              backgroundColor: "#1a237e",
+                              py: 1.5,
+                              px: 2,
+                            }}
+                          >
+                            <Typography
+                              sx={{
+                                color: "#fff",
+                                fontSize: "0.9rem",
+                                fontWeight: 500,
+                                fontFamily: '"Quicksand", sans-serif',
+                              }}
+                            >
+                              UAN: 051 111 786 123
+                            </Typography>
+                          </Box>
 
-                      {/* Blue Footer Strip */}
+                          {/* Construction Image */}
+                          {((index === 0 && typedProject.constructionImage1) || (index === 1 && typedProject.constructionImage2)) && (
+                            <Box
+                              sx={{
+                                width: "100%",
+                                height: "300px",
+                                position: "relative",
+                              }}
+                            >
+                              <Image
+                                src={index === 0 ? typedProject.constructionImage1! : typedProject.constructionImage2!}
+                                alt={`Construction Progress ${index + 1}`}
+                                fill
+                                sizes="100vw"
+                                style={{ objectFit: "cover" }}
+                              />
+                            </Box>
+                          )}
+
+                          {/* Blue Footer Strip */}
+                          <Box
+                            sx={{
+                              backgroundColor: "#1a237e",
+                              py: 1.5,
+                              px: 2,
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "space-between",
+                              flexWrap: "wrap",
+                              gap: 1,
+                            }}
+                          >
+                            {/* GIGAGROUP Logo - Left */}
+                            <Box sx={{ display: "flex", alignItems: "center" }}>
+                              <Typography
+                                sx={{
+                                  color: "#fff",
+                                  fontSize: "0.8rem",
+                                  fontWeight: 700,
+                                  fontFamily: '"Arvo", serif',
+                                }}
+                              >
+                                GIGAGROUP
+                              </Typography>
+                            </Box>
+
+                            {/* Yellow Boxes - Center */}
+                            <Box sx={{ display: "flex", gap: 1 }}>
+                              <Box
+                                sx={{
+                                  backgroundColor: "#D19F3B",
+                                  px: 1.5,
+                                  py: 0.5,
+                                  borderRadius: 1,
+                                }}
+                              >
+                                <Typography
+                                  sx={{
+                                    color: "#000",
+                                    fontSize: "0.7rem",
+                                    fontWeight: 700,
+                                    fontFamily: '"Arvo", serif',
+                                  }}
+                                >
+                                  CONSTRUCTION UPDATES
+                                </Typography>
+                              </Box>
+                              <Box
+                                sx={{
+                                  backgroundColor: "#D19F3B",
+                                  px: 1.5,
+                                  py: 0.5,
+                                  borderRadius: 1,
+                                }}
+                              >
+                                <Typography
+                                  sx={{
+                                    color: "#000",
+                                    fontSize: "0.7rem",
+                                    fontWeight: 700,
+                                    fontFamily: '"Arvo", serif',
+                                  }}
+                                >
+                                  {update.date?.toUpperCase() || "NOV 2025"}
+                                </Typography>
+                              </Box>
+                            </Box>
+
+                            {/* GoldCrest VIEWS Logo - Right */}
+                            <Box sx={{ display: "flex", alignItems: "center" }}>
+                              <Typography
+                                sx={{
+                                  color: "#D19F3B",
+                                  fontSize: "0.8rem",
+                                  fontWeight: 700,
+                                  fontFamily: '"Arvo", serif',
+                                }}
+                              >
+                                GoldCrest VIEWS
+                              </Typography>
+                            </Box>
+                          </Box>
+                        </Box>
+
+                        {/* Text Below Card */}
+                        <Box sx={{ mt: 2 }}>
+                          <Typography
+                            sx={{
+                              color: "#000",
+                              fontSize: "1.1rem",
+                              fontWeight: 700,
+                              mb: 0.5,
+                              fontFamily: '"Arvo", serif',
+                            }}
+                          >
+                            Construction Progress {typedProject.title} {index + 1}
+                          </Typography>
+                          <Typography
+                            sx={{
+                              color: "#666",
+                              fontSize: "0.9rem",
+                              fontFamily: '"Quicksand", sans-serif',
+                            }}
+                          >
+                            Latest Update
+                          </Typography>
+                        </Box>
+                      </Box>
+                    )
+                  )}
+                </Box>
+              </Box>
+            ) : (
+              /* Desktop Grid View */
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  gap: 4,
+                }}
+              >
+                {typedProject.constructionUpdates.slice(0, 2).map(
+                  (update: ConstructionUpdate, index: number) => (
+                    <Box
+                      key={index}
+                      sx={{ 
+                        width: "50%",
+                      }}
+                    >
+                      {/* Construction Card */}
                       <Box
                         sx={{
-                          backgroundColor: "#1a237e",
-                          py: 1.5,
-                          px: 2,
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "space-between",
-                          flexWrap: "wrap",
-                          gap: 1,
+                          backgroundColor: "#fff",
+                          borderRadius: 2,
+                          overflow: "hidden",
+                          boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
                         }}
                       >
-                        {/* GIGAGROUP Logo - Left */}
-                        <Box sx={{ display: "flex", alignItems: "center" }}>
+                        {/* Blue Header Strip */}
+                        <Box
+                          sx={{
+                            backgroundColor: "#1a237e",
+                            py: 1.5,
+                            px: 2,
+                          }}
+                        >
                           <Typography
                             sx={{
                               color: "#fff",
-                              fontSize: { xs: "0.8rem", md: "0.9rem" },
-                              fontWeight: 700,
-                              fontFamily: '"Arvo", serif',
+                              fontSize: "1rem",
+                              fontWeight: 500,
+                              fontFamily: '"Quicksand", sans-serif',
                             }}
                           >
-                            GIGAGROUP
+                            UAN: 051 111 786 123
                           </Typography>
                         </Box>
 
-                        {/* Yellow Boxes - Center */}
-                        <Box sx={{ display: "flex", gap: 1 }}>
+                        {/* Construction Image */}
+                        {((index === 0 && typedProject.constructionImage1) || (index === 1 && typedProject.constructionImage2)) && (
                           <Box
                             sx={{
-                              backgroundColor: "#D19F3B",
-                              px: 1.5,
-                              py: 0.5,
-                              borderRadius: 1,
+                              width: "100%",
+                              height: "400px",
+                              position: "relative",
                             }}
                           >
+                            <Image
+                              src={index === 0 ? typedProject.constructionImage1! : typedProject.constructionImage2!}
+                              alt={`Construction Progress ${index + 1}`}
+                              fill
+                              sizes="50vw"
+                              style={{ objectFit: "cover" }}
+                            />
+                          </Box>
+                        )}
+
+                        {/* Blue Footer Strip */}
+                        <Box
+                          sx={{
+                            backgroundColor: "#1a237e",
+                            py: 1.5,
+                            px: 2,
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "space-between",
+                            flexWrap: "wrap",
+                            gap: 1,
+                          }}
+                        >
+                          {/* GIGAGROUP Logo - Left */}
+                          <Box sx={{ display: "flex", alignItems: "center" }}>
                             <Typography
                               sx={{
-                                color: "#000",
-                                fontSize: { xs: "0.7rem", md: "0.8rem" },
+                                color: "#fff",
+                                fontSize: "0.9rem",
                                 fontWeight: 700,
                                 fontFamily: '"Arvo", serif',
                               }}
                             >
-                              CONSTRUCTION UPDATES
+                              GIGAGROUP
                             </Typography>
                           </Box>
-                          <Box
-                            sx={{
-                              backgroundColor: "#D19F3B",
-                              px: 1.5,
-                              py: 0.5,
-                              borderRadius: 1,
-                            }}
-                          >
+
+                          {/* Yellow Boxes - Center */}
+                          <Box sx={{ display: "flex", gap: 1 }}>
+                            <Box
+                              sx={{
+                                backgroundColor: "#D19F3B",
+                                px: 1.5,
+                                py: 0.5,
+                                borderRadius: 1,
+                              }}
+                            >
+                              <Typography
+                                sx={{
+                                  color: "#000",
+                                  fontSize: "0.8rem",
+                                  fontWeight: 700,
+                                  fontFamily: '"Arvo", serif',
+                                }}
+                              >
+                                CONSTRUCTION UPDATES
+                              </Typography>
+                            </Box>
+                            <Box
+                              sx={{
+                                backgroundColor: "#D19F3B",
+                                px: 1.5,
+                                py: 0.5,
+                                borderRadius: 1,
+                              }}
+                            >
+                              <Typography
+                                sx={{
+                                  color: "#000",
+                                  fontSize: "0.8rem",
+                                  fontWeight: 700,
+                                  fontFamily: '"Arvo", serif',
+                                }}
+                              >
+                                {update.date?.toUpperCase() || "NOV 2025"}
+                              </Typography>
+                            </Box>
+                          </Box>
+
+                          {/* GoldCrest VIEWS Logo - Right */}
+                          <Box sx={{ display: "flex", alignItems: "center" }}>
                             <Typography
                               sx={{
-                                color: "#000",
-                                fontSize: { xs: "0.7rem", md: "0.8rem" },
+                                color: "#D19F3B",
+                                fontSize: "0.9rem",
                                 fontWeight: 700,
                                 fontFamily: '"Arvo", serif',
                               }}
                             >
-                              {update.date?.toUpperCase() || "NOV 2025"}
+                              GoldCrest VIEWS
                             </Typography>
                           </Box>
-                        </Box>
-
-                        {/* GoldCrest VIEWS Logo - Right */}
-                        <Box sx={{ display: "flex", alignItems: "center" }}>
-                          <Typography
-                            sx={{
-                              color: "#D19F3B",
-                              fontSize: { xs: "0.8rem", md: "0.9rem" },
-                              fontWeight: 700,
-                              fontFamily: '"Arvo", serif',
-                            }}
-                          >
-                            GoldCrest VIEWS
-                          </Typography>
                         </Box>
                       </Box>
-                    </Box>
 
-                    {/* Text Below Card */}
-                    <Box sx={{ mt: 2 }}>
-                      <Typography
-                        sx={{
-                          color: "#000",
-                          fontSize: { xs: "1.1rem", md: "1.2rem" },
-                          fontWeight: 700,
-                          mb: 0.5,
-                          fontFamily: '"Arvo", serif',
-                        }}
-                      >
-                        Construction Progress {typedProject.title} {index + 1}
-                      </Typography>
-                      <Typography
-                        sx={{
-                          color: "#666",
-                          fontSize: { xs: "0.9rem", md: "1rem" },
-                          fontFamily: '"Quicksand", sans-serif',
-                        }}
-                      >
-                        Latest Update
-                      </Typography>
+                      {/* Text Below Card */}
+                      <Box sx={{ mt: 2 }}>
+                        <Typography
+                          sx={{
+                            color: "#000",
+                            fontSize: "1.2rem",
+                            fontWeight: 700,
+                            mb: 0.5,
+                            fontFamily: '"Arvo", serif',
+                          }}
+                        >
+                          Construction Progress {typedProject.title} {index + 1}
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#666",
+                            fontSize: "1rem",
+                            fontFamily: '"Quicksand", sans-serif',
+                          }}
+                        >
+                          Latest Update
+                        </Typography>
+                      </Box>
                     </Box>
-                  </Box>
-                )
-              )}
-            </Box>
+                  )
+                )}
+              </Box>
+            )}
           </Box>
         )}
 
@@ -751,7 +1209,7 @@ export default function ProjectDetailPage({
             <Typography 
               sx={{ 
                 color: "#D19F3B", 
-                fontSize: { xs: "2rem", md: "2.5rem", lg: "3rem" }, 
+                fontSize: { xs: "2rem", md: "2rem", lg: "2rem" }, 
                 fontWeight: 400, 
                 fontFamily: '"Arvo", serif',
                 textAlign: "center",
@@ -761,125 +1219,226 @@ export default function ProjectDetailPage({
             </Typography>
           </Box>
 
-          <Box
-            sx={{
-              display: "grid",
-              gridTemplateColumns: { xs: "1fr", md: "repeat(2,1fr)", lg: "repeat(3,1fr)" },
-              gap: 6,
-              mt: 6,
-            }}
-          >
-            {Object.values(projects)
-              .filter((p) => p.slug !== params.slug)
-              .slice(0, 3)
-              .map((project) => (
-                <Link key={project.slug} href={`/projects/${project.slug}`} style={{ textDecoration: "none" }}>
-                  <Box
-                    sx={{
-                      position: "relative",
-                      height: 420,
-                      overflow: "hidden",
-                      cursor: "pointer",
-                      transition: "transform 0.4s ease",
-                      "&:hover": { 
-                        transform: "translateY(-6px)",
-                        "& .hover-overlay": {
-                          opacity: 1,
-                          "&::before": {
-                            opacity: 1,
-                          },
-                          "&::after": {
-                            opacity: 1,
-                          },
-                        },
-                      },
-                    }}
-                  >
-                    <Image
-                      src={project.backgroundImage}
-                      alt={project.title}
-                      fill
-                      style={{ objectFit: "cover" }}
-                    />
-
-                    {/* Hover Overlay with Text and L-shaped Brackets */}
+          {/* Mobile Carousel View */}
+          {isMobile ? (
+            <Box
+              sx={{
+                overflow: "hidden",
+                position: "relative",
+                width: "100%",
+                mt: 6,
+              }}
+              ref={relatedProjectsEmblaRef}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                }}
+              >
+                {Object.values(projects)
+                  .filter((p) => p.slug !== params.slug)
+                  .slice(0, 3)
+                  .map((project) => (
                     <Box
-                      className="hover-overlay"
+                      key={project.slug}
                       sx={{
-                        position: "absolute",
-                        inset: 0,
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        backgroundColor: "rgba(0, 0, 0, 0.45)",
-                        opacity: 0,
-                        transition: "opacity 0.4s ease",
-                        // Top-left L-shaped bracket
-                        "&::before": {
-                          content: '""',
-                          position: "absolute",
-                          top: "20px",
-                          left: "20px",
-                          width: "120px",
-                          height: "120px",
-                          borderTop: "2px solid #ffffff",
-                          borderLeft: "2px solid #ffffff",
-                          opacity: 0,
-                          transition: "opacity 0.4s ease",
-                        },
-                        // Bottom-right L-shaped bracket
-                        "&::after": {
-                          content: '""',
-                          position: "absolute",
-                          bottom: "20px",
-                          right: "20px",
-                          width: "120px",
-                          height: "120px",
-                          borderBottom: "2px solid #ffffff",
-                          borderRight: "2px solid #ffffff",
-                          opacity: 0,
-                          transition: "opacity 0.4s ease",
+                        flex: "0 0 100%",
+                        minWidth: 0,
+                        width: "100%",
+                        px: 1,
+                      }}
+                    >
+                      <Link href={`/projects/${project.slug}`} style={{ textDecoration: "none" }}>
+                        <Box
+                          sx={{
+                            position: "relative",
+                            height: 420,
+                            overflow: "hidden",
+                            cursor: "pointer",
+                            transition: "transform 0.4s ease",
+                            borderRadius: 2,
+                            "&:active": { 
+                              transform: "scale(0.98)",
+                            },
+                          }}
+                        >
+                          <Image
+                            src={project.backgroundImage}
+                            alt={project.title}
+                            fill
+                            sizes="100vw"
+                            style={{ objectFit: "cover" }}
+                          />
+
+                          {/* Overlay with Text */}
+                          <Box
+                            sx={{
+                              position: "absolute",
+                              inset: 0,
+                              display: "flex",
+                              flexDirection: "column",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              backgroundColor: "rgba(0, 0, 0, 0.5)",
+                              padding: 3,
+                            }}
+                          >
+                            <Typography
+                              sx={{
+                                color: "#ffffff",
+                                fontSize: "1.5rem",
+                                fontWeight: 700,
+                                textAlign: "center",
+                                fontFamily: '"Arvo", serif',
+                                letterSpacing: "0.05em",
+                                mb: 1,
+                                maxWidth: "90%",
+                              }}
+                            >
+                              {project.title}
+                            </Typography>
+                            <Typography
+                              sx={{
+                                color: "#ffffff",
+                                fontSize: "1rem",
+                                textAlign: "center",
+                                fontFamily: '"Quicksand", sans-serif',
+                                fontWeight: 400,
+                                maxWidth: "85%",
+                              }}
+                            >
+                              {project.description}
+                            </Typography>
+                          </Box>
+                        </Box>
+                      </Link>
+                    </Box>
+                  ))}
+              </Box>
+            </Box>
+          ) : (
+            /* Desktop Grid View */
+            <Box
+              sx={{
+                display: "grid",
+                gridTemplateColumns: { md: "repeat(2,1fr)", lg: "repeat(3,1fr)" },
+                gap: 6,
+                mt: 6,
+              }}
+            >
+              {Object.values(projects)
+                .filter((p) => p.slug !== params.slug)
+                .slice(0, 3)
+                .map((project) => (
+                  <Link key={project.slug} href={`/projects/${project.slug}`} style={{ textDecoration: "none" }}>
+                    <Box
+                      sx={{
+                        position: "relative",
+                        height: 420,
+                        overflow: "hidden",
+                        cursor: "pointer",
+                        transition: "transform 0.4s ease",
+                        "&:hover": { 
+                          transform: "translateY(-6px)",
+                          "& .hover-overlay": {
+                            opacity: 1,
+                            "&::before": {
+                              opacity: 1,
+                            },
+                            "&::after": {
+                              opacity: 1,
+                            },
+                          },
                         },
                       }}
                     >
-                      <Typography
-                        className="project-title-text"
+                      <Image
+                        src={project.backgroundImage}
+                        alt={project.title}
+                        fill
+                        sizes="(max-width: 1200px) 50vw, 33vw"
+                        style={{ objectFit: "cover" }}
+                      />
+
+                      {/* Hover Overlay with Text and L-shaped Brackets */}
+                      <Box
+                        className="hover-overlay"
                         sx={{
-                          color: "#ffffff",
-                          fontSize: { xs: "1.8rem", md: "2.2rem", lg: "2.5rem" },
-                          fontWeight: 700,
-                          textAlign: "center",
-                          fontFamily: '"Arvo", serif',
-                          letterSpacing: "0.05em",
-                          mb: 1,
-                          maxWidth: "70%",
-                          transition: "color 0.4s ease",
-                          "&:hover": {
-                            color: "#D19F3B",
+                          position: "absolute",
+                          inset: 0,
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          backgroundColor: "rgba(0, 0, 0, 0.45)",
+                          opacity: 0,
+                          transition: "opacity 0.4s ease",
+                          // Top-left L-shaped bracket
+                          "&::before": {
+                            content: '""',
+                            position: "absolute",
+                            top: "20px",
+                            left: "20px",
+                            width: "120px",
+                            height: "120px",
+                            borderTop: "2px solid #ffffff",
+                            borderLeft: "2px solid #ffffff",
+                            opacity: 0,
+                            transition: "opacity 0.4s ease",
+                          },
+                          // Bottom-right L-shaped bracket
+                          "&::after": {
+                            content: '""',
+                            position: "absolute",
+                            bottom: "20px",
+                            right: "20px",
+                            width: "120px",
+                            height: "120px",
+                            borderBottom: "2px solid #ffffff",
+                            borderRight: "2px solid #ffffff",
+                            opacity: 0,
+                            transition: "opacity 0.4s ease",
                           },
                         }}
                       >
-                        {project.title}
-                      </Typography>
-                      <Typography
-                        className="project-description-text"
-                        sx={{
-                          color: "#ffffff",
-                          fontSize: { xs: "1.1rem", md: "1.2rem" },
-                          textAlign: "center",
-                          fontFamily: '"Quicksand", sans-serif',
-                          fontWeight: 400,
-                          maxWidth: "80%",
-                        }}
-                      >
-                        {project.description}
-                      </Typography>
+                        <Typography
+                          className="project-title-text"
+                          sx={{
+                            color: "#ffffff",
+                            fontSize: { md: "1.8rem", lg: "2rem" },
+                            fontWeight: 700,
+                            textAlign: "center",
+                            fontFamily: '"Arvo", serif',
+                            letterSpacing: "0.05em",
+                            mb: 1,
+                            maxWidth: "70%",
+                            transition: "color 0.4s ease",
+                            "&:hover": {
+                              color: "#D19F3B",
+                            },
+                          }}
+                        >
+                          {project.title}
+                        </Typography>
+                        <Typography
+                          className="project-description-text"
+                          sx={{
+                            color: "#ffffff",
+                            fontSize: "1.2rem",
+                            textAlign: "center",
+                            fontFamily: '"Quicksand", sans-serif',
+                            fontWeight: 400,
+                            maxWidth: "80%",
+                          }}
+                        >
+                          {project.description}
+                        </Typography>
+                      </Box>
                     </Box>
-                  </Box>
-                </Link>
-              ))}
-          </Box>
+                  </Link>
+                ))}
+            </Box>
+          )}
         </Box>
 
         {/* Contact Form Section */}

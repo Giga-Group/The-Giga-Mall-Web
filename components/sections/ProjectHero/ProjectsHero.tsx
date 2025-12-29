@@ -9,7 +9,8 @@ const ProjectsHero = () => {
       sx={{
         position: 'relative',
         width: '100%',
-        height: '60vh',
+        // height: '60vh',
+        height: { xs: '100vh', sm: '100vh', md: '60vh' },
         overflow: 'hidden',
         display: 'flex',
         alignItems: 'center',

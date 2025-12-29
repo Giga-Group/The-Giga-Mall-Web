@@ -6,13 +6,11 @@ import Link from 'next/link';
 import { NAV_ITEMS } from '@/lib/utils/constants';
 
 const SECONDARY_NAV_ITEMS = [
-  'FASHION SHOWS',
-  'CELEBRATIONS',
   'CINEPAX',
   'MODEL APARTMENTS',
   'CARREFOUR',
   'OFFERS',
-  'EVENTS'
+  'EVENTS & EXHIBITIONS'
 ];
 
 interface MobileMenuProps {
@@ -53,14 +51,10 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
     switch (item) {
       case 'OFFERS':
         return '/offers';
-      case 'EVENTS':
+      case 'EVENTS & EXHIBITIONS':
         return '/events';
       case 'CINEPAX':
         return '/cinepax';
-      case 'FASHION SHOWS':
-        return '/fashion-shows';
-      case 'CELEBRATIONS':
-        return '/celebration';
       case 'MODEL APARTMENTS':
         return '/model-apartments';
       case 'CARREFOUR':

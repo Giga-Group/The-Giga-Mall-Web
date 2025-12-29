@@ -19,12 +19,19 @@ const ProjectHero = ({
       sx={{
         position: 'relative',
         width: '100%',
-        height: { xs: '40vh', md: '50vh' },
+        height: { xs: '100vh', sm: '100vh', md: '50vh' },
+        minHeight: { xs: '100vh', sm: '100vh', md: '50vh' },
+        maxHeight: { xs: '100vh', sm: '100vh', md: 'none' },
         overflow: 'hidden',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#f5f5f5',
+        '@media (max-width: 899px)': {
+          height: '100vh',
+          minHeight: '100vh',
+          maxHeight: '100vh',
+        },
       }}
     >
       {/* Background Image */}
