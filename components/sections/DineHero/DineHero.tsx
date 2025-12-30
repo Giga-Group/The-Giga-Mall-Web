@@ -53,7 +53,7 @@ const DineHero = ({ dine }: DineHeroProps) => {
       sx={{
         position: 'relative',
         width: '100%',
-        height: { xs: '100vh', sm: '85vh', md: '90vh', lg: '95vh' },
+        height: { xs: '70vh', sm: '65vh', md: '70vh', lg: '75vh' },
         overflow: 'hidden',
         display: 'flex',
         alignItems: 'flex-end',

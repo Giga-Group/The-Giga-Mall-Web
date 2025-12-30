@@ -20,8 +20,8 @@ const AppAndVisitorInfo = () => {
           maxWidth: '1400px',
           margin: '0 auto',
           display: 'grid',
-          gridTemplateColumns: { xs: '1fr', lg: '1fr 1fr' },
-          gap: { xs: 4, sm: 5, md: 6 }
+          gridTemplateColumns: { xs: '1fr', md: '1fr 1fr', lg: '1fr 1fr' },
+          gap: { xs: 4, sm: 5, md: 6, lg: 8 }
         }}
       >
         {/* Left Side - Download Giga Mall App */}
@@ -30,10 +30,10 @@ const AppAndVisitorInfo = () => {
             variant="h3"
             sx={{
               fontFamily: '"Arvo", serif',
-              fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2.2rem', lg: '2.5rem' },
+              fontSize: { xs: '1.5rem', sm: '1.8rem', md: '2rem', lg: '2.25rem' },
               fontWeight: 400,
               color: '#D19F3B',
-              mb: { xs: 1.5, sm: 2 },
+              mb: { xs: 1.5, sm: 2, md: 2, lg: 2.5 },
               letterSpacing: '0.02em'
             }}
           >
@@ -43,17 +43,17 @@ const AppAndVisitorInfo = () => {
           <Box
             sx={{
               display: 'flex',
-              flexDirection: { xs: 'row', lg: 'row' },
+              flexDirection: { xs: 'row', md: 'row', lg: 'row' },
               alignItems: 'flex-start',
-              rowGap: { xs: 0, lg: 0 },
+              rowGap: { xs: 0, md: 0, lg: 0 },
               columnGap: { xs: 2, sm: 2.5, md: 3, lg: 4 },
-              mb: { xs: 2, sm: 3 },
+              mb: { xs: 2, sm: 3, md: 3, lg: 3 },
             }}
           >
             {/* Mobile Screen Image Only */}
             <Box
               sx={{
-                width: { xs: '180px', sm: '220px', md: '260px', lg: '340px' },
+                width: { xs: '180px', sm: '220px', md: '240px', lg: '300px' },
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'flex-start',
@@ -78,15 +78,15 @@ const AppAndVisitorInfo = () => {
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
-                gap: { xs: 1.5, sm: 2 },
+                gap: { xs: 1.5, sm: 2, md: 2, lg: 2.5 },
                 flex: 1,
-                paddingTop: { xs: 4, sm: 0 },
+                paddingTop: { xs: 4, sm: 0, md: 0, lg: 0 },
               }}
             >
               <Typography
                 sx={{
                   fontFamily: '"Quicksand", sans-serif',
-                  fontSize: { xs: '0.75rem', sm: '0.85rem', md: '0.8rem' },
+                  fontSize: { xs: '0.75rem', sm: '0.85rem', md: '0.875rem', lg: '0.9375rem' },
                   color: '#666666',
                   lineHeight: 1.6,
                 }}
@@ -100,7 +100,7 @@ const AppAndVisitorInfo = () => {
                   display: 'flex',
                   flexDirection: 'row',
                   flexWrap: 'wrap',
-                  gap: 1,
+                  gap: { xs: 1, md: 1.5, lg: 2 },
                   alignItems: 'flex-start',
                 }}
               >
@@ -111,13 +111,24 @@ const AppAndVisitorInfo = () => {
                     textDecoration: 'none',
                   }}
                 >
-                  <Image
-                    src="/AppStore_Badge_US_English.svg"
-                    alt="Download on the App Store"
-                    width={90}
-                    height={30}
-                    style={{ objectFit: 'contain', width: '90px', height: '30px' }}
-                  />
+                  <Box
+                    sx={{
+                      width: { xs: '90px', md: '110px', lg: '120px' },
+                      height: { xs: '30px', md: '36px', lg: '40px' },
+                    }}
+                  >
+                    <Image
+                      src="/AppStore_Badge_US_English.svg"
+                      alt="Download on the App Store"
+                      width={120}
+                      height={40}
+                      style={{ 
+                        objectFit: 'contain', 
+                        width: '100%', 
+                        height: '100%',
+                      }}
+                    />
+                  </Box>
                 </Link>
 
                 <Link
@@ -127,13 +138,24 @@ const AppAndVisitorInfo = () => {
                     textDecoration: 'none',
                   }}
                 >
-                  <Image
-                    src="/GooglePlay_Badge_EN-US_English.svg"
-                    alt="Get it on Google Play"
-                    width={90}
-                    height={30}
-                    style={{ objectFit: 'contain', width: '90px', height: '30px' }}
-                  />
+                  <Box
+                    sx={{
+                      width: { xs: '90px', md: '110px', lg: '120px' },
+                      height: { xs: '30px', md: '36px', lg: '40px' },
+                    }}
+                  >
+                    <Image
+                      src="/GooglePlay_Badge_EN-US_English.svg"
+                      alt="Get it on Google Play"
+                      width={120}
+                      height={40}
+                      style={{ 
+                        objectFit: 'contain', 
+                        width: '100%', 
+                        height: '100%',
+                      }}
+                    />
+                  </Box>
                 </Link>
               </Box>
             </Box>

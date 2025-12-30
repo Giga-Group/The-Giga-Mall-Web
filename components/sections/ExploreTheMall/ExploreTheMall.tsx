@@ -39,7 +39,7 @@ const ExploreTheMall = () => {
               fontSize: { xs: '1.3rem', sm: '1.6rem', md: '2rem', lg: '2.5rem' },
               fontWeight: 400,
               color: '#D19F3B',
-              mb: { xs: 1, sm: 1.5, md: 2 },
+              mb: { xs: 1, sm: 1.5, md: 2, lg: 1 },
               letterSpacing: '0.02em',
               textAlign: { xs: 'center', lg: 'left' }
             }}
@@ -51,7 +51,7 @@ const ExploreTheMall = () => {
             sx={{
               fontSize: { xs: '0.85rem', sm: '0.95rem', md: '0.9rem' },
               color: '#666666',
-              mb: { xs: 2, sm: 3, md: 4 },
+              // mb: { xs: 2, sm: 3, md: 4, lg: 2 },
               lineHeight: 1.6,
               textAlign: { xs: 'center', lg: 'left' },
               px: { xs: 1, sm: 0 }
@@ -64,7 +64,7 @@ const ExploreTheMall = () => {
           <Box
             sx={{
               width: '100%',
-              mt: { xs: 1, sm: 2, md: 3 },
+              // mt: { xs: 1, sm: 2, md: 3, lg: 0 },
               overflow: 'hidden',
               borderRadius: { xs: '8px', sm: '12px' }
             }}
@@ -80,7 +80,7 @@ const ExploreTheMall = () => {
                 fontWeight: 500,
                 textDecoration: 'underline',
                 cursor: 'pointer',
-                mt: { xs: 2, sm: 2.5 },
+                // mt: { xs: 2, sm: 2.5, lg: 1.5 },
                 display: 'inline-block',
                 textAlign: { xs: 'center', lg: 'left' },
                 width: { xs: '100%', lg: 'auto' },
