@@ -42,7 +42,7 @@ const VisitorInfo = () => {
 
         <Typography
           sx={{
-            fontFamily: 'Arial, sans-serif',
+            fontFamily: '"Quicksand", sans-serif',
             fontSize: { xs: '0.875rem', sm: '0.9375rem', md: '1rem', lg: '0.9rem' },
             fontWeight: 400,
             color: '#000000',
@@ -54,7 +54,7 @@ const VisitorInfo = () => {
 
         <Typography
           sx={{
-            fontFamily: 'Arial, sans-serif',
+            fontFamily: '"Quicksand", sans-serif',
             fontSize: { xs: '0.875rem', sm: '0.9375rem', md: '1rem', lg: '0.9rem' },
             fontWeight: 400,
             color: '#000000',
@@ -117,7 +117,7 @@ const VisitorInfo = () => {
           style={{
             textDecoration: 'none',
             color: '#000000',
-            fontFamily: 'Arial, sans-serif',
+            fontFamily: '"Poppins", sans-serif',
             fontSize: '0.875rem',
             fontWeight: 400,
             textDecorationLine: 'underline',

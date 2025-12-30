@@ -60,6 +60,7 @@ const DiscoverEventsOffers = () => {
         lg: '1rem'       // Full size on desktop
       },
       fontWeight: 500,
+      fontFamily: '"Poppins", sans-serif',
       padding: { 
         xs: '8px 16px',   // Compact padding on mobile
         sm: '10px 24px',  // Slightly more on small screens
@@ -96,6 +97,7 @@ const DiscoverEventsOffers = () => {
         lg: '1rem'
       },
       fontWeight: 500,
+      fontFamily: '"Poppins", sans-serif',
       padding: { 
         xs: '8px 16px',
         sm: '10px 24px',

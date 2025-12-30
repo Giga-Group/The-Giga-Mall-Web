@@ -111,7 +111,7 @@ export default function CarrefourPage() {
           maxWidth="xl"
           sx={{ py: { xs: 4, md: 8 }, px: { xs: 1.5, sm: 2, md: 4 } }}
         >
-          {/* About Section - Split Layout (Image Left, Text Right) */}
+          {/* About Section - Split Layout (Text Left, Image Right) */}
           <Box
             sx={{
               mb: { xs: 6, md: 8 },
@@ -121,11 +121,78 @@ export default function CarrefourPage() {
               alignItems: { md: "center" },
             }}
           >
-            {/* Left Side - Image */}
+            {/* Left Side - Text Content with Icon */}
             <Box
               sx={{
                 width: { xs: "100%", md: "50%" },
-                height: { xs: "300px", md: "500px", lg: "600px" },
+                display: "flex",
+                flexDirection: { xs: "column", md: "row" },
+                gap: { xs: 2, md: 3 },
+                alignItems: { xs: "flex-start", md: "flex-start" },
+              }}
+            >
+              {/* Grocery Icon */}
+              <Box
+                sx={{
+                  flexShrink: 0,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  mt: { xs: 0, md: 1 },
+                }}
+              >
+                <LocalGroceryStoreIcon
+                  sx={{
+                    fontSize: { xs: 48, sm: 56, md: 64 },
+                    color: "#1a237e",
+                  }}
+                />
+              </Box>
+
+              {/* Text Content */}
+              <Box
+                sx={{
+                  flex: 1,
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}
+              >
+                <Typography
+                  variant="h2"
+                  sx={{
+                    fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.5rem" },
+                    fontWeight: 400,
+                    color: "#D19F3B",
+                    mb: { xs: 2, md: 3 },
+                    fontFamily: '"Jost", sans-serif',
+                  }}
+                >
+                  Fresh Grocery and Bakery Items
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: { xs: "1rem", sm: "1.05rem", md: "1.1rem" },
+                    lineHeight: 1.7,
+                    color: "#333",
+                    fontFamily: '"Muli", sans-serif',
+                  }}
+                >
+                  Discover a wide selection of fresh grocery and bakery items at
+                  Carrefour Giga Mall. From daily fresh fruits and vegetables to
+                  freshly baked bread, pastries, and confectionery, we offer
+                  premium quality products to meet all your grocery and bakery needs.
+                  Visit us for the freshest ingredients and baked goods, ensuring
+                  quality and freshness for you and your family.
+                </Typography>
+              </Box>
+            </Box>
+
+            {/* Right Side - Image */}
+            <Box
+              sx={{
+                width: { xs: "100%", md: "50%" },
+                height: { xs: "250px", md: "400px", lg: "400px" },
                 position: "relative",
                 borderRadius: 2,
                 overflow: "hidden",
@@ -143,47 +210,6 @@ export default function CarrefourPage() {
                 onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.08)")}
                 onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
               />
-            </Box>
-
-            {/* Right Side - Text Content */}
-            <Box
-              sx={{
-                width: { xs: "100%", md: "50%" },
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-              }}
-            >
-              <Typography
-                variant="h2"
-                sx={{
-                  fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.5rem" },
-                  fontWeight: 400,
-                  color: "#D19F3B",
-                  mb: { xs: 2, md: 3 },
-                  fontFamily: '"Jost", sans-serif',
-                }}
-              >
-                Carrefour at Giga Mall
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: { xs: "1rem", sm: "1.05rem", md: "1.1rem" },
-                  lineHeight: 1.7,
-                  color: "#333",
-                  fontFamily: '"Muli", sans-serif',
-                }}
-              >
-                Carrefour at Giga Mall brings you the ultimate shopping
-                experience in the heart of DHA Islamabad. As one of the premier
-                hypermarket chains in Pakistan, our Giga Mall location offers an
-                extensive selection of quality products ranging from fresh
-                groceries and household essentials to electronics, clothing, and
-                more. Conveniently located within Giga Mall, Carrefour provides
-                easy access to all your shopping needs in one place, making it
-                the perfect destination for families and individuals seeking
-                quality, variety, and value.
-              </Typography>
             </Box>
           </Box>
 

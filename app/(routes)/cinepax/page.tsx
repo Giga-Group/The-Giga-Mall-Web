@@ -2,11 +2,10 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Cinepax/Hero";
-import About from "@/components/sections/Cinepax/About";
-import Gallery from "@/components/sections/Cinepax/Gallery";
-import Features from "@/components/sections/Cinepax/Features";
-import CTA from "@/components/sections/Cinepax/CTA";
 import MoviesEvents from "@/components/sections/Cinepax/MoviesEvents";
+import BookTickets from "@/components/sections/Cinepax/BookTickets";
+import UltimateExperience from "@/components/sections/Cinepax/UltimateExperience";
+import About from "@/components/sections/Cinepax/About";
 
 export default function CinepaxPage() {
   return (
@@ -14,11 +13,10 @@ export default function CinepaxPage() {
       <Header />
       <main>
         <Hero />
-        <About />
-        <Gallery />
-        <Features />
-        <CTA />
         <MoviesEvents />
+        <BookTickets />
+        <UltimateExperience />
+        <About />
       </main>
       <Footer />
     </>

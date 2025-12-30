@@ -224,6 +224,7 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
                 textTransform: 'uppercase',
                 fontSize: { xs: '0.85rem', sm: '0.9rem' },
                 fontWeight: 500,
+                fontFamily: '"Poppins", sans-serif',
                 padding: { xs: '10px 40px', sm: '12px 50px' },
                 borderRadius: 0,
                 transition: 'all 0.3s ease',

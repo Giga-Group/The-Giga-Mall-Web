@@ -140,11 +140,13 @@ const SearchAndFilter = ({
                 '& .MuiInputBase-input': {
                   padding: '14px 16px',
                   fontSize: '0.95rem',
-                  color: '#333333'
+                  color: '#333333',
+                  fontFamily: '"Poppins", sans-serif'
                 },
                 '& .MuiInputBase-input::placeholder': {
                   color: '#999999',
-                  opacity: 1
+                  opacity: 1,
+                  fontFamily: '"Poppins", sans-serif'
                 }
               }}
               InputProps={{
@@ -213,10 +215,12 @@ const SearchAndFilter = ({
                   borderBottomColor: { md: '#D19F3B', lg: '#ffffff' }
                 },
                 '& .MuiInputBase-input': {
-                  color: { md: '#333333', lg: '#ffffff' }
+                  color: { md: '#333333', lg: '#ffffff' },
+                  fontFamily: '"Poppins", sans-serif'
                 },
                 '& .MuiInputBase-input::placeholder': {
-                  color: { md: '#999999', lg: 'rgba(255,255,255,0.8)' }
+                  color: { md: '#999999', lg: 'rgba(255,255,255,0.8)' },
+                  fontFamily: '"Poppins", sans-serif'
                 }
               }}
               InputProps={{
@@ -247,7 +251,8 @@ const SearchAndFilter = ({
               <Typography
                 sx={{
                   fontSize: '0.9rem',
-                  color: { md: '#333333', lg: '#ffffff' }
+                  color: { md: '#333333', lg: '#ffffff' },
+                  fontFamily: '"Poppins", sans-serif'
                 }}
               >
                 {offersText}
@@ -335,7 +340,8 @@ const SearchAndFilter = ({
                     sx={{
                       fontSize: '0.95rem',
                       color: '#333333',
-                      fontWeight: 500
+                      fontWeight: 500,
+                      fontFamily: '"Poppins", sans-serif'
                     }}
                   >
                     {offersText}
@@ -353,7 +359,8 @@ const SearchAndFilter = ({
                   color: '#333333',
                   mb: 2,
                   textTransform: 'uppercase',
-                  letterSpacing: '0.5px'
+                  letterSpacing: '0.5px',
+                  fontFamily: '"Poppins", sans-serif'
                 }}
               >
                 Categories
@@ -381,6 +388,7 @@ const SearchAndFilter = ({
                       height: '40px',
                       cursor: 'pointer',
                       borderRadius: '10px',
+                      fontFamily: '"Poppins", sans-serif',
                       '&:hover': {
                         backgroundColor: category === cat.value ? '#B88A2A' : '#e0e0e0'
                       },
@@ -400,7 +408,8 @@ const SearchAndFilter = ({
                   color: '#333333',
                   mb: 2,
                   textTransform: 'uppercase',
-                  letterSpacing: '0.5px'
+                  letterSpacing: '0.5px',
+                  fontFamily: '"Poppins", sans-serif'
                 }}
               >
                 Subcategories
@@ -428,6 +437,7 @@ const SearchAndFilter = ({
                       height: '40px',
                       cursor: 'pointer',
                       borderRadius: '10px',
+                      fontFamily: '"Poppins", sans-serif',
                       '&:hover': {
                         backgroundColor: subcategory === subcat.value ? '#B88A2A' : '#e0e0e0'
                       },
@@ -447,7 +457,8 @@ const SearchAndFilter = ({
                   color: '#333333',
                   mb: 2,
                   textTransform: 'uppercase',
-                  letterSpacing: '0.5px'
+                  letterSpacing: '0.5px',
+                  fontFamily: '"Poppins", sans-serif'
                 }}
               >
                 View By
@@ -482,6 +493,7 @@ const SearchAndFilter = ({
                       height: '40px',
                       cursor: 'pointer',
                       borderRadius: '10px',
+                      fontFamily: '"Poppins", sans-serif',
                       '&:hover': {
                         backgroundColor: viewBy === option.value ? '#B88A2A' : '#e0e0e0'
                       },
@@ -518,7 +530,8 @@ const SearchAndFilter = ({
                   sx={{
                     fontSize: '0.95rem',
                     color: '#333333',
-                    fontWeight: 500
+                    fontWeight: 400,
+                    fontFamily: '"Poppins", sans-serif'
                   }}
                 >
                   Store Offers
@@ -541,7 +554,8 @@ const SearchAndFilter = ({
                   sx={{
                     fontSize: '0.95rem',
                     color: '#333333',
-                    fontWeight: 500
+                    fontWeight: 400,
+                    fontFamily: '"Poppins", sans-serif'
                   }}
                 >
                   Accepts Giga Gift Card
@@ -606,7 +620,8 @@ const SearchAndFilter = ({
                 id="category-label" 
                 sx={{ 
                   fontSize: { sm: '0.875rem' },
-                  color: { sm: '#666666', lg: '#ffffff' }
+                  color: { sm: '#666666', lg: '#ffffff' },
+                  fontFamily: '"Poppins", sans-serif'
                 }}
               >
                 Category
@@ -628,13 +643,14 @@ const SearchAndFilter = ({
                   },
                   fontSize: { sm: '0.875rem' },
                   color: { sm: '#333333', lg: '#ffffff' },
+                  fontFamily: '"Poppins", sans-serif',
                   '& .MuiSvgIcon-root': {
                     color: { sm: '#333333', lg: '#ffffff' }
                   }
                 }}
               >
                 {categoryOptions.map((cat) => (
-                  <MenuItem key={cat.value} value={cat.value}>
+                  <MenuItem key={cat.value} value={cat.value} sx={{ fontFamily: '"Poppins", sans-serif' }}>
                     {cat.label}
                   </MenuItem>
                 ))}
@@ -647,7 +663,8 @@ const SearchAndFilter = ({
                 id="subcategory-label" 
                 sx={{ 
                   fontSize: { sm: '0.875rem' },
-                  color: { sm: '#666666', lg: '#ffffff' }
+                  color: { sm: '#666666', lg: '#ffffff' },
+                  fontFamily: '"Poppins", sans-serif'
                 }}
               >
                 Subcategory
@@ -669,13 +686,14 @@ const SearchAndFilter = ({
                   },
                   fontSize: { sm: '0.875rem' },
                   color: { sm: '#333333', lg: '#ffffff' },
+                  fontFamily: '"Poppins", sans-serif',
                   '& .MuiSvgIcon-root': {
                     color: { sm: '#333333', lg: '#ffffff' }
                   }
                 }}
               >
                 {subcategoryOptions.map((subcat) => (
-                  <MenuItem key={subcat.value} value={subcat.value}>
+                  <MenuItem key={subcat.value} value={subcat.value} sx={{ fontFamily: '"Poppins", sans-serif' }}>
                     {subcat.label}
                   </MenuItem>
                 ))}
@@ -688,7 +706,8 @@ const SearchAndFilter = ({
                 id="viewby-label" 
                 sx={{ 
                   fontSize: { sm: '0.875rem' },
-                  color: { sm: '#666666', lg: '#ffffff' }
+                  color: { sm: '#666666', lg: '#ffffff' },
+                  fontFamily: '"Poppins", sans-serif'
                 }}
               >
                 View by 0-9
@@ -710,17 +729,18 @@ const SearchAndFilter = ({
                   },
                   fontSize: { sm: '0.875rem' },
                   color: { sm: '#333333', lg: '#ffffff' },
+                  fontFamily: '"Poppins", sans-serif',
                   '& .MuiSvgIcon-root': {
                     color: { sm: '#333333', lg: '#ffffff' }
                   }
                 }}
               >
-                <MenuItem value="">All</MenuItem>
-                <MenuItem value="0-9">0-9</MenuItem>
-                <MenuItem value="a-f">A-F</MenuItem>
-                <MenuItem value="g-l">G-L</MenuItem>
-                <MenuItem value="m-r">M-R</MenuItem>
-                <MenuItem value="s-z">S-Z</MenuItem>
+                <MenuItem value="" sx={{ fontFamily: '"Poppins", sans-serif' }}>All</MenuItem>
+                <MenuItem value="0-9" sx={{ fontFamily: '"Poppins", sans-serif' }}>0-9</MenuItem>
+                <MenuItem value="a-f" sx={{ fontFamily: '"Poppins", sans-serif' }}>A-F</MenuItem>
+                <MenuItem value="g-l" sx={{ fontFamily: '"Poppins", sans-serif' }}>G-L</MenuItem>
+                <MenuItem value="m-r" sx={{ fontFamily: '"Poppins", sans-serif' }}>M-R</MenuItem>
+                <MenuItem value="s-z" sx={{ fontFamily: '"Poppins", sans-serif' }}>S-Z</MenuItem>
               </Select>
             </FormControl>
           </Box>
@@ -750,7 +770,8 @@ const SearchAndFilter = ({
                 sx={{
                   fontSize: '0.9rem',
                   color: { md: '#333333', lg: '#ffffff' },
-                  fontWeight: 500
+                  fontWeight: 400,
+                  fontFamily: '"Poppins", sans-serif'
                 }}
               >
                 Store Offers
@@ -773,7 +794,8 @@ const SearchAndFilter = ({
                 sx={{
                   fontSize: '0.9rem',
                   color: { md: '#333333', lg: '#ffffff' },
-                  fontWeight: 500
+                  fontWeight: 400,
+                  fontFamily: '"Poppins", sans-serif'
                 }}
               >
                 Accepts Giga Gift Card

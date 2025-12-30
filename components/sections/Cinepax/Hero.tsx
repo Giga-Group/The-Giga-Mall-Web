@@ -72,7 +72,7 @@ export default function Hero() {
           sx={{
             fontFamily: '"Arvo", serif',
             fontSize: { xs: "2.5rem", sm: "3rem", md: "3.5rem", lg: "4rem" },
-            fontWeight: 400,
+            fontWeight: 700,
             color: "#ffffff",
             marginBottom: { xs: "16px", md: "20px" },
             letterSpacing: "0.02em",
@@ -85,9 +85,9 @@ export default function Hero() {
         <Typography
           variant="h2"
           sx={{
-            fontFamily: '"Arvo", serif',
+            fontFamily: '"Poppins", sans-serif',
             fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.5rem", lg: "3rem" },
-            fontWeight: 300,
+            fontWeight: 500,
             color: "#ffffff",
             marginBottom: { xs: "24px", md: "32px" },
             letterSpacing: "0.05em",

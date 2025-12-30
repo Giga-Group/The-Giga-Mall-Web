@@ -28,50 +28,53 @@ type TabType = (typeof tabs)[number];
 const movieData: Record<TabType, MovieCardData[]> = {
   "Now Showing": [
     {
-      image:
-        "https://www.impawards.com/2025/posters/avatar_fire_and_ash_ver2_xxlg.jpg",
-      label: "NOW SHOWING",
-      title: "Avatar: Fire and Ash",
+      image: "/avatar.jpeg",
+      title: "Avatar",
       details: "Action • Adventure • Sci-Fi • 3h 17m",
-      buttonText: "Select Showtime at Giga Mall",
+      buttonText: "Book Now",
     },
     {
-      image: "https://www.impawards.com/2025/posters/anaconda_ver3_xxlg.jpg",
-      label: "NOW SHOWING",
+      image: "/anacona_1.jpg",
       title: "Anaconda",
       details: "Action • Comedy • Horror • 1h 39m",
-      buttonText: "Select Showtime at Giga Mall",
+      buttonText: "Book Now",
     },
     {
-      image: "https://www.impawards.com/2025/posters/marty_supreme_xxlg.jpg",
-      label: "NOW SHOWING",
+      image: "/marty supreme_1.jpg",
       title: "Marty Supreme",
       details: "Drama • Sport • 2h 30m",
-      buttonText: "Select Showtime at Giga Mall",
+      buttonText: "Book Now",
+    },
+    {
+      image: "/gladiator II.jpg",
+      title: "Gladiator II",
+      details: "Action • Drama • Epic • 2h 45m",
+      buttonText: "Book Now",
     },
   ],
   "Coming Soon": [
     {
-      image:
-        "https://www.impawards.com/2026/posters/greenland_migration_xxlg.jpg",
-      label: "COMING SOON",
+      image: "/greenland2_1.jpg",
       title: "Greenland 2: Migration",
       details: "Action • Thriller • January 9, 2026",
       buttonText: "Get Notified",
     },
     {
-      image:
-        "https://www.impawards.com/2026/posters/twenty_eight_years_later_the_bone_temple_xxlg.jpg",
-      label: "COMING SOON",
+      image: "/the bone temple_1.jpg",
       title: "28 Years Later: The Bone Temple",
       details: "Horror • January 16, 2026",
       buttonText: "Get Notified",
     },
     {
-      image: "https://www.impawards.com/2026/posters/primate_xxlg.jpg",
-      label: "COMING SOON",
+      image: "/primate_1.jpg",
       title: "Primate",
       details: "Horror • Sci-Fi • January 2026",
+      buttonText: "Get Notified",
+    },
+    {
+      image: "/avatar 3.jpg",
+      title: "Avatar 3",
+      details: "Action • Adventure • Sci-Fi • December 2026",
       buttonText: "Get Notified",
     },
   ],
@@ -109,20 +112,6 @@ export default function MoviesEvents() {
 
   return (
     <Container maxWidth="xl" sx={{ py: { xs: 8, md: 12 } }}>
-      {/* Title */}
-      <Typography
-        sx={{
-          fontFamily: '"Arvo", serif',
-          fontSize: { xs: "2.2rem", md: "3rem" },
-          color: "#D19F3B",
-          textAlign: "center",
-          mb: { xs: 6, md: 8 },
-          letterSpacing: "0.02em",
-        }}
-      >
-        Movies & Events at Cinepax Giga Mall
-      </Typography>
-
       {/* Tabs */}
       <Box
         sx={{
@@ -131,8 +120,6 @@ export default function MoviesEvents() {
           justifyContent: "center",
           gap: 2,
           mb: { xs: 6, md: 8 },
-          borderBottom: "2px solid #eee",
-          pb: 2,
         }}
       >
         {tabs.map((tab) => (
@@ -140,8 +127,9 @@ export default function MoviesEvents() {
             key={tab}
             onClick={() => setActiveTab(tab)}
             sx={{
-              fontFamily: '"Arvo", serif',
+              fontFamily: '"Poppins", sans-serif',
               fontSize: { xs: "1.1rem", md: "1.4rem" },
+              fontWeight: 600,
               color: activeTab === tab ? "#D19F3B" : "#666",
               textTransform: "none",
               position: "relative",
@@ -168,7 +156,7 @@ export default function MoviesEvents() {
       <Box
         sx={{
           display: "grid",
-          gridTemplateColumns: { xs: "repeat(auto-fill, minmax(280px, 1fr))", md: "repeat(3, 1fr)" },
+          gridTemplateColumns: { xs: "repeat(auto-fill, minmax(280px, 1fr))", md: "repeat(4, 1fr)" },
           gap: { xs: 4, md: 6 },
         }}
       >
@@ -186,7 +174,7 @@ export default function MoviesEvents() {
       </Box>
 
       {/* View All Button */}
-      <Box sx={{ textAlign: "center", mt: { xs: 8, md: 10 } }}>
+      <Box sx={{ textAlign: "center", mt: { xs: 8, lg: 5 } }}>
         <Button
           onClick={handleOpenViewAllModal}
           variant="outlined"
@@ -194,12 +182,12 @@ export default function MoviesEvents() {
             border: "2px solid #D19F3B",
             color: "#D19F3B",
             px: 6,
-            py: 1.8,
+            py: 1,
             borderRadius: 0,
             fontSize: "1.1rem",
             letterSpacing: "0.1em",
-            fontFamily: '"Jost", sans-serif',
-            fontWeight: 500,
+            fontFamily: '"Poppins", sans-serif',
+            fontWeight: 600,
             textTransform: "none",
             transition: "all 0.4s ease",
             "&:hover": {
@@ -223,11 +211,11 @@ export default function MoviesEvents() {
             <IconButton onClick={handleCloseViewAllModal} sx={{ position: "absolute", right: 16, top: 16, color: "#666" }}>
               <CloseIcon />
             </IconButton>
-            <Typography variant="h3" sx={{ fontFamily: '"Playfair Display", serif', color: "#D19F3B", textAlign: "center", mb: 3, fontSize: { xs: "2.2rem", md: "2.8rem" } }}>
+            <Typography variant="h3" sx={{ fontFamily: '"Arvo", serif', fontWeight: 700, color: "#D19F3B", textAlign: "center", mb: 3, fontSize: { xs: "2.2rem", md: "2.8rem" } }}>
               All {activeTab} at Giga Mall
             </Typography>
             {/* Simplified content for single location */}
-            <Typography sx={{ textAlign: "center", color: "#666", mt: 4 }}>
+            <Typography sx={{ fontFamily: '"Quicksand", sans-serif', textAlign: "center", color: "#666", mt: 4 }}>
               Full listings coming soon for Cinepax Giga Mall, Rawalpindi.
             </Typography>
           </Paper>
@@ -244,19 +232,19 @@ export default function MoviesEvents() {
 
             {selectedMovie && (
               <>
-                <Typography variant="h4" sx={{ fontFamily: '"Playfair Display", serif', color: "#D19F3B", mb: 3, textAlign: "center" }}>
+                <Typography variant="h4" sx={{ fontFamily: '"Poppins", sans-serif', fontWeight: 700, color: "#D19F3B", mb: 3, textAlign: "center" }}>
                   {selectedMovie.title}
                 </Typography>
 
                 {/* Giga Mall Info Box */}
                 <Box sx={{ mb: 4, p: 3, bgcolor: "rgba(209,159,59,0.08)", borderRadius: "12px" }}>
-                  <Typography variant="h6" sx={{ color: "#D19F3B", mb: 2 }}>
+                  <Typography variant="h6" sx={{ fontFamily: '"Poppins", sans-serif', fontWeight: 600, color: "#D19F3B", mb: 2 }}>
                     Location: Cinepax Giga Mall, Rawalpindi
                   </Typography>
-                  <Typography sx={{ mb: 1, color: "#333" }}>
+                  <Typography sx={{ fontFamily: '"Quicksand", sans-serif', mb: 1, color: "#333" }}>
                     <strong>Address:</strong> {GIGA_MALL_INFO.address}
                   </Typography>
-                  <Typography sx={{ mb: 2, color: "#333" }}>
+                  <Typography sx={{ fontFamily: '"Quicksand", sans-serif', mb: 2, color: "#333" }}>
                     <strong>Contact:</strong> {GIGA_MALL_INFO.phone}
                   </Typography>
                   <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
@@ -281,7 +269,7 @@ export default function MoviesEvents() {
                 </Box>
 
                 <Box sx={{ textAlign: "center", mt: 4 }}>
-                  <Typography variant="h6" sx={{ mb: 3, color: "#333" }}>
+                  <Typography variant="h6" sx={{ fontFamily: '"Poppins", sans-serif', fontWeight: 600, mb: 3, color: "#333" }}>
                     Available Showtimes (Sample)
                   </Typography>
                   <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2, justifyContent: "center" }}>
@@ -302,7 +290,7 @@ export default function MoviesEvents() {
                   </Box>
                 </Box>
 
-                <Typography sx={{ textAlign: "center", mt: 6, color: "#888", fontStyle: "italic", fontSize: "0.9rem" }}>
+                <Typography sx={{ fontFamily: '"Quicksand", sans-serif', textAlign: "center", mt: 6, color: "#888", fontStyle: "italic", fontSize: "0.9rem" }}>
                   Online booking system coming soon. Stay tuned!
                 </Typography>
               </>

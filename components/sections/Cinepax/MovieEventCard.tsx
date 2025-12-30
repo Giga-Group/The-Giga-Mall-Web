@@ -1,6 +1,5 @@
 import { Box, Typography, Button } from "@mui/material";
 import Image from "next/image";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default function MovieEventCard({
   image,
@@ -23,7 +22,6 @@ export default function MovieEventCard({
         display: "flex",
         flexDirection: "column",
         bgcolor: "rgba(0,0,0,0.04)",
-        borderRadius: "12px",
         overflow: "hidden",
         boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
         transition: "all 0.4s ease",
@@ -33,7 +31,7 @@ export default function MovieEventCard({
         },
       }}
     >
-      <Box sx={{ position: "relative", height: { xs: 260, md: 320 } }}>
+      <Box sx={{ position: "relative", height: { xs: 380, md: 450 }, width: "100%", overflow: "hidden" }}>
         <Image
           src={image}
           alt={title}
@@ -62,13 +60,14 @@ export default function MovieEventCard({
         )}
       </Box>
 
-      <Box sx={{ p: 4, flexGrow: 1, display: "flex", flexDirection: "column" }}>
+      <Box sx={{ p: 3, flexGrow: 1, display: "flex", flexDirection: "column" }}>
         <Typography
           sx={{
-            fontFamily: '"Playfair Display", serif',
-            fontSize: { xs: "1.4rem", md: "1.6rem" },
+            fontFamily: '"Poppins", sans-serif',
+            fontWeight: 600,
+            fontSize: { xs: "1.1rem", md: "1.2rem" },
             color: "#222",
-            mb: 2,
+            mb: 1.5,
             lineHeight: 1.3,
           }}
         >
@@ -77,11 +76,11 @@ export default function MovieEventCard({
 
         <Typography
           sx={{
-            fontFamily: '"Jost", sans-serif',
-            fontSize: "1rem",
+            fontFamily: '"Quicksand", sans-serif',
+            fontSize: { xs: "0.85rem", md: "0.9rem" },
             color: "#555",
-            mb: 4,
-            lineHeight: 1.7,
+            mb: 3,
+            lineHeight: 1.6,
             flexGrow: 1,
           }}
         >
@@ -90,25 +89,24 @@ export default function MovieEventCard({
 
         <Button
           onClick={onButtonClick}
-          variant="outlined"
-          endIcon={<ArrowForwardIcon sx={{ fontSize: "18px !important" }} />}
+          variant="contained"
+          fullWidth
           sx={{
-            alignSelf: "flex-start",
+            bgcolor: "#D19F3B",
+            color: "white",
             border: "2px solid #D19F3B",
-            color: "#D19F3B",
-            fontFamily: '"Jost", sans-serif',
-            fontWeight: 500,
-            fontSize: "0.95rem",
-            letterSpacing: "0.08em",
+            fontFamily: '"Poppins", sans-serif',
+            fontWeight: 600,
+            fontSize: { xs: "0.8rem", md: "0.85rem" },
+            letterSpacing: "0.05em",
             textTransform: "none",
             borderRadius: 0,
-            px: 4,
-            py: 1.4,
+            py: 1,
+            justifyContent: "center",
             transition: "all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1)",
             "&:hover": {
-              bgcolor: "#D19F3B",
-              color: "white",
-              borderColor: "#D19F3B",
+              bgcolor: "#B88A2E",
+              borderColor: "#B88A2E",
               transform: "translateY(-3px)",
               boxShadow: "0 8px 20px rgba(209, 159, 59, 0.3)",
             },

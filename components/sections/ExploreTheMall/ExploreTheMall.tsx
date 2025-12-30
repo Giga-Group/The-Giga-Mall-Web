@@ -54,7 +54,8 @@ const ExploreTheMall = () => {
               // mb: { xs: 2, sm: 3, md: 4, lg: 2 },
               lineHeight: 1.6,
               textAlign: { xs: 'center', lg: 'left' },
-              px: { xs: 1, sm: 0 }
+              px: { xs: 1, sm: 0 },
+              fontFamily: '"Quicksand", sans-serif'
             }}
           >
             Every store covered. Plan your visit with our interactive map.
@@ -78,6 +79,7 @@ const ExploreTheMall = () => {
                 fontSize: { xs: '0.85rem', sm: '0.95rem', md: '0.9rem', lg: '0.9rem' },
                 color: '#D19F3B',
                 fontWeight: 500,
+                fontFamily: '"Poppins", sans-serif',
                 textDecoration: 'underline',
                 cursor: 'pointer',
                 // mt: { xs: 2, sm: 2.5, lg: 1.5 },
@@ -124,7 +126,8 @@ const ExploreTheMall = () => {
               color: '#666666',
               mb: { xs: 1.5, sm: 2, md: 2.5 },
               lineHeight: 1.6,
-              textAlign: 'left'
+              textAlign: 'left',
+              fontFamily: '"Quicksand", sans-serif'
             }}
           >
             Located throughout Giga Mall you will find guest service desks where our team will be delighted to assist you with any of your queries or questions.
@@ -136,7 +139,8 @@ const ExploreTheMall = () => {
               color: '#666666',
               mb: { xs: 1.5, sm: 2, md: 2.5 },
               lineHeight: 1.6,
-              textAlign: 'left'
+              textAlign: 'left',
+              fontFamily: '"Quicksand", sans-serif'
             }}
           >
             To make your experience exceptional, make the most of our range of services, including -
@@ -170,7 +174,8 @@ const ExploreTheMall = () => {
                   color: '#666666',
                   mb: { xs: 1, sm: 1.25 },
                   lineHeight: 1.6,
-                  width: '100%'
+                  width: '100%',
+                  fontFamily: '"Quicksand", sans-serif'
                 }}
               >
                 <Box
@@ -195,6 +200,7 @@ const ExploreTheMall = () => {
                 fontSize: { xs: '0.85rem', sm: '0.95rem', md: '0.9rem', lg: '0.9rem' },
                 color: '#D19F3B',
                 fontWeight: 500,
+                fontFamily: '"Poppins", sans-serif',
                 textDecoration: 'underline',
                 cursor: 'pointer',
                 textAlign: 'left',

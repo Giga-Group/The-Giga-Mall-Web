@@ -483,6 +483,7 @@ function EventsContent() {
                     textTransform: 'uppercase',
                     fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem' },
                     fontWeight: 400,
+                    fontFamily: '"Poppins", sans-serif',
                     letterSpacing: '0.1em',
                     padding: { xs: '12px 40px', sm: '14px 50px', md: '16px 60px' },
                     borderRadius: 0,

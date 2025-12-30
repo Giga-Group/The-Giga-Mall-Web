@@ -148,7 +148,8 @@ const DineDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: DineDropdownProps)
               textTransform: 'uppercase',
               color: '#000000',
               marginBottom: { xs: '10px', md: '12px', lg: '16px' },
-              letterSpacing: '0.5px'
+              letterSpacing: '0.5px',
+              fontFamily: '"Poppins", sans-serif'
             }}
           >
             TOP PICKS
@@ -163,6 +164,7 @@ const DineDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: DineDropdownProps)
                   textDecoration: 'none',
                   fontSize: { xs: '13px', md: '14px', lg: '13px' },
                   fontWeight: 400,
+                  fontFamily: '"Poppins", sans-serif',
                   transition: 'color 0.2s ease',
                   cursor: 'pointer',
                   '&:hover': {
@@ -192,7 +194,8 @@ const DineDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: DineDropdownProps)
               textTransform: 'uppercase',
               color: '#000000',
               marginBottom: { xs: '10px', md: '12px', lg: '16px' },
-              letterSpacing: '0.5px'
+              letterSpacing: '0.5px',
+              fontFamily: '"Poppins", sans-serif'
             }}
           >
             CATEGORIES
@@ -207,6 +210,7 @@ const DineDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: DineDropdownProps)
                   textDecoration: 'none',
                   fontSize: { xs: '13px', md: '14px', lg: '13px' },
                   fontWeight: 400,
+                  fontFamily: '"Poppins", sans-serif',
                   transition: 'color 0.2s ease',
                   cursor: 'pointer',
                   '&:hover': {
@@ -236,7 +240,8 @@ const DineDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: DineDropdownProps)
               textTransform: 'uppercase',
               color: '#000000',
               marginBottom: { xs: '10px', md: '12px', lg: '16px' },
-              letterSpacing: '0.5px'
+              letterSpacing: '0.5px',
+              fontFamily: '"Poppins", sans-serif'
             }}
           >
             OCCASIONS
@@ -252,6 +257,7 @@ const DineDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: DineDropdownProps)
                   textDecoration: 'none',
                   fontSize: { xs: '13px', md: '14px', lg: '13px' },
                   fontWeight: 400,
+                  fontFamily: '"Poppins", sans-serif',
                   transition: 'color 0.2s ease',
                   cursor: 'pointer',
                   '&:hover': {
@@ -278,7 +284,8 @@ const DineDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: DineDropdownProps)
               textTransform: 'uppercase',
               color: '#000000',
               marginBottom: { xs: '10px', md: '12px', lg: '16px' },
-              letterSpacing: '0.5px'
+              letterSpacing: '0.5px',
+              fontFamily: '"Poppins", sans-serif'
             }}
           >
             IN THE SPOTLIGHT
@@ -310,7 +317,8 @@ const DineDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: DineDropdownProps)
               fontSize: { xs: '12px', md: '13px', lg: '13px' },
               color: '#000000',
               marginBottom: { xs: '10px', md: '12px', lg: '12px' },
-              lineHeight: 1.5
+              lineHeight: 1.5,
+              fontFamily: '"Poppins", sans-serif'
             }}
           >
             Discover the finest dining experiences at Giga Mall, featuring world-class restaurants and culinary delights...
@@ -323,6 +331,7 @@ const DineDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: DineDropdownProps)
               textDecoration: 'underline',
               fontSize: { xs: '12px', md: '13px', lg: '13px' },
               fontWeight: 400,
+              fontFamily: '"Poppins", sans-serif',
               transition: 'color 0.2s ease',
               cursor: 'pointer',
               '&:hover': {
@@ -359,6 +368,7 @@ const DineDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: DineDropdownProps)
             textTransform: 'uppercase',
             fontSize: { xs: '12px', md: '13px', lg: '14px' },
             fontWeight: 500,
+            fontFamily: '"Poppins", sans-serif',
             padding: { xs: '10px 20px', md: '10px 24px', lg: '2px 600px' },
             borderRadius: 0,
             transition: 'all 0.3s ease',

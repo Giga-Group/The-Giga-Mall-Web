@@ -19,7 +19,7 @@ export default function Features() {
 
   return (
     <Container maxWidth="lg" sx={{ py: { xs: 8, md: 12 } }}>
-      <Typography sx={{ fontFamily: '"Playfair Display", serif', fontSize: { xs: "2rem", md: "2.8rem" }, color: "#D19F3B", textAlign: "center", mb: { xs: 6, md: 8 } }}>
+      <Typography sx={{ fontFamily: '"Arvo", serif', fontWeight: 700, fontSize: { xs: "2rem", md: "2.8rem" }, color: "#D19F3B", textAlign: "center", mb: { xs: 6, md: 8 } }}>
         Why Choose Cinepax
       </Typography>
 

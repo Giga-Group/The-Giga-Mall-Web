@@ -348,7 +348,8 @@ const OurPicks = ({ picks = defaultPicks, basePath = '/shop' }: OurPicksProps) =
                           color: '#ffffff',
                           fontWeight: 500,
                           fontSize: '0.9rem',
-                          textAlign: 'center'
+                          textAlign: 'center',
+                          fontFamily: '"Poppins", sans-serif'
                         }}
                       >
                         {pick.name}
@@ -447,7 +448,8 @@ const OurPicks = ({ picks = defaultPicks, basePath = '/shop' }: OurPicksProps) =
                     color: '#ffffff',
                     fontWeight: 500,
                     fontSize: '1.1rem',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    fontFamily: '"Poppins", sans-serif'
                   }}
                 >
                   {pick.name}

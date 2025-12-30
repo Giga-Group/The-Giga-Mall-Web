@@ -66,6 +66,7 @@ const PlanVisitDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: PlanVisitDrop
               textDecoration: 'none',
               fontSize: { md: '14px', lg: '16px' },
               fontWeight: 400,
+              fontFamily: '"Poppins", sans-serif',
               padding: { md: '8px 0', lg: '10px 0' },
               transition: 'color 0.2s ease',
               '&:hover': {

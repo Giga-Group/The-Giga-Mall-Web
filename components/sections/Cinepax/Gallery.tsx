@@ -10,7 +10,7 @@ const galleryImages = [
 export default function Gallery() {
   return (
     <Container maxWidth="xl" sx={{ py: { xs: 8, md: 12 } }}>
-      <Typography sx={{ fontFamily: '"Playfair Display", serif', fontSize: { xs: "2.2rem", md: "3rem" }, color: "#D19F3B", textAlign: "center", mb: { xs: 6, md: 8 }, letterSpacing: "0.02em" }}>
+      <Typography sx={{ fontFamily: '"Arvo", serif', fontWeight: 700, fontSize: { xs: "2.2rem", md: "3rem" }, color: "#D19F3B", textAlign: "center", mb: { xs: 6, md: 8 }, letterSpacing: "0.02em" }}>
         Inside Cinepax
       </Typography>
 
@@ -22,7 +22,7 @@ export default function Gallery() {
         ))}
       </Box>
 
-      <Typography sx={{ fontFamily: '"Jost", sans-serif', fontSize: { xs: "1rem", md: "1.1rem" }, color: "#666", textAlign: "center", mt: { xs: 4, md: 6 }, fontStyle: "italic", maxWidth: "800px", mx: "auto", lineHeight: 1.7 }}>
+      <Typography sx={{ fontFamily: '"Quicksand", sans-serif', fontSize: { xs: "1rem", md: "1.1rem" }, color: "#666", textAlign: "center", mt: { xs: 4, md: 6 }, fontStyle: "italic", maxWidth: "800px", mx: "auto", lineHeight: 1.7 }}>
         Immerse yourself in luxury — state-of-the-art screens, plush recliners, and an ambiance designed for the ultimate movie experience.
       </Typography>
     </Container>

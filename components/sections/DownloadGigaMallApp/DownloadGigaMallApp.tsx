@@ -89,7 +89,7 @@ const DownloadGigaMallApp = () => {
                 lineHeight: 1.6,
               }}
             >
-              With so much to discover, Giga Mall app is your pocket-sized guide to making the most of your visit. Available for both iOS and Android, the simple-to-use app offers personalised content, the latest news and events, real-time parking information, and much more.
+              With so much to discover, Giga Mall  123app is your pocket-sized guide to making the most of your visit. Available for both iOS and Android, the simple-to-use app offers personalised content, the latest news and events, real-time parking information, and much more.
             </Typography>
 
             {/* App Store Badges */}

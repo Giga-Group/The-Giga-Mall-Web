@@ -122,7 +122,8 @@ const EntertainDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: EntertainDrop
                   fontWeight: 400,
                   textAlign: 'center',
                   transition: 'color 0.2s ease',
-                  lineHeight: 1.4
+                  lineHeight: 1.4,
+                  fontFamily: '"Poppins", sans-serif'
                 }}
               >
                 {option.name}
@@ -153,6 +154,7 @@ const EntertainDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: EntertainDrop
             textTransform: 'uppercase',
             fontSize: { md: '13px', lg: '14px' },
             fontWeight: 500,
+            fontFamily: '"Poppins", sans-serif',
             padding: { md: '10px 24px', lg: '2px 570px' },
             borderRadius: 0,
             transition: 'all 0.3s ease',

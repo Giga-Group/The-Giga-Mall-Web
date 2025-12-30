@@ -1,97 +1,183 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Typography, Button } from "@mui/material";
 import Image from "next/image";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import PhoneIcon from "@mui/icons-material/Phone";
 
 export default function About() {
   return (
-    <Container maxWidth="xl" sx={{ py: { xs: 8, md: 12 } }}>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: { xs: "column", md: "row" },
-          gap: { xs: 6, md: 8 },
-          alignItems: "center",
-        }}
-      >
-        {/* Image Section with Hover Effect */}
+    <Box sx={{ bgcolor: "#ffffff", py: { xs: 8, md: 10 } }}>
+      <Container maxWidth="xl">
         <Box
           sx={{
-            width: { xs: "100%", md: "80%" },
-            height: { xs: 320, sm: 400, md: 450 },
-            position: "relative",
-            borderRadius: { xs: "16px", md: "24px" },
-            overflow: "hidden",
-            boxShadow: "0 12px 32px rgba(0,0,0,0.15)",
-            transition: "all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1)",
-            "&:hover": {
-              transform: "translateY(-12px)",
-              boxShadow: "0 24px 48px rgba(0,0,0,0.25)",
-            },
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
+            gap: { xs: 6, md: 8 },
+            mb: { xs: 6, md: 8 },
           }}
         >
-          <Image
-            src="/Cinepax/c1.jpg"
-            alt="Cinepax Premium Interior"
-            fill
-            priority
-            style={{
-              objectFit: "cover",
-              transition: "transform 0.8s ease",
-            }}
-            onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.08)")}
-            onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-          />
+          {/* Left Section - Text Content */}
+          <Box sx={{ width: { xs: "100%", md: "50%" } }}>
+            <Typography
+              sx={{
+                fontFamily: '"Arvo", serif',
+                fontWeight: 700,
+                fontSize: { xs: "2rem", md: "2.8rem" },
+                color: "#D19F3B",
+                mb: { xs: 3, md: 4 },
+                lineHeight: 1.2,
+              }}
+            >
+              About Cinepax
+            </Typography>
 
-          {/* Optional subtle overlay on hover */}
-          <Box
-            sx={{
-              position: "absolute",
-              inset: 0,
-              background: "linear-gradient(to top, rgba(209,159,59,0.1) 0%, transparent 50%)",
-              opacity: 0,
-              transition: "opacity 0.5s ease",
-              pointerEvents: "none",
-              "&:hover": { opacity: 1 },
-            }}
-          />
+            <Typography
+              sx={{
+                fontFamily: '"Quicksand", sans-serif',
+                fontSize: { xs: "1rem", md: "1.1rem" },
+                lineHeight: 1.7,
+                color: "#444",
+                mb: { xs: 4, md: 5 },
+              }}
+            >
+              Cinepax Cinemas offers world-class movie experiences with cutting-edge sound, comfort seating, and premium visuals.
+            </Typography>
+
+            {/* Contact Information */}
+            <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 2.5, md: 3 } }}>
+              {/* Visit Us */}
+              <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                <LocationOnIcon sx={{ color: "#D19F3B", fontSize: { xs: 24, md: 28 } }} />
+                <Box>
+                  <Typography
+                    sx={{
+                      fontFamily: '"Poppins", sans-serif',
+                      fontWeight: 600,
+                      fontSize: { xs: "0.9rem", md: "1rem" },
+                      color: "#222",
+                      mb: 0.5,
+                    }}
+                  >
+                    Visit Us
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontFamily: '"Quicksand", sans-serif',
+                      fontSize: { xs: "0.9rem", md: "1rem" },
+                      color: "#666",
+                    }}
+                  >
+                    Giga Mall - Cinepax
+                  </Typography>
+                </Box>
+              </Box>
+
+              {/* Opening Hours */}
+              <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                <AccessTimeIcon sx={{ color: "#D19F3B", fontSize: { xs: 24, md: 28 } }} />
+                <Box>
+                  <Typography
+                    sx={{
+                      fontFamily: '"Poppins", sans-serif',
+                      fontWeight: 600,
+                      fontSize: { xs: "0.9rem", md: "1rem" },
+                      color: "#222",
+                      mb: 0.5,
+                    }}
+                  >
+                    Opening Hours
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontFamily: '"Quicksand", sans-serif',
+                      fontSize: { xs: "0.9rem", md: "1rem" },
+                      color: "#666",
+                    }}
+                  >
+                    11:00 AM - 12:00 AM
+                  </Typography>
+                </Box>
+              </Box>
+
+              {/* Call Us */}
+              <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+                <PhoneIcon sx={{ color: "#D19F3B", fontSize: { xs: 24, md: 28 } }} />
+                <Box>
+                  <Typography
+                    sx={{
+                      fontFamily: '"Poppins", sans-serif',
+                      fontWeight: 600,
+                      fontSize: { xs: "0.9rem", md: "1rem" },
+                      color: "#222",
+                      mb: 0.5,
+                    }}
+                  >
+                    Call Us
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontFamily: '"Quicksand", sans-serif',
+                      fontSize: { xs: "0.9rem", md: "1rem" },
+                      color: "#666",
+                    }}
+                  >
+                    +92 51 111 246 372
+                  </Typography>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+
+          {/* Right Section - Image */}
+          <Box sx={{ width: { xs: "100%", md: "50%" } }}>
+            {/* Cinema Interior Image */}
+            <Box
+              sx={{
+                width: "100%",
+                height: { xs: 300, sm: 400, md: 500 },
+                position: "relative",
+                borderRadius: "8px",
+                overflow: "hidden",
+                boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+              }}
+            >
+              <Image
+                src="/Cinepax/auditorium.jpg"
+                alt="Cinepax Cinema Interior"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </Box>
+          </Box>
         </Box>
 
-        {/* Text Content */}
-        <Box sx={{ width: { xs: "100%", md: "50%" } }}>
+        {/* Call to Action Banner */}
+        <Box
+          sx={{
+            background: "linear-gradient(to right, #ffffff 0%, #D19F3B 20%, #B88A2E 50%, #D19F3B 80%, #ffffff 100%)",
+            borderRadius: "8px",
+            py: { xs: 3, md: 4 },
+            px: { xs: 3, md: 4 },
+            textAlign: "center",
+            mt: { xs: 4, md: 6 },
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <Typography
             sx={{
-              fontFamily: '"Playfair Display", serif',
-              fontSize: { xs: "2.2rem", md: "3rem" },
-              color: "#D19F3B",
-              mb: { xs: 4, md: 5 },
-              lineHeight: 1.2,
-              letterSpacing: "0.02em",
+              fontFamily: '"Poppins", sans-serif',
+              fontWeight: 700,
+              fontSize: { xs: "1.2rem", md: "1.5rem" },
+              color: "#ffffff",
+              textAlign: "center",
             }}
           >
-            Welcome to Cinepax
+            Book your next movie night today!
           </Typography>
-
-          {[
-            "Cinepax is a premier cinema destination crafted for unforgettable movie-going experiences. Featuring cutting-edge projection, immersive surround sound, and thoughtfully designed seating.",
-            "From the latest blockbusters to timeless classics, Cinepax blends comfort, technology, and ambiance seamlessly. Our theaters are designed to transport you into the heart of every story.",
-            "Step into a world where luxury meets entertainment — welcome to the future of cinema.",
-          ].map((text, index) => (
-            <Box key={index} sx={{ mb: { xs: 3, md: 4 } }}>
-              <Typography
-                variant="body1"
-                sx={{
-                  fontFamily: '"Jost", "Mulish", sans-serif',
-                  fontSize: { xs: "1.05rem", md: "1.15rem" },
-                  lineHeight: 1.8,
-                  color: "#444",
-                  textAlign: { xs: "left", md: "justify" },
-                }}
-              >
-                {text}
-              </Typography>
-            </Box>
-          ))}
         </Box>
-      </Box>
-    </Container>
+      </Container>
+    </Box>
   );
 }

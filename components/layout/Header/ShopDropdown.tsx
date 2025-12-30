@@ -159,7 +159,8 @@ const ShopDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: ShopDropdownProps)
               textTransform: 'uppercase',
               color: '#000000',
               marginBottom: { xs: '10px', md: '12px', lg: '16px' },
-              letterSpacing: '0.5px'
+              letterSpacing: '0.5px',
+              fontFamily: '"Poppins", sans-serif'
             }}
           >
             FEATURED CATEGORIES
@@ -174,6 +175,7 @@ const ShopDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: ShopDropdownProps)
                   textDecoration: 'none',
                   fontSize: { xs: '13px', md: '14px', lg: '13px' },
                   fontWeight: 400,
+                  fontFamily: '"Poppins", sans-serif',
                   transition: 'color 0.2s ease',
                   cursor: 'pointer',
                   '&:hover': {
@@ -203,7 +205,8 @@ const ShopDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: ShopDropdownProps)
               textTransform: 'uppercase',
               color: '#000000',
               marginBottom: { xs: '10px', md: '12px', lg: '16px' },
-              letterSpacing: '0.5px'
+              letterSpacing: '0.5px',
+              fontFamily: '"Poppins", sans-serif'
             }}
           >
             BRAND
@@ -218,6 +221,7 @@ const ShopDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: ShopDropdownProps)
                   textDecoration: 'none',
                   fontSize: { xs: '13px', md: '14px', lg: '13px' },
                   fontWeight: 400,
+                  fontFamily: '"Poppins", sans-serif',
                   transition: 'color 0.2s ease',
                   cursor: 'pointer',
                   '&:hover': {
@@ -247,7 +251,8 @@ const ShopDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: ShopDropdownProps)
               textTransform: 'uppercase',
               color: '#000000',
               marginBottom: { xs: '10px', md: '12px', lg: '16px' },
-              letterSpacing: '0.5px'
+              letterSpacing: '0.5px',
+              fontFamily: '"Poppins", sans-serif'
             }}
           >
             OCCASIONS
@@ -263,6 +268,7 @@ const ShopDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: ShopDropdownProps)
                   textDecoration: 'none',
                   fontSize: { xs: '13px', md: '14px', lg: '13px' },
                   fontWeight: 400,
+                  fontFamily: '"Poppins", sans-serif',
                   transition: 'color 0.2s ease',
                   cursor: 'pointer',
                   '&:hover': {
@@ -289,7 +295,8 @@ const ShopDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: ShopDropdownProps)
               textTransform: 'uppercase',
               color: '#000000',
               marginBottom: { xs: '10px', md: '12px', lg: '16px' },
-              letterSpacing: '0.5px'
+              letterSpacing: '0.5px',
+              fontFamily: '"Poppins", sans-serif'
             }}
           >
             IN THE SPOTLIGHT
@@ -321,7 +328,8 @@ const ShopDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: ShopDropdownProps)
               fontSize: { xs: '12px', md: '13px', lg: '13px' },
               color: '#000000',
               marginBottom: { xs: '10px', md: '12px', lg: '12px' },
-              lineHeight: 1.5
+              lineHeight: 1.5,
+              fontFamily: '"Poppins", sans-serif'
             }}
           >
             Charizma is the latest addition to Giga Mall, located on the first floor opposite the Giga Cinepax...
@@ -334,6 +342,7 @@ const ShopDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: ShopDropdownProps)
               textDecoration: 'underline',
               fontSize: { xs: '12px', md: '13px', lg: '13px' },
               fontWeight: 400,
+              fontFamily: '"Poppins", sans-serif',
               transition: 'color 0.2s ease',
               cursor: 'pointer',
               '&:hover': {
@@ -370,6 +379,7 @@ const ShopDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: ShopDropdownProps)
             textTransform: 'uppercase',
             fontSize: { xs: '12px', md: '13px', lg: '14px' },
             fontWeight: 500,
+            fontFamily: '"Poppins", sans-serif',
             padding: { xs: '10px 20px', md: '10px 24px', lg: '2px 600px' },
             borderRadius: 0,
             transition: 'all 0.3s ease',
