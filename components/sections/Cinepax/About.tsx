@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Button } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import Image from "next/image";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
