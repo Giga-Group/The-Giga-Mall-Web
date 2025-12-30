@@ -1,10 +1,6 @@
 "use client";
 
-<<<<<<< Updated upstream
 import { useState } from "react";
-import { Box, Typography, Container, Button, Paper, TextField, MenuItem, useTheme, useMediaQuery } from "@mui/material";
-=======
-import { useState, useCallback } from "react";
 import {
   Box,
   Typography,
@@ -16,7 +12,6 @@ import {
   useTheme,
   useMediaQuery,
 } from "@mui/material";
->>>>>>> Stashed changes
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ProjectHero from "@/components/sections/ProjectHero/ProjectHero";
