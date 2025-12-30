@@ -1,7 +1,22 @@
 "use client";
 
+<<<<<<< Updated upstream
 import { useState } from "react";
 import { Box, Typography, Container, Button, Paper, TextField, MenuItem, useTheme, useMediaQuery } from "@mui/material";
+=======
+import { useState, useCallback } from "react";
+import {
+  Box,
+  Typography,
+  Container,
+  Button,
+  Paper,
+  TextField,
+  MenuItem,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
+>>>>>>> Stashed changes
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import ProjectHero from "@/components/sections/ProjectHero/ProjectHero";
@@ -61,7 +76,13 @@ export default function ProjectDetailPage({
       skipSnaps: false,
       dragFree: false,
     },
-    [Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: false })]
+    [
+      Autoplay({
+        delay: 4000,
+        stopOnInteraction: false,
+        stopOnMouseEnter: false,
+      }),
+    ]
   );
 
   // Embla carousel for mobile related projects
@@ -73,7 +94,13 @@ export default function ProjectDetailPage({
       skipSnaps: false,
       dragFree: false,
     },
-    [Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: false })]
+    [
+      Autoplay({
+        delay: 5000,
+        stopOnInteraction: false,
+        stopOnMouseEnter: false,
+      }),
+    ]
   );
 
   // Embla carousel for mobile amenities section (World-Class Amenities & Why Choose)
@@ -85,7 +112,13 @@ export default function ProjectDetailPage({
       skipSnaps: false,
       dragFree: false,
     },
-    [Autoplay({ delay: 4000, stopOnInteraction: false, stopOnMouseEnter: false })]
+    [
+      Autoplay({
+        delay: 4000,
+        stopOnInteraction: false,
+        stopOnMouseEnter: false,
+      }),
+    ]
   );
 
   // Form state
@@ -97,7 +130,9 @@ export default function ProjectDetailPage({
     message: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -121,10 +156,18 @@ export default function ProjectDetailPage({
         backgroundImage={typedProject.backgroundImage}
       />
 
-      <Container maxWidth="xl" sx={{ py: { xs: 4, md: 8 }, px: { xs: 1.5, sm: 2, md: 4 } }}>
-        
+      <Container
+        maxWidth="xl"
+        sx={{ py: { xs: 4, md: 8 }, px: { xs: 1.5, sm: 2, md: 4 } }}
+      >
         {/* Project Overview - Matching Image Design */}
-        <Box sx={{ mb: { xs: 6, md: 8 }, width: { xs: "100%", md: "70%" }, margin: "0 auto" }}>
+        <Box
+          sx={{
+            mb: { xs: 6, md: 8 },
+            width: { xs: "100%", md: "70%" },
+            margin: "0 auto",
+          }}
+        >
           <Box
             sx={{
               display: "flex",
@@ -142,7 +185,12 @@ export default function ProjectDetailPage({
               <Typography
                 variant="h1"
                 sx={{
-                  fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem", lg: "3.5rem" },
+                  fontSize: {
+                    xs: "2rem",
+                    sm: "2.5rem",
+                    md: "3rem",
+                    lg: "3.5rem",
+                  },
                   fontWeight: 400,
                   color: "#D19F3B",
                   mb: { xs: 1, md: 1.5 },
@@ -156,7 +204,12 @@ export default function ProjectDetailPage({
               <Typography
                 variant="h3"
                 sx={{
-                  fontSize: { xs: "1.2rem", sm: "1.4rem", md: "1.6rem", lg: "1.8rem" },
+                  fontSize: {
+                    xs: "1.2rem",
+                    sm: "1.4rem",
+                    md: "1.6rem",
+                    lg: "1.8rem",
+                  },
                   fontWeight: 400,
                   color: "#D19F3B",
                   mb: { xs: 3, md: 4 },
@@ -197,7 +250,7 @@ export default function ProjectDetailPage({
                 </Box>
               )}
             </Box>
-            
+
             {/* Right Sidebar - Clean Design */}
             <Box
               sx={{
@@ -232,7 +285,11 @@ export default function ProjectDetailPage({
                           sx={{
                             fontWeight: 700,
                             color: "#333",
-                            fontSize: { xs: "0.95rem", sm: "1rem", md: "1.05rem" },
+                            fontSize: {
+                              xs: "0.95rem",
+                              sm: "1rem",
+                              md: "1.05rem",
+                            },
                             flex: 1,
                             pr: 1,
                             fontFamily: '"Quicksand", sans-serif',
@@ -243,7 +300,11 @@ export default function ProjectDetailPage({
                         <Typography
                           sx={{
                             color: "#333",
-                            fontSize: { xs: "0.95rem", sm: "1rem", md: "1.05rem" },
+                            fontSize: {
+                              xs: "0.95rem",
+                              sm: "1rem",
+                              md: "1.05rem",
+                            },
                             textAlign: "right",
                             flex: 1,
                             fontWeight: 400,
@@ -291,12 +352,23 @@ export default function ProjectDetailPage({
 
         {/* Design Philosophy - Text Section */}
         {typedProject.designPhilosophy && (
-          <Box sx={{ mb: { xs: 6, md: 8 }, width: { xs: "100%", md: "70%" }, margin: "0 auto" }}>
+          <Box
+            sx={{
+              mb: { xs: 6, md: 8 },
+              width: { xs: "100%", md: "70%" },
+              margin: "0 auto",
+            }}
+          >
             <Typography
               variant="h3"
               sx={{
                 color: "#D19F3B",
-                fontSize: { xs: "1.8rem", sm: "2rem", md: "2.2rem", lg: "2.5rem" },
+                fontSize: {
+                  xs: "1.8rem",
+                  sm: "2rem",
+                  md: "2.2rem",
+                  lg: "2.5rem",
+                },
                 fontWeight: 400,
                 mb: { xs: 2, md: 3 },
                 fontFamily: '"Arvo", serif',
@@ -319,12 +391,23 @@ export default function ProjectDetailPage({
 
         {/* Premium Amenities & Features - Matching Image Design */}
         {typedProject.premiumAmenities && (
-          <Box sx={{ mb: { xs: 6, md: 8 }, width: { xs: "100%", md: "70%" }, margin: "0 auto" }}>
+          <Box
+            sx={{
+              mb: { xs: 6, md: 8 },
+              width: { xs: "100%", md: "70%" },
+              margin: "0 auto",
+            }}
+          >
             <Typography
               variant="h3"
               sx={{
                 color: "#D19F3B",
-                fontSize: { xs: "1.8rem", sm: "2rem", md: "2.2rem", lg: "2.5rem" },
+                fontSize: {
+                  xs: "1.8rem",
+                  sm: "2rem",
+                  md: "2.2rem",
+                  lg: "2.5rem",
+                },
                 fontWeight: 400,
                 mb: { xs: 2, md: 3 },
                 fontFamily: '"Arvo", serif',
@@ -341,10 +424,17 @@ export default function ProjectDetailPage({
                 fontFamily: '"Quicksand", sans-serif',
               }}
             >
-              World-class facilities designed to enhance your lifestyle and provide exceptional comfort and convenience.
+              World-class facilities designed to enhance your lifestyle and
+              provide exceptional comfort and convenience.
             </Typography>
 
-            <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 2, md: 2.5 } }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: { xs: 2, md: 2.5 },
+              }}
+            >
               {typedProject.premiumAmenities.map(
                 (amenity: string, index: number) => (
                   <Box
@@ -382,12 +472,19 @@ export default function ProjectDetailPage({
 
         {/* Two Images Section with Text Columns */}
         {(typedProject.amenityImage1 || typedProject.amenityImage2) && (
-          <Box sx={{ mb: { xs: 6, md: 8 }, width: { xs: "100%", md: "70%" }, margin: "0 auto" }}>
+          <Box
+            sx={{
+              mb: { xs: 6, md: 8 },
+              width: { xs: "100%", md: "70%" },
+              margin: "0 auto",
+            }}
+          >
             {/* Mobile View - Restructured Layout */}
             {isMobile ? (
               <>
                 {/* Carousel for World-Class Amenities and Why Choose Sections with Images */}
-                {(typedProject.worldClassAmenities || typedProject.whyChoose) && (
+                {(typedProject.worldClassAmenities ||
+                  typedProject.whyChoose) && (
                   <Box
                     sx={{
                       overflow: "hidden",
@@ -456,54 +553,68 @@ export default function ProjectDetailPage({
                                 fontFamily: '"Quicksand", sans-serif',
                               }}
                             >
-                              Comprehensive facilities that create a self-sustained premium community.
+                              Comprehensive facilities that create a
+                              self-sustained premium community.
                             </Typography>
-                            <Box sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}>
-                              {typedProject.worldClassAmenities.slice(0, 4).map(
-                                (amenity: WorldClassAmenity, index: number) => (
-                                  <Box
-                                    key={index}
-                                    sx={{
-                                      display: "flex",
-                                      alignItems: "flex-start",
-                                    }}
-                                  >
-                                    <CheckCircleIcon
+                            <Box
+                              sx={{
+                                display: "flex",
+                                flexDirection: "column",
+                                gap: 2.5,
+                              }}
+                            >
+                              {typedProject.worldClassAmenities
+                                .slice(0, 4)
+                                .map(
+                                  (
+                                    amenity: WorldClassAmenity,
+                                    index: number
+                                  ) => (
+                                    <Box
+                                      key={index}
                                       sx={{
-                                        color: "#D19F3B",
-                                        mr: 2,
-                                        mt: 0.3,
-                                        fontSize: "1.2rem",
-                                        flexShrink: 0,
+                                        display: "flex",
+                                        alignItems: "flex-start",
                                       }}
-                                    />
-                                    <Box>
-                                      <Typography
+                                    >
+                                      <CheckCircleIcon
                                         sx={{
-                                          fontSize: "1rem",
-                                          lineHeight: 1.7,
-                                          color: "#000",
-                                          fontWeight: 600,
-                                          fontFamily: '"Quicksand", sans-serif',
-                                          mb: 0.5,
+                                          color: "#D19F3B",
+                                          mr: 2,
+                                          mt: 0.3,
+                                          fontSize: "1.2rem",
+                                          flexShrink: 0,
                                         }}
-                                      >
-                                        {amenity.name}
-                                      </Typography>
-                                      <Typography
-                                        sx={{
-                                          fontSize: "0.95rem",
-                                          lineHeight: 1.6,
-                                          color: "#000",
-                                          fontFamily: '"Quicksand", sans-serif',
-                                        }}
-                                      >
-                                        {amenity.description}
-                                      </Typography>
+                                      />
+                                      <Box>
+                                        <Typography
+                                          sx={{
+                                            fontSize: "1rem",
+                                            lineHeight: 1.7,
+                                            color: "#000",
+                                            fontWeight: 600,
+                                            fontFamily:
+                                              '"Quicksand", sans-serif',
+                                            mb: 0.5,
+                                          }}
+                                        >
+                                          {amenity.name}
+                                        </Typography>
+                                        <Typography
+                                          sx={{
+                                            fontSize: "0.95rem",
+                                            lineHeight: 1.6,
+                                            color: "#000",
+                                            fontFamily:
+                                              '"Quicksand", sans-serif',
+                                          }}
+                                        >
+                                          {amenity.description}
+                                        </Typography>
+                                      </Box>
                                     </Box>
-                                  </Box>
-                                )
-                              )}
+                                  )
+                                )}
                             </Box>
                           </Box>
                         </Box>
@@ -563,11 +674,19 @@ export default function ProjectDetailPage({
                                 fontFamily: '"Quicksand", sans-serif',
                               }}
                             >
-                              Unique advantages that make this project the premier choice for luxury living in Islamabad.
+                              Unique advantages that make this project the
+                              premier choice for luxury living in Islamabad.
                             </Typography>
-                            <Box sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}>
-                              {typedProject.whyChoose.slice(0, 4).map(
-                                (reason: string, index: number) => (
+                            <Box
+                              sx={{
+                                display: "flex",
+                                flexDirection: "column",
+                                gap: 2.5,
+                              }}
+                            >
+                              {typedProject.whyChoose
+                                .slice(0, 4)
+                                .map((reason: string, index: number) => (
                                   <Box
                                     key={index}
                                     sx={{
@@ -595,8 +714,7 @@ export default function ProjectDetailPage({
                                       {reason}
                                     </Typography>
                                   </Box>
-                                )
-                              )}
+                                ))}
                             </Box>
                           </Box>
                         </Box>
@@ -690,11 +808,19 @@ export default function ProjectDetailPage({
                           fontFamily: '"Quicksand", sans-serif',
                         }}
                       >
-                        Comprehensive facilities that create a self-sustained premium community.
+                        Comprehensive facilities that create a self-sustained
+                        premium community.
                       </Typography>
-                      <Box sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}>
-                        {typedProject.worldClassAmenities.slice(0, 4).map(
-                          (amenity: WorldClassAmenity, index: number) => (
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: 2.5,
+                        }}
+                      >
+                        {typedProject.worldClassAmenities
+                          .slice(0, 4)
+                          .map((amenity: WorldClassAmenity, index: number) => (
                             <Box
                               key={index}
                               sx={{
@@ -736,8 +862,7 @@ export default function ProjectDetailPage({
                                 </Typography>
                               </Box>
                             </Box>
-                          )
-                        )}
+                          ))}
                       </Box>
                     </Box>
                   )}
@@ -766,11 +891,19 @@ export default function ProjectDetailPage({
                           fontFamily: '"Quicksand", sans-serif',
                         }}
                       >
-                        Unique advantages that make this project the premier choice for luxury living in Islamabad.
+                        Unique advantages that make this project the premier
+                        choice for luxury living in Islamabad.
                       </Typography>
-                      <Box sx={{ display: "flex", flexDirection: "column", gap: 2.5 }}>
-                        {typedProject.whyChoose.slice(0, 4).map(
-                          (reason: string, index: number) => (
+                      <Box
+                        sx={{
+                          display: "flex",
+                          flexDirection: "column",
+                          gap: 2.5,
+                        }}
+                      >
+                        {typedProject.whyChoose
+                          .slice(0, 4)
+                          .map((reason: string, index: number) => (
                             <Box
                               key={index}
                               sx={{
@@ -798,8 +931,7 @@ export default function ProjectDetailPage({
                                 {reason}
                               </Typography>
                             </Box>
-                          )
-                        )}
+                          ))}
                       </Box>
                     </Box>
                   )}
@@ -811,12 +943,23 @@ export default function ProjectDetailPage({
 
         {/* Construction Updates - Matching Image Design */}
         {typedProject.constructionUpdates && (
-          <Box sx={{ mb: { xs: 6, md: 8 }, width: { xs: "100%", md: "70%" }, margin: "0 auto" }}>
+          <Box
+            sx={{
+              mb: { xs: 6, md: 8 },
+              width: { xs: "100%", md: "70%" },
+              margin: "0 auto",
+            }}
+          >
             <Typography
               variant="h3"
               sx={{
                 color: "#D19F3B",
-                fontSize: { xs: "1.8rem", sm: "2rem", md: "2.2rem", lg: "2.5rem" },
+                fontSize: {
+                  xs: "1.8rem",
+                  sm: "2rem",
+                  md: "2.2rem",
+                  lg: "2.5rem",
+                },
                 fontWeight: 400,
                 mb: { xs: 2, md: 3 },
                 fontFamily: '"Arvo", serif',
@@ -833,7 +976,9 @@ export default function ProjectDetailPage({
                 fontFamily: '"Quicksand", sans-serif',
               }}
             >
-              Stay updated with the latest progress on {typedProject.title}. Our construction team is working diligently to deliver this landmark project.
+              Stay updated with the latest progress on {typedProject.title}. Our
+              construction team is working diligently to deliver this landmark
+              project.
             </Typography>
 
             {/* Mobile Carousel View */}
@@ -851,8 +996,9 @@ export default function ProjectDetailPage({
                     display: "flex",
                   }}
                 >
-                  {typedProject.constructionUpdates.slice(0, 2).map(
-                    (update: ConstructionUpdate, index: number) => (
+                  {typedProject.constructionUpdates
+                    .slice(0, 2)
+                    .map((update: ConstructionUpdate, index: number) => (
                       <Box
                         key={index}
                         sx={{
@@ -891,7 +1037,9 @@ export default function ProjectDetailPage({
                           </Box>
 
                           {/* Construction Image */}
-                          {((index === 0 && typedProject.constructionImage1) || (index === 1 && typedProject.constructionImage2)) && (
+                          {((index === 0 && typedProject.constructionImage1) ||
+                            (index === 1 &&
+                              typedProject.constructionImage2)) && (
                             <Box
                               sx={{
                                 width: "100%",
@@ -900,7 +1048,11 @@ export default function ProjectDetailPage({
                               }}
                             >
                               <Image
-                                src={index === 0 ? typedProject.constructionImage1! : typedProject.constructionImage2!}
+                                src={
+                                  index === 0
+                                    ? typedProject.constructionImage1!
+                                    : typedProject.constructionImage2!
+                                }
                                 alt={`Construction Progress ${index + 1}`}
                                 fill
                                 sizes="100vw"
@@ -1005,7 +1157,8 @@ export default function ProjectDetailPage({
                               fontFamily: '"Arvo", serif',
                             }}
                           >
-                            Construction Progress {typedProject.title} {index + 1}
+                            Construction Progress {typedProject.title}{" "}
+                            {index + 1}
                           </Typography>
                           <Typography
                             sx={{
@@ -1018,8 +1171,7 @@ export default function ProjectDetailPage({
                           </Typography>
                         </Box>
                       </Box>
-                    )
-                  )}
+                    ))}
                 </Box>
               </Box>
             ) : (
@@ -1031,11 +1183,12 @@ export default function ProjectDetailPage({
                   gap: 4,
                 }}
               >
-                {typedProject.constructionUpdates.slice(0, 2).map(
-                  (update: ConstructionUpdate, index: number) => (
+                {typedProject.constructionUpdates
+                  .slice(0, 2)
+                  .map((update: ConstructionUpdate, index: number) => (
                     <Box
                       key={index}
-                      sx={{ 
+                      sx={{
                         width: "50%",
                       }}
                     >
@@ -1069,7 +1222,8 @@ export default function ProjectDetailPage({
                         </Box>
 
                         {/* Construction Image */}
-                        {((index === 0 && typedProject.constructionImage1) || (index === 1 && typedProject.constructionImage2)) && (
+                        {((index === 0 && typedProject.constructionImage1) ||
+                          (index === 1 && typedProject.constructionImage2)) && (
                           <Box
                             sx={{
                               width: "100%",
@@ -1078,7 +1232,11 @@ export default function ProjectDetailPage({
                             }}
                           >
                             <Image
-                              src={index === 0 ? typedProject.constructionImage1! : typedProject.constructionImage2!}
+                              src={
+                                index === 0
+                                  ? typedProject.constructionImage1!
+                                  : typedProject.constructionImage2!
+                              }
                               alt={`Construction Progress ${index + 1}`}
                               fill
                               sizes="50vw"
@@ -1196,21 +1354,27 @@ export default function ProjectDetailPage({
                         </Typography>
                       </Box>
                     </Box>
-                  )
-                )}
+                  ))}
               </Box>
             )}
           </Box>
         )}
 
         {/* Related Projects Section */}
-        <Box sx={{ mb: { xs: 6, md: 8 }, width: { xs: "100%", md: "70%" }, margin: "0 auto", mt: { xs: 8, md: 12 } }}>
+        <Box
+          sx={{
+            mb: { xs: 6, md: 8 },
+            width: { xs: "100%", md: "70%" },
+            margin: "0 auto",
+            mt: { xs: 8, md: 12 },
+          }}
+        >
           <Box sx={{ textAlign: "center", mb: { xs: 4, md: 6 } }}>
-            <Typography 
-              sx={{ 
-                color: "#D19F3B", 
-                fontSize: { xs: "2rem", md: "2rem", lg: "2rem" }, 
-                fontWeight: 400, 
+            <Typography
+              sx={{
+                color: "#D19F3B",
+                fontSize: { xs: "2rem", md: "2rem", lg: "2rem" },
+                fontWeight: 400,
                 fontFamily: '"Arvo", serif',
                 textAlign: "center",
               }}
@@ -1248,7 +1412,10 @@ export default function ProjectDetailPage({
                         px: 1,
                       }}
                     >
-                      <Link href={`/projects/${project.slug}`} style={{ textDecoration: "none" }}>
+                      <Link
+                        href={`/projects/${project.slug}`}
+                        style={{ textDecoration: "none" }}
+                      >
                         <Box
                           sx={{
                             position: "relative",
@@ -1257,18 +1424,18 @@ export default function ProjectDetailPage({
                             cursor: "pointer",
                             transition: "transform 0.4s ease",
                             borderRadius: 2,
-                            "&:active": { 
+                            "&:active": {
                               transform: "scale(0.98)",
                             },
                           }}
                         >
-                          <Image
-                            src={project.backgroundImage}
-                            alt={project.title}
-                            fill
-                            sizes="100vw"
-                            style={{ objectFit: "cover" }}
-                          />
+                       <Image
+  src={project.cardImage || project.backgroundImage}
+  alt={project.title}
+  fill
+  sizes={isMobile ? "100vw" : "(max-width: 1200px) 50vw, 33vw"}
+  style={{ objectFit: "cover" }}
+/>
 
                           {/* Overlay with Text */}
                           <Box
@@ -1321,7 +1488,10 @@ export default function ProjectDetailPage({
             <Box
               sx={{
                 display: "grid",
-                gridTemplateColumns: { md: "repeat(2,1fr)", lg: "repeat(3,1fr)" },
+                gridTemplateColumns: {
+                  md: "repeat(2,1fr)",
+                  lg: "repeat(3,1fr)",
+                },
                 gap: 6,
                 mt: 6,
               }}
@@ -1330,7 +1500,11 @@ export default function ProjectDetailPage({
                 .filter((p) => p.slug !== params.slug)
                 .slice(0, 3)
                 .map((project) => (
-                  <Link key={project.slug} href={`/projects/${project.slug}`} style={{ textDecoration: "none" }}>
+                  <Link
+                    key={project.slug}
+                    href={`/projects/${project.slug}`}
+                    style={{ textDecoration: "none" }}
+                  >
                     <Box
                       sx={{
                         position: "relative",
@@ -1338,7 +1512,7 @@ export default function ProjectDetailPage({
                         overflow: "hidden",
                         cursor: "pointer",
                         transition: "transform 0.4s ease",
-                        "&:hover": { 
+                        "&:hover": {
                           transform: "translateY(-6px)",
                           "& .hover-overlay": {
                             opacity: 1,
@@ -1352,13 +1526,13 @@ export default function ProjectDetailPage({
                         },
                       }}
                     >
-                      <Image
-                        src={project.backgroundImage}
-                        alt={project.title}
-                        fill
-                        sizes="(max-width: 1200px) 50vw, 33vw"
-                        style={{ objectFit: "cover" }}
-                      />
+                    <Image
+  src={project.cardImage || project.backgroundImage}
+  alt={project.title}
+  fill
+  sizes="(max-width: 1200px) 50vw, 33vw"
+  style={{ objectFit: "cover" }}
+/>
 
                       {/* Hover Overlay with Text and L-shaped Brackets */}
                       <Box
@@ -1442,171 +1616,211 @@ export default function ProjectDetailPage({
         </Box>
 
         {/* Contact Form Section */}
-     <Box
-  sx={{
-    mb: { xs: 6, md: 8 },
-    width: { xs: "100%", md: "70%" },
-    margin: "0 auto",
-    mt: { xs: 6, md: 12 },
-  }}
->
-  <Paper
-    elevation={0}
-    sx={{
-      backgroundColor: "#f5f5f0",
-      borderRadius: 2,
-      p: { xs: 3, sm: 4, md: 5 },
-    }}
-  >
-    {/* Heading */}
-    <Typography
-      variant="h3"
-      sx={{
-        color: "#D19F3B",
-        fontSize: { xs: "1.6rem", sm: "1.8rem", md: "2.2rem", lg: "2.5rem" },
-        fontWeight: 400,
-        mb: { xs: 1.5, md: 2 },
-        fontFamily: '"Arvo", serif',
-        textAlign: "center",
-        lineHeight: { xs: 1.2, md: 1.3 },
-      }}
-    >
-      Interested in our projects?
-    </Typography>
-
-    {/* Subheading */}
-    <Typography
-      sx={{
-        fontSize: { xs: "0.9rem", sm: "1rem", md: "1.05rem" },
-        lineHeight: { xs: 1.5, md: 1.7 },
-        color: "#333",
-        mb: { xs: 3, md: 5 },
-        fontFamily: '"Quicksand", sans-serif',
-        textAlign: "center",
-      }}
-    >
-      Share your details and our team will contact you with complete information, pricing, and booking options.
-    </Typography>
-
-    {/* Form */}
-    <Box component="form" onSubmit={handleSubmit}>
-      <Box
-        sx={{
-          display: "grid",
-          gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
-          gap: { xs: 2.5, md: 4 },
-          mb: 4,
-        }}
-      >
-        {/* Left Column */}
-        <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 2.5, md: 3 } }}>
-          <TextField
-            name="fullName"
-            label="Full Name"
-            value={formData.fullName}
-            onChange={handleInputChange}
-            required
-            variant="standard"
-            sx={{
-              "& .MuiInputBase-input": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
-              "& .MuiInputLabel-root": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
-            }}
-          />
-          <TextField
-            name="contactNumber"
-            label="Contact Number"
-            value={formData.contactNumber}
-            onChange={handleInputChange}
-            required
-            variant="standard"
-            sx={{
-              "& .MuiInputBase-input": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
-              "& .MuiInputLabel-root": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
-            }}
-          />
-          <TextField
-            name="message"
-            label="Message (Optional)"
-            value={formData.message}
-            onChange={handleInputChange}
-            multiline
-            rows={4}
-            variant="standard"
-            sx={{
-              "& .MuiInputBase-input": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
-              "& .MuiInputLabel-root": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
-            }}
-          />
-        </Box>
-
-        {/* Right Column */}
-        <Box sx={{ display: "flex", flexDirection: "column", gap: { xs: 2.5, md: 3 } }}>
-          <TextField
-            name="email"
-            label="Email Address"
-            type="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            required
-            variant="standard"
-            sx={{
-              "& .MuiInputBase-input": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
-              "& .MuiInputLabel-root": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
-            }}
-          />
-          <TextField
-            name="project"
-            label="Project"
-            value={formData.project}
-            onChange={handleInputChange}
-            select
-            variant="standard"
-            SelectProps={{
-              MenuProps: {
-                PaperProps: {
-                  sx: { "& .MuiMenuItem-root": { fontSize: { xs: "0.875rem", sm: "0.95rem" } } },
-                },
-              },
-            }}
-            sx={{
-              "& .MuiInputBase-input": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
-              "& .MuiInputLabel-root": { fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" } },
-            }}
-          >
-            {Object.values(projects).map((proj) => (
-              <MenuItem key={proj.slug} value={proj.title}>
-                {proj.title}
-              </MenuItem>
-            ))}
-          </TextField>
-        </Box>
-      </Box>
-
-      {/* Submit Button */}
-      <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
-        <Button
-          type="submit"
-          variant="contained"
+        <Box
           sx={{
-            backgroundColor: "#D19F3B",
-            color: "#fff",
-            px: { xs: 3, md: 6 },
-            py: { xs: 1.25, md: 2 },
-            fontSize: { xs: "0.95rem", md: "1.1rem" },
-            fontWeight: 600,
-            textTransform: "none",
-            borderRadius: 2,
-            "&:hover": { backgroundColor: "#b88d2f" },
+            mb: { xs: 6, md: 8 },
+            width: { xs: "100%", md: "70%" },
+            margin: "0 auto",
+            mt: { xs: 6, md: 12 },
           }}
         >
-          Submit Interest
-        </Button>
-      </Box>
-    </Box>
-  </Paper>
-</Box>
+          <Paper
+            elevation={0}
+            sx={{
+              backgroundColor: "#f5f5f0",
+              borderRadius: 2,
+              p: { xs: 3, sm: 4, md: 5 },
+            }}
+          >
+            {/* Heading */}
+            <Typography
+              variant="h3"
+              sx={{
+                color: "#D19F3B",
+                fontSize: {
+                  xs: "1.6rem",
+                  sm: "1.8rem",
+                  md: "2.2rem",
+                  lg: "2.5rem",
+                },
+                fontWeight: 400,
+                mb: { xs: 1.5, md: 2 },
+                fontFamily: '"Arvo", serif',
+                textAlign: "center",
+                lineHeight: { xs: 1.2, md: 1.3 },
+              }}
+            >
+              Interested in our projects?
+            </Typography>
 
+            {/* Subheading */}
+            <Typography
+              sx={{
+                fontSize: { xs: "0.9rem", sm: "1rem", md: "1.05rem" },
+                lineHeight: { xs: 1.5, md: 1.7 },
+                color: "#333",
+                mb: { xs: 3, md: 5 },
+                fontFamily: '"Quicksand", sans-serif',
+                textAlign: "center",
+              }}
+            >
+              Share your details and our team will contact you with complete
+              information, pricing, and booking options.
+            </Typography>
 
+            {/* Form */}
+            <Box component="form" onSubmit={handleSubmit}>
+              <Box
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: { xs: "1fr", md: "1fr 1fr" },
+                  gap: { xs: 2.5, md: 4 },
+                  mb: 4,
+                }}
+              >
+                {/* Left Column */}
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: { xs: 2.5, md: 3 },
+                  }}
+                >
+                  <TextField
+                    name="fullName"
+                    label="Full Name"
+                    value={formData.fullName}
+                    onChange={handleInputChange}
+                    required
+                    variant="standard"
+                    sx={{
+                      "& .MuiInputBase-input": {
+                        fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" },
+                      },
+                      "& .MuiInputLabel-root": {
+                        fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" },
+                      },
+                    }}
+                  />
+                  <TextField
+                    name="contactNumber"
+                    label="Contact Number"
+                    value={formData.contactNumber}
+                    onChange={handleInputChange}
+                    required
+                    variant="standard"
+                    sx={{
+                      "& .MuiInputBase-input": {
+                        fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" },
+                      },
+                      "& .MuiInputLabel-root": {
+                        fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" },
+                      },
+                    }}
+                  />
+                  <TextField
+                    name="message"
+                    label="Message (Optional)"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    multiline
+                    rows={4}
+                    variant="standard"
+                    sx={{
+                      "& .MuiInputBase-input": {
+                        fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" },
+                      },
+                      "& .MuiInputLabel-root": {
+                        fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" },
+                      },
+                    }}
+                  />
+                </Box>
+
+                {/* Right Column */}
+                <Box
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: { xs: 2.5, md: 3 },
+                  }}
+                >
+                  <TextField
+                    name="email"
+                    label="Email Address"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    variant="standard"
+                    sx={{
+                      "& .MuiInputBase-input": {
+                        fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" },
+                      },
+                      "& .MuiInputLabel-root": {
+                        fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" },
+                      },
+                    }}
+                  />
+                  <TextField
+                    name="project"
+                    label="Project"
+                    value={formData.project}
+                    onChange={handleInputChange}
+                    select
+                    variant="standard"
+                    SelectProps={{
+                      MenuProps: {
+                        PaperProps: {
+                          sx: {
+                            "& .MuiMenuItem-root": {
+                              fontSize: { xs: "0.875rem", sm: "0.95rem" },
+                            },
+                          },
+                        },
+                      },
+                    }}
+                    sx={{
+                      "& .MuiInputBase-input": {
+                        fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" },
+                      },
+                      "& .MuiInputLabel-root": {
+                        fontSize: { xs: "0.875rem", sm: "0.95rem", md: "1rem" },
+                      },
+                    }}
+                  >
+                    {Object.values(projects).map((proj) => (
+                      <MenuItem key={proj.slug} value={proj.title}>
+                        {proj.title}
+                      </MenuItem>
+                    ))}
+                  </TextField>
+                </Box>
+              </Box>
+
+              {/* Submit Button */}
+              <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  sx={{
+                    backgroundColor: "#D19F3B",
+                    color: "#fff",
+                    px: { xs: 3, md: 6 },
+                    py: { xs: 1.25, md: 2 },
+                    fontSize: { xs: "0.95rem", md: "1.1rem" },
+                    fontWeight: 600,
+                    textTransform: "none",
+                    borderRadius: 2,
+                    "&:hover": { backgroundColor: "#b88d2f" },
+                  }}
+                >
+                  Submit Interest
+                </Button>
+              </Box>
+            </Box>
+          </Paper>
+        </Box>
       </Container>
 
       <Footer />

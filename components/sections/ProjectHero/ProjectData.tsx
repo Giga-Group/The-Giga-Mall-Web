@@ -6,6 +6,7 @@ export const projects = {
     title: "Goldcrest Views",
     description: "Luxury Residential Complex",
     backgroundImage: "/projects/goldcrestviews_1.jpg",
+    cardImage: "/projects/gcv.jpg",
     overview: `Goldcrest Views is a landmark luxury residential project by Al-Ghurair Giga, featuring seven magnificent 40-storey towers that redefine Islamabad's skyline. Located in the prime heart of Giga City adjacent to Giga Mall, this Dubai-inspired development offers studios, 1-4 bedroom apartments, penthouses, and duplexes with smart-home technology, rooftop pools, and world-class amenities.`,
 
     detailedContent: `With flexible 5-year payment plans and dedicated rental management services for overseas investors, Goldcrest Views combines luxury living with smart investment opportunities. The project features central HVAC, high-speed elevators, podium gardens, daycare facilities, and gourmet services, creating a self-sustained premium community with excellent connectivity to twin cities.`,
@@ -28,8 +29,8 @@ export const projects = {
 
     designPhilosophy: `Our architectural vision combines Dubai-inspired luxury with Islamabad's natural beauty, creating a harmonious blend of modern sophistication and timeless elegance. We integrate cutting-edge technology with sustainable design principles, ensuring every element serves both aesthetic and functional purposes while maintaining environmental responsibility and community harmony.`,
     designPhilosophyImage: "/projects/goldcrestview_2.jpg",
-    amenityImage1: "/projects/gcv.jpg",
-    amenityImage2: "/projects/gcv.jpg",
+    amenityImage1: "/projects/gca_1.jpg",
+    amenityImage2: "/projects/gca_2.jpg",
 
     premiumAmenities: [
       "Seven 40-storey residential towers with Dubai-inspired architecture",
@@ -97,8 +98,8 @@ export const projects = {
       { title: "MEP Works Started", date: "Current", progress: "30%" },
       { title: "Exterior Finishing", date: "Upcoming", progress: "0%" },
     ],
-    constructionImage1: "/projects/gcv.jpg",
-    constructionImage2: "/projects/gcv.jpg",
+    constructionImage1: "/projects/gca_3.jpg",
+    constructionImage2: "/projects/gca_4.jpg",
 
     investmentDetails: {
       "Payment Plan": "5 Years",
@@ -113,7 +114,8 @@ export const projects = {
     slug: "gold-crest-commercial",
     title: "Gold Crest Commercial",
     description: "Premium Commercial Complex",
-    backgroundImage: "/projects/gcc.jpg",
+    backgroundImage: "/projects/gc_1.jpg",
+    cardImage: "/projects/gcc.jpg",
     overview: `Goldcrest Commercial represents the next phase of Al-Ghurair Giga's commercial development strategy, featuring state-of-the-art office spaces and retail outlets designed for modern businesses. Located within the thriving Giga City ecosystem, this premium commercial complex offers cutting-edge infrastructure, high-speed elevators, central air conditioning, and smart building technology to meet contemporary business requirements.`,
 
     detailedContent: `The development provides flexible office layouts, conference facilities, retail spaces, and dedicated parking with excellent connectivity to major business districts. With its strategic location near Giga Mall and residential projects, Goldcrest Commercial creates a perfect work-life balance environment, attracting leading corporations and businesses seeking premium commercial real estate in Islamabad's fastest-growing commercial hub.`,
@@ -132,9 +134,9 @@ export const projects = {
     },
 
     designPhilosophy: `Our commercial design philosophy focuses on creating flexible, efficient spaces that adapt to modern business needs while maintaining aesthetic appeal and professional standards. We prioritize technology integration, sustainable practices, and community harmony to ensure long-term operational efficiency and business success.`,
-    designPhilosophyImage: "/projects/gcc.jpg",
-    amenityImage1: "/projects/gcc.jpg",
-    amenityImage2: "/projects/gcc.jpg",
+    designPhilosophyImage: "/projects/gcc_1.jpg",
+    amenityImage1: "/projects/gcc_2.jpg",
+    amenityImage2: "/projects/gcc_3.jpg",
 
     premiumAmenities: [
       "Prime location in Giga City with high foot traffic",
@@ -187,14 +189,7 @@ export const projects = {
       "/gold-crest-commercial-3.jpg",
     ],
 
-    constructionUpdates: [
-      { title: "Site Preparation", date: "January 2024", progress: "100%" },
-      { title: "Foundation Work", date: "April 2024", progress: "80%" },
-      { title: "Structural Development", date: "Current", progress: "40%" },
-      { title: "Interior Finishing", date: "Upcoming", progress: "0%" },
-    ],
-    constructionImage1: "/projects/gcc.jpg",
-    constructionImage2: "/projects/gcc.jpg",
+
 
     investmentDetails: {
       "Payment Plan": "4 Years",
@@ -209,7 +204,8 @@ export const projects = {
     slug: "giga-mall-extension",
     title: "Giga Mall Extension",
     description: "Mixed-Use Development",
-    backgroundImage: "/projects/gme.jpg",
+    backgroundImage: "/projects/gme_1.jpg",
+    cardImage: "/projects/gcvr_1.jpg",
     overview: `Giga Mall Extension is an ambitious 30-storey mixed-use development adjacent to the original Giga Mall in Giga City, Islamabad. This innovative project integrates luxury hotel apartments, premium retail outlets, fine dining restaurants, and Pakistan's first vertical commercial market. The extension features modern amenities and prime location connectivity, making it a landmark destination for shopping, dining, and accommodation.`,
 
     detailedContent: `The development's crown jewel is a beautifully designed mosque on the top floors, offering panoramic views of the twin cities and Margalla Hills. With its unique blend of commercial, hospitality, and retail spaces, Giga Mall Extension aims to redefine urban living and commerce, creating a vibrant hub that attracts both local residents and international visitors to Islamabad's premier lifestyle destination.`,
@@ -230,9 +226,9 @@ export const projects = {
     },
 
     designPhilosophy: `Our mixed-use design philosophy creates a harmonious integration of multiple functions, blending commercial, residential, and spiritual spaces into one cohesive development that serves diverse community needs. We focus on innovative vertical integration, seamless functional flow, and sustainable development principles to create a landmark destination.`,
-    designPhilosophyImage: "/projects/gme.jpg",
-    amenityImage1: "/projects/gme.jpg",
-    amenityImage2: "/projects/gme.jpg",
+    designPhilosophyImage: "/projects/gme_2.jpg",
+    amenityImage1: "/projects/gme_3.jpg",
+    amenityImage2: "/projects/gme_4.jpg",
 
     premiumAmenities: [
       "30-storey mixed-use tower with luxury hotel apartments",
@@ -292,8 +288,8 @@ export const projects = {
       { title: "Foundation Work", date: "Current", progress: "60%" },
       { title: "Vertical Construction", date: "Upcoming", progress: "0%" },
     ],
-    constructionImage1: "/projects/gme.jpg",
-    constructionImage2: "/projects/gme.jpg",
+    constructionImage1: "/projects/gme_6.jpg",
+    constructionImage2: "/projects/gme_5.jpg",
 
     investmentDetails: {
       "Payment Plan": "5 Years",
@@ -308,7 +304,8 @@ export const projects = {
     slug: "giga-business-complex",
     title: "Giga Business Complex",
     description: "Corporate Hub",
-    backgroundImage: "/projects/gbc-grid.jpg",
+    backgroundImage: "/projects/gbc_1.jpg",
+    cardImage: "/projects/gbc-grid.jpg",
     overview: `Giga Business Complex stands as a premier corporate destination within the Giga City ecosystem, offering world-class office spaces designed for modern enterprises and multinational corporations. The complex features cutting-edge infrastructure, high-speed internet connectivity, advanced security systems, and flexible workspace solutions that cater to diverse business requirements from startups to established corporations seeking premium commercial real estate.`,
 
     detailedContent: `With its strategic location providing excellent connectivity to major business districts and transportation networks, Giga Business Complex creates an ideal environment for business growth and networking. The development includes conference facilities, executive lounges, retail services, and ample parking, establishing itself as Islamabad's preferred business address for companies looking to enhance their corporate presence and operational efficiency.`,
@@ -329,9 +326,9 @@ export const projects = {
     },
 
     designPhilosophy: `Our corporate design blends professional credibility, efficient space use, modern technology, and flexible layouts. Positioned above Giga Mall, it fosters networking, enhances brand image, and offers future-ready infrastructure to support evolving business needs in Islamabad\'s most successful commercial district.`,
-    designPhilosophyImage: "/projects/gbc-grid.jpg",
-    amenityImage1: "/projects/gbc-grid.jpg",
-    amenityImage2: "/projects/gbc-grid.jpg",
+    designPhilosophyImage: "/projects/gbc_2.jpg",
+    amenityImage1: "/projects/gbc_3.jpg",
+    amenityImage2: "/projects/gbc_4.jpg",
 
     premiumAmenities: [
       "Flexible office spaces located above successful Giga Mall",
@@ -396,16 +393,16 @@ export const projects = {
       "/giga-business-complex-3.jpg",
     ],
 
-    constructionUpdates: [
-      {
-        title: "Architectural Design",
-        date: "December 2023",
-        progress: "100%",
-      },
-      { title: "Structural Planning", date: "March 2024", progress: "100%" },
-      { title: "Construction Start", date: "Current", progress: "25%" },
-      { title: "Completion Phase", date: "Upcoming", progress: "0%" },
-    ],
+    // constructionUpdates: [
+    //   {
+    //     title: "Architectural Design",
+    //     date: "December 2023",
+    //     progress: "100%",
+    //   },
+    //   { title: "Structural Planning", date: "March 2024", progress: "100%" },
+    //   { title: "Construction Start", date: "Current", progress: "25%" },
+    //   { title: "Completion Phase", date: "Upcoming", progress: "0%" },
+    // ],
     constructionImage1: "/projects/gbc-grid.jpg",
     constructionImage2: "/projects/gbc-grid.jpg",
 
@@ -422,7 +419,8 @@ export const projects = {
     slug: "central-palace-residence",
     title: "Central Palace Residence",
     description: "Ultra-Luxury Living",
-    backgroundImage: "/p15.jpeg",
+    backgroundImage: "/projects/cpr_1.jpg",
+    cardImage: "/projects/gcc.jpg",
     overview: `Central Palace Residence represents the pinnacle of luxury living in Islamabad, offering exclusive residences designed for discerning individuals seeking the ultimate in comfort, privacy, and sophistication. This ultra-luxury development features bespoke interiors, private amenities, and unparalleled services that redefine luxury residential standards in Pakistan's capital city.`,
 
     detailedContent: `Located in the most prestigious sector of Islamabad, Central Palace Residence offers limited edition apartments with customized layouts, premium finishes, and exclusive access to private clubs, spa facilities, and personalized concierge services. The development caters to elite residents who value privacy, security, and world-class amenities in a serene yet centrally located environment.`,
@@ -443,9 +441,9 @@ export const projects = {
     },
 
     designPhilosophy: `Our ultra-luxury design philosophy centers on exclusivity, personalized experiences, and uncompromising quality. We focus on creating intimate, refined spaces that offer privacy, sophistication, and bespoke amenities tailored to the most discerning residents seeking the ultimate residential experience in Islamabad.`,
-    designPhilosophyImage: "/projects/cpr-grid.jpg",
-    amenityImage1: "/projects/cpr-grid.jpg",
-    amenityImage2: "/projects/cpr-grid.jpg",
+    designPhilosophyImage: "/projects/cpr_2.jpg",
+    amenityImage1: "/projects/cpr_3.jpg",
+    amenityImage2: "/projects/cpr_4.jpg",
 
     premiumAmenities: [
       "Limited edition ultra-luxury residences",
@@ -499,12 +497,6 @@ export const projects = {
       "/central-palace-3.jpg",
     ],
 
-    constructionUpdates: [
-      { title: "Design Customization", date: "October 2023", progress: "100%" },
-      { title: "Foundation Work", date: "January 2024", progress: "90%" },
-      { title: "Structural Work", date: "Current", progress: "50%" },
-      { title: "Luxury Finishes", date: "Upcoming", progress: "0%" },
-    ],
     constructionImage1: "/projects/cpr-grid.jpg",
     constructionImage2: "/projects/cpr-grid.jpg",
 
@@ -521,7 +513,8 @@ export const projects = {
     slug: "giga-mall-wtc",
     title: "Giga Mall WTC",
     description: "World Trade Center",
-    backgroundImage: "/p6.jpeg",
+    backgroundImage: "/projects/gmwtc_1.jpg",
+    cardImage: "/projects/gcc.jpg",
     overview: `Giga Mall WTC represents a groundbreaking partnership between Al-Ghurair Giga and the World Trade Center Association, creating Islamabad's first official World Trade Center complex. This prestigious development combines international business facilities, exhibition centers, luxury retail, and corporate offices under one roof, establishing a global business hub in Pakistan's capital.`,
 
     detailedContent: `The complex features dedicated spaces for international trade delegations, business matching services, exhibition halls, and corporate offices with global connectivity. As part of the worldwide WTC network, this development offers members access to international business opportunities, trade facilitation services, and networking events, positioning Islamabad as a key player in global commerce and international business relations.`,
@@ -542,9 +535,9 @@ export const projects = {
     },
 
     designPhilosophy: `Our World Trade Center design embraces global business standards, international architectural excellence, and functional efficiency for cross-border commerce. We focus on creating spaces that facilitate international trade, business networking, and global connectivity while maintaining local cultural relevance and sustainable development principles.`,
-    designPhilosophyImage: "/projects/wtc-grid.jpg",
-    amenityImage1: "/projects/wtc-grid.jpg",
-    amenityImage2: "/projects/wtc-grid.jpg",
+    designPhilosophyImage: "/projects/gmwtc_2.jpg",
+    amenityImage1: "/projects/gmwtc_3.jpg",
+    amenityImage2: "/projects/gmwtc_4.jpg",
 
     premiumAmenities: [
       "Official World Trade Center affiliation and branding",
@@ -597,18 +590,18 @@ export const projects = {
 
     gallery: ["/giga-wtc-1.jpg", "/giga-wtc-2.jpg", "/giga-wtc-3.jpg"],
 
-    constructionUpdates: [
-      { title: "WTA Agreement", date: "September 2023", progress: "100%" },
-      {
-        title: "International Design",
-        date: "December 2023",
-        progress: "100%",
-      },
-      { title: "Construction Start", date: "Current", progress: "35%" },
-      { title: "Global Certification", date: "Upcoming", progress: "0%" },
-    ],
-    constructionImage1: "/projects/wtc-grid.jpg",
-    constructionImage2: "/projects/wtc-grid.jpg",
+    // constructionUpdates: [
+    //   { title: "WTA Agreement", date: "September 2023", progress: "100%" },
+    //   {
+    //     title: "International Design",
+    //     date: "December 2023",
+    //     progress: "100%",
+    //   },
+    //   { title: "Construction Start", date: "Current", progress: "35%" },
+    //   { title: "Global Certification", date: "Upcoming", progress: "0%" },
+    // ],
+    // constructionImage1: "/projects/wtc-grid.jpg",
+    // constructionImage2: "/projects/wtc-grid.jpg",
 
     investmentDetails: {
       "Payment Plan": "International Standards",
@@ -624,6 +617,7 @@ export const projects = {
     title: "Gold Crest Bay Sands - Karachi",
     description: "Waterfront Luxury Living",
     backgroundImage: "/p16.jpeg",
+    cardImage: "/projects/gcc.jpg",
     overview: `Gold Crest Bay Sands - Karachi brings the successful Goldcrest brand to Pakistan's economic capital, offering premium waterfront living with breathtaking views of the Arabian Sea. This landmark development combines luxury residential towers with commercial spaces, creating a self-contained community along Karachi's prestigious coastline with direct beach access and marine views.`,
 
     detailedContent: `The project features luxury apartments, penthouses, and commercial spaces designed to maximize sea views and waterfront living experiences. With amenities including private beach access, marine sports facilities, waterfront promenades, and luxury retail, Gold Crest Bay Sands establishes a new standard for coastal living in Karachi, catering to residents seeking premium lifestyle options in Pakistan's largest metropolitan city.`,
@@ -726,7 +720,8 @@ export const projects = {
     slug: "gold-crest-high-life-I",
     title: "Gold Crest High Life I",
     description: "Modern Residential Living",
-    backgroundImage: "/p14.jpeg",
+    backgroundImage: "/projects/gchl_1.jpg",
+    cardImage: "/projects/gcc.jpg",
     overview: `Gold Crest High Life offers contemporary residential living designed for modern urban professionals and families seeking quality homes with smart features and community amenities. This development focuses on efficient space utilization, modern design aesthetics, and practical living solutions that cater to the needs of today's urban residents in Islamabad's growing residential sectors.`,
 
     detailedContent: `The project features thoughtfully designed apartments with efficient layouts, modern finishes, and smart home features at accessible price points. With amenities including community spaces, recreational facilities, and convenient location access, Gold Crest High Life provides quality living options for middle-income families and professionals looking for modern residential solutions in well-planned communities.`,
@@ -748,8 +743,8 @@ export const projects = {
 
     designPhilosophy: `Our modern residential design emphasizes practicality, efficiency, community living, and contemporary aesthetics. We focus on creating functional spaces, smart features, community integration, and value-driven solutions that meet the needs of today\'s urban residents while maintaining quality construction and sensible pricing.`,
     designPhilosophyImage: "/projects/gc-highlife-grid-1.jpg",
-    amenityImage1: "/projects/gc-highlife-grid-1.jpg",
-    amenityImage2: "/projects/gc-highlife-grid-1.jpg",
+    // amenityImage1: "/projects/gc-highlife-grid-1.jpg",
+    // amenityImage2: "/projects/gc-highlife-grid-1.jpg",
 
     premiumAmenities: [
       "Efficient apartment layouts for modern living",
@@ -762,69 +757,15 @@ export const projects = {
       "Value-oriented pricing and payment plans",
     ],
 
-    worldClassAmenities: [
-      {
-        name: "Smart Home Features",
-        description: "Modern technology for efficient living",
-      },
-      {
-        name: "Community Spaces",
-        description: "Shared areas for social interaction",
-      },
-      {
-        name: "Recreational Facilities",
-        description: "Amenities for family activities",
-      },
-      {
-        name: "Security Systems",
-        description: "Modern security for resident safety",
-      },
-      {
-        name: "Landscaped Areas",
-        description: "Green spaces and children play areas",
-      },
-      {
-        name: "Parking Facilities",
-        description: "Adequate parking for residents",
-      },
-    ],
-
-    whyChoose: [
-      "Practical modern living at accessible prices",
-      "Efficient designs for urban lifestyles",
-      "Smart home features and energy efficiency",
-      "Community-focused amenities and spaces",
-      "Strategic location in growing residential area",
-      "Value-oriented investment with good returns",
-      "Quality construction from trusted developer",
-      "Suitable for families and professionals",
-    ],
-
-    gallery: ["/high-life-1.jpg", "/high-life-2.jpg", "/high-life-3.jpg"],
-
-    constructionUpdates: [
-      { title: "Design Finalization", date: "July 2023", progress: "100%" },
-      { title: "Site Preparation", date: "October 2023", progress: "100%" },
-      { title: "Construction Progress", date: "Current", progress: "55%" },
-      { title: "Finishing Work", date: "Upcoming", progress: "0%" },
-    ],
-    constructionImage1: "/projects/gc-highlife-grid-1.jpg",
-    constructionImage2: "/projects/gc-highlife-grid-1.jpg",
-
-    investmentDetails: {
-      "Payment Plan": "3-4 Years",
-      "Down Payment": "15-20%",
-      "Monthly Installments": "Affordable",
-      "ROI Expected": "Good Stable Returns",
-      "Rental Yield": "6-8%",
-    },
+  
   },
 
   "gold-crest-high-life-II-and-III": {
     slug: "gold-crest-high-life-II-and-III",
     title: "Goldcrest HighLife II & III",
     description: "Modern Residential Living",
-    backgroundImage: "/p5.jpeg",
+    backgroundImage: "/projects/gchl_23.jpg",
+    cardImage: "/projects/gcc.jpg",
     overview: `Giga Group is proud to bring another farsighted residential project, Goldcrest Highlife. Centrally located in DHA 2 Islamabad, Goldcrest Highlife is a planned 3-tower residential development offering exceptional views of the verdant greens surrounding the locality. The project provides excellent features, fixtures, and lifestyle choices that were previously unheard of in Pakistan.`,
 
     detailedContent: `Each tower of Goldcrest Highlife is designed on modern lines with multiple levels of vehicle parking, state-of-the-art conveniences on the rooftop, and various residential layouts that suit everyone's unique budget and requirements. This development represents Giga Group's commitment to bringing world-class residential living to Islamabad's most prestigious address.`,
@@ -845,9 +786,8 @@ export const projects = {
     },
 
     designPhilosophy: `Goldcrest Highlife is designed on modern lines with a farsighted approach to residential living. Each tower features contemporary architectural design that maximizes views of the verdant surroundings while providing practical solutions like multiple levels of parking and rooftop conveniences. The project offers various residential layouts to accommodate different budgets and requirements, delivering features and lifestyle choices that set new standards in Pakistan's residential development landscape.`,
-    designPhilosophyImage: "/projects/gc-highlife-grid-2-3.jpg",
-    amenityImage1: "/projects/gc-highlife-grid-2-3.jpg",
-    amenityImage2: "/projects/gc-highlife-grid-2-3.jpg",
+    designPhilosophyImage: "/projects/gchl_23_1.jpeg",
+ 
 
     premiumAmenities: [
       "3-tower residential development with modern design",
@@ -860,52 +800,7 @@ export const projects = {
       "Lifestyle choices previously unheard of in Pakistan",
     ],
 
-    worldClassAmenities: [
-      {
-        name: "Multi-Level Parking",
-        description: "Multiple levels of dedicated vehicle parking",
-      },
-      {
-        name: "Rooftop Conveniences",
-        description: "State-of-the-art amenities on the rooftop",
-      },
-      { name: "Smart Security", description: "24/7 advanced security systems" },
-      {
-        name: "Premium Finishings",
-        description: "Modern premium interior finishes",
-      },
-      {
-        name: "Green Views",
-        description: "Exceptional views of verdant surroundings",
-      },
-      {
-        name: "Various Layouts",
-        description: "Multiple residential layout options",
-      },
-    ],
-
-    whyChoose: [
-      "Farsighted residential development with features previously unheard of in Pakistan",
-      "Centrally located in prestigious DHA 2 Islamabad",
-      "Exceptional views of verdant greens surrounding the locality",
-      "Multiple levels of dedicated vehicle parking",
-      "State-of-the-art rooftop conveniences",
-      "Various residential layouts to suit every budget and requirement",
-      "Modern design lines with premium finishings",
-      "Giga Group's commitment to world-class residential living",
-    ],
-
-    gallery: ["/high-life-1.jpg", "/high-life-2.jpg", "/high-life-3.jpg"],
-
-    constructionUpdates: [
-      { title: "Design Finalization", date: "January 2024", progress: "100%" },
-      { title: "Site Preparation", date: "March 2024", progress: "100%" },
-      { title: "Foundation Work", date: "Current", progress: "65%" },
-      { title: "Tower Construction", date: "Upcoming", progress: "0%" },
-    ],
-    constructionImage1: "/projects/gc-highlife-grid-2-3.jpg",
-    constructionImage2: "/projects/gc-highlife-grid-2-3.jpg",
-
+   
     investmentDetails: {
       "Payment Plan": "3-4 Years",
       "Down Payment": "20-25%",
@@ -927,5 +822,28 @@ export const getProjectsArray = () => {
 };
 
 // Type definitions
-export type Project = (typeof projects)["gold-crest-views"];
+// export type Project = (typeof projects)["gold-crest-views"];
+// Type definitions - Updated to include optional cardImage
+export type Project = {
+  slug: string;
+  title: string;
+  description: string;
+  backgroundImage: string;
+  cardImage?: string;                    // ← Add this line
+  overview: string;
+  detailedContent?: string;
+  details: Record<string, string>;
+  designPhilosophy?: string;
+  designPhilosophyImage?: string;
+  amenityImage1?: string;
+  amenityImage2?: string;
+  premiumAmenities?: string[];
+  worldClassAmenities?: { name: string; description: string }[];
+  whyChoose?: string[];
+  gallery?: string[];
+  constructionUpdates?: { title: string; date: string; progress: string }[];
+  constructionImage1?: string;
+  constructionImage2?: string;
+  investmentDetails?: Record<string, string>;
+};
 export type ProjectSlug = keyof typeof projects;

@@ -43,20 +43,29 @@ const AppAndVisitorInfo = () => {
           <Box
             sx={{
               display: 'flex',
+<<<<<<< Updated upstream
               flexDirection: { xs: 'row', md: 'row', lg: 'row' },
               alignItems: 'flex-start',
               rowGap: { xs: 0, md: 0, lg: 0 },
+=======
+              flexDirection: 'row',
+              alignItems: 'center', // Keeps text vertically centered with image
+>>>>>>> Stashed changes
               columnGap: { xs: 2, sm: 2.5, md: 3, lg: 4 },
               mb: { xs: 2, sm: 3, md: 3, lg: 3 },
             }}
           >
-            {/* Mobile Screen Image Only */}
+            {/* Mobile Screen Image */}
             <Box
               sx={{
+<<<<<<< Updated upstream
                 width: { xs: '180px', sm: '220px', md: '240px', lg: '300px' },
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'flex-start',
+=======
+                width: { xs: '120px', sm: '220px', md: '260px', lg: '340px' },
+>>>>>>> Stashed changes
                 flexShrink: 0,
               }}
             >
@@ -78,30 +87,48 @@ const AppAndVisitorInfo = () => {
               sx={{
                 display: 'flex',
                 flexDirection: 'column',
+<<<<<<< Updated upstream
                 gap: { xs: 1.5, sm: 2, md: 2, lg: 2.5 },
                 flex: 1,
                 paddingTop: { xs: 4, sm: 0, md: 0, lg: 0 },
+=======
+                gap: { xs: 2, sm: 2.5 },
+                flex: 1,
+>>>>>>> Stashed changes
               }}
             >
               <Typography
                 sx={{
                   fontFamily: '"Quicksand", sans-serif',
+<<<<<<< Updated upstream
                   fontSize: { xs: '0.75rem', sm: '0.85rem', md: '0.875rem', lg: '0.9375rem' },
+=======
+                  fontSize: { xs: '0.85rem', sm: '0.9rem', md: '0.95rem' },
+>>>>>>> Stashed changes
                   color: '#666666',
-                  lineHeight: 1.6,
+                  lineHeight: 1.5,
                 }}
               >
                 With so much to discover, Giga Mall app is your pocket-sized guide to making the most of your visit. Available for both iOS and Android, the simple-to-use app offers personalised content, the latest news and events, real-time parking information, and much more.
               </Typography>
 
-              {/* App Store Badges */}
+              {/* App Store Badges - Now forced horizontal on all screens */}
               <Box
                 sx={{
                   display: 'flex',
                   flexDirection: 'row',
+<<<<<<< Updated upstream
                   flexWrap: 'wrap',
                   gap: { xs: 1, md: 1.5, lg: 2 },
                   alignItems: 'flex-start',
+=======
+                  flexWrap: 'nowrap', // Key change: prevents wrapping on mobile
+                  gap: { xs: 1.5, sm: 2 },
+                  alignItems: 'center',
+                  justifyContent: 'flex-start',
+                  overflowX: 'auto', // Optional: allows horizontal scroll if screen is extremely narrow
+                  pb: 0.5, // Small padding to avoid scrollbar cutting content
+>>>>>>> Stashed changes
                 }}
               >
                 <Link
@@ -109,8 +136,10 @@ const AppAndVisitorInfo = () => {
                   style={{
                     display: 'inline-block',
                     textDecoration: 'none',
+                    flexShrink: 0,
                   }}
                 >
+<<<<<<< Updated upstream
                   <Box
                     sx={{
                       width: { xs: '90px', md: '110px', lg: '120px' },
@@ -129,6 +158,19 @@ const AppAndVisitorInfo = () => {
                       }}
                     />
                   </Box>
+=======
+                  <Image
+                    src="/AppStore_Badge_US_English.svg"
+                    alt="Download on the App Store"
+                    width={120}
+                    height={40}
+                    style={{
+                      objectFit: 'contain',
+                      width: '120px',
+                      height: '40px',
+                    }}
+                  />
+>>>>>>> Stashed changes
                 </Link>
 
                 <Link
@@ -136,8 +178,10 @@ const AppAndVisitorInfo = () => {
                   style={{
                     display: 'inline-block',
                     textDecoration: 'none',
+                    flexShrink: 0,
                   }}
                 >
+<<<<<<< Updated upstream
                   <Box
                     sx={{
                       width: { xs: '90px', md: '110px', lg: '120px' },
@@ -156,13 +200,26 @@ const AppAndVisitorInfo = () => {
                       }}
                     />
                   </Box>
+=======
+                  <Image
+                    src="/GooglePlay_Badge_EN-US_English.svg"
+                    alt="Get it on Google Play"
+                    width={120}
+                    height={40}
+                    style={{
+                      objectFit: 'contain',
+                      width: '120px',
+                      height: '40px',
+                    }}
+                  />
+>>>>>>> Stashed changes
                 </Link>
               </Box>
             </Box>
           </Box>
         </Box>
 
-        {/* Right Side - Visitor Info */}
+        {/* Right Side - Visitor Info (completely unchanged) */}
         <Box>
           <Typography
             variant="h3"
@@ -270,4 +327,3 @@ const AppAndVisitorInfo = () => {
 };
 
 export default AppAndVisitorInfo;
-
