@@ -7,11 +7,6 @@ import {
   Box,
   Typography,
   Button,
-  Stack,
-  Grid,
-  Card,
-  CardMedia,
-  CardContent,
 } from "@mui/material";
 import Image from "next/image";
 
@@ -50,16 +45,56 @@ export default function EntertainPage() {
           sx={{
             position: "relative",
             width: "100%",
-            height: { xs: "70vh", sm: "65vh", md: "70vh", lg: "75vh" },
+            height: { xs: "95vh", sm: "65vh", md: "65vh", lg: "75vh" },
+            marginTop: { xs: "50px", md: 0 },
             overflow: "hidden",
             display: "flex",
             alignItems: "flex-end",
             backgroundColor: "#000",
           }}
         >
-          {/* Background Video */}
+          {/* Mobile Background Video */}
           <Box
             sx={{
+              display: { xs: "block", md: "none" },
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              zIndex: 1,
+              "&::after": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                background:
+                  "linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.2) 70%, transparent 100%)",
+                zIndex: 2,
+              },
+            }}
+          >
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            >
+              <source src="/Funcity3.mp4" type="video/mp4" />
+            </video>
+          </Box>
+
+          {/* Desktop Background Video */}
+          <Box
+            sx={{
+              display: { xs: "none", md: "block" },
               position: "absolute",
               top: 0,
               left: 0,
