@@ -165,7 +165,7 @@ export default function CarrefourPage() {
                       fontFamily: '"Jost", sans-serif',
                     }}
                   >
-                    Fresh Grocery and Bakery Items
+                    Fresh Grocery and Items
                   </Typography>
 
                   <Typography

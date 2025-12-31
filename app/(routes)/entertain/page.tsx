@@ -49,114 +49,117 @@ export default function EntertainPage() {
         <Box
           sx={{
             position: "relative",
-            width: "100vw",
-            height: { xs: "100vh", md: "90vh" },
-            paddingTop: { xs: "90px", md: "100px" },
+            width: "100%",
+            height: { xs: "70vh", sm: "65vh", md: "70vh", lg: "75vh" },
             overflow: "hidden",
             display: "flex",
             alignItems: "flex-end",
+            backgroundColor: "#000",
           }}
         >
-          {/* Mobile Video */}
-          <Box
-            sx={{
-              display: { xs: "block", md: "none" },
-              position: "absolute",
-              inset: 0,
-              height: "100vh",
-              zIndex: 0,
-            }}
-          >
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            >
-              <source src="/Funcity Reel.mp4" type="video/mp4" />
-            </video>
-          </Box>
-
-          {/* Desktop Image */}
-          <Box
-            sx={{
-              display: { xs: "none", md: "block" },
-              position: "absolute",
-              inset: 0,
-              zIndex: 0,
-            }}
-          >
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            >
-              <source src="/Full_Version_1" type="video/mp4" />
-            </video>
-          </Box>
-
-          {/* Overlay */}
+          {/* Background Video */}
           <Box
             sx={{
               position: "absolute",
-              inset: 0,
-              background:
-                "linear-gradient(to top, rgba(0,0,0,0.9) 10%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.15) 100%)",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
               zIndex: 1,
+              "&::after": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                background:
+                  "linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.2) 70%, transparent 100%)",
+                zIndex: 2,
+              },
             }}
-          />
+          >
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            >
+              <source src="/funcity1.mp4" type="video/mp4" />
+            </video>
+          </Box>
 
-          {/* Hero Content */}
+          {/* Content Container */}
           <Box
             sx={{
               position: "relative",
-              zIndex: 2,
+              zIndex: 3,
               width: "100%",
               maxWidth: "1400px",
-              mx: "auto",
-              px: { xs: 2, sm: 4, md: 6 },
-              pb: { xs: 6, md: 10 },
+              margin: "0 auto",
+              padding: {
+                xs: "20px 20px 30px",
+                sm: "30px 40px 40px",
+                md: "40px 60px 50px",
+                lg: "50px 80px 60px",
+              },
+              display: "flex",
+              flexDirection: "column",
+              gap: { xs: 2, sm: 3, md: 4 },
             }}
           >
+            {/* Title */}
             <Typography
               sx={{
                 fontFamily: '"Arvo", serif',
-                fontSize: { xs: "2.8rem", sm: "3.8rem", md: "4.5rem" },
+                fontSize: {
+                  xs: "2rem",
+                  sm: "2.5rem",
+                  md: "3.5rem",
+                  lg: "4rem",
+                },
+                fontWeight: 700,
                 color: "#D19F3B",
                 letterSpacing: "0.12em",
-                mb: 2,
-                lineHeight: 1.1,
+                lineHeight: 1.2,
+                marginBottom: { xs: "8px", md: "0px" },
               }}
             >
               ENTERTAIN & EXPLORE
             </Typography>
 
-            <Typography
+            {/* Description */}
+            {/* <Typography
               sx={{
                 fontFamily: '"Jost", sans-serif',
-                fontSize: { xs: "1.1rem", md: "1.4rem" },
+                fontSize: { xs: "14px", sm: "15px", md: "16px", lg: "17px" },
+                lineHeight: { xs: 1.6, md: 1.7 },
                 color: "#ffffff",
-                maxWidth: "720px",
-                lineHeight: 1.8,
+                fontWeight: 400,
+                maxWidth: { xs: "100%", md: "720px", lg: "800px" },
                 opacity: 0.95,
-                mb: 5,
               }}
             >
               Dive into an unforgettable experience with world-class cinema,
               award-winning family adventures, thrilling fun zones, and
-              exquisite dining — all under one roof at Islamabad’s premier
+              exquisite dining — all under one roof at Islamabad's premier
               entertainment destination.
-            </Typography>
+            </Typography> */}
 
             {/* Tags: hidden on mobile */}
-            <Stack
+            {/* <Stack
               direction="row"
               spacing={2}
               flexWrap="wrap"
-              sx={{ mb: 4, display: { xs: "none", md: "flex" } }}
+              sx={{
+                marginTop: { xs: 1, md: 2 },
+                display: { xs: "none", md: "flex" },
+              }}
             >
               {["CINEMA", "FAMILY FUN", "ADVENTURE", "SAFE & SECURE"].map(
                 (item) => (
@@ -171,28 +174,44 @@ export default function EntertainPage() {
                       letterSpacing: "0.22em",
                       fontFamily: '"Jost", sans-serif',
                       borderRadius: "999px",
+                      transition: "all 0.3s ease",
+                      "&:hover": {
+                        backgroundColor: "rgba(209,159,59,0.1)",
+                        borderColor: "#D19F3B",
+                      },
                     }}
                   >
                     {item}
                   </Box>
                 )
               )}
-            </Stack>
+            </Stack> */}
 
-            <Button
-              sx={{
-                backgroundColor: "#D19F3B",
-                color: "#000",
-                px: { xs: 4, md: 6 },
-                py: { xs: 1, md: 1.8 },
-                fontSize: { xs: "0.9rem", md: "1rem" },
-                borderRadius: "999px",
-                fontWeight: 600,
-                "&:hover": { backgroundColor: "#fff", color: "#D19F3B" },
-              }}
-            >
-              Explore Attractions
-            </Button>
+            {/* CTA Button */}
+            <Box sx={{ marginTop: { xs: 2, md: 0 } }}>
+              <Button
+                sx={{
+                  fontFamily: '"Poppins", sans-serif',
+                  backgroundColor: "#D19F3B",
+                  color: "#ffffffff",
+                  px: { xs: 4, md: 6 },
+                  py: { xs: 1, md: 1.5 },
+                  fontSize: { xs: "0.9rem", md: "1rem" },
+                  borderRadius: "6px",
+                  fontWeight: 600,
+                  textTransform: "none",
+                  transition: "all 0.3s ease",
+                  "&:hover": {
+                    backgroundColor: "#fff",
+                    color: "#D19F3B",
+                    transform: "translateY(-2px)",
+                    boxShadow: "0 4px 12px rgba(209,159,59,0.3)",
+                  },
+                }}
+              >
+                Explore Attractions
+              </Button>
+            </Box>
           </Box>
         </Box>
         {/* ================= END HERO SECTION ================= */}
