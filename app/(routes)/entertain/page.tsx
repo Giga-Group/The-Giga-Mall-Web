@@ -20,22 +20,22 @@ export default function EntertainPage() {
     {
       title: "KidZania",
       description: "Interactive city for kids to learn n play.",
-      image: "/23.jpg",
+      image: "/upcoming6.jpg",
     },
     {
       title: "CinePax Cinema",
       description: "Watch your favorite blockbusters in style",
-      image: "/cinepax.jpg",
+      image: "/Cinepax/c2.jpg",
     },
     {
       title: "Ice Rink",
       description: "Glide and skate like a pro",
-      image: "/ice_rink.jpg",
+      image: "/ASC_2024_3.jpg",
     },
     {
       title: "Fun City Arcade",
       description: "Exciting games for all ages",
-      image: "/funcity.jpg",
+      image: "/2.png",
     },
   ];
 
@@ -359,200 +359,6 @@ export default function EntertainPage() {
           </Box>
         </Box>
         {/* ================= END ENDLESS FUN AWAITS ================= */}
-
-        {/* ================= Kids Play Land Adventure ================= */}
-        <Box
-          sx={{
-            position: "relative",
-            width: "100vw",
-            height: { xs: "70vh", md: "55vh" },
-            display: "flex",
-            overflow: "hidden",
-          }}
-        >
-          {/* ================= Left Image ================= */}
-          <Box
-            sx={{
-              flexBasis: "50%",
-              position: "relative",
-              height: "100%",
-              overflow: "hidden",
-            }}
-          >
-            <Image
-              src="/projects/cpr.jpg"
-              alt="Kids Play Land Left"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-            />
-
-            {/* Blend overlay → fades to center */}
-            <Box
-              sx={{
-                position: "absolute",
-                inset: 0,
-                background:
-                  "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0.45) 100%)",
-                zIndex: 1,
-              }}
-            />
-          </Box>
-
-          {/* ================= Right Image ================= */}
-          <Box
-            sx={{
-              flexBasis: "50%",
-              position: "relative",
-              height: "100%",
-              overflow: "hidden",
-            }}
-          >
-            <Image
-              src="/projects/cpr.jpg"
-              alt="Kids Play Land Right"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-            />
-
-            {/* Blend overlay → fades to center */}
-            <Box
-              sx={{
-                position: "absolute",
-                inset: 0,
-                background:
-                  "linear-gradient(to left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0.45) 100%)",
-                zIndex: 1,
-              }}
-            />
-          </Box>
-
-          {/* ================= Center Text Overlay ================= */}
-          <Box
-            sx={{
-              position: "absolute",
-              inset: 0,
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              zIndex: 3,
-              px: { xs: 2, md: 6 },
-              pointerEvents: "none",
-            }}
-          >
-            <Box
-              sx={{
-                width: { xs: "95%", md: "55%" },
-                maxWidth: "900px",
-                height: "100%",
-
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                textAlign: "center",
-
-                p: { xs: 4, md: 8 },
-                pointerEvents: "auto",
-
-                /* Solid background (important) */
-                backgroundColor: "rgba(255,255,255,0.95)",
-
-                /* 🔥 TRUE EDGE DISSOLVE */
-                WebkitMaskImage: `
-      linear-gradient(
-        to right,
-        transparent 0%,
-        rgba(0,0,0,0.3) 8%,
-        rgba(0,0,0,0.75) 20%,
-        black 40%,
-        black 60%,
-        rgba(0,0,0,0.75) 80%,
-        rgba(0,0,0,0.3) 92%,
-        transparent 100%
-      )
-    `,
-                maskImage: `
-      linear-gradient(
-        to right,
-        transparent 0%,
-        rgba(0,0,0,0.3) 8%,
-        rgba(0,0,0,0.75) 20%,
-        black 40%,
-        black 60%,
-        rgba(0,0,0,0.75) 80%,
-        rgba(0,0,0,0.3) 92%,
-        transparent 100%
-      )
-    `,
-
-                backdropFilter: "blur(14px)",
-
-                /* No card look */
-                borderRadius: 0,
-
-                /* Gentle internal softness */
-                boxShadow: "inset 0 0 60px rgba(255,255,255,0.35)",
-              }}
-            >
-              <Typography
-                sx={{
-                  fontFamily: '"Arvo", serif',
-                  fontSize: { xs: "2rem", md: "3rem" },
-                  fontWeight: 700,
-                  mb: 1,
-                }}
-              >
-                Kids Playland Adventure
-              </Typography>
-
-              <Typography
-                sx={{
-                  fontFamily: '"Jost", sans-serif',
-                  fontSize: { xs: "1rem", md: "1.2rem" },
-                  fontWeight: 600,
-                  color: "#D19F3B",
-                  mb: 2,
-                }}
-              >
-                Safe, Fun & Exciting
-              </Typography>
-
-              <Typography
-                sx={{
-                  fontFamily: '"Jost", sans-serif',
-                  fontSize: { xs: "0.95rem", md: "1.1rem" },
-                  lineHeight: 1.8,
-                  mb: 4,
-                  color: "#333",
-                }}
-              >
-                A wonderland of slides, ball pits, and activities for the little
-                ones.
-              </Typography>
-
-              <Button
-                sx={{
-                  backgroundColor: "#D19F3B",
-                  color: "#000",
-                  px: { xs: 3, md: 6 },
-                  py: { xs: 1, md: 1.5 },
-                  fontWeight: 600,
-                  width: "fit-content",
-                  mx: "auto",
-                  borderRadius: "999px",
-                  "&:hover": {
-                    backgroundColor: "#fff",
-                    color: "#D19F3B",
-                  },
-                }}
-              >
-                Plan Your Visit
-              </Button>
-            </Box>
-          </Box>
-        </Box>
-        {/* ================= End Kids Play Land Adventure ================= */}
 
         {/* ================= Delicious Dining ================= */}
         <Box
@@ -905,153 +711,36 @@ export default function EntertainPage() {
         </Box>
         {/* ================= End Experience Cinepax ================= */}
 
-        {/* ============== Upcoming Events & Activities ==============*/}
-        <Box sx={{ py: { xs: 10, md: 8 }, backgroundColor: "#fff" }}>
-          {/* Heading */}
-          <Box
-            sx={{ position: "relative", mb: { xs: 6, md: 10 }, width: "100%" }}
-          >
-            {/* Heading text */}
-            <Typography
-              sx={{
-                fontFamily: '"Arvo", serif',
-                fontSize: { xs: "2.3rem", md: "3rem" },
-                letterSpacing: "0.15em",
-                color: "#000",
-                fontWeight: 600,
-                ml: "8%", // aligns heading with cards
-                position: "relative",
-                zIndex: 1,
-              }}
-            >
-              Upcoming Events & Activities
-            </Typography>
-          </Box>
-
-          {/* Square Cards Grid */}
-          <Box
-            sx={{
-              maxWidth: "1400px",
-              mx: "auto",
-              px: { xs: 2, md: 6 },
-              display: "grid",
-              gridTemplateColumns: {
-                xs: "1fr",
-                sm: "repeat(2, 1fr)",
-                md: "repeat(4, 1fr)",
-              },
-              gap: 4,
-            }}
-          >
-            {attractions.map((item, idx) => (
-              <Box
-                key={idx}
-                sx={{
-                  position: "relative",
-                  aspectRatio: "1 / 1",
-                  borderRadius: "10px",
-                  overflow: "hidden",
-                  cursor: "pointer",
-                  boxShadow: "0 18px 40px rgba(0,0,0,0.15)",
-                  transition: "transform 0.4s ease",
-                  "&:hover": { transform: "translateY(-10px)" },
-                }}
-              >
-                {/* Image */}
-                <Box
-                  component="img"
-                  src={item.image}
-                  alt={item.title}
-                  sx={{
-                    position: "absolute",
-                    inset: 0,
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    transition: "transform 0.6s ease",
-                    "&:hover": { transform: "scale(1.08)" },
-                  }}
-                />
-
-                {/* Overlay */}
-                <Box
-                  sx={{
-                    position: "absolute",
-                    inset: 0,
-                    background:
-                      "linear-gradient(to top, rgba(0,0,0,0.85) 20%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.15) 100%)",
-                    zIndex: 1,
-                  }}
-                />
-
-                {/* Content */}
-                <Box
-                  sx={{
-                    position: "absolute",
-                    bottom: 0,
-                    zIndex: 2,
-                    p: 3,
-                    color: "#fff",
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      fontFamily: '"Arvo", serif',
-                      fontSize: "1.25rem",
-                      letterSpacing: "0.08em",
-                      color: "#D19F3B",
-                      mb: 1,
-                    }}
-                  >
-                    {item.title}
-                  </Typography>
-
-                  <Typography
-                    sx={{
-                      fontFamily: '"Jost", sans-serif',
-                      fontSize: "0.95rem",
-                      lineHeight: 1.6,
-                      opacity: 0.95,
-                    }}
-                  >
-                    {item.description}
-                  </Typography>
-                </Box>
-              </Box>
-            ))}
-          </Box>
-        </Box>
-        {/* ============== End Upcoming Events & Activities ==============*/}
         <DiscoverEventsOffers />
 
-        {/* ============== Family Moments at Giga Mall ==============*/}
+        {/* ============== Family Moments at Giga Mall ============== */}
         <Box
           sx={{
             position: "relative",
             width: "100%",
-            minHeight: { xs: "90vh", md: "80vh" },
+            height: { xs: "90vh", md: "80vh" },
             display: "flex",
             overflow: "hidden",
+            backgroundColor: "#f5f5f5",
           }}
         >
-          {/* ================= Left Background Image ================= */}
+          {/* ================= Background Image ================= */}
           <Box
             sx={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "50%",
+              flex: 1,
+              position: "relative",
               height: "100%",
-              zIndex: 0,
-              "&:hover img": { transform: "scale(1.05)" },
               overflow: "hidden",
             }}
           >
             <Image
               src="/Cinepax/c1.jpg"
-              alt="Family Left"
+              alt="Family Moments"
               fill
-              style={{ objectFit: "cover", transition: "transform 0.8s ease" }}
+              style={{
+                objectFit: "cover",
+                transition: "transform 1s ease",
+              }}
               priority
             />
             <Box
@@ -1059,196 +748,103 @@ export default function EntertainPage() {
                 position: "absolute",
                 inset: 0,
                 background:
-                  "linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 80%)",
+                  "linear-gradient(to left, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.05) 50%, rgba(0,0,0,0) 100%)",
               }}
             />
           </Box>
 
-          {/* ================= Right Background Image ================= */}
+          {/* ================= Text Content ================= */}
           <Box
             sx={{
               position: "absolute",
               top: 0,
-              right: 0,
-              width: "50%",
+              left: 0,
               height: "100%",
-              zIndex: 0,
-              "&:hover img": { transform: "scale(1.05)" },
-              overflow: "hidden",
-            }}
-          >
-            <Image
-              src="/Cinepax/c2.jpg"
-              alt="Family Right"
-              fill
-              style={{ objectFit: "cover", transition: "transform 0.8s ease" }}
-              priority
-            />
-            <Box
-              sx={{
-                position: "absolute",
-                inset: 0,
-                background:
-                  "linear-gradient(to left, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 80%)",
-              }}
-            />
-          </Box>
-
-          {/* ================= Center Overlay ================= */}
-          <Box
-            sx={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: { xs: "90%", md: "55%" },
-              backgroundColor: "rgba(255,255,255,0.85)",
-              borderRadius: "28px",
-              p: { xs: 4, md: 6 },
-              textAlign: "center",
+              width: { xs: "100%", md: "50%" },
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              px: { xs: 4, md: 8 },
               zIndex: 2,
-              backdropFilter: "blur(10px)",
-              boxShadow: "0 20px 60px rgba(0,0,0,0.15)",
-              transition: "transform 0.5s ease",
-              "&:hover": { transform: "translate(-50%, -50%) scale(1.02)" },
+              pointerEvents: "auto",
             }}
           >
-            {/* ================= Heading ================= */}
             <Box
               sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                mb: { xs: 2, md: 3 },
+                maxWidth: "550px",
+                background: "rgba(255,255,255,0.75)",
+                backdropFilter: "blur(12px)",
+                borderRadius: "28px",
+                boxShadow: "0 30px 80px rgba(0,0,0,0.15)",
+                px: { xs: 4, md: 6 },
+                py: { xs: 5, md: 8 },
               }}
             >
-              <Box
-                sx={{
-                  width: "50px",
-                  height: "2px",
-                  backgroundColor: "#D19F3B",
-                  mr: 2,
-                  borderRadius: "2px",
-                }}
-              />
+              {/* Heading */}
               <Typography
                 sx={{
                   fontFamily: '"Arvo", serif',
-                  fontSize: { xs: "2rem", md: "2.8rem" },
+                  fontSize: { xs: "2rem", md: "3rem" },
                   fontWeight: 700,
-                  whiteSpace: "nowrap",
-                  color: "#333",
-                  textShadow: "0 3px 6px rgba(0,0,0,0.15)",
+                  mb: 2,
+                  color: "#222",
+                  lineHeight: 1.2,
                 }}
               >
                 Family Moments at Giga Mall
               </Typography>
-              <Box
+
+              {/* Subheading */}
+              <Typography
                 sx={{
-                  width: "50px",
-                  height: "2px",
-                  backgroundColor: "#D19F3B",
-                  ml: 2,
-                  borderRadius: "2px",
+                  fontFamily: '"Jost", sans-serif',
+                  fontSize: { xs: "1.2rem", md: "1.5rem" },
+                  fontWeight: 600,
+                  color: "#D19F3B",
+                  mb: 3,
                 }}
-              />
-            </Box>
+              >
+                Fun, Joy & Togetherness
+              </Typography>
 
-            {/* ================= Tagline ================= */}
-            <Typography
-              sx={{
-                fontFamily: '"Jost", sans-serif',
-                fontSize: { xs: "1rem", md: "1.3rem" },
-                fontWeight: 500,
-                color: "#555",
-                mb: { xs: 3, md: 4 },
-              }}
-            >
-              Our favorite place for family fun
-            </Typography>
+              {/* Paragraph */}
+              <Typography
+                sx={{
+                  fontFamily: '"Jost", sans-serif',
+                  fontSize: { xs: "1rem", md: "1.1rem" },
+                  lineHeight: 1.8,
+                  color: "#444",
+                  mb: 5,
+                }}
+              >
+                Explore exciting activities, shopping, and dining experiences
+                designed for the whole family. Create unforgettable memories
+                together.
+              </Typography>
 
-            {/* ================= Two Static Cards ================= */}
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: { xs: "column", md: "row" },
-                justifyContent: "center",
-                gap: { xs: 4, md: 6 },
-              }}
-            >
-              {[1, 2].map((idx) => (
-                <Box
-                  key={idx}
-                  sx={{
-                    position: "relative",
-                    width: { xs: "100%", md: "220px" },
-                    aspectRatio: "1 / 1",
-                    borderRadius: "20px",
-                    overflow: "hidden",
-                    cursor: "default",
-                  }}
-                >
-                  {/* Static Card Image */}
-                  <Box
-                    sx={{ position: "relative", width: "100%", height: "100%" }}
-                  >
-                    <Image
-                      src={`/Cinepax/family_card_${idx}.jpg`}
-                      alt={`Family Card ${idx}`}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      priority
-                    />
-                  </Box>
-
-                  {/* Overlay Gradient */}
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      inset: 0,
-                      background:
-                        "linear-gradient(to top, rgba(0,0,0,0.6) 20%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 100%)",
-                      zIndex: 1,
-                    }}
-                  />
-
-                  {/* Text Content */}
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      bottom: 0,
-                      zIndex: 2,
-                      p: 2,
-                      color: "#fff",
-                      textAlign: "center",
-                    }}
-                  >
-                    <Typography
-                      sx={{
-                        fontFamily: '"Arvo", serif',
-                        fontSize: "1.1rem",
-                        color: "#D19F3B",
-                        mb: 0.5,
-                      }}
-                    >
-                      Plan your Entertainment Day!
-                    </Typography>
-                    <Box
-                      sx={{
-                        height: "2px",
-                        width: "40px",
-                        backgroundColor: "#D19F3B",
-                        mx: "auto",
-                        borderRadius: "2px",
-                      }}
-                    />
-                  </Box>
-                </Box>
-              ))}
+              {/* Button */}
+              <Button
+                sx={{
+                  backgroundColor: "#D19F3B",
+                  color: "#000",
+                  px: { xs: 4, md: 6 },
+                  py: { xs: 1.5, md: 2 },
+                  fontWeight: 600,
+                  borderRadius: "999px",
+                  "&:hover": {
+                    backgroundColor: "#fff",
+                    color: "#D19F3B",
+                    transform: "scale(1.05)",
+                  },
+                  transition: "all 0.3s ease",
+                }}
+              >
+                Plan Your Visit
+              </Button>
             </Box>
           </Box>
         </Box>
-        {/* ============== End Family Moments at Giga Mall ==============*/}
+        {/* ============== End Family Moments at Giga Mall ============== */}
       </main>
 
       <Footer />
