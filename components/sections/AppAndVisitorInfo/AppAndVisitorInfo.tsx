@@ -94,11 +94,11 @@ const AppAndVisitorInfo = () => {
                 With so much to discover, Giga Mall app is your pocket-sized guide to making the most of your visit. Available for both iOS and Android, the simple-to-use app offers personalised content, the latest news and events, real-time parking information, and much more.
               </Typography>
 
-              {/* App Store Badges - Now forced horizontal on all screens */}
+              {/* App Store Badges - Row on small screens, column on large screens */}
               <Box
                 sx={{
                   display: 'flex',
-                  flexDirection: 'row',
+                  flexDirection: { xs: 'row', sm: 'row', md: 'row', lg: 'column' },
                   flexWrap: 'wrap',
                   gap: { xs: 1, md: 1.5, lg: 2 },
                   alignItems: 'flex-start',
