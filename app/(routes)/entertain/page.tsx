@@ -216,149 +216,141 @@ export default function EntertainPage() {
         </Box>
         {/* ================= END HERO SECTION ================= */}
 
-        {/* ================= ENDLESS FUN AWAITS ================= */}
-        <Box sx={{ py: { xs: 10, md: 8 }, backgroundColor: "#fff" }}>
-          {/* Heading */}
-          <Box
-            sx={{ position: "relative", mb: { xs: 6, md: 10 }, width: "100%" }}
-          >
-            {/* Long line from left edge of screen to heading start */}
-            <Box
-              sx={{
-                position: "absolute",
-                left: 0,
-                top: "50%", // align with heading text vertically
-                width: "8%", // same as heading margin-left
-                height: "2px",
-                backgroundColor: "#D19F3B",
-                zIndex: 0,
-              }}
-            />
+{/* ================= ENDLESS FUN AWAITS ================= */}
+<Box
+  sx={{
+    minHeight: "80vh", 
+    py: { xs: 12, md: 14 },
+    backgroundColor: "#fdfdfd",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+  }}
+>
+  {/* ================= Heading ================= */}
+  <Box sx={{ position: "relative", mb: { xs: 8, md: 12 }, px: { xs: 3, md: 6 } }}>
+    <Typography
+      sx={{
+        fontFamily: '"Arvo", serif',
+        fontSize: { xs: "2.5rem", md: "3.5rem" },
+        fontWeight: 700,
+        letterSpacing: "0.15em",
+        color: "#000",
+        mb: 2,
+      }}
+    >
+      ENDLESS FUN AWAITS
+    </Typography>
+    <Box
+      sx={{
+        width: "60px",
+        height: "4px",
+        backgroundColor: "#D19F3B",
+        borderRadius: "2px",
+      }}
+    />
+  </Box>
 
-            {/* Small decorative line aligned to same end point */}
-            <Box
-              sx={{
-                position: "absolute",
-                left: 0, // starts from left edge
-                top: "40%", // slightly above heading
-                width: "8%", // same as long line width
-                height: "4px", // thicker small line
-                backgroundColor: "#D19F3B",
-                zIndex: 0,
-              }}
-            />
+  {/* ================= Cards Grid ================= */}
+  <Box
+    sx={{
+      maxWidth: "1600px",
+      mx: "auto",
+      px: { xs: 2, md: 6 },
+      display: "grid",
+      gridTemplateColumns: {
+        xs: "1fr",
+        sm: "repeat(2, 1fr)",
+        md: "repeat(3, 1fr)",
+        lg: "repeat(4, 1fr)",
+      },
+      gap: { xs: 6, md: 8 },
+      minHeight: "50vh", // ensures cards container has enough height
+    }}
+  >
+    {attractions.map((item, idx) => (
+      <Box
+        key={idx}
+        sx={{
+          position: "relative",
+          width: "100%",
+          aspectRatio: "5/6", 
+          borderRadius: "10px",
+          overflow: "hidden",
+          cursor: "pointer",
+          boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+          transition: "transform 0.3s ease, box-shadow 0.3s ease",
+          "&:hover": {
+            transform: "translateY(-6px) scale(1.02)",
+            boxShadow: "0 20px 60px rgba(0,0,0,0.15)",
+          },
+        }}
+      >
+        {/* Card Image */}
+        <Box sx={{ position: "relative", width: "100%", height: "100%" }}>
+          <Image
+            src={item.image}
+            alt={item.title}
+            fill
+            style={{ objectFit: "cover" }}
+          />
+        </Box>
 
-            {/* Heading text */}
-            <Typography
-              sx={{
-                fontFamily: '"Arvo", serif',
-                fontSize: { xs: "2.3rem", md: "3rem" },
-                letterSpacing: "0.15em",
-                color: "#000",
-                fontWeight: 600,
-                ml: "8%", // aligns heading with cards
-                position: "relative",
-                zIndex: 1,
-              }}
-            >
-              ENDLESS FUN AWAITS
-            </Typography>
-          </Box>
+        {/* Overlay for text readability */}
+        <Box
+          sx={{
+            position: "absolute",
+            inset: 0,
+            background:
+              "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0) 100%)",
+            zIndex: 1,
+          }}
+        />
 
-          {/* Square Cards Grid */}
-          <Box
+        {/* Card content */}
+        <Box
+          sx={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            zIndex: 2,
+            p: 3,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "flex-end",
+          }}
+        >
+          <Typography
             sx={{
-              maxWidth: "1400px",
-              mx: "auto",
-              px: { xs: 2, md: 6 },
-              display: "grid",
-              gridTemplateColumns: {
-                xs: "1fr",
-                sm: "repeat(2, 1fr)",
-                md: "repeat(4, 1fr)",
-              },
-              gap: 4,
+              fontFamily: '"Arvo", serif',
+              fontSize: { xs: "1.3rem", md: "1.5rem" },
+              color: "#D19F3B",
+              fontWeight: 600,
+              mb: 1,
+              textAlign: "center",
             }}
           >
-            {attractions.map((item, idx) => (
-              <Box
-                key={idx}
-                sx={{
-                  position: "relative",
-                  aspectRatio: "1 / 1",
-                  borderRadius: "10px",
-                  overflow: "hidden",
-                  cursor: "pointer",
-                  boxShadow: "0 18px 40px rgba(0,0,0,0.15)",
-                  transition: "transform 0.4s ease",
-                  "&:hover": { transform: "translateY(-10px)" },
-                }}
-              >
-                {/* Image */}
-                <Box
-                  component="img"
-                  src={item.image}
-                  alt={item.title}
-                  sx={{
-                    position: "absolute",
-                    inset: 0,
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    transition: "transform 0.6s ease",
-                    "&:hover": { transform: "scale(1.08)" },
-                  }}
-                />
-
-                {/* Overlay */}
-                <Box
-                  sx={{
-                    position: "absolute",
-                    inset: 0,
-                    background:
-                      "linear-gradient(to top, rgba(0,0,0,0.85) 20%, rgba(0,0,0,0.4) 55%, rgba(0,0,0,0.15) 100%)",
-                    zIndex: 1,
-                  }}
-                />
-
-                {/* Content */}
-                <Box
-                  sx={{
-                    position: "absolute",
-                    bottom: 0,
-                    zIndex: 2,
-                    p: 3,
-                    color: "#fff",
-                  }}
-                >
-                  <Typography
-                    sx={{
-                      fontFamily: '"Arvo", serif',
-                      fontSize: "1.25rem",
-                      letterSpacing: "0.08em",
-                      color: "#D19F3B",
-                      mb: 1,
-                    }}
-                  >
-                    {item.title}
-                  </Typography>
-
-                  <Typography
-                    sx={{
-                      fontFamily: '"Jost", sans-serif',
-                      fontSize: "0.95rem",
-                      lineHeight: 1.6,
-                      opacity: 0.95,
-                    }}
-                  >
-                    {item.description}
-                  </Typography>
-                </Box>
-              </Box>
-            ))}
-          </Box>
+            {item.title}
+          </Typography>
+          <Typography
+            sx={{
+              fontFamily: '"Jost", sans-serif',
+              fontSize: { xs: "1rem", md: "1.1rem" },
+              color: "#fff",
+              textAlign: "center",
+              lineHeight: 1.5,
+            }}
+          >
+            {item.description}
+          </Typography>
         </Box>
-        {/* ================= END ENDLESS FUN AWAITS ================= */}
+      </Box>
+    ))}
+  </Box>
+</Box>
+{/* ================= END ENDLESS FUN AWAITS ================= */}
 
         {/* ================= Delicious Dining ================= */}
         <Box
