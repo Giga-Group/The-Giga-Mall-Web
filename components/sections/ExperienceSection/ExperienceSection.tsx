@@ -15,8 +15,8 @@ const ExperienceSection = () => {
     { src: '/trending20.JPG', position: 'top-right' },
     { src: '/trending3.jpg', position: 'middle-right' },
     { src: '/trending9.jpg', position: 'bottom-right' },
-    { src: '/trending2.JPG', position: 'bottom-center' },
-    { src: '/trending22.JPG', position: 'bottom-left' },
+    { src: '/trending2.jpg', position: 'bottom-center' },
+    { src: '/trending22.jpg', position: 'bottom-left' },
     { src: '/trending8.jpg', position: 'middle-left' },
     { src: '/trending21.JPG', position: 'top-left' }
   ];
