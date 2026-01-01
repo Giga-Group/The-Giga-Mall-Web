@@ -1,7 +1,13 @@
 'use client';
 
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
+import { useState } from 'react';
+import { ArrowForwardIos } from '@mui/icons-material';
+import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
+import AcUnitIcon from '@mui/icons-material/AcUnit';
+import MovieIcon from '@mui/icons-material/Movie';
+import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 
 interface EntertainDropdownProps {
   isOpen: boolean;
@@ -9,169 +15,134 @@ interface EntertainDropdownProps {
   onMouseLeave: () => void;
 }
 
+const entertainOptions = [
+  { name: "KidZania", image: "/6485.jpg", icon: <EmojiPeopleIcon /> },
+  { name: "Dubai Ice Rink", image: "/DSC07199.jpg", icon: <AcUnitIcon /> },
+  { name: "Reel Cinemas", image: "/DSC07836.jpg", icon: <MovieIcon /> },
+  { name: "Hysteria", image: "/DSC07901.jpg", icon: <TheaterComedyIcon /> },
+];
+
 const EntertainDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: EntertainDropdownProps) => {
-  const entertainOptions = [
-    { name: "KidZania", image: "/6485.jpg" },
-    { name: "Dubai Ice Rink", image: "/DSC07199.jpg" },
-    { name: "Reel Cinemas", image: "/DSC07836.jpg" },
-    { name: "Trampo Extreme", image: "/DSC07876.jpg" },
-    { name: "Hysteria", image: "/DSC07901.jpg" },
-    { name: "Play DXB", image: "/DSC08041.jpg" },
-    { name: "Soft Play", image: "/DSC08196.jpg" },
-    { name: "House of Hype", image: "/23.jpg" },
-    { name: "Boo Boo Laand", image: "/256+.jpg" },
-  ];
+  // default to 0 so first item image always shows
+  const [hoveredIndex, setHoveredIndex] = useState<number>(0);
 
   if (!isOpen) return null;
 
   return (
     <Box
       onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      onMouseLeave={() => { setHoveredIndex(0); onMouseLeave(); }} // reset to first item
       sx={{
-        position: 'fixed',
-        top: { md: '90px' },
+        position: 'absolute',
         left: 0,
         right: 0,
         backgroundColor: '#ffffff',
-        boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-        zIndex: 10000,
-        paddingBottom: { md: '40px', lg: '50px' },
-        animation: 'fadeIn 0.3s ease-in-out',
-        '@keyframes fadeIn': {
-          from: {
-            opacity: 0,
-            transform: 'translateY(-10px)'
-          },
-          to: {
-            opacity: 1,
-            transform: 'translateY(0)'
-          }
-        }
+        boxShadow: '0 12px 36px rgba(0,0,0,0.15)',
+        zIndex: 1000,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        px: { xs: 2, md: 4 },
+        py: { xs: 3, md: 6 },
       }}
     >
+      {/* Container 70% width */}
       <Box
         sx={{
-          maxWidth: '1400px',
-          width: '100%',
-          margin: '0 auto',
-          padding: { md: '20px 24px 0', lg: '24px 48px 0' }
+          width: '70%',
+          display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
+          gap: { md: 4, lg: 6 },
+          justifyContent: 'center',
+          alignItems: 'center',
+          position: 'relative',
         }}
       >
-        
+        {/* Left: Links with icons */}
         <Box
           sx={{
-            display: 'grid',
-            gridTemplateColumns: { 
-              md: 'repeat(4, 1fr)', 
-              lg: 'repeat(5, 1fr)' 
-            },
-            gap: { md: 2, lg: 3 }
+            flex: '0 0 40%',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 2,
+            alignItems: 'flex-start',
+            justifyContent: 'center',
+            position: 'relative',
+            paddingRight: '24px',
           }}
         >
-          {entertainOptions.map((option, index) => (
+          {entertainOptions.map((option, idx) => (
             <Box
-              key={index}
-              component="a"
-              href="#"
+              key={idx}
+              onMouseEnter={() => setHoveredIndex(idx)}
               sx={{
-                textDecoration: 'none',
-                color: '#000000',
-                transition: 'transform 0.2s ease',
-                '&:hover': {
-                  transform: 'translateY(-4px)',
-                  '& .entertain-image': {
-                    boxShadow: '0 8px 16px rgba(0,0,0,0.15)'
-                  },
-                  '& .entertain-title': {
-                    color: '#D19F3B'
-                  }
-                }
+                display: 'flex',
+                alignItems: 'center',
+                gap: 1.5,
+                cursor: 'pointer',
+                transition: 'all 0.2s ease',
+                width: '100%',
               }}
             >
-              <Box
-                className="entertain-image"
-                sx={{
-                  width: '100%',
-                  aspectRatio: '1',
-                  borderRadius: '4px',
-                  overflow: 'hidden',
-                  marginBottom: { md: '8px', lg: '10px' },
-                  position: 'relative',
-                  backgroundColor: '#f5f5f5',
-                  transition: 'box-shadow 0.2s ease'
-                }}
-              >
-                <Image
-                  src={option.image}
-                  alt={option.name}
-                  fill
-                  sizes="(max-width: 768px) 25vw, 20vw"
-                  style={{ 
-                    objectFit: 'cover'
-                  }}
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none';
-                  }}
-                />
+              {/* Left Icon */}
+              <Box sx={{ color: hoveredIndex === idx ? '#D19F3B' : '#555' }}>
+                {option.icon}
               </Box>
+
+              {/* Link text */}
               <Typography
-                className="entertain-title"
                 sx={{
-                  fontSize: { md: '12px', lg: '13px' },
-                  fontWeight: 400,
-                  textAlign: 'center',
-                  transition: 'color 0.2s ease',
-                  lineHeight: 1.4,
-                  fontFamily: '"Poppins", sans-serif'
+                  fontSize: { xs: '14px', md: '16px' },
+                  fontWeight: hoveredIndex === idx ? 600 : 400,
+                  color: hoveredIndex === idx ? '#D19F3B' : '#000',
+                  transition: 'all 0.2s ease',
+                  width: '100%',
                 }}
               >
                 {option.name}
               </Typography>
             </Box>
           ))}
-        </Box>
-      </Box>
 
-      {/* Bottom Section */}
-      <Box
-        sx={{
-          position: 'absolute',
-          bottom: 0,
-          left: 0,
-          right: 0,
-          padding: { md: '12px 24px', lg: '6px 48px' },
-          display: 'flex',
-          justifyContent: 'center',
-          backgroundColor: '#ffffff'
-        }}
-      >
-        <Button
-          variant="outlined"
+          {/* Fixed arrow appears only on hover */}
+          {hoveredIndex !== null && (
+            <ArrowForwardIos
+              sx={{
+                position: 'absolute',
+                right: 0,
+                top: '50%',
+                transform: 'translateY(-50%)',
+                color: '#D19F3B',
+                fontSize: 16,
+                transition: 'opacity 0.2s ease',
+                opacity: 1,
+              }}
+            />
+          )}
+        </Box>
+
+        {/* Right: Image Preview */}
+        <Box
           sx={{
-            border: '1px solid #D19F3B',
-            color: '#ffffff',
-            textTransform: 'uppercase',
-            fontSize: { md: '13px', lg: '14px' },
-            fontWeight: 500,
-            fontFamily: '"Poppins", sans-serif',
-            padding: { md: '10px 24px', lg: '2px 570px' },
-            borderRadius: 0,
-            transition: 'all 0.3s ease',
-            backgroundColor: '#D19F3B',
-            '&:hover': {
-              border: '1px solid #D19F3B',
-              color: '#ffffff',
-              backgroundColor: '#D19F3B'
-            }
+            flex: '0 0 60%',
+            position: 'relative',
+            height: { xs: '200px', md: '250px', lg: '300px' },
+            borderRadius: '10px',
+            overflow: 'hidden',
+            boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
           }}
         >
-          VIEW ALL ENTERTAINMENT
-        </Button>
+          {/* Always show image for hoveredIndex */}
+          <Image
+            src={entertainOptions[hoveredIndex].image}
+            alt={entertainOptions[hoveredIndex].name}
+            fill
+            style={{ objectFit: 'cover', transition: 'all 0.3s ease' }}
+          />
+        </Box>
       </Box>
     </Box>
   );
 };
 
 export default EntertainDropdown;
-

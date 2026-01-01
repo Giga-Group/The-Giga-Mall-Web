@@ -231,10 +231,10 @@ function OpeningHoursContent() {
     : 'Home · Opening hours';
 
   const heroImage = isGettingHere
-    ? '/DSC07199.jpg'
+    ? '/getting-here.jpg'
     : isParking
-    ? '/DSC08041.jpg'
-    : '/WESTFIELD_CENTURY_CITY_TAYLOR_SWIFT_2.jpg';
+    ? '/hallway-garage.jpg'
+    : '/opening-hours.jpg';
 
   return (
     <>

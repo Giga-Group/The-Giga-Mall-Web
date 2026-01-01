@@ -3,11 +3,7 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import DiscoverEventsOffers from "@/components/sections/DiscoverEventsOffers";
-import {
-  Box,
-  Typography,
-  Button,
-} from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import Image from "next/image";
 
 export default function EntertainPage() {
@@ -22,7 +18,7 @@ export default function EntertainPage() {
       description: "Watch your favorite blockbusters in style",
       image: "/Cinepax/c2.jpg",
     },
-   
+
     {
       title: "Fun City Arcade",
       description: "Exciting games for all ages",
@@ -247,105 +243,105 @@ export default function EntertainPage() {
         </Box>
         {/* ================= END HERO SECTION ================= */}
 
-      {/* ================= ENDLESS FUN AWAITS ================= */}
-<Box
-  sx={{
-    backgroundColor: "#fdfdfd",
-    py: { xs: 8, md: 10 },
-  }}
->
-  {/* ================= Heading ================= */}
-  <Box
-    sx={{
-      maxWidth: "1600px",
-      mx: "auto",
-      px: { xs: 3, md: 6 },
-      mb: { xs: 6, md: 8 },
-    }}
-  >
-    <Typography
-      sx={{
-        fontFamily: '"Arvo", serif',
-        fontSize: { xs: "2.3rem", md: "3.2rem" },
-        fontWeight: 400,
-        letterSpacing: "0.12em",
-        color: "#D19F3B",
-      }}
-    >
-      Endless Fun Awaits
-    </Typography>
-  </Box>
-
-  {/* ================= Cards Grid ================= */}
-  <Box
-    sx={{
-      maxWidth: "1600px",
-      mx: "auto",
-      px: { xs: 2, md: 4 },
-      display: "grid",
-      gridTemplateColumns: {
-        xs: "1fr",
-        sm: "repeat(2, 1fr)",
-        lg: "repeat(3, 1fr)",
-      },
-      gap: { xs: 4, md: 2 },
-    }}
-  >
-    {attractions.map((item, idx) => (
-      <Box
-        key={idx}
-        sx={{
-          position: "relative",
-          width: "100%",
-          aspectRatio: "4/3",
-          borderRadius: "12px",
-          overflow: "hidden",
-          cursor: "pointer",
-          boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-          transition: "transform 0.3s ease, box-shadow 0.3s ease",
-          "&:hover": {
-            transform: "translateY(-4px)",
-            boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
-          },
-        }}
-      >
-        {/* Image */}
-        <Image
-          src={item.image}
-          alt={item.title}
-          fill
-          style={{ objectFit: "cover" }}
-        />
-
-        {/* Bottom gradient */}
+        {/* ================= ENDLESS FUN AWAITS ================= */}
         <Box
           sx={{
-            position: "absolute",
-            bottom: 0,
-            left: 0,
-            right: 0,
-            p: 2,
-            background:
-              "linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%)",
+            backgroundColor: "#fdfdfd",
+            py: { xs: 8, md: 10 },
           }}
         >
-          <Typography
+          {/* ================= Heading ================= */}
+          <Box
             sx={{
-              fontFamily: '"Poppins", sans-serif',
-              fontSize: { xs: "0.95rem", md: "1.05rem" },
-              color: "#ffffff",
-              fontWeight: 500,
-              textAlign: "center",
+              maxWidth: "1600px",
+              mx: "auto",
+              px: { xs: 3, md: 6 },
+              mb: { xs: 6, md: 8 },
             }}
           >
-            {item.title}
-          </Typography>
+            <Typography
+              sx={{
+                fontFamily: '"Arvo", serif',
+                fontSize: { xs: "2.3rem", md: "3.2rem" },
+                fontWeight: 400,
+                letterSpacing: "0.12em",
+                color: "#D19F3B",
+              }}
+            >
+              Endless Fun Awaits
+            </Typography>
+          </Box>
+
+          {/* ================= Cards Grid ================= */}
+          <Box
+            sx={{
+              maxWidth: "1600px",
+              mx: "auto",
+              px: { xs: 2, md: 4 },
+              display: "grid",
+              gridTemplateColumns: {
+                xs: "1fr",
+                sm: "repeat(2, 1fr)",
+                lg: "repeat(3, 1fr)",
+              },
+              gap: { xs: 4, md: 2 },
+            }}
+          >
+            {attractions.map((item, idx) => (
+              <Box
+                key={idx}
+                sx={{
+                  position: "relative",
+                  width: "100%",
+                  aspectRatio: "4/3",
+                  borderRadius: "12px",
+                  overflow: "hidden",
+                  cursor: "pointer",
+                  boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  "&:hover": {
+                    transform: "translateY(-4px)",
+                    boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
+                  },
+                }}
+              >
+                {/* Image */}
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
+
+                {/* Bottom gradient */}
+                <Box
+                  sx={{
+                    position: "absolute",
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    p: 2,
+                    background:
+                      "linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%)",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      fontFamily: '"Poppins", sans-serif',
+                      fontSize: { xs: "0.95rem", md: "1.05rem" },
+                      color: "#ffffff",
+                      fontWeight: 500,
+                      textAlign: "center",
+                    }}
+                  >
+                    {item.title}
+                  </Typography>
+                </Box>
+              </Box>
+            ))}
+          </Box>
         </Box>
-      </Box>
-    ))}
-  </Box>
-</Box>
-{/* ================= END ENDLESS FUN AWAITS ================= */}
+        {/* ================= END ENDLESS FUN AWAITS ================= */}
 
         {/* ================= Delicious Dining ================= */}
         <Box
@@ -423,11 +419,16 @@ export default function EntertainPage() {
               <Typography
                 sx={{
                   fontFamily: '"Arvo", serif',
-                fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
-                fontWeight: 400,
-                color: '#D19F3B',
-                textAlign: 'center',
-                letterSpacing: '0.02em'
+                  fontSize: {
+                    xs: "2rem",
+                    sm: "2.5rem",
+                    md: "3rem",
+                    lg: "3.5rem",
+                  },
+                  fontWeight: 400,
+                  color: "#D19F3B",
+                  textAlign: "center",
+                  letterSpacing: "0.02em",
                 }}
               >
                 Delicious Dining
@@ -544,7 +545,6 @@ export default function EntertainPage() {
         </Box>
         {/* ================= End Delicious Dining ================= */}
 
-    
         <DiscoverEventsOffers />
 
         {/* ============== Family Moments at Giga Mall ============== */}
@@ -657,29 +657,29 @@ export default function EntertainPage() {
               </Typography>
 
               <Box sx={{ marginTop: { xs: 2, md: 0 } }}>
-              <Button
-                sx={{
-                  fontFamily: '"Poppins", sans-serif',
-                  backgroundColor: "#D19F3B",
-                  color: "#ffffffff",
-                  px: { xs: 4, md: 6 },
-                  py: { xs: 1, md: 1.5 },
-                  fontSize: { xs: "0.9rem", md: "1rem" },
-                  borderRadius: "6px",
-                  fontWeight: 600,
-                  textTransform: "none",
-                  transition: "all 0.3s ease",
-                  "&:hover": {
-                    backgroundColor: "#fff",
-                    color: "#D19F3B",
-                    transform: "translateY(-2px)",
-                    boxShadow: "0 4px 12px rgba(209,159,59,0.3)",
-                  },
-                }}
-              >
-                Plan Your Visit
-              </Button>
-            </Box>
+                <Button
+                  sx={{
+                    fontFamily: '"Poppins", sans-serif',
+                    backgroundColor: "#D19F3B",
+                    color: "#ffffffff",
+                    px: { xs: 4, md: 6 },
+                    py: { xs: 1, md: 1.5 },
+                    fontSize: { xs: "0.9rem", md: "1rem" },
+                    borderRadius: "6px",
+                    fontWeight: 600,
+                    textTransform: "none",
+                    transition: "all 0.3s ease",
+                    "&:hover": {
+                      backgroundColor: "#fff",
+                      color: "#D19F3B",
+                      transform: "translateY(-2px)",
+                      boxShadow: "0 4px 12px rgba(209,159,59,0.3)",
+                    },
+                  }}
+                >
+                  Plan Your Visit
+                </Button>
+              </Box>
             </Box>
           </Box>
         </Box>

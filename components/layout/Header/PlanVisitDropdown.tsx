@@ -1,7 +1,12 @@
-'use client';
+"use client";
 
-import { Box } from '@mui/material';
-import Link from 'next/link';
+import { Box, Typography } from "@mui/material";
+import Link from "next/link";
+import { useState } from "react";
+import { ArrowForwardIos } from "@mui/icons-material";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import LocalParkingIcon from "@mui/icons-material/LocalParking";
 
 interface PlanVisitDropdownProps {
   isOpen: boolean;
@@ -9,79 +14,144 @@ interface PlanVisitDropdownProps {
   onMouseLeave: () => void;
 }
 
-const PlanVisitDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: PlanVisitDropdownProps) => {
-  const planVisitItems = [
-    { label: "Opening hours", href: "/opening-hours" },
-    { label: "Getting here", href: "/opening-hours?tab=getting-here" },
-    { label: "Giga Extension", href: "/opening-hours?tab=opening-hours" },
-    { label: "Parking", href: "/opening-hours?tab=parking" }
-  ];
+// Only three links now
+const planVisitItems = [
+  { label: "Opening hours", href: "/opening-hours?tab=opening-hours", icon: <AccessTimeIcon /> },
+  { label: "Getting here", href: "/opening-hours?tab=getting-here", icon: <LocationOnIcon /> },
+  { label: "Parking", href: "/opening-hours?tab=parking", icon: <LocalParkingIcon /> },
+];
+
+const PlanVisitDropdown = ({
+  isOpen,
+  onMouseEnter,
+  onMouseLeave,
+}: PlanVisitDropdownProps) => {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   if (!isOpen) return null;
 
   return (
     <Box
       onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
+      onMouseLeave={() => {
+        setHoveredIndex(null);
+        onMouseLeave();
+      }}
       sx={{
-        position: 'fixed',
-        top: { md: '90px' },
+        position: "absolute",
         left: 0,
         right: 0,
-        backgroundColor: '#ffffff',
-        boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
-        zIndex: 10000,
-        padding: { md: '20px 0', lg: '24px 0' },
-        animation: 'fadeIn 0.3s ease-in-out',
-        '@keyframes fadeIn': {
-          from: {
-            opacity: 0,
-            transform: 'translateY(-10px)'
-          },
-          to: {
-            opacity: 1,
-            transform: 'translateY(0)'
-          }
-        }
+        backgroundColor: "#ffffff",
+        boxShadow: "0 12px 36px rgba(0,0,0,0.15)",
+        zIndex: 1000,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        px: { xs: 2, md: 4 },
+        py: { xs: 3, md: 6 },
       }}
     >
+      {/* Container 70% width */}
       <Box
         sx={{
-          maxWidth: '1400px',
-          width: '100%',
-          margin: '0 auto',
-          padding: { md: '0 24px', lg: '0 48px' },
-          display: 'flex',
-          flexDirection: 'column',
-          // gap: { md: '12px', lg: '2px' }
+          width: "70%",
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          gap: { md: 4, lg: 6 },
+          justifyContent: "center",
+          alignItems: "center",
+          position: "relative",
         }}
       >
-        {planVisitItems.map((item, index) => (
-          <Box
-            key={index}
-            component={Link}
-            href={item.href}
-            sx={{
-              color: '#000000',
-              textDecoration: 'none',
-              fontSize: { md: '14px', lg: '16px' },
-              fontWeight: 400,
-              fontFamily: '"Poppins", sans-serif',
-              padding: { md: '8px 0', lg: '10px 0' },
-              transition: 'color 0.2s ease',
-              '&:hover': {
-                color: '#D19F3B'
-              }
-            }}
-          >
-            {item.label}
-          </Box>
-        ))}
+        {/* Left: Links with icons */}
+        <Box
+          sx={{
+            flex: "0 0 40%",
+            display: "flex",
+            flexDirection: "column",
+            gap: 2,
+            alignItems: "flex-start",
+            justifyContent: "center",
+            position: "relative",
+            paddingRight: "24px",
+          }}
+        >
+          {planVisitItems.map((item, idx) => (
+            <Box
+              key={idx}
+              onMouseEnter={() => setHoveredIndex(idx)}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                gap: 1.5,
+                cursor: "pointer",
+                transition: "all 0.2s ease",
+                width: "100%",
+              }}
+            >
+              {/* Left icon */}
+              <Box sx={{ color: hoveredIndex === idx ? "#D19F3B" : "#555" }}>
+                {item.icon}
+              </Box>
+
+              {/* Link text */}
+              <Typography
+                component={Link}
+                href={item.href}
+                sx={{
+                  fontSize: { xs: "14px", md: "16px" },
+                  fontWeight: hoveredIndex === idx ? 600 : 400,
+                  color: hoveredIndex === idx ? "#D19F3B" : "#000",
+                  transition: "all 0.2s ease",
+                  textDecoration: "none",
+                  width: "100%",
+                }}
+              >
+                {item.label}
+              </Typography>
+            </Box>
+          ))}
+
+          {/* Fixed arrow appears only on hover */}
+          {hoveredIndex !== null && (
+            <ArrowForwardIos
+              sx={{
+                position: "absolute",
+                right: 0,
+                top: "50%",
+                transform: "translateY(-50%)",
+                color: "#D19F3B",
+                fontSize: 16,
+                transition: "opacity 0.2s ease",
+                opacity: 1,
+              }}
+            />
+          )}
+        </Box>
+
+        {/* Right: Google Map of Giga Mall */}
+        <Box
+          sx={{
+            flex: "0 0 60%",
+            borderRadius: "10px",
+            overflow: "hidden",
+            height: { xs: "200px", md: "250px", lg: "300px" },
+            width: "100%",
+            boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
+          }}
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.183853827374!2d73.06648881521979!3d33.6061543807196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df955f60ce9ff7%3A0x8c5b4b03a06f0310!2sGiga%20Mall%2C%20Rawat%2C%20Rawalpindi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1704110000000!5m2!1sen!2s"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+          />
+        </Box>
       </Box>
     </Box>
   );
 };
 
 export default PlanVisitDropdown;
-
-

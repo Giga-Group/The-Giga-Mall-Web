@@ -49,7 +49,7 @@ export default function MovieEventCard({
               color: "white",
               px: 2,
               py: 0.8,
-              borderRadius: "6px",
+              borderRadius: "0px",
               fontSize: "0.85rem",
               fontWeight: 600,
               letterSpacing: "0.05em",

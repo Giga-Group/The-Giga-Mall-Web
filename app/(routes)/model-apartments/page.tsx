@@ -15,7 +15,7 @@ export default function ModelApartmentsPage() {
         <Box
           sx={{
             position: "relative",
-            width: "100vw",
+            width: "100%",
             minHeight: { xs: "100vh", md: "70vh", lg: "70vh" },
             paddingTop: { xs: "90px", md: "100px" },
             overflow: "hidden",
@@ -198,27 +198,51 @@ export default function ModelApartmentsPage() {
             {/* Right Side - Text Content (1/3 width) - Overlapping */}
             <Box
               sx={{
-                position: { xs: "relative", md: "absolute" },
-                right: { xs: 0, md: "40px", lg: "60px" },
-                width: { xs: "100%", md: "35%", lg: "32%" },
+                // Use absolute only for lg and above
+                position: { xs: "relative", md: "relative", lg: "absolute" },
+
+                top: {
+                  xs: "auto",
+                  md: "auto", // relative -> top ignored
+                  lg: "50%",
+                },
+                transform: {
+                  xs: "none",
+                  md: "none",
+                  lg: "translateY(-50%)",
+                },
+
+                right: { xs: 0, md: 0, lg: "60px" },
+                width: { xs: "100%", md: "100%", lg: "32%" },
                 maxWidth: { md: "500px" },
+
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "center",
+                justifyContent: {
+                  xs: "flex-start",
+                  md: "flex-start",
+                  lg: "center",
+                },
+                gap: { xs: "16px", md: "18px", lg: "20px" },
+
                 padding: {
                   xs: "40px 20px",
                   sm: "50px 30px",
-                  md: "60px 40px",
+                  md: "60px 40px", // mid screens
                   lg: "80px 60px",
                 },
+
                 backgroundColor: "#ffffff",
                 boxShadow: { xs: "none", md: "0 4px 20px rgba(0,0,0,0.1)" },
+
                 marginTop: { xs: "-40px", md: 0 },
                 marginLeft: { xs: "20px", md: 0 },
                 marginRight: { xs: "20px", md: 0 },
+
                 zIndex: 2,
               }}
             >
+              {/* Heading */}
               <Typography
                 variant="h6"
                 sx={{
@@ -229,6 +253,7 @@ export default function ModelApartmentsPage() {
                   textTransform: "uppercase",
                   letterSpacing: "0.1em",
                   marginBottom: { xs: "16px", md: "20px" },
+                  marginTop: { md: "5px" },
                 }}
               >
                 LUXURY APARTMENTS
@@ -242,7 +267,7 @@ export default function ModelApartmentsPage() {
                     xs: "1.8rem",
                     sm: "2.2rem",
                     md: "2.5rem",
-                    lg: "3rem",
+                    lg: "2.5rem",
                   },
                   fontWeight: 400,
                   color: "#D19F3B",
@@ -499,6 +524,7 @@ export default function ModelApartmentsPage() {
                 marginLeft: { xs: "20px", md: 0 },
                 marginRight: { xs: "20px", md: 0 },
                 zIndex: 2,
+                
               }}
             >
               <Typography
