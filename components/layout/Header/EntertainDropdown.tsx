@@ -97,6 +97,7 @@ const EntertainDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: EntertainDrop
                   color: hoveredIndex === idx ? '#D19F3B' : '#000',
                   transition: 'all 0.2s ease',
                   width: '100%',
+                  fontFamily: '"Poppins", sans-serif',
                 }}
               >
                 {option.name}

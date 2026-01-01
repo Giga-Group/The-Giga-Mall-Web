@@ -7,86 +7,28 @@ import PhoneIcon from "@mui/icons-material/Phone";
 export default function About() {
   return (
     <>
-      {/* ================= HERO SECTION ================= */}
-      <Box
-        sx={{
-          position: "relative",
-          width: "100%",
-          height: { xs: "90vh", md: "85vh" },
-          minHeight: 600,
-          overflow: "hidden",
-        }}
-      >
-        {/* Desktop Image */}
+      {/* ================= ABOUT SECTION ================= */}
+      <Container maxWidth="xl">
         <Box
           sx={{
-            display: { xs: "none", md: "block" },
-            position: "absolute",
-            inset: 0,
-          }}
-        >
-          <Image
-            src="/Cinepax/about-landscape.png"
-            alt="Cinepax Cinema Interior"
-            fill
-            priority
-            style={{
-              objectFit: "contain",
-              objectPosition: "center",
-              backgroundColor: "#000",
-            }}
-          />
-        </Box>
-
-        {/* Mobile Image */}
-        <Box
-          sx={{
-            display: { xs: "block", md: "none" },
-            position: "absolute",
-            inset: 0,
-          }}
-        >
-          <Image
-            src="/Cinepax/mobile-view.jpg"
-            alt="Cinepax Cinema Interior Mobile"
-            fill
-            priority
-            style={{
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
-        </Box>
-
-        {/* Dark Overlay */}
-{/* Dark Overlay */}
-<Box
-  sx={{
-    position: "absolute",
-    inset: 0,
-    zIndex: 1,
-    pointerEvents: "none", // so it doesn’t block clicks
-    background: `
-      linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0,0,0,0) 25%),
-      linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0,0,0,0) 25%)
-    `,
-  }}
-/>
-
-
-        {/* Content */}
-        <Container
-          maxWidth="xl"
-          sx={{
-            position: "relative",
-            zIndex: 2,
-            height: "74%",
             display: "flex",
-            alignItems: { xs: "flex-start", md: "center" }, // Upward on mobile
-            pt: { xs: 6, md: 0 }, // Add top padding on mobile
+            flexDirection: { xs: "column", md: "row" },
+            alignItems: { xs: "stretch", md: "center" },
+            gap: { xs: 4, md: 6 },
+            py: { xs: 6, md: 8 },
+            minHeight: { xs: "auto", md: 450 },
           }}
         >
-          <Box sx={{ maxWidth: 450, color: "#ffffff" }}>
+          {/* Left Side - Text Content */}
+          <Box
+            sx={{
+              flex: { xs: "1", md: "1" },
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              color: "#000000",
+            }}
+          >
             <Typography
               sx={{
                 fontFamily: '"Arvo", serif',
@@ -105,7 +47,7 @@ export default function About() {
                 fontFamily: '"Quicksand", sans-serif',
                 fontSize: { xs: "0.95rem", md: "1.1rem" },
                 lineHeight: 1.6,
-                color: "#f1f1f1",
+                color: "#333333",
                 mb: { xs: 3, md: 5 },
               }}
             >
@@ -118,8 +60,10 @@ export default function About() {
               <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                 <LocationOnIcon sx={{ color: "#D19F3B", fontSize: 26 }} />
                 <Box>
-                  <Typography sx={{ fontWeight: 600 }}>Visit Us</Typography>
-                  <Typography sx={{ color: "#dddddd" }}>
+                  <Typography sx={{ fontWeight: 600, color: "#000000" }}>
+                    Visit Us
+                  </Typography>
+                  <Typography sx={{ color: "#666666" }}>
                     Giga Mall - Cinepax
                   </Typography>
                 </Box>
@@ -128,10 +72,12 @@ export default function About() {
               <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                 <AccessTimeIcon sx={{ color: "#D19F3B", fontSize: 26 }} />
                 <Box>
-                  <Typography sx={{ fontWeight: 600 }}>
+                  <Typography
+                    sx={{ fontWeight: 600, color: "#000000" }}
+                  >
                     Opening Hours
                   </Typography>
-                  <Typography sx={{ color: "#dddddd" }}>
+                  <Typography sx={{ color: "#666666" }}>
                     11:00 AM - 12:00 AM
                   </Typography>
                 </Box>
@@ -140,23 +86,48 @@ export default function About() {
               <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                 <PhoneIcon sx={{ color: "#D19F3B", fontSize: 26 }} />
                 <Box>
-                  <Typography sx={{ fontWeight: 600 }}>Call Us</Typography>
-                  <Typography sx={{ color: "#dddddd" }}>
+                  <Typography sx={{ fontWeight: 600, color: "#000000" }}>
+                    Call Us
+                  </Typography>
+                  <Typography sx={{ color: "#666666" }}>
                     +92 51 111 246 372
                   </Typography>
                 </Box>
               </Box>
             </Box>
           </Box>
-        </Container>
-      </Box>
+
+          {/* Right Side - Image */}
+          <Box
+            sx={{
+              flex: { xs: "1", md: "1" },
+              position: "relative",
+              width: "100%",
+              height: { xs: 300, md: 450 },
+              minHeight: { xs: 300, md: 450 },
+            }}
+          >
+            <Image
+              src="/Cinepax/about-landscape.png"
+              alt="Cinepax Cinema Interior"
+              fill
+              priority
+              style={{
+                objectFit: "cover",
+                objectPosition: "center",
+                borderRadius: "8px",
+              }}
+            />
+          </Box>
+        </Box>
+      </Container>
 
       {/* ================= CALL TO ACTION ================= */}
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <Box
           sx={{
             background:
-              "linear-gradient(to right, #ffffff 0%, #D19F3B 20%, #B88A2E 50%, #D19F3B 80%, #ffffff 100%)",
+              "linear-gradient(to right, #ffffff 0%, #D19F3B 20%, #D19F3B 50%, #D19F3B 80%, #ffffff 100%)",
             borderRadius: "8px",
             py: { xs: 3, md: 4 },
             px: { xs: 3, md: 4 },

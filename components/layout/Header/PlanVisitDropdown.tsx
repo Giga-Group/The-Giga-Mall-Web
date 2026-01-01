@@ -105,6 +105,7 @@ const PlanVisitDropdown = ({
                   transition: "all 0.2s ease",
                   textDecoration: "none",
                   width: "100%",
+                  fontFamily: '"Poppins", sans-serif',
                 }}
               >
                 {item.label}
@@ -129,7 +130,7 @@ const PlanVisitDropdown = ({
           )}
         </Box>
 
-        {/* Right: Google Map of Giga Mall */}
+        {/* Right: Google Map of Giga Mall Islamabad */}
         <Box
           sx={{
             flex: "0 0 60%",
@@ -141,12 +142,14 @@ const PlanVisitDropdown = ({
           }}
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.183853827374!2d73.06648881521979!3d33.6061543807196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df955f60ce9ff7%3A0x8c5b4b03a06f0310!2sGiga%20Mall%2C%20Rawat%2C%20Rawalpindi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1704110000000!5m2!1sen!2s"
+            title="Giga Mall Islamabad Location"
+            src="https://www.google.com/maps?q=Giga+Mall+Islamabad&output=embed"
             width="100%"
             height="100%"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
           />
         </Box>
       </Box>
