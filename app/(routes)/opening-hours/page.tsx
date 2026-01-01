@@ -277,18 +277,6 @@ function OpeningHoursContent() {
             >
               <Box>
                 <Typography
-                  variant="h6"
-                  sx={{
-                    color: '#ffffff',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.12em',
-                    fontSize: { xs: '0.75rem', sm: '0.8rem' },
-                    mb: 1,
-                  }}
-                >
-                  {heroBreadcrumb}
-                </Typography>
-                <Typography
                   variant="h2"
                   sx={{
                     fontFamily: '"Arvo", serif',
