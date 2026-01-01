@@ -22,11 +22,7 @@ export default function EntertainPage() {
       description: "Watch your favorite blockbusters in style",
       image: "/Cinepax/c2.jpg",
     },
-    {
-      title: "Ice Rink",
-      description: "Glide and skate like a pro",
-      image: "/ASC_2024_3.jpg",
-    },
+   
     {
       title: "Fun City Arcade",
       description: "Exciting games for all ages",
@@ -251,39 +247,33 @@ export default function EntertainPage() {
         </Box>
         {/* ================= END HERO SECTION ================= */}
 
-{/* ================= ENDLESS FUN AWAITS ================= */}
+      {/* ================= ENDLESS FUN AWAITS ================= */}
 <Box
   sx={{
-    minHeight: "80vh", 
-    py: { xs: 12, md: 14 },
     backgroundColor: "#fdfdfd",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
+    py: { xs: 8, md: 10 },
   }}
 >
   {/* ================= Heading ================= */}
-  <Box sx={{ position: "relative", mb: { xs: 8, md: 12 }, px: { xs: 3, md: 6 } }}>
+  <Box
+    sx={{
+      maxWidth: "1600px",
+      mx: "auto",
+      px: { xs: 3, md: 6 },
+      mb: { xs: 6, md: 8 },
+    }}
+  >
     <Typography
       sx={{
         fontFamily: '"Arvo", serif',
-        fontSize: { xs: "2.5rem", md: "3.5rem" },
-        fontWeight: 700,
-        letterSpacing: "0.15em",
-        color: "#000",
-        mb: 2,
+        fontSize: { xs: "2.3rem", md: "3.2rem" },
+        fontWeight: 400,
+        letterSpacing: "0.12em",
+        color: "#D19F3B",
       }}
     >
-      ENDLESS FUN AWAITS
+      Endless Fun Awaits
     </Typography>
-    <Box
-      sx={{
-        width: "60px",
-        height: "4px",
-        backgroundColor: "#D19F3B",
-        borderRadius: "2px",
-      }}
-    />
   </Box>
 
   {/* ================= Cards Grid ================= */}
@@ -291,16 +281,14 @@ export default function EntertainPage() {
     sx={{
       maxWidth: "1600px",
       mx: "auto",
-      px: { xs: 2, md: 6 },
+      px: { xs: 2, md: 4 },
       display: "grid",
       gridTemplateColumns: {
         xs: "1fr",
         sm: "repeat(2, 1fr)",
-        md: "repeat(3, 1fr)",
-        lg: "repeat(4, 1fr)",
+        lg: "repeat(3, 1fr)",
       },
-      gap: { xs: 6, md: 8 },
-      minHeight: "50vh", // ensures cards container has enough height
+      gap: { xs: 4, md: 2 },
     }}
   >
     {attractions.map((item, idx) => (
@@ -309,76 +297,48 @@ export default function EntertainPage() {
         sx={{
           position: "relative",
           width: "100%",
-          aspectRatio: "5/6", 
-          borderRadius: "10px",
+          aspectRatio: "4/3",
+          borderRadius: "12px",
           overflow: "hidden",
           cursor: "pointer",
-          boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+          boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
           transition: "transform 0.3s ease, box-shadow 0.3s ease",
           "&:hover": {
-            transform: "translateY(-6px) scale(1.02)",
-            boxShadow: "0 20px 60px rgba(0,0,0,0.15)",
+            transform: "translateY(-4px)",
+            boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
           },
         }}
       >
-        {/* Card Image */}
-        <Box sx={{ position: "relative", width: "100%", height: "100%" }}>
-          <Image
-            src={item.image}
-            alt={item.title}
-            fill
-            style={{ objectFit: "cover" }}
-          />
-        </Box>
-
-        {/* Overlay for text readability */}
-        <Box
-          sx={{
-            position: "absolute",
-            inset: 0,
-            background:
-              "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 60%, rgba(0,0,0,0) 100%)",
-            zIndex: 1,
-          }}
+        {/* Image */}
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          style={{ objectFit: "cover" }}
         />
 
-        {/* Card content */}
+        {/* Bottom gradient */}
         <Box
           sx={{
             position: "absolute",
             bottom: 0,
             left: 0,
             right: 0,
-            zIndex: 2,
-            p: 3,
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "flex-end",
+            p: 2,
+            background:
+              "linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 100%)",
           }}
         >
           <Typography
             sx={{
-              fontFamily: '"Arvo", serif',
-              fontSize: { xs: "1.3rem", md: "1.5rem" },
-              color: "#D19F3B",
-              fontWeight: 600,
-              mb: 1,
+              fontFamily: '"Poppins", sans-serif',
+              fontSize: { xs: "0.95rem", md: "1.05rem" },
+              color: "#ffffff",
+              fontWeight: 500,
               textAlign: "center",
             }}
           >
             {item.title}
-          </Typography>
-          <Typography
-            sx={{
-              fontFamily: '"Jost", sans-serif',
-              fontSize: { xs: "1rem", md: "1.1rem" },
-              color: "#fff",
-              textAlign: "center",
-              lineHeight: 1.5,
-            }}
-          >
-            {item.description}
           </Typography>
         </Box>
       </Box>
@@ -412,7 +372,7 @@ export default function EntertainPage() {
             }}
           >
             <Image
-              src="/projects/cpr.jpg"
+              src="/Cinepax/auditorium.jpg"
               alt="Delicious Dining"
               fill
               style={{ objectFit: "cover" }}
@@ -452,21 +412,22 @@ export default function EntertainPage() {
               }}
             >
               {/* Left line */}
-              <Box
+              {/* <Box
                 sx={{
                   flexGrow: 10,
                   height: "2px",
                   backgroundColor: "#D19F3B",
                   mr: 2,
                 }}
-              />
+              /> */}
               <Typography
                 sx={{
                   fontFamily: '"Arvo", serif',
-                  fontSize: { xs: "2rem", md: "2.8rem" },
-                  fontWeight: 700,
-                  textAlign: "left",
-                  whiteSpace: "nowrap",
+                fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
+                fontWeight: 400,
+                color: '#D19F3B',
+                textAlign: 'center',
+                letterSpacing: '0.02em'
                 }}
               >
                 Delicious Dining
@@ -565,7 +526,7 @@ export default function EntertainPage() {
                     >
                       {item.title}
                     </Typography>
-                    <Typography
+                    {/* <Typography
                       sx={{
                         fontFamily: '"Jost", sans-serif',
                         fontSize: "0.95rem",
@@ -574,7 +535,7 @@ export default function EntertainPage() {
                       }}
                     >
                       {item.description}
-                    </Typography>
+                    </Typography> */}
                   </Box>
                 </Box>
               ))}
@@ -583,161 +544,7 @@ export default function EntertainPage() {
         </Box>
         {/* ================= End Delicious Dining ================= */}
 
-        {/* ================= Experience Cinepax ================= */}
-        <Box
-          sx={{
-            position: "relative",
-            width: "100%",
-            height: { xs: "60vh", md: "70vh" },
-            display: "flex",
-            overflow: "hidden",
-          }}
-        >
-          {/* Left Image */}
-          <Box
-            sx={{
-              flex: "1 1 50%",
-              position: "relative",
-              height: "100%",
-            }}
-          >
-            <Image
-              src="/Cinepax/auditorium.jpg"
-              alt="Cinepax Left"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-            />
-
-            {/* Left Overlay */}
-            <Box
-              sx={{
-                position: "absolute",
-                inset: 0,
-                backgroundColor: "rgba(0,0,0,0.4)",
-                zIndex: 1,
-              }}
-            />
-
-            {/* Left Gradient Fade to center */}
-            <Box
-              sx={{
-                position: "absolute",
-                top: 0,
-                right: 0,
-                width: "50%",
-                height: "100%",
-                background:
-                  "linear-gradient(to left, rgba(242, 239, 239, 0.93) 0%, rgba(0, 0, 0, 0.11) 100%)",
-                zIndex: 2,
-                pointerEvents: "none",
-              }}
-            />
-          </Box>
-
-          {/* Right Image */}
-          {/* <Box
-            sx={{
-              flex: "1 1 50%",
-              position: "relative",
-              height: "100%",
-            }}
-          >
-            <Image
-              src="/Cinepax/c3.jpg"
-              alt="Cinepax Right"
-              fill
-              style={{ objectFit: "cover" }}
-              priority
-            />
-
-            {/* Right Gradient Fade from center
-            <Box
-              sx={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "50%",
-                height: "100%",
-                background:
-                  "linear-gradient(to right, rgba(242, 239, 239, 0.93) 0%, rgba(0, 0, 0, 0.11) 100%)",
-                zIndex: 1,
-                pointerEvents: "none",
-              }}
-            />
-          </Box>  */}
-
-          {/* Text Overlay at top */}
-          <Box
-            sx={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "flex-start",
-              alignItems: "flex-start",
-              zIndex: 3,
-              px: { xs: 4, md: 8 },
-              pt: { xs: 6, md: 10 },
-            }}
-          >
-            <Typography
-              sx={{
-                fontFamily: '"Arvo", serif',
-                fontSize: { xs: "2rem", md: "3rem" },
-                fontWeight: 700,
-                mb: { xs: 1.5, md: 2 },
-                color: "#fff",
-              }}
-            >
-              Experience CINEPAX
-            </Typography>
-
-            <Typography
-              sx={{
-                fontFamily: '"Jost", sans-serif',
-                fontSize: { xs: "1.6rem", md: "2rem" },
-                fontWeight: 600,
-                color: "#D19F3B",
-                mb: { xs: 2, md: 3 },
-              }}
-            >
-              Luxury Cinema Experience
-            </Typography>
-
-            <Typography
-              sx={{
-                fontFamily: '"Jost", sans-serif',
-                fontSize: { xs: "0.95rem", md: "1.1rem" },
-                lineHeight: 1.8,
-                color: "#fff",
-                mb: { xs: 3, md: 4 },
-                maxWidth: { xs: "100%", md: "600px" },
-              }}
-            >
-              Enjoy the latest movies with VIP seats & 3D Screens.
-            </Typography>
-
-            <Button
-              sx={{
-                backgroundColor: "#D19F3B",
-                color: "#000",
-                px: { xs: 4, md: 6 },
-                py: { xs: 1.5, md: 2 },
-                fontWeight: 600,
-                borderRadius: "999px",
-                "&:hover": { backgroundColor: "#fff", color: "#D19F3B" },
-              }}
-            >
-              Book Tickets
-            </Button>
-          </Box>
-        </Box>
-        {/* ================= End Experience Cinepax ================= */}
-
+    
         <DiscoverEventsOffers />
 
         {/* ============== Family Moments at Giga Mall ============== */}
@@ -849,25 +656,30 @@ export default function EntertainPage() {
                 together.
               </Typography>
 
-              {/* Button */}
+              <Box sx={{ marginTop: { xs: 2, md: 0 } }}>
               <Button
                 sx={{
+                  fontFamily: '"Poppins", sans-serif',
                   backgroundColor: "#D19F3B",
-                  color: "#000",
+                  color: "#ffffffff",
                   px: { xs: 4, md: 6 },
-                  py: { xs: 1.5, md: 2 },
+                  py: { xs: 1, md: 1.5 },
+                  fontSize: { xs: "0.9rem", md: "1rem" },
+                  borderRadius: "6px",
                   fontWeight: 600,
-                  borderRadius: "999px",
+                  textTransform: "none",
+                  transition: "all 0.3s ease",
                   "&:hover": {
                     backgroundColor: "#fff",
                     color: "#D19F3B",
-                    transform: "scale(1.05)",
+                    transform: "translateY(-2px)",
+                    boxShadow: "0 4px 12px rgba(209,159,59,0.3)",
                   },
-                  transition: "all 0.3s ease",
                 }}
               >
                 Plan Your Visit
               </Button>
+            </Box>
             </Box>
           </Box>
         </Box>
