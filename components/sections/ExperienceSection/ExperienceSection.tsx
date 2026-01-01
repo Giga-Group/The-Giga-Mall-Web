@@ -12,12 +12,12 @@ const ExperienceSection = () => {
 
   const images = [
     { src: '/trending1.jpg', position: 'top-center' },
-    { src: '/trending20.jpg', position: 'top-right' },
+    { src: '/trending20.JPG', position: 'top-right' },
     { src: '/trending3.jpg', position: 'middle-right' },
     { src: '/trending9.jpg', position: 'bottom-right' },
     { src: '/trending2.jpg', position: 'bottom-center' },
     { src: '/trending8.jpg', position: 'middle-left' },
-    { src: '/trending21.jpg', position: 'top-left' }
+    { src: '/trending21.JPG', position: 'top-left' }
   ];
 
   useEffect(() => {
