@@ -99,6 +99,12 @@ const TrendingSection = () => {
       title: 'MOU Signing Ceremony With The Last Tribe',
       dates: '1st January 2025 - 31st December 2025'
     },
+    {
+      image: '/trending22.jpg',
+      category: 'GIGA MALL',
+      title: 'Umro Ayar Film Festival at Giga Mall ',
+      dates: '1st January 2025 - 31st December 2025'
+    },
     // {
     //   image: '/trending18.JPG',
     //   category: 'GIGA MALL',
@@ -111,6 +117,7 @@ const TrendingSection = () => {
       title: 'Giga Tribal Beats 2025',
       dates: '1st January 2025 - 31st December 2025'
     },
+   
     // {
     //   image: '/trending20.JPG',
     //   category: 'GIGA MALL',

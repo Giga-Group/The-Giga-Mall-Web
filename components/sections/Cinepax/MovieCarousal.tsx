@@ -84,7 +84,11 @@ export default function MovieCarousel({ items, onItemClick }: MovieCarouselProps
         if (touchStartRef.current !== null && touchEndRef.current !== null) {
           const delta = touchStartRef.current - touchEndRef.current;
           if (Math.abs(delta) > 50) {
-            delta > 0 ? goNext() : goPrev();
+            if (delta > 0) {
+              goNext();
+            } else {
+              goPrev();
+            }
           }
         }
         touchStartRef.current = null;

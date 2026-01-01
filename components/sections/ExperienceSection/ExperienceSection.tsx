@@ -16,6 +16,7 @@ const ExperienceSection = () => {
     { src: '/trending3.jpg', position: 'middle-right' },
     { src: '/trending9.jpg', position: 'bottom-right' },
     { src: '/trending2.jpg', position: 'bottom-center' },
+    { src: '/trending22.JPG', position: 'bottom-left' },
     { src: '/trending8.jpg', position: 'middle-left' },
     { src: '/trending21.JPG', position: 'top-left' }
   ];
@@ -78,7 +79,11 @@ const ExperienceSection = () => {
       startY = distance * 0.7;
     } else if (position === 'bottom-center') {
       startY = distance * (1.2);
-    } else if (position === 'middle-left') {
+    }else if (position === 'bottom-left'){
+      startX = -distance * 0.7;
+      startY = distance * 0.7;
+    }
+     else if (position === 'middle-left') {
       startX = -distance;
     } else if (position === 'top-left') {
       startX = -distance * 0.7;

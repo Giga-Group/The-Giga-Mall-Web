@@ -348,7 +348,7 @@ export default function EntertainPage() {
           sx={{
             position: "relative",
             width: "100vw",
-            minHeight: { xs: "70vh", md: "55vh" },
+            minHeight: { xs: "85vh", md: "75vh" },
             display: "flex",
             overflow: "hidden",
             backgroundColor: "#fff",
