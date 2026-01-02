@@ -24,7 +24,7 @@ const StoreHero = ({ store }: StoreHeroProps) => {
       sx={{
         position: 'relative',
         width: '100%',
-        height: { xs: '70vh', sm: '60vh', md: '65vh', lg: '70vh' },
+        height: { xs: '100vh', sm: '60vh', md: '65vh', lg: '70vh' },
         overflow: 'hidden',
         display: 'flex',
         alignItems: 'flex-end',
