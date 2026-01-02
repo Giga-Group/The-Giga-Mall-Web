@@ -3,7 +3,6 @@
 import { Box, Typography } from "@mui/material";
 import Link from "next/link";
 import { useState } from "react";
-import { ArrowForwardIos } from "@mui/icons-material";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import LocalParkingIcon from "@mui/icons-material/LocalParking";
@@ -14,11 +13,22 @@ interface PlanVisitDropdownProps {
   onMouseLeave: () => void;
 }
 
-// Only three links now
 const planVisitItems = [
-  { label: "Opening hours", href: "/opening-hours?tab=opening-hours", icon: <AccessTimeIcon /> },
-  { label: "Getting here", href: "/opening-hours?tab=getting-here", icon: <LocationOnIcon /> },
-  { label: "Parking", href: "/opening-hours?tab=parking", icon: <LocalParkingIcon /> },
+  {
+    label: "Opening hours",
+    href: "/opening-hours?tab=opening-hours",
+    icon: <AccessTimeIcon />,
+  },
+  {
+    label: "Getting here",
+    href: "/opening-hours?tab=getting-here",
+    icon: <LocationOnIcon />,
+  },
+  {
+    label: "Parking",
+    href: "/opening-hours?tab=parking",
+    icon: <LocalParkingIcon />,
+  },
 ];
 
 const PlanVisitDropdown = ({
@@ -38,7 +48,8 @@ const PlanVisitDropdown = ({
         onMouseLeave();
       }}
       sx={{
-        position: "absolute",
+        position: "fixed",
+        top: "80px", // Adjust to match your navbar height
         left: 0,
         right: 0,
         backgroundColor: "#ffffff",
@@ -48,110 +59,59 @@ const PlanVisitDropdown = ({
         flexDirection: "column",
         alignItems: "center",
         px: { xs: 2, md: 4 },
-        py: { xs: 3, md: 6 },
+        py: { xs: 4, md: 7 },
       }}
     >
-      {/* Container 70% width */}
+      {/* Centered links only */}
       <Box
         sx={{
-          width: "70%",
+          width: { xs: "100%", md: "60%", lg: "40%" },
+          maxWidth: "600px",
           display: "flex",
-          flexDirection: { xs: "column", md: "row" },
-          gap: { md: 4, lg: 6 },
-          justifyContent: "center",
-          alignItems: "center",
-          position: "relative",
+          flexDirection: "column",
+          gap: 3,
         }}
       >
-        {/* Left: Links with icons */}
-        <Box
-          sx={{
-            flex: "0 0 40%",
-            display: "flex",
-            flexDirection: "column",
-            gap: 2,
-            alignItems: "flex-start",
-            justifyContent: "center",
-            position: "relative",
-            paddingRight: "24px",
-          }}
-        >
-          {planVisitItems.map((item, idx) => (
+        {planVisitItems.map((item, idx) => (
+          <Box
+            key={idx}
+            onMouseEnter={() => setHoveredIndex(idx)}
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              gap: 2,
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+              py: 1,
+            }}
+          >
+            {/* Icon */}
             <Box
-              key={idx}
-              onMouseEnter={() => setHoveredIndex(idx)}
               sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: 1.5,
-                cursor: "pointer",
-                transition: "all 0.2s ease",
-                width: "100%",
+                color: hoveredIndex === idx ? "#D19F3B" : "#555",
+                fontSize: { xs: 28, md: 32 },
               }}
             >
-              {/* Left icon */}
-              <Box sx={{ color: hoveredIndex === idx ? "#D19F3B" : "#555" }}>
-                {item.icon}
-              </Box>
-
-              {/* Link text */}
-              <Typography
-                component={Link}
-                href={item.href}
-                sx={{
-                  fontSize: { xs: "14px", md: "16px" },
-                  fontWeight: hoveredIndex === idx ? 600 : 400,
-                  color: hoveredIndex === idx ? "#D19F3B" : "#000",
-                  transition: "all 0.2s ease",
-                  textDecoration: "none",
-                  width: "100%",
-                  fontFamily: '"Poppins", sans-serif',
-                }}
-              >
-                {item.label}
-              </Typography>
+              {item.icon}
             </Box>
-          ))}
 
-          {/* Fixed arrow appears only on hover */}
-          {hoveredIndex !== null && (
-            <ArrowForwardIos
+            {/* Link Text */}
+            <Typography
+              component={Link}
+              href={item.href}
               sx={{
-                position: "absolute",
-                right: 0,
-                top: "50%",
-                transform: "translateY(-50%)",
-                color: "#D19F3B",
-                fontSize: 16,
-                transition: "opacity 0.2s ease",
-                opacity: 1,
+                fontSize: { xs: "1rem", md: "1.15rem" },
+                fontWeight: hoveredIndex === idx ? 600 : 500,
+                color: hoveredIndex === idx ? "#D19F3B" : "#000",
+                fontFamily: '"Poppins", sans-serif',
+                textDecoration: "none",
+                transition: "all 0.3s ease",
               }}
-            />
-          )}
-        </Box>
-
-        {/* Right: Google Map of Giga Mall Islamabad */}
-        <Box
-          sx={{
-            flex: "0 0 60%",
-            borderRadius: "10px",
-            overflow: "hidden",
-            height: { xs: "200px", md: "250px", lg: "300px" },
-            width: "100%",
-            boxShadow: "0 8px 24px rgba(0,0,0,0.12)",
-          }}
-        >
-          <iframe
-            title="Giga Mall Islamabad Location"
-            src="https://www.google.com/maps?q=Giga+Mall+Islamabad&output=embed"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </Box>
+            >
+              {item.label}
+            </Typography>
+          </Box>
+        ))}
       </Box>
     </Box>
   );

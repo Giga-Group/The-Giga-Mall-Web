@@ -4,10 +4,10 @@ import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useState } from 'react';
 import { ArrowForwardIos } from '@mui/icons-material';
-import EmojiPeopleIcon from '@mui/icons-material/EmojiPeople';
-import AcUnitIcon from '@mui/icons-material/AcUnit';
-import MovieIcon from '@mui/icons-material/Movie';
-import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
+import AttractionsIcon from '@mui/icons-material/Attractions';
+import CelebrationIcon from '@mui/icons-material/Celebration';
+import EventIcon from '@mui/icons-material/Event';
+import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 
 interface EntertainDropdownProps {
   isOpen: boolean;
@@ -16,14 +16,13 @@ interface EntertainDropdownProps {
 }
 
 const entertainOptions = [
-  { name: "KidZania", image: "/6485.jpg", icon: <EmojiPeopleIcon /> },
-  { name: "Ice Rink", image: "/DSC07199.jpg", icon: <AcUnitIcon /> },
-  { name: "Reel Cinemas", image: "/DSC07836.jpg", icon: <MovieIcon /> },
-  { name: "Hysteria", image: "/DSC07901.jpg", icon: <TheaterComedyIcon /> },
+  { name: "Attractions & Activities", image: "/6485.jpg", icon: <AttractionsIcon /> },
+  { name: "Featured Entertainment", image: "/DSC07199.jpg", icon: <CelebrationIcon /> },
+  { name: "Plan Your Fun Day", image: "/DSC07836.jpg", icon: <EventIcon /> },
+  { name: "Family Moments", image: "/DSC07901.jpg", icon: <FamilyRestroomIcon /> },
 ];
 
 const EntertainDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: EntertainDropdownProps) => {
-  // default to 0 so first item image always shows
   const [hoveredIndex, setHoveredIndex] = useState<number>(0);
 
   if (!isOpen) return null;
@@ -31,9 +30,13 @@ const EntertainDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: EntertainDrop
   return (
     <Box
       onMouseEnter={onMouseEnter}
-      onMouseLeave={() => { setHoveredIndex(0); onMouseLeave(); }} // reset to first item
+      onMouseLeave={() => {
+        setHoveredIndex(0);
+        onMouseLeave();
+      }}
       sx={{
-        position: 'absolute',
+        position: 'fixed',                    // Changed to fixed
+        top: '64px',                          // Adjust this to match your navbar height (e.g. 64px, 80px, etc.)
         left: 0,
         right: 0,
         backgroundColor: '#ffffff',
@@ -44,12 +47,14 @@ const EntertainDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: EntertainDrop
         alignItems: 'center',
         px: { xs: 2, md: 4 },
         py: { xs: 3, md: 6 },
+        overflowY: 'auto',                    // Allow scrolling if content is tall
+        maxHeight: 'calc(100vh - 64px)',      // Prevent it from going off-screen
       }}
     >
       {/* Container 70% width */}
       <Box
         sx={{
-          width: '70%',
+          width: { xs: '100%', md: '70%' },   // Full width on mobile for better UX
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
           gap: { md: 4, lg: 6 },
@@ -68,7 +73,7 @@ const EntertainDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: EntertainDrop
             alignItems: 'flex-start',
             justifyContent: 'center',
             position: 'relative',
-            paddingRight: '24px',
+            paddingRight: { md: '24px' },
           }}
         >
           {entertainOptions.map((option, idx) => (
@@ -84,12 +89,10 @@ const EntertainDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: EntertainDrop
                 width: '100%',
               }}
             >
-              {/* Left Icon */}
               <Box sx={{ color: hoveredIndex === idx ? '#D19F3B' : '#555' }}>
                 {option.icon}
               </Box>
 
-              {/* Link text */}
               <Typography
                 sx={{
                   fontSize: { xs: '14px', md: '16px' },
@@ -105,7 +108,7 @@ const EntertainDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: EntertainDrop
             </Box>
           ))}
 
-          {/* Fixed arrow appears only on hover */}
+          {/* Fixed arrow (only on desktop) */}
           {hoveredIndex !== null && (
             <ArrowForwardIos
               sx={{
@@ -115,8 +118,7 @@ const EntertainDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: EntertainDrop
                 transform: 'translateY(-50%)',
                 color: '#D19F3B',
                 fontSize: 16,
-                transition: 'opacity 0.2s ease',
-                opacity: 1,
+                opacity: { xs: 0, md: 1 }, // Hide arrow on mobile
               }}
             />
           )}
@@ -131,9 +133,9 @@ const EntertainDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: EntertainDrop
             borderRadius: '10px',
             overflow: 'hidden',
             boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
+            display: { xs: 'none', md: 'block' }, // Optional: hide image on mobile to save space
           }}
         >
-          {/* Always show image for hoveredIndex */}
           <Image
             src={entertainOptions[hoveredIndex].image}
             alt={entertainOptions[hoveredIndex].name}
