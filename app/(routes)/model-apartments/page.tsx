@@ -252,8 +252,8 @@ export default function ModelApartmentsPage() {
                   color: "#D19F3B",
                   textTransform: "uppercase",
                   letterSpacing: "0.1em",
-                  marginBottom: { xs: "16px", md: "20px" },
-                  marginTop: { md: "5px" },
+                  marginBottom: { xs: "16px", md: "10px", lg: "0px" },
+                  marginTop: { md: "15px" },
                 }}
               >
                 LUXURY APARTMENTS
@@ -271,7 +271,7 @@ export default function ModelApartmentsPage() {
                   },
                   fontWeight: 400,
                   color: "#D19F3B",
-                  marginBottom: { xs: "20px", md: "24px" },
+                  marginBottom: { xs: "20px", md: "24px", lg: "0px" },
                   letterSpacing: "0.02em",
                   lineHeight: 1.2,
                 }}
