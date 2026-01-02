@@ -17,7 +17,7 @@ interface EntertainDropdownProps {
 
 const entertainOptions = [
   { name: "KidZania", image: "/6485.jpg", icon: <EmojiPeopleIcon /> },
-  { name: "Dubai Ice Rink", image: "/DSC07199.jpg", icon: <AcUnitIcon /> },
+  { name: "Ice Rink", image: "/DSC07199.jpg", icon: <AcUnitIcon /> },
   { name: "Reel Cinemas", image: "/DSC07836.jpg", icon: <MovieIcon /> },
   { name: "Hysteria", image: "/DSC07901.jpg", icon: <TheaterComedyIcon /> },
 ];
