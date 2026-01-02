@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { AppBar, Toolbar, Button, IconButton, Box, useMediaQuery, useTheme } from '@mui/material';
-import { Public, AccountCircle, Menu, Navigation as NavigationIcon } from '@mui/icons-material';
+import { Public, Menu, Navigation as NavigationIcon } from '@mui/icons-material';
 import Link from 'next/link';
 import Logo from '@/components/shared/Logo';
 import Navigation from './Navigation';

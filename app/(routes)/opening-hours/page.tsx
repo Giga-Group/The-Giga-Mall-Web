@@ -224,12 +224,6 @@ function OpeningHoursContent() {
     ? 'Parking'
     : 'Opening hours';
 
-  const heroBreadcrumb = isGettingHere
-    ? 'Home · Getting here'
-    : isParking
-    ? 'Home · Parking'
-    : 'Home · Opening hours';
-
   const heroImage = isGettingHere
     ? '/getting-here.jpg'
     : isParking
