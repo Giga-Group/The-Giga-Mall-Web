@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { AppBar, Toolbar, Button, IconButton, Box, useMediaQuery, useTheme } from '@mui/material';
-import { Public, AccountCircle, Menu } from '@mui/icons-material';
+import { Public, AccountCircle, Menu, Navigation as NavigationIcon } from '@mui/icons-material';
 import Link from 'next/link';
 import Logo from '@/components/shared/Logo';
 import Navigation from './Navigation';
@@ -229,7 +229,7 @@ const Header = () => {
 
             <IconButton
               component={Link}
-              href="/login"
+              href="/map"
               sx={{
                 border: '1px solid #D19F3B',
                 borderRadius: { xs: '28px' },
@@ -248,7 +248,7 @@ const Header = () => {
                 },
               }}
             >
-              <AccountCircle sx={{ 
+              <NavigationIcon sx={{ 
                 color: '#ffffff', 
                 fontSize: { xs: '22px' },
                 display: 'block',
@@ -261,7 +261,7 @@ const Header = () => {
           <Box sx={{ display: 'flex', alignItems: 'center', gap: { sm: 1.5, md: 2 }, flexShrink: 0 }}>
             <Button
               component={Link}
-              href="/map"
+              href="/projects"
               variant="contained"
               endIcon={<Public />}
               sx={{
@@ -278,12 +278,12 @@ const Header = () => {
                 },
               }}
             >
-              Find your Favourite Brand at Giga Mall
+              Projects by Al Ghurair
             </Button>
 
             <IconButton
               component={Link}
-              href="/login"
+              href="/map"
               sx={{
                 border: '1px solid #D19F3B',
                 borderRadius: '28px',
@@ -297,7 +297,7 @@ const Header = () => {
                 },
               }}
             >
-              <AccountCircle sx={{ 
+              <NavigationIcon sx={{ 
                 color: '#D19F3B',
                 fontSize: { sm: '26px', md: '28px' },
                 display: 'block'

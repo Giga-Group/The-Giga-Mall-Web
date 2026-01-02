@@ -119,7 +119,7 @@ const [emblaRefFeatured] = useEmblaCarousel(
                 objectFit: "cover",
               }}
             >
-              <source src="/Funcity3.mp4" type="video/mp4" />
+              <source src="/Funcity Reel mobile view.mp4" type="video/mp4" />
             </video>
           </Box>
 
