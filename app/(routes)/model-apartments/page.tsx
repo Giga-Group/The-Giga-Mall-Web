@@ -204,7 +204,7 @@ export default function ModelApartmentsPage() {
                 top: {
                   xs: "auto",
                   md: "auto", // relative -> top ignored
-                  lg: "50%",
+                  lg: "45%",
                 },
                 transform: {
                   xs: "none",
