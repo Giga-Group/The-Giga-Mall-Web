@@ -206,7 +206,7 @@ export default function ModelApartmentsPage() {
                 top: {
                   xs: "auto",
                   md: "auto",
-                  lg: "50%",
+                  lg: "45%",
                 },
                 transform: {
                   xs: "none",
@@ -273,7 +273,7 @@ export default function ModelApartmentsPage() {
                   },
                   fontWeight: 400,
                   color: "#D19F3B",
-                  marginBottom: { xs: "16px", md: "24px", lg: "0px" },
+                  marginBottom: { xs: "16px", md: "24px", lg: "24px" },
                   letterSpacing: "0.02em",
                   lineHeight: 1.2,
                 }}
@@ -294,7 +294,7 @@ export default function ModelApartmentsPage() {
                   fontWeight: 300,
                   color: "#D19F3B",
                   lineHeight: 1.6,
-                  marginBottom: { xs: "20px", md: "40px" },
+                  marginBottom: { xs: "20px", md: "40px", lg: "40px" },
                 }}
               >
                 Experience unparalleled luxury with a touch of elegance. Our
@@ -583,9 +583,9 @@ export default function ModelApartmentsPage() {
       color: "#D19F3B",
       textTransform: "uppercase",
       letterSpacing: "0.1em",
-      marginBottom: { xs: "12px", md: "20px" },
+      // marginBottom: { xs: "12px", md: "20px" },
       // Add space from top on desktop
-      marginTop: { xs: 0, md: "20px", lg: "25px" }, // Added this line
+      marginTop: { xs: 0, md: "20px", lg: "45px" }, // Added this line
     }}
   >
     PREMIUM LIVING
@@ -599,11 +599,11 @@ export default function ModelApartmentsPage() {
         xs: "1.5rem", // Same as second section mobile
         sm: "1.8rem",
         md: "2.5rem",
-        lg: "3rem",
+        lg: "2.5rem",
       },
       fontWeight: 400,
       color: "#D19F3B",
-      marginBottom: { xs: "16px", md: "24px" },
+      marginBottom: { xs: "16px", md: "24px", lg: "24px" },
       letterSpacing: "0.02em",
       lineHeight: 1.2,
     }}
@@ -624,7 +624,7 @@ export default function ModelApartmentsPage() {
       fontWeight: 300,
       color: "#D19F3B",
       lineHeight: 1.6, // Same as second section
-      marginBottom: { xs: "20px", md: "40px" },
+      marginBottom: { xs: "20px", md: "40px", lg: "40px" },
     }}
   >
     Step into a world of refined elegance where every detail has
