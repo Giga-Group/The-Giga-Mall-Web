@@ -33,6 +33,16 @@ const ProjectHero = ({
           position: 'absolute',
           inset: 0,
           zIndex: 1,
+          '&::after': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0.2) 70%, transparent 100%)',
+            zIndex: 2,
+          }
         }}
       >
         {backgroundImage ? (

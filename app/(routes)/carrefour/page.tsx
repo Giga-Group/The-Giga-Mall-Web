@@ -80,14 +80,14 @@ export default function CarrefourPage() {
           >
             <Typography
               sx={{
-                fontFamily: '"Jost", sans-serif',
+                fontFamily: '"Arvo", serif',
                 fontSize: {
                   xs: "2.5rem",
                   sm: "3.5rem",
                   md: "4.5rem",
                   lg: "5.5rem",
                 },
-                fontWeight: 700,
+                fontWeight: 400,
                 color: "#ffffff",
                 lineHeight: 1.1,
                 textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
@@ -97,7 +97,7 @@ export default function CarrefourPage() {
             </Typography>
             <Typography
               sx={{
-                fontFamily: '"Muli", sans-serif',
+                fontFamily: '"Quicksand", sans-serif',
                 fontSize: { xs: "1rem", sm: "1.2rem", md: "1.4rem" },
                 color: "#ffffff",
                 mt: { xs: 2, md: 3 },
@@ -162,7 +162,7 @@ export default function CarrefourPage() {
                       fontWeight: 400,
                       color: "#D19F3B",
                       mb: { xs: 2, md: 3 },
-                      fontFamily: '"Jost", sans-serif',
+                      fontFamily: '"Arvo", serif',
                     }}
                   >
                     Fresh Grocery and Items
@@ -173,7 +173,7 @@ export default function CarrefourPage() {
                       fontSize: { xs: "1rem", sm: "1.05rem", md: "1.1rem" },
                       lineHeight: 1.7,
                       color: "#333",
-                      fontFamily: '"Muli", sans-serif',
+                      fontFamily: '"Quicksand", sans-serif',
                     }}
                   >
                     Discover a wide selection of fresh grocery and bakery items at
@@ -328,7 +328,7 @@ export default function CarrefourPage() {
                       fontWeight: 400,
                       color: "#D19F3B",
                       mb: { xs: 2, md: 3 },
-                      fontFamily: '"Jost", sans-serif',
+                      fontFamily: '"Arvo", serif',
                     }}
                   >
                     Your Shopping Destination
@@ -339,7 +339,7 @@ export default function CarrefourPage() {
                       fontSize: { xs: "1rem", sm: "1.05rem", md: "1.1rem" },
                       lineHeight: 1.7,
                       color: "#333",
-                      fontFamily: '"Muli", sans-serif',
+                      fontFamily: '"Quicksand", sans-serif',
                       mb: { xs: 2, md: 3 },
                     }}
                   >
@@ -356,7 +356,7 @@ export default function CarrefourPage() {
                       fontSize: { xs: "1rem", sm: "1.05rem", md: "1.1rem" },
                       lineHeight: 1.7,
                       color: "#333",
-                      fontFamily: '"Muli", sans-serif',
+                      fontFamily: '"Quicksand", sans-serif',
                     }}
                   >
                     Whether you&apos;re stocking up on groceries, looking for the
@@ -401,7 +401,7 @@ export default function CarrefourPage() {
                 fontWeight: 400,
                 color: "#D19F3B",
                 mb: { xs: 2, md: 3 },
-                fontFamily: '"Jost", sans-serif',
+                fontFamily: '"Arvo", serif',
                 textAlign: "center",
               }}
             >
@@ -429,7 +429,7 @@ export default function CarrefourPage() {
                     fontWeight: 600,
                     color: "#D19F3B",
                     mb: 1,
-                    fontFamily: '"Jost", sans-serif',
+                    fontFamily: '"Poppins", sans-serif',
                   }}
                 >
                   Extensive Product Range
@@ -439,7 +439,7 @@ export default function CarrefourPage() {
                     fontSize: { xs: "1rem", sm: "1.05rem" },
                     lineHeight: 1.7,
                     color: "#333",
-                    fontFamily: '"Muli", sans-serif',
+                    fontFamily: '"Quicksand", sans-serif',
                   }}
                 >
                   From fresh produce and groceries to electronics, clothing, and
@@ -461,7 +461,7 @@ export default function CarrefourPage() {
                     fontWeight: 600,
                     color: "#D19F3B",
                     mb: 1,
-                    fontFamily: '"Jost", sans-serif',
+                    fontFamily: '"Poppins", sans-serif',
                   }}
                 >
                   Best Value & Promotions
@@ -471,7 +471,7 @@ export default function CarrefourPage() {
                     fontSize: { xs: "1rem", sm: "1.05rem" },
                     lineHeight: 1.7,
                     color: "#333",
-                    fontFamily: '"Muli", sans-serif',
+                    fontFamily: '"Quicksand", sans-serif',
                   }}
                 >
                   Enjoy competitive prices and exclusive promotions at Carrefour
@@ -493,7 +493,7 @@ export default function CarrefourPage() {
                     fontWeight: 600,
                     color: "#D19F3B",
                     mb: 1,
-                    fontFamily: '"Jost", sans-serif',
+                    fontFamily: '"Poppins", sans-serif',
                   }}
                 >
                   Quality Guaranteed
@@ -503,7 +503,7 @@ export default function CarrefourPage() {
                     fontSize: { xs: "1rem", sm: "1.05rem" },
                     lineHeight: 1.7,
                     color: "#333",
-                    fontFamily: '"Muli", sans-serif',
+                    fontFamily: '"Quicksand", sans-serif',
                   }}
                 >
                   At Carrefour Giga Mall, we maintain the highest quality
@@ -525,7 +525,7 @@ export default function CarrefourPage() {
                     fontWeight: 600,
                     color: "#D19F3B",
                     mb: 1,
-                    fontFamily: '"Jost", sans-serif',
+                    fontFamily: '"Poppins", sans-serif',
                   }}
                 >
                   Prime Location at Giga Mall
@@ -535,7 +535,7 @@ export default function CarrefourPage() {
                     fontSize: { xs: "1rem", sm: "1.05rem" },
                     lineHeight: 1.7,
                     color: "#333",
-                    fontFamily: '"Muli", sans-serif',
+                    fontFamily: '"Quicksand", sans-serif',
                   }}
                 >
                   Strategically located within Giga Mall in DHA Islamabad,
@@ -595,7 +595,7 @@ export default function CarrefourPage() {
                       fontWeight: 400,
                       color: "#D19F3B",
                       mb: { xs: 2, md: 3 },
-                      fontFamily: '"Jost", sans-serif',
+                      fontFamily: '"Arvo", serif',
                     }}
                   >
                     Electronics and Appliances
@@ -606,7 +606,7 @@ export default function CarrefourPage() {
                       fontSize: { xs: "1rem", sm: "1.05rem", md: "1.1rem" },
                       lineHeight: 1.7,
                       color: "#333",
-                      fontFamily: '"Muli", sans-serif',
+                      fontFamily: '"Quicksand", sans-serif',
                     }}
                   >
                     Explore our extensive collection of electronics and appliances at
@@ -695,7 +695,7 @@ export default function CarrefourPage() {
                 fontWeight: 400,
                 color: "#D19F3B",
                 mb: { xs: 2, md: 3 },
-                fontFamily: '"Jost", sans-serif',
+                fontFamily: '"Arvo", serif',
                 textAlign: "center",
               }}
             >
@@ -706,7 +706,7 @@ export default function CarrefourPage() {
                 fontSize: { xs: "1rem", sm: "1.05rem", md: "1.1rem" },
                 lineHeight: 1.7,
                 color: "#333",
-                fontFamily: '"Muli", sans-serif',
+                fontFamily: '"Quicksand", sans-serif',
                 textAlign: "center",
                 mb: { xs: 4, md: 6 },
               }}
@@ -736,7 +736,7 @@ export default function CarrefourPage() {
                     fontWeight: 600,
                     color: "#D19F3B",
                     mb: 1,
-                    fontFamily: '"Jost", sans-serif',
+                    fontFamily: '"Poppins", sans-serif',
                   }}
                 >
                   Fresh Groceries & Produce
@@ -746,7 +746,7 @@ export default function CarrefourPage() {
                     fontSize: { xs: "0.95rem", sm: "1rem" },
                     lineHeight: 1.6,
                     color: "#666",
-                    fontFamily: '"Muli", sans-serif',
+                    fontFamily: '"Quicksand", sans-serif',
                   }}
                 >
                   Daily fresh fruits, vegetables, meat, dairy, and all your
@@ -767,7 +767,7 @@ export default function CarrefourPage() {
                     fontWeight: 600,
                     color: "#D19F3B",
                     mb: 1,
-                    fontFamily: '"Jost", sans-serif',
+                    fontFamily: '"Poppins", sans-serif',
                   }}
                 >
                   Home & Living
@@ -777,7 +777,7 @@ export default function CarrefourPage() {
                     fontSize: { xs: "0.95rem", sm: "1rem" },
                     lineHeight: 1.6,
                     color: "#666",
-                    fontFamily: '"Muli", sans-serif',
+                    fontFamily: '"Quicksand", sans-serif',
                   }}
                 >
                   Complete range of household items, home decor, and living
@@ -798,7 +798,7 @@ export default function CarrefourPage() {
                     fontWeight: 600,
                     color: "#D19F3B",
                     mb: 1,
-                    fontFamily: '"Jost", sans-serif',
+                    fontFamily: '"Poppins", sans-serif',
                   }}
                 >
                   Electronics & Appliances
@@ -808,7 +808,7 @@ export default function CarrefourPage() {
                     fontSize: { xs: "0.95rem", sm: "1rem" },
                     lineHeight: 1.6,
                     color: "#666",
-                    fontFamily: '"Muli", sans-serif',
+                    fontFamily: '"Quicksand", sans-serif',
                   }}
                 >
                   Latest electronics, gadgets, and home appliances at
@@ -843,7 +843,7 @@ export default function CarrefourPage() {
                   fontWeight: 400,
                   color: "#D19F3B",
                   mb: { xs: 2, md: 3 },
-                  fontFamily: '"Jost", sans-serif',
+                  fontFamily: '"Arvo", serif',
                 }}
               >
                 Visit Carrefour at Giga Mall
@@ -853,7 +853,7 @@ export default function CarrefourPage() {
                   fontSize: { xs: "1rem", sm: "1.05rem", md: "1.1rem" },
                   lineHeight: 1.7,
                   color: "#333",
-                  fontFamily: '"Muli", sans-serif',
+                  fontFamily: '"Quicksand", sans-serif',
                   mb: { xs: 3, md: 4 },
                 }}
               >
@@ -884,7 +884,7 @@ export default function CarrefourPage() {
                     fontSize: { xs: "1.1rem", sm: "1.15rem", md: "1.2rem" },
                     fontWeight: 600,
                     color: "#D19F3B",
-                    fontFamily: '"Jost", sans-serif',
+                    fontFamily: '"Poppins", sans-serif',
                     lineHeight: 1.4,
                   }}
                 >
@@ -908,7 +908,7 @@ export default function CarrefourPage() {
                   sx={{
                     backgroundColor: "#D19F3B",
                     color: "#ffffff",
-                    fontFamily: '"Jost", sans-serif',
+                    fontFamily: '"Poppins", sans-serif',
                     fontSize: { xs: "0.9rem", md: "1rem" },
                     fontWeight: 600,
                     px: { xs: 3, md: 4 },
@@ -929,7 +929,7 @@ export default function CarrefourPage() {
                   sx={{
                     borderColor: "#D19F3B",
                     color: "#D19F3B",
-                    fontFamily: '"Jost", sans-serif',
+                    fontFamily: '"Poppins", sans-serif',
                     fontSize: { xs: "0.9rem", md: "1rem" },
                     fontWeight: 600,
                     px: { xs: 3, md: 4 },
@@ -950,7 +950,7 @@ export default function CarrefourPage() {
                 sx={{
                   fontSize: { xs: "1rem", md: "1.1rem" },
                   color: "#666",
-                  fontFamily: '"Muli", sans-serif',
+                  fontFamily: '"Quicksand", sans-serif',
                 }}
               >
                 Open daily with convenient shopping hours
