@@ -2,7 +2,9 @@
 
 import { useCallback, useEffect, useState, useRef } from 'react';
 import { Box, Typography, IconButton } from '@mui/material';
-import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
+// import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
+import ArrowBackIosNew from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIos from '@mui/icons-material/ArrowForwardIos';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useScroll, useTransform } from 'framer-motion';
 import Card from '@/components/ui/Card';
@@ -313,44 +315,60 @@ const TrendingSection = () => {
         }}
       >
         <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '12px'
-          }}
-        >
-          <IconButton
-            onClick={scrollPrev}
-            sx={{
-              width: { xs: '36px', sm: '32px' },
-              height: { xs: '36px', sm: '32px' },
-              borderRadius: '50%',
-              backgroundColor: '#E5E5E5',
-              border: '1px solid #e0e0e0',
-              '&:hover': {
-                backgroundColor: '#e0e0e0'
-              }
-            }}
-          >
-            <ArrowBackIos sx={{ fontSize: { xs: '18px', sm: '16px', md: '20px' }, color: '#000000' }} />
-          </IconButton>
+  sx={{
+    display: 'flex',
+    alignItems: 'center',
+    gap: '12px',
+  }}
+>
+  <IconButton
+    onClick={scrollPrev}
+    sx={{
+      width: { xs: 36, sm: 32 },
+      height: { xs: 36, sm: 32 },
+      borderRadius: '50%',
+      backgroundColor: '#E5E5E5',
+      border: '1px solid #e0e0e0',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      '&:hover': {
+        backgroundColor: '#e0e0e0',
+      },
+    }}
+  >
+    <ArrowBackIosNew
+      sx={{
+        fontSize: { xs: 18, sm: 16, md: 20 },
+        color: '#000000',
+      }}
+    />
+  </IconButton>
 
-          <IconButton
-            onClick={scrollNext}
-            sx={{
-              width: { xs: '36px', sm: '32px' },
-              height: { xs: '36px', sm: '32px' },
-              borderRadius: '50%',
-              backgroundColor: '#E5E5E5',
-              border: '1px solid #e0e0e0',
-              '&:hover': {
-                backgroundColor: '#e0e0e0'
-              }
-            }}
-          >
-            <ArrowForwardIos sx={{ fontSize: { xs: '18px', sm: '16px', md: '20px' }, color: '#000000' }} />
-          </IconButton>
-        </Box>
+  <IconButton
+    onClick={scrollNext}
+    sx={{
+      width: { xs: 36, sm: 32 },
+      height: { xs: 36, sm: 32 },
+      borderRadius: '50%',
+      backgroundColor: '#E5E5E5',
+      border: '1px solid #e0e0e0',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      '&:hover': {
+        backgroundColor: '#e0e0e0',
+      },
+    }}
+  >
+    <ArrowForwardIos
+      sx={{
+        fontSize: { xs: 18, sm: 16, md: 20 },
+        color: '#000000',
+      }}
+    />
+  </IconButton>
+</Box>
 
         <Box
           sx={{

@@ -1,13 +1,21 @@
-import { Box, Typography } from "@mui/material";
+'use client';
+
+import { Box, Typography, useMediaQuery, useTheme } from "@mui/material";
 import Image from "next/image";
 
 export default function Hero() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm')); // mobile breakpoint
+
+  // Set image based on device
+  const heroImage = isMobile ? "/Cinepax/c2.jpg" : "/Cinepax/c2.jpg";
+
   return (
     <Box
       sx={{
         position: "relative",
         width: "100vw",
-        minHeight: { xs: "100vh", md: "70vh", lg: "70vh" },
+        minHeight: { xs: "95vh", md: "70vh", lg: "70vh" },
         paddingTop: { xs: "90px", md: "100px" },
         overflow: "hidden",
         display: "flex",
@@ -26,7 +34,7 @@ export default function Hero() {
         }}
       >
         <Image
-          src="/Cinepax/c2.jpg"
+          src={heroImage}  // ⬅️ switches between mobile/desktop
           alt="Cinepax Cinema Experience"
           fill
           style={{
@@ -36,6 +44,22 @@ export default function Hero() {
           priority
         />
       </Box>
+{/* Mobile Top Gradient */}
+{isMobile && (
+  <Box
+    sx={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      height: "50%",
+      background:
+        "linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.81) 35%, rgba(0, 0, 0, 0) 60%, transparent 100%)",
+      zIndex: 1,
+    }}
+  />
+)}
+
 
       {/* Overlay Gradient */}
       <Box
