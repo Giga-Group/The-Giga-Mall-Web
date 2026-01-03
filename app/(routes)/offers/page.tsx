@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, Suspense } from 'react';
+import { useState, Suspense, useCallback, useEffect, useRef } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ExploreTheMall from '@/components/sections/ExploreTheMall';
@@ -24,91 +24,91 @@ const allOffers: Offer[] = [
     id: 1,
     image: '/offers/bonanza_satrangi_2.png',
     dates: '01 Jan - 31 Jan 2026',
-    title: 'Sephora Beauty Bonanza',
-    description: 'Get up to 50% off on premium beauty products! Discover exclusive deals on makeup, skincare, and fragrances from top brands. Limited time offer.',
-    slug: 'sephora-beauty-bonanza',
+    title: 'Bonanza Satrangi',
+    description: 'Get up to 50% off on premium fashion and beauty products! Discover exclusive deals on clothing, makeup, and accessories from Bonanza Satrangi. Limited time offer.',
+    slug: 'bonanza-satrangi',
     type: 'beauty'
   },
   {
     id: 2,
     image: '/offers/breakout.png',
     dates: '15 Dec - 31 Dec 2025',
-    title: 'Nike End of Year Sale',
-    description: 'Score amazing deals on athletic wear and footwear. Up to 40% off on selected items including the latest sneaker releases and sportswear collections.',
-    slug: 'nike-end-year-sale',
+    title: 'Breakout Sale of Year',
+    description: 'Score amazing deals on fashion and lifestyle products. Up to 40% off on selected items including the latest collections and trendy pieces.',
+    slug: 'breakout-sale-of-year',
     type: 'fashion'
   },
   {
     id: 3,
     image: '/offers/bloom.png',
     dates: '10 Dec - 25 Dec 2025',
-    title: 'Adidas Holiday Special',
-    description: 'Celebrate the holidays with Adidas! Enjoy special discounts on performance gear, streetwear, and accessories. Perfect for your active lifestyle.',
-    slug: 'adidas-holiday-special',
+    title: 'Bloom Holiday Special',
+    description: 'Celebrate the holidays with Bloom! Enjoy special discounts on fashion, accessories, and lifestyle products. Perfect for your holiday shopping.',
+    slug: 'bloom-holiday-special',
     type: 'fashion'
   },
   {
     id: 4,
     image: '/offers/kayseria.png',
     dates: '05 Dec - 20 Dec 2025',
-    title: 'Zara Fashion Week Sale',
-    description: 'Refresh your wardrobe with Zara&apos;s latest collections at unbeatable prices. Discover trendy pieces for every occasion with exclusive discounts.',
-    slug: 'zara-fashion-week',
+    title: 'Kayseria Fashion Week Sale',
+    description: 'Refresh your wardrobe with Kayseria\'s latest collections at unbeatable prices. Discover trendy pieces for every occasion with exclusive discounts.',
+    slug: 'kayseria-fashion-week',
     type: 'fashion'
   },
   {
     id: 5,
     image: '/offers/Junaid.png',
     dates: '20 Dec - 05 Jan 2026',
-    title: 'Aesop Skincare Essentials',
-    description: 'Pamper yourself with premium skincare products. Special offers on Aesop&apos;s signature formulations for radiant, healthy-looking skin.',
-    slug: 'aesop-skincare-essentials',
+    title: 'Junaid Jamshaid Sales',
+    description: 'Pamper yourself with premium fashion and lifestyle products. Special offers on Junaid Jamshaid\'s signature collections for elegant and stylish looks.',
+    slug: 'junaid-jamshaid-sales',
     type: 'beauty'
   },
   {
     id: 6,
     image: '/offers/hardees.png',
     dates: '01 Dec - 31 Dec 2025',
-    title: 'Starbucks Holiday Drinks',
-    description: 'Warm up this winter with Starbucks&apos; seasonal beverages. Buy one get one free on selected holiday drinks and enjoy festive flavors.',
-    slug: 'starbucks-holiday-drinks',
+    title: 'Hardees Holiday Big Sale',
+    description: 'Satisfy your cravings with Hardees\'s holiday specials! Enjoy amazing deals on burgers, fries, and meals. Buy one get one free on selected items.',
+    slug: 'hardees-holiday-big-sale',
     type: 'dining'
   },
   {
     id: 7,
     image: '/offers/cheezious.png',
     dates: '12 Dec - 28 Dec 2025',
-    title: 'Victoria&apos;s Secret Lingerie Sale',
-    description: 'Shop the ultimate lingerie collection with exclusive discounts. Discover elegant pieces and intimate apparel at special prices.',
-    slug: 'victorias-secret-sale',
-    type: 'fashion'
+    title: 'Cheezious Special Offer',
+    description: 'Indulge in Cheezious special offers! Enjoy delicious cheesy delights with exclusive discounts. Discover mouth-watering pizzas and cheesy treats at special prices.',
+    slug: 'cheezious-special-offer',
+    type: 'dining'
   },
   {
     id: 8,
     image: '/offers/mcdonalds.png',
     dates: '08 Dec - 24 Dec 2025',
-    title: 'Swarovski Crystal Collection',
-    description: 'Sparkle this holiday season with Swarovski&apos;s exquisite crystal jewelry. Special pricing on selected pieces including limited edition designs.',
-    slug: 'swarovski-crystal-collection',
-    type: 'jewelry'
+    title: 'McDonalds Super Savings',
+    description: 'Enjoy super savings at McDonald\'s! Get amazing deals on your favorite burgers, fries, and meals. Special pricing on combo meals and limited-time offers.',
+    slug: 'mcdonalds-super-savings',
+    type: 'dining'
   },
   {
     id: 9,
     image: '/offers/pizzahut.png',
     dates: '15 Dec - 30 Dec 2025',
-    title: 'Nespresso Coffee Machine Offer',
-    description: 'Elevate your coffee experience with Nespresso machines and capsules. Exclusive bundle deals and complimentary accessories with purchase.',
-    slug: 'nespresso-coffee-offer',
-    type: 'electronics'
+    title: 'Pizza Hut Buy 1 Get 1',
+    description: 'Enjoy Pizza Hut&apos;s amazing buy one get one offer! Get your favorite pizzas, sides, and drinks with exclusive deals. Perfect for sharing with family and friends.',
+    slug: 'pizzahut-buy-1-get-1',
+    type: 'dining'
   },
   {
     id: 10,
     image: '/offers/wildwing.png',
     dates: '15 Dec - 30 Dec 2025',
-    title: 'Nespresso Coffee Machine Offer',
-    description: 'Elevate your coffee experience with Nespresso machines and capsules. Exclusive bundle deals and complimentary accessories with purchase.',
-    slug: 'nespresso-coffee-offer',
-    type: 'electronics'
+    title: 'Wild Wing Special Offer',
+    description: 'Savor the flavor at Wild Wing! Enjoy amazing deals on wings, burgers, and more. Special offers on combo meals and signature dishes.',
+    slug: 'wildwing-special-offer',
+    type: 'dining'
   }
 ];
 
@@ -126,6 +126,13 @@ function OffersContent() {
   const [searchQuery, setSearchQuery] = useState('');
   const [offerType, setOfferType] = useState('all');
   const [visibleCount, setVisibleCount] = useState(6);
+  
+  // Carousel state for mobile
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const autoPlayPausedRef = useRef(false);
 
   const filteredOffers = allOffers.filter(offer => {
     const matchesSearch = offer.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -140,6 +147,77 @@ function OffersContent() {
   const handleLoadMore = () => {
     setVisibleCount(prev => prev + 3);
   };
+
+  // Carousel navigation functions
+  const goToNext = useCallback(() => {
+    if (isTransitioning || filteredOffers.length === 0) return;
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => (prev + 1) % filteredOffers.length);
+    setTimeout(() => setIsTransitioning(false), 500);
+  }, [isTransitioning, filteredOffers.length]);
+
+  const goToPrev = useCallback(() => {
+    if (isTransitioning || filteredOffers.length === 0) return;
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => (prev - 1 + filteredOffers.length) % filteredOffers.length);
+    setTimeout(() => setIsTransitioning(false), 500);
+  }, [isTransitioning, filteredOffers.length]);
+
+  // Auto-scroll for mobile carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isTransitioning && !autoPlayPausedRef.current && filteredOffers.length > 0) {
+        goToNext();
+      }
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [goToNext, isTransitioning, filteredOffers.length]);
+
+  // Touch handlers for mobile carousel
+  const handleTouchStart = (e: React.TouchEvent) => {
+    autoPlayPausedRef.current = true;
+    setTouchStart(e.touches[0].clientX);
+    setTouchEnd(null);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (touchStart !== null) {
+      setTouchEnd(e.touches[0].clientX);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || touchEnd === null) {
+      setTouchStart(null);
+      setTouchEnd(null);
+      setTimeout(() => {
+        autoPlayPausedRef.current = false;
+      }, 5000);
+      return;
+    }
+
+    const delta = touchStart - touchEnd;
+    const minSwipeDistance = 50;
+
+    if (Math.abs(delta) > minSwipeDistance) {
+      if (delta > 0) {
+        goToNext();
+      } else {
+        goToPrev();
+      }
+    }
+
+    setTouchStart(null);
+    setTouchEnd(null);
+    setTimeout(() => {
+      autoPlayPausedRef.current = false;
+    }, 5000);
+  };
+
+  // Reset carousel index when filters change
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [searchQuery, offerType]);
 
   return (
     <>
@@ -371,16 +449,191 @@ function OffersContent() {
               />
             </Box>
 
-            {/* Offers Grid */}
+            {/* Mobile Carousel View */}
             <Box
               sx={{
-                display: 'grid',
+                display: { xs: 'block', sm: 'none' },
+                position: 'relative',
+                width: '100%',
+                overflow: 'hidden'
+              }}
+              onTouchStart={handleTouchStart}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={handleTouchEnd}
+            >
+              <Box
+                sx={{
+                  display: 'flex',
+                  transform: `translateX(-${currentIndex * 100}%)`,
+                  transition: isTransitioning ? 'transform 0.5s ease-in-out' : 'none',
+                  willChange: 'transform'
+                }}
+              >
+                {filteredOffers.map((offer) => (
+                  <Box
+                    key={offer.id}
+                    sx={{
+                      minWidth: '100%',
+                      width: '100%',
+                      flexShrink: 0,
+                      px: 1
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        backgroundColor: '#ffffff',
+                        borderRadius: '4px',
+                        overflow: 'hidden',
+                        boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                        '&:active': {
+                          transform: 'scale(0.98)'
+                        }
+                      }}
+                    >
+                      {/* Offer Image */}
+                      <Box
+                        sx={{
+                          position: 'relative',
+                          width: '100%',
+                          height: '280px',
+                          overflow: 'hidden',
+                          backgroundColor: '#f5f5f5'
+                        }}
+                      >
+                        <Image
+                          src={offer.image}
+                          alt={offer.title}
+                          fill
+                          style={{ objectFit: 'cover', objectPosition: 'center' }}
+                        />
+                      </Box>
+
+                      {/* Offer Content */}
+                      <Box
+                        sx={{
+                          padding: '20px',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          flexGrow: 1
+                        }}
+                      >
+                        {/* Dates */}
+                        <Typography
+                          sx={{
+                            fontSize: '0.75rem',
+                            color: '#666666',
+                            mb: 1,
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.1em'
+                          }}
+                        >
+                          {offer.dates}
+                        </Typography>
+
+                        {/* Title */}
+                        <Typography
+                          variant="h3"
+                          sx={{
+                            fontFamily: '"Arvo", serif',
+                            fontSize: '1.1rem',
+                            fontWeight: 400,
+                            color: '#000000',
+                            mb: 1.5,
+                            lineHeight: 1.3,
+                            flexGrow: 1
+                          }}
+                        >
+                          {offer.title}
+                        </Typography>
+
+                        {/* Description */}
+                        <Typography
+                          sx={{
+                            fontSize: '0.85rem',
+                            color: '#666666',
+                            mb: 2,
+                            lineHeight: 1.6
+                          }}
+                        >
+                          {offer.description}
+                        </Typography>
+
+                        {/* Find out more link */}
+                        <MuiLink
+                          component={Link}
+                          href={`/offers/${offer.slug}`}
+                          sx={{
+                            fontSize: '0.85rem',
+                            color: '#D19F3B',
+                            fontWeight: 500,
+                            textDecoration: 'underline',
+                            cursor: 'pointer',
+                            alignSelf: 'flex-start',
+                            transition: 'opacity 0.3s ease',
+                            '&:hover': {
+                              opacity: 0.7
+                            }
+                          }}
+                        >
+                          Find out more
+                        </MuiLink>
+                      </Box>
+                    </Box>
+                  </Box>
+                ))}
+              </Box>
+
+              {/* Navigation Dots */}
+              {filteredOffers.length > 1 && (
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: 1,
+                    mt: 3
+                  }}
+                >
+                  {filteredOffers.map((_, index) => (
+                    <Box
+                      key={index}
+                      onClick={() => {
+                        if (!isTransitioning) {
+                          setIsTransitioning(true);
+                          setCurrentIndex(index);
+                          setTimeout(() => setIsTransitioning(false), 500);
+                        }
+                      }}
+                      sx={{
+                        width: currentIndex === index ? '24px' : '8px',
+                        height: '8px',
+                        borderRadius: '4px',
+                        backgroundColor: currentIndex === index ? '#D19F3B' : '#D19F3B80',
+                        cursor: 'pointer',
+                        transition: 'all 0.3s ease',
+                        '&:hover': {
+                          backgroundColor: '#D19F3B'
+                        }
+                      }}
+                    />
+                  ))}
+                </Box>
+              )}
+
+            </Box>
+
+            {/* Desktop/Tablet Grid View */}
+            <Box
+              sx={{
+                display: { xs: 'none', sm: 'grid' },
                 gridTemplateColumns: {
-                  xs: '1fr',
                   sm: 'repeat(2, 1fr)',
                   md: 'repeat(3, 1fr)'
                 },
-                gap: { xs: 3, sm: 4, md: 5 }
+                gap: { sm: 4, md: 5 }
               }}
             >
               {visibleOffers.map((offer) => (
@@ -405,22 +658,23 @@ function OffersContent() {
                     sx={{
                       position: 'relative',
                       width: '100%',
-                      height: { xs: '250px', sm: '280px', md: '300px' },
-                      overflow: 'hidden'
+                      height: { sm: '200px', md: '220px' },
+                      overflow: 'hidden',
+                      backgroundColor: '#f5f5f5'
                     }}
                   >
                     <Image
                       src={offer.image}
                       alt={offer.title}
                       fill
-                      style={{ objectFit: 'cover' }}
+                      style={{ objectFit: 'cover', objectPosition: 'center' }}
                     />
                   </Box>
 
                   {/* Offer Content */}
                   <Box
                     sx={{
-                      padding: { xs: '20px', sm: '24px', md: '28px' },
+                      padding: { sm: '24px', md: '28px' },
                       display: 'flex',
                       flexDirection: 'column',
                       flexGrow: 1
@@ -429,9 +683,9 @@ function OffersContent() {
                     {/* Dates */}
                     <Typography
                       sx={{
-                        fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem' },
+                        fontSize: { sm: '0.8rem', md: '0.85rem' },
                         color: '#666666',
-                        mb: { xs: 1, sm: 1.5 },
+                        mb: 1.5,
                         textTransform: 'uppercase',
                         letterSpacing: '0.1em'
                       }}
@@ -444,10 +698,10 @@ function OffersContent() {
                       variant="h3"
                       sx={{
                         fontFamily: '"Arvo", serif',
-                        fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.3rem' },
+                        fontSize: { sm: '1.2rem', md: '1.3rem' },
                         fontWeight: 400,
                         color: '#000000',
-                        mb: { xs: 1.5, sm: 2 },
+                        mb: 2,
                         lineHeight: 1.3,
                         flexGrow: 1
                       }}
@@ -458,9 +712,9 @@ function OffersContent() {
                     {/* Description */}
                     <Typography
                       sx={{
-                        fontSize: { xs: '0.85rem', sm: '0.9rem', md: '0.95rem' },
+                        fontSize: { sm: '0.9rem', md: '0.95rem' },
                         color: '#666666',
-                        mb: { xs: 2, sm: 2.5 },
+                        mb: 2.5,
                         lineHeight: 1.6
                       }}
                     >
@@ -472,7 +726,7 @@ function OffersContent() {
                       component={Link}
                       href={`/offers/${offer.slug}`}
                       sx={{
-                        fontSize: { xs: '0.85rem', sm: '0.9rem', md: '0.95rem' },
+                        fontSize: { sm: '0.9rem', md: '0.95rem' },
                         color: '#D19F3B',
                         fontWeight: 500,
                         textDecoration: 'underline',
@@ -491,13 +745,13 @@ function OffersContent() {
               ))}
             </Box>
 
-            {/* Load More Button */}
+            {/* Load More Button - Only for Desktop/Tablet */}
             {hasMore && (
               <Box
                 sx={{
-                  display: 'flex',
+                  display: { xs: 'none', sm: 'flex' },
                   justifyContent: 'center',
-                  mt: { xs: 4, sm: 5, md: 6 }
+                  mt: { sm: 5, md: 6 }
                 }}
               >
                 <Button
@@ -507,11 +761,11 @@ function OffersContent() {
                     border: '1px solid #D19F3B',
                     color: '#D19F3B',
                     textTransform: 'uppercase',
-                    fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem' },
+                    fontSize: { sm: '0.8rem', md: '0.85rem' },
                     fontWeight: 400,
                     fontFamily: '"Poppins", sans-serif',
                     letterSpacing: '0.1em',
-                    padding: { xs: '12px 40px', sm: '14px 50px', md: '16px 60px' },
+                    padding: { sm: '14px 50px', md: '16px 60px' },
                     borderRadius: 0,
                     transition: 'all 0.3s ease',
                     '&:hover': {

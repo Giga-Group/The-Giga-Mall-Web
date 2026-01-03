@@ -246,7 +246,7 @@ function OpeningHoursContent() {
             sx={{
               position: 'relative',
               width: '100%',
-              height: { xs: 260, sm: 320, md: 380, lg: 420 },
+              height: { xs: '60vh', sm: 320, md: 380, lg: 420 },
               overflow: 'hidden',
             }}
           >
