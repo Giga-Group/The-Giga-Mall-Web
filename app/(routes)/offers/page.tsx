@@ -129,9 +129,8 @@ function OffersContent() {
   
   // Carousel state for mobile
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
-  const [touchStart, setTouchStart] = useState<number | null>(null);
-  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const touchStart = useRef<number | null>(null);
+  const touchEnd = useRef<number | null>(null);
   const autoPlayPausedRef = useRef(false);
 
   const filteredOffers = allOffers.filter(offer => {
@@ -148,71 +147,26 @@ function OffersContent() {
     setVisibleCount(prev => prev + 3);
   };
 
-  // Carousel navigation functions
-  const goToNext = useCallback(() => {
-    if (isTransitioning || filteredOffers.length === 0) return;
-    setIsTransitioning(true);
-    setCurrentIndex((prev) => (prev + 1) % filteredOffers.length);
-    setTimeout(() => setIsTransitioning(false), 500);
-  }, [isTransitioning, filteredOffers.length]);
-
-  const goToPrev = useCallback(() => {
-    if (isTransitioning || filteredOffers.length === 0) return;
-    setIsTransitioning(true);
-    setCurrentIndex((prev) => (prev - 1 + filteredOffers.length) % filteredOffers.length);
-    setTimeout(() => setIsTransitioning(false), 500);
-  }, [isTransitioning, filteredOffers.length]);
+  // Handle swipe for carousel
+  const handleSwipe = useCallback((direction: "left" | "right") => {
+    if (direction === "left") {
+      setCurrentIndex((prev) => (prev + 1) % filteredOffers.length);
+    } else {
+      setCurrentIndex((prev) => (prev - 1 + filteredOffers.length) % filteredOffers.length);
+    }
+  }, [filteredOffers.length]);
 
   // Auto-scroll for mobile carousel
   useEffect(() => {
+    if (filteredOffers.length === 0) return;
     const interval = setInterval(() => {
-      if (!isTransitioning && !autoPlayPausedRef.current && filteredOffers.length > 0) {
-        goToNext();
+      if (!autoPlayPausedRef.current) {
+        setCurrentIndex((prev) => (prev + 1) % filteredOffers.length);
       }
-    }, 5000);
+    }, 4000); // Change slide every 4 seconds
+
     return () => clearInterval(interval);
-  }, [goToNext, isTransitioning, filteredOffers.length]);
-
-  // Touch handlers for mobile carousel
-  const handleTouchStart = (e: React.TouchEvent) => {
-    autoPlayPausedRef.current = true;
-    setTouchStart(e.touches[0].clientX);
-    setTouchEnd(null);
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (touchStart !== null) {
-      setTouchEnd(e.touches[0].clientX);
-    }
-  };
-
-  const handleTouchEnd = () => {
-    if (!touchStart || touchEnd === null) {
-      setTouchStart(null);
-      setTouchEnd(null);
-      setTimeout(() => {
-        autoPlayPausedRef.current = false;
-      }, 5000);
-      return;
-    }
-
-    const delta = touchStart - touchEnd;
-    const minSwipeDistance = 50;
-
-    if (Math.abs(delta) > minSwipeDistance) {
-      if (delta > 0) {
-        goToNext();
-      } else {
-        goToPrev();
-      }
-    }
-
-    setTouchStart(null);
-    setTouchEnd(null);
-    setTimeout(() => {
-      autoPlayPausedRef.current = false;
-    }, 5000);
-  };
+  }, [filteredOffers.length]);
 
   // Reset carousel index when filters change
   useEffect(() => {
@@ -455,18 +409,36 @@ function OffersContent() {
                 display: { xs: 'block', sm: 'none' },
                 position: 'relative',
                 width: '100%',
-                overflow: 'hidden'
+                overflow: 'hidden',
+                mb: 3
               }}
-              onTouchStart={handleTouchStart}
-              onTouchMove={handleTouchMove}
-              onTouchEnd={handleTouchEnd}
+              onTouchStart={(e) => {
+                autoPlayPausedRef.current = true;
+                touchStart.current = e.touches[0].clientX;
+              }}
+              onTouchMove={(e) => {
+                touchEnd.current = e.touches[0].clientX;
+              }}
+              onTouchEnd={() => {
+                if (touchStart.current !== null && touchEnd.current !== null) {
+                  const delta = touchStart.current - touchEnd.current;
+                  if (Math.abs(delta) > 50) {
+                    handleSwipe(delta > 0 ? "left" : "right");
+                  }
+                }
+                touchStart.current = null;
+                touchEnd.current = null;
+                setTimeout(() => {
+                  autoPlayPausedRef.current = false;
+                }, 5000);
+              }}
             >
               <Box
                 sx={{
                   display: 'flex',
                   transform: `translateX(-${currentIndex * 100}%)`,
-                  transition: isTransitioning ? 'transform 0.5s ease-in-out' : 'none',
-                  willChange: 'transform'
+                  transition: 'transform 0.3s ease-in-out',
+                  width: '100%'
                 }}
               >
                 {filteredOffers.map((offer) => (
@@ -476,7 +448,9 @@ function OffersContent() {
                       minWidth: '100%',
                       width: '100%',
                       flexShrink: 0,
-                      px: 1
+                      display: 'flex',
+                      flexDirection: 'column',
+                      px: 0
                     }}
                   >
                     <Box
@@ -487,10 +461,7 @@ function OffersContent() {
                         borderRadius: '4px',
                         overflow: 'hidden',
                         boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-                        transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-                        '&:active': {
-                          transform: 'scale(0.98)'
-                        }
+                        width: '100%'
                       }}
                     >
                       {/* Offer Image */}
@@ -601,22 +572,19 @@ function OffersContent() {
                     <Box
                       key={index}
                       onClick={() => {
-                        if (!isTransitioning) {
-                          setIsTransitioning(true);
-                          setCurrentIndex(index);
-                          setTimeout(() => setIsTransitioning(false), 500);
-                        }
+                        autoPlayPausedRef.current = true;
+                        setCurrentIndex(index);
+                        setTimeout(() => {
+                          autoPlayPausedRef.current = false;
+                        }, 5000);
                       }}
                       sx={{
-                        width: currentIndex === index ? '24px' : '8px',
-                        height: '8px',
-                        borderRadius: '4px',
-                        backgroundColor: currentIndex === index ? '#D19F3B' : '#D19F3B80',
+                        width: 8,
+                        height: 8,
+                        borderRadius: '50%',
+                        bgcolor: index === currentIndex ? '#D19F3B' : '#ccc',
                         cursor: 'pointer',
-                        transition: 'all 0.3s ease',
-                        '&:hover': {
-                          backgroundColor: '#D19F3B'
-                        }
+                        transition: 'background-color 0.3s'
                       }}
                     />
                   ))}
