@@ -19,7 +19,7 @@ const entertainOptions = [
   { name: "Attractions & Activities", image: "/6485.jpg", icon: <AttractionsIcon /> },
   { name: "Featured Entertainment", image: "/DSC07199.jpg", icon: <CelebrationIcon /> },
   { name: "Plan Your Fun Day", image: "/DSC07836.jpg", icon: <EventIcon /> },
-  { name: "Family Moments", image: "/DSC07901.jpg", icon: <FamilyRestroomIcon /> },
+  { name: "Family Moments", image: "/family-moments.jpg", icon: <FamilyRestroomIcon /> },
 ];
 
 const EntertainDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: EntertainDropdownProps) => {
