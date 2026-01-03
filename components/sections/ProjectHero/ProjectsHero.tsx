@@ -10,7 +10,7 @@ const ProjectsHero = () => {
         position: 'relative',
         width: '100%',
         // height: '60vh',
-        height: { xs: '100vh', sm: '100vh', md: '60vh' },
+        height: '50vh',
         overflow: 'hidden',
         display: 'flex',
         alignItems: 'center',

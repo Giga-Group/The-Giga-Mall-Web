@@ -200,7 +200,7 @@ const Header = () => {
           }}>
             <IconButton
               component={Link}
-              href="/map"
+              href="/projects"
               sx={{
                 backgroundColor: '#D19F3B',
                 color: '#ffffff',
