@@ -22,7 +22,7 @@ interface Offer {
 const allOffers: Offer[] = [
   {
     id: 1,
-    image: '/Sephora_2_1.jpg',
+    image: '/offers/bonanza_satrangi_2.png',
     dates: '01 Jan - 31 Jan 2026',
     title: 'Sephora Beauty Bonanza',
     description: 'Get up to 50% off on premium beauty products! Discover exclusive deals on makeup, skincare, and fragrances from top brands. Limited time offer.',
@@ -31,7 +31,7 @@ const allOffers: Offer[] = [
   },
   {
     id: 2,
-    image: '/NIKE_-_WMoN.jpg',
+    image: '/offers/breakout.png',
     dates: '15 Dec - 31 Dec 2025',
     title: 'Nike End of Year Sale',
     description: 'Score amazing deals on athletic wear and footwear. Up to 40% off on selected items including the latest sneaker releases and sportswear collections.',
@@ -40,7 +40,7 @@ const allOffers: Offer[] = [
   },
   {
     id: 3,
-    image: '/ADIDAS.jpg',
+    image: '/offers/bloom.png',
     dates: '10 Dec - 25 Dec 2025',
     title: 'Adidas Holiday Special',
     description: 'Celebrate the holidays with Adidas! Enjoy special discounts on performance gear, streetwear, and accessories. Perfect for your active lifestyle.',
@@ -49,7 +49,7 @@ const allOffers: Offer[] = [
   },
   {
     id: 4,
-    image: '/zara-forum6257.jpg',
+    image: '/offers/kayseria.png',
     dates: '05 Dec - 20 Dec 2025',
     title: 'Zara Fashion Week Sale',
     description: 'Refresh your wardrobe with Zara&apos;s latest collections at unbeatable prices. Discover trendy pieces for every occasion with exclusive discounts.',
@@ -58,7 +58,7 @@ const allOffers: Offer[] = [
   },
   {
     id: 5,
-    image: '/Aesop_Westfield_Stratford_City.jpg',
+    image: '/offers/Junaid.png',
     dates: '20 Dec - 05 Jan 2026',
     title: 'Aesop Skincare Essentials',
     description: 'Pamper yourself with premium skincare products. Special offers on Aesop&apos;s signature formulations for radiant, healthy-looking skin.',
@@ -67,7 +67,7 @@ const allOffers: Offer[] = [
   },
   {
     id: 6,
-    image: '/Starbucks.jpg',
+    image: '/offers/hardees.png',
     dates: '01 Dec - 31 Dec 2025',
     title: 'Starbucks Holiday Drinks',
     description: 'Warm up this winter with Starbucks&apos; seasonal beverages. Buy one get one free on selected holiday drinks and enjoy festive flavors.',
@@ -76,7 +76,7 @@ const allOffers: Offer[] = [
   },
   {
     id: 7,
-    image: '/Victoria_s_Secret_Westfield_Stratford_City.jpg',
+    image: '/offers/cheezious.png',
     dates: '12 Dec - 28 Dec 2025',
     title: 'Victoria&apos;s Secret Lingerie Sale',
     description: 'Shop the ultimate lingerie collection with exclusive discounts. Discover elegant pieces and intimate apparel at special prices.',
@@ -85,7 +85,7 @@ const allOffers: Offer[] = [
   },
   {
     id: 8,
-    image: '/Swarovski_in_Scandinavia_2_784e0db59b.webp',
+    image: '/offers/mcdonalds.png',
     dates: '08 Dec - 24 Dec 2025',
     title: 'Swarovski Crystal Collection',
     description: 'Sparkle this holiday season with Swarovski&apos;s exquisite crystal jewelry. Special pricing on selected pieces including limited edition designs.',
@@ -94,7 +94,16 @@ const allOffers: Offer[] = [
   },
   {
     id: 9,
-    image: '/Nespresso_2.jpg',
+    image: '/offers/pizzahut.png',
+    dates: '15 Dec - 30 Dec 2025',
+    title: 'Nespresso Coffee Machine Offer',
+    description: 'Elevate your coffee experience with Nespresso machines and capsules. Exclusive bundle deals and complimentary accessories with purchase.',
+    slug: 'nespresso-coffee-offer',
+    type: 'electronics'
+  },
+  {
+    id: 10,
+    image: '/offers/wildwing.png',
     dates: '15 Dec - 30 Dec 2025',
     title: 'Nespresso Coffee Machine Offer',
     description: 'Elevate your coffee experience with Nespresso machines and capsules. Exclusive bundle deals and complimentary accessories with purchase.',
