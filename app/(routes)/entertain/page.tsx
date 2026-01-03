@@ -494,29 +494,31 @@ const [emblaRefFeatured] = useEmblaCarousel(
           >
             {item.desc}
           </Typography>
+<Box sx={{ textAlign: "center" }}>
+  <Button
+    component={Link}
+    href={item.link}
+    sx={{
+      backgroundColor: "#fff",
+      color: "#D19F3B",
+      border: "1px solid #D19F3B",
+      px: 2.5,
+      py: 1,
+      fontSize: "0.85rem",
+      fontWeight: 400,
+      fontFamily: '"Poppins", sans-serif',
+      textTransform: "none",
+      "&:hover": {
+        backgroundColor: "#D19F3B",
+        color: "#fff",
+        border: "1px solid #D19F3B",
+      },
+    }}
+  >
+    {item.cta}
+  </Button>
+</Box>
 
-          <Box sx={{ textAlign: "center" }}>
-            <Button
-              component={Link}
-              href={item.link}
-              sx={{
-                backgroundColor: "#D19F3B",
-                color: "#fff",
-                px: 2.5,
-                py: 1,
-                fontSize: "0.85rem",
-                fontWeight: 400,
-                fontFamily: '"Poppins", sans-serif',
-                textTransform: "none",
-                "&:hover": {
-                  backgroundColor: "#fff",
-                  color: "#D19F3B",
-                },
-              }}
-            >
-              {item.cta}
-            </Button>
-          </Box>
         </Box>
       ))}
     </Box>
@@ -612,8 +614,9 @@ const [emblaRefFeatured] = useEmblaCarousel(
               component={Link}
               href={item.link}
               sx={{
-                backgroundColor: "#D19F3B",
-                color: "#fff",
+                backgroundColor: "#fff",
+                color: "#D19F3B",
+                border: "1px solid #D19F3B",
                 px: { xs: 2.5, md: 3 },
                 py: { xs: 1, md: 1.25 },
                 fontSize: { xs: "0.85rem", sm: "0.9rem", md: "0.95rem" },
@@ -621,8 +624,8 @@ const [emblaRefFeatured] = useEmblaCarousel(
                 fontFamily: '"Poppins", sans-serif',
                 textTransform: "none",
                 "&:hover": {
-                  backgroundColor: "#fff",
-                  color: "#D19F3B",
+                  backgroundColor: "#D19F3B",
+                  color: "#fff",
                 },
               }}
             >
@@ -1035,6 +1038,7 @@ const [emblaRefFeatured] = useEmblaCarousel(
                 sx={{
                   backgroundColor: "#D19F3B",
                   color: "#fff",
+                  border: "1px solid #D19F3B",
                   fontFamily: '"Poppins", sans-serif',
                   fontWeight: 600,
                   px: { xs: 3, md: 4 },
@@ -1043,7 +1047,7 @@ const [emblaRefFeatured] = useEmblaCarousel(
                   "&:hover": {
                     backgroundColor: "#fff",
                     color: "#D19F3B",
-                    border: "2px solid #D19F3B",
+                    border: "1px solid #D19F3B",
                   },
                 }}
               >
