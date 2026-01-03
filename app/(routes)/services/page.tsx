@@ -383,7 +383,7 @@ export default function ServicesPage() {
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
-                          mb: 1,
+                          // mb: 0.5,
                         }}
                       >
                         <Box
@@ -450,7 +450,7 @@ export default function ServicesPage() {
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        mb: 2,
+                        // mb: 1,
                       }}
                     >
                       <Box

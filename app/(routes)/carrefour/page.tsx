@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useCallback, useRef, useEffect } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { Box, Typography, Container, Divider, Button } from "@mui/material";
@@ -15,6 +16,97 @@ import StoreIcon from "@mui/icons-material/Store";
 import DirectionsIcon from "@mui/icons-material/Directions";
 
 export default function CarrefourPage() {
+  // Carousel state for "Why Shop at Carrefour" section
+  const [whyShopIndex, setWhyShopIndex] = useState(0);
+  const whyShopTouchStart = useRef<number | null>(null);
+  const whyShopTouchEnd = useRef<number | null>(null);
+  const whyShopAutoPlayPaused = useRef(false);
+
+  // Carousel state for "What We Offer" section
+  const [whatOfferIndex, setWhatOfferIndex] = useState(0);
+  const whatOfferTouchStart = useRef<number | null>(null);
+  const whatOfferTouchEnd = useRef<number | null>(null);
+  const whatOfferAutoPlayPaused = useRef(false);
+
+  const whyShopItems = [
+    {
+      icon: CategoryIcon,
+      title: "Extensive Product Range",
+      description: "From fresh produce and groceries to electronics, clothing, and household items, Carrefour Giga Mall offers an unparalleled selection of products to meet all your shopping needs.",
+    },
+    {
+      icon: LocalOfferIcon,
+      title: "Best Value & Promotions",
+      description: "Enjoy competitive prices and exclusive promotions at Carrefour Giga Mall, ensuring you get the best value for your money on every visit.",
+    },
+    {
+      icon: VerifiedIcon,
+      title: "Quality Guaranteed",
+      description: "At Carrefour Giga Mall, we maintain the highest quality standards, ensuring that every product meets our rigorous quality checks before reaching our shelves.",
+    },
+    {
+      icon: LocationOnIcon,
+      title: "Prime Location at Giga Mall",
+      description: "Strategically located within Giga Mall in DHA Islamabad, Carrefour offers easy access with ample parking facilities, making your shopping experience convenient and hassle-free.",
+    },
+  ];
+
+  const whatOfferItems = [
+    {
+      icon: LocalGroceryStoreIcon,
+      title: "Fresh Groceries & Produce",
+      description: "Daily fresh fruits, vegetables, meat, dairy, and all your grocery essentials at Carrefour Giga Mall",
+    },
+    {
+      icon: HomeIcon,
+      title: "Home & Living",
+      description: "Complete range of household items, home decor, and living essentials available at Giga Mall",
+    },
+    {
+      icon: DevicesIcon,
+      title: "Electronics & Appliances",
+      description: "Latest electronics, gadgets, and home appliances at competitive prices in Giga Mall",
+    },
+  ];
+
+  const handleWhyShopSwipe = useCallback((direction: "left" | "right") => {
+    if (direction === "left") {
+      setWhyShopIndex((prev) => (prev + 1) % whyShopItems.length);
+    } else {
+      setWhyShopIndex((prev) => (prev - 1 + whyShopItems.length) % whyShopItems.length);
+    }
+  }, [whyShopItems.length]);
+
+  const handleWhatOfferSwipe = useCallback((direction: "left" | "right") => {
+    if (direction === "left") {
+      setWhatOfferIndex((prev) => (prev + 1) % whatOfferItems.length);
+    } else {
+      setWhatOfferIndex((prev) => (prev - 1 + whatOfferItems.length) % whatOfferItems.length);
+    }
+  }, [whatOfferItems.length]);
+
+  // Auto-play for "Why Shop" carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!whyShopAutoPlayPaused.current) {
+        setWhyShopIndex((prev) => (prev + 1) % whyShopItems.length);
+      }
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [whyShopItems.length]);
+
+  // Auto-play for "What We Offer" carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!whatOfferAutoPlayPaused.current) {
+        setWhatOfferIndex((prev) => (prev + 1) % whatOfferItems.length);
+      }
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [whatOfferItems.length]);
+
   return (
     <>
       <Header />
@@ -24,7 +116,7 @@ export default function CarrefourPage() {
           sx={{
             position: "relative",
             width: "100%",
-            height: { xs: "50vh", md: "60vh", lg: "70vh" },
+            height: { xs: "100vh", md: "60vh", lg: "70vh" },
             overflow: "hidden",
             display: "flex",
             alignItems: "center",
@@ -87,7 +179,7 @@ export default function CarrefourPage() {
                   md: "4.5rem",
                   lg: "5.5rem",
                 },
-                fontWeight: 400,
+                fontWeight: 800,
                 color: "#ffffff",
                 lineHeight: 1.1,
                 textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
@@ -125,7 +217,7 @@ export default function CarrefourPage() {
               justifyContent: "center",
             }}
           >
-            <Box sx={{ width: { xs: "100%", md: "50%" } }}>
+            <Box sx={{ width: { xs: "100%", md: "50%" }, order: { xs: 2, md: 1 } }}>
               {/* Left Content */}
               <Box
                 sx={{
@@ -135,29 +227,56 @@ export default function CarrefourPage() {
                   alignItems: "flex-start",
                 }}
               >
-                {/* Grocery Icon */}
+                {/* Icon and Title Row (Mobile) / Icon Only (Desktop) */}
                 <Box
                   sx={{
-                    flexShrink: 0,
                     display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    mt: { xs: 0, md: 1 },
+                    flexDirection: { xs: "row", md: "column" },
+                    gap: { xs: 2, md: 0 },
+                    alignItems: { xs: "center", md: "flex-start" },
+                    flexShrink: 0,
                   }}
                 >
-                  <LocalGroceryStoreIcon
+                  {/* Grocery Icon */}
+                  <Box
                     sx={{
-                      fontSize: { xs: 48, sm: 56, md: 64 },
-                      color: "#D19F3B",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      mt: { xs: 0, md: 1 },
                     }}
-                  />
+                  >
+                    <LocalGroceryStoreIcon
+                      sx={{
+                        fontSize: { xs: 48, sm: 56, md: 64 },
+                        color: "#D19F3B",
+                      }}
+                    />
+                  </Box>
+
+                  {/* Title (Mobile only - next to icon) */}
+                  <Typography
+                    variant="h2"
+                    sx={{
+                      display: { xs: "block", md: "none" },
+                      fontSize: { xs: "1.5rem", sm: "2.2rem" },
+                      fontWeight: 400,
+                      color: "#D19F3B",
+                      fontFamily: '"Arvo", serif',
+                      mb: 0,
+                    }}
+                  >
+                    Fresh Grocery and Items
+                  </Typography>
                 </Box>
 
                 {/* Text Content */}
                 <Box sx={{ flex: 1 }}>
+                  {/* Title (Desktop only) */}
                   <Typography
                     variant="h2"
                     sx={{
+                      display: { xs: "none", md: "block" },
                       fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.5rem" },
                       fontWeight: 400,
                       color: "#D19F3B",
@@ -210,6 +329,7 @@ export default function CarrefourPage() {
                 borderRadius: 2,
                 overflow: "hidden",
                 flexShrink: 0,
+                order: { xs: 1, md: 2 },
               }}
             >
               <Image
@@ -235,6 +355,7 @@ export default function CarrefourPage() {
                     "linear-gradient(to right, rgba(255, 255, 255, 1.9) 0%, rgba(255, 255, 255, 0.1) 30%, transparent 70%)",
                   pointerEvents: "none",
                   zIndex: 1,
+                  display: { xs: "none", md: "block" },
                 }}
               />
             </Box>
@@ -287,6 +408,7 @@ export default function CarrefourPage() {
                     "linear-gradient(to left, rgba(255, 255, 255, 1.9) 0%, rgba(255, 255, 255, 0.1) 30%, transparent 70%)",
                   pointerEvents: "none",
                   zIndex: 1,
+                  display: { xs: "none", md: "block" },
                 }}
               />
             </Box>
@@ -301,29 +423,56 @@ export default function CarrefourPage() {
                   alignItems: "flex-start",
                 }}
               >
-                {/* Store Icon */}
+                {/* Icon and Title Row (Mobile) / Icon Only (Desktop) */}
                 <Box
                   sx={{
-                    flexShrink: 0,
                     display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    mt: { xs: 0, md: 1 },
+                    flexDirection: { xs: "row", md: "column" },
+                    gap: { xs: 2, md: 0 },
+                    alignItems: { xs: "center", md: "flex-start" },
+                    flexShrink: 0,
                   }}
                 >
-                  <StoreIcon
+                  {/* Store Icon */}
+                  <Box
                     sx={{
-                      fontSize: { xs: 48, sm: 56, md: 64 },
-                      color: "#D19F3B",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      mt: { xs: 0, md: 1 },
                     }}
-                  />
+                  >
+                    <StoreIcon
+                      sx={{
+                        fontSize: { xs: 48, sm: 56, md: 64 },
+                        color: "#D19F3B",
+                      }}
+                    />
+                  </Box>
+
+                  {/* Title (Mobile only - next to icon) */}
+                  <Typography
+                    variant="h2"
+                    sx={{
+                      display: { xs: "block", md: "none" },
+                      fontSize: { xs: "1.5rem", sm: "2.2rem" },
+                      fontWeight: 400,
+                      color: "#D19F3B",
+                      fontFamily: '"Arvo", serif',
+                      mb: 0,
+                    }}
+                  >
+                    Your Shopping Destination
+                  </Typography>
                 </Box>
 
                 {/* Text Content */}
                 <Box sx={{ flex: 1 }}>
+                  {/* Title (Desktop only) */}
                   <Typography
                     variant="h2"
                     sx={{
+                      display: { xs: "none", md: "block" },
                       fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.5rem" },
                       fontWeight: 400,
                       color: "#D19F3B",
@@ -407,25 +556,139 @@ export default function CarrefourPage() {
             >
               Why Shop at Carrefour Giga Mall?
             </Typography>
+            {/* Mobile Carousel */}
             <Box
               sx={{
-                display: "grid",
-                gridTemplateColumns: { xs: "1fr", md: "repeat(2, 1fr)" },
-                gap: { xs: 3, md: 4 },
-                mt: { xs: 4, md: 6 },
+                display: { xs: "block", md: "none" },
+                position: "relative",
+                mt: 4,
+                overflow: "hidden",
+              }}
+              onTouchStart={(e) => {
+                whyShopAutoPlayPaused.current = true;
+                whyShopTouchStart.current = e.touches[0].clientX;
+              }}
+              onTouchMove={(e) => {
+                whyShopTouchEnd.current = e.touches[0].clientX;
+              }}
+              onTouchEnd={() => {
+                if (whyShopTouchStart.current !== null && whyShopTouchEnd.current !== null) {
+                  const delta = whyShopTouchStart.current - whyShopTouchEnd.current;
+                  if (Math.abs(delta) > 50) {
+                    handleWhyShopSwipe(delta > 0 ? "left" : "right");
+                  }
+                }
+                whyShopTouchStart.current = null;
+                whyShopTouchEnd.current = null;
+                // Resume auto-play after 5 seconds
+                setTimeout(() => {
+                  whyShopAutoPlayPaused.current = false;
+                }, 5000);
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  transform: `translateX(-${whyShopIndex * 100}%)`,
+                  transition: "transform 0.3s ease-in-out",
+                }}
+              >
+                {whyShopItems.map((item, index) => {
+                  const IconComponent = item.icon;
+                  return (
+                    <Box
+                      key={index}
+                      sx={{
+                        minWidth: "100%",
+                        textAlign: "center",
+                        px: 2,
+                      }}
+                    >
+                      <IconComponent
+                        sx={{
+                          fontSize: 50,
+                          color: "#D19F3B",
+                          mb: 2,
+                        }}
+                      />
+                      <Typography
+                        sx={{
+                          fontSize: "1.1rem",
+                          fontWeight: 600,
+                          color: "#D19F3B",
+                          mb: 1,
+                          fontFamily: '"Poppins", sans-serif',
+                        }}
+                      >
+                        {item.title}
+                      </Typography>
+                      <Typography
+                        sx={{
+                          fontSize: "1rem",
+                          lineHeight: 1.7,
+                          color: "#333",
+                          fontFamily: '"Quicksand", sans-serif',
+                        }}
+                      >
+                        {item.description}
+                      </Typography>
+                    </Box>
+                  );
+                })}
+              </Box>
+              
+              {/* Navigation Dots */}
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  gap: 1,
+                  mt: 3,
+                }}
+              >
+                {whyShopItems.map((_, index) => (
+                  <Box
+                    key={index}
+                    onClick={() => {
+                      whyShopAutoPlayPaused.current = true;
+                      setWhyShopIndex(index);
+                      setTimeout(() => {
+                        whyShopAutoPlayPaused.current = false;
+                      }, 5000);
+                    }}
+                    sx={{
+                      width: 8,
+                      height: 8,
+                      borderRadius: "50%",
+                      bgcolor: index === whyShopIndex ? "#D19F3B" : "#ccc",
+                      cursor: "pointer",
+                      transition: "background-color 0.3s",
+                    }}
+                  />
+                ))}
+              </Box>
+            </Box>
+
+            {/* Desktop Grid */}
+            <Box
+              sx={{
+                display: { xs: "none", md: "grid" },
+                gridTemplateColumns: "repeat(2, 1fr)",
+                gap: 4,
+                mt: 6,
               }}
             >
               <Box sx={{ textAlign: "center" }}>
                 <CategoryIcon
                   sx={{
-                    fontSize: { xs: 50, md: 60 },
+                    fontSize: 60,
                     color: "#D19F3B",
                     mb: 2,
                   }}
                 />
                 <Typography
                   sx={{
-                    fontSize: { xs: "1.1rem", md: "1.2rem" },
+                    fontSize: "1.2rem",
                     fontWeight: 600,
                     color: "#D19F3B",
                     mb: 1,
@@ -436,7 +699,7 @@ export default function CarrefourPage() {
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: { xs: "1rem", sm: "1.05rem" },
+                    fontSize: "1.05rem",
                     lineHeight: 1.7,
                     color: "#333",
                     fontFamily: '"Quicksand", sans-serif',
@@ -450,14 +713,14 @@ export default function CarrefourPage() {
               <Box sx={{ textAlign: "center" }}>
                 <LocalOfferIcon
                   sx={{
-                    fontSize: { xs: 50, md: 60 },
+                    fontSize: 60,
                     color: "#D19F3B",
                     mb: 2,
                   }}
                 />
                 <Typography
                   sx={{
-                    fontSize: { xs: "1.1rem", md: "1.2rem" },
+                    fontSize: "1.2rem",
                     fontWeight: 600,
                     color: "#D19F3B",
                     mb: 1,
@@ -468,7 +731,7 @@ export default function CarrefourPage() {
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: { xs: "1rem", sm: "1.05rem" },
+                    fontSize: "1.05rem",
                     lineHeight: 1.7,
                     color: "#333",
                     fontFamily: '"Quicksand", sans-serif',
@@ -482,14 +745,14 @@ export default function CarrefourPage() {
               <Box sx={{ textAlign: "center" }}>
                 <VerifiedIcon
                   sx={{
-                    fontSize: { xs: 50, md: 60 },
+                    fontSize: 60,
                     color: "#D19F3B",
                     mb: 2,
                   }}
                 />
                 <Typography
                   sx={{
-                    fontSize: { xs: "1.1rem", md: "1.2rem" },
+                    fontSize: "1.2rem",
                     fontWeight: 600,
                     color: "#D19F3B",
                     mb: 1,
@@ -500,7 +763,7 @@ export default function CarrefourPage() {
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: { xs: "1rem", sm: "1.05rem" },
+                    fontSize: "1.05rem",
                     lineHeight: 1.7,
                     color: "#333",
                     fontFamily: '"Quicksand", sans-serif',
@@ -514,14 +777,14 @@ export default function CarrefourPage() {
               <Box sx={{ textAlign: "center" }}>
                 <LocationOnIcon
                   sx={{
-                    fontSize: { xs: 50, md: 60 },
+                    fontSize: 60,
                     color: "#D19F3B",
                     mb: 2,
                   }}
                 />
                 <Typography
                   sx={{
-                    fontSize: { xs: "1.1rem", md: "1.2rem" },
+                    fontSize: "1.2rem",
                     fontWeight: 600,
                     color: "#D19F3B",
                     mb: 1,
@@ -532,7 +795,7 @@ export default function CarrefourPage() {
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: { xs: "1rem", sm: "1.05rem" },
+                    fontSize: "1.05rem",
                     lineHeight: 1.7,
                     color: "#333",
                     fontFamily: '"Quicksand", sans-serif',
@@ -558,7 +821,7 @@ export default function CarrefourPage() {
               justifyContent: "center",
             }}
           >
-            <Box sx={{ width: { xs: "100%", md: "50%" } }}>
+            <Box sx={{ width: { xs: "100%", md: "50%" }, order: { xs: 2, md: 1 } }}>
               {/* Left Content */}
               <Box
                 sx={{
@@ -568,29 +831,56 @@ export default function CarrefourPage() {
                   alignItems: "flex-start",
                 }}
               >
-                {/* Electronics Icon */}
+                {/* Icon and Title Row (Mobile) / Icon Only (Desktop) */}
                 <Box
                   sx={{
-                    flexShrink: 0,
                     display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    mt: { xs: 0, md: 1 },
+                    flexDirection: { xs: "row", md: "column" },
+                    gap: { xs: 2, md: 0 },
+                    alignItems: { xs: "center", md: "flex-start" },
+                    flexShrink: 0,
                   }}
                 >
-                  <DevicesIcon
+                  {/* Electronics Icon */}
+                  <Box
                     sx={{
-                      fontSize: { xs: 48, sm: 56, md: 64 },
-                      color: "#D19F3B",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      mt: { xs: 0, md: 1 },
                     }}
-                  />
+                  >
+                    <DevicesIcon
+                      sx={{
+                        fontSize: { xs: 48, sm: 56, md: 64 },
+                        color: "#D19F3B",
+                      }}
+                    />
+                  </Box>
+
+                  {/* Title (Mobile only - next to icon) */}
+                  <Typography
+                    variant="h2"
+                    sx={{
+                      display: { xs: "block", md: "none" },
+                      fontSize: { xs: "1.8rem", sm: "2.2rem" },
+                      fontWeight: 400,
+                      color: "#D19F3B",
+                      fontFamily: '"Arvo", serif',
+                      mb: 0,
+                    }}
+                  >
+                    Electronics and Appliances
+                  </Typography>
                 </Box>
 
                 {/* Text Content */}
                 <Box sx={{ flex: 1 }}>
+                  {/* Title (Desktop only) */}
                   <Typography
                     variant="h2"
                     sx={{
+                      display: { xs: "none", md: "block" },
                       fontSize: { xs: "1.8rem", sm: "2.2rem", md: "2.5rem" },
                       fontWeight: 400,
                       color: "#D19F3B",
@@ -643,6 +933,7 @@ export default function CarrefourPage() {
                 borderRadius: 2,
                 overflow: "hidden",
                 flexShrink: 0,
+                order: { xs: 1, md: 2 },
               }}
             >
               <Image
@@ -668,6 +959,7 @@ export default function CarrefourPage() {
                     "linear-gradient(to right, rgba(255, 255, 255, 1.9) 0%, rgba(255, 255, 255, 0.1) 30%, transparent 70%)",
                   pointerEvents: "none",
                   zIndex: 1,
+                  display: { xs: "none", md: "block" },
                 }}
               />
             </Box>
@@ -715,24 +1007,137 @@ export default function CarrefourPage() {
               wide range of services and departments designed to make your visit
               to Giga Mall convenient, enjoyable, and efficient.
             </Typography>
+            {/* Mobile Carousel */}
             <Box
               sx={{
-                display: "grid",
-                gridTemplateColumns: { xs: "1fr", md: "repeat(3, 1fr)" },
-                gap: { xs: 3, md: 4 },
+                display: { xs: "block", md: "none" },
+                position: "relative",
+                overflow: "hidden",
+              }}
+              onTouchStart={(e) => {
+                whatOfferAutoPlayPaused.current = true;
+                whatOfferTouchStart.current = e.touches[0].clientX;
+              }}
+              onTouchMove={(e) => {
+                whatOfferTouchEnd.current = e.touches[0].clientX;
+              }}
+              onTouchEnd={() => {
+                if (whatOfferTouchStart.current !== null && whatOfferTouchEnd.current !== null) {
+                  const delta = whatOfferTouchStart.current - whatOfferTouchEnd.current;
+                  if (Math.abs(delta) > 50) {
+                    handleWhatOfferSwipe(delta > 0 ? "left" : "right");
+                  }
+                }
+                whatOfferTouchStart.current = null;
+                whatOfferTouchEnd.current = null;
+                // Resume auto-play after 5 seconds
+                setTimeout(() => {
+                  whatOfferAutoPlayPaused.current = false;
+                }, 5000);
+              }}
+            >
+              <Box
+                sx={{
+                  display: "flex",
+                  transform: `translateX(-${whatOfferIndex * 100}%)`,
+                  transition: "transform 0.3s ease-in-out",
+                }}
+              >
+                {whatOfferItems.map((item, index) => {
+                  const IconComponent = item.icon;
+                  return (
+                    <Box
+                      key={index}
+                      sx={{
+                        minWidth: "100%",
+                        textAlign: "center",
+                        px: 2,
+                      }}
+                    >
+                      <IconComponent
+                        sx={{
+                          fontSize: 50,
+                          color: "#D19F3B",
+                          mb: 2,
+                        }}
+                      />
+                      <Typography
+                        sx={{
+                          fontSize: "1.1rem",
+                          fontWeight: 600,
+                          color: "#D19F3B",
+                          mb: 1,
+                          fontFamily: '"Poppins", sans-serif',
+                        }}
+                      >
+                        {item.title}
+                      </Typography>
+                      <Typography
+                        sx={{
+                          fontSize: "0.95rem",
+                          lineHeight: 1.6,
+                          color: "#666",
+                          fontFamily: '"Quicksand", sans-serif',
+                        }}
+                      >
+                        {item.description}
+                      </Typography>
+                    </Box>
+                  );
+                })}
+              </Box>
+              
+              {/* Navigation Dots */}
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  gap: 1,
+                  mt: 3,
+                }}
+              >
+                {whatOfferItems.map((_, index) => (
+                  <Box
+                    key={index}
+                    onClick={() => {
+                      whatOfferAutoPlayPaused.current = true;
+                      setWhatOfferIndex(index);
+                      setTimeout(() => {
+                        whatOfferAutoPlayPaused.current = false;
+                      }, 5000);
+                    }}
+                    sx={{
+                      width: 8,
+                      height: 8,
+                      borderRadius: "50%",
+                      bgcolor: index === whatOfferIndex ? "#D19F3B" : "#ccc",
+                      cursor: "pointer",
+                      transition: "background-color 0.3s",
+                    }}
+                  />
+                ))}
+              </Box>
+            </Box>
+
+            {/* Desktop Grid */}
+            <Box
+              sx={{
+                display: { xs: "none", md: "grid" },
+                gridTemplateColumns: "repeat(3, 1fr)",
+                gap: 4,
               }}
             >
               <Box sx={{ textAlign: "center" }}>
                 <LocalGroceryStoreIcon
                   sx={{
-                    fontSize: { xs: 50, md: 60 },
+                    fontSize: 60,
                     color: "#D19F3B",
                     mb: 2,
                   }}
                 />
                 <Typography
                   sx={{
-                    fontSize: { xs: "1.1rem", md: "1.2rem" },
+                    fontSize: "1.2rem",
                     fontWeight: 600,
                     color: "#D19F3B",
                     mb: 1,
@@ -743,7 +1148,7 @@ export default function CarrefourPage() {
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: { xs: "0.95rem", sm: "1rem" },
+                    fontSize: "1rem",
                     lineHeight: 1.6,
                     color: "#666",
                     fontFamily: '"Quicksand", sans-serif',
@@ -756,14 +1161,14 @@ export default function CarrefourPage() {
               <Box sx={{ textAlign: "center" }}>
                 <HomeIcon
                   sx={{
-                    fontSize: { xs: 50, md: 60 },
+                    fontSize: 60,
                     color: "#D19F3B",
                     mb: 2,
                   }}
                 />
                 <Typography
                   sx={{
-                    fontSize: { xs: "1.1rem", md: "1.2rem" },
+                    fontSize: "1.2rem",
                     fontWeight: 600,
                     color: "#D19F3B",
                     mb: 1,
@@ -774,7 +1179,7 @@ export default function CarrefourPage() {
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: { xs: "0.95rem", sm: "1rem" },
+                    fontSize: "1rem",
                     lineHeight: 1.6,
                     color: "#666",
                     fontFamily: '"Quicksand", sans-serif',
@@ -787,14 +1192,14 @@ export default function CarrefourPage() {
               <Box sx={{ textAlign: "center" }}>
                 <DevicesIcon
                   sx={{
-                    fontSize: { xs: 50, md: 60 },
+                    fontSize: 60,
                     color: "#D19F3B",
                     mb: 2,
                   }}
                 />
                 <Typography
                   sx={{
-                    fontSize: { xs: "1.1rem", md: "1.2rem" },
+                    fontSize: "1.2rem",
                     fontWeight: 600,
                     color: "#D19F3B",
                     mb: 1,
@@ -805,7 +1210,7 @@ export default function CarrefourPage() {
                 </Typography>
                 <Typography
                   sx={{
-                    fontSize: { xs: "0.95rem", sm: "1rem" },
+                    fontSize: "1rem",
                     lineHeight: 1.6,
                     color: "#666",
                     fontFamily: '"Quicksand", sans-serif',
@@ -881,7 +1286,7 @@ export default function CarrefourPage() {
                 />
                 <Typography
                   sx={{
-                    fontSize: { xs: "1.1rem", sm: "1.15rem", md: "1.2rem" },
+                    fontSize: { xs: "0.8rem", sm: "1.15rem", md: "1.2rem" },
                     fontWeight: 600,
                     color: "#D19F3B",
                     fontFamily: '"Poppins", sans-serif',

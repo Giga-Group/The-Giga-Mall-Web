@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, Suspense } from 'react';
+import { useState, Suspense, useRef, useEffect, useCallback } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ExploreTheMall from '@/components/sections/ExploreTheMall';
@@ -99,6 +99,12 @@ function EventsContent() {
   const [searchQuery, setSearchQuery] = useState('');
   const [eventType, setEventType] = useState('all');
   const [visibleCount, setVisibleCount] = useState(6);
+  
+  // Carousel state for mobile view
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const touchStart = useRef<number | null>(null);
+  const touchEnd = useRef<number | null>(null);
+  const autoPlayPaused = useRef(false);
 
   const filteredEvents = allEvents.filter(event => {
     const matchesSearch = event.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -113,6 +119,31 @@ function EventsContent() {
   const handleLoadMore = () => {
     setVisibleCount(prev => prev + 3);
   };
+
+  // Reset carousel index when filters change
+  useEffect(() => {
+    setCarouselIndex(0);
+  }, [searchQuery, eventType]);
+
+  // Auto-play for carousel
+  useEffect(() => {
+    if (filteredEvents.length === 0) return;
+    const interval = setInterval(() => {
+      if (!autoPlayPaused.current) {
+        setCarouselIndex((prev) => (prev + 1) % filteredEvents.length);
+      }
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [filteredEvents.length]);
+
+  const handleSwipe = useCallback((direction: "left" | "right") => {
+    if (direction === "left") {
+      setCarouselIndex((prev) => (prev + 1) % filteredEvents.length);
+    } else {
+      setCarouselIndex((prev) => (prev - 1 + filteredEvents.length) % filteredEvents.length);
+    }
+  }, [filteredEvents.length]);
 
   return (
     <>
@@ -345,16 +376,191 @@ function EventsContent() {
               />
             </Box>
 
-            {/* Events Grid */}
+            {/* Mobile Carousel */}
             <Box
               sx={{
-                display: 'grid',
-                gridTemplateColumns: {
-                  xs: '1fr',
-                  sm: 'repeat(2, 1fr)',
-                  md: 'repeat(3, 1fr)'
-                },
-                gap: { xs: 3, sm: 4, md: 5 }
+                display: { xs: 'block', md: 'none' },
+                position: 'relative',
+                overflow: 'hidden',
+                mb: 3,
+                width: '100%'
+              }}
+              onTouchStart={(e) => {
+                autoPlayPaused.current = true;
+                touchStart.current = e.touches[0].clientX;
+              }}
+              onTouchMove={(e) => {
+                touchEnd.current = e.touches[0].clientX;
+              }}
+              onTouchEnd={() => {
+                if (touchStart.current !== null && touchEnd.current !== null) {
+                  const delta = touchStart.current - touchEnd.current;
+                  if (Math.abs(delta) > 50) {
+                    handleSwipe(delta > 0 ? "left" : "right");
+                  }
+                }
+                touchStart.current = null;
+                touchEnd.current = null;
+                setTimeout(() => {
+                  autoPlayPaused.current = false;
+                }, 5000);
+              }}
+            >
+              <Box
+                sx={{
+                  display: 'flex',
+                  transform: `translateX(-${carouselIndex * 100}%)`,
+                  transition: 'transform 0.3s ease-in-out',
+                  width: '100%'
+                }}
+              >
+                {filteredEvents.map((event) => (
+                  <Box
+                    key={event.id}
+                    sx={{
+                      minWidth: '100%',
+                      width: '100%',
+                      flexShrink: 0,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      backgroundColor: '#ffffff',
+                      borderRadius: '4px',
+                      overflow: 'hidden',
+                      boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                      px: 0
+                    }}
+                  >
+                    {/* Event Image */}
+                    <Box
+                      sx={{
+                        position: 'relative',
+                        width: '100%',
+                        height: '250px',
+                        overflow: 'hidden'
+                      }}
+                    >
+                      <Image
+                        src={event.image}
+                        alt={event.title}
+                        fill
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </Box>
+
+                    {/* Event Content */}
+                    <Box
+                      sx={{
+                        padding: '20px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        flexGrow: 1
+                      }}
+                    >
+                      {/* Dates */}
+                      <Typography
+                        sx={{
+                          fontSize: '0.75rem',
+                          color: '#666666',
+                          mb: 1,
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.1em'
+                        }}
+                      >
+                        {event.dates}
+                      </Typography>
+
+                      {/* Title */}
+                      <Typography
+                        variant="h3"
+                        sx={{
+                          fontFamily: '"Arvo", serif',
+                          fontSize: '1.1rem',
+                          fontWeight: 400,
+                          color: '#000000',
+                          mb: 1.5,
+                          lineHeight: 1.3,
+                          flexGrow: 1
+                        }}
+                      >
+                        {event.title}
+                      </Typography>
+
+                      {/* Description */}
+                      <Typography
+                        sx={{
+                          fontSize: '0.85rem',
+                          color: '#666666',
+                          mb: 2,
+                          lineHeight: 1.6
+                        }}
+                      >
+                        {event.description}
+                      </Typography>
+
+                      {/* Find out more link */}
+                      <MuiLink
+                        component={Link}
+                        href={`/events/${event.slug}`}
+                        sx={{
+                          fontSize: '0.85rem',
+                          color: '#D19F3B',
+                          fontWeight: 500,
+                          textDecoration: 'underline',
+                          cursor: 'pointer',
+                          alignSelf: 'flex-start',
+                          transition: 'opacity 0.3s ease',
+                          '&:hover': {
+                            opacity: 0.7
+                          }
+                        }}
+                      >
+                        Find out more
+                      </MuiLink>
+                    </Box>
+                  </Box>
+                ))}
+              </Box>
+
+              {/* Navigation Dots */}
+              {filteredEvents.length > 1 && (
+                <Box
+                  sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    gap: 1,
+                    mt: 3
+                  }}
+                >
+                  {filteredEvents.map((_, index) => (
+                    <Box
+                      key={index}
+                      onClick={() => {
+                        autoPlayPaused.current = true;
+                        setCarouselIndex(index);
+                        setTimeout(() => {
+                          autoPlayPaused.current = false;
+                        }, 5000);
+                      }}
+                      sx={{
+                        width: 8,
+                        height: 8,
+                        borderRadius: '50%',
+                        bgcolor: index === carouselIndex ? '#D19F3B' : '#ccc',
+                        cursor: 'pointer',
+                        transition: 'background-color 0.3s'
+                      }}
+                    />
+                  ))}
+                </Box>
+              )}
+            </Box>
+
+            {/* Desktop Grid */}
+            <Box
+              sx={{
+                display: { xs: 'none', md: 'grid' },
+                gridTemplateColumns: 'repeat(3, 1fr)',
+                gap: 5
               }}
             >
               {visibleEvents.map((event) => (
@@ -379,7 +585,7 @@ function EventsContent() {
                     sx={{
                       position: 'relative',
                       width: '100%',
-                      height: { xs: '250px', sm: '280px', md: '300px' },
+                      height: '300px',
                       overflow: 'hidden'
                     }}
                   >
@@ -394,7 +600,7 @@ function EventsContent() {
                   {/* Event Content */}
                   <Box
                     sx={{
-                      padding: { xs: '20px', sm: '24px', md: '28px' },
+                      padding: '28px',
                       display: 'flex',
                       flexDirection: 'column',
                       flexGrow: 1
@@ -403,9 +609,9 @@ function EventsContent() {
                     {/* Dates */}
                     <Typography
                       sx={{
-                        fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem' },
+                        fontSize: '0.85rem',
                         color: '#666666',
-                        mb: { xs: 1, sm: 1.5 },
+                        mb: 2,
                         textTransform: 'uppercase',
                         letterSpacing: '0.1em'
                       }}
@@ -418,10 +624,10 @@ function EventsContent() {
                       variant="h3"
                       sx={{
                         fontFamily: '"Arvo", serif',
-                        fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.3rem' },
+                        fontSize: '1.3rem',
                         fontWeight: 400,
                         color: '#000000',
-                        mb: { xs: 1.5, sm: 2 },
+                        mb: 2,
                         lineHeight: 1.3,
                         flexGrow: 1
                       }}
@@ -432,9 +638,9 @@ function EventsContent() {
                     {/* Description */}
                     <Typography
                       sx={{
-                        fontSize: { xs: '0.85rem', sm: '0.9rem', md: '0.95rem' },
+                        fontSize: '0.95rem',
                         color: '#666666',
-                        mb: { xs: 2, sm: 2.5 },
+                        mb: 2.5,
                         lineHeight: 1.6
                       }}
                     >
@@ -446,7 +652,7 @@ function EventsContent() {
                       component={Link}
                       href={`/events/${event.slug}`}
                       sx={{
-                        fontSize: { xs: '0.85rem', sm: '0.9rem', md: '0.95rem' },
+                        fontSize: '0.95rem',
                         color: '#D19F3B',
                         fontWeight: 500,
                         textDecoration: 'underline',
@@ -465,13 +671,13 @@ function EventsContent() {
               ))}
             </Box>
 
-            {/* Load More Button */}
+            {/* Load More Button - Desktop Only */}
             {hasMore && (
               <Box
                 sx={{
-                  display: 'flex',
+                  display: { xs: 'none', md: 'flex' },
                   justifyContent: 'center',
-                  mt: { xs: 4, sm: 5, md: 6 }
+                  mt: 6
                 }}
               >
                 <Button

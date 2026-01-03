@@ -44,7 +44,7 @@ export default function About() {
 
             <Typography
               sx={{
-                fontFamily: '"Quicksand", sans-serif',
+                fontFamily: '"Jost", "Mulish", system-ui, sans-serif',
                 fontSize: { xs: "0.95rem", md: "1.1rem" },
                 lineHeight: 1.6,
                 color: "#333333",
@@ -60,10 +60,10 @@ export default function About() {
               <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                 <LocationOnIcon sx={{ color: "#D19F3B", fontSize: 26 }} />
                 <Box>
-                  <Typography sx={{ fontWeight: 600, color: "#000000" }}>
+                  <Typography sx={{ fontFamily: '"Jost", "Mulish", system-ui, sans-serif', fontWeight: 800, color: "#D19F3B" }}>
                     Visit Us
                   </Typography>
-                  <Typography sx={{ color: "#666666" }}>
+                  <Typography sx={{ fontFamily: '"Jost", "Mulish", system-ui, sans-serif', color: "#666666" }}>
                     Giga Mall - Cinepax
                   </Typography>
                 </Box>
@@ -73,11 +73,11 @@ export default function About() {
                 <AccessTimeIcon sx={{ color: "#D19F3B", fontSize: 26 }} />
                 <Box>
                   <Typography
-                    sx={{ fontWeight: 600, color: "#000000" }}
+                    sx={{ fontFamily: '"Jost", "Mulish", system-ui, sans-serif', fontWeight: 800, color: "#D19F3B" }}
                   >
                     Opening Hours
                   </Typography>
-                  <Typography sx={{ color: "#666666" }}>
+                  <Typography sx={{ fontFamily: '"Jost", "Mulish", system-ui, sans-serif', color: "#666666" }}>
                     11:00 AM - 12:00 AM
                   </Typography>
                 </Box>
@@ -86,10 +86,10 @@ export default function About() {
               <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
                 <PhoneIcon sx={{ color: "#D19F3B", fontSize: 26 }} />
                 <Box>
-                  <Typography sx={{ fontWeight: 600, color: "#000000" }}>
+                  <Typography sx={{ fontFamily: '"Jost", "Mulish", system-ui, sans-serif', fontWeight: 800, color: "#D19F3B" }}>
                     Call Us
                   </Typography>
-                  <Typography sx={{ color: "#666666" }}>
+                  <Typography sx={{ fontFamily: '"Jost", "Mulish", system-ui, sans-serif', color: "#666666" }}>
                     +92 51 111 246 372
                   </Typography>
                 </Box>
@@ -143,7 +143,7 @@ export default function About() {
             sx={{
               fontFamily: '"Poppins", sans-serif',
               fontWeight: 700,
-              fontSize: { xs: "1.2rem", md: "1.5rem" },
+              fontSize: { xs: "0.9rem", md: "1.5rem" },
               color: "#ffffff",
             }}
           >

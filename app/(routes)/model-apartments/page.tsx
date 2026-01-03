@@ -206,7 +206,7 @@ export default function ModelApartmentsPage() {
                 top: {
                   xs: "auto",
                   md: "auto",
-                  lg: "45%",
+                  lg: "50%",
                 },
                 transform: {
                   xs: "none",
