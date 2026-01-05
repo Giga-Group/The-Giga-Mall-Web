@@ -62,7 +62,7 @@ const ProjectsHero = () => {
             // textTransform: 'uppercase',
           }}
         >
-          Projects
+          Projects by Giga Group
         </Typography>
 
         <Typography
@@ -77,7 +77,7 @@ const ProjectsHero = () => {
             color: '#ffffff',
           }}
         >
-          Discover our curated portfolio of premium digital and architectural
+          Discover our curated portfolio of premium architectural
           experiences.
         </Typography>
       </Box>

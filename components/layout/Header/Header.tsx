@@ -278,7 +278,7 @@ const Header = () => {
                 },
               }}
             >
-              Projects by Al Ghurair
+              Projects by Giga Group
             </Button>
 
             <IconButton

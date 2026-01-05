@@ -18,8 +18,8 @@ const projects = [
   { slug: 'central-palace-residence', title: 'Central Palace Residence', description: 'Ultra-Luxury Living', image: '/projects/cpr-grid.jpg' },
   { slug: 'giga-mall-wtc', title: 'Giga Mall WTC', description: 'World Trade Center', image: '/projects/wtc-grid.jpg' },
   // { slug: 'gold-crest-bay-sands-karachi', title: 'Gold Crest Bay Sands - Karachi', description: 'Luxury Seafront Living', image: '/p16.jpeg' },
-  { slug: 'gold-crest-high-life-I', title: 'Goldcrest Height I', description: 'Modern Residential Living', image: '/projects/gc-highlife-grid-1.jpg' },
-  { slug: 'gold-crest-high-life-II-and-III', title: 'Goldcrest Height II & III', description: 'Modern Residential Living', image: '/projects/gc-highlife-grid-2-3.jpg' },
+  { slug: 'gold-crest-high-life-I', title: 'Goldcrest Highlife I', description: 'Modern Residential Living', image: '/projects/gc-highlife-grid-1.jpg' },
+  { slug: 'gold-crest-high-life-II-and-III', title: 'Goldcrest Highlife II & III', description: 'Modern Residential Living', image: '/projects/gc-highlife-grid-2-3.jpg' },
 ];
 
 /* =======================
