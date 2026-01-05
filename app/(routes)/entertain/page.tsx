@@ -48,30 +48,61 @@ export default function EntertainPage() {
 
   const attractions = [
     {
-      title: "KidZania",
+      title: "Bowling",
       description: "Role-play learning experiences for kids.",
-      image: "/upcoming6.jpg",
+      image: "/Entertain/bowling 3.jpg",
       cta: "Learn More",
       link: "/kidzania",
     },
     {
       title: "Cinepax Cinema",
       description: "Watch the latest blockbusters in luxury.",
-      image: "/Cinepax/c2.jpg",
+      image: "/Entertain/SpaceCraft Horizontal.jpg",
       cta: "Book Tickets",
       link: "/cinema",
     },
     {
       title: "Fun City Arcade",
       description: "Games, rides & fun for all ages.",
-      image: "/2.png",
+      image: "/Entertain/Vi Rides Horizontal.jpg",
       cta: "View Arcade Zone",
       link: "/fun-city",
     },
     {
       title: "Fun City Arcade",
       description: "Games, rides & fun for all ages.",
-      image: "/2.png",
+      image: "/Entertain/VR Kings Horizontal.jpg",
+      cta: "View Arcade Zone",
+      link: "/fun-city",
+    },
+  ];
+
+  const attractionsmv = [
+    {
+      title: "Bowling",
+      description: "Role-play learning experiences for kids.",
+      image: "/Entertain/bowling 4.jpg",
+      cta: "Learn More",
+      link: "/kidzania",
+    },
+    {
+      title: "SpaceCraft",
+      description: "Watch the latest blockbusters in luxury.",
+      image: "/Entertain/SpaceCraft Vertical.jpg",
+      cta: "Book Tickets",
+      link: "/cinema",
+    },
+    {
+      title: "VI Rides",
+      description: "Games, rides & fun for all ages.",
+      image: "/Entertain/Vi Rides Vertical.jpg",
+      cta: "View Arcade Zone",
+      link: "/fun-city",
+    },
+    {
+      title: "VR Kings",
+      description: "Games, rides & fun for all ages.",
+      image: "/Entertain/VR Kings Vertical.jpg",
       cta: "View Arcade Zone",
       link: "/fun-city",
     },
@@ -243,7 +274,7 @@ export default function EntertainPage() {
         {/* ================= ATTRACTIONS & ACTIVITIES ================= */}
         <Box
           id="attractions"
-          sx={{ backgroundColor: "#fdfdfd", py: { xs: 8, md: 12 } }}
+          sx={{ backgroundColor: "#fdfdfd", py: { xs: 8, md: 8 } }}
         >
           <Box sx={{ maxWidth: "1600px", mx: "auto", px: { xs: 3, md: 6 } }}>
             {/* HEADING — UNCHANGED */}
@@ -263,13 +294,13 @@ export default function EntertainPage() {
             {isMobile ? (
               <Box sx={{ overflow: "hidden" }} ref={emblaRefAttractions}>
                 <Box sx={{ display: "flex", gap: 2, pb: 2 }}>
-                  {attractions.map((item) => (
+                  {attractionsmv.map((item) => (
                     <Box
                       key={item.title}
                       sx={{
                         flex: "0 0 80%",
                         position: "relative",
-                        aspectRatio: "4/3",
+                        aspectRatio: "4/6",
                         borderRadius: "16px",
                         overflow: "hidden",
                       }}
@@ -318,196 +349,191 @@ export default function EntertainPage() {
               </Box>
             ) : (
               /* ================= DESKTOP SPLIT LAYOUT ================= */
-       <Box
-  sx={{
-    position: "relative", // Added for positioning context
-    display: "grid",
-    gridTemplateColumns: "1fr 1.3fr 1fr",
-    gap: 5,
-    alignItems: "center",
-    minHeight: "500px", // Added minimum height for overlay
-  }}
->
-  {/* LEFT IMAGES */}
-  <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
-    {attractions.slice(0, 2).map((item) => (
-      <Box
-        key={item.title}
-        sx={{
-          position: "relative",
-          aspectRatio: "4/3",
-          overflow: "hidden",
-          borderRadius: "0 50% 50% 0",
-          boxShadow: "0 18px 40px rgba(0,0,0,0.18)",
-          transition: "transform 0.5s ease",
-          "&:hover img": {
-            transform: "scale(1.08)",
-          },
-        }}
-      >
-        <Image
-          src={item.image}
-          alt={item.title}
-          fill
-          style={{
-            objectFit: "cover",
-            transition: "transform 0.6s ease",
-          }}
-        />
-      </Box>
-    ))}
-  </Box>
+              <Box
+                sx={{
+                  position: "relative",
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1.3fr 1fr",
+                  gap: 5,
+                  alignItems: "center",
+                  minHeight: "450px", 
+                }}
+              >
+                {/* LEFT IMAGES */}
+                <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                  {attractions.slice(0, 2).map((item) => (
+                    <Box
+                      sx={{
+                        position: "relative",
+                        width: 460, 
+                        aspectRatio: "6/3.9",
+                        overflow: "hidden",
+                        borderRadius: "0 50% 50% 0",
+                        boxShadow: "0 18px 40px rgba(0,0,0,0.18)",
+                        transition: "transform 0.5s ease",
+                        "&:hover img": {
+                          transform: "scale(1.08)",
+                        },
+                      }}
+                    >
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        style={{
+                          objectFit: "cover",
+                          transition: "transform 0.6s ease",
+                        }}
+                      />
+                    </Box>
+                  ))}
+                </Box>
 
-  {/* CENTER SPACE - EMPTY FOR OVERLAY POSITIONING */}
-  <Box
-    sx={{
-      position: "relative",
-      height: "100%",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-    }}
-  >
-    {/* This space is left empty for the text overlay */}
-  </Box>
+                {/* CENTER SPACE - EMPTY FOR OVERLAY POSITIONING */}
+                <Box
+                  sx={{
+                    position: "relative",
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  {/* This space is left empty for the text overlay */}
+                </Box>
 
-  {/* RIGHT IMAGES */}
-  <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
-    {attractions.slice(2, 4).map((item) => (
-      <Box
-        key={item.title}
-        sx={{
-          position: "relative",
-          aspectRatio: "4/3",
-          overflow: "hidden",
-          borderRadius: "50% 0 0 50%",
-          boxShadow: "0 18px 40px rgba(0,0,0,0.18)",
-          transition: "transform 0.5s ease",
-          "&:hover img": {
-            transform: "scale(1.08)",
-          },
-        }}
-      >
-        <Image
-          src={item.image}
-          alt={item.title}
-          fill
-          style={{
-            objectFit: "cover",
-            transition: "transform 0.6s ease",
-          }}
-        />
-      </Box>
-    ))}
-  </Box>
+                {/* RIGHT IMAGES */}
+                <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                  {attractions.slice(2, 4).map((item) => (
+                    <Box
+                      sx={{
+                        position: "relative",
+                        width: 460, 
+                        aspectRatio: "6/3.9",
+                        overflow: "hidden",
+                        borderRadius: "50% 0 0 50%",
+                        boxShadow: "0 18px 40px rgba(0,0,0,0.18)",
+                        transition: "transform 0.5s ease",
+                        "&:hover img": {
+                          transform: "scale(1.08)",
+                        },
+                      }}
+                    >
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        style={{
+                          objectFit: "cover",
+                          transition: "transform 0.6s ease",
+                        }}
+                      />
+                    </Box>
+                  ))}
+                </Box>
 
- {/* CENTER TEXT AREA - OVERLAY ON TOP OF IMAGES */}
-<Box
-  sx={{
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    zIndex: 10,
-    width: "80%",
-    maxWidth: "900px",
-    minHeight: "400px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    px: { md: 8, lg: 12 },
-    py: { md: 8, lg: 10 },
-  }}
->
-  {/* Side Gradient to hide edges */}
-  <Box
-    sx={{
-      position: "absolute",
-      inset: 0,
-      zIndex: 1,
-      pointerEvents: "none",
-      background: `
+                {/* CENTER TEXT AREA - OVERLAY ON TOP OF IMAGES */}
+                <Box
+                  sx={{
+                    position: "absolute",
+                    top: "55%",
+                    left: "50%",
+                    transform: "translate(-50%, -50%)",
+                    zIndex: 10,
+                    width: "55%",
+                    maxWidth: "900px",
+                    minHeight: "400px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    px: { md: 8, lg: 12 },
+                    py: { md: 8, lg: 10 },
+                  }}
+                >
+                  {/* Side Gradient to hide edges */}
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      inset: 0,
+                      zIndex: 1,
+                      pointerEvents: "none",
+                      background: `
         linear-gradient(to right, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.15) 20%, rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.0) 100%)
       `,
-    }}
-  />
+                    }}
+                  />
 
-  {/* Soft Glow Background */}
-  <Box
-    sx={{
-      position: "absolute",
-      inset: "5%",
-      background: `
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      inset: "5%",
+                      background: `
         radial-gradient(circle, rgba(209,159,59,0.15) 0%, transparent 70%)
       `,
-      filter: "blur(50px)",
-      zIndex: 1,
-    }}
-  />
+                      filter: "blur(50px)",
+                      zIndex: 1,
+                    }}
+                  />
 
-  {/* Main Text Container */}
-  <Box
-    sx={{
-      position: "relative",
-      zIndex: 2,
-      textAlign: "center",
-      backdropFilter: "blur(10px)",
-      width: "100%",
-      maxWidth: "700px",
-      mx: "auto",
-      p: { md: 6, lg: 8 },
-      borderRadius: "24px",
-      backgroundColor: "rgba(255, 255, 255, 0.15)", // soft translucent
-      boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
-      border: "none", // remove solid border
-    }}
-  >
-    <Typography
-      sx={{
-        fontFamily: '"Poppins", sans-serif',
-        fontSize: { md: "1.4rem", lg: "1.4rem" },
-        color: "#2f2f2f",
-        lineHeight: 1.9,
-        letterSpacing: "0.4px",
-        fontWeight: 400,
-        mb: 3,
-      }}
-    >
-      Experience cinema, arcades, kids' zones, and unforgettable
-      moments — thoughtfully designed to bring families and
-      friends together at
-    </Typography>
+                  {/* Main Text Container */}
+                  <Box
+                    sx={{
+                      position: "relative",
+                      zIndex: 2,
+                      textAlign: "center",
+                      width: "100%",
+                      maxWidth: "700px",
+                      mx: "auto",
+                      p: { md: 6, lg: 8 },
+                      borderRadius: "24px",
+                      border: "none",
+                    }}
+                  >
+                    <Typography
+                      sx={{
+                        fontFamily: '"Poppins", sans-serif',
+                        fontSize: { md: "1.4rem", lg: "1.4rem" },
+                        color: "#D19F3B",
+                        lineHeight: 1.9,
+                        letterSpacing: "0.4px",
+                        fontWeight: 400,
+                        mb: 3,
+                      }}
+                    >
+                      Experience cinema, arcades, kids' zones, and unforgettable
+                      moments — thoughtfully designed to bring families and
+                      friends together at
+                    </Typography>
 
-    <Box
-      component="span"
-      sx={{ 
-        color: "#D19F3B", 
-        fontFamily: '"Arvo", serif',
-        fontWeight: 700,
-        fontSize: { md: "1.8rem", lg: "2.2rem" },
-        display: "block",
-        mt: 3,
-        textShadow: "1px 1px 3px rgba(0,0,0,0.1)",
-        position: "relative",
-        "&::before, &::after": {
-          content: '""',
-          position: "absolute",
-          top: "50%",
-          width: "40px",
-          height: "2px",
-          backgroundColor: "rgba(209, 159, 59, 0.3)",
-          transform: "translateY(-50%)",
-        },
-        "&::before": { left: "-50px" },
-        "&::after": { right: "-50px" },
-      }}
-    >
-      Giga Mall
-    </Box>
-  </Box>
-</Box>
-
-</Box>
+                    <Box
+                      component="span"
+                      sx={{
+                        color: "#D19F3B",
+                        fontFamily: '"Arvo", serif',
+                        fontWeight: 700,
+                        fontSize: { md: "1.8rem", lg: "2.2rem" },
+                        display: "block",
+                        mt: 3,
+                        textShadow: "1px 1px 3px rgba(0,0,0,0.1)",
+                        position: "relative",
+                        "&::before, &::after": {
+                          content: '""',
+                          position: "absolute",
+                          top: "50%",
+                          width: "40px",
+                          height: "2px",
+                          backgroundColor: "rgba(209, 159, 59, 0.3)",
+                          transform: "translateY(-50%)",
+                        },
+                        "&::before": { left: "-50px" },
+                        "&::after": { right: "-50px" },
+                      }}
+                    >
+                      Giga Mall
+                    </Box>
+                  </Box>
+                </Box>
+              </Box>
             )}
           </Box>
         </Box>
@@ -592,19 +618,6 @@ export default function EntertainPage() {
                       cta: "View Zone",
                       link: "/fun-city",
                     },
-                    {
-                      title: "Dining & Cafés",
-                      desc: "From gourmet meals to quick snacks for every mood.",
-                      logo: "/dining-sitting.jpg",
-                      icon: (
-                        <RestaurantIcon
-                          fontSize="large"
-                          sx={{ color: "#D19F3B", mb: 2 }}
-                        />
-                      ),
-                      cta: "Explore Dining",
-                      link: "/dine",
-                    },
                   ].map((item) => (
                     <Box
                       key={item.title}
@@ -682,7 +695,7 @@ export default function EntertainPage() {
                   gridTemplateColumns: {
                     xs: "1fr",
                     sm: "repeat(2, 1fr)",
-                    lg: "repeat(4, 1fr)",
+                    lg: "repeat(3, 1fr)",
                   },
                   gap: { xs: 4, md: 5 },
                 }}
@@ -726,19 +739,6 @@ export default function EntertainPage() {
                     ),
                     cta: "View Zone",
                     link: "/fun-city",
-                  },
-                  {
-                    title: "Dining & Cafés",
-                    desc: "From gourmet meals to quick snacks for every mood.",
-                    logo: "/dining-sitting.jpg",
-                    icon: (
-                      <RestaurantIcon
-                        fontSize="large"
-                        sx={{ color: "#D19F3B", mb: 2 }}
-                      />
-                    ),
-                    cta: "Explore Dining",
-                    link: "/dine",
                   },
                 ].map((item, idx) => (
                   <Box
@@ -1072,7 +1072,7 @@ export default function EntertainPage() {
         >
           {/* Background Image */}
           <Image
-            src="/Cinepax/c1.jpg"
+            src="/Entertain/Funcity Horizontal.jpg"
             alt="Family Moments"
             fill
             style={{ objectFit: "cover" }}
@@ -1083,9 +1083,8 @@ export default function EntertainPage() {
             sx={{
               position: "relative",
               zIndex: 2,
-              maxWidth: { xs: "90%", md: "600px" },
-              background: "rgba(255,255,255,0.85)",
-              backdropFilter: "blur(10px)",
+              maxWidth: { xs: "90%", md: "500px" },
+              background: "rgba(255, 255, 255, 0.73)",
               p: { xs: 3, md: 6 },
               ml: { xs: "auto", md: 8 },
               mr: { xs: "auto", md: 0 },
