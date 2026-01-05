@@ -29,18 +29,22 @@ export default function EntertainPage() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
-// === TOP: Replace the single embla setup with TWO separate ones ===
-const autoplayAttractions = useRef(Autoplay({ delay: 3000, stopOnInteraction: false }));
-const [emblaRefAttractions] = useEmblaCarousel(
-  { loop: true, align: "start", dragFree: true },
-  [autoplayAttractions.current]
-);
+  // === TOP: Replace the single embla setup with TWO separate ones ===
+  const autoplayAttractions = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: false })
+  );
+  const [emblaRefAttractions] = useEmblaCarousel(
+    { loop: true, align: "start", dragFree: true },
+    [autoplayAttractions.current]
+  );
 
-const autoplayFeatured = useRef(Autoplay({ delay: 3000, stopOnInteraction: false }));
-const [emblaRefFeatured] = useEmblaCarousel(
-  { loop: true, align: "start", dragFree: true },
-  [autoplayFeatured.current]
-);
+  const autoplayFeatured = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: false })
+  );
+  const [emblaRefFeatured] = useEmblaCarousel(
+    { loop: true, align: "start", dragFree: true },
+    [autoplayFeatured.current]
+  );
 
   const attractions = [
     {
@@ -56,6 +60,13 @@ const [emblaRefFeatured] = useEmblaCarousel(
       image: "/Cinepax/c2.jpg",
       cta: "Book Tickets",
       link: "/cinema",
+    },
+    {
+      title: "Fun City Arcade",
+      description: "Games, rides & fun for all ages.",
+      image: "/2.png",
+      cta: "View Arcade Zone",
+      link: "/fun-city",
     },
     {
       title: "Fun City Arcade",
@@ -235,6 +246,7 @@ const [emblaRefFeatured] = useEmblaCarousel(
           sx={{ backgroundColor: "#fdfdfd", py: { xs: 8, md: 12 } }}
         >
           <Box sx={{ maxWidth: "1600px", mx: "auto", px: { xs: 3, md: 6 } }}>
+            {/* HEADING — UNCHANGED */}
             <Typography
               sx={{
                 fontFamily: '"Arvo", serif',
@@ -247,397 +259,564 @@ const [emblaRefFeatured] = useEmblaCarousel(
               Attractions & Activities
             </Typography>
 
-           {isMobile ? (
-  <Box sx={{ overflow: "hidden" }} ref={emblaRefAttractions}>
-    <Box sx={{ display: "flex", gap: 2, pb: 2 }}>
-      {attractions.map((item) => (
-        <Box
-          key={item.title}
-          sx={{
-            flex: "0 0 80%",
-            position: "relative",
-            aspectRatio: "4/3",
-            borderRadius: "16px",
-            overflow: "hidden",
-          }}
-        >
-          <Image
-            src={item.image}
-            alt={item.title}
-            fill
-            style={{ objectFit: "cover", borderRadius: "16px" }}
-          />
-          <Box
-            sx={{
-              position: "absolute",
-              inset: 0,
-              background: "linear-gradient(to top, rgba(0,0,0,0.85), transparent)",
-              p: 2,
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "flex-end",
-              borderRadius: "16px",
-            }}
-          >
-            <Typography
-              sx={{
-                color: "#D19F3B",
-                fontFamily: '"Arvo", serif',
-                fontSize: "1.2rem",
-                mb: 1,
-              }}
-            >
-              {item.title}
-            </Typography>
-            <Typography
-              sx={{
-                color: "#fff",
-                fontFamily: '"Poppins", sans-serif',
-                fontSize: "0.85rem",
-                mb: 2,
-              }}
-            >
-              {item.description}
-            </Typography>
-          </Box>
-        </Box>
-      ))}
-    </Box>
-  </Box>
-) : (
-              // ================= DESKTOP GRID =================
-              <Box
-                sx={{
-                  display: "grid",
-                  gridTemplateColumns: {
-                    sm: "repeat(2,1fr)",
-                    lg: "repeat(3,1fr)",
-                  },
-                  gap: 4,
-                }}
-              >
-                {attractions.map((item) => (
-                  <Box
-                    key={item.title}
-                    sx={{
-                      position: "relative",
-                      aspectRatio: "4/3",
-                      borderRadius: "16px",
-                      overflow: "hidden",
-                    }}
-                  >
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      style={{ objectFit: "cover" }}
-                    />
+            {/* ================= MOBILE (UNCHANGED CAROUSEL) ================= */}
+            {isMobile ? (
+              <Box sx={{ overflow: "hidden" }} ref={emblaRefAttractions}>
+                <Box sx={{ display: "flex", gap: 2, pb: 2 }}>
+                  {attractions.map((item) => (
                     <Box
+                      key={item.title}
                       sx={{
-                        position: "absolute",
-                        inset: 0,
-                        background:
-                          "linear-gradient(to top, rgba(0,0,0,0.85), transparent)",
-                        p: { xs: 2, md: 3 },
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "flex-end",
+                        flex: "0 0 80%",
+                        position: "relative",
+                        aspectRatio: "4/3",
+                        borderRadius: "16px",
+                        overflow: "hidden",
                       }}
                     >
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        style={{ objectFit: "cover", borderRadius: "16px" }}
+                      />
+                      <Box
+                        sx={{
+                          position: "absolute",
+                          inset: 0,
+                          background:
+                            "linear-gradient(to top, rgba(0,0,0,0.85), transparent)",
+                          p: 2,
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "flex-end",
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            color: "#D19F3B",
+                            fontFamily: '"Arvo", serif',
+                            fontSize: "1.2rem",
+                            mb: 1,
+                          }}
+                        >
+                          {item.title}
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#fff",
+                            fontFamily: '"Poppins", sans-serif',
+                            fontSize: "0.85rem",
+                          }}
+                        >
+                          {item.description}
+                        </Typography>
+                      </Box>
+                    </Box>
+                  ))}
+                </Box>
+              </Box>
+            ) : (
+              /* ================= DESKTOP SPLIT LAYOUT ================= */
+       <Box
+  sx={{
+    position: "relative", // Added for positioning context
+    display: "grid",
+    gridTemplateColumns: "1fr 1.3fr 1fr",
+    gap: 5,
+    alignItems: "center",
+    minHeight: "500px", // Added minimum height for overlay
+  }}
+>
+  {/* LEFT IMAGES */}
+  <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
+    {attractions.slice(0, 2).map((item) => (
+      <Box
+        key={item.title}
+        sx={{
+          position: "relative",
+          aspectRatio: "4/3",
+          overflow: "hidden",
+          borderRadius: "0 50% 50% 0",
+          boxShadow: "0 18px 40px rgba(0,0,0,0.18)",
+          transition: "transform 0.5s ease",
+          "&:hover img": {
+            transform: "scale(1.08)",
+          },
+        }}
+      >
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          style={{
+            objectFit: "cover",
+            transition: "transform 0.6s ease",
+          }}
+        />
+      </Box>
+    ))}
+  </Box>
+
+  {/* CENTER SPACE - EMPTY FOR OVERLAY POSITIONING */}
+  <Box
+    sx={{
+      position: "relative",
+      height: "100%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    }}
+  >
+    {/* This space is left empty for the text overlay */}
+  </Box>
+
+  {/* RIGHT IMAGES */}
+  <Box sx={{ display: "flex", flexDirection: "column", gap: 4 }}>
+    {attractions.slice(2, 4).map((item) => (
+      <Box
+        key={item.title}
+        sx={{
+          position: "relative",
+          aspectRatio: "4/3",
+          overflow: "hidden",
+          borderRadius: "50% 0 0 50%",
+          boxShadow: "0 18px 40px rgba(0,0,0,0.18)",
+          transition: "transform 0.5s ease",
+          "&:hover img": {
+            transform: "scale(1.08)",
+          },
+        }}
+      >
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          style={{
+            objectFit: "cover",
+            transition: "transform 0.6s ease",
+          }}
+        />
+      </Box>
+    ))}
+  </Box>
+
+ {/* CENTER TEXT AREA - OVERLAY ON TOP OF IMAGES */}
+<Box
+  sx={{
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    zIndex: 10,
+    width: "80%",
+    maxWidth: "900px",
+    minHeight: "400px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    px: { md: 8, lg: 12 },
+    py: { md: 8, lg: 10 },
+  }}
+>
+  {/* Side Gradient to hide edges */}
+  <Box
+    sx={{
+      position: "absolute",
+      inset: 0,
+      zIndex: 1,
+      pointerEvents: "none",
+      background: `
+        linear-gradient(to right, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.15) 20%, rgba(255,255,255,0.15) 80%, rgba(255,255,255,0.0) 100%)
+      `,
+    }}
+  />
+
+  {/* Soft Glow Background */}
+  <Box
+    sx={{
+      position: "absolute",
+      inset: "5%",
+      background: `
+        radial-gradient(circle, rgba(209,159,59,0.15) 0%, transparent 70%)
+      `,
+      filter: "blur(50px)",
+      zIndex: 1,
+    }}
+  />
+
+  {/* Main Text Container */}
+  <Box
+    sx={{
+      position: "relative",
+      zIndex: 2,
+      textAlign: "center",
+      backdropFilter: "blur(10px)",
+      width: "100%",
+      maxWidth: "700px",
+      mx: "auto",
+      p: { md: 6, lg: 8 },
+      borderRadius: "24px",
+      backgroundColor: "rgba(255, 255, 255, 0.15)", // soft translucent
+      boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)",
+      border: "none", // remove solid border
+    }}
+  >
+    <Typography
+      sx={{
+        fontFamily: '"Poppins", sans-serif',
+        fontSize: { md: "1.4rem", lg: "1.4rem" },
+        color: "#2f2f2f",
+        lineHeight: 1.9,
+        letterSpacing: "0.4px",
+        fontWeight: 400,
+        mb: 3,
+      }}
+    >
+      Experience cinema, arcades, kids' zones, and unforgettable
+      moments — thoughtfully designed to bring families and
+      friends together at
+    </Typography>
+
+    <Box
+      component="span"
+      sx={{ 
+        color: "#D19F3B", 
+        fontFamily: '"Arvo", serif',
+        fontWeight: 700,
+        fontSize: { md: "1.8rem", lg: "2.2rem" },
+        display: "block",
+        mt: 3,
+        textShadow: "1px 1px 3px rgba(0,0,0,0.1)",
+        position: "relative",
+        "&::before, &::after": {
+          content: '""',
+          position: "absolute",
+          top: "50%",
+          width: "40px",
+          height: "2px",
+          backgroundColor: "rgba(209, 159, 59, 0.3)",
+          transform: "translateY(-50%)",
+        },
+        "&::before": { left: "-50px" },
+        "&::after": { right: "-50px" },
+      }}
+    >
+      Giga Mall
+    </Box>
+  </Box>
+</Box>
+
+</Box>
+            )}
+          </Box>
+        </Box>
+        {/* ================= END ATTRACTIONS & ACTIVITIES ================= */}
+
+        {/* ================= FEATURED ENTERTAINMENT BRANDS ================= */}
+        <Box
+          sx={{
+            backgroundColor: "#ffffff",
+            py: { xs: 8, md: 12 },
+          }}
+        >
+          <Box
+            sx={{
+              maxWidth: "1600px",
+              mx: "auto",
+              px: { xs: 3, md: 6 },
+            }}
+          >
+            {/* Heading */}
+            <Typography
+              sx={{
+                fontFamily: '"Arvo", serif',
+                fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
+                fontWeight: 400,
+                letterSpacing: "0.08em",
+                color: "#D19F3B",
+                mb: { xs: 4, md: 6 },
+                textAlign: { xs: "center", md: "left" },
+              }}
+            >
+              Featured Entertainment
+            </Typography>
+
+            {isMobile ? (
+              // ================= MOBILE: EMBLA CAROUSEL (same as Attractions) =================
+              <Box sx={{ overflow: "hidden" }} ref={emblaRefFeatured}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    gap: 2,
+                    pb: 2,
+                  }}
+                >
+                  {[
+                    {
+                      title: "KidZania",
+                      desc: "An award-winning role-play city where kids learn through play.",
+                      logo: "/logos/kidzania.png",
+                      icon: (
+                        <ChildCareIcon
+                          fontSize="large"
+                          sx={{ color: "#D19F3B", mb: 2 }}
+                        />
+                      ),
+                      cta: "Learn More",
+                      link: "/kidzania",
+                    },
+                    {
+                      title: "Cinepax Cinema",
+                      desc: "Luxury cinema experience with the latest blockbusters.",
+                      logo: "/logos/cinepax.png",
+                      icon: (
+                        <MovieIcon
+                          fontSize="large"
+                          sx={{ color: "#D19F3B", mb: 2 }}
+                        />
+                      ),
+                      cta: "Book Now",
+                      link: "/cinepax",
+                    },
+                    {
+                      title: "Fun City Arcade",
+                      desc: "Thrilling games, rides, and family entertainment.",
+                      logo: "/logos/funcity.png",
+                      icon: (
+                        <SportsEsportsIcon
+                          fontSize="large"
+                          sx={{ color: "#D19F3B", mb: 2 }}
+                        />
+                      ),
+                      cta: "View Zone",
+                      link: "/fun-city",
+                    },
+                    {
+                      title: "Dining & Cafés",
+                      desc: "From gourmet meals to quick snacks for every mood.",
+                      logo: "/dining-sitting.jpg",
+                      icon: (
+                        <RestaurantIcon
+                          fontSize="large"
+                          sx={{ color: "#D19F3B", mb: 2 }}
+                        />
+                      ),
+                      cta: "Explore Dining",
+                      link: "/dine",
+                    },
+                  ].map((item) => (
+                    <Box
+                      key={item.title}
+                      sx={{
+                        flex: "0 0 80%",
+                        backgroundColor: "#f9f9f9",
+                        borderRadius: "18px",
+                        p: 3,
+                        boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                      }}
+                    >
+                      <Box sx={{ textAlign: "center" }}>{item.icon}</Box>
+
                       <Typography
                         sx={{
-                          color: "#D19F3B",
-                          fontFamily: '"Arvo", serif',
-                          fontSize: {
-                            xs: "1.2rem",
-                            sm: "1.3rem",
-                            md: "1.4rem",
-                          },
+                          fontFamily: '"Poppins", sans-serif',
+                          fontSize: "1.1rem",
+                          color: "#222",
+                          textAlign: "center",
                           mb: 1,
                         }}
                       >
                         {item.title}
                       </Typography>
+
                       <Typography
                         sx={{
-                          color: "#fff",
                           fontFamily: '"Poppins", sans-serif',
-                          fontSize: {
-                            xs: "0.85rem",
-                            sm: "0.9rem",
-                            md: "0.95rem",
-                          },
+                          fontSize: "0.85rem",
+                          lineHeight: 1.6,
+                          color: "#555",
+                          textAlign: "center",
                           mb: 2,
+                          flexGrow: 1,
                         }}
                       >
-                        {item.description}
+                        {item.desc}
                       </Typography>
+                      <Box sx={{ textAlign: "center" }}>
+                        <Button
+                          component={Link}
+                          href={item.link}
+                          sx={{
+                            backgroundColor: "#fff",
+                            color: "#D19F3B",
+                            border: "1px solid #D19F3B",
+                            px: 2.5,
+                            py: 1,
+                            fontSize: "0.85rem",
+                            fontWeight: 400,
+                            fontFamily: '"Poppins", sans-serif',
+                            textTransform: "none",
+                            "&:hover": {
+                              backgroundColor: "#D19F3B",
+                              color: "#fff",
+                              border: "1px solid #D19F3B",
+                            },
+                          }}
+                        >
+                          {item.cta}
+                        </Button>
+                      </Box>
                     </Box>
+                  ))}
+                </Box>
+              </Box>
+            ) : (
+              // ================= DESKTOP: ORIGINAL GRID LAYOUT (unchanged) =================
+              <Box
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: {
+                    xs: "1fr",
+                    sm: "repeat(2, 1fr)",
+                    lg: "repeat(4, 1fr)",
+                  },
+                  gap: { xs: 4, md: 5 },
+                }}
+              >
+                {[
+                  {
+                    title: "KidZania",
+                    desc: "An award-winning role-play city where kids learn through play.",
+                    logo: "/logos/kidzania.png",
+                    icon: (
+                      <ChildCareIcon
+                        fontSize="large"
+                        sx={{ color: "#D19F3B", mb: 2 }}
+                      />
+                    ),
+                    cta: "Learn More",
+                    link: "/kidzania",
+                  },
+                  {
+                    title: "Cinepax Cinema",
+                    desc: "Luxury cinema experience with the latest blockbusters.",
+                    logo: "/logos/cinepax.png",
+                    icon: (
+                      <MovieIcon
+                        fontSize="large"
+                        sx={{ color: "#D19F3B", mb: 2 }}
+                      />
+                    ),
+                    cta: "Book Now",
+                    link: "/cinepax",
+                  },
+                  {
+                    title: "Fun City Arcade",
+                    desc: "Thrilling games, rides, and family entertainment.",
+                    logo: "/logos/funcity.png",
+                    icon: (
+                      <SportsEsportsIcon
+                        fontSize="large"
+                        sx={{ color: "#D19F3B", mb: 2 }}
+                      />
+                    ),
+                    cta: "View Zone",
+                    link: "/fun-city",
+                  },
+                  {
+                    title: "Dining & Cafés",
+                    desc: "From gourmet meals to quick snacks for every mood.",
+                    logo: "/dining-sitting.jpg",
+                    icon: (
+                      <RestaurantIcon
+                        fontSize="large"
+                        sx={{ color: "#D19F3B", mb: 2 }}
+                      />
+                    ),
+                    cta: "Explore Dining",
+                    link: "/dine",
+                  },
+                ].map((item, idx) => (
+                  <Box
+                    key={idx}
+                    sx={{
+                      backgroundColor: "#f9f9f9",
+                      borderRadius: "18px",
+                      p: { xs: 3, md: 4 },
+                      textAlign: "center",
+                      boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+                      transition: "all 0.3s ease",
+                      "&:hover": {
+                        transform: "translateY(-6px)",
+                        boxShadow: "0 18px 50px rgba(0,0,0,0.12)",
+                      },
+                    }}
+                  >
+                    {item.icon}
+
+                    <Typography
+                      sx={{
+                        fontFamily: '"Poppins", sans-serif',
+                        fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.3rem" },
+                        color: "#222",
+                        mb: 1,
+                      }}
+                    >
+                      {item.title}
+                    </Typography>
+
+                    <Typography
+                      sx={{
+                        fontFamily: '"Poppins", sans-serif',
+                        fontSize: {
+                          xs: "0.85rem",
+                          sm: "0.9rem",
+                          md: "0.95rem",
+                        },
+                        lineHeight: 1.6,
+                        color: "#555",
+                        mb: 3,
+                      }}
+                    >
+                      {item.desc}
+                    </Typography>
+
+                    <Button
+                      component={Link}
+                      href={item.link}
+                      sx={{
+                        backgroundColor: "#fff",
+                        color: "#D19F3B",
+                        border: "1px solid #D19F3B",
+                        px: { xs: 2.5, md: 3 },
+                        py: { xs: 1, md: 1.25 },
+                        fontSize: {
+                          xs: "0.85rem",
+                          sm: "0.9rem",
+                          md: "0.95rem",
+                        },
+                        fontWeight: 400,
+                        fontFamily: '"Poppins", sans-serif',
+                        textTransform: "none",
+                        "&:hover": {
+                          backgroundColor: "#D19F3B",
+                          color: "#fff",
+                        },
+                      }}
+                    >
+                      {item.cta}
+                    </Button>
                   </Box>
                 ))}
               </Box>
             )}
           </Box>
         </Box>
-        {/* ================= End of ATTRACTIONS & ACTIVITIES ================= */}
-      
-      {/* ================= FEATURED ENTERTAINMENT BRANDS ================= */}
-<Box
-  sx={{
-    backgroundColor: "#ffffff",
-    py: { xs: 8, md: 12 },
-  }}
->
-  <Box
-    sx={{
-      maxWidth: "1600px",
-      mx: "auto",
-      px: { xs: 3, md: 6 },
-    }}
-  >
-    {/* Heading */}
-    <Typography
-      sx={{
-        fontFamily: '"Arvo", serif',
-        fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" },
-        fontWeight: 400,
-        letterSpacing: "0.08em",
-        color: "#D19F3B",
-        mb: { xs: 4, md: 6 },
-        textAlign: { xs: "center", md: "left" },
-      }}
-    >
-      Featured Entertainment
-    </Typography>
-
-    {isMobile ? (
-      // ================= MOBILE: EMBLA CAROUSEL (same as Attractions) =================
-      <Box sx={{ overflow: "hidden" }} ref={emblaRefFeatured}>
-        <Box
-          sx={{
-            display: "flex",
-            gap: 2,
-            pb: 2,
-          }}
-        >
-          {[
-            {
-              title: "KidZania",
-              desc: "An award-winning role-play city where kids learn through play.",
-              logo: "/logos/kidzania.png",
-              icon: <ChildCareIcon fontSize="large" sx={{ color: "#D19F3B", mb: 2 }} />,
-              cta: "Learn More",
-              link: "/kidzania",
-            },
-            {
-              title: "Cinepax Cinema",
-              desc: "Luxury cinema experience with the latest blockbusters.",
-              logo: "/logos/cinepax.png",
-              icon: <MovieIcon fontSize="large" sx={{ color: "#D19F3B", mb: 2 }} />,
-              cta: "Book Now",
-              link: "/cinepax",
-            },
-            {
-              title: "Fun City Arcade",
-              desc: "Thrilling games, rides, and family entertainment.",
-              logo: "/logos/funcity.png",
-              icon: <SportsEsportsIcon fontSize="large" sx={{ color: "#D19F3B", mb: 2 }} />,
-              cta: "View Zone",
-              link: "/fun-city",
-            },
-            {
-              title: "Dining & Cafés",
-              desc: "From gourmet meals to quick snacks for every mood.",
-              logo: "/dining-sitting.jpg",
-              icon: <RestaurantIcon fontSize="large" sx={{ color: "#D19F3B", mb: 2 }} />,
-              cta: "Explore Dining",
-              link: "/dine",
-            },
-          ].map((item) => (
-        <Box
-          key={item.title}
-          sx={{
-            flex: "0 0 80%",
-            backgroundColor: "#f9f9f9",
-            borderRadius: "18px",
-            p: 3,
-            boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-          }}
-        >
-          <Box sx={{ textAlign: "center" }}>{item.icon}</Box>
-
-          <Typography
-            sx={{
-              fontFamily: '"Poppins", sans-serif',
-              fontSize: "1.1rem",
-              color: "#222",
-              textAlign: "center",
-              mb: 1,
-            }}
-          >
-            {item.title}
-          </Typography>
-
-          <Typography
-            sx={{
-              fontFamily: '"Poppins", sans-serif',
-              fontSize: "0.85rem",
-              lineHeight: 1.6,
-              color: "#555",
-              textAlign: "center",
-              mb: 2,
-              flexGrow: 1,
-            }}
-          >
-            {item.desc}
-          </Typography>
-<Box sx={{ textAlign: "center" }}>
-  <Button
-    component={Link}
-    href={item.link}
-    sx={{
-      backgroundColor: "#fff",
-      color: "#D19F3B",
-      border: "1px solid #D19F3B",
-      px: 2.5,
-      py: 1,
-      fontSize: "0.85rem",
-      fontWeight: 400,
-      fontFamily: '"Poppins", sans-serif',
-      textTransform: "none",
-      "&:hover": {
-        backgroundColor: "#D19F3B",
-        color: "#fff",
-        border: "1px solid #D19F3B",
-      },
-    }}
-  >
-    {item.cta}
-  </Button>
-</Box>
-
-        </Box>
-      ))}
-    </Box>
-  </Box>
-) : (
-      // ================= DESKTOP: ORIGINAL GRID LAYOUT (unchanged) =================
-      <Box
-        sx={{
-          display: "grid",
-          gridTemplateColumns: {
-            xs: "1fr",
-            sm: "repeat(2, 1fr)",
-            lg: "repeat(4, 1fr)",
-          },
-          gap: { xs: 4, md: 5 },
-        }}
-      >
-        {[
-          {
-            title: "KidZania",
-            desc: "An award-winning role-play city where kids learn through play.",
-            logo: "/logos/kidzania.png",
-            icon: <ChildCareIcon fontSize="large" sx={{ color: "#D19F3B", mb: 2 }} />,
-            cta: "Learn More",
-            link: "/kidzania",
-          },
-          {
-            title: "Cinepax Cinema",
-            desc: "Luxury cinema experience with the latest blockbusters.",
-            logo: "/logos/cinepax.png",
-            icon: <MovieIcon fontSize="large" sx={{ color: "#D19F3B", mb: 2 }} />,
-            cta: "Book Now",
-            link: "/cinepax",
-          },
-          {
-            title: "Fun City Arcade",
-            desc: "Thrilling games, rides, and family entertainment.",
-            logo: "/logos/funcity.png",
-            icon: <SportsEsportsIcon fontSize="large" sx={{ color: "#D19F3B", mb: 2 }} />,
-            cta: "View Zone",
-            link: "/fun-city",
-          },
-          {
-            title: "Dining & Cafés",
-            desc: "From gourmet meals to quick snacks for every mood.",
-            logo: "/dining-sitting.jpg",
-            icon: <RestaurantIcon fontSize="large" sx={{ color: "#D19F3B", mb: 2 }} />,
-            cta: "Explore Dining",
-            link: "/dine",
-          },
-        ].map((item, idx) => (
-          <Box
-            key={idx}
-            sx={{
-              backgroundColor: "#f9f9f9",
-              borderRadius: "18px",
-              p: { xs: 3, md: 4 },
-              textAlign: "center",
-              boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-              transition: "all 0.3s ease",
-              "&:hover": {
-                transform: "translateY(-6px)",
-                boxShadow: "0 18px 50px rgba(0,0,0,0.12)",
-              },
-            }}
-          >
-            {item.icon}
-
-            <Typography
-              sx={{
-                fontFamily: '"Poppins", sans-serif',
-                fontSize: { xs: "1.1rem", sm: "1.2rem", md: "1.3rem" },
-                color: "#222",
-                mb: 1,
-              }}
-            >
-              {item.title}
-            </Typography>
-
-            <Typography
-              sx={{
-                fontFamily: '"Poppins", sans-serif',
-                fontSize: { xs: "0.85rem", sm: "0.9rem", md: "0.95rem" },
-                lineHeight: 1.6,
-                color: "#555",
-                mb: 3,
-              }}
-            >
-              {item.desc}
-            </Typography>
-
-            <Button
-              component={Link}
-              href={item.link}
-              sx={{
-                backgroundColor: "#fff",
-                color: "#D19F3B",
-                border: "1px solid #D19F3B",
-                px: { xs: 2.5, md: 3 },
-                py: { xs: 1, md: 1.25 },
-                fontSize: { xs: "0.85rem", sm: "0.9rem", md: "0.95rem" },
-                fontWeight: 400,
-                fontFamily: '"Poppins", sans-serif',
-                textTransform: "none",
-                "&:hover": {
-                  backgroundColor: "#D19F3B",
-                  color: "#fff",
-                },
-              }}
-            >
-              {item.cta}
-            </Button>
-          </Box>
-        ))}
-      </Box>
-    )}
-  </Box>
-</Box>
-{/* ================= END FEATURED ENTERTAINMENT ================= */}
+        {/* ================= END FEATURED ENTERTAINMENT ================= */}
         {/* ================= EVENTS & SPECIAL OFFERS ================= */}
         <DiscoverEventsOffers />
         {/* ================= PLAN YOUR FUN DAY ================= */}
