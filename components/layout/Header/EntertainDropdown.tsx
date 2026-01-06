@@ -16,9 +16,9 @@ interface EntertainDropdownProps {
 }
 
 const entertainOptions = [
-  { name: "Attractions & Activities", image: "/6485.jpg", icon: <AttractionsIcon /> },
-  { name: "Featured Entertainment", image: "/DSC07199.jpg", icon: <CelebrationIcon /> },
-  { name: "Plan Your Fun Day", image: "/DSC07836.jpg", icon: <EventIcon /> },
+  { name: "Attractions & Activities", image: "/attraction.jpg", icon: <AttractionsIcon /> },
+  { name: "Featured Entertainment", image: "/featured-entertainment.jpg", icon: <CelebrationIcon /> },
+  { name: "Plan Your Fun Day", image: "/plan.jpg", icon: <EventIcon /> },
   { name: "Family Moments", image: "/family-moments.jpg", icon: <FamilyRestroomIcon /> },
 ];
 
@@ -35,8 +35,8 @@ const EntertainDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: EntertainDrop
         onMouseLeave();
       }}
       sx={{
-        position: 'fixed',                    // Changed to fixed
-        top: '64px',                          // Adjust this to match your navbar height (e.g. 64px, 80px, etc.)
+        position: 'fixed',                   
+        top: '64px',                         
         left: 0,
         right: 0,
         backgroundColor: '#ffffff',
