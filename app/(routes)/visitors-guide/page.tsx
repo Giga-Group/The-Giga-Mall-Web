@@ -203,7 +203,7 @@ export default function ServicesPage() {
                 lineHeight: 1.3,
               }}
             >
-              Discover the exceptional services available at Giga Mall.
+              Visitor&apos;s Guide to Giga Mall.
             </Typography>
 
             <Typography
@@ -217,8 +217,7 @@ export default function ServicesPage() {
                 maxWidth: "800px",
               }}
             >
-              Stop by the nearest Concierge Desk to enhance your shopping
-              experience, making it smooth and truly memorable.
+              Discover essential information, services, and guidelines to make your visit to Giga Mall smooth and truly memorable.
             </Typography>
           </Box>
 

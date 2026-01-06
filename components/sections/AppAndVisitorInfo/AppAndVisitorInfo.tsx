@@ -248,7 +248,7 @@ const AppAndVisitorInfo = () => {
             })}
           </Box>
 
-          <Link href="/services" style={{ textDecoration: 'none' }}>
+          <Link href="/visitors-guide" style={{ textDecoration: 'none' }}>
             <Typography
               sx={{
                 fontFamily: '"Quicksand", sans-serif',

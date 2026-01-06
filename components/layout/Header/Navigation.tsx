@@ -41,9 +41,11 @@ const Navigation = ({ navItems, onShopHover, onDineHover, /* onStayHover, */ onE
             : item === 'Entertain'
             ? '/entertain'
             : item === 'Services'
-            ? '/services'
+            ? '/services-directory'
             : item === 'Plan your visit'
             ? '/opening-hours'
+            : item === 'Visitors Guide'
+            ? '/visitors-guide'
             : '#';
 
         const hasDropdown =
@@ -65,7 +67,7 @@ const Navigation = ({ navItems, onShopHover, onDineHover, /* onStayHover, */ onE
             if (item === 'Entertain') onEntertainHover();
             if (item === 'Plan your visit') onPlanVisitHover();
 
-            // For items without dropdowns (e.g., What's New, Services), clear any open dropdown
+            // For items without dropdowns (e.g., What's New, Services, Visitors Guide), clear any open dropdown
             if (!hasDropdown) {
               onClearHover();
             }
