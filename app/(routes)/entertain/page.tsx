@@ -22,9 +22,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { motion} from "framer-motion";
 
 export default function EntertainPage() {
   const theme = useTheme();
@@ -39,13 +37,13 @@ export default function EntertainPage() {
     [autoplayAttractions.current]
   );
 
-  const autoplayFeatured = useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: false })
-  );
-  const [emblaRefFeatured] = useEmblaCarousel(
-    { loop: true, align: "start", dragFree: true },
-    [autoplayFeatured.current]
-  );
+  // const autoplayFeatured = useRef(
+  //   Autoplay({ delay: 3000, stopOnInteraction: false })
+  // );
+  // const [emblaRefFeatured] = useEmblaCarousel(
+  //   { loop: true, align: "start", dragFree: true },
+  //   [autoplayFeatured.current]
+  // );
 
   const attractions = [
     {
@@ -306,7 +304,7 @@ export default function EntertainPage() {
             {isMobile ? (
               <Box sx={{ overflow: "hidden" }} ref={emblaRefAttractions}>
                 <Box sx={{ display: "flex", gap: 2, pb: 2 }}>
-                  {attractionsmv.map((item, index) => (
+                  {attractionsmv.map((item) => (
                     <Box
                       key={item.title}
                       sx={{
@@ -643,7 +641,7 @@ export default function EntertainPage() {
                           mb: 3,
                         }}
                       >
-                        Experience cinema, arcades, kids' zones, and
+                        Experience cinema, arcades, kids zones, and
                         unforgettable moments — thoughtfully designed to bring
                         families and friends together at
                       </Typography>
