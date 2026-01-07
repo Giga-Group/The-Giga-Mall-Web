@@ -28,8 +28,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Alkaram',
     slug: 'alkaram',
     description: 'Elegant fashion and premium textiles for the modern wardrobe.',
-    logo: '/alkaram logo.jpg',
-    backgroundImage: '/alkaram.jpg',
+    logo: '/logo/alkaram logo.jpg',
+    backgroundImage: '/shops/alkaram.jpg',
     category: 'Fashion',
     contact: {
       phone: '+971-50-501-8600'
@@ -44,8 +44,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Almas',
     slug: 'almas',
     description: 'Discover timeless elegance with our curated collection of premium fashion.',
-    logo: '/almas logo.png',
-    backgroundImage: '/almas.jpeg',
+    logo: '/logo/almas logo.png',
+    backgroundImage: '/shops/almas.jpeg',
     category: 'Fashion',
     contact: {
       phone: '+971-50-501-8601'
@@ -60,8 +60,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Almirah',
     slug: 'almirah',
     description: 'Your destination for contemporary fashion and style essentials.',
-    logo: '/almirah logo.png',
-    backgroundImage: '/almirah.jpeg',
+    logo: '/logo/almirah logo.png',
+    backgroundImage: '/shops/almirah.jpeg',
     category: 'Fashion',
     contact: {
       phone: '+971-50-501-8602'
@@ -76,8 +76,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Batik Studio',
     slug: 'batik-studio',
     description: 'Traditional artistry meets modern fashion in our unique batik collections.',
-    logo: '/batik studio logo.jpg',
-    backgroundImage: '/batik-studio.jpg',
+    logo: '/logo/batik studio logo.jpg',
+    backgroundImage: '/shops/batik-studio.jpg',
     category: 'Fashion',
     contact: {
       phone: '+971-50-501-8603'
@@ -92,8 +92,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Bloon',
     slug: 'bloon',
     description: 'Fresh styles and vibrant fashion for every occasion.',
-    logo: '/bloon logo.jpg',
-    backgroundImage: '/bloon.jpg',
+    logo: '/logo/bloon logo.jpg',
+    backgroundImage: '/shops/bloon.jpg',
     category: 'Fashion',
     contact: {
       phone: '+971-50-501-8604'
@@ -108,8 +108,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Bonanza',
     slug: 'bonanza',
     description: 'Quality clothing and accessories for the whole family.',
-    logo: '/bonanza satrangi logo.jpg',
-    backgroundImage: '/bonanza.jpeg',
+    logo: '/logo/bonanza satrangi logo.jpg',
+    backgroundImage: '/shops/bonanza.jpeg',
     category: 'Fashion',
     contact: {
       phone: '+971-50-501-8605'
@@ -124,8 +124,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Breakout',
     slug: 'breakout',
     description: 'Break free with bold designs and contemporary fashion statements.',
-    logo: '/Breakout logo.png',
-    backgroundImage: '/breakout.jpeg',
+    logo: '/logo/Breakout logo.png',
+    backgroundImage: '/shops/breakout.jpeg',
     category: 'Fashion',
     contact: {
       phone: '+971-50-501-8606'
@@ -140,8 +140,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Cambridge',
     slug: 'cambridge',
     description: 'Classic British style meets modern sophistication.',
-    logo: '/cambridge logo.jpg',
-    backgroundImage: '/cambridge.jpeg',
+    logo: '/logo/cambridge logo.jpg',
+    backgroundImage: '/shops/cambridge.jpeg',
     category: 'Fashion',
     contact: {
       phone: '+971-50-501-8607'
@@ -156,8 +156,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Junaid Jamshed',
     slug: 'junaid-jamshed',
     description: 'Traditional elegance reimagined for the modern lifestyle.',
-    logo: '/junaid jamshed logo.png',
-    backgroundImage: '/junaid-jamshed.jpeg',
+    logo: '/logo/junaid jamshed logo.png',
+    backgroundImage: '/shops/junaid-jamshed.jpeg',
     category: 'Fashion',
     contact: {
       phone: '+971-50-501-8608'
@@ -172,8 +172,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Kayseria',
     slug: 'kayseria',
     description: 'Premium fashion and luxury textiles for the sophisticated shopper.',
-    logo: '/kayseria logo.jpg',
-    backgroundImage: '/kayseria.jpeg',
+    logo: '/logo/kayseria logo.jpg',
+    backgroundImage: '/shops/kayseria.jpeg',
     category: 'Fashion',
     contact: {
       phone: '+971-50-501-8609'
@@ -188,8 +188,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Miniso',
     slug: 'miniso',
     description: 'Japanese-inspired lifestyle products and accessories for everyday living.',
-    logo: '/miniso logo.jpg',
-    backgroundImage: '/miniso.jpeg',
+    logo: '/logo/miniso logo.jpg',
+    backgroundImage: '/shops/miniso.jpeg',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -203,12 +203,12 @@ export const storeDetails: StoreDetail[] = [
   { name: 'Babys Day Out', slug: 'babys-day-out', 
     description: 'A kids’ store offering toys, games, and fun activities designed to engage and entertain children of all ages.',
 
-    logo: '/miniso logo.jpg', backgroundImage: '/shops/Babysdayoutweb.JPG', category: 'Lifestyle', contact: { phone: '+971-50-501-8610' }, location: { level: 'Ground Floor', parking: 'P1, Main Parking', mapPosition: { x: 75, y: 45 } } },
+    logo: '/logo/miniso logo.jpg', backgroundImage: '/shops/Babysdayoutweb.JPG', category: 'Lifestyle', contact: { phone: '+971-50-501-8610' }, location: { level: 'Ground Floor', parking: 'P1, Main Parking', mapPosition: { x: 75, y: 45 } } },
   {
     name: 'Gadgets Mobile',
     slug: 'gadgets-mobile',
     description: 'A mobile and electronics store offering the latest smartphones, accessories, and tech gadgets.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/Gadgets Mobile web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -224,7 +224,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Bonanza Satrangi',
     slug: 'bonanza-satrangi',
     description: 'A leading fashion brand offering stylish and vibrant apparel for men, women, and children.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/Bonanza Satrangi web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -240,7 +240,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Aroma Concepts',
     slug: 'aroma-concepts',
     description: 'A fragrance and home scents store offering perfumes, candles, and aromatic products.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/Aroma Concepts web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -256,7 +256,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Eastern Art and HandiCraft',
     slug: 'eastern-art-and-handicraft',
     description: 'A handicraft store showcasing traditional art, décor, and handmade cultural pieces.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/Eastern Art and HandiCraft web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -272,7 +272,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Taana Baana',
     slug: 'taana-baana',
     description: 'A textile and fashion brand offering premium fabrics, ethnic wear, and custom tailoring services.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/Taana Baana web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -288,7 +288,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Alpha Accessories',
     slug: 'alpha-accessories',
     description: 'A fashion accessories store offering bags, jewelry, and trendy everyday essentials.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/Alpha Accessories web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -304,7 +304,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Ximi Vogue',
     slug: 'ximi-vogue',
     description: 'A lifestyle and accessories brand offering affordable and fashionable products for all ages.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/Ximi Vogue web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -320,7 +320,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Glamor',
     slug: 'glamor',
     description: 'A beauty and cosmetics store providing makeup, skincare, and personal care products.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/Glamor web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -336,7 +336,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Thai Zone',
     slug: 'thai-zone',
     description: 'A dining outlet offering authentic Thai cuisine with fresh ingredients and traditional flavors.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/Thai Zone web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -352,7 +352,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Tajik',
     slug: 'tajik',
     description: 'A footwear and fashion accessories store offering comfortable and stylish designs.', 
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/Tajik web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -368,7 +368,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Sams Abaya',
     slug: 'sams-abaya',
     description: 'A women’s fashion store specializing in elegant abayas and modest wear with contemporary designs.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: "/Sam's Abaya web.JPG",
     category: 'Lifestyle',
     contact: {
@@ -384,7 +384,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Zamin Jewelers',
     slug: 'zamin-jewelers',
     description: 'A premium jewelry store offering exquisite gold, diamond, and gemstone collections.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/Zamin Jewelers web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -400,7 +400,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Traditional Khusa',
     slug: 'traditional-khusa',
     description: 'A footwear store offering traditional handcrafted khusa shoes with ethnic designs.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/Traditional Khusa web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -416,7 +416,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Taarkashi',
     slug: 'taarkashi',
     description: 'A decorative art store specializing in intricate taarkashi artwork and handicrafts.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/Taarkashi web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -432,7 +432,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'The Time Zone',
     slug: 'the-time-zone',
     description: 'A watch store offering premium and stylish timepieces for men and women.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/The Time Zone web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -448,7 +448,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Mehran Jewellers',
     slug: 'mehran-jewellers',
     description: 'A renowned jewelry brand offering gold, diamond, and bridal collections with elegant craftsmanship.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/Mehran Jewellers web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -464,7 +464,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Little Explorer',
     slug: 'little-explorer',
     description: 'A kids-focused store offering educational toys, games, and activities designed to inspire learning and creativity.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Little Explorer web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -481,7 +481,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'location',
    description: 'A fashion retail brand offering modern apparel and accessories with a focus on contemporary style.',
 
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Location web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -497,7 +497,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Majhurat',
     slug: 'majhurat',
     description: 'A traditional jewelry store specializing in classic gold designs and timeless craftsmanship.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Majhurat web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -513,7 +513,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Milli Shoes',
     slug: 'milli-shoes',
     description: 'A popular footwear brand offering stylish, comfortable, and affordable shoes for everyday wear.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Milli web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -529,7 +529,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Mini Try',
     slug: 'mini-try',
     description: 'A trendy accessories and essentials store offering small lifestyle products, gifts, and daily-use items.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Mini Try web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -545,7 +545,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Mr Kazi',
     slug: 'mr-kazi',
     description: 'A men’s fashion brand offering traditional and modern wear including formal, casual, and ethnic clothing.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Mr Kazi web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -561,7 +561,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'NDURE',
     slug: 'ndure',
     description: 'A leading footwear brand offering fashionable and durable shoes for men and women.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Ndure web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -577,7 +577,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Readers Point',
     slug: 'readers-point',
     description: 'A bookstore offering a wide range of books, stationery, magazines, and reading essentials.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Readers Point web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -593,7 +593,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Rivaj',
     slug: 'rivaj',
     description: 'A beauty brand offering affordable cosmetics, skincare, and personal care products.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Rivaj web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -609,7 +609,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Saeed Ghani',
     slug: 'saeed-ghani',
     description: 'A heritage herbal brand offering natural skincare, haircare, and wellness products.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Saeed Ghani web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -625,7 +625,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Service',
     slug: 'service',
     description: 'A convenience and service store providing everyday solutions and customer support essentials.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Service web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -641,7 +641,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Style and Comfort',
     slug: 'style-and-comfort',
     description: 'A home and lifestyle store offering furniture, décor, and products focused on comfort and design.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Style and Comfort web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -657,7 +657,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Sveston',
     slug: 'sveston',
     description: 'A watch brand offering stylish timepieces that combine modern design with reliable performance.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Sveston web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -673,7 +673,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Tech Studio',
     slug: 'tech-studio',
     description: 'A technology store offering mobile accessories, gadgets, and electronic solutions.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Tech Studio web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -689,7 +689,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Younique',
     slug: 'younique',
     description: 'A fashion and accessories brand offering trendy styles designed to stand out.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Younique web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -705,7 +705,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Zero',
     slug: 'zero',
     description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Zero web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -721,7 +721,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Balochistan Dry Fruit Marchent',
     slug: 'balochistan-dry-fruit-marchent',
     description: 'A specialty store offering premium quality dry fruits, nuts, and traditional healthy snacks.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/Balochistan Dry Fruit Marchent web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -737,7 +737,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Just Fragrance',
     slug: 'just-fragrance',
     description: 'A fragrance brand offering a wide range of perfumes and scents inspired by international blends.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/Just Fragrance web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -752,7 +752,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Haroons',
     slug: 'haroons',
     description: 'A well-known fashion and fabric store offering quality clothing, textiles, and accessories for all occasions.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Haroons web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -768,7 +768,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Jelly Fish',
     slug: 'jelly-factory',
     description: 'A fun and trendy store offering toys, gifts, novelty items, and colorful products for kids and families.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Jelly Fish web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -785,7 +785,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'johri',
     description: 'A traditional jewelry brand specializing in finely crafted gold and gemstone pieces with classic designs.',
 
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Johri web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -802,7 +802,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'kohinoor-jewels',
    description: 'A premium jewelry store offering exquisite gold, diamond, and bridal collections with elegant craftsmanship.',
 
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Kohinoor Jewels web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -818,7 +818,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'The Linen Company',
     slug: 'the-linen-company',
     description: 'A home furnishing brand offering premium bed linens, towels, and textile essentials for modern living.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Linen web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -834,7 +834,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Friends Home',
     slug: 'friends-home',
     description: 'A home essentials store offering kitchenware, household items, décor, and everyday products for comfortable living.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Friends Home web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -850,7 +850,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Dry Fruit',
     slug: 'dry-fruit',
     description: 'Japanese-inspired lifestyle products and accessories for everyday living.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Dry Fruit web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -866,7 +866,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Diamond Crown',
     slug: 'diamond-crown',
     description: 'An elegant jewelry brand offering finely crafted gold, diamond, and gemstone pieces for timeless style and special occasions.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Diamond Crown web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -882,7 +882,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'D Watson',
     slug: 'd-watson',
     description: 'A trusted health and beauty retailer offering skincare, cosmetics, personal care products, and wellness essentials.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/D watson web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -898,7 +898,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Carrefour',
     slug: 'carrefour',
     description: 'A leading global retail chain offering groceries, fresh produce, household essentials, electronics, and everyday necessities under one roof.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Carrefour web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -919,7 +919,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Bata',
     slug: 'bata',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/.jpg',
+    logo: '/logo/.jpg',
     backgroundImage: '/shops/Bata web.JPG',
     category: 'Lifestyle',
     contact: {

@@ -92,7 +92,7 @@ const LandingVideo = () => {
             pointerEvents: 'none'
           }}
         >
-          <source src="/gigamallvideo.mp4" type="video/mp4" />
+          <source src="/video/gigamallvideo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </motion.video>
       ) : (

@@ -316,7 +316,7 @@ export default function FeaturedSection() {
                     }}
                   >
                     <Image
-                      src="/Giga Mall_.png"
+                      src="/logo/Giga Mall_.png"
                       alt="Giga Mall"
                       width={120}
                       height={43}

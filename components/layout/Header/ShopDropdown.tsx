@@ -313,7 +313,7 @@ const ShopDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: ShopDropdownProps)
             }}
           >
             <Image
-              src="/6485.jpg"
+              src="/shops/alkaram.jpg"
               alt="Chinatown"
               width={400}
               height={200}

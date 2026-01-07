@@ -171,7 +171,7 @@ const Card = ({
                 }}
               >
                 <Image 
-                  src="/Giga Mall_.png" 
+                  src="/logo/Giga Mall_.png" 
                   alt="Giga Mall Logo" 
                   width={90}
                   height={30}

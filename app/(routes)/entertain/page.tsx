@@ -160,7 +160,7 @@ export default function EntertainPage() {
                 objectFit: "cover",
               }}
             >
-              <source src="/Funcity Reel mobile view.mp4" type="video/mp4" />
+              <source src="/video/Funcity Reel mobile view.mp4" type="video/mp4" />
             </video>
           </Box>
 
@@ -198,7 +198,7 @@ export default function EntertainPage() {
                 objectFit: "cover",
               }}
             >
-              <source src="/funcity1.mp4" type="video/mp4" />
+              <source src="/video/funcity1.mp4" type="video/mp4" />
             </video>
           </Box>
 

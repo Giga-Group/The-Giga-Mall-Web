@@ -59,7 +59,7 @@ const DownloadGigaMallApp = () => {
             }}
           >
             <Image
-              src="/mobile%20screen.png"
+              src="/mobile screen.png"
               alt="Giga Mall app screen preview"
               width={340}
               height={780}

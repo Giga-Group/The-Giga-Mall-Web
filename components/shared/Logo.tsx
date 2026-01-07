@@ -9,7 +9,7 @@ interface LogoProps {
 const Logo = ({ width = 180, height = 60, priority = false }: LogoProps) => {
   return (
     <Image
-      src="/Giga Mall_.png"
+      src="/logo/Giga Mall_.png"
       alt="Giga Mall"
       width={width}
       height={height}

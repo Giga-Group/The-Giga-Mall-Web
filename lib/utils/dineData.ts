@@ -28,8 +28,8 @@ export const dineDetails: DineDetail[] = [
     name: 'Cheezious',
     slug: 'cheezious',
     description: 'Delicious cheesy delights and comfort food favorites. Experience the perfect blend of flavors in every bite.',
-    logo: '/cheezious logo.png',
-    backgroundImage: '/cheezious.jpeg',
+    logo: '/logo/cheezious logo.png',
+    backgroundImage: '/dine/cheezious.jpeg',
     category: 'Fast Food',
     contact: {
       phone: '+971-50-501-8599'
@@ -44,8 +44,8 @@ export const dineDetails: DineDetail[] = [
     name: 'Pizza Hut',
     slug: 'pizzahut',
     description: 'World-famous pizza with fresh ingredients and signature flavors. Dine in, carry out, or enjoy delivery.',
-    logo: '/pizza hut logo.jpg',
-    backgroundImage: '/pizzahut.jpeg',
+    logo: '/logo/pizza hut logo.jpg',
+    backgroundImage: '/dine/pizzahut.jpeg',
     category: 'Restaurant',
     contact: {
       phone: '+971-50-501-8598'
@@ -60,8 +60,8 @@ export const dineDetails: DineDetail[] = [
     name: 'Wild Wings',
     slug: 'wild-wings',
     description: 'Bold flavors and crispy wings in a vibrant atmosphere. Perfect for sharing with friends and family.',
-    logo: '/wings logo.jpg',
-    backgroundImage: '/wild-wings.jpeg',
+    logo: '/logo/wings logo.jpg',
+    backgroundImage: '/dine/wild-wings.jpeg',
     category: 'Restaurant',
     contact: {
       phone: '+971-50-501-8597'
@@ -302,12 +302,12 @@ export const dineDetails: DineDetail[] = [
     name: 'McDonald\'s',
     slug: 'mcdonalds',
     description: 'I\'m lovin\' it! Enjoy your favorite burgers, fries, and more. Fast, friendly service in a clean, comfortable environment.',
-    logo: '/macdonalds logo.png',
+    logo: '/logo/macdonalds logo.png',
     contact: {
       phone: '+971-50-501-8516'
     },
     category: 'Fast Food',
-    backgroundImage: '/macdonalds.jpeg',
+    backgroundImage: '/dine/macdonalds.jpeg',
     location: {
       level: 'Ground Floor',
       parking: 'P1, Main Parking',
@@ -318,12 +318,12 @@ export const dineDetails: DineDetail[] = [
     name: 'Hardee\'s',
     slug: 'hardees',
     description: 'Made from scratch. Fresh, quality ingredients in every burger, sandwich, and breakfast item. Bold flavors you\'ll love.',
-    logo: '/hardees logo.jpg',
+    logo: '/logo/hardees logo.jpg',
     contact: {
       phone: '+971-50-501-8523'
     },
     category: 'Fast Food',
-    backgroundImage: '/hardees.jpeg',
+    backgroundImage: '/dine/hardees.jpeg',
     location: {
       level: 'Ground Floor',
       parking: 'P1, Main Parking',
@@ -424,12 +424,12 @@ export const dineDetails: DineDetail[] = [
     name: 'Red Apple',
     slug: 'redapple',
     description: 'A delightful dining experience offering fresh and flavorful dishes in a welcoming atmosphere.',
-    logo: '/red apple logo.jpg',
+    logo: '/logo/red apple logo.jpg',
     contact: {
       phone: '+971-50-501-8524'
     },
     category: 'Restaurant',
-    backgroundImage: '/redapple.JPG',
+    backgroundImage: '/dine/redapple.JPG',
     location: {
       level: 'Ground Floor',
       parking: 'P1, Main Parking',
@@ -440,12 +440,12 @@ export const dineDetails: DineDetail[] = [
     name: 'OPTP',
     slug: 'optp',
     description: 'Experience authentic flavors and traditional cuisine in a modern setting.',
-    logo: '/optp logo.jpg',
+    logo: '/logo/optp logo.jpg',
     contact: {
       phone: '+971-50-501-8525'
     },
     category: 'Restaurant',
-    backgroundImage: '/optp.JPG',
+    backgroundImage: '/dine/optp.JPG',
     location: {
       level: 'Ground Floor',
       parking: 'P1, Main Parking',
@@ -456,12 +456,12 @@ export const dineDetails: DineDetail[] = [
     name: 'Chachajee',
     slug: 'chachajee',
     description: 'A beloved local favorite serving delicious traditional dishes with a modern twist.',
-    logo: '/chachajee logo.jpg',
+    logo: '/logo/chachajee logo.jpg',
     contact: {
       phone: '+971-50-501-8526'
     },
     category: 'Restaurant',
-    backgroundImage: '/chachajee.JPG',
+    backgroundImage: '/dine/chachajee.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -472,12 +472,12 @@ export const dineDetails: DineDetail[] = [
     name: 'Simply Sufi',
     slug: 'simplysufi',
     description: 'Authentic flavors and traditional recipes served in a warm and inviting atmosphere.',
-    logo: '/simplysufi logo.jpg',
+    logo: '/logo/simplysufi logo.jpg',
     contact: {
       phone: '+971-50-501-8527'
     },
     category: 'Restaurant',
-    backgroundImage: '/simplysufi.JPG',
+    backgroundImage: '/dine/simplysufi.JPG',
     location: {
       level: 'Ground Floor',
       parking: 'P1, Main Parking',
@@ -488,12 +488,12 @@ export const dineDetails: DineDetail[] = [
     name: 'Rewayat',
     slug: 'rewayat',
     description: 'Traditional cuisine with a contemporary touch, bringing heritage flavors to your table.',
-    logo: '/rewayat logo.jpg',
+    logo: '/logo/rewayat logo.jpg',
     contact: {
       phone: '+971-50-501-8528'
     },
     category: 'Restaurant',
-    backgroundImage: '/rewayat.JPG',
+    backgroundImage: '/dine/rewayat.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -504,12 +504,12 @@ export const dineDetails: DineDetail[] = [
     name: 'Spice Factory',
     slug: 'spicefactory',
     description: 'Bold flavors and aromatic spices come together to create an unforgettable dining experience.',
-    logo: '/spice factory logo.jpg',
+    logo: '/logo/spice factory logo.jpg',
     contact: {
       phone: '+971-50-501-8529'
     },
     category: 'Restaurant',
-    backgroundImage: '/spicefactory.JPG',
+    backgroundImage: '/dine/spicefactory.JPG',
     location: {
       level: 'Ground Floor',
       parking: 'P1, Main Parking',
@@ -520,12 +520,12 @@ export const dineDetails: DineDetail[] = [
     name: 'China Grill',
     slug: 'chinagrill',
     description: 'Authentic Chinese cuisine with grilled specialties and traditional favorites.',
-    logo: '/china grill logo.jpg',
+    logo: '/logo/china grill logo.jpg',
     contact: {
       phone: '+971-50-501-8530'
     },
     category: 'Restaurant',
-    backgroundImage: '/chinagrill.JPG',
+    backgroundImage: '/dine/chinagrill.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -536,12 +536,12 @@ export const dineDetails: DineDetail[] = [
     name: 'Kababjees',
     slug: 'kababjees',
     description: 'Premium kebabs and grilled specialties made with the finest ingredients and traditional techniques.',
-    logo: '/kabab jees logo.jpg',
+    logo: '/logo/kabab jees logo.jpg',
     contact: {
       phone: '+971-50-501-8531'
     },
     category: 'Restaurant',
-    backgroundImage: '/kababjees.JPG',
+    backgroundImage: '/dine/kababjees.JPG',
     location: {
       level: 'Ground Floor',
       parking: 'P1, Main Parking',
@@ -552,7 +552,7 @@ export const dineDetails: DineDetail[] = [
     name: 'Dry Fruit',
     slug: 'dry-fruit',
     description: 'Premium kebabs and grilled specialties made with the finest ingredients and traditional techniques.',
-    logo: '/kabab jees logo.jpg',
+    logo: '/logo/kabab jees logo.jpg',
     contact: {
       phone: '+971-50-501-8531'
     },

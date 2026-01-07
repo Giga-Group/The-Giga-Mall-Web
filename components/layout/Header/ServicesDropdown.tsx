@@ -307,7 +307,7 @@ const ServicesDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: ServicesDropdo
             }}
           >
             <Image
-              src="/service potrait.jpg"
+              src="/Services/Al Raj mobile.JPG"
               alt="Featured Service"
               width={400}
               height={200}

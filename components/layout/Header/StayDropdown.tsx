@@ -87,7 +87,7 @@ const StayDropdown = ({ isOpen, onMouseEnter, onMouseLeave }: StayDropdownProps)
             }}
           >
             <Image
-              src="/2-ES---WLaMaquinista_OK.jpg"
+              src="/stay/stay2.jpeg"
               alt="Premium Stay"
               fill
               style={{ 
