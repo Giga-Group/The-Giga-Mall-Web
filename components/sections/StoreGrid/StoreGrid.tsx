@@ -6,6 +6,7 @@ import { useTheme, useMediaQuery } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useFilters } from '@/lib/contexts/FilterContext';
+import { storeDetails } from '@/lib/utils/storeData';
 
 export interface Store {
   name: string;
@@ -24,42 +25,48 @@ interface StoreGridProps {
 const getStoreLogo = (slug?: string): string | null => {
   if (!slug) return null;
 
+  // First, try to get logo from storeDetails
+  const storeDetail = storeDetails.find(store => store.slug === slug);
+  if (storeDetail?.logo) {
+    return storeDetail.logo;
+  }
+
   // Map of slug to logo filename - prioritizing dedicated logo files
   const logoMap: Record<string, string> = {
     // Shop logos - using dedicated logo files
-    'alkaram': '/alkaram logo.jpg',
-    'almas': '/almas logo.png',
-    'almirah': '/almirah logo.png',
-    'batik-studio': '/batik studio logo.jpg',
-    'bloon': '/bloon logo.jpg',
-    'bonanza': '/bonanza satrangi logo.jpg',
-    'breakout': '/Breakout logo.png',
-    'cambridge': '/cambridge logo.jpg',
-    'junaid-jamshed': '/junaid jamshed logo.png',
-    'kayseria': '/kayseria logo.jpg',
-    'miniso': '/miniso logo.jpg',
-    'nike': '/NIKE_-_WMoN.jpg',
-    'zara': '/zara-forum6257.jpg',
-    'other-stories': '/2-ES---WLaMaquinista_OK.jpg',
-    '100-capri': '/2-OK.jpg',
-    '12-storeez': '/1.png',
-    '1847-executive-grooming': '/DSC05412Food_OK_1.jpg',
+    'alkaram': '/logo/alkaram logo.jpg',
+    'almas': '/logo/almas logo.png',
+    'almirah': '/logo/almirah logo.png',
+    'batik-studio': '/logo/batik studio logo.jpg',
+    'bloon': '/logo/bloon logo.jpg',
+    'bonanza': '/logo/bonanza satrangi logo.jpg',
+    'breakout': '/logo/Breakout logo.png',
+    'cambridge': '/logo/cambridge logo.jpg',
+    'junaid-jamshed': '/logo/junaid jamshed logo.png',
+    'kayseria': '/logo/kayseria logo.jpg',
+    'miniso': '/logo/miniso logo.jpg',
+    'nike': '/shops/NIKE_-_WMoN.jpg',
+    'zara': '/shops/zara-forum6257.jpg',
+    'other-stories': '/stay/stay2.jpeg',
+    '100-capri': '/shops/2-OK.jpg',
+    '12-storeez': '/shops/1-WL_inside-_2732_x_1436_rijsgy-OK.jpg',
+    '1847-executive-grooming': '/shops/DSC05412Food_OK_1.jpg',
     // Restaurant/Dine logos
-    'macdonalds': '/macdonalds logo.jpg',
-    'mcdonalds': '/macdonalds logo.jpg',
-    'hardees': '/hardees logo.jpg',
-    'pizzahut': '/pizza hut logo.jpg',
-    'pizza-hut': '/pizza hut logo.jpg',
-    'cheezious': '/cheezious logo.jpg',
-    'wild-wings': '/wings logo.jpg',
-    'redapple': '/red apple logo.jpg',
-    'optp': '/optp logo.jpg',
-    'chachajee': '/chachajee logo.jpg',
-    'simplysufi': '/simplysufi logo.jpg',
-    'rewayat': '/rewayat logo.jpg',
-    'spicefactory': '/spice factory logo.jpg',
-    'chinagrill': '/china grill logo.jpg',
-    'kababjees': '/kabab jees logo.jpg',
+    'macdonalds': '/logo/macdonalds logo.png',
+    'mcdonalds': '/logo/macdonalds logo.png',
+    'hardees': '/logo/hardees logo.jpg',
+    'pizzahut': '/logo/pizza hut logo.jpg',
+    'pizza-hut': '/logo/pizza hut logo.jpg',
+    'cheezious': '/logo/cheezious logo.jpg',
+    'wild-wings': '/logo/wings logo.jpg',
+    'redapple': '/logo/red apple logo.jpg',
+    'optp': '/logo/optp logo.jpg',
+    'chachajee': '/logo/chachajee logo.jpg',
+    'simplysufi': '/logo/simplysufi logo.jpg',
+    'rewayat': '/logo/rewayat logo.jpg',
+    'spicefactory': '/logo/spice factory logo.jpg',
+    'chinagrill': '/logo/china grill logo.jpg',
+    'kababjees': '/logo/kabab jees logo.jpg',
   };
 
   return logoMap[slug] || null;

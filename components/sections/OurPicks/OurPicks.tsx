@@ -18,17 +18,17 @@ interface OurPicksProps {
 
 const defaultPicks: PickItem[] = [
   {
-    image: '/alkaram.jpg',
+    image: '/shops/alkaram.jpg',
     name: 'Alkaram',
     slug: 'alkaram'
   },
   {
-    image: '/batik-studio.jpg',
+    image: '/shops/batik-studio.jpg',
     name: 'Batik Studio',
     slug: 'batik-studio'
   },
   {
-    image: '/kayseria.jpeg',
+    image: '/shops/kayseria web.jpeg',
     name: 'Kayseria',
     slug: 'kayseria'
   }

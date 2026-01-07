@@ -59,7 +59,7 @@ const DownloadGigaMallApp = () => {
             }}
           >
             <Image
-              src="/mobile screen.png"
+              src="/Download Mobile App/mobile screen.png"
               alt="Giga Mall app screen preview"
               width={340}
               height={780}
@@ -110,7 +110,7 @@ const DownloadGigaMallApp = () => {
                 }}
               >
                 <Image
-                  src="/AppStore_Badge_US_English.svg"
+                  src="/Download Mobile App/AppStore_Badge_US_English.svg"
                   alt="Download on the App Store"
                   width={120}
                   height={40}
@@ -126,7 +126,7 @@ const DownloadGigaMallApp = () => {
                 }}
               >
                 <Image
-                  src="/GooglePlay_Badge_EN-US_English.svg"
+                  src="/Download Mobile App/GooglePlay_Badge_EN-US_English.svg"
                   alt="Get it on Google Play"
                   width={135}
                   height={40}

@@ -298,7 +298,7 @@ const Footer = () => {
                   }}
                 >
                   <Image
-                    src="/AppStore_Badge_US_English.svg"
+                    src="/Download Mobile App/AppStore_Badge_US_English.svg"
                     alt="Download on the App Store"
                     fill
                     style={{ objectFit: 'contain' }}
@@ -326,7 +326,7 @@ const Footer = () => {
                     }}
                   >
                     <Image
-                      src="/GooglePlay_Badge_EN-US_English.svg"
+                      src="/Download Mobile App/GooglePlay_Badge_EN-US_English.svg"
                       alt="GET IT ON Google Play"
                       fill
                       style={{ objectFit: 'contain' }}
