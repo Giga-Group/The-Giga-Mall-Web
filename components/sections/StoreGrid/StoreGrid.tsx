@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import { useTheme, useMediaQuery } from '@mui/material';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -21,7 +22,7 @@ interface StoreGridProps {
 // Helper function to get logo path from store slug
 const getStoreLogo = (slug?: string): string | null => {
   if (!slug) return null;
-  
+
   // Map of slug to logo filename - prioritizing dedicated logo files
   const logoMap: Record<string, string> = {
     // Shop logos - using dedicated logo files
@@ -59,7 +60,7 @@ const getStoreLogo = (slug?: string): string | null => {
     'chinagrill': '/china grill logo.jpg',
     'kababjees': '/kabab jees logo.jpg',
   };
-  
+
   return logoMap[slug] || null;
 };
 
@@ -79,10 +80,10 @@ const defaultStores: Store[] = [
   { name: 'Babys Day Out', slug: 'babys-day-out' },
   { name: 'Bata', slug: 'bata' },
   { name: 'Brand City', slug: 'brand-city' },
-  { name: 'Carrefour', slug: 'carrefour' },
-  { name: 'D Watson', slug: 'd-watson' },
+  // { name: 'Carrefour', slug: 'carrefour' },
+  // { name: 'D Watson', slug: 'd-watson' },
   { name: 'Diamond Crown', slug: 'diamond-crown' },
-  { name: 'Dry Fruit', slug: 'dry-fruit' },
+  // { name: 'Dry Fruit', slug: 'dry-fruit' },
   { name: 'Friends Home', slug: 'friends-home' },
   { name: 'Haroons', slug: 'haroons' },
   { name: 'Jelly Factory', slug: 'jelly-factory' },
@@ -128,36 +129,39 @@ const defaultStores: Store[] = [
 const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const initialVisible = parseInt(searchParams.get('visible') || '0');
+
+
   const [visibleCount, setVisibleCount] = useState(10); // Default for desktop
   const itemsPerPage = 5;
-  
+
   // Initialize visible count based on mobile/desktop
   useEffect(() => {
-    if (isMobile) {
-      setVisibleCount(6); // Show only 6 items on mobile initially
-    } else {
-      setVisibleCount(10); // Show all items on desktop
-    }
-  }, [isMobile]);
+    setVisibleCount(initialVisible || (isMobile ? 6 : 10));
+  }, [isMobile, initialVisible]);
+
 
   const handleLoadMore = () => {
-    if (isMobile) {
-      // On mobile, show all items when "Show More" is clicked
-      setVisibleCount(items.length);
-    } else {
-      // On desktop, use the existing pagination logic
-      setVisibleCount(prev => prev + itemsPerPage);
-    }
+    const newCount = isMobile ? items.length : visibleCount + itemsPerPage;
+    setVisibleCount(newCount);
+
+    // Update URL without reload
+    const url = new URL(window.location.href);
+    url.searchParams.set('visible', newCount.toString());
+    window.history.replaceState(null, '', url.toString());
   };
+
+
 
   // Determine which stores to show
   const visibleStores = items.slice(0, visibleCount);
-  
+
   // Check if we need to show "Show More" button
   // On mobile: show button if there are more than 6 items and not all are visible
   // On desktop: show button if there are more items to load
-  const hasMore = isMobile 
+  const hasMore = isMobile
     ? (items.length > 6 && visibleCount < items.length)
     : (visibleCount < items.length);
 
@@ -191,7 +195,7 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
         >
           {visibleStores.map((store, index) => {
             const logoPath = getStoreLogo(store.slug || store.name.toLowerCase().replace(/\s+/g, '-'));
-            
+
             return (
               <Link
                 key={index}

@@ -547,7 +547,23 @@ export const dineDetails: DineDetail[] = [
       parking: 'P1, Main Parking',
       mapPosition: { x: 39, y: 54 }
     }
-  }
+  },
+  {
+    name: 'Dry Fruit',
+    slug: 'dry-fruit',
+    description: 'Premium kebabs and grilled specialties made with the finest ingredients and traditional techniques.',
+    logo: '/kabab jees logo.jpg',
+    contact: {
+      phone: '+971-50-501-8531'
+    },
+    category: 'Restaurant',
+    backgroundImage: '/shops/Dry Fruit web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 39, y: 54 }
+    }
+  },
 ];
 
 export function getDineBySlug(slug: string): DineDetail | undefined {
