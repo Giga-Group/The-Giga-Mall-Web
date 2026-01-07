@@ -15,12 +15,12 @@ const firstLookItems: FirstLookItem[] = [
   {
     title: 'Quaid e Azam Day Celebration',
     description: 'Stay tuned for exciting updates and news from Giga Mall.',
-    image: '/upcoming10.jpg'
+    image: '/up coming/upcoming10.jpg'
   },
   {
     title: 'New Year 2026 Celebration',
     description: 'Stay tuned for exciting updates and news from Giga Mall.',
-    image: '/upcoming8.jpg'
+    image: '/up coming/upcoming8.jpg'
   },
   // {
   //   title: 'UPCOMING EVENT 1',
@@ -30,7 +30,7 @@ const firstLookItems: FirstLookItem[] = [
   {
     title: 'Tribal Beats 2025',
     description: 'Stay tuned for exciting updates and news from Giga Mall.',
-    image: '/upcoming2.JPG'
+    image: '/up coming/upcoming2.JPG'
   },
   // {
   //   title: 'UPCOMING EVENT 3',
@@ -40,22 +40,22 @@ const firstLookItems: FirstLookItem[] = [
   {
     title: 'Goldcrest Poolside',
     description: 'Stay tuned for exciting updates and news from Giga Mall.',
-    image: '/upcoming4.jpg'
+    image: '/up coming/upcoming4.jpg'
   },
   {
     title: 'Shop with joy',
     description: 'Stay tuned for exciting updates and news from Giga Mall.',
-    image: '/upcoming5.jpg'
+    image: '/up coming/upcoming5.jpg'
   },
   {
     title: 'Fun And Learning',
     description: 'Stay tuned for exciting updates and news from Giga Mall.',
-    image: '/upcoming6.jpg'
+    image: '/up coming/upcoming6.jpg'
   },
   {
     title: 'Hub of Shopping',
     description: 'Stay tuned for exciting updates and news from Giga Mall.',
-    image: '/upcoming7.jpg'
+    image: '/up coming/upcoming7.jpg'
   },
   
   // {

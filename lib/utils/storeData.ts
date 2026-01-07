@@ -369,7 +369,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'sams-abaya',
     description: 'A women’s fashion store specializing in elegant abayas and modest wear with contemporary designs.',
     logo: '/.jpg',
-    backgroundImage: '/Sams Abaya web.JPG',
+    backgroundImage: "/Sam's Abaya web.JPG",
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'

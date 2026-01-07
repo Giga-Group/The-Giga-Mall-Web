@@ -133,7 +133,7 @@ export default function CarrefourPage() {
             }}
           >
             <Image
-              src="/carrefour6.jpg"
+              src="/Carrefour/carrefour6.jpg"
               alt="Carrefour"
               fill
               priority
@@ -333,7 +333,7 @@ export default function CarrefourPage() {
               }}
             >
               <Image
-                src="/carrefour4.jpg"
+                src="/Carrefour/carrefour4.jpg"
                 alt="Carrefour at Giga Mall"
                 fill
                 style={{
@@ -386,7 +386,7 @@ export default function CarrefourPage() {
               }}
             >
               <Image
-                src="/carrefour3.jpg"
+                src="/Carrefour/carrefour3.jpg"
                 alt="Carrefour at Giga Mall"
                 fill
                 style={{
@@ -937,7 +937,7 @@ export default function CarrefourPage() {
               }}
             >
               <Image
-                src="/carrefour9.jpg"
+                src="/Carrefour/carrefour9.jpg"
                 alt="Electronics and Appliances at Carrefour"
                 fill
                 style={{

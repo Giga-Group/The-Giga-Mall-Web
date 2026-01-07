@@ -35,7 +35,7 @@ export default function ModelApartmentsPage() {
             }}
           >
             <Image
-              src="/stay1.jpeg"
+              src="/stay/stay1.jpeg"
               alt="Model Apartments"
               fill
               style={{
@@ -188,7 +188,7 @@ export default function ModelApartmentsPage() {
               }}
             >
               <Image
-                src="/stay6.jpg"
+                src="/stay/stay6.jpg"
                 alt="Model Apartment Interior"
                 fill
                 style={{
@@ -360,7 +360,7 @@ export default function ModelApartmentsPage() {
             }}
           >
             <Image
-              src="/stay4.jpeg"
+              src="/stay/stay4.jpeg"
               alt="Model Apartment Showcase"
               fill
               style={{
@@ -521,7 +521,7 @@ export default function ModelApartmentsPage() {
               }}
             >
               <Image
-                src="/stay8.jpg"
+                src="/stay/stay8.jpg"
                 alt="Luxury Model Apartment"
                 fill
                 style={{

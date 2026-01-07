@@ -19,33 +19,33 @@ const allTopPicks: TopPick[] = [
   // Shop picks
   {
     brand: 'Alkaram',
-    image: '/alkaram.jpg',
+    image: '/shops/alkaram.jpg',
     link: '/shop/alkaram'
   },
   {
     brand: 'Batik Studio',
-    image: '/batik-studio.jpg',
+    image: '/shops/batik-studio.jpg',
     link: '/shop/batik-studio'
   },
   {
     brand: 'Kayseria',
-    image: '/kayseria.jpeg',
+    image: '/shops/kayseria web.jpeg',
     link: '/shop/kayseria'
   },
   // Dine picks
   {
     brand: 'Cheezious',
-    image: '/cheezious.jpeg',
+    image: '/dine/cheezious.jpeg',
     link: '/dine/cheezious'
   },
   {
     brand: 'Pizza Hut',
-    image: '/pizzahut.jpeg',
+    image: '/dine/pizzahut.jpeg',
     link: '/dine/pizzahut'
   },
   {
     brand: 'Wild Wings',
-    image: '/wild-wings.jpeg',
+    image: '/dine/wild-wings.jpeg',
     link: '/dine/wild-wings'
   }
 ];
@@ -54,42 +54,42 @@ const allTopPicks: TopPick[] = [
 const mobileTopPicks: TopPick[] = [
   {
     brand: 'Red Apple',
-    image: '/toppick1.JPG',
+    image: '/top picks/toppick1.JPG',
     link: '#'
   },
   {
     brand: 'OPTP',
-    image: '/toppick2.JPG',
+    image: '/top picks/toppick2.JPG',
     link: '#'
   },
   {
     brand: 'Chachajee',
-    image: '/toppick3.JPG',
+    image: '/top picks/toppick3.JPG',
     link: '#'
   },
   {
     brand: 'Simply Sufi',
-    image: '/toppick4.JPG',
+    image: '/top picks/toppick4.JPG',
     link: '#'
   },
   {
     brand: 'Rewayat',
-    image: '/toppick5.JPG',
+    image: '/top picks/toppick5.JPG',
     link: '#'
   },
   {
     brand: 'Spice Factory',
-    image: '/toppick6.JPG',
+    image: '/top picks/toppick6.JPG',
     link: '#'
   },
   {
     brand: 'China Grill',
-    image: '/toppick7.JPG',
+    image: '/top picks/toppick7.JPG',
     link: '#'
   },
   {
     brand: 'Kababjees',
-    image: '/toppick8.JPG',
+    image: '/top picks/toppick8.JPG',
     link: '#'
   }
 ];
