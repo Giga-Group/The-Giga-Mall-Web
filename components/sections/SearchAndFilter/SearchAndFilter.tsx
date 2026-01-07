@@ -126,7 +126,7 @@ const SearchAndFilter = ({
     if (categoryParam) {
       setCategory(categoryParam);
     }
-  }, [searchParams]);
+  }, [searchParams, setCategory]);
 
   return (
     <Box

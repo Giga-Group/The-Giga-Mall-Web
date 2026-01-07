@@ -9,8 +9,8 @@ import Navigation from './Navigation';
 import ShopDropdown from './ShopDropdown';
 import DineDropdown from './DineDropdown';
 // import StayDropdown from './StayDropdown';
-import EntertainDropdown from './EntertainDropdown';
-import PlanVisitDropdown from './PlanVisitDropdown';
+// import EntertainDropdown from './EntertainDropdown';
+// import PlanVisitDropdown from './PlanVisitDropdown';
 import ServicesDropdown from './ServicesDropdown';
 import SecondaryHeader from './SecondaryHeader';
 import MobileMenu from './MobileMenu';
@@ -30,8 +30,8 @@ const Header = () => {
   const [dineHovered, setDineHovered] = useState(false);
   // const [stayHovered, setStayHovered] = useState(false);
   const [servicesHovered, setServicesHovered] = useState(false);
-  const [entertainHovered, setEntertainHovered] = useState(false);
-  const [planVisitHovered, setPlanVisitHovered] = useState(false);
+  // const [entertainHovered, setEntertainHovered] = useState(false);
+  // const [planVisitHovered, setPlanVisitHovered] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const clearAllDropdowns = () => {
@@ -183,20 +183,12 @@ const Header = () => {
             // setEntertainHovered(false);
             // setPlanVisitHovered(false);
           }}
-          onEntertainHover={() => {
-            // Dropdown hidden for now
-            // setShopHovered(false);
-            // setDineHovered(false);
-            // setEntertainHovered(true);
-            // setPlanVisitHovered(false);
-          }}
-          onPlanVisitHover={() => {
-            // Dropdown hidden for now
-            // setShopHovered(false);
-            // setDineHovered(false);
-            // setEntertainHovered(false);
-            // setPlanVisitHovered(true);
-          }}
+          // onEntertainHover={() => {
+          //   // Dropdown hidden for now
+          // }}
+          // onPlanVisitHover={() => {
+          //   // Dropdown hidden for now
+          // }}
           onClearHover={clearAllDropdowns}
           isSmallScreen={isSmallScreen}
         />

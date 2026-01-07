@@ -9,13 +9,13 @@ interface NavigationProps {
   onDineHover: () => void;
   // onStayHover: () => void;
   onServicesHover: () => void;
-  onEntertainHover: () => void;
-  onPlanVisitHover: () => void;
+  // onEntertainHover: () => void;
+  // onPlanVisitHover: () => void;
   onClearHover: () => void;
   isSmallScreen: boolean;
 }
 
-const Navigation = ({ navItems, onShopHover, onDineHover, /* onStayHover, */ onServicesHover, onEntertainHover, onPlanVisitHover, onClearHover, isSmallScreen }: NavigationProps) => {
+const Navigation = ({ navItems, onShopHover, onDineHover, /* onStayHover, */ onServicesHover, /* onEntertainHover, onPlanVisitHover, */ onClearHover, isSmallScreen }: NavigationProps) => {
   if (isSmallScreen) return null;
 
   return (
