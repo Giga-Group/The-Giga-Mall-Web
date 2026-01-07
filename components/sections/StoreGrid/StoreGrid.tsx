@@ -1,17 +1,18 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import { useTheme, useMediaQuery } from '@mui/material';
-import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useFilters } from '@/lib/contexts/FilterContext';
 
 export interface Store {
   name: string;
   slug?: string;
   hasOffers?: boolean;
   acceptsGiftCard?: boolean;
+  category?: string;
 }
 
 interface StoreGridProps {
@@ -126,44 +127,130 @@ const defaultStores: Store[] = [
   { name: 'Mehran Jewellers', slug: 'mehran-jewellers' },
 ];
 
+// Helper function to check if a name matches viewBy filter
+const matchesViewBy = (name: string, viewBy: string): boolean => {
+  if (!viewBy) return true;
+  
+  const firstChar = name.charAt(0).toLowerCase();
+  
+  switch (viewBy) {
+    case '0-9':
+      return /[0-9]/.test(firstChar);
+    case 'a-f':
+      return /[a-f]/.test(firstChar);
+    case 'g-l':
+      return /[g-l]/.test(firstChar);
+    case 'm-r':
+      return /[m-r]/.test(firstChar);
+    case 's-z':
+      return /[s-z]/.test(firstChar);
+    default:
+      return true;
+  }
+};
+
 const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const router = useRouter();
-  const searchParams = useSearchParams();
-  const initialVisible = parseInt(searchParams.get('visible') || '0');
-
-
+  const { filters } = useFilters();
+  
   const [visibleCount, setVisibleCount] = useState(10); // Default for desktop
   const itemsPerPage = 5;
 
   // Initialize visible count based on mobile/desktop
   useEffect(() => {
-    setVisibleCount(initialVisible || (isMobile ? 6 : 10));
-  }, [isMobile, initialVisible]);
+    if (isMobile) {
+      setVisibleCount(6); // Show only 6 items on mobile initially
+    } else {
+      setVisibleCount(10); // Show all items on desktop
+    }
+  }, [isMobile]);
 
+
+  // Filter items based on search query, category, viewBy, and offers
+  const filteredItems = useMemo(() => {
+    return items.filter((store) => {
+      // Search query filter (case-insensitive)
+      if (filters.searchQuery) {
+        const searchLower = filters.searchQuery.toLowerCase();
+        const nameLower = store.name.toLowerCase();
+        if (!nameLower.includes(searchLower)) {
+          return false;
+        }
+      }
+
+      // Category filter (if category is selected and store has category)
+      if (filters.category && store.category) {
+        // Map filter category values to data category values
+        const categoryMap: Record<string, string[]> = {
+          'fashion-men': ['Fashion'],
+          'fashion-women': ['Fashion'],
+          'fashion-children': ['Fashion'],
+          'beauty': ['Beauty'],
+          'home': ['Lifestyle'],
+          'toys': ['Lifestyle'],
+          'electronics': ['Lifestyle'],
+          'cafe': ['Cafe'],
+          'fast-food': ['Fast Food'],
+          'food-drink': ['Food & Drink'],
+          'icecream': ['Icecream'],
+          'restaurant': ['Restaurant', 'Fine Dining'],
+        };
+        
+        const matchingCategories = categoryMap[filters.category] || [];
+        if (matchingCategories.length > 0 && !matchingCategories.includes(store.category)) {
+          return false;
+        }
+        // If no mapping exists, do exact match
+        if (matchingCategories.length === 0 && filters.category.toLowerCase() !== store.category.toLowerCase()) {
+          return false;
+        }
+      }
+
+      // View by filter (alphabetical ranges)
+      if (!matchesViewBy(store.name, filters.viewBy)) {
+        return false;
+      }
+
+      // Offers filter
+      if (filters.showOffersOnly && !store.hasOffers) {
+        return false;
+      }
+
+      return true;
+    });
+  }, [items, filters.searchQuery, filters.category, filters.viewBy, filters.showOffersOnly]);
+
+  // Reset visible count when filters change
+  useEffect(() => {
+    if (isMobile) {
+      setVisibleCount(6);
+    } else {
+      setVisibleCount(10);
+    }
+  }, [filters.searchQuery, filters.category, filters.viewBy, filters.showOffersOnly, isMobile]);
 
   const handleLoadMore = () => {
-    const newCount = isMobile ? items.length : visibleCount + itemsPerPage;
-    setVisibleCount(newCount);
-
-    // Update URL without reload
-    const url = new URL(window.location.href);
-    url.searchParams.set('visible', newCount.toString());
-    window.history.replaceState(null, '', url.toString());
+    if (isMobile) {
+      // On mobile, show all items when "Show More" is clicked
+      setVisibleCount(filteredItems.length);
+    } else {
+      // On desktop, use the existing pagination logic
+      setVisibleCount(prev => prev + itemsPerPage);
+    }
   };
 
 
 
   // Determine which stores to show
-  const visibleStores = items.slice(0, visibleCount);
-
+  const visibleStores = filteredItems.slice(0, visibleCount);
+  
   // Check if we need to show "Show More" button
   // On mobile: show button if there are more than 6 items and not all are visible
   // On desktop: show button if there are more items to load
-  const hasMore = isMobile
-    ? (items.length > 6 && visibleCount < items.length)
-    : (visibleCount < items.length);
+  const hasMore = isMobile 
+    ? (filteredItems.length > 6 && visibleCount < filteredItems.length)
+    : (visibleCount < filteredItems.length);
 
   return (
     <Box

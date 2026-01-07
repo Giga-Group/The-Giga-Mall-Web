@@ -6,6 +6,7 @@ import SearchAndFilter from '@/components/sections/SearchAndFilter';
 import StoreGrid from '@/components/sections/StoreGrid';
 import DiscoverEventsOffers from '@/components/sections/DiscoverEventsOffers';
 import ExploreTheMall from '@/components/sections/ExploreTheMall';
+import { FilterProvider } from '@/lib/contexts/FilterContext';
 import { Box, Typography } from '@mui/material';
 import { Suspense } from 'react';
 import type { Store } from '@/components/sections/StoreGrid/StoreGrid';
@@ -15,12 +16,13 @@ const services: Store[] = serviceDetails.map(service => ({
   name: service.name,
   slug: service.slug,
   hasOffers: service.hasOffers,
-  acceptsGiftCard: service.acceptsGiftCard
+  acceptsGiftCard: service.acceptsGiftCard,
+  category: service.category,
 }));
 
 export default function ServicesDirectoryPage() {
   return (
-    <>
+    <FilterProvider>
       <Header />
       <main>
         <Box
@@ -85,7 +87,7 @@ export default function ServicesDirectoryPage() {
         </Box>
       </main>
       <Footer />
-    </>
+    </FilterProvider>
   );
 }
 

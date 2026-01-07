@@ -7,11 +7,23 @@ import SearchAndFilter from '@/components/sections/SearchAndFilter';
 import StoreGrid from '@/components/sections/StoreGrid';
 import DiscoverEventsOffers from '@/components/sections/DiscoverEventsOffers';
 import ExploreTheMall from '@/components/sections/ExploreTheMall';
-import { Box, Typography } from '@mui/material';
-import { Suspense } from 'react';
+import { FilterProvider } from '@/lib/contexts/FilterContext';
+import { dineDetails } from '@/lib/utils/dineData';
 import type { PickItem } from '@/components/sections/OurPicks/OurPicks';
 import type { Store } from '@/components/sections/StoreGrid/StoreGrid';
+import { Box, Typography } from '@mui/material';
+import { Suspense } from 'react';
 
+// Convert dineDetails to Store format for StoreGrid
+const restaurants: Store[] = dineDetails.map(dine => ({
+  name: dine.name,
+  slug: dine.slug,
+  hasOffers: dine.hasOffers,
+  acceptsGiftCard: dine.acceptsGiftCard,
+  category: dine.category,
+}));
+
+// Get top picks for restaurants
 const restaurantPicks: PickItem[] = [
   {
     image: '/cheezious.jpeg',
@@ -30,25 +42,9 @@ const restaurantPicks: PickItem[] = [
   }
 ];
 
-const restaurants: Store[] = [
-  { name: 'McDonald\'s', slug: 'mcdonalds' },
-  { name: 'Hardee\'s', slug: 'hardees' },
-  { name: 'Cheezious', slug: 'cheezious' },
-  { name: 'Pizza Hut', slug: 'pizzahut' },
-  { name: 'Wild Wings', slug: 'wild-wings' },
-  { name: 'Red Apple', slug: 'redapple' },
-  { name: 'OPTP', slug: 'optp' },
-  { name: 'Chachajee', slug: 'chachajee' },
-  { name: 'Simply Sufi', slug: 'simplysufi' },
-  { name: 'Rewayat', slug: 'rewayat' },
-  { name: 'Spice Factory', slug: 'spicefactory' },
-  { name: 'China Grill', slug: 'chinagrill' },
-  { name: 'Kababjees', slug: 'kababjees' }
-];
-
 export default function DinePage() {
   return (
-    <>
+    <FilterProvider>
       <Header />
       <main>
         <Box
@@ -101,7 +97,7 @@ export default function DinePage() {
         </Box>
       </main>
       <Footer />
-    </>
+    </FilterProvider>
   );
 }
 

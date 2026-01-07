@@ -330,32 +330,6 @@ export default function ServicesPage() {
               mt: { xs: 6, md: 8 },
             }}
           >
-            {/* Heading */}
-            <Box sx={{ textAlign: "left", mb: 4 }}>
-              <Typography
-                variant="h2"
-                sx={{
-                  fontFamily: '"Arvo", serif',
-                  fontSize: { xs: "1.6rem", sm: "2rem", md: "2.5rem" },
-                  fontWeight: 400,
-                  color: "#000000",
-                  mb: 1,
-                }}
-              >
-                Visitor Guidelines
-              </Typography>
-              <Typography
-                variant="body1"
-                sx={{
-                  fontFamily: '"Jost", "Mulish", system-ui, sans-serif',
-                  fontSize: { xs: "0.95rem", sm: "1rem", md: "1.1rem" },
-                  fontWeight: 300,
-                  color: "#555555",
-                }}
-              >
-                Tips to ensure a safe and enjoyable visit
-              </Typography>
-            </Box>
             {isMobile ? (
               // Mobile carousel
               <Box ref={emblaRef} sx={{ overflow: "hidden" }}>

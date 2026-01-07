@@ -7,12 +7,24 @@ import SearchAndFilter from '@/components/sections/SearchAndFilter';
 import StoreGrid from '@/components/sections/StoreGrid';
 import DiscoverEventsOffers from '@/components/sections/DiscoverEventsOffers';
 import ExploreTheMall from '@/components/sections/ExploreTheMall';
+import { FilterProvider } from '@/lib/contexts/FilterContext';
+import { storeDetails } from '@/lib/utils/storeData';
+import type { Store } from '@/components/sections/StoreGrid/StoreGrid';
 import { Box, Typography } from '@mui/material';
 import { Suspense } from 'react';
 
+// Convert storeDetails to Store format for StoreGrid
+const stores: Store[] = storeDetails.map(store => ({
+  name: store.name,
+  slug: store.slug,
+  hasOffers: store.hasOffers,
+  acceptsGiftCard: store.acceptsGiftCard,
+  category: store.category,
+}));
+
 export default function ShopPage() {
   return (
-    <>
+    <FilterProvider>
       <Header />
       <main>
         <Box
@@ -55,7 +67,7 @@ export default function ShopPage() {
           </Suspense>
 
           {/* Store Grid Section */}
-          <StoreGrid />
+          <StoreGrid items={stores} basePath="/shop" />
 
           {/* Discover Events & Offers Section */}
           <DiscoverEventsOffers />
@@ -65,6 +77,6 @@ export default function ShopPage() {
         </Box>
       </main>
       <Footer />
-    </>
+    </FilterProvider>
   );
 }

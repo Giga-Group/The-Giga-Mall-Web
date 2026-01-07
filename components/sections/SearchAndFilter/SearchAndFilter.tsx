@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import { useFilters } from "@/lib/contexts/FilterContext";
 import {
   Box,
   TextField,
@@ -85,12 +86,22 @@ const SearchAndFilter = ({
   offersLabel,
 }: SearchAndFilterProps) => {
   const searchParams = useSearchParams();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [category, setCategory] = useState("");
-  const [subcategory, setSubcategory] = useState("");
-  const [viewBy, setViewBy] = useState("");
-  const [showOffersOnly, setShowOffersOnly] = useState(false);
+  const {
+    filters,
+    setSearchQuery,
+    setCategory,
+    setSubcategory,
+    setViewBy,
+    setShowOffersOnly,
+  } = useFilters();
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
+  
+  // Use filter values from context
+  const searchQuery = filters.searchQuery;
+  const category = filters.category;
+  const subcategory = filters.subcategory;
+  const viewBy = filters.viewBy;
+  const showOffersOnly = filters.showOffersOnly;
 
   // Determine which categories and subcategories to use
   const categoryOptions =
