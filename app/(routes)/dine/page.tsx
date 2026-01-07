@@ -26,17 +26,17 @@ const restaurants: Store[] = dineDetails.map(dine => ({
 // Get top picks for restaurants
 const restaurantPicks: PickItem[] = [
   {
-    image: '/cheezious.jpeg',
+    image: '/dine/cheezious.jpeg',
     name: 'Cheezious',
     slug: 'cheezious'
   },
   {
-    image: '/pizzahut.jpeg',
+    image: '/dine/pizzahut.jpeg',
     name: 'Pizza Hut',
     slug: 'pizzahut'
   },
   {
-    image: '/wild-wings.jpeg',
+    image: '/dine/wild-wings.jpeg',
     name: 'Wild Wings',
     slug: 'wild-wings'
   }

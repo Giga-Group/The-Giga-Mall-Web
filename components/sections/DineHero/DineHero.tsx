@@ -16,21 +16,21 @@ const getDineLogo = (slug?: string): string | null => {
   
   // Map of slug to logo filename - matching StoreGrid
   const logoMap: Record<string, string> = {
-    'macdonalds': '/macdonalds logo.jpg',
-    'mcdonalds': '/macdonalds logo.jpg',
-    'hardees': '/hardees logo.jpg',
-    'pizzahut': '/pizza hut logo.jpg',
-    'pizza-hut': '/pizza hut logo.jpg',
-    'cheezious': '/cheezious logo.jpg',
-    'wild-wings': '/wings logo.jpg',
-    'redapple': '/red apple logo.jpg',
-    'optp': '/optp logo.jpg',
-    'chachajee': '/chachajee logo.jpg',
-    'simplysufi': '/simplysufi logo.jpg',
-    'rewayat': '/rewayat logo.jpg',
-    'spicefactory': '/spice factory logo.jpg',
-    'chinagrill': '/china grill logo.jpg',
-    'kababjees': '/kabab jees logo.jpg',
+    'macdonalds': '/logo/macdonalds logo.png',
+    'mcdonalds': '/logo/macdonalds logo.png',
+    'hardees': '/logo/hardees logo.jpg',
+    'pizzahut': '/logo/pizza hut logo.jpg',
+    'pizza-hut': '/logo/pizza hut logo.jpg',
+    'cheezious': '/logo/cheezious logo.jpg',
+    'wild-wings': '/logo/wings logo.jpg',
+    'redapple': '/logo/red apple logo.jpg',
+    'optp': '/logo/optp logo.jpg',
+    'chachajee': '/logo/chachajee logo.jpg',
+    'simplysufi': '/logo/simplysufi logo.jpg',
+    'rewayat': '/logo/rewayat logo.jpg',
+    'spicefactory': '/logo/spice factory logo.jpg',
+    'chinagrill': '/logo/china grill logo.jpg',
+    'kababjees': '/logo/kabab jees logo.jpg',
   };
   
   return logoMap[slug] || null;
