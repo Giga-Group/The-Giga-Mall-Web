@@ -10,57 +10,57 @@ import { getMobileBrandImage, getMobileDineImage } from '@/lib/utils/constants';
 
 const featuredItems: FeaturedItem[] = [
   {
-    image: '/alkaram.jpg',
+    image: '/Featured/alkaram.jpg',
     name: 'Alkaram',
     description: 'Elegant fashion and premium textiles for the modern wardrobe.',
   },
   {
-    image: '/almas.jpeg',
+    image: '/Featured/almas.jpeg',
     name: 'Almas',
     description: 'Discover timeless elegance with our curated collection of premium fashion.',
   },
   {
-    image: '/almirah.jpeg',
+    image: '/Featured/almirah.jpeg',
     name: 'Almirah',
     description: 'Your destination for contemporary fashion and style essentials.',
   },
   {
-    image: '/batik-studio.jpg',
+    image: '/Featured/batik-studio.jpg',
     name: 'Batik Studio',
     description: 'Traditional artistry meets modern fashion in our unique batik collections.',
   },
   {
-    image: '/bloon.jpg',
+    image: '/Featured/Bloon.JPG',
     name: 'Bloon',
     description: 'Fresh styles and vibrant fashion for every occasion.',
   },
   {
-    image: '/bonanza.jpeg',
+    image: '/Featured/Bonanza Satrangi web.JPG',
     name: 'Bonanza',
     description: 'Quality clothing and accessories for the whole family.',
   },
   {
-    image: '/breakout.jpeg',
+    image: '/Featured/breakout.jpeg',
     name: 'Breakout',
     description: 'Break free with bold designs and contemporary fashion statements.',
   },
   {
-    image: '/cambridge.jpeg',
+    image: '/Featured/cambridge.jpeg',
     name: 'Cambridge',
     description: 'Classic British style meets modern sophistication.',
   },
   {
-    image: '/junaid-jamshed.jpeg',
+    image: '/Featured/junaid-jamshed.jpeg',
     name: 'Junaid Jamshed',
     description: 'Traditional elegance reimagined for the modern lifestyle.',
   },
   {
-    image: '/kayseria.jpeg',
+    image: '/Featured/kayseria web.jpeg',
     name: 'Kayseria',
     description: 'Premium fashion and luxury textiles for the sophisticated shopper.',
   },
   {
-    image: '/miniso.jpeg',
+    image: '/Featured/miniso.jpeg',
     name: 'Miniso',
     description: 'Japanese-inspired lifestyle products and accessories for everyday living.',
   },

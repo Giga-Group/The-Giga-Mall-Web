@@ -10,43 +10,43 @@ import { getMobileBrandImage, getMobileDineImage } from '@/lib/utils/constants';
 const brandsRow1: Brand[] = [
   {
     name: 'Cheezious',
-    image: '/cheezious.jpeg'
+    image: '/Iconic Brands/cheezious.jpeg'
   },
   {
     name: 'McDonalds',
-    image: '/macdonalds.jpeg'
+    image: '/Iconic Brands/macdonalds.jpeg'
   },
   {
     name: 'Wild Wings',
-    image: '/wild-wings.jpeg'
+    image: '/Iconic Brands/wild-wings.jpeg'
   },
   {
     name: 'Hardees',
-    image: '/hardees.jpeg'
+    image: '/Iconic Brands/hardees.jpeg'
   },
   {
     name: 'Pizza Hut',
-    image: '/pizzahut.jpeg'
+    image: '/Iconic Brands/pizzahut.jpeg'
   },
   {
     name: 'Alkaram',
-    image: '/alkaram.jpg'
+    image: '/Iconic Brands/alkaram.jpg'
   },
   {
     name: 'Almas',
-    image: '/almas.jpeg'
+    image: '/Iconic Brands/almas.jpeg'
   },
   {
     name: 'Almirah',
-    image: '/almirah.jpeg'
+    image: '/Iconic Brands/almirah.jpeg'
   },
   {
     name: 'Bareeze',
-    image: '/bareeze.jpeg'
+    image: '/Iconic Brands/bareeze.jpeg'
   },
   {
     name: 'Batik Studio',
-    image: '/batik-studio.jpg'
+    image: '/Iconic Brands/batik-studio.jpg'
   },
 ];
 
@@ -54,43 +54,43 @@ const brandsRow1: Brand[] = [
 const brandsRow2: Brand[] = [
   {
     name: 'Bloon',
-    image: '/bloon.jpg'
+    image: '/Iconic Brands/Bloon web.JPG'
   },
   {
     name: 'Bonanza',
-    image: '/bonanza.jpeg'
+    image: '/Iconic Brands/bonanza.jpeg'
   },
   {
     name: 'Breakout',
-    image: '/breakout.jpeg'
+    image: '/Iconic Brands/breakout.jpeg'
   },
   {
     name: 'Cambridge',
-    image: '/cambridge.jpeg'
+    image: '/Iconic Brands/cambridge.jpeg'
   },
   {
     name: 'Junaid Jamshed',
-    image: '/junaid-jamshed.jpeg'
+    image: '/Iconic Brands/junaid-jamshed.jpeg'
   },
   {
     name: 'Kayseria',
-    image: '/kayseria.jpeg'
+    image: '/Iconic Brands/kayseria web.jpeg'
   },
   {
     name: 'Little Explorer',
-    image: '/little-explorer.jpeg'
+    image: '/Iconic Brands/Little Explorer web.jpeg'
   },
   {
     name: 'Miniso',
-    image: '/miniso.jpeg'
+    image: '/Iconic Brands/miniso.jpeg'
   },
   {
     name: 'Cheezious',
-    image: '/cheezious.jpeg'
+    image: '/Iconic Brands/cheezious.jpeg'
   },
   {
     name: 'McDonalds',
-    image: '/macdonalds.jpeg'
+    image: '/Iconic Brands/macdonalds.jpeg'
   },
 ];
 
