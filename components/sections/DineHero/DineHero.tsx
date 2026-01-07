@@ -16,8 +16,8 @@ const getDineLogo = (slug?: string): string | null => {
   
   // Map of slug to logo filename - matching StoreGrid
   const logoMap: Record<string, string> = {
-    'macdonalds': '/logo/macdonalds logo.png',
-    'mcdonalds': '/logo/macdonalds logo.png',
+    'macdonalds': '/logo/Macdonalds logo.jpg',
+    'mcdonalds': '/logo/Macdonalds logo.jpg',
     'hardees': '/logo/hardees logo.jpg',
     'pizzahut': '/logo/pizza hut logo.jpg',
     'pizza-hut': '/logo/pizza hut logo.jpg',

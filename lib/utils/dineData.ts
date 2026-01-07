@@ -76,7 +76,7 @@ export const dineDetails: DineDetail[] = [
     name: 'McDonald\'s',
     slug: 'mcdonalds',
     description: 'I\'m lovin\' it! Enjoy your favorite burgers, fries, and more. Fast, friendly service in a clean, comfortable environment.',
-    logo: '/logo/macdonalds logo.png',
+    logo: '/logo/Macdonalds logo.jpg',
     contact: {
       phone: '+971-50-501-8516'
     },

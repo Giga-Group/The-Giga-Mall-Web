@@ -52,8 +52,8 @@ const getStoreLogo = (slug?: string): string | null => {
     '12-storeez': '/shops/1-WL_inside-_2732_x_1436_rijsgy-OK.jpg',
     '1847-executive-grooming': '/shops/DSC05412Food_OK_1.jpg',
     // Restaurant/Dine logos
-    'macdonalds': '/logo/macdonalds logo.png',
-    'mcdonalds': '/logo/macdonalds logo.png',
+    'macdonalds': '/logo/Macdonalds logo.jpg',
+    'mcdonalds': '/logo/Macdonalds logo.jpg',
     'hardees': '/logo/hardees logo.jpg',
     'pizzahut': '/logo/pizza hut logo.jpg',
     'pizza-hut': '/logo/pizza hut logo.jpg',
