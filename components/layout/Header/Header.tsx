@@ -11,6 +11,7 @@ import DineDropdown from './DineDropdown';
 // import StayDropdown from './StayDropdown';
 import EntertainDropdown from './EntertainDropdown';
 import PlanVisitDropdown from './PlanVisitDropdown';
+import ServicesDropdown from './ServicesDropdown';
 import SecondaryHeader from './SecondaryHeader';
 import MobileMenu from './MobileMenu';
 import { NAV_ITEMS } from '@/lib/utils/constants';
@@ -28,6 +29,7 @@ const Header = () => {
   const [shopHovered, setShopHovered] = useState(false);
   const [dineHovered, setDineHovered] = useState(false);
   // const [stayHovered, setStayHovered] = useState(false);
+  const [servicesHovered, setServicesHovered] = useState(false);
   const [entertainHovered, setEntertainHovered] = useState(false);
   const [planVisitHovered, setPlanVisitHovered] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -36,8 +38,9 @@ const Header = () => {
     setShopHovered(false);
     setDineHovered(false);
     // setStayHovered(false);
-    setEntertainHovered(false);
-    setPlanVisitHovered(false);
+    setServicesHovered(false);
+    // setEntertainHovered(false);
+    // setPlanVisitHovered(false);
   };
 
   return (
@@ -152,36 +155,47 @@ const Header = () => {
             setShopHovered(true);
             setDineHovered(false);
             // setStayHovered(false);
-            setEntertainHovered(false);
-            setPlanVisitHovered(false);
+            setServicesHovered(false);
+            // setEntertainHovered(false);
+            // setPlanVisitHovered(false);
           }}
           onDineHover={() => {
             setShopHovered(false);
             setDineHovered(true);
             // setStayHovered(false);
-            setEntertainHovered(false);
-            setPlanVisitHovered(false);
+            setServicesHovered(false);
+            // setEntertainHovered(false);
+            // setPlanVisitHovered(false);
           }}
           // onStayHover={() => {
           //   setShopHovered(false);
           //   setDineHovered(false);
           //   setStayHovered(true);
+          //   setServicesHovered(false);
           //   setEntertainHovered(false);
           //   setPlanVisitHovered(false);
           // }}
-          onEntertainHover={() => {
+          onServicesHover={() => {
             setShopHovered(false);
             setDineHovered(false);
             // setStayHovered(false);
-            setEntertainHovered(true);
-            setPlanVisitHovered(false);
+            setServicesHovered(true);
+            // setEntertainHovered(false);
+            // setPlanVisitHovered(false);
+          }}
+          onEntertainHover={() => {
+            // Dropdown hidden for now
+            // setShopHovered(false);
+            // setDineHovered(false);
+            // setEntertainHovered(true);
+            // setPlanVisitHovered(false);
           }}
           onPlanVisitHover={() => {
-            setShopHovered(false);
-            setDineHovered(false);
-            // setStayHovered(false);
-            setEntertainHovered(false);
-            setPlanVisitHovered(true);
+            // Dropdown hidden for now
+            // setShopHovered(false);
+            // setDineHovered(false);
+            // setEntertainHovered(false);
+            // setPlanVisitHovered(true);
           }}
           onClearHover={clearAllDropdowns}
           isSmallScreen={isSmallScreen}
@@ -314,8 +328,9 @@ const Header = () => {
         setShopHovered(true);
         setDineHovered(false);
         // setStayHovered(false);
-        setEntertainHovered(false);
-        setPlanVisitHovered(false);
+        setServicesHovered(false);
+        // setEntertainHovered(false);
+        // setPlanVisitHovered(false);
       }}
       onMouseLeave={() => setShopHovered(false)}
     />
@@ -326,10 +341,24 @@ const Header = () => {
         setShopHovered(false);
         setDineHovered(true);
         // setStayHovered(false);
-        setEntertainHovered(false);
-        setPlanVisitHovered(false);
+        setServicesHovered(false);
+        // setEntertainHovered(false);
+        // setPlanVisitHovered(false);
       }}
       onMouseLeave={() => setDineHovered(false)}
+    />
+
+    <ServicesDropdown 
+      isOpen={servicesHovered && !isSmallScreen}
+      onMouseEnter={() => {
+        setShopHovered(false);
+        setDineHovered(false);
+        // setStayHovered(false);
+        setServicesHovered(true);
+        // setEntertainHovered(false);
+        // setPlanVisitHovered(false);
+      }}
+      onMouseLeave={() => setServicesHovered(false)}
     />
 
     {/* <StayDropdown 
@@ -344,7 +373,7 @@ const Header = () => {
       onMouseLeave={() => setStayHovered(false)}
     /> */}
 
-    <EntertainDropdown 
+    {/* <EntertainDropdown 
       isOpen={entertainHovered && !isSmallScreen}
       onMouseEnter={() => {
         setShopHovered(false);
@@ -354,9 +383,9 @@ const Header = () => {
         setPlanVisitHovered(false);
       }}
       onMouseLeave={() => setEntertainHovered(false)}
-    />
+    /> */}
 
-    <PlanVisitDropdown 
+    {/* <PlanVisitDropdown 
       isOpen={planVisitHovered && !isSmallScreen}
       onMouseEnter={() => {
         setShopHovered(false);
@@ -366,11 +395,11 @@ const Header = () => {
         setPlanVisitHovered(true);
       }}
       onMouseLeave={() => setPlanVisitHovered(false)}
-    />
+    /> */}
     
     <SecondaryHeader 
       isHidden={
-        (shopHovered || dineHovered /* || stayHovered */ || entertainHovered || planVisitHovered) && !isSmallScreen
+        (shopHovered || dineHovered || servicesHovered /* || stayHovered */ /* || entertainHovered || planVisitHovered */) && !isSmallScreen
       }
     />
     
