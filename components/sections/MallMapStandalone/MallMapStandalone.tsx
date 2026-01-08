@@ -615,16 +615,61 @@
     return { x: screenX, y: screenY };
   };
 
+  // -------------------- HELPER FUNCTIONS --------------------
+  // Convert URL shop name (e.g., "batik-studio") to map shop name (e.g., "BATIK STUDIO")
+  const urlToShopName = (urlName: string): string | null => {
+    if (!urlName) return null;
+    
+    // Convert kebab-case to uppercase with spaces
+    const formatted = urlName
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toUpperCase())
+      .join(' ');
+    
+    // Try to find matching shop name in SHOP_AREAS
+    const shopKeys = Object.keys(SHOP_AREAS);
+    
+    // 1. Try exact case-insensitive match
+    const exactMatch = shopKeys.find(key => key.toUpperCase() === formatted);
+    if (exactMatch) return exactMatch;
+    
+    // 2. Try match without spaces (e.g., "BATIKSTUDIO" vs "BATIK STUDIO")
+    const formattedNoSpaces = formatted.replace(/\s+/g, '');
+    const noSpacesMatch = shopKeys.find(key => 
+      key.toUpperCase().replace(/\s+/g, '') === formattedNoSpaces
+    );
+    if (noSpacesMatch) return noSpacesMatch;
+    
+    // 3. Try partial match (contains)
+    const partialMatch = shopKeys.find(key => 
+      key.toUpperCase().includes(formatted) || formatted.includes(key.toUpperCase())
+    );
+    if (partialMatch) return partialMatch;
+    
+    return null;
+  };
+
   // -------------------- COMPONENT --------------------
-  const MallMapStandalone = () => {
-    const [hoveredShop, setHoveredShop] = useState<string | null>(null);
+  interface MallMapStandaloneProps {
+    highlightedShop?: string; // Shop name from URL (e.g., "batik-studio")
+  }
+
+  const MallMapStandalone = ({ highlightedShop }: MallMapStandaloneProps = {}) => {
+    // Convert URL shop name to map shop name if provided
+    const highlightedShopName = highlightedShop ? urlToShopName(highlightedShop) : null;
+    // Only enable shop page mode if shop exists in SHOP_AREAS
+    const isShopPageMode = highlightedShopName && !!SHOP_AREAS[highlightedShopName];
+    
+    // Only set initial hoveredShop if shop exists in SHOP_AREAS
+    const initialHoveredShop = highlightedShopName && SHOP_AREAS[highlightedShopName] ? highlightedShopName : null;
+    const [hoveredShop, setHoveredShop] = useState<string | null>(initialHoveredShop);
     const [zoom, setZoom] = useState(1);
     const [pan, setPan] = useState({ x: 0, y: 0 });
     const [isDragging, setIsDragging] = useState(false);
     const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
     const [isMapFocused, setIsMapFocused] = useState(false);
     const [selectedFloor, setSelectedFloor] = useState("Ground");
-    const [tooltipPosition, setTooltipPosition] = useState<{ x: number; y: number; shop: string } | null>(null);
+    const [tooltip, setTooltip] = useState<{ x: number; y: number; shop: string } | null>(null);
 
     const containerRef = useRef<HTMLDivElement>(null);
     const svgRef = useRef<SVGSVGElement>(null);
@@ -666,49 +711,34 @@
             return { shop, pathD, scaledPoints };
           });
         }, []); // Paths are constant, no need to recalculate
-        // Update tooltip position when zoom or pan changes (optimized with requestAnimationFrame)
+        // Auto-highlight shop and show tooltip when in shop page mode
         useEffect(() => {
-          if (!hoveredShop || !svgRef.current) return;
-          
-          let animationFrameId: number;
-          
-          const updateTooltipPosition = () => {
-            const shopArea = SHOP_AREAS[hoveredShop];
-            if (!shopArea) return;
-            
-            const adjustedPoints = getShopPoints(hoveredShop, shopArea.points);
-            const scaledPoints = adjustedPoints.map((p) => ({
-              x: (p.x / 100) * SVG_WIDTH,
-              y: (p.y / 100) * SVG_HEIGHT,
-            }));
-            const centerX = scaledPoints.reduce((sum, p) => sum + p.x, 0) / scaledPoints.length;
-            const centerY = scaledPoints.reduce((sum, p) => sum + p.y, 0) / scaledPoints.length;
-            
-            const screenPos = svgToScreen(
-              centerX,
-              centerY,
-              svgRef.current!,
-              viewBoxX,
-              viewBoxY,
-              viewBoxWidth,
-              viewBoxHeight
-            );
-            
-            setTooltipPosition({
-              x: screenPos.x,
-              y: screenPos.y,
-              shop: hoveredShop
-            });
-          };
-          
-          animationFrameId = requestAnimationFrame(updateTooltipPosition);
-          
-          return () => {
-            if (animationFrameId) {
-              cancelAnimationFrame(animationFrameId);
+          if (highlightedShopName) {
+            // Check if shop exists in SHOP_AREAS
+            const shopArea = SHOP_AREAS[highlightedShopName];
+            if (shopArea) {
+              // Set hovered shop
+              setHoveredShop(highlightedShopName);
+              // Calculate tooltip position in SVG coordinates
+              const adjustedPoints = getShopPoints(highlightedShopName, shopArea.points);
+              const scaledPoints = adjustedPoints.map((p) => ({
+                x: (p.x / 100) * SVG_WIDTH,
+                y: (p.y / 100) * SVG_HEIGHT,
+              }));
+              const centerX = scaledPoints.reduce((sum, p) => sum + p.x, 0) / scaledPoints.length;
+              const centerY = scaledPoints.reduce((sum, p) => sum + p.y, 0) / scaledPoints.length;
+              setTooltip({ x: centerX, y: centerY, shop: highlightedShopName });
+            } else {
+              // Shop doesn't exist, clear everything
+              setHoveredShop(null);
+              setTooltip(null);
             }
-          };
-        }, [zoom, pan, viewBoxX, viewBoxY, viewBoxWidth, viewBoxHeight, hoveredShop]);
+          } else {
+            // No highlighted shop, clear everything
+            setHoveredShop(null);
+            setTooltip(null);
+          }
+        }, [highlightedShopName]);
     // -------------------- INTERACTIONS --------------------
     // Disabled wheel zoom - zoom only via buttons
     const handleWheel = (e: React.WheelEvent<SVGSVGElement>) => {
@@ -730,6 +760,7 @@
       e.preventDefault();  // Prevent text selection while dragging
       e.stopPropagation();
       setPan({ x: e.clientX - dragStart.x, y: e.clientY - dragStart.y });
+      // Tooltip position doesn't need updating - it's in SVG coordinates and follows automatically
     };
 
     const handleMouseUp = () => setIsDragging(false);
@@ -804,9 +835,11 @@
           onMouseEnter={() => setIsMapFocused(true)}
           onMouseLeave={() => {
             setIsMapFocused(false);
-            // Also clear hover state when leaving the entire map component
-            setHoveredShop(null);
-            setTooltipPosition(null);
+            // Only clear hover state when leaving if not in shop page mode
+            if (!isShopPageMode) {
+              setHoveredShop(null);
+              setTooltip(null);
+            }
           }}
           onWheel={(e) => {
             // Allow normal page scroll - zoom is disabled
@@ -950,8 +983,11 @@
             onMouseLeave={(e) => {
               handleMouseUp();
               // Clear hover state when mouse leaves SVG (but don't stop propagation to allow container handler)
-              setHoveredShop(null);
-              setTooltipPosition(null);
+              // Only clear if not in shop page mode
+              if (!isShopPageMode) {
+                setHoveredShop(null);
+                setTooltip(null);
+              }
             }}
             onClick={(e) => {
               e.stopPropagation();
@@ -1006,28 +1042,18 @@
                     style={{ cursor: "pointer" }}
                     onMouseEnter={(e) => {
                       e.stopPropagation();
+                      // Disable hover interactions in shop page mode
+                      if (isShopPageMode) return;
                       setHoveredShop(shop);
-                      if (svgRef.current) {
-                        const screenPos = svgToScreen(
-                          centerX,
-                          centerY,
-                          svgRef.current,
-                          viewBoxX,
-                          viewBoxY,
-                          viewBoxWidth,
-                          viewBoxHeight
-                        );
-                        setTooltipPosition({
-                          x: screenPos.x,
-                          y: screenPos.y,
-                          shop: shop
-                        });
-                      }
+                      // Store tooltip position in SVG coordinates (no conversion needed)
+                      setTooltip({ x: centerX, y: centerY, shop });
                     }}
                     onMouseLeave={(e) => {
                       e.stopPropagation();
+                      // Disable hover interactions in shop page mode
+                      if (isShopPageMode) return;
                       setHoveredShop(null);
-                      setTooltipPosition(null);
+                      setTooltip(null);
                     }}
                   />
 
@@ -1044,52 +1070,49 @@
                 </g>
               );
             })}
+
+            {/* SVG Tooltip - Rendered inside SVG so it follows zoom/pan automatically */}
+            {tooltip && (
+              <g
+                transform={`translate(${tooltip.x}, ${tooltip.y - 15})`}
+                pointerEvents="none"
+                style={{ userSelect: "none" }}
+              >
+                {/* Tooltip background with rounded corners and padding */}
+                <rect
+                  x={-(tooltip.shop.length * 3.5 + 8)}
+                  y={-26}
+                  width={tooltip.shop.length * 7 + 16}
+                  height={22}
+                  rx={4}
+                  ry={4}
+                  fill="#D19F3B"
+                  opacity={0.95}
+                />
+                {/* Tooltip text with padding */}
+                <text
+                  x={0}
+                  y={-12}
+                  fill="#ffffff"
+                  fontSize={10}
+                  fontWeight={600}
+                  textAnchor="middle"
+                  dominantBaseline="middle"
+                  letterSpacing="0.3px"
+                  style={{ userSelect: "none" }}
+                >
+                  {tooltip.shop}
+                </text>
+                {/* Arrow pointing down - connected to tooltip body */}
+                <path
+                  d="M -5 -4 L 5 -4 L 0 2 Z"
+                  fill="#D19F3B"
+                  opacity={0.95}
+                />
+              </g>
+            )}
           </Box>
         </Box>
-        {/* Custom Absolute-Positioned Tooltip */}
-        {tooltipPosition && (
-          <Box
-            sx={{
-              position: "fixed",
-              left: `${tooltipPosition.x}px`,
-              top: `${tooltipPosition.y}px`,
-              transform: "translate(-50%, calc(-100% + 15px))", // Move downward (adjust 20px as needed) // Position above center with gap for arrow
-              zIndex: 10000,
-              pointerEvents: "none",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            {/* Tooltip body */}
-            <Box
-              sx={{
-                backgroundColor: "#D19F3B",
-                color: "#ffffff",
-                borderRadius: "6px",
-                padding: "6px 12px",
-                fontSize: "10px",
-                fontWeight: "600",
-                letterSpacing: "0.3px",
-                whiteSpace: "nowrap",
-                boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
-              }}
-            >
-              {tooltipPosition.shop}
-            </Box>
-            {/* Arrow pointing down */}
-            <Box
-              sx={{
-                width: 0,
-                height: 0,
-                borderLeft: "6px solid transparent",
-                borderRight: "6px solid transparent",
-                borderTop: "8px solid #D19F3B",
-                marginTop: "-1px", // Slight overlap to connect with body
-              }}
-            />
-          </Box>
-        )}
       </Box>
     );
   };
