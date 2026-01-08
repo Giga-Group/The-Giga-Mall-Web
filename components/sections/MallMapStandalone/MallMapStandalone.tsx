@@ -652,9 +652,10 @@
   // -------------------- COMPONENT --------------------
   interface MallMapStandaloneProps {
     highlightedShop?: string; // Shop name from URL (e.g., "batik-studio")
+    isMapPage?: boolean; // If true, use larger height for map page
   }
 
-  const MallMapStandalone = ({ highlightedShop }: MallMapStandaloneProps = {}) => {
+  const MallMapStandalone = ({ highlightedShop, isMapPage = false }: MallMapStandaloneProps = {}) => {
     // Convert URL shop name to map shop name if provided
     const highlightedShopName = highlightedShop ? urlToShopName(highlightedShop) : null;
     // Only enable shop page mode if shop exists in SHOP_AREAS
@@ -663,8 +664,16 @@
     // Only set initial hoveredShop if shop exists in SHOP_AREAS
     const initialHoveredShop = highlightedShopName && SHOP_AREAS[highlightedShopName] ? highlightedShopName : null;
     const [hoveredShop, setHoveredShop] = useState<string | null>(initialHoveredShop);
-    const [zoom, setZoom] = useState(1);
+    // Initialize zoom based on page type to prevent stale state
+    const [zoom, setZoom] = useState(() => isMapPage ? 1.1 : 1.1);
     const [pan, setPan] = useState({ x: 0, y: 0 });
+    
+    // Reset zoom and pan when switching between map page and shop page
+    useEffect(() => {
+      // Always reset on mount and when isMapPage changes
+      setZoom(isMapPage ? 1.1 : 1.1);
+      setPan({ x: 0, y: 0 });
+    }, [isMapPage]);
     const [isDragging, setIsDragging] = useState(false);
     const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
     const [isMapFocused, setIsMapFocused] = useState(false);
@@ -971,7 +980,12 @@
           </IconButton>
         </Box>
 
-        <Box sx={{ position: "relative", height: { xs: 400, sm: 500, md: 600, lg: 700 } }}>
+        
+        
+        <Box sx={{ position: "relative", height: isMapPage 
+          ? { xs: 400, sm: 500, md: 600, lg: 700 } // Larger height for map page
+          : { xs: 250, sm: 300, md: 350, lg: 400 } // Smaller height for shop pages
+        }}>
           <Box
             component="svg"
             ref={svgRef}
@@ -1074,28 +1088,29 @@
             {/* SVG Tooltip - Rendered inside SVG so it follows zoom/pan automatically */}
             {tooltip && (
               <g
-                transform={`translate(${tooltip.x}, ${tooltip.y - 15})`}
-                pointerEvents="none"
-                style={{ userSelect: "none" }}
-              >
+              transform={`translate(${tooltip.x}, ${tooltip.y - 20})`}
+              pointerEvents="none"
+              style={{ userSelect: "none" }}
+            >
                 {/* Tooltip background with rounded corners and padding */}
                 <rect
-                  x={-(tooltip.shop.length * 3.5 + 8)}
-                  y={-26}
-                  width={tooltip.shop.length * 7 + 16}
-                  height={22}
-                  rx={4}
-                  ry={4}
+                  x={-(tooltip.shop.length * 4 + 24)}
+                  y={-38}
+                  width={tooltip.shop.length * 8 + 48}
+                  height={34}
+                  rx={6}
+                  ry={6}
                   fill="#D19F3B"
                   opacity={0.95}
                 />
                 {/* Tooltip text with padding */}
                 <text
                   x={0}
-                  y={-12}
+                  y={-18}
                   fill="#ffffff"
-                  fontSize={10}
+                  fontSize={14}
                   fontWeight={600}
+                  fontFamily="Poppins, sans-serif"
                   textAnchor="middle"
                   dominantBaseline="middle"
                   letterSpacing="0.3px"
@@ -1105,7 +1120,7 @@
                 </text>
                 {/* Arrow pointing down - connected to tooltip body */}
                 <path
-                  d="M -5 -4 L 5 -4 L 0 2 Z"
+                  d="M -7 -4 L 7 -4 L 0 4 Z"
                   fill="#D19F3B"
                   opacity={0.95}
                 />
