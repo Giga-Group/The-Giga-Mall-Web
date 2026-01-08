@@ -1071,6 +1071,982 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
+   {
+    name: 'Charcoal',
+    slug: 'charcoal',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/charcoal web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Cinnabon',
+    slug: 'cinnabon',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/cinnabon web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Coppelia',
+    slug: 'coppelia',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/coppelia web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Courger',
+    slug: 'courger',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/couger web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Crocs',
+    slug: 'crocs',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/crocs web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Dari Mooch',
+    slug: 'dari-mooch',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/dari mooch web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Engine',
+    slug: 'engine',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/engine web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Equator',
+    slug: 'equator',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/equator web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Ethnc',
+    slug: 'ethnc',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/ethnc web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Focus',
+    slug: 'focus',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/focus web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'FPL',
+    slug: 'fpl',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/fpl web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Goshes',
+    slug: 'goshes',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/Goshes web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Gulzari',
+    slug: 'gulzari',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/gulzari web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Haseen Jewelers',
+    slug: 'haseen-jewelers',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/haseen jewelers web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Hopscotch',
+    slug: 'hopscotch',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/hopscotch web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Hub',
+    slug: 'hub',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/hub web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Hunza Emporium',
+    slug: 'hunza-emporium',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/hunza emporium web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Hush Puppies',
+    slug: 'hush-puppies',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/hush puppies web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Insignia',
+    slug: 'insignia',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/insignia web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'J. Fragrance and Costmetics',
+    slug: 'j.-fragrances-and-costmetics',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/J-fragrance and costmetics web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Jafferjees',
+    slug: 'jaffer-jees',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/jafferjees web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Jc Buckman',
+    slug: 'jc-buckman',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/jc buckman web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Juice Fruity',
+    slug: 'juice-friuty',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/juice fruity web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Julke',
+    slug: 'julke',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/julke web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'KefDiamonds',
+    slug: 'kef-diamonds',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/kef diamonds web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Khadi',
+    slug: 'khadi',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/khadi web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Khusa Factory',
+    slug: 'khusa-factory',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/khusa factory web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'King Corn',
+    slug: 'king-corn',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/king corn web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'King Corn',
+    slug: 'king-corn',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/king corn web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Lady Privacy',
+    slug: 'lady-privacy',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/lady privacy web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Limelite',
+    slug: 'limelite',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/limelite web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Lullusar',
+    slug: 'lullusar',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/lullusar web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Maria B',
+    slug: 'maria-b-2',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/maria b 2 web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Mayblline',
+    slug: 'maybelline',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/maybelline web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Miracle',
+    slug: 'miracle',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/miracle web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Mocciani',
+    slug: 'mocciani',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/mocciani web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Monark',
+    slug: 'monark',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/monark web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'MTJ Fragrance',
+    slug: 'mtj-fragrance',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/mtj fragrance web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Nizam Watch House',
+    slug: 'nizam-watch-house',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/nizam watch house web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Pop Nosh',
+    slug: 'pop-nosh',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/pop nosh web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Rivaj',
+    slug: 'rivaj',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/rivaj web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Rivaj',
+    slug: 'rivaj',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/rivaj web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Royal Tag',
+    slug: 'royal-tag',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/royal tag web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Sapphire',
+    slug: 'sapphire',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/royal tag web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Saya',
+    slug: 'saya',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/saya web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Scents and Stories',
+    slug: 'scents-and-stories',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/scents and stories web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Sketchers',
+    slug: 'sketcher',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/sketchers web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Sona Chandi',
+    slug: 'sona-chandi',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/sona chandi web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Speed Sports',
+    slug: 'speed-sports',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/speed sports web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Style in Shoes',
+    slug: 'speed-sports',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/speed sports web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Svesto',
+    slug: 'svesto',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/svesto web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Swarovski',
+    slug: 'swarovski',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/swarovski web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Syed Royal Optics',
+    slug: 'syed-royal-optics',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/syed royal optics web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Tagheuer',
+    slug: 'tagheuer',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/tagheuer web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Tayyab Jewelers',
+    slug: 'tayyab-jewelers',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/tayyab jewelers web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Tessoro',
+    slug: 'tessoro',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/tesoro web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'The Body Shop',
+    slug: 'the-body-shop',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/the body shop web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'The Hortins',
+    slug: 'the-hortins',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/tim hortins web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Ultra Club',
+    slug: 'ultra-club',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/ultra club web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Wasim Badami by Hemani',
+    slug: 'wasim-badami-by-hemani',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/wasim badami by hemani web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Zero',
+    slug: 'zero',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/zero web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
   {
     name: '12 STOREEZ',
     slug: '12-storeez',
