@@ -236,7 +236,6 @@ export const dineDetails: DineDetail[] = [
     name: 'Dry Fruit',
     slug: 'dry-fruit',
     description: 'Premium kebabs and grilled specialties made with the finest ingredients and traditional techniques.',
-    logo: '/logo/kabab jees logo.jpg',
     contact: {
       phone: '+971-50-501-8531'
     },

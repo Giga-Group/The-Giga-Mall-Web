@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useFilters } from '@/lib/contexts/FilterContext';
 import { storeDetails } from '@/lib/utils/storeData';
+import { serviceDetails } from '@/lib/utils/servicesData';
 
 export interface Store {
   name: string;
@@ -28,7 +29,33 @@ const getStoreLogo = (slug?: string): string | null => {
   // First, try to get logo from storeDetails
   const storeDetail = storeDetails.find(store => store.slug === slug);
   if (storeDetail?.logo) {
-    return storeDetail.logo;
+    // Check if logo path is valid (not empty, not just .jpg, etc.)
+    const logoPath = storeDetail.logo.trim();
+    // Filter out invalid paths like '/logo/.jpg', '/.jpg', or paths ending with '/.jpg' or '/.png'
+    if (logoPath && 
+        logoPath !== '/logo/.jpg' && 
+        logoPath !== '/.jpg' && 
+        !logoPath.endsWith('/.jpg') && 
+        !logoPath.endsWith('/.png') &&
+        logoPath.length > 5) { // Ensure it's a real path, not just a placeholder
+      return logoPath;
+    }
+  }
+
+  // Also check serviceDetails for services
+  const serviceDetail = serviceDetails.find(service => service.slug === slug);
+  if (serviceDetail?.logo) {
+    // Check if logo path is valid (not empty, not just .jpg, etc.)
+    const logoPath = serviceDetail.logo.trim();
+    // Filter out invalid paths like '/logo/.jpg', '/.jpg', or paths ending with '/.jpg' or '/.png'
+    if (logoPath && 
+        logoPath !== '/logo/.jpg' && 
+        logoPath !== '/.jpg' && 
+        !logoPath.endsWith('/.jpg') && 
+        !logoPath.endsWith('/.png') &&
+        logoPath.length > 5) { // Ensure it's a real path, not just a placeholder
+      return logoPath;
+    }
   }
 
   // Map of slug to logo filename - prioritizing dedicated logo files
@@ -45,12 +72,6 @@ const getStoreLogo = (slug?: string): string | null => {
     'junaid-jamshed': '/logo/junaid jamshed logo.png',
     'kayseria': '/logo/kayseria logo.jpg',
     'miniso': '/logo/miniso logo.jpg',
-    'nike': '/shops/NIKE_-_WMoN.jpg',
-    'zara': '/shops/zara-forum6257.jpg',
-    'other-stories': '/stay/stay2.jpeg',
-    '100-capri': '/shops/2-OK.jpg',
-    '12-storeez': '/shops/1-WL_inside-_2732_x_1436_rijsgy-OK.jpg',
-    '1847-executive-grooming': '/shops/DSC05412Food_OK_1.jpg',
     // Restaurant/Dine logos
     'macdonalds': '/logo/Macdonalds logo.jpg',
     'mcdonalds': '/logo/Macdonalds logo.jpg',
@@ -70,6 +91,73 @@ const getStoreLogo = (slug?: string): string | null => {
   };
 
   return logoMap[slug] || null;
+};
+
+// Store Card Component with image error handling
+const StoreCard = ({ store, basePath, logoPath }: { store: Store; basePath: string; logoPath: string | null }) => {
+  const [imageError, setImageError] = useState(false);
+
+  return (
+    <Link
+      href={`${basePath}/${store.slug || store.name.toLowerCase().replace(/\s+/g, '-')}`}
+      style={{ textDecoration: 'none' }}
+    >
+      <Box
+        sx={{
+          position: 'relative',
+          aspectRatio: '1 / 1',
+          border: '1px solid #e0e0e0',
+          borderRadius: '4px',
+          backgroundColor: '#ffffff',
+          transition: 'all 0.3s ease',
+          cursor: 'pointer',
+          overflow: 'hidden',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          '&:hover': {
+            borderColor: '#D19F3B',
+            transform: 'translateY(-2px)',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+          }
+        }}
+      >
+        {logoPath && !imageError ? (
+          <Image
+            src={logoPath}
+            alt={store.name}
+            fill
+            sizes="(max-width: 600px) 50vw, (max-width: 960px) 33vw, (max-width: 1280px) 25vw, 20vw"
+            style={{
+              objectFit: 'contain',
+              padding: '12px'
+            }}
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <Typography
+            className="store-name"
+            sx={{
+              fontFamily: '"Arvo", serif',
+              fontSize: { xs: '2rem', sm: '2.25rem', md: '2.5rem', lg: '6rem' },
+              color: '#333333',
+              fontWeight: 400,
+              lineHeight: 1,
+              transition: 'color 0.3s ease',
+              textAlign: 'center',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '100%',
+              height: '100%'
+            }}
+          >
+            {store.name.charAt(0).toUpperCase()}
+          </Typography>
+        )}
+      </Box>
+    </Link>
+  );
 };
 
 // Sample store data - in a real app, this would come from an API
@@ -289,64 +377,13 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
         >
           {visibleStores.map((store, index) => {
             const logoPath = getStoreLogo(store.slug || store.name.toLowerCase().replace(/\s+/g, '-'));
-
             return (
-              <Link
+              <StoreCard 
                 key={index}
-                href={`${basePath}/${store.slug || store.name.toLowerCase().replace(/\s+/g, '-')}`}
-                style={{ textDecoration: 'none' }}
-              >
-                <Box
-                  sx={{
-                    position: 'relative',
-                    aspectRatio: '1 / 1',
-                    border: '1px solid #e0e0e0',
-                    borderRadius: '4px',
-                    backgroundColor: '#ffffff',
-                    transition: 'all 0.3s ease',
-                    cursor: 'pointer',
-                    overflow: 'hidden',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    '&:hover': {
-                      borderColor: '#D19F3B',
-                      transform: 'translateY(-2px)',
-                      boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-                    }
-                  }}
-                >
-                  {logoPath ? (
-                    <Image
-                      src={logoPath}
-                      alt={store.name}
-                      fill
-                      sizes="(max-width: 600px) 50vw, (max-width: 960px) 33vw, (max-width: 1280px) 25vw, 20vw"
-                      style={{
-                        objectFit: 'contain',
-                        padding: '12px'
-                      }}
-                    />
-                  ) : (
-                    <Typography
-                      className="store-name"
-                      sx={{
-                        fontFamily: 'Georgia, serif',
-                        fontSize: { xs: '0.75rem', sm: '0.85rem', md: '0.9rem' },
-                        color: '#333333',
-                        fontWeight: 400,
-                        lineHeight: 1.4,
-                        wordBreak: 'break-word',
-                        transition: 'color 0.3s ease',
-                        padding: { xs: 1.5, sm: 2 },
-                        textAlign: 'center'
-                      }}
-                    >
-                      {store.name}
-                    </Typography>
-                  )}
-                </Box>
-              </Link>
+                store={store}
+                basePath={basePath}
+                logoPath={logoPath}
+              />
             );
           })}
         </Box>
