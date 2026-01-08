@@ -1614,7 +1614,7 @@ const MallMapStandalone = ({ highlightedShop, isMapPage = false }: MallMapStanda
                 textAnchor="middle"
                 dominantBaseline="middle"
                 letterSpacing="0.3px"
-                style={{ userSelect: "none" }}
+                style={{ userSelect: "none" }} 
               >
                 {tooltip.shop}
               </text>
