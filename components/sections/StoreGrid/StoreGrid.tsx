@@ -5,6 +5,7 @@ import { Box, Typography, Button } from '@mui/material';
 import { useTheme, useMediaQuery } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useFilters } from '@/lib/contexts/FilterContext';
 import { storeDetails } from '@/lib/utils/storeData';
 import { serviceDetails } from '@/lib/utils/servicesData';
@@ -222,6 +223,50 @@ const defaultStores: Store[] = [
   { name: 'Taarkashi', slug: 'taarkashi' },
   { name: 'The Time Zone', slug: 'the-time-zone' },
   { name: 'Mehran Jewellers', slug: 'mehran-jewellers' },
+  { name: '1st Step', slug: '1st-step' },
+  { name: 'Addidas', slug: 'addidas'},
+  { name: 'Adoro', slug: 'adoro'},
+  { name: 'Almirah', slug: 'almirah'},
+  { name: 'Anta', slug: 'anta'},
+  { name: 'Apavi', slug: 'apavi'},
+  { name: 'Baskin Robin', slug: 'baskin-robin'},
+  { name: 'Batik Studio', slug: 'batik-studio-3'},
+
+  { name: 'Charcoal', slug: 'charcoal'},
+  { name: 'Cinnabon', slug: 'cinnabon'},
+  { name: 'Coppelia', slug: 'coppelia'},
+  { name: 'Couger', slug: 'couger'},
+  { name: 'Crocs', slug: 'crocs'},
+  { name: 'Cross Stitch', slug: 'cross-stitch'},
+  { name: 'Dari Mooch', slug: 'dari-mooch'},
+  { name: 'Engine', slug: 'engine'},
+  { name: 'Equator', slug: 'equator'},
+  { name: 'Ethnc', slug: 'ethnc'},
+  { name: 'Focus', slug: 'focus'},
+  { name: 'FPL', slug: 'fpl'},
+  { name: 'Goshes', slug: 'goshes'},
+  { name: 'Gulzari', slug: 'gulzari'},
+  { name: 'Haseen', slug: 'haseen'},
+  { name: 'Hopscotch', slug: 'hopscotch'},
+  { name: 'Hub', slug: 'hub'},
+  { name: 'Hunza Emporium', slug: 'hunza-emporium'},
+  { name: 'Hush Puppies', slug: 'hush-puppies'},
+  { name: 'Insignia', slug: 'insignia'},
+  { name: 'J. Fragrance and Costmetics', slug: 'j.-fragrance-and-costmetics'},
+  { name: 'Jafferjees', slug: 'jaffer-jees'},
+  { name: 'Jc Buckman', slug: 'jc-buckman'},
+  { name: 'Juice Fruity', slug: 'juice-fruity'},
+  { name: 'Julke', slug: 'julke'},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
 ];
 
 // Helper function to check if a name matches viewBy filter
@@ -250,19 +295,57 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const { filters } = useFilters();
+  const router = useRouter();
+  const searchParams = useSearchParams();
   
-  const [visibleCount, setVisibleCount] = useState(10); // Default for desktop
   const itemsPerPage = 5;
-
-  // Initialize visible count based on mobile/desktop
-  useEffect(() => {
-    if (isMobile) {
-      setVisibleCount(6); // Show only 6 items on mobile initially
-    } else {
-      setVisibleCount(10); // Show all items on desktop
+  
+  // Get initial count from URL or default
+  const getInitialCount = () => {
+    if (typeof window === 'undefined') return isMobile ? 6 : 10;
+    
+    const urlCount = searchParams.get('show');
+    if (urlCount) {
+      const count = parseInt(urlCount);
+      // Ensure the count is valid
+      return isNaN(count) ? (isMobile ? 6 : 10) : Math.max(count, isMobile ? 6 : 10);
     }
-  }, [isMobile]);
+    return isMobile ? 6 : 10;
+  };
+  
+  const [visibleCount, setVisibleCount] = useState(getInitialCount);
 
+  // Update URL when visibleCount changes
+  useEffect(() => {
+    const params = new URLSearchParams(searchParams.toString());
+    
+    // Only update URL if count is different from default
+    const defaultCount = isMobile ? 6 : 10;
+    if (visibleCount > defaultCount) {
+      params.set('show', visibleCount.toString());
+    } else {
+      params.delete('show');
+    }
+    
+    // Create the new URL
+    const newUrl = `?${params.toString()}`;
+    
+    // Update URL without scrolling or triggering navigation
+    router.replace(newUrl, { scroll: false });
+  }, [visibleCount, router, searchParams, isMobile]);
+
+  // Update visible count when mobile/desktop changes
+  useEffect(() => {
+    const urlCount = searchParams.get('show');
+    if (urlCount) {
+      const count = parseInt(urlCount);
+      if (!isNaN(count)) {
+        setVisibleCount(count);
+      }
+    } else {
+      setVisibleCount(isMobile ? 6 : 10);
+    }
+  }, [isMobile, searchParams]);
 
   // Filter items based on search query, category, viewBy, and offers
   const filteredItems = useMemo(() => {
@@ -318,14 +401,19 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
     });
   }, [items, filters.searchQuery, filters.category, filters.viewBy, filters.showOffersOnly]);
 
-  // Reset visible count when filters change
+  // Reset visible count when filters change (except for search params)
   useEffect(() => {
-    if (isMobile) {
-      setVisibleCount(6);
-    } else {
-      setVisibleCount(10);
+    // Don't reset if we have a URL parameter for show count
+    const hasShowParam = searchParams.get('show') !== null;
+    
+    if (!hasShowParam) {
+      if (isMobile) {
+        setVisibleCount(6);
+      } else {
+        setVisibleCount(10);
+      }
     }
-  }, [filters.searchQuery, filters.category, filters.viewBy, filters.showOffersOnly, isMobile]);
+  }, [filters.searchQuery, filters.category, filters.viewBy, filters.showOffersOnly, isMobile, searchParams]);
 
   const handleLoadMore = () => {
     if (isMobile) {
@@ -336,8 +424,6 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
       setVisibleCount(prev => prev + itemsPerPage);
     }
   };
-
-
 
   // Determine which stores to show
   const visibleStores = filteredItems.slice(0, visibleCount);
@@ -364,64 +450,144 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
           margin: '0 auto'
         }}
       >
-        <Box
-          sx={{
-            display: 'grid',
-            gridTemplateColumns: {
-              xs: 'repeat(2, 1fr)',
-              sm: 'repeat(3, 1fr)',
-              md: 'repeat(4, 1fr)',
-              lg: 'repeat(5, 1fr)'
-            },
-            gap: { xs: 1.5, sm: 2, md: 2.5 },
-            mb: { xs: 3, sm: 4 }
-          }}
-        >
-          {visibleStores.map((store, index) => {
-            const logoPath = getStoreLogo(store.slug || store.name.toLowerCase().replace(/\s+/g, '-'));
-            return (
-              <StoreCard 
-                key={index}
-                store={store}
-                basePath={basePath}
-                logoPath={logoPath}
-              />
-            );
-          })}
-        </Box>
-
-        {/* Show More Button */}
-        {hasMore && (
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              mt: { xs: 3, sm: 4 }
-            }}
-          >
-            <Button
-              onClick={handleLoadMore}
-              variant="outlined"
+        {/* Display message when no stores match filters */}
+        {filteredItems.length === 0 && (
+          <Box sx={{ textAlign: 'center', py: 4 }}>
+            <Typography
+              variant="h6"
               sx={{
-                border: '1px solid #D19F3B',
-                color: '#D19F3B',
-                textTransform: 'uppercase',
-                fontSize: { xs: '0.85rem', sm: '0.9rem' },
-                fontWeight: 500,
+                color: '#666',
                 fontFamily: '"Poppins", sans-serif',
-                padding: { xs: '10px 40px', sm: '12px 50px' },
-                borderRadius: 0,
-                transition: 'all 0.3s ease',
-                '&:hover': {
-                  borderColor: '#D19F3B',
-                  color: '#ffffff',
-                  backgroundColor: '#D19F3B'
-                }
+                fontWeight: 400
               }}
             >
-              {isMobile && visibleCount === 6 ? 'Show More' : 'Load More'}
-            </Button>
+              No stores found matching your filters.
+            </Typography>
           </Box>
+        )}
+
+        {/* Store Grid */}
+        {filteredItems.length > 0 && (
+          <>
+            <Box
+              sx={{
+                display: 'grid',
+                gridTemplateColumns: {
+                  xs: 'repeat(2, 1fr)',
+                  sm: 'repeat(3, 1fr)',
+                  md: 'repeat(4, 1fr)',
+                  lg: 'repeat(5, 1fr)'
+                },
+                gap: { xs: 1.5, sm: 2, md: 2.5 },
+                mb: { xs: 3, sm: 4 }
+              }}
+            >
+              {visibleStores.map((store, index) => {
+                const logoPath = getStoreLogo(store.slug || store.name.toLowerCase().replace(/\s+/g, '-'));
+
+                return (
+                  <Link
+                    key={index}
+                    href={`${basePath}/${store.slug || store.name.toLowerCase().replace(/\s+/g, '-')}`}
+                    style={{ textDecoration: 'none' }}
+                    onClick={(e) => {
+                      // Preserve the URL parameters when navigating to store page
+                      const params = new URLSearchParams(searchParams.toString());
+                      const currentUrl = `${window.location.pathname}?${params.toString()}`;
+                      
+                      // Store current URL in sessionStorage for back navigation
+                      sessionStorage.setItem('storeGridUrl', currentUrl);
+                    }}
+                  >
+                    <Box
+                      sx={{
+                        position: 'relative',
+                        aspectRatio: '1 / 1',
+                        border: '1px solid #e0e0e0',
+                        borderRadius: '4px',
+                        backgroundColor: '#ffffff',
+                        transition: 'all 0.3s ease',
+                        cursor: 'pointer',
+                        overflow: 'hidden',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        '&:hover': {
+                          borderColor: '#D19F3B',
+                          transform: 'translateY(-2px)',
+                          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                        }
+                      }}
+                    >
+                      {logoPath ? (
+                        <Image
+                          src={logoPath}
+                          alt={store.name}
+                          fill
+                          sizes="(max-width: 600px) 50vw, (max-width: 960px) 33vw, (max-width: 1280px) 25vw, 20vw"
+                          style={{
+                            objectFit: 'contain',
+                            padding: '12px'
+                          }}
+                        />
+                      ) : (
+                        <Typography
+                          className="store-name"
+                          sx={{
+                            fontFamily: 'Georgia, serif',
+                            fontSize: { xs: '0.75rem', sm: '0.85rem', md: '0.9rem' },
+                            color: '#333333',
+                            fontWeight: 400,
+                            lineHeight: 1.4,
+                            wordBreak: 'break-word',
+                            transition: 'color 0.3s ease',
+                            padding: { xs: 1.5, sm: 2 },
+                            textAlign: 'center'
+                          }}
+                        >
+                          {store.name}
+                        </Typography>
+                      )}
+                    </Box>
+                  </Link>
+                );
+              })}
+            </Box>
+
+            {/* Show More Button */}
+            {hasMore && (
+              <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  mt: { xs: 3, sm: 4 }
+                }}
+              >
+                <Button
+                  onClick={handleLoadMore}
+                  variant="outlined"
+                  sx={{
+                    border: '1px solid #D19F3B',
+                    color: '#D19F3B',
+                    textTransform: 'uppercase',
+                    fontSize: { xs: '0.85rem', sm: '0.9rem' },
+                    fontWeight: 500,
+                    fontFamily: '"Poppins", sans-serif',
+                    padding: { xs: '10px 40px', sm: '12px 50px' },
+                    borderRadius: 0,
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      borderColor: '#D19F3B',
+                      color: '#ffffff',
+                      backgroundColor: '#D19F3B'
+                    }
+                  }}
+                >
+                  {isMobile && visibleCount === 6 ? 'Show More' : 'Load More'}
+                </Button>
+              </Box>
+            )}
+          </>
         )}
       </Box>
     </Box>

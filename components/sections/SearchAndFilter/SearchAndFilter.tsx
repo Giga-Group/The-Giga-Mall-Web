@@ -6,10 +6,6 @@ import { useFilters } from "@/lib/contexts/FilterContext";
 import {
   Box,
   TextField,
-  Select,
-  MenuItem,
-  FormControl,
-  InputLabel,
   Checkbox,
   FormControlLabel,
   Typography,
@@ -25,6 +21,7 @@ import {
   FilterList,
   Close,
 } from "@mui/icons-material";
+import CustomDropdown from "@/components/shared/CustomDropdown";
 
 interface CategoryOption {
   value: string;
@@ -78,6 +75,16 @@ const defaultDineSubcategories: CategoryOption[] = [
   { value: "middle-eastern", label: "Middle Eastern" },
 ];
 
+// View By options
+const viewByOptions: CategoryOption[] = [
+  { value: "", label: "All" },
+  { value: "0-9", label: "0-9" },
+  { value: "a-f", label: "A-F" },
+  { value: "g-l", label: "G-L" },
+  { value: "m-r", label: "M-R" },
+  { value: "s-z", label: "S-Z" },
+];
+
 const SearchAndFilter = ({
   pageType = "shop",
   categories,
@@ -94,6 +101,7 @@ const SearchAndFilter = ({
     setViewBy,
     setShowOffersOnly,
   } = useFilters();
+  
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
   
   // Use filter values from context
@@ -134,6 +142,8 @@ const SearchAndFilter = ({
         width: "100%",
         py: { xs: 2, sm: 4 },
         backgroundColor: "#ffffff",
+        position: "relative",
+        zIndex: 1200,
       }}
     >
       <Box
@@ -525,14 +535,7 @@ const SearchAndFilter = ({
                   gap: 1.5,
                 }}
               >
-                {[
-                  { value: "", label: "All" },
-                  { value: "0-9", label: "0-9" },
-                  { value: "a-f", label: "A-F" },
-                  { value: "g-l", label: "G-L" },
-                  { value: "m-r", label: "M-R" },
-                  { value: "s-z", label: "S-Z" },
-                ].map((option) => (
+                {viewByOptions.map((option) => (
                   <Chip
                     key={option.value}
                     label={option.label}
@@ -659,6 +662,7 @@ const SearchAndFilter = ({
             borderRadius: 0,
             width: "100%",
             maxWidth: { lg: "100%" },
+            position: "relative",
           }}
         >
           {/* Left Side - Category, Subcategory, View By */}
@@ -669,190 +673,68 @@ const SearchAndFilter = ({
               gap: { sm: 3 },
               alignItems: { sm: "flex-end" },
               flex: 1,
+              position: "relative",
             }}
           >
             {/* Category Dropdown */}
-            <FormControl
-              sx={{ minWidth: { sm: "150px" }, maxWidth: { sm: "180px" } }}
-              variant="standard"
-            >
-              <InputLabel
-                id="category-label"
-                sx={{
-                  fontSize: { sm: "0.875rem" },
-                  color: { sm: "#666666", lg: "#ffffff" },
-                  fontFamily: '"Poppins", sans-serif',
-                }}
-              >
-                Category
-              </InputLabel>
-              <Select
-                labelId="category-label"
-                value={category}
-                label="Category"
-                MenuProps={{
-                  disableScrollLock: true,
-                }}
-                onChange={(e) => setCategory(e.target.value)}
-                sx={{
-                  "&:before": {
-                    borderBottomColor: { xs: "#e0e0e0", lg: "#ffffff" },
-                  },
-                  "&:hover:not(.Mui-disabled):before": {
-                    borderBottomColor: { xs: "#bdbdbd", lg: "#ffffff" },
-                  },
-                  "&:after": {
-                    borderBottomColor: { xs: "#D19F3B", lg: "#ffffff" },
-                  },
-                  fontSize: { sm: "0.875rem" },
-                  color: { sm: "#333333", lg: "#ffffff" },
-                  fontFamily: '"Poppins", sans-serif',
-                  "& .MuiSvgIcon-root": {
-                    color: { sm: "#333333", lg: "#ffffff" },
-                  },
-                }}
-              >
-                {categoryOptions.map((cat) => (
-                  <MenuItem
-                    key={cat.value}
-                    value={cat.value}
-                    sx={{ fontFamily: '"Poppins", sans-serif' }}
-                  >
-                    {cat.label}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
+            <CustomDropdown
+              label="Category"
+              value={category}
+              options={categoryOptions}
+              onChange={setCategory}
+              pageType={pageType}
+              sx={{
+                minWidth: { sm: "150px" },
+                maxWidth: { sm: "180px" },
+                position: "relative",
+                zIndex: 1300,
+              }}
+              // labelSx={{
+              //   fontSize: { sm: "0.875rem" },
+              //   color: { sm: "#666666", lg: "#ffffff" },
+              //   fontFamily: '"Poppins", sans-serif',
+              // }}
+            />
 
             {/* Subcategory Dropdown */}
-            <FormControl
-              sx={{ minWidth: { sm: "150px" }, maxWidth: { sm: "180px" } }}
-              variant="standard"
-            >
-              <InputLabel
-                id="subcategory-label"
-                sx={{
-                  fontSize: { sm: "0.875rem" },
-                  color: { sm: "#666666", lg: "#ffffff" },
-                  fontFamily: '"Poppins", sans-serif',
-                }}
-              >
-                Subcategory
-              </InputLabel>
-              <Select
-                labelId="subcategory-label"
-                value={subcategory}
-                label="Subcategory"
-                 MenuProps={{
-                  disableScrollLock: true,
-                }}
-                onChange={(e) => setSubcategory(e.target.value)}
-                sx={{
-                  "&:before": {
-                    borderBottomColor: { xs: "#e0e0e0", lg: "#ffffff" },
-                  },
-                  "&:hover:not(.Mui-disabled):before": {
-                    borderBottomColor: { xs: "#bdbdbd", lg: "#ffffff" },
-                  },
-                  "&:after": {
-                    borderBottomColor: { xs: "#D19F3B", lg: "#ffffff" },
-                  },
-                  fontSize: { sm: "0.875rem" },
-                  color: { sm: "#333333", lg: "#ffffff" },
-                  fontFamily: '"Poppins", sans-serif',
-                  "& .MuiSvgIcon-root": {
-                    color: { sm: "#333333", lg: "#ffffff" },
-                  },
-                }}
-              >
-                {subcategoryOptions.map((subcat) => (
-                  <MenuItem
-                    key={subcat.value}
-                    value={subcat.value}
-                    sx={{ fontFamily: '"Poppins", sans-serif' }}
-                  >
-                    {subcat.label}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
+            <CustomDropdown
+              label="Subcategory"
+              value={subcategory}
+              options={subcategoryOptions}
+              onChange={setSubcategory}
+              pageType={pageType}
+              sx={{
+                minWidth: { sm: "150px" },
+                maxWidth: { sm: "180px" },
+                position: "relative",
+                zIndex: 1300,
+              }}
+              // labelSx={{
+              //   fontSize: { sm: "0.875rem" },
+              //   color: { sm: "#666666", lg: "#ffffff" },
+              //   fontFamily: '"Poppins", sans-serif',
+              // }}
+            />
 
             {/* View By Dropdown */}
-            <FormControl
-              sx={{ minWidth: { sm: "120px" }, maxWidth: { sm: "150px" } }}
-              variant="standard"
-            >
-              <InputLabel
-                id="viewby-label"
-                sx={{
-                  fontSize: { sm: "0.875rem" },
-                  color: { sm: "#666666", lg: "#ffffff" },
-                  fontFamily: '"Poppins", sans-serif',
-                }}
-              >
-                View by 0-9
-              </InputLabel>
-              <Select
-                labelId="viewby-label"
-                value={viewBy}
-                label="View by 0-9"
-                 MenuProps={{
-                  disableScrollLock: true,
-                }}
-                onChange={(e) => setViewBy(e.target.value)}
-                sx={{
-                  "&:before": {
-                    borderBottomColor: { xs: "#e0e0e0", lg: "#ffffff" },
-                  },
-                  "&:hover:not(.Mui-disabled):before": {
-                    borderBottomColor: { xs: "#bdbdbd", lg: "#ffffff" },
-                  },
-                  "&:after": {
-                    borderBottomColor: { xs: "#D19F3B", lg: "#ffffff" },
-                  },
-                  fontSize: { sm: "0.875rem" },
-                  color: { sm: "#333333", lg: "#ffffff" },
-                  fontFamily: '"Poppins", sans-serif',
-                  "& .MuiSvgIcon-root": {
-                    color: { sm: "#333333", lg: "#ffffff" },
-                  },
-                }}
-              >
-                <MenuItem value="" sx={{ fontFamily: '"Poppins", sans-serif' }}>
-                  All
-                </MenuItem>
-                <MenuItem
-                  value="0-9"
-                  sx={{ fontFamily: '"Poppins", sans-serif' }}
-                >
-                  0-9
-                </MenuItem>
-                <MenuItem
-                  value="a-f"
-                  sx={{ fontFamily: '"Poppins", sans-serif' }}
-                >
-                  A-F
-                </MenuItem>
-                <MenuItem
-                  value="g-l"
-                  sx={{ fontFamily: '"Poppins", sans-serif' }}
-                >
-                  G-L
-                </MenuItem>
-                <MenuItem
-                  value="m-r"
-                  sx={{ fontFamily: '"Poppins", sans-serif' }}
-                >
-                  M-R
-                </MenuItem>
-                <MenuItem
-                  value="s-z"
-                  sx={{ fontFamily: '"Poppins", sans-serif' }}
-                >
-                  S-Z
-                </MenuItem>
-              </Select>
-            </FormControl>
+            <CustomDropdown
+              label="View by 0-9"
+              value={viewBy}
+              options={viewByOptions}
+              onChange={setViewBy}
+              pageType={pageType}
+              sx={{
+                minWidth: { sm: "120px" },
+                maxWidth: { sm: "150px" },
+                position: "relative",
+                zIndex: 1300,
+              }}
+              // labelSx={{
+              //   fontSize: { sm: "0.875rem" },
+              //   color: { sm: "#666666", lg: "#ffffff" },
+              //   fontFamily: '"Poppins", sans-serif',
+              // }}
+            />
           </Box>
 
           {/* Right Side - Store Offers Links - Desktop Only */}
@@ -862,6 +744,8 @@ const SearchAndFilter = ({
               flexDirection: "row",
               gap: 3,
               alignItems: "flex-end",
+              position: "relative",
+              zIndex: 1200,
             }}
           >
             <Box

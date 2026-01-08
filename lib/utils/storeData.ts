@@ -200,10 +200,20 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-  { name: 'Babys Day Out', slug: 'babys-day-out', 
+  {
+    name: 'Babys Day Out',
+    slug: 'babys-day-out',
     description: 'A kids’ store offering toys, games, and fun activities designed to engage and entertain children of all ages.',
-
-    logo: '/logo/.jpg', backgroundImage: '/shops/Babysdayoutweb.JPG', category: 'Lifestyle', contact: { phone: '+971-50-501-8610' }, location: { level: 'Ground Floor', parking: 'P1, Main Parking', mapPosition: { x: 75, y: 45 } } },
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Babysdayoutweb.JPG',
+    category: 'Lifestyle',
+    contact: { phone: '+971-50-501-8610' },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
   {
     name: 'Gadgets Mobile',
     slug: 'gadgets-mobile',
@@ -225,7 +235,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'bonanza-satrangi',
     description: 'A leading fashion brand offering stylish and vibrant apparel for men, women, and children.',
     logo: '/logo/.jpg',
-    backgroundImage: '/Bonanza Satrangi web.JPG',
+    backgroundImage: '/shops/bonanza.jpeg',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -241,7 +251,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'aroma-concepts',
     description: 'A fragrance and home scents store offering perfumes, candles, and aromatic products.',
     logo: '/logo/.jpg',
-    backgroundImage: '/Aroma Concepts web.JPG',
+    backgroundImage: '/shops/Aroma Concepts web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -257,7 +267,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'eastern-art-and-handicraft',
     description: 'A handicraft store showcasing traditional art, décor, and handmade cultural pieces.',
     logo: '/logo/.jpg',
-    backgroundImage: '/Eastern Art and HandiCraft web.JPG',
+    backgroundImage: '/shops/Eastern Art and HandiCraft web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -273,7 +283,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'taana-baana',
     description: 'A textile and fashion brand offering premium fabrics, ethnic wear, and custom tailoring services.',
     logo: '/logo/.jpg',
-    backgroundImage: '/Taana Baana web.JPG',
+    backgroundImage: '/shops/Taana Baana web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -289,7 +299,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'alpha-accessories',
     description: 'A fashion accessories store offering bags, jewelry, and trendy everyday essentials.',
     logo: '/logo/.jpg',
-    backgroundImage: '/Alpha Accessories web.JPG',
+    backgroundImage: '/shops/Alpha Accessories web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -305,7 +315,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'ximi-vogue',
     description: 'A lifestyle and accessories brand offering affordable and fashionable products for all ages.',
     logo: '/logo/.jpg',
-    backgroundImage: '/Ximi Vogue web.JPG',
+    backgroundImage: '/shops/Ximi Vogue web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -321,7 +331,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'glamor',
     description: 'A beauty and cosmetics store providing makeup, skincare, and personal care products.',
     logo: '/logo/.jpg',
-    backgroundImage: '/Glamor web.JPG',
+    backgroundImage: '/shops/Glamor web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -337,7 +347,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'thai-zone',
     description: 'A dining outlet offering authentic Thai cuisine with fresh ingredients and traditional flavors.',
     logo: '/logo/.jpg',
-    backgroundImage: '/Thai Zone web.JPG',
+    backgroundImage: '/shops/Thai Zone web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -351,9 +361,9 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Tajik',
     slug: 'tajik',
-    description: 'A footwear and fashion accessories store offering comfortable and stylish designs.', 
+    description: 'A footwear and fashion accessories store offering comfortable and stylish designs.',
     logo: '/logo/.jpg',
-    backgroundImage: '/Tajik web.JPG',
+    backgroundImage: '/shops/Tajik web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -369,7 +379,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'sams-abaya',
     description: 'A women’s fashion store specializing in elegant abayas and modest wear with contemporary designs.',
     logo: '/logo/.jpg',
-    backgroundImage: "/Sam's Abaya web.JPG",
+    backgroundImage: "/shops/Sam's Abaya web.JPG",
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -385,7 +395,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'zamin-jewelers',
     description: 'A premium jewelry store offering exquisite gold, diamond, and gemstone collections.',
     logo: '/logo/.jpg',
-    backgroundImage: '/Zamin Jewelers web.JPG',
+    backgroundImage: '/shops/Zamin Jewelers web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -401,7 +411,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'traditional-khusa',
     description: 'A footwear store offering traditional handcrafted khusa shoes with ethnic designs.',
     logo: '/logo/.jpg',
-    backgroundImage: '/Traditional Khusa web.JPG',
+    backgroundImage: '/shops/Traditional Khusa web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -417,7 +427,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'taarkashi',
     description: 'A decorative art store specializing in intricate taarkashi artwork and handicrafts.',
     logo: '/logo/.jpg',
-    backgroundImage: '/Taarkashi web.JPG',
+    backgroundImage: '/shops/Taarkashi web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -433,7 +443,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'the-time-zone',
     description: 'A watch store offering premium and stylish timepieces for men and women.',
     logo: '/logo/.jpg',
-    backgroundImage: '/The Time Zone web.JPG',
+    backgroundImage: '/shops/The Time Zone web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -449,7 +459,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'mehran-jewellers',
     description: 'A renowned jewelry brand offering gold, diamond, and bridal collections with elegant craftsmanship.',
     logo: '/logo/.jpg',
-    backgroundImage: '/Mehran Jewellers web.JPG',
+    backgroundImage: '/shops/Mehran Jewellers web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -479,7 +489,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Location',
     slug: 'location',
-   description: 'A fashion retail brand offering modern apparel and accessories with a focus on contemporary style.',
+    description: 'A fashion retail brand offering modern apparel and accessories with a focus on contemporary style.',
 
     logo: '/logo/.jpg',
     backgroundImage: '/shops/Location web.JPG',
@@ -722,7 +732,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'balochistan-dry-fruit-marchent',
     description: 'A specialty store offering premium quality dry fruits, nuts, and traditional healthy snacks.',
     logo: '/logo/.jpg',
-    backgroundImage: '/Balochistan Dry Fruit Marchent web.JPG',
+    backgroundImage: '/shops/Balochistan Dry Fruit Marchent web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -738,7 +748,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'just-fragrance',
     description: 'A fragrance brand offering a wide range of perfumes and scents inspired by international blends.',
     logo: '/logo/.jpg',
-    backgroundImage: '/Just Fragrance web.JPG',
+    backgroundImage: '/shops/Just Fragrance web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -800,7 +810,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Kohinoor Jewels',
     slug: 'kohinoor-jewels',
-   description: 'A premium jewelry store offering exquisite gold, diamond, and bridal collections with elegant craftsmanship.',
+    description: 'A premium jewelry store offering exquisite gold, diamond, and bridal collections with elegant craftsmanship.',
 
     logo: '/logo/kohinoor jewelers.jpeg',
     backgroundImage: '/shops/Kohinoor Jewels web.JPG',
@@ -910,10 +920,12 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-  { name: 'Brand City', 
-    slug: 'brand-city', 
+  {
+    name: 'Brand City',
+    slug: 'brand-city',
     description: 'A multi-brand fashion destination offering a wide range of trendy apparel, footwear, and accessories for all ages.',
- logo: '/logo/brand city.jpeg', backgroundImage: '/shops/Brand City web.JPG', category: 'Lifestyle', contact: { phone: '+971-50-501-8610' }, location: { level: 'Ground Floor', parking: 'P1, Main Parking', mapPosition: { x: 75, y: 45 } } },
+    logo: '/logo/brand city.jpeg', backgroundImage: '/shops/Brand City web.JPG', category: 'Lifestyle', contact: { phone: '+971-50-501-8610' }, location: { level: 'Ground Floor', parking: 'P1, Main Parking', mapPosition: { x: 75, y: 45 } }
+  },
 
   {
     name: 'Bata',
@@ -930,6 +942,413 @@ export const storeDetails: StoreDetail[] = [
       parking: 'P1, Main Parking',
       mapPosition: { x: 75, y: 45 }
     }
+  },
+  {
+    name: '1st Step',
+    slug: '1st-step',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/1st step web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Addidas',
+    slug: 'addidas',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/addidas web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Adoro',
+    slug: 'adoro',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/adoro web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Almirah',
+    slug: 'almirah',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/almirah web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Anta',
+    slug: 'anta',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/anta web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Apavi',
+    slug: 'apavi',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/apavi web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Baskin Robin',
+    slug: 'baskin-robin',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/baskin robin 2 web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+   {
+    name: 'Batik Studio',
+    slug: 'batik-studio-3',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    logo: '/logo/bata.jpeg',
+    backgroundImage: '/shops/GroundFloor/batik studio web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: '12 STOREEZ',
+    slug: '12-storeez',
+    description: 'An international fashion brand with a clear design DNA and goal to create limited capsules that would easily fit into your life. Perfect cuts, elevated fabrics, attention to detail and composition allow us to provide our customers with a well-curated wardrobe, driven by our client\'s lifestyle rather than trends.',
+    contact: {
+      phone: '+971-50-501-8579'
+    },
+    category: 'Fashion',
+    backgroundImage: '/1-WL_inside-_2732_x_1436_rijsgy-OK.jpg',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 45, y: 25 }
+    }
+  },
+  {
+    name: '& Other Stories',
+    slug: 'other-stories',
+    description: 'Discover unique fashion pieces and accessories that tell your story. Our collections blend contemporary design with timeless elegance.',
+    contact: {
+      phone: '+971-50-501-8578'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/2-ES---WLaMaquinista_OK.jpg',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 35, y: 50 }
+    }
+  },
+  {
+    name: 'Aesop',
+    slug: 'aesop',
+    description: 'Thoughtfully crafted skin, hair, and body care with a signature sensorial touch. Experience premium quality products designed for everyday use.',
+    contact: {
+      phone: '+971-50-501-8577'
+    },
+    category: 'Beauty',
+    acceptsGiftCard: true,
+    backgroundImage: '/Aesop_Westfield_Stratford_City.jpg',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 40, y: 65 }
+    }
+  },
+  {
+    name: 'Adidas',
+    slug: 'adidas',
+    description: 'Sport-inspired streetwear and footwear designed for game changers. Discover the latest in athletic performance and style.',
+    contact: {
+      phone: '+971-50-501-8576'
+    },
+    category: 'Sports & Fitness',
+    hasOffers: true,
+    backgroundImage: '/ADIDAS.jpg',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 45, y: 55 }
+    }
+  },
+  {
+    name: 'Nike',
+    slug: 'nike',
+    description: 'Performance meets style with the latest sneakers, sportswear, and innovations. Just Do It.',
+    logo: '/NIKE_-_WMoN.jpg',
+    contact: {
+      phone: '+971-50-501-8575'
+    },
+    category: 'Sports & Fitness',
+    hasOffers: true,
+    backgroundImage: '/NIKE_-_WMoN.jpg',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 50, y: 55 }
+    }
+  },
+  {
+    name: 'Sephora',
+    slug: 'sephora',
+    description: 'The ultimate beauty playground featuring makeup, skincare, and fragrance icons from around the world.',
+    contact: {
+      phone: '+971-50-501-8574'
+    },
+    category: 'Beauty',
+    hasOffers: true,
+    acceptsGiftCard: true,
+    backgroundImage: '/Sephora_2_1.jpg',
+    location: {
+      level: 'Second Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 25, y: 30 }
+    }
+  },
+  {
+    name: 'Zara',
+    slug: 'zara',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/zara-forum6257.jpg',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/zara-forum6257.jpg',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Starbucks',
+    slug: 'starbucks',
+    description: 'Your favourite handcrafted beverages, from classic coffees to seasonal specials. Experience the perfect cup every time.',
+    contact: {
+      phone: '+971-50-501-8572'
+    },
+    category: 'Food & Beverage',
+    backgroundImage: '/Starbucks.jpg',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 30, y: 60 }
+    }
+  },
+  {
+    name: 'Bvlgari',
+    slug: 'bvlgari',
+    description: 'Luxury Italian jewelry, watches, and accessories. Timeless elegance meets contemporary design.',
+    contact: {
+      phone: '+971-50-501-8571'
+    },
+    category: 'Luxury',
+    acceptsGiftCard: true,
+    backgroundImage: '/3-Mall-of-Scandinavia-OK.jpg'
+  },
+  {
+    name: 'Cartier',
+    slug: 'cartier',
+    description: 'French luxury goods manufacturer of jewelry, watches, and accessories. Craftsmanship and elegance since 1847.',
+    contact: {
+      phone: '+971-50-501-8570'
+    },
+    category: 'Luxury',
+    acceptsGiftCard: true,
+    backgroundImage: '/4-WChodov-OK.jpg'
+  },
+  {
+    name: 'CHANEL',
+    slug: 'chanel',
+    description: 'French luxury fashion house specializing in haute couture, ready-to-wear, luxury goods, and accessories.',
+    contact: {
+      phone: '+971-50-501-8569'
+    },
+    category: 'Luxury',
+    acceptsGiftCard: true,
+    backgroundImage: '/Victoria_s_Secret_Westfield_Stratford_City.jpg'
+  },
+  {
+    name: 'Louis Vuitton',
+    slug: 'louis-vuitton',
+    description: 'French luxury fashion house and luxury goods company. Known for its LV monogram and leather goods.',
+    contact: {
+      phone: '+971-50-501-8568'
+    },
+    category: 'Luxury',
+    acceptsGiftCard: true,
+    backgroundImage: '/Jok_Air_4TEMPS_CNIT_carrousel_homepage_2732x1436px.jpg'
+  },
+  {
+    name: '100% Capri',
+    slug: '100-capri',
+    description: 'Discover premium Italian fashion and accessories inspired by the beautiful island of Capri.',
+    contact: {
+      phone: '+971-50-501-8567'
+    },
+    category: 'Fashion',
+    backgroundImage: '/2-OK.jpg'
+  },
+  {
+    name: '1847 Executive Grooming for Men',
+    slug: '1847-executive-grooming',
+    description: 'Premium grooming services and products for the modern gentleman. Experience luxury barbering and skincare.',
+    contact: {
+      phone: '+971-50-501-8566'
+    },
+    category: 'Grooming',
+    backgroundImage: '/DSC05412Food_OK_1.jpg'
+  },
+  {
+    name: 'Chloé',
+    slug: 'chloe',
+    description: 'French luxury fashion house known for its feminine, bohemian aesthetic and ready-to-wear collections.',
+    contact: {
+      phone: '+971-50-501-8565'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/DSC07199.jpg'
+  },
+  {
+    name: 'Chopard',
+    slug: 'chopard',
+    description: 'Swiss luxury watchmaker and jeweler. Crafting timepieces and jewelry with precision and elegance.',
+    contact: {
+      phone: '+971-50-501-8564'
+    },
+    category: 'Luxury',
+    backgroundImage: '/DSC07836.jpg'
+  },
+  {
+    name: 'Christian Louboutin',
+    slug: 'christian-louboutin',
+    description: 'French luxury footwear and accessories designer. Famous for red-soled high-heeled shoes.',
+    contact: {
+      phone: '+971-50-501-8563'
+    },
+    category: 'Luxury',
+    acceptsGiftCard: true,
+    backgroundImage: '/DSC07876.jpg'
+  },
+  {
+    name: 'Henry Jacques',
+    slug: 'henry-jacques',
+    description: 'Luxury French perfumer creating bespoke fragrances with the finest ingredients and craftsmanship.',
+    contact: {
+      phone: '+971-50-501-8562'
+    },
+    category: 'Luxury',
+    backgroundImage: '/DSC07901.jpg'
+  },
+  {
+    name: 'Level Shoes',
+    slug: 'level-shoes',
+    description: 'The world\'s largest luxury shoe store. Discover an extensive collection of designer footwear.',
+    contact: {
+      phone: '+971-50-501-8561'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/DSC08041.jpg'
+  },
+  {
+    name: 'LONGINES',
+    slug: 'longines',
+    description: 'Swiss luxury watchmaker with over 190 years of tradition. Elegance is an attitude.',
+    contact: {
+      phone: '+971-50-501-8560'
+    },
+    category: 'Luxury',
+    hasOffers: true,
+    backgroundImage: '/DSC08196.jpg'
+  },
+  {
+    name: 'Tiffany & Co.',
+    slug: 'tiffany-co',
+    description: 'American luxury jewelry and specialty retailer. Known for its distinctive blue boxes and timeless designs.',
+    contact: {
+      phone: '+971-50-501-8559'
+    },
+    category: 'Luxury',
+    acceptsGiftCard: true,
+    backgroundImage: '/Swarovski_in_Scandinavia_2_784e0db59b.webp'
+  },
+  {
+    name: 'Tommy Hilfiger Kids',
+    slug: 'tommy-hilfiger-kids',
+    description: 'Classic American cool style for kids. Quality clothing that combines comfort and style.',
+    contact: {
+      phone: '+971-50-501-8558'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/H and M.jpg'
   }
 ];
 
