@@ -52,7 +52,7 @@ export default function Error({
           maxWidth: '600px',
         }}
       >
-        We're sorry, but something unexpected happened. Please try again or return to the homepage.
+        We&apos;re sorry, but something unexpected happened. Please try again or return to the homepage.
       </Typography>
 
       <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', justifyContent: 'center' }}>
