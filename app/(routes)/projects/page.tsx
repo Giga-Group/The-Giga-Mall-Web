@@ -1,5 +1,3 @@
-'use client';
-
 import { Box, Typography } from '@mui/material';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -66,8 +64,11 @@ const completedProjects = [
       'One of the largest malls in Pakistan featuring shopping, dining, and entertainment.',
     image: '/projects/delivered-projects/giga-mall.jpeg',
   },
-  { title: 'Pearl Residency, Karachi', description: 'Pearl Residency consists of two state-of-the-art high-rise residential towers situated behind Aga Khan Hospital in Block 14 of Gulshan-e-Iqbal, Karachi. It is near the Civic Centre and Expo Centre. The project is fully completed.', image: '/projects/delivered-projects/pearl-residency.jpg' }, { title: 'Al Najeebi Bazaar, Karimabad Karachi', description: 'Al Najeebi Bazaar Karimabad is located at Shahra-e-Pakistan, Main Karimabad, Karachi. The 1511 square yards project features 475 shops (100,000 sq ft) and is fully completed and operational.', image: '/projects/delivered-projects/al-najeebi-bazaar.jpg' }, { title: 'Goldcrest Souq, Lahore', description: 'Goldcrest Souq in Sector DD, Phase IV of DHA Lahore is a modern commercial tower featuring shops and offices. Once complete, it will include 4 basements and a ground plus 13-floor structure. The project is currently in its initial development phase and construction has started.', image: '/projects/delivered-projects/gc-souq-lahore.jpg' },
+  { title: 'Pearl Residency, Karachi', description: 'Pearl Residency consists of two state-of-the-art high-rise residential towers situated behind Aga Khan Hospital in Block 14 of Gulshan-e-Iqbal, Karachi. It is near the Civic Centre and Expo Centre. The project is fully completed.', image: '/projects/delivered-projects/pearl-residency.jpg' }, { title: 'Al Najeebi Bazaar, Karimabad Karachi', description: 'Al Najeebi Bazaar Karimabad is located at Shahra-e-Pakistan, Main Karimabad, Karachi. The 1511 square yards project features 475 shops (100,000 sq ft) and is fully completed and operational.', image: '/projects/delivered-projects/al-najeebi-bazaar.jpg' },   { title: 'Goldcrest Souq, Lahore', description: 'Goldcrest Souq in Sector DD, Phase IV of DHA Lahore is a modern commercial tower featuring shops and offices. Once complete, it will include 4 basements and a ground plus 13-floor structure. The project is currently in its initial development phase and construction has started.', image: '/projects/delivered-projects/gc-souq-lahore.jpg' },
 ];
+
+// Add revalidation for ISR (Incremental Static Regeneration)
+export const revalidate = 3600; // Revalidate every hour
 
 export default function ProjectsPage() {
   return (

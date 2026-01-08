@@ -1,17 +1,10 @@
-'use client';
-
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import SearchAndFilter from '@/components/sections/SearchAndFilter';
-import StoreGrid from '@/components/sections/StoreGrid';
-import DiscoverEventsOffers from '@/components/sections/DiscoverEventsOffers';
-import ExploreTheMall from '@/components/sections/ExploreTheMall';
-import { FilterProvider } from '@/lib/contexts/FilterContext';
-import { Box, Typography } from '@mui/material';
-import { Suspense } from 'react';
+import ServicesPageClient from '@/components/sections/ServicesPageClient';
 import type { Store } from '@/components/sections/StoreGrid/StoreGrid';
 import { serviceDetails } from '@/lib/utils/servicesData';
 
+// Convert serviceDetails to Store format - this runs on the server
 const services: Store[] = serviceDetails.map(service => ({
   name: service.name,
   slug: service.slug,
@@ -20,74 +13,55 @@ const services: Store[] = serviceDetails.map(service => ({
   category: service.category,
 }));
 
+// Add revalidation for ISR (Incremental Static Regeneration)
+export const revalidate = 3600; // Revalidate every hour
+
 export default function ServicesDirectoryPage() {
   return (
-    <FilterProvider>
+    <>
       <Header />
       <main>
-        <Box
-          sx={{
-            paddingTop: { xs: '90px', md: '100px', lg: '40px' },
+        <div
+          style={{
+            paddingTop: '90px',
             minHeight: '100vh',
             backgroundColor: '#ffffff'
           }}
+          className="md:pt-[100px] lg:pt-[40px]"
         >
           {/* Main Title */}
-          <Box
-            sx={{
+          <div
+            style={{
               maxWidth: '1400px',
               margin: '0 auto',
-              px: { xs: 2, sm: 4, md: 6, lg: 10 },
-              pb: { xs: 2, sm: 3, md: 4 }
+              paddingLeft: '16px',
+              paddingRight: '16px',
+              paddingBottom: '16px'
             }}
+            className="sm:px-4 md:px-6 lg:px-10 sm:pb-3 md:pb-4"
           >
-            <Typography
-              variant="h1"
-              sx={{
+            <h1
+              style={{
                 fontFamily: '"Arvo", serif',
-                fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
+                fontSize: '2rem',
                 fontWeight: 400,
                 color: '#D19F3B',
                 textAlign: 'center',
-                letterSpacing: '0.02em'
+                letterSpacing: '0.02em',
+                margin: 0
               }}
+              className="sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem]"
             >
               Services Directory
-            </Typography>
-          </Box>
+            </h1>
+          </div>
 
-          {/* Search and Filter Section */}
-          <Suspense fallback={<Box sx={{ py: 4, px: { xs: 2, sm: 4, md: 6, lg: 10 } }}>Loading filters...</Box>}>
-            <SearchAndFilter 
-              pageType="shop"
-              categories={[
-                { value: '', label: 'All Categories' },
-                { value: 'bank', label: 'Banks' },
-                { value: 'atm', label: 'ATMs' },
-                { value: 'grocery', label: 'Grocery Stores' },
-                { value: 'perfume', label: 'Perfume Shops' },
-                { value: 'kiosk', label: 'Kiosks & Small Cabins' }
-              ]}
-              subcategories={[
-                { value: '', label: 'All Subcategories' }
-              ]}
-              searchPlaceholder="Search for services, banks, or shops"
-              offersLabel="Show services with offers only"
-            />
-          </Suspense>
-
-          {/* Store Grid Section */}
-          <StoreGrid items={services} basePath="/services-directory" />
-
-          {/* Discover Events & Offers Section */}
-          <DiscoverEventsOffers />
-
-          {/* Explore The Mall & Visitor Info Section */}
-          <ExploreTheMall />
-        </Box>
+          {/* Client component with FilterProvider */}
+          <ServicesPageClient services={services} />
+        </div>
       </main>
       <Footer />
-    </FilterProvider>
+    </>
   );
 }
 

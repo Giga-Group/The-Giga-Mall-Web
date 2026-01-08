@@ -1,10 +1,11 @@
-'use client';
-
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Box, Typography, Button } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
+
+// Add revalidation for ISR (Incremental Static Regeneration)
+export const revalidate = 3600; // Revalidate every hour
 
 export default function StayPage() {
   return (

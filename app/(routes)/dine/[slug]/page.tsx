@@ -10,6 +10,9 @@ interface DinePageProps {
   };
 }
 
+// Add revalidation for ISR (Incremental Static Regeneration)
+export const revalidate = 3600; // Revalidate every hour
+
 // Generate static params for all restaurants
 export async function generateStaticParams() {
   const slugs = getAllDineSlugs();

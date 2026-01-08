@@ -116,6 +116,7 @@ const Card = ({
               muted
               loop
               playsInline
+              preload={isHeroVideo ? "metadata" : "none"}
               transition={isHeroVideo ? {
                 layout: {
                   duration: 1.2,

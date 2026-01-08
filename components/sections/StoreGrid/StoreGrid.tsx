@@ -128,6 +128,8 @@ const StoreCard = ({ store, basePath, logoPath }: { store: Store; basePath: stri
             alt={store.name}
             fill
             sizes="(max-width: 600px) 50vw, (max-width: 960px) 33vw, (max-width: 1280px) 25vw, 20vw"
+            loading="lazy"
+            quality={75}
             style={{
               objectFit: 'contain',
               padding: '12px'

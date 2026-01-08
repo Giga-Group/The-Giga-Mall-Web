@@ -10,6 +10,9 @@ interface ServicePageProps {
   };
 }
 
+// Add revalidation for ISR (Incremental Static Regeneration)
+export const revalidate = 3600; // Revalidate every hour
+
 // Generate static params for all services
 export async function generateStaticParams() {
   const slugs = getAllServiceSlugs();

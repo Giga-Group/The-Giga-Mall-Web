@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { Box } from "@mui/material";
 
 // -------------------- TYPES --------------------
@@ -307,6 +307,9 @@ const MallMapStandalone = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
   const [svgContent, setSvgContent] = useState<string>("");
+  
+  // Cache SVG content to avoid refetching on remount
+  const svgCache = useRef<string | null>(null);
 
   const MIN_ZOOM = 0.5;
   const MAX_ZOOM = 3;
@@ -316,13 +319,54 @@ const MallMapStandalone = () => {
   const SVG_WIDTH = 1160;
   const SVG_HEIGHT = 742.67;
 
-  // -------------------- LOAD SVG --------------------
+  // -------------------- LOAD SVG (with caching) --------------------
   useEffect(() => {
+    // Use cached SVG if available
+    if (svgCache.current) {
+      setSvgContent(svgCache.current);
+      return;
+    }
+    
+    // Fetch SVG only if not cached
     fetch("/Giga mall Ground Floor-01.svg")
       .then((res) => res.text())
-      .then(setSvgContent)
+      .then((text) => {
+        svgCache.current = text; // Cache the SVG content
+        setSvgContent(text);
+      })
       .catch(console.error);
   }, []);
+
+  // -------------------- MEMOIZED SHOP PATHS --------------------
+  // Memoize expensive path calculations to avoid recalculating on every render
+  const memoizedShopPaths = useMemo(() => {
+    return Object.entries(SHOP_AREAS).map(([shop, area]) => {
+      // Scale points to SVG size
+      const scaledPoints = area.points.map((p) => ({
+        x: (p.x / 100) * SVG_WIDTH,
+        y: (p.y / 100) * SVG_HEIGHT,
+        r: p.r,
+      }));
+
+      // Build rounded path
+      const pathD = buildPathWithCornerRadii(scaledPoints);
+
+      // Calculate center for label
+      const centerX =
+        scaledPoints.reduce((sum, p) => sum + p.x, 0) /
+        scaledPoints.length;
+      const centerY =
+        scaledPoints.reduce((sum, p) => sum + p.y, 0) /
+        scaledPoints.length;
+
+      return {
+        shop,
+        pathD,
+        centerX,
+        centerY,
+      };
+    });
+  }, []); // Only calculate once on mount
 
   // -------------------- VIEWBOX --------------------
   const viewBoxWidth = SVG_WIDTH / zoom;
@@ -387,27 +431,9 @@ const MallMapStandalone = () => {
             />
           )}
 
-          {/* -------- SHOP SHAPES (PATHS WITH MIXED RADII) -------- */}
-          {Object.entries(SHOP_AREAS).map(([shop, area]) => {
-            // 1️⃣ Scale points to SVG size
-            const scaledPoints = area.points.map((p) => ({
-              x: (p.x / 100) * SVG_WIDTH,
-              y: (p.y / 100) * SVG_HEIGHT,
-              r: p.r,
-            }));
-
-            // 2️⃣ Build rounded path
-            const pathD = buildPathWithCornerRadii(scaledPoints);
-
+          {/* -------- SHOP SHAPES (PATHS WITH MIXED RADII) - Memoized -------- */}
+          {memoizedShopPaths.map(({ shop, pathD, centerX, centerY }) => {
             const active = hoveredShop === shop;
-
-            // 3️⃣ Center for label
-            const centerX =
-              scaledPoints.reduce((sum, p) => sum + p.x, 0) /
-              scaledPoints.length;
-            const centerY =
-              scaledPoints.reduce((sum, p) => sum + p.y, 0) /
-              scaledPoints.length;
 
             return (
               <g key={shop}>
