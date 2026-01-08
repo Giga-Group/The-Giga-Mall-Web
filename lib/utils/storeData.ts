@@ -203,7 +203,7 @@ export const storeDetails: StoreDetail[] = [
   { name: 'Babys Day Out', slug: 'babys-day-out', 
     description: 'A kids’ store offering toys, games, and fun activities designed to engage and entertain children of all ages.',
 
-    logo: '/logo/miniso logo.jpg', backgroundImage: '/shops/Babysdayoutweb.JPG', category: 'Lifestyle', contact: { phone: '+971-50-501-8610' }, location: { level: 'Ground Floor', parking: 'P1, Main Parking', mapPosition: { x: 75, y: 45 } } },
+    logo: '/logo/.jpg', backgroundImage: '/shops/Babysdayoutweb.JPG', category: 'Lifestyle', contact: { phone: '+971-50-501-8610' }, location: { level: 'Ground Floor', parking: 'P1, Main Parking', mapPosition: { x: 75, y: 45 } } },
   {
     name: 'Gadgets Mobile',
     slug: 'gadgets-mobile',
@@ -497,7 +497,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Majhurat',
     slug: 'majhurat',
     description: 'A traditional jewelry store specializing in classic gold designs and timeless craftsmanship.',
-    logo: '/logo/.jpg',
+    logo: '/logo/majhurat.jpeg',
     backgroundImage: '/shops/Majhurat web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -513,7 +513,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Milli Shoes',
     slug: 'milli-shoes',
     description: 'A popular footwear brand offering stylish, comfortable, and affordable shoes for everyday wear.',
-    logo: '/logo/.jpg',
+    logo: '/logo/milli.jpeg',
     backgroundImage: '/shops/Milli web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -561,7 +561,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'NDURE',
     slug: 'ndure',
     description: 'A leading footwear brand offering fashionable and durable shoes for men and women.',
-    logo: '/logo/.jpg',
+    logo: '/logo/ndure.jpeg',
     backgroundImage: '/shops/Ndure web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -577,7 +577,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Readers Point',
     slug: 'readers-point',
     description: 'A bookstore offering a wide range of books, stationery, magazines, and reading essentials.',
-    logo: '/logo/.jpg',
+    logo: '/logo/readers point.jpeg',
     backgroundImage: '/shops/Readers Point web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -609,7 +609,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Saeed Ghani',
     slug: 'saeed-ghani',
     description: 'A heritage herbal brand offering natural skincare, haircare, and wellness products.',
-    logo: '/logo/.jpg',
+    logo: '/logo/saeed ghani.jpeg',
     backgroundImage: '/shops/Saeed Ghani web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -625,7 +625,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Service',
     slug: 'service',
     description: 'A convenience and service store providing everyday solutions and customer support essentials.',
-    logo: '/logo/.jpg',
+    logo: '/logo/service.jpeg',
     backgroundImage: '/shops/Service web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -657,7 +657,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Sveston',
     slug: 'sveston',
     description: 'A watch brand offering stylish timepieces that combine modern design with reliable performance.',
-    logo: '/logo/.jpg',
+    logo: '/logo/sveston.jpeg',
     backgroundImage: '/shops/Sveston web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -768,7 +768,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Jelly Fish',
     slug: 'jelly-factory',
     description: 'A fun and trendy store offering toys, gifts, novelty items, and colorful products for kids and families.',
-    logo: '/logo/.jpg',
+    logo: '/logo/jelly factory.jpeg',
     backgroundImage: '/shops/Jelly Fish web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -785,7 +785,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'johri',
     description: 'A traditional jewelry brand specializing in finely crafted gold and gemstone pieces with classic designs.',
 
-    logo: '/logo/.jpg',
+    logo: '/logo/johri.jpeg',
     backgroundImage: '/shops/Johri web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -802,7 +802,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'kohinoor-jewels',
    description: 'A premium jewelry store offering exquisite gold, diamond, and bridal collections with elegant craftsmanship.',
 
-    logo: '/logo/.jpg',
+    logo: '/logo/kohinoor jewelers.jpeg',
     backgroundImage: '/shops/Kohinoor Jewels web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -834,7 +834,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Friends Home',
     slug: 'friends-home',
     description: 'A home essentials store offering kitchenware, household items, décor, and everyday products for comfortable living.',
-    logo: '/logo/.jpg',
+    logo: '/logo/friends home.jpeg',
     backgroundImage: '/shops/Friends Home web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -866,7 +866,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Diamond Crown',
     slug: 'diamond-crown',
     description: 'An elegant jewelry brand offering finely crafted gold, diamond, and gemstone pieces for timeless style and special occasions.',
-    logo: '/logo/.jpg',
+    logo: '/logo/diamond crown.jpeg',
     backgroundImage: '/shops/Diamond Crown web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -898,7 +898,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Carrefour',
     slug: 'carrefour',
     description: 'A leading global retail chain offering groceries, fresh produce, household essentials, electronics, and everyday necessities under one roof.',
-    logo: '/logo/.jpg',
+    logo: '/logo/carrefour.jpeg',
     backgroundImage: '/shops/Carrefour web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -913,13 +913,13 @@ export const storeDetails: StoreDetail[] = [
   { name: 'Brand City', 
     slug: 'brand-city', 
     description: 'A multi-brand fashion destination offering a wide range of trendy apparel, footwear, and accessories for all ages.',
- logo: '/.jpg', backgroundImage: '/shops/Brand City web.JPG', category: 'Lifestyle', contact: { phone: '+971-50-501-8610' }, location: { level: 'Ground Floor', parking: 'P1, Main Parking', mapPosition: { x: 75, y: 45 } } },
+ logo: '/logo/brand city.jpeg', backgroundImage: '/shops/Brand City web.JPG', category: 'Lifestyle', contact: { phone: '+971-50-501-8610' }, location: { level: 'Ground Floor', parking: 'P1, Main Parking', mapPosition: { x: 75, y: 45 } } },
 
   {
     name: 'Bata',
     slug: 'bata',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/.jpg',
+    logo: '/logo/bata.jpeg',
     backgroundImage: '/shops/Bata web.JPG',
     category: 'Lifestyle',
     contact: {
