@@ -4,7 +4,7 @@ import { Box, Typography, Link, useMediaQuery, useTheme } from "@mui/material";
 import { Phone } from "@mui/icons-material";
 import Image from "next/image";
 import { StoreDetail } from "@/lib/utils/storeData";
-import { getMobileBrandImage } from "@/lib/utils/constants";
+import { getMobileBrandImage } from "@/lib/utils/constants"; 
 
 interface StoreHeroProps {
   store: StoreDetail;
