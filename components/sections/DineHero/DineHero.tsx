@@ -9,7 +9,7 @@ import { getMobileDineImage } from '@/lib/utils/constants';
 interface DineHeroProps {
   dine: DineDetail;
 }
-
+//Test
 // Helper function to get logo path from dine slug - matches StoreGrid logic
 const getDineLogo = (slug?: string): string | null => {
   if (!slug) return null;
