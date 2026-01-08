@@ -218,7 +218,7 @@ export default function EntertainPage() {
                 xl: "0 120px",
               },
               padding: {
-                xs: "20px 20px 30px",
+                xs: "20px 20px 30px", 
                 sm: "30px 40px 40px",
                 md: "0px 0px 50px",
                 lg: "0px 0px 60px",
