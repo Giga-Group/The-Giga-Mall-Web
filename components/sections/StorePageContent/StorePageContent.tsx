@@ -54,7 +54,8 @@ const StorePageContent = ({ store }: StorePageContentProps) => {
               order: { xs: 2, lg: 1 },
             }}
           >
-            <MallMapStandalone />
+            {/* <MallMapStandalone /> */}
+            <MallMapStandalone key={`shop-${store.slug}`} highlightedShop={store.slug} />
           </Box>
 
           {/* Right Side - Brand Details */}
