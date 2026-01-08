@@ -22,7 +22,7 @@ interface Event {
 const allEvents: Event[] = [
   {
     id: 1,
-    image: '/trending1.jpg',
+    image: '/trending/trending 1.jpg',
     dates: '6th September 2025',
     title: '6th September Defence Day Celebration',
     description: 'Join us in honoring our nation\'s heroes with a special Defence Day celebration. Experience patriotic displays, cultural performances, and community activities that pay tribute to the brave defenders of our country.',
@@ -31,7 +31,7 @@ const allEvents: Event[] = [
   },
   {
     id: 2,
-    image: '/trending8.jpg',
+    image: '/trending/trending 8.jpg',
     dates: '15th March 2025',
     title: 'Eid ul Adha Celebration',
     description: 'Celebrate the spirit of sacrifice and togetherness with our grand Eid ul Adha festivities. Enjoy special performances, traditional activities, and a joyful atmosphere for the entire family.',
@@ -40,7 +40,7 @@ const allEvents: Event[] = [
   },
   {
     id: 3,
-    image: '/trending3.jpg',
+    image: '/trending/trending 3.jpg',
     dates: '14th August 2025',
     title: '14th August Independence Day Celebration',
     description: 'Celebrate Pakistan\'s Independence Day with pride and joy. Join us for flag hoisting ceremonies, patriotic performances, cultural displays, and special activities that honor our nation\'s freedom.',
@@ -48,17 +48,8 @@ const allEvents: Event[] = [
     type: 'entertainment'
   },
   {
-    id: 4,
-    image: '/trending31.jpg',
-    dates: '1st January 2025 - 31st December 2025',
-    title: 'Giga Mall 5th Anniversary Celebration',
-    description: 'Marking five incredible years of excellence! Join us throughout the year as we celebrate Giga Mall\'s 5th anniversary with special events, exclusive offers, and memorable experiences for all our valued visitors.',
-    slug: 'giga-mall-5th-anniversary',
-    type: 'entertainment'
-  },
-  {
     id: 5,
-    image: '/trending13.jpg',
+    image: '/trending/trending 13.jpg',
     dates: '18th May 2025',
     title: 'Mothers Day Celebration',
     description: 'Honor the most important women in our lives with a special Mother\'s Day celebration. Enjoy heartwarming activities, special performances, and create beautiful memories with your loved ones.',
@@ -67,7 +58,7 @@ const allEvents: Event[] = [
   },
   {
     id: 6,
-    image: '/trending17.jpg',
+    image: '/trending/trending 17.jpg',
     dates: '1st January 2025 - 31st December 2025',
     title: 'MOU Signing Ceremony With The Last Tribe',
     description: 'Witness a significant partnership milestone as Giga Mall signs a Memorandum of Understanding with The Last Tribe. This collaboration brings exciting new experiences and opportunities to our visitors.',
@@ -76,13 +67,22 @@ const allEvents: Event[] = [
   },
   {
     id: 7,
-    image: '/trending 19.JPG',
+    image: '/trending/trending 19.JPG',
     dates: '1st January 2025 - 31st December 2025',
     title: 'Giga Tribal Beats 2025',
     description: 'Experience the rhythm and energy of Giga Tribal Beats 2025! Immerse yourself in vibrant cultural performances, traditional music, and dynamic entertainment that celebrates our rich heritage.',
     slug: 'giga-tribal-beats-2025',
     type: 'entertainment'
-  }
+  },
+  {
+    id: 4,
+    image: '/trending/trending 31.jpg',
+    dates: '1st January 2025 - 31st December 2025',
+    title: 'Giga Mall 5th Anniversary Celebration',
+    description: 'Marking five incredible years of excellence! Join us throughout the year as we celebrate Giga Mall\'s 5th anniversary with special events, exclusive offers, and memorable experiences for all our valued visitors.',
+    slug: 'giga-mall-5th-anniversary',
+    type: 'entertainment'
+  },
 ];
 
 const eventTypes = [

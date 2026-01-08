@@ -98,38 +98,56 @@ const ContactSection = () => {
           {/* Left Side - Contact Form */}
           <Box
             sx={{
+              position: 'relative',
               backgroundColor: '#ffffff',
               padding: { xs: '32px 24px', sm: '40px 32px', md: '48px 40px' },
               borderRadius: '8px',
               boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
               border: '1px solid rgba(209, 159, 59, 0.1)',
               transition: 'all 0.3s ease',
+              overflow: 'hidden',
               '&:hover': {
                 boxShadow: '0 8px 30px rgba(0, 0, 0, 0.12)',
               },
             }}
           >
-            <Typography
-              sx={{
-                fontFamily: '"Arvo", serif',
-                fontWeight: 400,
-                fontSize: { xs: '24px', sm: '26px', md: '28px' },
-                color: '#D19F3B',
-                marginBottom: { xs: 3, md: 4 },
-                letterSpacing: '0.02em',
-              }}
-            >
-              Get in Touch
-            </Typography>
+            {/* Gradient background matching footer */}
             <Box
-              component="form"
-              onSubmit={handleSubmit}
               sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: { xs: 2.5, md: 3 },
+                position: 'absolute',
+                inset: 0,
+                pointerEvents: 'none',
+                zIndex: 0,
+                opacity: 0.9,
+                backgroundImage: `
+                  radial-gradient(circle at top left, rgba(209, 159, 59, 0.4), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(209, 159, 59, 0.4), transparent 65%)
+                `,
+                backgroundBlendMode: 'soft-light, normal',
               }}
-            >
+            />
+            <Box sx={{ position: 'relative', zIndex: 1 }}>
+              <Typography
+                sx={{
+                  fontFamily: '"Arvo", serif',
+                  fontWeight: 400,
+                  fontSize: { xs: '24px', sm: '26px', md: '28px' },
+                  color: '#D19F3B',
+                  marginBottom: { xs: 3, md: 4 },
+                  letterSpacing: '0.02em',
+                }}
+              >
+                Get in Touch
+              </Typography>
+              <Box
+                component="form"
+                onSubmit={handleSubmit}
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: { xs: 2.5, md: 3 },
+                }}
+              >
               <TextField
                 name="name"
                 label="Name"
@@ -321,11 +339,14 @@ const ContactSection = () => {
               >
                 Send Message
               </Button>
+              </Box>
             </Box>
 
             {/* Leasing Query Section */}
             <Box
               sx={{
+                position: 'relative',
+                zIndex: 1,
                 marginTop: { xs: 4, md: 5 },
                 paddingTop: { xs: 3, md: 4 },
                 borderTop: '1px solid rgba(209, 159, 59, 0.2)',
@@ -379,19 +400,37 @@ const ContactSection = () => {
             {/* Contact Info Block - Single Card */}
             <Box
               sx={{
+                position: 'relative',
                 padding: { xs: '28px', sm: '32px', md: '36px' },
                 backgroundColor: '#ffffff',
                 borderRadius: '8px',
                 border: '1px solid rgba(209, 159, 59, 0.1)',
                 boxShadow: '0 2px 12px rgba(0, 0, 0, 0.06)',
                 transition: 'all 0.3s ease',
+                overflow: 'hidden',
                 '&:hover': {
                   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
                   borderColor: 'rgba(209, 159, 59, 0.3)',
                 },
               }}
             >
-              <Typography
+              {/* Gradient background matching footer */}
+              <Box
+                sx={{
+                  position: 'absolute',
+                  inset: 0,
+                  pointerEvents: 'none',
+                  zIndex: 0,
+                  opacity: 0.9,
+                  backgroundImage: `
+                    radial-gradient(circle at top left, rgba(209, 159, 59, 0.4), transparent 55%),
+                    radial-gradient(circle at bottom right, rgba(209, 159, 59, 0.4), transparent 65%)
+                  `,
+                  backgroundBlendMode: 'soft-light, normal',
+                }}
+              />
+              <Box sx={{ position: 'relative', zIndex: 1 }}>
+                <Typography
                 sx={{
                   fontFamily: '"Arvo", serif',
                   fontWeight: 400,
@@ -563,19 +602,38 @@ const ContactSection = () => {
                   </Box>
                 </Box>
               </Box>
+              </Box>
             </Box>
 
             {/* Opening Hours */}
             <Box
               sx={{
+                position: 'relative',
                 padding: { xs: '24px', sm: '28px' },
                 backgroundColor: '#ffffff',
                 borderRadius: '8px',
                 border: '1px solid rgba(209, 159, 59, 0.1)',
                 boxShadow: '0 2px 12px rgba(0, 0, 0, 0.06)',
+                overflow: 'hidden',
               }}
             >
-              <Typography
+              {/* Gradient background matching footer */}
+              <Box
+                sx={{
+                  position: 'absolute',
+                  inset: 0,
+                  pointerEvents: 'none',
+                  zIndex: 0,
+                  opacity: 0.9,
+                  backgroundImage: `
+                    radial-gradient(circle at top left, rgba(209, 159, 59, 0.4), transparent 55%),
+                    radial-gradient(circle at bottom right, rgba(209, 159, 59, 0.4), transparent 65%)
+                  `,
+                  backgroundBlendMode: 'soft-light, normal',
+                }}
+              />
+              <Box sx={{ position: 'relative', zIndex: 1 }}>
+                <Typography
                 sx={{
                   fontFamily: '"Arvo", serif',
                   fontWeight: 400,
@@ -633,19 +691,38 @@ const ContactSection = () => {
                   </Typography>
                 </Box>
               </Box>
+              </Box>
             </Box>
 
             {/* Social Media */}
             <Box
               sx={{
+                position: 'relative',
                 padding: { xs: '24px', sm: '28px' },
                 backgroundColor: '#ffffff',
                 borderRadius: '8px',
                 border: '1px solid rgba(209, 159, 59, 0.1)',
                 boxShadow: '0 2px 12px rgba(0, 0, 0, 0.06)',
+                overflow: 'hidden',
               }}
             >
-              <Typography
+              {/* Gradient background matching footer */}
+              <Box
+                sx={{
+                  position: 'absolute',
+                  inset: 0,
+                  pointerEvents: 'none',
+                  zIndex: 0,
+                  opacity: 0.9,
+                  backgroundImage: `
+                    radial-gradient(circle at top left, rgba(209, 159, 59, 0.4), transparent 55%),
+                    radial-gradient(circle at bottom right, rgba(209, 159, 59, 0.4), transparent 65%)
+                  `,
+                  backgroundBlendMode: 'soft-light, normal',
+                }}
+              />
+              <Box sx={{ position: 'relative', zIndex: 1 }}>
+                <Typography
                 sx={{
                   fontFamily: '"Arvo", serif',
                   fontWeight: 400,
@@ -724,6 +801,7 @@ const ContactSection = () => {
                 >
                   <Twitter sx={{ fontSize: { xs: '20px', sm: '22px' } }} />
                 </Link>
+              </Box>
               </Box>
             </Box>
           </Box>

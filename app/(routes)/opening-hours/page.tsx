@@ -225,10 +225,10 @@ function OpeningHoursContent() {
     : 'Opening hours';
 
   const heroImage = isGettingHere
-    ? '/getting-here.jpg'
+    ? '/plan your visit/getting-here.jpg'
     : isParking
-    ? '/hallway-garage.jpg'
-    : '/opening-hours.jpg';
+    ? '/plan your visit/hallway-garage.jpg'
+    : '/plan your visit/opening-hours.jpg';
 
   return (
     <>

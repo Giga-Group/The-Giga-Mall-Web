@@ -128,23 +128,23 @@ const serviceHighlights = [
   {
     description:
       "Kindly wear respectful clothing. Shoulders and knees should be covered.",
-    image: "/service-pic-1.png",
+    image: "/visitor guide/service-pic-1.png",
   },
   {
     description: "No overt displays of affection to avoid public attention",
-    image: "/service-pic-2.png",
+    image: "/visitor guide/service-pic-2.png",
   },
   {
     description: "Pet-free Mall.",
-    image: "/service-pic-3.png",
+    image: "/visitor guide/service-pic-3.png",
   },
   {
     description: "Smoking in designated areas including E-cigarette",
-    image: "/service-pic-4.png",
+    image: "/visitor guide/service-pic-4.png",
   },
   {
     description: "Safe practices only",
-    image: "/service-pic-5.png",
+    image: "/visitor guide/service-pic-5.png",
   },
 ];
 
@@ -170,7 +170,7 @@ export default function ServicesPage() {
       <main>
         <Box
           sx={{
-            paddingTop: { xs: "90px", md: "100px" },
+            paddingTop: { xs: "90px", md: "50px" },
             minHeight: "100vh",
             backgroundColor: "#ffffff",
             pb: { xs: 4, md: 6, lg: 8 },
@@ -182,7 +182,7 @@ export default function ServicesPage() {
               maxWidth: "1400px",
               margin: "0 auto",
               px: { xs: 2, sm: 4, md: 6, lg: 10 },
-              pt: { xs: 4, sm: 5, md: 6 },
+              // pt: { xs: 4, sm: 5, md: 6 },
               pb: { xs: 3, sm: 4, md: 5 },
             }}
           >
@@ -214,7 +214,7 @@ export default function ServicesPage() {
                 fontWeight: 300,
                 color: "#333333",
                 lineHeight: 1.7,
-                maxWidth: "800px",
+                maxWidth: "1000px",
               }}
             >
               Discover essential information, services, and guidelines to make your visit to Giga Mall smooth and truly memorable.
@@ -351,12 +351,12 @@ export default function ServicesPage() {
                       {/* Image */}
                       <Box
                         sx={{
-                          width: 140,
-                          height: 140,
+                          width: 180,
+                          height: 180,
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
-                          // mb: 0.5,
+                          mb: 2,
                         }}
                       >
                         <Box
@@ -364,8 +364,8 @@ export default function ServicesPage() {
                           src={item.image}
                           alt={item.description}
                           sx={{
-                            width: "50%",
-                            height: "50%",
+                            width: "100%",
+                            height: "100%",
                             objectFit: "contain",
                             display: "block",
                           }}
@@ -417,13 +417,13 @@ export default function ServicesPage() {
                     {/* Image container */}
                     <Box
                       sx={{
-                        width: { xs: 120, sm: 140, md: 160 },
-                        height: { xs: 120, sm: 140, md: 160 },
+                        width: { xs: 150, sm: 140, md: 160 },
+                        height: { xs: 150, sm: 140, md: 160 },
                         borderRadius: "12px",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        // mb: 1,
+                        mb: 2,
                       }}
                     >
                       <Box
@@ -431,8 +431,8 @@ export default function ServicesPage() {
                         src={item.image}
                         alt={item.description}
                         sx={{
-                          width: "50%",
-                          height: "50%",
+                          width: "100%",
+                          height: "100%",
                           objectFit: "contain",
                           display: "block",
                         }}

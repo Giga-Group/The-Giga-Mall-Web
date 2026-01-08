@@ -260,22 +260,7 @@ const Footer = () => {
               >
                 Settings <ChevronRight sx={{ fontSize: { xs: '14px', sm: '16px' }, marginLeft: 0.5 }} />
               </Link>
-              <Link
-                href="#"
-                sx={{
-                  fontFamily: '"Quicksand", sans-serif',
-                  fontSize: { xs: '13px', sm: '14px' },
-                  color: '#333333',
-                  textDecoration: 'none',
-                  display: 'flex',
-                  alignItems: 'center',
-                  '&:hover': {
-                    textDecoration: 'underline',
-                  },
-                }}
-              >
-                Settings <ChevronRight sx={{ fontSize: { xs: '14px', sm: '16px' }, marginLeft: 0.5 }} />
-              </Link>
+              
             </Box>
 
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 1, md: 1.5 }, marginTop: { xs: 0, md: 'auto' }, paddingBottom: 0 }}>
