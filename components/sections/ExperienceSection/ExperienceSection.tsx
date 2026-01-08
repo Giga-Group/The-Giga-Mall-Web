@@ -185,6 +185,8 @@ EXPERIENCE`}
               src={image.src} 
               alt={`Experience ${index + 1}`} 
               fill
+              loading="lazy"
+              quality={80}
               style={{ objectFit: 'cover', display: 'block' }}
               onError={(e) => {
                 console.error(`Image ${index + 1} failed to load:`, image.src);

@@ -7,6 +7,7 @@ import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 const LandingVideo = () => {
   const [videoError, setVideoError] = useState(false);
   const containerRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -40,15 +41,14 @@ const LandingVideo = () => {
   };
 
   return (
-    <Box
+    <div
       ref={containerRef}
       id="landing-video-section"
-      sx={{
+      style={{
         position: 'relative',
         width: '100%',
         height: '100vh',
         minHeight: '100vh',
-        // overflow: 'visible',
         overflow: 'hidden',
         backgroundColor: '#ffffff',
         display: 'flex',
@@ -60,12 +60,14 @@ const LandingVideo = () => {
     >
       {!videoError ? (
         <motion.video
+          ref={videoRef}
           layoutId="heroVideo"
           layout
           autoPlay
           muted
           loop
           playsInline
+          preload="metadata"
           onError={handleVideoError}
           transition={{
             layout: {
@@ -109,7 +111,7 @@ const LandingVideo = () => {
           </p>
         </Box>
       )}
-    </Box>
+    </div>
   );
 };
 

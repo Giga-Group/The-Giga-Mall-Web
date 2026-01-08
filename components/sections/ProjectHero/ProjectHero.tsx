@@ -51,7 +51,7 @@ const ProjectHero = ({
             alt={title}
             fill
             priority
-            quality={100}
+            quality={85}
             sizes="100vw"
             style={{ 
               objectFit: 'cover',

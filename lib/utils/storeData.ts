@@ -93,7 +93,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'bloon',
     description: 'Fresh styles and vibrant fashion for every occasion.',
     logo: '/logo/bloon logo.jpg',
-    backgroundImage: '/shops/bloon.jpg',
+    backgroundImage: '/shops/bloon web.jpg',
     category: 'Fashion',
     contact: {
       phone: '+971-50-501-8604'
@@ -173,7 +173,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'kayseria',
     description: 'Premium fashion and luxury textiles for the sophisticated shopper.',
     logo: '/logo/kayseria logo.jpg',
-    backgroundImage: '/shops/kayseria.jpeg',
+    backgroundImage: '/shops/kayseria web.jpeg',
     category: 'Fashion',
     contact: {
       phone: '+971-50-501-8609'

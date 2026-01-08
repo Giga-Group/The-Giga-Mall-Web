@@ -46,7 +46,15 @@ const DineHero = ({ dine }: DineHeroProps) => {
     : null;
   
   // Get logo from StoreGrid mapping, fallback to dine.logo if available
-  const logoPath = getDineLogo(dine.slug) || dine.logo || null;
+  let logoPath = getDineLogo(dine.slug) || dine.logo || null;
+  
+  // Check if logo path is valid (not empty, not just .jpg, etc.)
+  if (logoPath) {
+    const trimmedPath = logoPath.trim();
+    if (trimmedPath === '/logo/.jpg' || trimmedPath === '/.jpg' || trimmedPath.endsWith('/.jpg') || trimmedPath.endsWith('/.png') || !trimmedPath) {
+      logoPath = null;
+    }
+  }
 
   return (
     <Box

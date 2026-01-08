@@ -24,6 +24,7 @@ const Hero = () => {
         muted
         loop
         playsInline
+        preload="metadata"
         sx={{
           position: 'absolute',
           top: 0,

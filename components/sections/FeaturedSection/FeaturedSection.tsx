@@ -297,6 +297,8 @@ export default function FeaturedSection() {
                 alt={item.name}
                 fill
                 priority={pos === 'center'}
+                loading={pos === 'center' ? 'eager' : 'lazy'}
+                quality={pos === 'center' ? 85 : 75}
                 style={{ objectFit: 'cover' }}
               />
 
