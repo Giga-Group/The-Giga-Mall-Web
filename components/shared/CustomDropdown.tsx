@@ -15,7 +15,7 @@ interface CustomDropdownProps {
   value: string;
   options: DropdownOption[];
   onChange: (value: string) => void;
-  sx?: any;
+  sx?: Record<string, unknown>;
   variant?: 'standard' | 'outlined' | 'filled';
   pageType?: 'shop' | 'dine';
 }
@@ -26,7 +26,6 @@ const CustomDropdown = ({
   options, 
   onChange, 
   sx, 
-  variant = 'standard',
   pageType = 'shop'
 }: CustomDropdownProps) => {
   const [open, setOpen] = useState(false);
