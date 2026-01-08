@@ -1,68 +1,64 @@
-'use client';
-
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import OurPicks from '@/components/sections/OurPicks';
-import SearchAndFilter from '@/components/sections/SearchAndFilter';
-import StoreGrid from '@/components/sections/StoreGrid';
-import DiscoverEventsOffers from '@/components/sections/DiscoverEventsOffers';
-import ExploreTheMall from '@/components/sections/ExploreTheMall';
-import { Box, Typography } from '@mui/material';
-import { Suspense } from 'react';
+import ShopPageClient from '@/components/sections/ShopPageClient';
+import { storeDetails } from '@/lib/utils/storeData';
+import type { Store } from '@/components/sections/StoreGrid/StoreGrid';
+
+// Convert storeDetails to Store format for StoreGrid - this runs on the server
+const stores: Store[] = storeDetails.map(store => ({
+  name: store.name,
+  slug: store.slug,
+  hasOffers: store.hasOffers,
+  acceptsGiftCard: store.acceptsGiftCard,
+  category: store.category,
+}));
+
+// Add revalidation for ISR (Incremental Static Regeneration)
+export const revalidate = 3600; // Revalidate every hour
 
 export default function ShopPage() {
   return (
     <>
       <Header />
       <main>
-        <Box
-          sx={{
-            paddingTop: { xs: '90px', md: '100px', lg: '40px' },
+        <div
+          style={{
+            paddingTop: '90px',
             minHeight: '100vh',
             backgroundColor: '#ffffff'
           }}
+          className="md:pt-[100px] lg:pt-[40px]"
         >
           {/* Main Title */}
-          <Box
-            sx={{
+          <div
+            style={{
               maxWidth: '1400px',
               margin: '0 auto',
-              px: { xs: 2, sm: 4, md: 6, lg: 10 },
-              pb: { xs: 2, sm: 3, md: 4 }
+              paddingLeft: '16px',
+              paddingRight: '16px',
+              paddingBottom: '16px'
             }}
+            className="sm:px-4 md:px-6 lg:px-10 sm:pb-3 md:pb-4"
           >
-            <Typography
-              variant="h1"
-              sx={{
+            <h1
+              style={{
                 fontFamily: '"Arvo", serif',
-                fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
+                fontSize: '2rem',
                 fontWeight: 400,
                 color: '#D19F3B',
                 textAlign: 'center',
-                letterSpacing: '0.02em'
+                letterSpacing: '0.02em',
+                margin: 0
               }}
+              className="sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem]"
             >
               Store Directory
-            </Typography>
-          </Box>
+            </h1>
+          </div>
 
-          {/* Our Picks Section */}
-          <OurPicks />
-
-          {/* Search and Filter Section */}
-          <Suspense fallback={<Box sx={{ py: 4, px: { xs: 2, sm: 4, md: 6, lg: 10 } }}>Loading filters...</Box>}>
-            <SearchAndFilter />
-          </Suspense>
-
-          {/* Store Grid Section */}
-          <StoreGrid />
-
-          {/* Discover Events & Offers Section */}
-          <DiscoverEventsOffers />
-
-          {/* Explore The Mall & Visitor Info Section */}
-          <ExploreTheMall />
-        </Box>
+          {/* Client component with FilterProvider */}
+          <ShopPageClient stores={stores} />
+        </div>
       </main>
       <Footer />
     </>

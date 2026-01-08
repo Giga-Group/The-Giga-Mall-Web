@@ -116,6 +116,7 @@ const Card = ({
               muted
               loop
               playsInline
+              preload={isHeroVideo ? "metadata" : "none"}
               transition={isHeroVideo ? {
                 layout: {
                   duration: 1.2,
@@ -171,7 +172,7 @@ const Card = ({
                 }}
               >
                 <Image 
-                  src="/Giga Mall_.png" 
+                  src="/logo/Giga Mall_.png" 
                   alt="Giga Mall Logo" 
                   width={90}
                   height={30}

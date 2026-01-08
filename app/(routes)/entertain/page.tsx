@@ -160,7 +160,7 @@ export default function EntertainPage() {
                 objectFit: "cover",
               }}
             >
-              <source src="/Funcity Reel mobile view.mp4" type="video/mp4" />
+              <source src="/video/Funcity Reel mobile view.mp4" type="video/mp4" />
             </video>
           </Box>
 
@@ -192,13 +192,14 @@ export default function EntertainPage() {
               muted
               loop
               playsInline
+              preload="metadata"
               style={{
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
               }}
             >
-              <source src="/funcity1.mp4" type="video/mp4" />
+              <source src="/video/funcity1.mp4" type="video/mp4" />
             </video>
           </Box>
 
@@ -209,12 +210,18 @@ export default function EntertainPage() {
               zIndex: 3,
               width: "100%",
               maxWidth: "1400px",
-              margin: "0 auto",
+              margin: {
+                xs: "0 auto",
+                sm: "0 auto",
+                md: "0 auto",
+                lg: "0 120px",
+                xl: "0 120px",
+              },
               padding: {
-                xs: "20px 20px 30px",
+                xs: "20px 20px 30px", 
                 sm: "30px 40px 40px",
-                md: "40px 60px 50px",
-                lg: "50px 80px 60px",
+                md: "0px 0px 50px",
+                lg: "0px 0px 60px",
               },
               display: "flex",
               flexDirection: "column",

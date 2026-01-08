@@ -57,19 +57,20 @@ const PlanVisitDropdown = ({
         zIndex: 1000,
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
-        px: { xs: 2, md: 4 },
-        py: { xs: 4, md: 7 },
+        alignItems: "flex-start",
+        px: { xs: 2, md: 25 },
+        py: { xs: 4, md: 4 },
       }}
     >
-      {/* Centered links only */}
+      {/* Left-aligned links */}
       <Box
         sx={{
           width: { xs: "100%", md: "60%", lg: "40%" },
           maxWidth: "600px",
           display: "flex",
           flexDirection: "column",
-          gap: 3,
+          gap: 1.5,
+          alignItems: "flex-start",
         }}
       >
         {planVisitItems.map((item, idx) => (

@@ -1,16 +1,20 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Box, Typography, Button } from '@mui/material';
 import { useTheme, useMediaQuery } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useFilters } from '@/lib/contexts/FilterContext';
+import { storeDetails } from '@/lib/utils/storeData';
+import { serviceDetails } from '@/lib/utils/servicesData';
 
 export interface Store {
   name: string;
   slug?: string;
   hasOffers?: boolean;
   acceptsGiftCard?: boolean;
+  category?: string;
 }
 
 interface StoreGridProps {
@@ -21,46 +25,141 @@ interface StoreGridProps {
 // Helper function to get logo path from store slug
 const getStoreLogo = (slug?: string): string | null => {
   if (!slug) return null;
-  
+
+  // First, try to get logo from storeDetails
+  const storeDetail = storeDetails.find(store => store.slug === slug);
+  if (storeDetail?.logo) {
+    // Check if logo path is valid (not empty, not just .jpg, etc.)
+    const logoPath = storeDetail.logo.trim();
+    // Filter out invalid paths like '/logo/.jpg', '/.jpg', or paths ending with '/.jpg' or '/.png'
+    if (logoPath && 
+        logoPath !== '/logo/.jpg' && 
+        logoPath !== '/.jpg' && 
+        !logoPath.endsWith('/.jpg') && 
+        !logoPath.endsWith('/.png') &&
+        logoPath.length > 5) { // Ensure it's a real path, not just a placeholder
+      return logoPath;
+    }
+  }
+
+  // Also check serviceDetails for services
+  const serviceDetail = serviceDetails.find(service => service.slug === slug);
+  if (serviceDetail?.logo) {
+    // Check if logo path is valid (not empty, not just .jpg, etc.)
+    const logoPath = serviceDetail.logo.trim();
+    // Filter out invalid paths like '/logo/.jpg', '/.jpg', or paths ending with '/.jpg' or '/.png'
+    if (logoPath && 
+        logoPath !== '/logo/.jpg' && 
+        logoPath !== '/.jpg' && 
+        !logoPath.endsWith('/.jpg') && 
+        !logoPath.endsWith('/.png') &&
+        logoPath.length > 5) { // Ensure it's a real path, not just a placeholder
+      return logoPath;
+    }
+  }
+
   // Map of slug to logo filename - prioritizing dedicated logo files
   const logoMap: Record<string, string> = {
     // Shop logos - using dedicated logo files
-    'alkaram': '/alkaram logo.jpg',
-    'almas': '/almas logo.png',
-    'almirah': '/almirah logo.png',
-    'batik-studio': '/batik studio logo.jpg',
-    'bloon': '/bloon logo.jpg',
-    'bonanza': '/bonanza satrangi logo.jpg',
-    'breakout': '/Breakout logo.png',
-    'cambridge': '/cambridge logo.jpg',
-    'junaid-jamshed': '/junaid jamshed logo.png',
-    'kayseria': '/kayseria logo.jpg',
-    'miniso': '/miniso logo.jpg',
-    'nike': '/NIKE_-_WMoN.jpg',
-    'zara': '/zara-forum6257.jpg',
-    'other-stories': '/2-ES---WLaMaquinista_OK.jpg',
-    '100-capri': '/2-OK.jpg',
-    '12-storeez': '/1.png',
-    '1847-executive-grooming': '/DSC05412Food_OK_1.jpg',
+    'alkaram': '/logo/alkaram logo.jpg',
+    'almas': '/logo/almas logo.png',
+    'almirah': '/logo/almirah logo.png',
+    'batik-studio': '/logo/batik studio logo.jpg',
+    'bloon': '/logo/bloon logo.jpg',
+    'bonanza': '/logo/bonanza satrangi logo.jpg',
+    'breakout': '/logo/Breakout logo.png',
+    'cambridge': '/logo/cambridge logo.jpg',
+    'junaid-jamshed': '/logo/junaid jamshed logo.png',
+    'kayseria': '/logo/kayseria logo.jpg',
+    'miniso': '/logo/miniso logo.jpg',
     // Restaurant/Dine logos
-    'macdonalds': '/macdonalds logo.jpg',
-    'mcdonalds': '/macdonalds logo.jpg',
-    'hardees': '/hardees logo.jpg',
-    'pizzahut': '/pizza hut logo.jpg',
-    'pizza-hut': '/pizza hut logo.jpg',
-    'cheezious': '/cheezious logo.jpg',
-    'wild-wings': '/wings logo.jpg',
-    'redapple': '/red apple logo.jpg',
-    'optp': '/optp logo.jpg',
-    'chachajee': '/chachajee logo.jpg',
-    'simplysufi': '/simplysufi logo.jpg',
-    'rewayat': '/rewayat logo.jpg',
-    'spicefactory': '/spice factory logo.jpg',
-    'chinagrill': '/china grill logo.jpg',
-    'kababjees': '/kabab jees logo.jpg',
+    'macdonalds': '/logo/Macdonalds logo.jpg',
+    'mcdonalds': '/logo/Macdonalds logo.jpg',
+    'hardees': '/logo/hardees logo.jpg',
+    'pizzahut': '/logo/pizza hut logo.jpg',
+    'pizza-hut': '/logo/pizza hut logo.jpg',
+    'cheezious': '/logo/cheezious logo.jpg',
+    'wild-wings': '/logo/wings logo.jpg',
+    'redapple': '/logo/red apple logo.jpg',
+    'optp': '/logo/optp logo.jpg',
+    'chachajee': '/logo/chachajee logo.jpg',
+    'simplysufi': '/logo/simplysufi logo.jpg',
+    'rewayat': '/logo/rewayat logo.jpg',
+    'spicefactory': '/logo/spice factory logo.jpg',
+    'chinagrill': '/logo/china grill logo.jpg',
+    'kababjees': '/logo/kabab jees logo.jpg',
   };
-  
+
   return logoMap[slug] || null;
+};
+
+// Store Card Component with image error handling
+const StoreCard = ({ store, basePath, logoPath }: { store: Store; basePath: string; logoPath: string | null }) => {
+  const [imageError, setImageError] = useState(false);
+
+  return (
+    <Link
+      href={`${basePath}/${store.slug || store.name.toLowerCase().replace(/\s+/g, '-')}`}
+      style={{ textDecoration: 'none' }}
+    >
+      <Box
+        sx={{
+          position: 'relative',
+          aspectRatio: '1 / 1',
+          border: '1px solid #e0e0e0',
+          borderRadius: '4px',
+          backgroundColor: '#ffffff',
+          transition: 'all 0.3s ease',
+          cursor: 'pointer',
+          overflow: 'hidden',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          '&:hover': {
+            borderColor: '#D19F3B',
+            transform: 'translateY(-2px)',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+          }
+        }}
+      >
+        {logoPath && !imageError ? (
+          <Image
+            src={logoPath}
+            alt={store.name}
+            fill
+            sizes="(max-width: 600px) 50vw, (max-width: 960px) 33vw, (max-width: 1280px) 25vw, 20vw"
+            loading="lazy"
+            quality={75}
+            style={{
+              objectFit: 'contain',
+              padding: '12px'
+            }}
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <Typography
+            className="store-name"
+            sx={{
+              fontFamily: '"Arvo", serif',
+              fontSize: { xs: '2rem', sm: '2.25rem', md: '2.5rem', lg: '6rem' },
+              color: '#333333',
+              fontWeight: 400,
+              lineHeight: 1,
+              transition: 'color 0.3s ease',
+              textAlign: 'center',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '100%',
+              height: '100%'
+            }}
+          >
+            {store.name.charAt(0).toUpperCase()}
+          </Typography>
+        )}
+      </Box>
+    </Link>
+  );
 };
 
 // Sample store data - in a real app, this would come from an API
@@ -75,16 +174,86 @@ const defaultStores: Store[] = [
   { name: 'Cambridge', slug: 'cambridge' },
   { name: 'Junaid Jamshed', slug: 'junaid-jamshed' },
   { name: 'Kayseria', slug: 'kayseria' },
-  { name: 'Miniso', slug: 'miniso' }
+  { name: 'Miniso', slug: 'miniso' },
+  { name: 'Babys Day Out', slug: 'babys-day-out' },
+  { name: 'Bata', slug: 'bata' },
+  { name: 'Brand City', slug: 'brand-city' },
+  // { name: 'Carrefour', slug: 'carrefour' },
+  // { name: 'D Watson', slug: 'd-watson' },
+  { name: 'Diamond Crown', slug: 'diamond-crown' },
+  // { name: 'Dry Fruit', slug: 'dry-fruit' },
+  { name: 'Friends Home', slug: 'friends-home' },
+  { name: 'Haroons', slug: 'haroons' },
+  { name: 'Jelly Factory', slug: 'jelly-factory' },
+  { name: 'Johri', slug: 'johri' },
+  { name: 'Kohinoor Jewels', slug: 'kohinoor-jewels' },
+  { name: 'The Linen Company', slug: 'the-linen-company' },
+  { name: 'Little Explorer', slug: 'little-explorer' },
+  { name: 'Location', slug: 'location' },
+  { name: 'Majhurat', slug: 'majhurat' },
+  { name: 'Milli Shoes', slug: 'milli-shoes' },
+  { name: 'Mini Try', slug: 'mini-try' },
+  { name: 'Mr Kazi', slug: 'mr-kazi' },
+  { name: 'NDURE', slug: 'ndure' },
+  { name: 'Readers Point', slug: 'readers-point' },
+  { name: 'Rivaj', slug: 'rivaj' },
+  { name: 'Saeed Ghani', slug: 'saeed-ghani' },
+  { name: 'Service', slug: 'service' },
+  { name: 'Style and Comfort', slug: 'style-and-comfort' },
+  { name: 'Sveston', slug: 'sveston' },
+  { name: 'Tech Studio', slug: 'tech-studio' },
+  { name: 'Younique', slug: 'younique' },
+  { name: 'Zero', slug: 'zero' },
+  { name: 'Balochistan Dry Fruit Marchent', slug: 'balochistan-dry-fruit-marchent' },
+  { name: 'Just Fragrance', slug: 'just-fragrance' },
+  { name: 'Gadgets Mobile', slug: 'gadgets-mobile' },
+  { name: 'Bonanza Satrangi', slug: 'bonanza-satrangi' },
+  { name: 'Aroma Concepts', slug: 'aroma-concepts' },
+  { name: 'Eastern Art and HandiCraft', slug: 'eastern-art-and-handicraft' },
+  { name: 'Taana Baana', slug: 'taana-baana' },
+  { name: 'Alpha Accessories', slug: 'alpha-accessories' },
+  { name: 'Ximi Vogue', slug: 'ximi-vogue' },
+  { name: 'Glamor', slug: 'glamor' },
+  { name: 'Thai Zone', slug: 'thai-zone' },
+  { name: 'Tajik', slug: 'tajik' },
+  { name: 'Sams Abaya', slug: 'sams-abaya' },
+  { name: 'Zamin Jewelers', slug: 'zamin-jewelers' },
+  { name: 'Traditional Khusa', slug: 'traditional-khusa' },
+  { name: 'Taarkashi', slug: 'taarkashi' },
+  { name: 'The Time Zone', slug: 'the-time-zone' },
+  { name: 'Mehran Jewellers', slug: 'mehran-jewellers' },
 ];
+
+// Helper function to check if a name matches viewBy filter
+const matchesViewBy = (name: string, viewBy: string): boolean => {
+  if (!viewBy) return true;
+  
+  const firstChar = name.charAt(0).toLowerCase();
+  
+  switch (viewBy) {
+    case '0-9':
+      return /[0-9]/.test(firstChar);
+    case 'a-f':
+      return /[a-f]/.test(firstChar);
+    case 'g-l':
+      return /[g-l]/.test(firstChar);
+    case 'm-r':
+      return /[m-r]/.test(firstChar);
+    case 's-z':
+      return /[s-z]/.test(firstChar);
+    default:
+      return true;
+  }
+};
 
 const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const { filters } = useFilters();
   
   const [visibleCount, setVisibleCount] = useState(10); // Default for desktop
   const itemsPerPage = 5;
-  
+
   // Initialize visible count based on mobile/desktop
   useEffect(() => {
     if (isMobile) {
@@ -94,25 +263,91 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
     }
   }, [isMobile]);
 
+
+  // Filter items based on search query, category, viewBy, and offers
+  const filteredItems = useMemo(() => {
+    return items.filter((store) => {
+      // Search query filter (case-insensitive)
+      if (filters.searchQuery) {
+        const searchLower = filters.searchQuery.toLowerCase();
+        const nameLower = store.name.toLowerCase();
+        if (!nameLower.includes(searchLower)) {
+          return false;
+        }
+      }
+
+      // Category filter (if category is selected and store has category)
+      if (filters.category && store.category) {
+        // Map filter category values to data category values
+        const categoryMap: Record<string, string[]> = {
+          'fashion-men': ['Fashion'],
+          'fashion-women': ['Fashion'],
+          'fashion-children': ['Fashion'],
+          'beauty': ['Beauty'],
+          'home': ['Lifestyle'],
+          'toys': ['Lifestyle'],
+          'electronics': ['Lifestyle'],
+          'cafe': ['Cafe'],
+          'fast-food': ['Fast Food'],
+          'food-drink': ['Food & Drink'],
+          'icecream': ['Icecream'],
+          'restaurant': ['Restaurant', 'Fine Dining'],
+        };
+        
+        const matchingCategories = categoryMap[filters.category] || [];
+        if (matchingCategories.length > 0 && !matchingCategories.includes(store.category)) {
+          return false;
+        }
+        // If no mapping exists, do exact match
+        if (matchingCategories.length === 0 && filters.category.toLowerCase() !== store.category.toLowerCase()) {
+          return false;
+        }
+      }
+
+      // View by filter (alphabetical ranges)
+      if (!matchesViewBy(store.name, filters.viewBy)) {
+        return false;
+      }
+
+      // Offers filter
+      if (filters.showOffersOnly && !store.hasOffers) {
+        return false;
+      }
+
+      return true;
+    });
+  }, [items, filters.searchQuery, filters.category, filters.viewBy, filters.showOffersOnly]);
+
+  // Reset visible count when filters change
+  useEffect(() => {
+    if (isMobile) {
+      setVisibleCount(6);
+    } else {
+      setVisibleCount(10);
+    }
+  }, [filters.searchQuery, filters.category, filters.viewBy, filters.showOffersOnly, isMobile]);
+
   const handleLoadMore = () => {
     if (isMobile) {
       // On mobile, show all items when "Show More" is clicked
-      setVisibleCount(items.length);
+      setVisibleCount(filteredItems.length);
     } else {
       // On desktop, use the existing pagination logic
       setVisibleCount(prev => prev + itemsPerPage);
     }
   };
 
+
+
   // Determine which stores to show
-  const visibleStores = items.slice(0, visibleCount);
+  const visibleStores = filteredItems.slice(0, visibleCount);
   
   // Check if we need to show "Show More" button
   // On mobile: show button if there are more than 6 items and not all are visible
   // On desktop: show button if there are more items to load
   const hasMore = isMobile 
-    ? (items.length > 6 && visibleCount < items.length)
-    : (visibleCount < items.length);
+    ? (filteredItems.length > 6 && visibleCount < filteredItems.length)
+    : (visibleCount < filteredItems.length);
 
   return (
     <Box
@@ -144,64 +379,13 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
         >
           {visibleStores.map((store, index) => {
             const logoPath = getStoreLogo(store.slug || store.name.toLowerCase().replace(/\s+/g, '-'));
-            
             return (
-              <Link
+              <StoreCard 
                 key={index}
-                href={`${basePath}/${store.slug || store.name.toLowerCase().replace(/\s+/g, '-')}`}
-                style={{ textDecoration: 'none' }}
-              >
-                <Box
-                  sx={{
-                    position: 'relative',
-                    aspectRatio: '1 / 1',
-                    border: '1px solid #e0e0e0',
-                    borderRadius: '4px',
-                    backgroundColor: '#ffffff',
-                    transition: 'all 0.3s ease',
-                    cursor: 'pointer',
-                    overflow: 'hidden',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    '&:hover': {
-                      borderColor: '#D19F3B',
-                      transform: 'translateY(-2px)',
-                      boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-                    }
-                  }}
-                >
-                  {logoPath ? (
-                    <Image
-                      src={logoPath}
-                      alt={store.name}
-                      fill
-                      sizes="(max-width: 600px) 50vw, (max-width: 960px) 33vw, (max-width: 1280px) 25vw, 20vw"
-                      style={{
-                        objectFit: 'contain',
-                        padding: '12px'
-                      }}
-                    />
-                  ) : (
-                    <Typography
-                      className="store-name"
-                      sx={{
-                        fontFamily: 'Georgia, serif',
-                        fontSize: { xs: '0.75rem', sm: '0.85rem', md: '0.9rem' },
-                        color: '#333333',
-                        fontWeight: 400,
-                        lineHeight: 1.4,
-                        wordBreak: 'break-word',
-                        transition: 'color 0.3s ease',
-                        padding: { xs: 1.5, sm: 2 },
-                        textAlign: 'center'
-                      }}
-                    >
-                      {store.name}
-                    </Typography>
-                  )}
-                </Box>
-              </Link>
+                store={store}
+                basePath={basePath}
+                logoPath={logoPath}
+              />
             );
           })}
         </Box>

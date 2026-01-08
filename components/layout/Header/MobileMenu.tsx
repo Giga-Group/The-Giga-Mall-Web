@@ -37,9 +37,11 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
       case 'Entertain':
         return '/entertain';
       case 'Services':
-        return '/services';
+        return '/services-directory';
       case 'Plan your visit':
         return '/opening-hours';
+      case 'Visitors Guide':
+        return '/visitors-guide';
       case 'Projects':
         return '/projects';
       default:

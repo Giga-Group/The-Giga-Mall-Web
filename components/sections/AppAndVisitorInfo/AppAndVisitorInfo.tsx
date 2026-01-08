@@ -61,7 +61,7 @@ const AppAndVisitorInfo = () => {
               }}
             >
               <Image
-                src="/mobile%20screen.png"
+                src="/Download Mobile App/mobile screen.png"
                 alt="Giga Mall app screen preview"
                 width={340}
                 height={780}
@@ -119,7 +119,7 @@ const AppAndVisitorInfo = () => {
                     }}
                   >
                     <Image
-                      src="/AppStore_Badge_US_English.svg"
+                      src="/Download Mobile App/AppStore_Badge_US_English.svg"
                       alt="Download on the App Store"
                       width={120}
                       height={40}
@@ -147,7 +147,7 @@ const AppAndVisitorInfo = () => {
                     }}
                   >
                     <Image
-                      src="/GooglePlay_Badge_EN-US_English.svg"
+                      src="/Download Mobile App/GooglePlay_Badge_EN-US_English.svg"
                       alt="Get it on Google Play"
                       width={120}
                       height={40}
@@ -248,7 +248,7 @@ const AppAndVisitorInfo = () => {
             })}
           </Box>
 
-          <Link href="/services" style={{ textDecoration: 'none' }}>
+          <Link href="/visitors-guide" style={{ textDecoration: 'none' }}>
             <Typography
               sx={{
                 fontFamily: '"Quicksand", sans-serif',

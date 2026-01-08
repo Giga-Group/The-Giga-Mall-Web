@@ -194,7 +194,7 @@ const ExploreTheMall = () => {
             ))}
           </Box>
 
-          <Link href="/services" style={{ textDecoration: 'none' }}>
+          <Link href="/visitors-guide" style={{ textDecoration: 'none' }}>
             <Typography
               sx={{
                 fontSize: { xs: '0.85rem', sm: '0.95rem', md: '0.9rem', lg: '0.9rem' },

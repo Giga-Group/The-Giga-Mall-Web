@@ -23,111 +23,111 @@ const TrendingSection = () => {
 
   const trendingItems: TrendingItem[] = [
     {
-      image: '/trending1.jpg',
+      image: '/trending/trending 1.jpg',
       category: 'GIGA MALL',
       title: '6th September Defence Day Celebration',
       dates: '6th September 2025'
     },
     {
-      image: '/trending8.jpg',
+      image: '/trending/trending 8.jpg',
       category: 'GIGA MALL',
       title: 'Eid ul Adha Celebration',
       dates: '15th March 2025'
     },
     // {
-    //   image: '/trending2.jpg',
+    //   image: '/trending/trending 2.jpg',
     //   category: 'GIGA MALL',
     //   title: 'Experience Style and Innovation',
     //   dates: '1st January 2025 - 31st December 2025'
     // },
     {
-      image: '/trending3.jpg',
+      image: '/trending/trending 3.jpg',
       category: 'GIGA MALL',
       title: '14th August Independence Day Celebration',
       dates: '14th August 2025'
     },
     // {
-    //   image: '/trending5.jpg',
+    //   image: '/trending/trending 5.jpg',
     //   category: 'GIGA MALL',
     //   title: 'Trending Now: Fashion Forward',
     //   dates: '1st January 2025 - 31st December 2025'
     // },
     // {
-    //   image: '/trending7.jpg',
+    //   image: '/trending/trending 7.jpg',
     //   category: 'GIGA MALL',
     //   title: 'Explore New Collections',
     //   dates: '1st January 2025 - 31st December 2025'
     // },
     
     // {
-    //   image: '/trending9.jpg',
+    //   image: '/trending/trending 9.jpg',
     //   category: 'GIGA MALL',
     //   title: 'Shop the Hottest Trends',
     //   dates: '1st January 2025 - 31st December 2025'
     // },
     {
-      image: '/trending31.jpg',
+      image: '/trending/trending 31.jpg',
       category: 'GIGA MALL',
       title: 'Giga Mall 5th Anniversary Celebration',
       dates: '1st January 2025 - 31st December 2025'
     },
     // {
-    //   image: '/trending 11.jpg',
+    //   image: '/trending/trending 11.jpg',
     //   category: 'GIGA MALL',
     //   title: 'Trending Collections 2025',
     //   dates: '1st January 2025 - 31st December 2025'
     // },
     {
-      image: '/trending13.jpg',
+      image: '/trending/trending 13.jpg',
       category: 'GIGA MALL',
       title: 'Mothers Day Celebration',
       dates: '18th May 2025'
     },
     // {
-    //   image: '/trending14.jpg',
+    //   image: '/trending/trending 14.jpg',
     //   category: 'GIGA MALL',
     //   title: 'Stay Ahead of the Trends',
     //   dates: '1st January 2025 - 31st December 2025'
     // },
     // {
-    //   image: '/trending16.jpg',
+    //   image: '/trending/trending 16.jpg',
     //   category: 'GIGA MALL',
     //   title: 'Latest Fashion Trends',
     //   dates: '1st January 2025 - 31st December 2025'
     // },
     {
-      image: '/trending17.jpg',
+      image: '/trending/trending 17.jpg',
       category: 'GIGA MALL',
       title: 'MOU Signing Ceremony With The Last Tribe',
       dates: '1st January 2025 - 31st December 2025'
     },
     {
-      image: '/trending22.jpg',
+      image: '/trending/trending 22.jpg',
       category: 'GIGA MALL',
       title: 'Umro Ayar Film Festival at Giga Mall ',
       dates: '1st January 2025 - 31st December 2025'
     },
     // {
-    //   image: '/trending18.JPG',
+    //   image: '/trending/trending 18.JPG',
     //   category: 'GIGA MALL',
     //   title: 'Explore Trending Styles',
     //   dates: '1st January 2025 - 31st December 2025'
     // },
     {
-      image: '/trending 19.JPG',
+      image: '/trending/trending 19.JPG',
       category: 'GIGA MALL',
       title: 'Giga Tribal Beats 2025',
       dates: '1st January 2025 - 31st December 2025'
     },
    
     // {
-    //   image: '/trending20.JPG',
+    //   image: '/trending/trending 20.JPG',
     //   category: 'GIGA MALL',
     //   title: 'Latest Trends and Fashion',
     //   dates: '1st January 2025 - 31st December 2025'
     // },
     // {
-    //   image: '/trending21.JPG',
+    //   image: '/trending/trending 21.JPG',
     //   category: 'GIGA MALL',
     //   title: 'Giga Tribal Beats 2025',
     //   dates: '10 December 2025'
@@ -181,7 +181,7 @@ const TrendingSection = () => {
   const displayItems = shouldShowVideoCard 
     ? [
         {
-          video: '/gigamallvideo.mp4',
+          video: '/video/gigamallvideo.mp4',
           isVideo: true,
           image: '',
           category: '',

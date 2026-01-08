@@ -1,12 +1,32 @@
+import dynamic from 'next/dynamic';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ContactSection from '@/components/sections/ContactSection';
 import LandingVideo from '@/components/sections/LandingVideo';
-import TrendingSection from '@/components/sections/TrendingSection';
-import FeaturedSection from '@/components/sections/FeaturedSection';
-import ExperienceSection from '@/components/sections/ExperienceSection';
-import NewBrandsSection from '@/components/sections/NewBrandsSection';
-import Hero from '@/components/sections/Hero';
+
+// Code split below-the-fold sections for better initial load performance
+const TrendingSection = dynamic(() => import('@/components/sections/TrendingSection'), {
+  loading: () => <div style={{ minHeight: '400px' }} />,
+});
+
+const FeaturedSection = dynamic(() => import('@/components/sections/FeaturedSection'), {
+  loading: () => <div style={{ minHeight: '400px' }} />,
+});
+
+const ExperienceSection = dynamic(() => import('@/components/sections/ExperienceSection'), {
+  loading: () => <div style={{ minHeight: '400px' }} />,
+});
+
+const NewBrandsSection = dynamic(() => import('@/components/sections/NewBrandsSection'), {
+  loading: () => <div style={{ minHeight: '400px' }} />,
+});
+
+const Hero = dynamic(() => import('@/components/sections/Hero'), {
+  loading: () => <div style={{ minHeight: '500px' }} />,
+});
+
+// Add revalidation for ISR (Incremental Static Regeneration)
+export const revalidate = 3600; // Revalidate every hour
 
 export default function Home() {
   return (

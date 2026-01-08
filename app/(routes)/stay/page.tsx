@@ -35,7 +35,7 @@ export default function StayPage() {
             }}
           >
             <Image
-              src="/2-ES---WLaMaquinista_OK.jpg"
+              src="/stay/stay2.jpeg"
               alt="Luxury Hotel Lobby"
               fill
               style={{
@@ -151,7 +151,7 @@ export default function StayPage() {
             }}
           >
             <Image
-              src="/3-Mall-of-Scandinavia-OK.jpg"
+              src="/stay/stay3.jpeg"
               alt="Palace Downtown Hotel"
               fill
               style={{
@@ -289,7 +289,7 @@ export default function StayPage() {
               }}
             >
               <Image
-                src="/1-WL_inside-_2732_x_1436_rijsgy-OK.jpg"
+                src="/stay/stay1.jpeg"
                 alt="Luxury Hotel"
                 fill
                 style={{
