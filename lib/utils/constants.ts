@@ -36,7 +36,7 @@ export const getMobileBrandImage = (originalImage: string, brandName?: string, b
     'diamond-crown': '/shops/Diamond Crown mobile.JPG',
     'friends-home': '/shops/Friends Home mobile.JPG',
     'haroons': '/shops/Haroons mobile.JPG',
-    'jelly-factory': '/shops/Jelly Fish mobile.JPG',
+    'jelly-factory': '/shops/Jelly Factory mobile.JPG',
     'johri': '/shops/Johri mobile.JPG',
     'kohinoor-jewels': '/shops/Kohinoor Jewels mobile.JPG',
     'the-linen-company': '/shops/Linen mobile.JPG',

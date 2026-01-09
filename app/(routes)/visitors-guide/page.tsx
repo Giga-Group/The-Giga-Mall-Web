@@ -21,6 +21,9 @@ import {
   Luggage,
   HelpOutline,
   Mosque,
+  AccessTime,
+  LocationOn,
+  LocalParking,
 } from "@mui/icons-material";
 import DeliveryDiningIcon from "@mui/icons-material/DeliveryDining";
 import NearMeIcon from "@mui/icons-material/NearMe";
@@ -38,6 +41,27 @@ interface Service {
 }
 
 const services: Service[] = [
+  {
+    id: "opening-hours",
+    title: "Opening Hours",
+    description:
+      "Giga Mall is open daily from 10 AM to 12 AM. We operate extended hours on weekends and holidays. For specific holiday schedules and special events, please check our website or contact our concierge desk.",
+    icon: <AccessTime />,
+  },
+  {
+    id: "getting-here",
+    title: "Getting Here",
+    description:
+      "Giga Mall is conveniently located in DHA Islamabad and is easily accessible by car, metro, bus, or taxi. The nearest metro station is within walking distance with a temperature-controlled travelator link. Multiple bus routes serve the area, and we offer ample parking facilities.",
+    icon: <LocationOn />,
+  },
+  {
+    id: "parking",
+    title: "Parking",
+    description:
+      "Giga Mall offers convenient parking facilities with over 5,000 parking spaces available across multiple levels. The parking areas are well-lit, secure, and easily accessible. Valet parking services are also available for your convenience.",
+    icon: <LocalParking />,
+  },
   {
     id: "elite-personal-shopping",
     title: "Elite Personal Shopping",
@@ -124,32 +148,37 @@ const services: Service[] = [
   },
 ];
 
+// Helper function to get image path from visitor guide folder
+const getVisitorGuideImagePath = (imageName: string) => {
+  return `/visitor guide/${imageName}`.split('/').map(segment => encodeURIComponent(segment)).join('/');
+};
+
 const serviceHighlights = [
   {
     description:
       "Kindly wear respectful clothing. Shoulders and knees should be covered.",
-    image: "/service-pic-1.png",
+    image: getVisitorGuideImagePath("service-pic-1.png"),
   },
   {
     description: "No overt displays of affection to avoid public attention",
-    image: "/service-pic-2.png",
+    image: getVisitorGuideImagePath("service-pic-2.png"),
   },
   {
     description: "Pet-free Mall.",
-    image: "/service-pic-3.png",
+    image: getVisitorGuideImagePath("service-pic-3.png"),
   },
   {
     description: "Smoking in designated areas including E-cigarette",
-    image: "/service-pic-4.png",
+    image: getVisitorGuideImagePath("service-pic-4.png"),
   },
   {
     description: "Safe practices only",
-    image: "/service-pic-5.png",
+    image: getVisitorGuideImagePath("service-pic-5.png"),
   },
 ];
 
 export default function ServicesPage() {
-  const [expanded, setExpanded] = useState<string | false>("prayer-rooms");
+  const [expanded, setExpanded] = useState<string | false>("opening-hours");
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
@@ -170,7 +199,6 @@ export default function ServicesPage() {
       <main>
         <Box
           sx={{
-            paddingTop: { xs: "90px", md: "100px" },
             minHeight: "100vh",
             backgroundColor: "#ffffff",
             pb: { xs: 4, md: 6, lg: 8 },

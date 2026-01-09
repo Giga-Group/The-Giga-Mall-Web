@@ -328,6 +328,8 @@ export default function LeasingPage() {
                 component="form"
                 onSubmit={handleSubmit}
                 sx={{
+                  position: 'relative',
+                  overflow: 'hidden',
                   backgroundColor: '#ffffff',
                   padding: { xs: '32px 24px', sm: '40px 32px', md: '48px 40px' },
                   borderRadius: '8px',
@@ -335,8 +337,25 @@ export default function LeasingPage() {
                   border: '1px solid rgba(209, 159, 59, 0.1)',
                 }}
               >
+                {/* Decorative gradient background - matching footer */}
+                <Box
+                  sx={{
+                    position: 'absolute',
+                    inset: 0,
+                    pointerEvents: 'none',
+                    zIndex: 0,
+                    opacity: 0.9,
+                    backgroundImage: `
+                      radial-gradient(circle at top left, rgba(209, 159, 59, 0.4), transparent 55%),
+                      radial-gradient(circle at bottom right, rgba(209, 159, 59, 0.4), transparent 65%)
+                    `,
+                    backgroundBlendMode: 'soft-light, normal',
+                  }}
+                />
                 <Typography
                   sx={{
+                    position: 'relative',
+                    zIndex: 1,
                     fontFamily: '"Arvo", serif',
                     fontWeight: 400,
                     fontSize: { xs: '24px', sm: '28px', md: '32px' },
@@ -350,6 +369,8 @@ export default function LeasingPage() {
 
               <Box
                 sx={{
+                  position: 'relative',
+                  zIndex: 1,
                   display: 'flex',
                   flexDirection: 'column',
                   gap: { xs: 2.5, md: 3 },

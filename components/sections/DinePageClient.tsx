@@ -18,26 +18,28 @@ interface DinePageClientProps {
 
 export default function DinePageClient({ restaurants, restaurantPicks }: DinePageClientProps) {
   return (
-    <FilterProvider>
-      {/* Our Picks Section */}
-      <OurPicks picks={restaurantPicks} basePath="/dine" />
+    <div>
+      <FilterProvider>
+        {/* Our Picks Section */}
+        <OurPicks picks={restaurantPicks} basePath="/dine" />
 
-      {/* Search and Filter Section */}
-      <Suspense fallback={<Box sx={{ py: 4, px: { xs: 2, sm: 4, md: 6, lg: 10 } }}>Loading filters...</Box>}>
-        <SearchAndFilter pageType="dine" />
-      </Suspense>
+        {/* Search and Filter Section */}
+        <Suspense fallback={<Box sx={{ py: 4, px: { xs: 2, sm: 4, md: 6, lg: 10 } }}>Loading filters...</Box>}>
+          <SearchAndFilter pageType="dine" />
+        </Suspense>
 
-      {/* Store Grid Section */}
-      <Suspense fallback={<Box sx={{ py: 4, px: { xs: 2, sm: 4, md: 6, lg: 10 } }}>Loading restaurants...</Box>}>
-        <StoreGrid items={restaurants} basePath="/dine" />
-      </Suspense>
+        {/* Store Grid Section */}
+        <Suspense fallback={<Box sx={{ py: 4, px: { xs: 2, sm: 4, md: 6, lg: 10 } }}>Loading restaurants...</Box>}>
+          <StoreGrid items={restaurants} basePath="/dine" />
+        </Suspense>
 
-      {/* Discover Events & Offers Section */}
-      <DiscoverEventsOffers />
+        {/* Discover Events & Offers Section */}
+        <DiscoverEventsOffers />
 
-      {/* Explore The Mall & Visitor Info Section */}
-      <ExploreTheMall />
-    </FilterProvider>
+        {/* Explore The Mall & Visitor Info Section */}
+        <ExploreTheMall />
+      </FilterProvider>
+    </div>
   );
 }
 
