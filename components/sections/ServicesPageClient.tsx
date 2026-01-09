@@ -37,7 +37,9 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
       </Suspense>
 
       {/* Store Grid Section */}
-      <StoreGrid items={services} basePath="/services-directory" />
+      <Suspense fallback={<Box sx={{ py: 4, px: { xs: 2, sm: 4, md: 6, lg: 10 } }}>Loading services...</Box>}>
+        <StoreGrid items={services} basePath="/services-directory" />
+      </Suspense>
 
       {/* Discover Events & Offers Section */}
       <DiscoverEventsOffers />

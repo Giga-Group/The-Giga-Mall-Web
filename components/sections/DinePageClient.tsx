@@ -28,7 +28,9 @@ export default function DinePageClient({ restaurants, restaurantPicks }: DinePag
       </Suspense>
 
       {/* Store Grid Section */}
-      <StoreGrid items={restaurants} basePath="/dine" />
+      <Suspense fallback={<Box sx={{ py: 4, px: { xs: 2, sm: 4, md: 6, lg: 10 } }}>Loading restaurants...</Box>}>
+        <StoreGrid items={restaurants} basePath="/dine" />
+      </Suspense>
 
       {/* Discover Events & Offers Section */}
       <DiscoverEventsOffers />

@@ -95,73 +95,74 @@ const getStoreLogo = (slug?: string): string | null => {
 };
 
 // Store Card Component with image error handling
-const StoreCard = ({ store, basePath, logoPath }: { store: Store; basePath: string; logoPath: string | null }) => {
-  const [imageError, setImageError] = useState(false);
+// Currently unused - component uses inline JSX instead
+// const StoreCard = ({ store, basePath, logoPath }: { store: Store; basePath: string; logoPath: string | null }) => {
+//   const [imageError, setImageError] = useState(false);
 
-  return (
-    <Link
-      href={`${basePath}/${store.slug || store.name.toLowerCase().replace(/\s+/g, '-')}`}
-      style={{ textDecoration: 'none' }}
-    >
-      <Box
-        sx={{
-          position: 'relative',
-          aspectRatio: '1 / 1',
-          border: '1px solid #e0e0e0',
-          borderRadius: '4px',
-          backgroundColor: '#ffffff',
-          transition: 'all 0.3s ease',
-          cursor: 'pointer',
-          overflow: 'hidden',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          '&:hover': {
-            borderColor: '#D19F3B',
-            transform: 'translateY(-2px)',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-          }
-        }}
-      >
-        {logoPath && !imageError ? (
-          <Image
-            src={logoPath}
-            alt={store.name}
-            fill
-            sizes="(max-width: 600px) 50vw, (max-width: 960px) 33vw, (max-width: 1280px) 25vw, 20vw"
-            loading="lazy"
-            quality={75}
-            style={{
-              objectFit: 'contain',
-              padding: '12px'
-            }}
-            onError={() => setImageError(true)}
-          />
-        ) : (
-          <Typography
-            className="store-name"
-            sx={{
-              fontFamily: '"Arvo", serif',
-              fontSize: { xs: '2rem', sm: '2.25rem', md: '2.5rem', lg: '6rem' },
-              color: '#333333',
-              fontWeight: 400,
-              lineHeight: 1,
-              transition: 'color 0.3s ease',
-              textAlign: 'center',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: '100%',
-              height: '100%'
-            }}
-          >
-            {store.name.charAt(0).toUpperCase()}
-          </Typography>
-        )}
-      </Box>
-    </Link>
-  );
-};
+//   return (
+//     <Link
+//       href={`${basePath}/${store.slug || store.name.toLowerCase().replace(/\s+/g, '-')}`}
+//       style={{ textDecoration: 'none' }}
+//     >
+//       <Box
+//         sx={{
+//           position: 'relative',
+//           aspectRatio: '1 / 1',
+//           border: '1px solid #e0e0e0',
+//           borderRadius: '4px',
+//           backgroundColor: '#ffffff',
+//           transition: 'all 0.3s ease',
+//           cursor: 'pointer',
+//           overflow: 'hidden',
+//           display: 'flex',
+//           alignItems: 'center',
+//           justifyContent: 'center',
+//           '&:hover': {
+//             borderColor: '#D19F3B',
+//             transform: 'translateY(-2px)',
+//             boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+//           }
+//         }}
+//       >
+//         {logoPath && !imageError ? (
+//           <Image
+//             src={logoPath}
+//             alt={store.name}
+//             fill
+//             sizes="(max-width: 600px) 50vw, (max-width: 960px) 33vw, (max-width: 1280px) 25vw, 20vw"
+//             loading="lazy"
+//             quality={75}
+//             style={{
+//               objectFit: 'contain',
+//               padding: '12px'
+//             }}
+//             onError={() => setImageError(true)}
+//           />
+//         ) : (
+//           <Typography
+//             className="store-name"
+//             sx={{
+//               fontFamily: '"Arvo", serif',
+//               fontSize: { xs: '2rem', sm: '2.25rem', md: '2.5rem', lg: '6rem' },
+//               color: '#333333',
+//               fontWeight: 400,
+//               lineHeight: 1,
+//               transition: 'color 0.3s ease',
+//               textAlign: 'center',
+//               display: 'flex',
+//               alignItems: 'center',
+//               justifyContent: 'center',
+//               width: '100%',
+//               height: '100%'
+//             }}
+//           >
+//             {store.name.charAt(0).toUpperCase()}
+//           </Typography>
+//         )}
+//       </Box>
+//     </Link>
+//   );
+// };
 
 // Sample store data - in a real app, this would come from an API
 const defaultStores: Store[] = [
@@ -516,7 +517,7 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
                     key={index}
                     href={`${basePath}/${store.slug || store.name.toLowerCase().replace(/\s+/g, '-')}`}
                     style={{ textDecoration: 'none' }}
-                    onClick={(e) => {
+                    onClick={() => {
                       // Preserve the URL parameters when navigating to store page
                       const params = new URLSearchParams(searchParams.toString());
                       const currentUrl = `${window.location.pathname}?${params.toString()}`;

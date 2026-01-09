@@ -501,7 +501,7 @@
 
 "use client";
 
-import { useState, useRef, useEffect, useCallback, useMemo } from "react";
+import { useState, useRef, useEffect, useMemo } from "react";
 import { Box, IconButton, FormControl, Select, MenuItem } from "@mui/material";
 import { ZoomIn, ZoomOut } from "@mui/icons-material";
 // -------------------- TYPES --------------------
@@ -1096,24 +1096,25 @@ const getShopPoints = (shopName: string, points: Point[]): Point[] => {
 };
 
 // Helper to convert SVG coordinates to screen coordinates
-const svgToScreen = (
-  svgX: number,
-  svgY: number,
-  svgElement: SVGSVGElement,
-  viewBoxX: number,
-  viewBoxY: number,
-  viewBoxWidth: number,
-  viewBoxHeight: number
-) => {
-  const rect = svgElement.getBoundingClientRect();
-  const scaleX = rect.width / viewBoxWidth;
-  const scaleY = rect.height / viewBoxHeight;
-  
-  const screenX = (svgX - viewBoxX) * scaleX + rect.left;
-  const screenY = (svgY - viewBoxY) * scaleY + rect.top;
-  
-  return { x: screenX, y: screenY };
-};
+// Currently unused but kept for potential future use
+// const svgToScreen = (
+//   svgX: number,
+//   svgY: number,
+//   svgElement: SVGSVGElement,
+//   viewBoxX: number,
+//   viewBoxY: number,
+//   viewBoxWidth: number,
+//   viewBoxHeight: number
+// ) => {
+//   const rect = svgElement.getBoundingClientRect();
+//   const scaleX = rect.width / viewBoxWidth;
+//   const scaleY = rect.height / viewBoxHeight;
+//   
+//   const screenX = (svgX - viewBoxX) * scaleX + rect.left;
+//   const screenY = (svgY - viewBoxY) * scaleY + rect.top;
+//   
+//   return { x: screenX, y: screenY };
+// };
 
 // -------------------- HELPER FUNCTIONS --------------------
 // Convert URL shop name (e.g., "batik-studio") to map shop name (e.g., "BATIK STUDIO")
@@ -1494,7 +1495,7 @@ const MallMapStandalone = ({ highlightedShop, isMapPage = false }: MallMapStanda
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
-          onMouseLeave={(e) => {
+          onMouseLeave={() => {
             handleMouseUp();
             // Clear hover state when mouse leaves SVG (but don't stop propagation to allow container handler)
             // Only clear if not in shop page mode
