@@ -219,7 +219,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'gadgets-mobile',
     description: 'A mobile and electronics store offering the latest smartphones, accessories, and tech gadgets.',
     logo: '/logo/.jpg',
-    backgroundImage: '/Gadgets Mobile web.JPG',
+    backgroundImage: '/shops/Gadgets Mobile web.jpeg',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -475,7 +475,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'little-explorer',
     description: 'A kids-focused store offering educational toys, games, and activities designed to inspire learning and creativity.',
     logo: '/logo/.jpg',
-    backgroundImage: '/shops/Little Explorer web.JPG',
+    backgroundImage: '/shops/Little Explorer web.jpeg',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -669,22 +669,6 @@ export const storeDetails: StoreDetail[] = [
     description: 'A watch brand offering stylish timepieces that combine modern design with reliable performance.',
     logo: '/logo/sveston.jpeg',
     backgroundImage: '/shops/Sveston web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
-  {
-    name: 'Tech Studio',
-    slug: 'tech-studio',
-    description: 'A technology store offering mobile accessories, gadgets, and electronic solutions.',
-    logo: '/logo/.jpg',
-    backgroundImage: '/shops/Tech Studio web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
