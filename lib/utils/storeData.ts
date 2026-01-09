@@ -92,7 +92,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Bloon',
     slug: 'bloon',
     description: 'Fresh styles and vibrant fashion for every occasion.',
-    logo: '/logo/bloon logo.jpg',
+    logo: '/logo/bloon.jpg',
     backgroundImage: '/shops/bloon web.jpg',
     category: 'Fashion',
     contact: {
@@ -108,7 +108,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Bonanza',
     slug: 'bonanza',
     description: 'Quality clothing and accessories for the whole family.',
-    logo: '/logo/bonanza satrangi logo.jpg',
+    logo: '/logo/bonanza satrangi.jpg',
     backgroundImage: '/shops/bonanza.jpeg',
     category: 'Fashion',
     contact: {
@@ -555,7 +555,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Mr Kazi',
     slug: 'mr-kazi',
     description: 'A men’s fashion brand offering traditional and modern wear including formal, casual, and ethnic clothing.',
-    logo: '/logo/.jpg',
+    logo: '/logo/Mr kazi.jpg',
     backgroundImage: '/shops/Mr Kazi web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -651,7 +651,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Style and Comfort',
     slug: 'style-and-comfort',
     description: 'A home and lifestyle store offering furniture, décor, and products focused on comfort and design.',
-    logo: '/logo/.jpg',
+    logo: '/logo/style and comfort.jpg',
     backgroundImage: '/shops/Style and Comfort web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -683,7 +683,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Tech Studio',
     slug: 'tech-studio',
     description: 'A technology store offering mobile accessories, gadgets, and electronic solutions.',
-    logo: '/logo/.jpg',
+    logo: '/logo/tech studio.jpg',
     backgroundImage: '/shops/Tech Studio web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -728,10 +728,282 @@ export const storeDetails: StoreDetail[] = [
     }
   },
   {
+    name: 'Ashraf Naturals',
+    slug: 'ashraf-naturals',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Untitled Export/ashraf naturals web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Asian Fusion',
+    slug: 'asian-fusion',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Untitled Export/asian fusion web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Corn Station',
+    slug: 'corn-station',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Untitled Export/corn station web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'F Optical and Watch',
+    slug: 'f-optical-and-watch',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Untitled Export/f optical and watch web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Foot and Leather',
+    slug: 'foot-and-leather',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Untitled Export/foot and leather web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'IMC',
+    slug: 'imc',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Untitled Export/imc web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'H n H Decor',
+    slug: 'h-n-h-decor',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Untitled Export/h n h decor web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Kapok',
+    slug: 'kapok',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Untitled Export/kapok web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'King Coffee',
+    slug: 'king-coffee',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Untitled Export/king coffee web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Melon Box',
+    slug: 'melon-box',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Untitled Export/melon box web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Mi',
+    slug: 'mi',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Untitled Export/mi web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Mr Game',
+    slug: 'mr-game',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Untitled Export/mr game web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Pound Store',
+    slug: 'pound-store',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Untitled Export/pound store web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Rohi Reet',
+    slug: 'rohi-reet',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Untitled Export/rohi reet web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Silver Stition',
+    slug: 'silver-stition',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Untitled Export/silverstition web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Sport Snation',
+    slug: 'sport-snation',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Untitled Export/sport snation web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Sweet and Salt',
+    slug: 'sweet-and-salt',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/Untitled Export/sweet and salt web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
     name: 'Balochistan Dry Fruit Marchent',
     slug: 'balochistan-dry-fruit-marchent',
     description: 'A specialty store offering premium quality dry fruits, nuts, and traditional healthy snacks.',
-    logo: '/logo/.jpg',
+    logo: '/logo/location.jpg',
     backgroundImage: '/shops/Balochistan Dry Fruit Marchent web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -762,7 +1034,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Haroons',
     slug: 'haroons',
     description: 'A well-known fashion and fabric store offering quality clothing, textiles, and accessories for all occasions.',
-    logo: '/logo/.jpg',
+    logo: '/logo/Haroons.jpg',
     backgroundImage: '/shops/Haroons web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -828,7 +1100,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'The Linen Company',
     slug: 'the-linen-company',
     description: 'A home furnishing brand offering premium bed linens, towels, and textile essentials for modern living.',
-    logo: '/logo/.jpg',
+    logo: '/logo/THE linen company.jpg',
     backgroundImage: '/shops/Linen web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -1039,7 +1311,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Baskin Robin',
     slug: 'baskin-robin',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1055,7 +1327,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Batik Studio',
     slug: 'batik-studio-3',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1071,7 +1343,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Charcoal',
     slug: 'charcoal',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1087,7 +1359,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Cinnabon',
     slug: 'cinnabon',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1103,7 +1375,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Coppelia',
     slug: 'coppelia',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1119,7 +1391,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Courger',
     slug: 'courger',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1135,7 +1407,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Crocs',
     slug: 'crocs',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1151,7 +1423,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Dari Mooch',
     slug: 'dari-mooch',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1167,7 +1439,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Engine',
     slug: 'engine',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1183,7 +1455,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Equator',
     slug: 'equator',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1199,7 +1471,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Ethnc',
     slug: 'ethnc',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1215,7 +1487,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Focus',
     slug: 'focus',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1231,7 +1503,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'FPL',
     slug: 'fpl',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1247,7 +1519,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Goshes',
     slug: 'goshes',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1263,7 +1535,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Gulzari',
     slug: 'gulzari',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1279,7 +1551,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Haseen Jewelers',
     slug: 'haseen-jewelers',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1295,7 +1567,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Hopscotch',
     slug: 'hopscotch',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1311,7 +1583,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Hub',
     slug: 'hub',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1327,7 +1599,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Hunza Emporium',
     slug: 'hunza-emporium',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1343,7 +1615,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Hush Puppies',
     slug: 'hush-puppies',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1359,7 +1631,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Insignia',
     slug: 'insignia',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1375,7 +1647,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'J. Fragrance and Costmetics',
     slug: 'j.-fragrances-and-costmetics',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1391,7 +1663,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Jafferjees',
     slug: 'jaffer-jees',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1407,7 +1679,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Jc Buckman',
     slug: 'jc-buckman',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1423,7 +1695,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Juice Fruity',
     slug: 'juice-friuty',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1439,7 +1711,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Julke',
     slug: 'julke',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1455,7 +1727,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'KefDiamonds',
     slug: 'kef-diamonds',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1471,7 +1743,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Khadi',
     slug: 'khadi',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1487,7 +1759,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Khusa Factory',
     slug: 'khusa-factory',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1503,7 +1775,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'King Corn',
     slug: 'king-corn',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1519,7 +1791,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'King Corn',
     slug: 'king-corn',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1535,7 +1807,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Lady Privacy',
     slug: 'lady-privacy',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1551,7 +1823,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Limelite',
     slug: 'limelite',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1567,7 +1839,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Lullusar',
     slug: 'lullusar',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1583,7 +1855,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Maria B',
     slug: 'maria-b-2',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1599,7 +1871,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Mayblline',
     slug: 'maybelline',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1615,7 +1887,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Miracle',
     slug: 'miracle',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1631,7 +1903,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Mocciani',
     slug: 'mocciani',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1647,7 +1919,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Monark',
     slug: 'monark',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1663,7 +1935,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'MTJ Fragrance',
     slug: 'mtj-fragrance',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1679,7 +1951,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Nizam Watch House',
     slug: 'nizam-watch-house',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1695,7 +1967,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Pop Nosh',
     slug: 'pop-nosh',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1711,7 +1983,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Rivaj',
     slug: 'rivaj',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1727,7 +1999,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Rivaj',
     slug: 'rivaj',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1743,7 +2015,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Royal Tag',
     slug: 'royal-tag',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1759,7 +2031,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Sapphire',
     slug: 'sapphire',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1775,7 +2047,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Saya',
     slug: 'saya',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1791,7 +2063,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Scents and Stories',
     slug: 'scents-and-stories',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1807,7 +2079,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Sketchers',
     slug: 'sketcher',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1823,7 +2095,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Sona Chandi',
     slug: 'sona-chandi',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1839,7 +2111,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Speed Sports',
     slug: 'speed-sports',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1855,7 +2127,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Style in Shoes',
     slug: 'speed-sports',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1871,7 +2143,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Svesto',
     slug: 'svesto',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1887,7 +2159,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Swarovski',
     slug: 'swarovski',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1903,7 +2175,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Syed Royal Optics',
     slug: 'syed-royal-optics',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1919,7 +2191,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Tagheuer',
     slug: 'tagheuer',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1935,7 +2207,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Tayyab Jewelers',
     slug: 'tayyab-jewelers',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1951,7 +2223,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Tessoro',
     slug: 'tessoro',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1967,7 +2239,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'The Body Shop',
     slug: 'the-body-shop',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1983,7 +2255,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'The Hortins',
     slug: 'the-hortins',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -1999,7 +2271,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Ultra Club',
     slug: 'ultra-club',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -2015,12 +2287,12 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Wasim Badami by Hemani',
     slug: 'wasim-badami-by-hemani',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
     logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/wasim badami by hemani web.JPG',
+    backgroundImage: '/shops/GroundFloor/wasim badami by hemani mobile.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2031,7 +2303,7 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-   {
+  {
     name: 'Zero',
     slug: 'zero',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
@@ -2155,6 +2427,1078 @@ export const storeDetails: StoreDetail[] = [
     category: 'Fashion',
     hasOffers: true,
     backgroundImage: '/zara-forum6257.jpg',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Abc Fragrance',
+    slug: 'abc-fragrance',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpg',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/abc fragrance web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Alkaram',
+    slug: 'alkaram',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/alkaram web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Almas',
+    slug: 'almas',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/almas web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'AMD',
+    slug: 'amd',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/amd web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Amir',
+    slug: 'amir',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/amir 2 web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Bareeze',
+    slug: 'bareeze',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/bareeze web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Batik',
+    slug: 'batik',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/batik web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Beech Tree',
+    slug: 'beech-tree',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/beech tree web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Bonanza Satrangi Beauty',
+    slug: 'bonanza-satrangi-beauty',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/bonanza satrangi beauty web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Borjan',
+    slug: 'borjan',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/borjan web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Brackets',
+    slug: 'brackets',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/brackets web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Cambridge',
+    slug: 'cambridge',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/cambridge web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Charizma',
+    slug: 'charizma',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/charizma web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Chinyere',
+    slug: 'chinyere',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/chinyere web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Chunri',
+    slug: 'chunri',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/chunri web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Corio',
+    slug: 'corio',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/corio web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Dinners',
+    slug: 'dinners',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/dinners web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Dynasty',
+    slug: 'dynasty',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/dynasty web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'ECS',
+    slug: 'ecs',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/ecs web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Edenrobe',
+    slug: 'edenrobe',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/eden robe web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Eklairs',
+    slug: 'eklairs',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/eklairs web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Elegant',
+    slug: 'elegant',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/elegant web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Excel',
+    slug: 'excel',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/excel web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Frutastic',
+    slug: 'frutastic',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/frutastic web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Furor',
+    slug: 'furor',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/furor web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Generation',
+    slug: 'generation',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/generation web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Gloria Jeans',
+    slug: 'gloria-jeans',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/gloria jeans web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Hi Volts',
+    slug: 'hi-volts',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/hi volts web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Ideas',
+    slug: 'ideas',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/ideas web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Islamic Honey Center',
+    slug: 'ilamic-honey-center',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/islamic honey center web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Jiyas Creation',
+    slug: 'jiyas-creation',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/jiyas creation web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Junaid Jamshed',
+    slug: 'junaid-jamshed',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/junaid jamshed web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Kayseria',
+    slug: 'kayseria',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/kayseria web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  
+  {
+    name: 'Lawrancepur',
+    slug: 'lawrancepur',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/lawrancepur web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Little People',
+    slug: 'little-people',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/little people web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Logo',
+    slug: 'logo',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/logo web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'M/Basic',
+    slug: 'm-basic',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/m basic web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Maria B',
+    slug: 'maria-b',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/maria b web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Minnie Mirrors',
+    slug: 'minnie-mirrors',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/minnie-mirrors web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Mona',
+    slug: 'mona',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/mona web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Nakoosh',
+    slug: 'nakoosh',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/nakoosh web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Nishat',
+    slug: 'nishat',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/nishat web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Oaks',
+    slug: 'oaks',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/oaks web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'One',
+    slug: 'one',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/one web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Out Fitters',
+    slug: 'out-fitters',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-50-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/outfitters web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Potato Factory',
+    slug: 'potato-factory',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/potato factory web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Revolution London',
+    slug: 'revolution-london',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/revolution london web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'RTH',
+    slug: 'rth',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/rth web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Sana Safinaz',
+    slug: 'sana-safinaz',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/sana safinaz web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Siraj Sons Silver Shop',
+    slug: 'siraj-sons-silver-shop',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/siraj sons silver shop web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Sohaye',
+    slug: 'sohaye',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/sohaye web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Sowearg',
+    slug: 'sowearg',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/sowearg web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Stylo',
+    slug: 'stylo',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/stylo web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Swiss Arabia',
+    slug: 'swiss-arabia',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/swiss arabia web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Threads and Motys',
+    slug: 'threads-and-motys',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/threads and motys web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Tiny Years',
+    slug: 'tiny-years',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/tiny years web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Toy Club',
+    slug: 'toy-club',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/toy club web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Umaiza',
+    slug: 'umaiza',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/umaiza web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Uniworth',
+    slug: 'uniworth',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/uniworth web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Unze',
+    slug: 'unze',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/unze web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Vereity Bags and Costmetics',
+    slug: 'vereity-bags-and-costmetics',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/vereity bags and costmetics web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Zeen',
+    slug: 'zeen',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/zeen web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Zubaidas',
+    slug: 'zubaidas',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/1st floor/zubaidas web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
