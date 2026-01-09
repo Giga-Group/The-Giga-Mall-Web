@@ -857,22 +857,6 @@ export const storeDetails: StoreDetail[] = [
     }
   },
   {
-    name: 'Dry Fruit',
-    slug: 'dry-fruit',
-    description: 'Japanese-inspired lifestyle products and accessories for everyday living.',
-    logo: '/logo/.jpg',
-    backgroundImage: '/shops/Dry Fruit web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
-  {
     name: 'Diamond Crown',
     slug: 'diamond-crown',
     description: 'An elegant jewelry brand offering finely crafted gold, diamond, and gemstone pieces for timeless style and special occasions.',
@@ -894,22 +878,6 @@ export const storeDetails: StoreDetail[] = [
     description: 'A trusted health and beauty retailer offering skincare, cosmetics, personal care products, and wellness essentials.',
     logo: '/logo/.jpg',
     backgroundImage: '/shops/D watson web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
-  {
-    name: 'Carrefour',
-    slug: 'carrefour',
-    description: 'A leading global retail chain offering groceries, fresh produce, household essentials, electronics, and everyday necessities under one roof.',
-    logo: '/logo/carrefour.jpeg',
-    backgroundImage: '/shops/Carrefour web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
