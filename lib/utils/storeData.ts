@@ -728,22 +728,6 @@ export const storeDetails: StoreDetail[] = [
     }
   },
   {
-    name: 'Balochistan Dry Fruit Marchent',
-    slug: 'balochistan-dry-fruit-marchent',
-    description: 'A specialty store offering premium quality dry fruits, nuts, and traditional healthy snacks.',
-    logo: '/logo/.jpg',
-    backgroundImage: '/shops/Balochistan Dry Fruit Marchent web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
-  {
     name: 'Just Fragrance',
     slug: 'just-fragrance',
     description: 'A fragrance brand offering a wide range of perfumes and scents inspired by international blends.',
@@ -779,7 +763,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'jelly-factory',
     description: 'A fun and trendy store offering toys, gifts, novelty items, and colorful products for kids and families.',
     logo: '/logo/jelly factory.jpeg',
-    backgroundImage: '/shops/Jelly Fish web.JPG',
+    backgroundImage: '/shops/Jelly Factory web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -862,22 +846,6 @@ export const storeDetails: StoreDetail[] = [
     description: 'An elegant jewelry brand offering finely crafted gold, diamond, and gemstone pieces for timeless style and special occasions.',
     logo: '/logo/diamond crown.jpeg',
     backgroundImage: '/shops/Diamond Crown web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
-  {
-    name: 'D Watson',
-    slug: 'd-watson',
-    description: 'A trusted health and beauty retailer offering skincare, cosmetics, personal care products, and wellness essentials.',
-    logo: '/logo/.jpg',
-    backgroundImage: '/shops/D watson web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
