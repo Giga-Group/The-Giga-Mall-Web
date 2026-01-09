@@ -402,7 +402,7 @@ const matchesViewBy = (name: string, viewBy: string): boolean => {
 
 const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps) => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'), { noSsr: true });
   const { filters } = useFilters();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -410,16 +410,17 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
   const itemsPerPage = 5;
   
   // Get initial count from URL or default
+  // Default to desktop (10) on server to avoid hydration mismatch
   const getInitialCount = () => {
-    if (typeof window === 'undefined') return isMobile ? 6 : 10;
-    
     const urlCount = searchParams.get('show');
     if (urlCount) {
       const count = parseInt(urlCount);
-      // Ensure the count is valid
-      return isNaN(count) ? (isMobile ? 6 : 10) : Math.max(count, isMobile ? 6 : 10);
+      // Ensure the count is valid - default to 10 (desktop) on server
+      if (isNaN(count)) return 10;
+      return Math.max(count, 10);
     }
-    return isMobile ? 6 : 10;
+    // Default to desktop count (10) to match server render
+    return 10;
   };
   
   const [visibleCount, setVisibleCount] = useState(getInitialCount);
