@@ -224,11 +224,17 @@ function OpeningHoursContent() {
     ? 'Parking'
     : 'Opening hours';
 
+  // Get the correct image path from "plan your visit" folder
+  const getHeroImagePath = (imageName: string) => {
+    // Encode the path properly for URLs
+    return `/plan your visit/${imageName}`.split('/').map(segment => encodeURIComponent(segment)).join('/');
+  };
+
   const heroImage = isGettingHere
-    ? '/getting-here.jpg'
+    ? getHeroImagePath('getting-here.jpg')
     : isParking
-    ? '/hallway-garage.jpg'
-    : '/opening-hours.jpg';
+    ? getHeroImagePath('hallway-garage.jpg')
+    : getHeroImagePath('opening-hours.jpg');
 
   return (
     <>
@@ -255,6 +261,7 @@ function OpeningHoursContent() {
               alt={heroTitle}
               fill
               priority
+              unoptimized
               style={{ objectFit: 'cover' }}
             />
             <Box
