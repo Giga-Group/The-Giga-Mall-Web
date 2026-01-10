@@ -23,48 +23,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { motion} from "framer-motion";
-import { Suspense } from "react";
 import { FilterProvider } from "@/lib/contexts/FilterContext";
-import SearchAndFilter from "@/components/sections/SearchAndFilter";
-import StoreGrid from "@/components/sections/StoreGrid";
-import type { Store } from "@/components/sections/StoreGrid/StoreGrid";
-
-// Entertainment items for grid display - converted to Store format
-const entertainmentItems: Store[] = [
-  {
-    name: "Cinepax Cinema",
-    slug: "cinepax",
-    logo: "/logo/Vrkings.jpg", // Placeholder - update with actual logo if available
-    category: "cinema",
-  },
-  {
-    name: "Bowling Alley",
-    slug: "bowling-alley",
-    category: "sports",
-  },
-  {
-    name: "VI Rides Arcade",
-    slug: "vi-rides",
-    logo: "/logo/Virides.jpg",
-    category: "arcade",
-  },
-  {
-    name: "VR Kings",
-    slug: "vr-kings",
-    logo: "/logo/Vrkings.jpg",
-    category: "arcade",
-  },
-  {
-    name: "Funcity",
-    slug: "funcity",
-    category: "family",
-  },
-  {
-    name: "SpaceCraft",
-    slug: "spacecraft",
-    category: "cinema",
-  },
-];
 
 export default function EntertainPage() {
   const theme = useTheme();
@@ -146,6 +105,35 @@ export default function EntertainPage() {
       image: "/Entertain/VR Kings Vertical.jpg",
       cta: "View Arcade Zone",
       link: "/fun-city",
+    },
+  ];
+
+  // Entertainment cards for directory grid
+  const entertainmentCards = [
+    {
+      title: "Cinepax Cinema",
+      image: "/Entertain/SpaceCraft Horizontal.jpg",
+      link: "/entertain/cinepax",
+    },
+    {
+      title: "Bowling Alley",
+      image: "/Entertain/bowling 1.jpg",
+      link: "/entertain/bowling-alley",
+    },
+    {
+      title: "VI Rides Arcade",
+      image: "/Entertain/VI Rides Horizontal.jpg",
+      link: "/entertain/vi-rides",
+    },
+    {
+      title: "VR Kings",
+      image: "/Entertain/VR Kings Horizontal.jpg",
+      link: "/entertain/vr-kings",
+    },
+    {
+      title: "Funcity",
+      image: "/Entertain/Funcity Horizontal.jpg",
+      link: "/entertain/funcity",
     },
   ];
 
@@ -396,7 +384,7 @@ export default function EntertainPage() {
         </Box>
       ))}
     </Box>
-  </Box>
+  </FilterProvider>
 </Box>
 {/* ================= END MINIMAL ENTERTAINMENT CARDS SECTION ================= */}
        {/* ================= ATTRACTIONS & ACTIVITIES ================= */}
