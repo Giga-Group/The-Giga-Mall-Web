@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Container, Typography, Link, Collapse } from '@mui/material';
+import { Box, Container, Typography, Link, Collapse, Button } from '@mui/material';
 import { ChevronRight } from '@mui/icons-material';
 import { useState } from 'react';
 import Image from 'next/image';
@@ -97,8 +97,7 @@ const Footer = () => {
               </Typography>
             </Collapse>
 
-            <Link
-              component="button"
+            <Button
               onClick={() => setShowMore(!showMore)}
               sx={{
                 fontFamily: '"Quicksand", sans-serif',
@@ -109,13 +108,16 @@ const Footer = () => {
                 border: 'none',
                 background: 'none',
                 padding: 0,
+                minWidth: 'auto',
+                textTransform: 'none',
                 '&:hover': {
                   textDecoration: 'underline',
+                  background: 'none',
                 },
               }}
             >
               {showMore ? 'Show less' : 'Show more'}
-            </Link>
+            </Button>
             <Box
               sx={{
                 textAlign: { xs: 'center', md: 'left' },

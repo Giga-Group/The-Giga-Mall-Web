@@ -362,7 +362,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Tajik',
     slug: 'tajik',
     description: 'A footwear and fashion accessories store offering comfortable and stylish designs.',
-    logo: '/logo/.jpg',
     backgroundImage: '/shops/Tajik web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -378,7 +377,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Sams Abaya',
     slug: 'sams-abaya',
     description: 'A women’s fashion store specializing in elegant abayas and modest wear with contemporary designs.',
-    logo: '/logo/.jpg',
     backgroundImage: "/shops/Sam's Abaya web.JPG",
     category: 'Lifestyle',
     contact: {
@@ -394,7 +392,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Zamin Jewelers',
     slug: 'zamin-jewelers',
     description: 'A premium jewelry store offering exquisite gold, diamond, and gemstone collections.',
-    logo: '/logo/.jpg',
     backgroundImage: '/shops/Zamin Jewelers web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -410,7 +407,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Traditional Khusa',
     slug: 'traditional-khusa',
     description: 'A footwear store offering traditional handcrafted khusa shoes with ethnic designs.',
-    logo: '/logo/.jpg',
     backgroundImage: '/shops/Traditional Khusa web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -426,7 +422,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Taarkashi',
     slug: 'taarkashi',
     description: 'A decorative art store specializing in intricate taarkashi artwork and handicrafts.',
-    logo: '/logo/.jpg',
     backgroundImage: '/shops/Taarkashi web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -442,7 +437,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'The Time Zone',
     slug: 'the-time-zone',
     description: 'A watch store offering premium and stylish timepieces for men and women.',
-    logo: '/logo/.jpg',
     backgroundImage: '/shops/The Time Zone web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -458,7 +452,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Mehran Jewellers',
     slug: 'mehran-jewellers',
     description: 'A renowned jewelry brand offering gold, diamond, and bridal collections with elegant craftsmanship.',
-    logo: '/logo/.jpg',
     backgroundImage: '/shops/Mehran Jewellers web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -474,7 +467,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Little Explorer',
     slug: 'little-explorer',
     description: 'A kids-focused store offering educational toys, games, and activities designed to inspire learning and creativity.',
-    logo: '/logo/.jpg',
     backgroundImage: '/shops/Little Explorer web.jpeg',
     category: 'Lifestyle',
     contact: {
@@ -539,7 +531,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Mini Try',
     slug: 'mini-try',
     description: 'A trendy accessories and essentials store offering small lifestyle products, gifts, and daily-use items.',
-    logo: '/logo/.jpg',
     backgroundImage: '/shops/Mini Try web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -699,7 +690,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Younique',
     slug: 'younique',
     description: 'A fashion and accessories brand offering trendy styles designed to stand out.',
-    logo: '/logo/.jpg',
     backgroundImage: '/shops/Younique web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -875,7 +865,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Melon Box',
     slug: 'melon-box',
     description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
-    logo: '/logo/.jpg',
     backgroundImage: '/shops/melon box web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -1000,26 +989,9 @@ export const storeDetails: StoreDetail[] = [
   //   }
   // },
   {
-    name: 'Balochistan Dry Fruit Marchent',
-    slug: 'balochistan-dry-fruit-marchent',
-    description: 'A specialty store offering premium quality dry fruits, nuts, and traditional healthy snacks.',
-    logo: '/logo/location.jpg',
-    backgroundImage: '/shops/Balochistan Dry Fruit Marchent web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
-  {
     name: 'Just Fragrance',
     slug: 'just-fragrance',
     description: 'A fragrance brand offering a wide range of perfumes and scents inspired by international blends.',
-    logo: '/logo/.jpg',
     backgroundImage: '/shops/Just Fragrance web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -1973,7 +1945,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Sona Chandi',
     slug: 'sona-chandi',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '',
     backgroundImage: '/shops/sona chandi web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -2165,7 +2136,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Abc Fragrance',
     slug: 'abc-fragrance',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpg',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2335,7 +2305,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Chinyere',
     slug: 'chinyere',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2352,7 +2321,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Chunri',
     slug: 'chunri',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2369,7 +2337,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Corio',
     slug: 'corio',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2386,7 +2353,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Dinners',
     slug: 'dinners',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2403,7 +2369,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Dynasty',
     slug: 'dynasty',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2420,7 +2385,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'ECS',
     slug: 'ecs',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2437,7 +2401,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Edenrobe',
     slug: 'edenrobe',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2451,27 +2414,9 @@ export const storeDetails: StoreDetail[] = [
     }
   },
   {
-    name: 'Eklairs',
-    slug: 'eklairs',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
-    contact: {
-      phone: '+971-50-501-8573'
-    },
-    category: 'Fashion',
-    hasOffers: true,
-    backgroundImage: '/shops/eklairs web.JPG',
-    location: {
-      level: 'First Floor',
-      parking: 'P2, Grand Parking',
-      mapPosition: { x: 20, y: 50 }
-    }
-  },
-  {
     name: 'Elegant',
     slug: 'elegant',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2488,7 +2433,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Excel',
     slug: 'excel',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2502,27 +2446,9 @@ export const storeDetails: StoreDetail[] = [
     }
   },
   {
-    name: 'Frutastic',
-    slug: 'frutastic',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
-    contact: {
-      phone: '+971-50-501-8573'
-    },
-    category: 'Fashion',
-    hasOffers: true,
-    backgroundImage: '/shops/frutastic web.JPG',
-    location: {
-      level: 'First Floor',
-      parking: 'P2, Grand Parking',
-      mapPosition: { x: 20, y: 50 }
-    }
-  },
-  {
     name: 'Furor',
     slug: 'furor',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2539,7 +2465,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Generation',
     slug: 'generation',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2553,27 +2478,9 @@ export const storeDetails: StoreDetail[] = [
     }
   },
   {
-    name: 'Gloria Jeans',
-    slug: 'gloria-jeans',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
-    contact: {
-      phone: '+971-50-501-8573'
-    },
-    category: 'Fashion',
-    hasOffers: true,
-    backgroundImage: '/shops/gloria jeans web.JPG',
-    location: {
-      level: 'First Floor',
-      parking: 'P2, Grand Parking',
-      mapPosition: { x: 20, y: 50 }
-    }
-  },
-  {
     name: 'Hi Volts',
     slug: 'hi-volts',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2590,7 +2497,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Ideas',
     slug: 'ideas',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2624,7 +2530,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Jiyas Creation',
     slug: 'jiyas-creation',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2642,7 +2547,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Lawrancepur',
     slug: 'lawrancepur',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2659,7 +2563,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Little People',
     slug: 'little-people',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2693,7 +2596,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'M/Basic',
     slug: 'm-basic',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2761,7 +2663,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Nakoosh',
     slug: 'nakoosh',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2778,7 +2679,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Nishat',
     slug: 'nishat',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2795,7 +2695,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Oaks',
     slug: 'oaks',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2812,7 +2711,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'One',
     slug: 'one',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2829,7 +2727,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Out Fitters',
     slug: 'out-fitters',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2843,27 +2740,9 @@ export const storeDetails: StoreDetail[] = [
     }
   },
   {
-    name: 'Potato Factory',
-    slug: 'potato-factory',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
-    contact: {
-      phone: '+971-501-8573'
-    },
-    category: 'Fashion',
-    hasOffers: true,
-    backgroundImage: '/shops/potato factory web.JPG',
-    location: {
-      level: 'First Floor',
-      parking: 'P2, Grand Parking',
-      mapPosition: { x: 20, y: 50 }
-    }
-  },
-  {
     name: 'Revolution London',
     slug: 'revolution-london',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2880,7 +2759,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'RTH',
     slug: 'rth',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2897,7 +2775,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Sana Safinaz',
     slug: 'sana-safinaz',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2914,7 +2791,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Siraj Sons Silver Shop',
     slug: 'siraj-sons-silver-shop',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2931,7 +2807,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Sohaye',
     slug: 'sohaye',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2948,7 +2823,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Sowearg',
     slug: 'sowearg',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2965,7 +2839,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Stylo',
     slug: 'stylo',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2982,7 +2855,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Swiss Arabia',
     slug: 'swiss-arabia',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2999,7 +2871,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Threads and Motys',
     slug: 'threads-and-motys',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
     },
@@ -3016,7 +2887,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Tiny Years',
     slug: 'tiny-years',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
     },
@@ -3033,7 +2903,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Toy Club',
     slug: 'toy-club',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
     },
@@ -3050,7 +2919,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Umaiza',
     slug: 'umaiza',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
     },
@@ -3067,7 +2935,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Uniworth',
     slug: 'uniworth',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
     },
@@ -3084,7 +2951,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Unze',
     slug: 'unze',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
     },
@@ -3101,7 +2967,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Vereity Bags and Costmetics',
     slug: 'vereity-bags-and-costmetics',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
     },
@@ -3118,7 +2983,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Zeen',
     slug: 'zeen',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
     },
@@ -3135,7 +2999,6 @@ export const storeDetails: StoreDetail[] = [
     name: 'Zubaidas',
     slug: 'zubaidas',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
     },
@@ -3177,23 +3040,6 @@ export const storeDetails: StoreDetail[] = [
     category: 'Fashion',
     hasOffers: true,
     backgroundImage: '/shops/a and i web.JPG',
-    location: {
-      level: 'First Floor',
-      parking: 'P2, Grand Parking',
-      mapPosition: { x: 20, y: 50 }
-    }
-  },
-  {
-    name: 'Al Baik',
-    slug: 'al-baik',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    // logo: '/.jpp',
-    contact: {
-      phone: '+971-501-8573'
-    },
-    category: 'Fashion',
-    hasOffers: true,
-    backgroundImage: '/shops/al baik web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3300,6 +3146,606 @@ export const storeDetails: StoreDetail[] = [
       level: 'First Floor',
       parking: 'P2, Grand Parking',
       mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Designer Vault',
+    slug: 'designer-vault',
+    description: 'A luxury boutique offering authentic designer handbags, shoes, clothing, and accessories from top fashion houses including Burberry, Hermes, Versace, Gucci, Chanel, Dior, and more.',
+    contact: {
+      phone: '+971-50-501-8611'
+    },
+    category: 'Luxury Fashion',
+    backgroundImage: '/shops/designer vault web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 80, y: 95 }
+    }
+  },
+  {
+    name: 'Dollar House',
+    slug: 'dollar-house',
+    description: 'A variety store offering a wide range of affordable household items, kitchenware, home décor, and general merchandise at great value prices.',
+    contact: {
+      phone: '+971-50-501-8612'
+    },
+    category: 'Variety Store',
+    backgroundImage: '/shops/dollar house web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 81, y: 96 }
+    }
+  },
+  {
+    name: 'Dollar World',
+    slug: 'dollar-world',
+    description: 'Welcome to elegance. A discount variety store offering big value at small prices, featuring kitchenware, home goods, decorative items, and everyday essentials.',
+    contact: {
+      phone: '+971-50-501-8613'
+    },
+    category: 'Variety Store',
+    backgroundImage: '/shops/dollar world web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 82, y: 97 }
+    }
+  },
+  {
+    name: 'Good Life',
+    slug: 'good-life',
+    description: 'A footwear and lifestyle store offering a wide selection of colorful slippers, sandals, and accessories. Discover comfortable and stylish options for everyday living.',
+    contact: {
+      phone: '+971-50-501-8614'
+    },
+    category: 'Footwear',
+    backgroundImage: '/shops/good life web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 83, y: 98 }
+    }
+  },
+  {
+    name: 'Irha\'s Kids',
+    slug: 'irhas-kids',
+    description: 'A vibrant children\'s store offering a wide range of baby and kids\' products including clothing, accessories, feeding bottles, baby care items, backpacks, and colorful essentials for little ones.',
+    contact: {
+      phone: '+971-50-501-8615'
+    },
+    category: 'Kids & Baby',
+    backgroundImage: '/shops/irhas kids web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 84, y: 99 }
+    }
+  },
+  {
+    name: 'Jockey',
+    slug: 'jockey',
+    description: 'Premium innerwear and apparel brand offering comfortable, high-quality underwear, t-shirts, and casual wear for men and women. Discover classic styles and modern designs.',
+    contact: {
+      phone: '+971-50-501-8616'
+    },
+    category: 'Fashion',
+    backgroundImage: '/shops/jockey web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 85, y: 100 }
+    }
+  },
+  {
+    name: 'Just for Men',
+    slug: 'just-for-men',
+    description: 'A men\'s accessories store specializing in ties, belts, cufflinks, hats, and other fashion accessories. Discover a wide selection of stylish accessories to complete your look.',
+    contact: {
+      phone: '+971-50-501-8617'
+    },
+    category: 'Fashion Accessories',
+    backgroundImage: '/shops/just for men web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 86, y: 101 }
+    }
+  },
+  {
+    name: 'Kundan',
+    slug: 'kundan',
+    description: 'A traditional footwear store specializing in intricately designed juttis, khussas, and embellished flat shoes. Discover a wide selection of colorful, embroidered, and beaded traditional footwear perfect for weddings, festivals, and celebrations.',
+    contact: {
+      phone: '+971-50-501-8618'
+    },
+    category: 'Footwear',
+    backgroundImage: '/shops/kundan web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 87, y: 102 }
+    }
+  },
+  {
+    name: 'Leisure Club',
+    slug: 'leisure-club',
+    description: 'A family clothing store offering a wide range of casual wear, traditional attire, and modern fashion for men, women, and children. Discover vibrant collections including winter collections, new arrivals, and seasonal styles for the whole family.',
+    contact: {
+      phone: '+971-50-501-8619'
+    },
+    category: 'Fashion',
+    backgroundImage: '/shops/leisure club.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 88, y: 103 }
+    }
+  },
+  {
+    name: 'Mip.j Store',
+    slug: 'mipj-store',
+    description: 'A jewelry and accessories store offering a wide selection of necklaces, earrings, rings, bracelets, and handbags. Specializing in professional ear and nose piercing services. Discover elegant gold and silver-toned jewelry with colorful stones, perfect for any occasion.',
+    contact: {
+      phone: '+971-50-501-8620'
+    },
+    category: 'Jewelry & Accessories',
+    backgroundImage: '/shops/mip.j web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 89, y: 104 }
+    }
+  },
+  {
+    name: 'MIRAAL',
+    slug: 'miral',
+    description: 'A boutique specializing in abayas and jewelry. Discover a wide selection of elegant abayas in various colors and styles, along with beautiful gold and silver jewelry pieces including necklaces, earrings, bracelets, and rings. Perfect for modest fashion and special occasions.',
+    contact: {
+      phone: '+971-50-501-8621'
+    },
+    category: 'Fashion & Jewelry',
+    backgroundImage: '/shops/miral web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 90, y: 105 }
+    }
+  },
+  {
+    name: 'The North Face',
+    slug: 'north-face',
+    description: 'A leading outdoor apparel and gear brand offering high-performance jackets, clothing, footwear, and accessories. Discover technical outerwear, hiking boots, backpacks, and gear designed for exploration and adventure. Never stop exploring.',
+    contact: {
+      phone: '+971-50-501-8622'
+    },
+    category: 'Outdoor & Sports',
+    backgroundImage: '/shops/north face web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 91, y: 106 }
+    }
+  },
+  {
+    name: 'Originals of London',
+    slug: 'originals-of-london',
+    description: 'A luxury fashion retailer offering all the latest fashion brands from around the world. Discover authentic designer items including handbags, footwear, clothing, and accessories from top luxury brands such as Burberry, Gucci, Prada, Hermes, Fendi, Kenzo, Versace, Balmain, and more.',
+    contact: {
+      phone: '+971-50-501-8623'
+    },
+    category: 'Luxury Fashion',
+    backgroundImage: '/shops/original web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 92, y: 107 }
+    }
+  },
+  {
+    name: 'QUMAS',
+    slug: 'qumas',
+    description: 'A boutique specializing in traditional and artisanal textiles, accessories, and decorative items. Discover a wide selection of handcrafted fabrics, scarves, woven baskets, wall hangings, and unique decorative pieces. Perfect for those seeking authentic, handcrafted goods.',
+    contact: {
+      phone: '+971-50-501-8624'
+    },
+    category: 'Fashion & Home Decor',
+    backgroundImage: '/shops/qumas web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 93, y: 108 }
+    }
+  },
+  {
+    name: 'Roll Over',
+    slug: 'roll-over',
+    description: 'A modern children\'s and youth clothing store offering stylish and comfortable apparel. Discover a wide range of jackets, shirts, pants, jeans, and accessories for kids and teens. Available in stores and online with regular sales and promotions.',
+    contact: {
+      phone: '+971-50-501-8625'
+    },
+    category: 'Kids & Youth Fashion',
+    backgroundImage: '/shops/roll over web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 94, y: 109 }
+    }
+  },
+  {
+    name: 'Scents and Secrets',
+    slug: 'scents-and-secrets',
+    description: 'A fragrance boutique offering a wide selection of perfumes and colognes for men and women. Discover premium fragrances, gift sets, and exclusive scents from various brands. Find your perfect signature scent in a welcoming, well-lit environment.',
+    contact: {
+      phone: '+971-50-501-8626'
+    },
+    category: 'Beauty & Fragrances',
+    backgroundImage: '/shops/scents and secrets web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 95, y: 110 }
+    }
+  },
+  {
+    name: 'Tiny Tots',
+    slug: 'tiny-tots',
+    description: 'A children\'s clothing store offering a vibrant collection of apparel and accessories for kids aged 0 to 14 years. Discover colorful sweaters, shirts, dresses, and accessories with fun designs and characters. Regular sales and promotions available.',
+    contact: {
+      phone: '+971-50-501-8627'
+    },
+    category: 'Kids & Baby',
+    backgroundImage: '/shops/tiny tots web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 96, y: 111 }
+    }
+  },
+  {
+    name: 'Time & Space Collection',
+    slug: 'time-space-collection',
+    description: 'A fashion accessories boutique offering a wide selection of handbags, footwear, watches, wallets, perfumes, and jewelry. Discover stylish accessories for every occasion, featuring various designs and brands in a well-organized, inviting environment.',
+    contact: {
+      phone: '+971-50-501-8628'
+    },
+    category: 'Fashion Accessories',
+    backgroundImage: '/shops/time and space web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 97, y: 112 }
+    }
+  },
+  {
+    name: 'Toy Land',
+    slug: 'toy-land',
+    description: 'A vibrant toy store offering a vast selection of toys and children\'s products. Discover dolls, action figures, plush toys, toy vehicles, playsets, games, and educational toys. Perfect for kids of all ages with a wide variety of brands and categories.',
+    contact: {
+      phone: '+971-50-501-8629'
+    },
+    category: 'Toys & Games',
+    backgroundImage: '/shops/toy land web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 98, y: 113 }
+    }
+  },
+  {
+    name: 'Zebaish',
+    slug: 'zebaish',
+    description: 'A vibrant clothing and fabric store offering a wide selection of colorful textiles, traditional garments, and ready-to-wear fashion. Discover beautiful fabrics for salwar kameez, sarees, dupattas, and other traditional attire, along with ready-made garments featuring intricate patterns, embroidery, and embellishments.',
+    contact: {
+      phone: '+971-50-501-8630'
+    },
+    category: 'Fashion',
+    backgroundImage: '/shops/zebaish web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 99, y: 114 }
+    }
+  },
+  {
+    name: 'Designer Vault',
+    slug: 'designer-vault',
+    description: 'A luxury boutique offering authentic designer handbags, shoes, clothing, and accessories from top fashion houses including Burberry, Hermes, Versace, Gucci, Chanel, Dior, and more.',
+    contact: {
+      phone: '+971-50-501-8611'
+    },
+    category: 'Luxury Fashion',
+    backgroundImage: '/shops/designer vault web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 80, y: 95 }
+    }
+  },
+  {
+    name: 'Dollar House',
+    slug: 'dollar-house',
+    description: 'A variety store offering a wide range of affordable household items, kitchenware, home décor, and general merchandise at great value prices.',
+    contact: {
+      phone: '+971-50-501-8612'
+    },
+    category: 'Variety Store',
+    backgroundImage: '/shops/dollar house web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 81, y: 96 }
+    }
+  },
+  {
+    name: 'Dollar World',
+    slug: 'dollar-world',
+    description: 'Welcome to elegance. A discount variety store offering big value at small prices, featuring kitchenware, home goods, decorative items, and everyday essentials.',
+    contact: {
+      phone: '+971-50-501-8613'
+    },
+    category: 'Variety Store',
+    backgroundImage: '/shops/dollar world web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 82, y: 97 }
+    }
+  },
+  {
+    name: 'Good Life',
+    slug: 'good-life',
+    description: 'A footwear and lifestyle store offering a wide selection of colorful slippers, sandals, and accessories. Discover comfortable and stylish options for everyday living.',
+    contact: {
+      phone: '+971-50-501-8614'
+    },
+    category: 'Footwear',
+    backgroundImage: '/shops/good life web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 83, y: 98 }
+    }
+  },
+  {
+    name: 'Irha\'s Kids',
+    slug: 'irhas-kids',
+    description: 'A vibrant children\'s store offering a wide range of baby and kids\' products including clothing, accessories, feeding bottles, baby care items, backpacks, and colorful essentials for little ones.',
+    contact: {
+      phone: '+971-50-501-8615'
+    },
+    category: 'Kids & Baby',
+    backgroundImage: '/shops/irhas kids web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 84, y: 99 }
+    }
+  },
+  {
+    name: 'Jockey',
+    slug: 'jockey',
+    description: 'Premium innerwear and apparel brand offering comfortable, high-quality underwear, t-shirts, and casual wear for men and women. Discover classic styles and modern designs.',
+    contact: {
+      phone: '+971-50-501-8616'
+    },
+    category: 'Fashion',
+    backgroundImage: '/shops/jockey web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 85, y: 100 }
+    }
+  },
+  {
+    name: 'Just for Men',
+    slug: 'just-for-men',
+    description: 'A men\'s accessories store specializing in ties, belts, cufflinks, hats, and other fashion accessories. Discover a wide selection of stylish accessories to complete your look.',
+    contact: {
+      phone: '+971-50-501-8617'
+    },
+    category: 'Fashion Accessories',
+    backgroundImage: '/shops/just for men web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 86, y: 101 }
+    }
+  },
+  {
+    name: 'Kundan',
+    slug: 'kundan',
+    description: 'A traditional footwear store specializing in intricately designed juttis, khussas, and embellished flat shoes. Discover a wide selection of colorful, embroidered, and beaded traditional footwear perfect for weddings, festivals, and celebrations.',
+    contact: {
+      phone: '+971-50-501-8618'
+    },
+    category: 'Footwear',
+    backgroundImage: '/shops/kundan web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 87, y: 102 }
+    }
+  },
+  {
+    name: 'Leisure Club',
+    slug: 'leisure-club',
+    description: 'A family clothing store offering a wide range of casual wear, traditional attire, and modern fashion for men, women, and children. Discover vibrant collections including winter collections, new arrivals, and seasonal styles for the whole family.',
+    contact: {
+      phone: '+971-50-501-8619'
+    },
+    category: 'Fashion',
+    backgroundImage: '/shops/leisure club.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 88, y: 103 }
+    }
+  },
+  {
+    name: 'Mip.j Store',
+    slug: 'mipj-store',
+    description: 'A jewelry and accessories store offering a wide selection of necklaces, earrings, rings, bracelets, and handbags. Specializing in professional ear and nose piercing services. Discover elegant gold and silver-toned jewelry with colorful stones, perfect for any occasion.',
+    contact: {
+      phone: '+971-50-501-8620'
+    },
+    category: 'Jewelry & Accessories',
+    backgroundImage: '/shops/mip.j web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 89, y: 104 }
+    }
+  },
+  {
+    name: 'MIRAAL',
+    slug: 'miral',
+    description: 'A boutique specializing in abayas and jewelry. Discover a wide selection of elegant abayas in various colors and styles, along with beautiful gold and silver jewelry pieces including necklaces, earrings, bracelets, and rings. Perfect for modest fashion and special occasions.',
+    contact: {
+      phone: '+971-50-501-8621'
+    },
+    category: 'Fashion & Jewelry',
+    backgroundImage: '/shops/miral web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 90, y: 105 }
+    }
+  },
+  {
+    name: 'The North Face',
+    slug: 'north-face',
+    description: 'A leading outdoor apparel and gear brand offering high-performance jackets, clothing, footwear, and accessories. Discover technical outerwear, hiking boots, backpacks, and gear designed for exploration and adventure. Never stop exploring.',
+    contact: {
+      phone: '+971-50-501-8622'
+    },
+    category: 'Outdoor & Sports',
+    backgroundImage: '/shops/north face web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 91, y: 106 }
+    }
+  },
+  {
+    name: 'Originals of London',
+    slug: 'originals-of-london',
+    description: 'A luxury fashion retailer offering all the latest fashion brands from around the world. Discover authentic designer items including handbags, footwear, clothing, and accessories from top luxury brands such as Burberry, Gucci, Prada, Hermes, Fendi, Kenzo, Versace, Balmain, and more.',
+    contact: {
+      phone: '+971-50-501-8623'
+    },
+    category: 'Luxury Fashion',
+    backgroundImage: '/shops/original web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 92, y: 107 }
+    }
+  },
+  {
+    name: 'QUMAS',
+    slug: 'qumas',
+    description: 'A boutique specializing in traditional and artisanal textiles, accessories, and decorative items. Discover a wide selection of handcrafted fabrics, scarves, woven baskets, wall hangings, and unique decorative pieces. Perfect for those seeking authentic, handcrafted goods.',
+    contact: {
+      phone: '+971-50-501-8624'
+    },
+    category: 'Fashion & Home Decor',
+    backgroundImage: '/shops/qumas web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 93, y: 108 }
+    }
+  },
+  {
+    name: 'Roll Over',
+    slug: 'roll-over',
+    description: 'A modern children\'s and youth clothing store offering stylish and comfortable apparel. Discover a wide range of jackets, shirts, pants, jeans, and accessories for kids and teens. Available in stores and online with regular sales and promotions.',
+    contact: {
+      phone: '+971-50-501-8625'
+    },
+    category: 'Kids & Youth Fashion',
+    backgroundImage: '/shops/roll over web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 94, y: 109 }
+    }
+  },
+  {
+    name: 'Scents and Secrets',
+    slug: 'scents-and-secrets',
+    description: 'A fragrance boutique offering a wide selection of perfumes and colognes for men and women. Discover premium fragrances, gift sets, and exclusive scents from various brands. Find your perfect signature scent in a welcoming, well-lit environment.',
+    contact: {
+      phone: '+971-50-501-8626'
+    },
+    category: 'Beauty & Fragrances',
+    backgroundImage: '/shops/scents and secrets web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 95, y: 110 }
+    }
+  },
+  {
+    name: 'Tiny Tots',
+    slug: 'tiny-tots',
+    description: 'A children\'s clothing store offering a vibrant collection of apparel and accessories for kids aged 0 to 14 years. Discover colorful sweaters, shirts, dresses, and accessories with fun designs and characters. Regular sales and promotions available.',
+    contact: {
+      phone: '+971-50-501-8627'
+    },
+    category: 'Kids & Baby',
+    backgroundImage: '/shops/tiny tots web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 96, y: 111 }
+    }
+  },
+  {
+    name: 'Time & Space Collection',
+    slug: 'time-space-collection',
+    description: 'A fashion accessories boutique offering a wide selection of handbags, footwear, watches, wallets, perfumes, and jewelry. Discover stylish accessories for every occasion, featuring various designs and brands in a well-organized, inviting environment.',
+    contact: {
+      phone: '+971-50-501-8628'
+    },
+    category: 'Fashion Accessories',
+    backgroundImage: '/shops/time and space web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 97, y: 112 }
+    }
+  },
+  {
+    name: 'Toy Land',
+    slug: 'toy-land',
+    description: 'A vibrant toy store offering a vast selection of toys and children\'s products. Discover dolls, action figures, plush toys, toy vehicles, playsets, games, and educational toys. Perfect for kids of all ages with a wide variety of brands and categories.',
+    contact: {
+      phone: '+971-50-501-8629'
+    },
+    category: 'Toys & Games',
+    backgroundImage: '/shops/toy land web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 98, y: 113 }
+    }
+  },
+  {
+    name: 'Zebaish',
+    slug: 'zebaish',
+    description: 'A vibrant clothing and fabric store offering a wide selection of colorful textiles, traditional garments, and ready-to-wear fashion. Discover beautiful fabrics for salwar kameez, sarees, dupattas, and other traditional attire, along with ready-made garments featuring intricate patterns, embroidery, and embellishments.',
+    contact: {
+      phone: '+971-50-501-8630'
+    },
+    category: 'Fashion',
+    backgroundImage: '/shops/zebaish web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 99, y: 114 }
     }
   },
  

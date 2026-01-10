@@ -514,6 +514,276 @@ export const dineDetails: DineDetail[] = [
       mapPosition: { x: 77, y: 92 }
     }
   },
+  {
+    name: 'Dark Side',
+    slug: 'dark-side',
+    description: 'Indulge in delicious ice cream, refreshing slush drinks, premium coffee, and specialty shakes. A perfect destination for sweet treats and cool beverages.',
+    contact: {
+      phone: '+971-50-501-8535'
+    },
+    category: 'Desserts & Beverages',
+    backgroundImage: '/dine/dark side web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 78, y: 93 }
+    }
+  },
+  {
+    name: 'Cigarettes & Chocolates',
+    slug: 'cigarettes-chocolates',
+    description: 'Your one-stop shop for premium chocolates, candies, confectionery, and tobacco products. Discover a wide selection of sweet treats and convenience items.',
+    contact: {
+      phone: '+971-50-501-8536'
+    },
+    category: 'Convenience Store',
+    backgroundImage: '/dine/ciggeretes and choclates web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 79, y: 94 }
+    }
+  },
+  {
+    name: 'House of Mandi',
+    slug: 'house-of-mandi',
+    description: 'Experience the real Arabic taste with authentic Mandi dishes. Specializing in traditional Arabic cuisine including chicken and mutton Mandi, BBQ platters, appetizers, and desserts in a warm, culturally themed setting.',
+    contact: {
+      phone: '+971-50-501-8537'
+    },
+    category: 'Restaurant',
+    backgroundImage: '/dine/house of mandi web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 80, y: 95 }
+    }
+  },
+  {
+    name: 'Howdy',
+    slug: 'howdy',
+    description: 'Wild vibes and bold flavors! A Western-themed fast-food restaurant offering delicious burgers, prawn specialties, combo deals, and classic favorites. Experience the sea-sational twist with our signature Prawn Star burger and enjoy fantastic deals for individuals, couples, and groups.',
+    contact: {
+      phone: '+971-50-501-8538'
+    },
+    category: 'Fast Food',
+    backgroundImage: '/dine/howdy web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 81, y: 96 }
+    }
+  },
+  {
+    name: 'Ice Curl',
+    slug: 'ice-curl',
+    description: 'Taste the original! A dessert kiosk specializing in rolled ice cream, customizable frozen treats, and refreshing beverages. Enjoy signature flavors like Rooh Afza Lemonade, Espresso Lite, Fudge Brownie, All About Oreo, and Lemonicious.',
+    contact: {
+      phone: '+971-50-501-8539'
+    },
+    category: 'Desserts & Beverages',
+    backgroundImage: '/dine/ice curl web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 82, y: 97 }
+    }
+  },
+  {
+    name: 'Jelly Factory',
+    slug: 'jelly-factory',
+    description: 'A vibrant candy and ice cream cart offering a wide selection of colorful candies, jellies, gummy treats, slushies, and ice cream. Discover sweet delights from our Jelly Factory and cool treats from our Ice Cream Stop.',
+    contact: {
+      phone: '+971-50-501-8540'
+    },
+    category: 'Desserts & Beverages',
+    backgroundImage: '/dine/Jelly Factory web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 83, y: 98 }
+    }
+  },
+  {
+    name: 'Jojo',
+    slug: 'jojo',
+    description: 'A colorful candy store offering a wide variety of bulk candies, gummies, chocolates, and sweet treats. Discover an extensive selection of candies in a playful, vibrant setting with a gumball machine and delightful candy displays.',
+    contact: {
+      phone: '+971-50-501-8541'
+    },
+    category: 'Desserts & Beverages',
+    backgroundImage: '/dine/jojo web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 84, y: 99 }
+    }
+  },
+  {
+    name: 'Juices Land',
+    slug: 'juices-land',
+    description: 'A tropical-themed juice bar offering fresh fruit juices, bubble tea, milk tea, and healthy beverages. Enjoy a wide selection of fresh juices made from pomegranates, oranges, apples, and more, along with a Jeely Factory candy section.',
+    contact: {
+      phone: '+971-50-501-8542'
+    },
+    category: 'Desserts & Beverages',
+    backgroundImage: '/dine/juices land web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 85, y: 100 }
+    }
+  },
+  {
+    name: 'Pepe\'s Piri Piri',
+    slug: 'pepes-piri-piri',
+    description: 'A fast-food restaurant specializing in Piri Piri chicken, offering flame-grilled chicken, wings, wraps, burgers, and combo deals. Enjoy delicious Texan wraps, family platters, and happy hour specials with flavorful Piri Piri seasoning.',
+    contact: {
+      phone: '+971-50-501-8543'
+    },
+    category: 'Fast Food',
+    backgroundImage: '/dine/pepes piri web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 86, y: 101 }
+    }
+  },
+  {
+    name: 'PITA',
+    slug: 'pita',
+    description: 'The Shawarma Revolution! A modern food stall specializing in authentic shawarmas, rice bowls, pita boxes, and Middle Eastern cuisine. Discover fresh, flavorful wraps and combos with premium ingredients, perfect for a quick and satisfying meal.',
+    contact: {
+      phone: '+971-50-501-8544'
+    },
+    category: 'Fast Food',
+    backgroundImage: '/dine/pita web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 87, y: 102 }
+    }
+  },
+  {
+    name: 'Pizza n Pasta',
+    slug: 'pizza-n-pasta',
+    description: 'A fast-food restaurant offering delicious pizzas, pasta, burgers, subs, and salads. Enjoy XL pizzas, crunch burgers, zinger burgers, sub sandwiches, and combo deals. Perfect for families and groups with winter specials and party deals.',
+    contact: {
+      phone: '+971-50-501-8545'
+    },
+    category: 'Fast Food',
+    backgroundImage: '/dine/pizza n pasta web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 88, y: 103 }
+    }
+  },
+  {
+    name: 'The Potato Factory',
+    slug: 'potato-factory',
+    description: 'A specialty snack stall offering delicious fries in various styles. Enjoy original fries, twister fries, and other potato specialties served fresh and crispy. Perfect for a quick snack or side dish.',
+    contact: {
+      phone: '+971-50-501-8546'
+    },
+    category: 'Fast Food',
+    backgroundImage: '/dine/potato factory web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 89, y: 104 }
+    }
+  },
+  {
+    name: 'Sip Smart',
+    slug: 'sip-smart',
+    description: 'A vibrant food stall specializing in Indian street food and fresh beverages. Enjoy authentic chaat items like Pani Puri, Gol Gappay, Dahi Bhallay, Chana Chat, Rajkachori, and Fruit Chat, along with fresh fruit juices and slushies made from fresh ingredients.',
+    contact: {
+      phone: '+971-50-501-8547'
+    },
+    category: 'Fast Food',
+    backgroundImage: '/shops/sip smart web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 90, y: 105 }
+    }
+  },
+  {
+    name: 'Sohaib\'s Wood & Cocoa',
+    slug: 'sohaibs-wood-cocoa',
+    description: 'A cozy cafe and art studio offering premium coffee, beverages, and custom wood burning portraits. Enjoy coffee served with a smile, live pyrography demonstrations, coffee tasting experiences, and unique handcrafted wood-burned artwork. A perfect blend of art and coffee culture.',
+    contact: {
+      phone: '+971-50-501-8548'
+    },
+    category: 'Cafe',
+    backgroundImage: '/shops/sohaibs web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 91, y: 106 }
+    }
+  },
+  {
+    name: 'Tawa Chatkhara',
+    slug: 'tawa-chatkhara',
+    description: 'A vibrant food stall specializing in tawa-cooked dishes and flavorful street food. Enjoy freshly prepared meals cooked on traditional flat griddles, featuring a variety of delicious options with bold flavors and authentic taste.',
+    contact: {
+      phone: '+971-50-501-8549'
+    },
+    category: 'Fast Food',
+    backgroundImage: '/dine/tawa chatkhara web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 92, y: 107 }
+    }
+  },
+  {
+    name: 'Tayto',
+    slug: 'tayto',
+    description: 'A modern cafe and restaurant offering a diverse menu of burgers, pasta, fish & chips, steaks, coffee, and desserts. Enjoy smash burgers, signature grilled chicken, herb olive beef steak, and combo deals. Perfect for dine-in or take-away with a slogan "lovin\' good food".',
+    contact: {
+      phone: '+971-50-501-8550'
+    },
+    category: 'Restaurant',
+    backgroundImage: '/dine/tayto web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 93, y: 108 }
+    }
+  },
+  {
+    name: 'Turk Station',
+    slug: 'turk-station',
+    description: 'We don\'t sell ice cream, we sell happiness! A dessert kiosk specializing in Turkish-style ice cream, rolled ice cream, and frozen treats. Enjoy premium ice cream served with a smile, featuring traditional Turkish ice cream preparation and a variety of delicious flavors.',
+    contact: {
+      phone: '+971-50-501-8552'
+    },
+    category: 'Desserts & Beverages',
+    backgroundImage: '/dine/turk web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 94, y: 109 }
+    }
+  },
+  {
+    name: 'True Taste',
+    slug: 'true-taste',
+    description: 'A vibrant food stall offering a wide array of snacks and beverages. Enjoy steamed, fried, and cheese momos, various bubble teas and boba, traditional chai, hearty lasagna, refreshing sodas, coffees, falooda, and ice cream shakes. Perfect for a quick and satisfying meal.',
+    contact: {
+      phone: '+971-50-501-8553'
+    },
+    category: 'Fast Food',
+    backgroundImage: '/dine/true taste web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 96, y: 111 }
+    }
+  },
 ];
 
 export function getDineBySlug(slug: string): DineDetail | undefined {
