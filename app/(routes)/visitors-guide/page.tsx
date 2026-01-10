@@ -208,8 +208,9 @@ export default function ServicesPage() {
           <Box
             sx={{
               maxWidth: "1400px",
-              margin: "0 auto",
+              margin : "0 auto",
               px: { xs: 2, sm: 4, md: 6, lg: 10 },
+              mt: { xs: "auto", sm: "auto", md: "auto", lg: "4rem" },
               // pt: { xs: 4, sm: 5, md: 6 },
               pb: { xs: 3, sm: 4, md: 5 },
             }}

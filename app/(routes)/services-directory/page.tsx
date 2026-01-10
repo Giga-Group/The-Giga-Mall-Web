@@ -11,6 +11,7 @@ const services: Store[] = serviceDetails.map(service => ({
   hasOffers: service.hasOffers,
   acceptsGiftCard: service.acceptsGiftCard,
   category: service.category,
+  logo: service.logo,
 }));
 
 // Add revalidation for ISR (Incremental Static Regeneration)

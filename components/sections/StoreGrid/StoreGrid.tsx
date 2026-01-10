@@ -9,6 +9,7 @@ import { useRouter, useSearchParams } from 'next/navigation';
 import { useFilters } from '@/lib/contexts/FilterContext';
 import { storeDetails } from '@/lib/utils/storeData';
 import { serviceDetails } from '@/lib/utils/servicesData';
+import { dineDetails } from '@/lib/utils/dineData';
 
 export interface Store {
   name: string;
@@ -16,6 +17,7 @@ export interface Store {
   hasOffers?: boolean;
   acceptsGiftCard?: boolean;
   category?: string;
+  logo?: string;
 }
 
 interface StoreGridProps {
@@ -24,7 +26,21 @@ interface StoreGridProps {
 }
 
 // Helper function to get logo path from store slug
-const getStoreLogo = (slug?: string): string | null => {
+const getStoreLogo = (slug?: string, itemLogo?: string): string | null => {
+  // First, check if logo is provided directly in the item
+  if (itemLogo) {
+    const logoPath = itemLogo.trim();
+    // Filter out invalid paths like '/logo/.jpg', '/.jpg', or paths ending with '/.jpg' or '/.png'
+    if (logoPath && 
+        logoPath !== '/logo/.jpg' && 
+        logoPath !== '/.jpg' && 
+        !logoPath.endsWith('/.jpg') && 
+        !logoPath.endsWith('/.png') &&
+        logoPath.length > 5) { // Ensure it's a real path, not just a placeholder
+      return logoPath;
+    }
+  }
+
   if (!slug) return null;
 
   // First, try to get logo from storeDetails
@@ -48,6 +64,22 @@ const getStoreLogo = (slug?: string): string | null => {
   if (serviceDetail?.logo) {
     // Check if logo path is valid (not empty, not just .jpg, etc.)
     const logoPath = serviceDetail.logo.trim();
+    // Filter out invalid paths like '/logo/.jpg', '/.jpg', or paths ending with '/.jpg' or '/.png'
+    if (logoPath && 
+        logoPath !== '/logo/.jpg' && 
+        logoPath !== '/.jpg' && 
+        !logoPath.endsWith('/.jpg') && 
+        !logoPath.endsWith('/.png') &&
+        logoPath.length > 5) { // Ensure it's a real path, not just a placeholder
+      return logoPath;
+    }
+  }
+
+  // Check dineDetails for restaurants
+  const dineDetail = dineDetails.find(dine => dine.slug === slug);
+  if (dineDetail?.logo) {
+    // Check if logo path is valid (not empty, not just .jpg, etc.)
+    const logoPath = dineDetail.logo.trim();
     // Filter out invalid paths like '/logo/.jpg', '/.jpg', or paths ending with '/.jpg' or '/.png'
     if (logoPath && 
         logoPath !== '/logo/.jpg' && 
@@ -619,7 +651,7 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
               }}
             >
               {visibleStores.map((store, index) => {
-                const logoPath = getStoreLogo(store.slug || store.name.toLowerCase().replace(/\s+/g, '-'));
+                const logoPath = getStoreLogo(store.slug || store.name.toLowerCase().replace(/\s+/g, '-'), store.logo);
 
                 return (
                   <Link

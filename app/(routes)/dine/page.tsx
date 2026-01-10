@@ -12,6 +12,7 @@ const restaurants: Store[] = dineDetails.map(dine => ({
   hasOffers: dine.hasOffers,
   acceptsGiftCard: dine.acceptsGiftCard,
   category: dine.category,
+  logo: dine.logo,
 }));
 
 // Get top picks for restaurants

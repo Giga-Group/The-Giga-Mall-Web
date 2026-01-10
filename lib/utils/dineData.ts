@@ -28,7 +28,7 @@ export const dineDetails: DineDetail[] = [
     name: 'Cheezious',
     slug: 'cheezious',
     description: 'Delicious cheesy delights and comfort food favorites. Experience the perfect blend of flavors in every bite.',
-    logo: '/logo/cheezious logo.png',
+    logo: '/logo/cheezious logo.jpg',
     backgroundImage: '/dine/cheezious.jpeg',
     category: 'Fast Food',
     contact: {
@@ -264,6 +264,7 @@ export const dineDetails: DineDetail[] = [
   },
   {
     name: 'Corn Station',
+    logo: '/logo/corn station.jpg',
     slug: 'corn-station',
     description: 'Enjoy delicious sweet corn, refreshing slush drinks, and freshly popped popcorn. A perfect quick snack stop for the whole family.',
     contact: {
@@ -279,6 +280,7 @@ export const dineDetails: DineDetail[] = [
   },
   {
     name: 'Asian Fusion',
+    logo: '/logo/asian fusion.jpg',
     slug: 'asian-fusion',
     description: 'Experience authentic Asian cuisine with a modern twist. Enjoy fresh juice and shake options alongside traditional dishes in a contemporary setting.',
     contact: {
@@ -340,6 +342,7 @@ export const dineDetails: DineDetail[] = [
   {
     name: 'Goshez',
     slug: 'goshez',
+    logo: '/logo/coshes.jpg',
     description: 'Ice cream solves everything! Indulge in premium ice cream, frozen treats, and delightful desserts. From classic flavors to innovative creations, satisfy your sweet cravings.',
     contact: {
       phone: '+971-50-501-8538'
@@ -370,6 +373,7 @@ export const dineDetails: DineDetail[] = [
   {
     name: 'Juice Fruity',
     slug: 'juice-fruity',
+    logo: '/logo/juice fruity.jpg',
     description: 'Fresh, natural juices made from the finest fruits. Enjoy a variety of healthy options including orange, apple, sugarcane, and more. Refreshing and nutritious beverages for every taste.',
     contact: {
       phone: '+971-50-501-8540'
@@ -385,6 +389,7 @@ export const dineDetails: DineDetail[] = [
   {
     name: 'Juice Station',
     slug: 'juice-station',
+    logo: '/logo/juice station.jpg',
     description: 'As natural as you! Fresh, pure juices made from the finest fruits with no additives. Grab & go options available in 250ML, 500ML, and 1LTR sizes. Experience the authentic taste of natural ingredients.',
     contact: {
       phone: '+971-50-501-8541'
@@ -399,6 +404,7 @@ export const dineDetails: DineDetail[] = [
   },
   {
     name: 'King Coffee',
+    logo: '/logo/king coffe.jpg',
     slug: 'king-coffee',
     description: 'The Master of Coffee. Experience premium coffee blends, Chinese cuisine, burgers, and more in a warm and welcoming atmosphere. Perfect for coffee lovers and food enthusiasts.',
     contact: {
@@ -415,6 +421,7 @@ export const dineDetails: DineDetail[] = [
   {
     name: 'King Corn',
     slug: 'king-corn',
+    logo: '/logo/king corn.jpg',
     description: 'Sweet & Tasty! Enjoy delicious sweet corn, popcorn, ice cream, and refreshing slush drinks. A perfect snack destination offering a variety of flavors and treats for everyone.',
     contact: {
       phone: '+971-50-501-8543'
@@ -430,6 +437,7 @@ export const dineDetails: DineDetail[] = [
   {
     name: 'Pop Nosh',
     slug: 'pop-nosh',
+    logo: '/logo/pop nosh.jpg',
     description: 'Gourmet Popcorn! Indulge in a variety of premium popcorn flavors including chocolate, caramel, cheese, and colorful candy-coated options. Perfect for movie nights and sweet cravings.',
     contact: {
       phone: '+971-50-501-8544'
@@ -444,6 +452,7 @@ export const dineDetails: DineDetail[] = [
   },
   {
     name: 'Sweet & Salt',
+    logo: '/logo/sweet and salt.jpg',
     slug: 'sweet-salt',
     description: 'Always Fresh! Enjoy authentic chaat items including Raj Kachori, Gol Gappay, Dahi Bhally, Chana Chaat, Papri Chaat, and Samosa Chaat. Also offering a variety of teas including Pink Tea and Green Tea.',
     contact: {
@@ -460,6 +469,7 @@ export const dineDetails: DineDetail[] = [
   {
     name: 'Tim Hortons',
     slug: 'tim-hortons',
+    logo: '/logo/tim hrtons.jpg',
     description: 'Always Fresh Since 1964. Crafted with care, made to order. Enjoy premium coffee, fresh donuts, pastries, and baked goods in a warm and welcoming cafe atmosphere.',
     contact: {
       phone: '+971-50-501-8546'
@@ -475,6 +485,7 @@ export const dineDetails: DineDetail[] = [
   {
     name: 'Baskin Robbins',
     slug: 'baskin-robbins',
+    logo: '/logo/BR BASKIN.jpg',
     description: 'Ice Cream & Cakes! Indulge in a wide variety of premium ice cream flavors, sundaes, and delicious ice cream cakes. Experience the joy of 31 flavors and more in a vibrant, welcoming atmosphere.',
     contact: {
       phone: '+971-50-501-8547'
@@ -489,6 +500,7 @@ export const dineDetails: DineDetail[] = [
   },
   {
     name: 'Ashraf Naturals',
+    logo: '/logo/ASHRAF.jpg',
     slug: 'ashraf-naturals',
     description: 'Discover premium natural products including pure honey, organic foods, and health essentials. Experience the finest quality natural goods in a welcoming and comfortable environment.',
     contact: {
