@@ -717,38 +717,6 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-  {
-    name: 'Ashraf Naturals',
-    slug: 'ashraf-naturals',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
-    logo: '/logo/ASHRAF.jpg',
-    backgroundImage: '/shops/ashraf naturals web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
-  {
-    name: 'Asian Fusion',
-    slug: 'asian-fusion',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
-    logo: '/logo/asian fusion.jpg',
-    backgroundImage: '/shops/asian fusion web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
   // {
   //   name: 'Corn Station',
   //   slug: 'corn-station',
@@ -1844,22 +1812,6 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-  {
-    name: 'Pop Nosh',
-    slug: 'pop-nosh',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/pop nosh.jpg',
-    backgroundImage: '/shops/pop nosh web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
 
   {
     name: 'Royal Tag',
@@ -2513,7 +2465,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Islamic Honey Center',
     slug: 'ilamic-honey-center',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/logo/.jpg',
+    logo: '/logo/MI.jpg',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2629,7 +2581,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Minnie Mirrors',
     slug: 'minnie-mirrors',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/logo/.jpg',
+    logo: '/logo/MI.jpg',
     contact: {
       phone: '+971-50-501-8573'
     },

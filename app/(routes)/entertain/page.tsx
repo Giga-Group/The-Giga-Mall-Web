@@ -23,6 +23,51 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { motion} from "framer-motion";
+import { useState, useEffect, Suspense } from "react";
+import { FilterProvider } from "@/lib/contexts/FilterContext";
+import SearchAndFilter from "@/components/sections/SearchAndFilter";
+import StoreGrid from "@/components/sections/StoreGrid";
+import type { Store } from "@/components/sections/StoreGrid/StoreGrid";
+
+// Entertainment items for grid display - converted to Store format
+const entertainmentItems: Store[] = [
+  {
+    name: "Cinepax Cinema",
+    slug: "cinepax",
+    logo: "/logo/Vrkings.jpg", // Placeholder - update with actual logo if available
+    category: "cinema",
+  },
+  {
+    name: "Bowling Alley",
+    slug: "bowling-alley",
+    logo: null,
+    category: "sports",
+  },
+  {
+    name: "VI Rides Arcade",
+    slug: "vi-rides",
+    logo: "/logo/Virides.jpg",
+    category: "arcade",
+  },
+  {
+    name: "VR Kings",
+    slug: "vr-kings",
+    logo: "/logo/Vrkings.jpg",
+    category: "arcade",
+  },
+  {
+    name: "Funcity",
+    slug: "funcity",
+    logo: null,
+    category: "family",
+  },
+  {
+    name: "SpaceCraft",
+    slug: "spacecraft",
+    logo: null,
+    category: "cinema",
+  },
+];
 
 export default function EntertainPage() {
   const theme = useTheme();
@@ -106,33 +151,7 @@ export default function EntertainPage() {
       link: "/fun-city",
     },
   ];
-const entertainmentCards = [
-  {
-    title: "Cinepax Cinema",
-    image: "/Entertain/SpaceCraft Horizontal.jpg",
-    link: "/entertain/cinepax"
-  },
-  {
-    title: "Bowling Alley",
-    image: "/Entertain/bowling 3.jpg",
-    link: "/entertain/bowling-alley"
-  },
-  {
-    title: "VI Rides Arcade",
-    image: "/Entertain/Vi Rides Horizontal.jpg",
-    link: "/entertain/vi-rides"
-  },
-  {
-    title: "VR Kings",
-    image: "/Entertain/VR Kings Horizontal.jpg",
-    link: "/entertain/vr-kings"
-  },
-  {
-    title: "VR Kings",
-    image: "/Entertain/VR Kings Horizontal.jpg",
-    link: "/entertain/vr-kings"
-  },
-];
+
   return (
     <>
       <Header />
@@ -303,79 +322,74 @@ const entertainmentCards = [
         </Box>
         {/* ================= END HERO SECTION ================= */}
         
-       {/* ================= MINIMAL ENTERTAINMENT CARDS SECTION ================= */}
+       {/* ================= ENTERTAINMENT & ATTRACTIONS GRID SECTION ================= */}
 <Box
   sx={{
-    backgroundColor: "#f9f9f9",
-    py: { xs: 8, md: 10 },
+    backgroundColor: "#ffffff",
     position: "relative",
   }}
 >
-  <Box sx={{ maxWidth: "1600px", mx: "auto", px: { xs: 3, md: 6 } }}>
-    {/* Section Heading - WITHOUT MOTION TEMPORARILY */}
-    <Box>
-      <Typography
-        sx={{
-          fontFamily: '"Arvo", serif',
-          fontSize: { xs: "1.8rem", md: "2.5rem" },
-          color: "#D19F3B",
-          mb: 2,
-          textAlign: "left",
-        }}
-      >
-        Entertainment & Attractions
-      </Typography>
-    </Box>
-
-    {/* Image Cards with Title Below */}
-    <Box
+  {/* Section Heading */}
+  <Box
+    sx={{
+      maxWidth: "1400px",
+      margin: "0 auto",
+      px: { xs: 2, sm: 4, md: 6, lg: 10 },
+      pt: { xs: 3, sm: 4, md: 5 },
+      pb: { xs: 2, sm: 3 },
+    }}
+  >
+    <Typography
       sx={{
-        display: "grid",
-        gridTemplateColumns: {
-          xs: "1fr",
-          sm: "repeat(2, 1fr)",
-          md: "repeat(5, 1fr)",
-        },
-        gap: { xs: 3, md: 4 },
+        fontFamily: '"Arvo", serif',
+        fontSize: { xs: "1.8rem", md: "2.5rem" },
+        color: "#D19F3B",
+        textAlign: "center",
       }}
     >
-      {entertainmentCards.map((card, index) => (
-        <Box key={`entertainment-card-${index}`}>
-          <Link
-            href={card.link}
-            style={{ textDecoration: "none", display: "block" }}
-          >
-            <Box
-              sx={{
-                position: "relative",
-                height: { xs: "200px", md: "250px" },
-                overflow: "hidden",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-                border: "2px solid transparent",
-                transition: "all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-                "&:hover": {
-                  transform: "translateY(-8px)",
-                  boxShadow: "0 15px 35px rgba(209, 159, 59, 0.2)",
-                  border: "2px solid #D19F3B",
-                },
-              }}
-            >
-              <Image
-                src={card.image}
-                alt={card.title}
-                fill
-                style={{
-                  objectFit: "cover",
-                }}
-              />
-            </Box>
-          </Link>
-        </Box>
-      ))}
-    </Box>
+      Entertain Directory
+    </Typography>
   </Box>
+
+  {/* FilterProvider wrapper for search and filter functionality */}
+  <FilterProvider>
+    {/* Search and Filter Section - Full Width */}
+    <Box
+      sx={{
+        width: "100vw",
+        position: "relative",
+        left: "50%",
+        right: "50%",
+        marginLeft: "-50vw",
+        marginRight: "-50vw",
+      }}
+    >
+      <Suspense fallback={<Box sx={{ py: 4, px: { xs: 2, sm: 4, md: 6, lg: 10 } }}>Loading filters...</Box>}>
+        <SearchAndFilter 
+          pageType="shop"
+          categories={[
+            { value: '', label: 'All Categories' },
+            { value: 'cinema', label: 'Cinema' },
+            { value: 'arcade', label: 'Arcade & Gaming' },
+            { value: 'sports', label: 'Sports & Recreation' },
+            { value: 'family', label: 'Family Entertainment' }
+          ]}
+          subcategories={[
+            { value: '', label: 'All Subcategories' }
+          ]}
+          searchPlaceholder="Search for entertainment or attractions"
+          offersLabel="Show entertainment with offers only"
+        />
+      </Suspense>
+    </Box>
+
+    {/* Store Grid Section */}
+    <Suspense fallback={<Box sx={{ py: 4, px: { xs: 2, sm: 4, md: 6, lg: 10 } }}>Loading entertainment...</Box>}>
+      <StoreGrid items={entertainmentItems} basePath="/entertain" />
+    </Suspense>
+  </FilterProvider>
 </Box>
-{/* ================= END MINIMAL ENTERTAINMENT CARDS SECTION ================= */}
+{/* ================= END ENTERTAINMENT & ATTRACTIONS GRID SECTION ================= */}
        {/* ================= ATTRACTIONS & ACTIVITIES ================= */}
 <Box
   id="attractions"

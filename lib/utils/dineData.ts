@@ -358,6 +358,7 @@ export const dineDetails: DineDetail[] = [
   {
     name: 'Islamic Honey Centre',
     slug: 'islamic-honey-centre',
+    logo: '/logo/IMC.jpg',
     description: 'Discover the finest quality honey products. From pure natural honey to specialty varieties, experience the authentic taste and health benefits of premium honey.',
     contact: {
       phone: '+971-50-501-8539'
@@ -592,6 +593,7 @@ export const dineDetails: DineDetail[] = [
   {
     name: 'Jelly Factory',
     slug: 'jelly-factory',
+    logo: '/logo/jelly factory.jpeg',
     description: 'A vibrant candy and ice cream cart offering a wide selection of colorful candies, jellies, gummy treats, slushies, and ice cream. Discover sweet delights from our Jelly Factory and cool treats from our Ice Cream Stop.',
     contact: {
       phone: '+971-50-501-8540'
