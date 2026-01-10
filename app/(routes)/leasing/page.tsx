@@ -335,7 +335,6 @@ export default function LeasingPage() {
                   borderRadius: '8px',
                   boxShadow: '0 2px 12px rgba(0, 0, 0, 0.06)',
                   border: '1px solid rgba(209, 159, 59, 0.1)',
-                  overflow: 'hidden',
                 }}
               >
                 {/* Decorative gradient background - matching footer */}
