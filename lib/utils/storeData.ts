@@ -684,7 +684,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'tech-studio',
     description: 'A technology store offering mobile accessories, gadgets, and electronic solutions.',
     logo: '/logo/tech studio.jpg',
-    backgroundImage: '/shops/Tech Studio web.JPG',
+    backgroundImage: '/shops/Tech Studio mobile.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -732,7 +732,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'ashraf-naturals',
     description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
     logo: '/logo/.jpg',
-    backgroundImage: '/shops/Untitled Export/ashraf naturals web.JPG',
+    backgroundImage: '/shops/ashraf naturals web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -748,7 +748,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'asian-fusion',
     description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
     logo: '/logo/.jpg',
-    backgroundImage: '/shops/Untitled Export/asian fusion web.JPG',
+    backgroundImage: '/shops/asian fusion web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -759,28 +759,28 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-  {
-    name: 'Corn Station',
-    slug: 'corn-station',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
-    logo: '/logo/.jpg',
-    backgroundImage: '/shops/Untitled Export/corn station web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
+  // {
+  //   name: 'Corn Station',
+  //   slug: 'corn-station',
+  //   description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+  //   logo: '/logo/.jpg',
+  //   backgroundImage: '/shops/corn station web.JPG',
+  //   category: 'Lifestyle',
+  //   contact: {
+  //     phone: '+971-50-501-8610'
+  //   },
+  //   location: {
+  //     level: 'Ground Floor',
+  //     parking: 'P1, Main Parking',
+  //     mapPosition: { x: 75, y: 45 }
+  //   }
+  // },
   {
     name: 'F Optical and Watch',
     slug: 'f-optical-and-watch',
     description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
     logo: '/logo/.jpg',
-    backgroundImage: '/shops/Untitled Export/f optical and watch web.JPG',
+    backgroundImage: '/shops/f optical and watch web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -796,7 +796,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'foot-and-leather',
     description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
     logo: '/logo/.jpg',
-    backgroundImage: '/shops/Untitled Export/foot and leather web.JPG',
+    backgroundImage: '/shops/foot and leather web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -807,28 +807,28 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-  {
-    name: 'IMC',
-    slug: 'imc',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
-    logo: '/logo/.jpg',
-    backgroundImage: '/shops/Untitled Export/imc web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
+  // {
+  //   name: 'IMC',
+  //   slug: 'imc',
+  //   description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+  //   logo: '/logo/.jpg',
+  //   backgroundImage: '/shops/imc web.JPG',
+  //   category: 'Lifestyle',
+  //   contact: {
+  //     phone: '+971-50-501-8610'
+  //   },
+  //   location: {
+  //     level: 'Ground Floor',
+  //     parking: 'P1, Main Parking',
+  //     mapPosition: { x: 75, y: 45 }
+  //   }
+  // },
   {
     name: 'H n H Decor',
     slug: 'h-n-h-decor',
     description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
     logo: '/logo/.jpg',
-    backgroundImage: '/shops/Untitled Export/h n h decor web.JPG',
+    backgroundImage: '/shops/h n h decor web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -844,7 +844,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'kapok',
     description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
     logo: '/logo/.jpg',
-    backgroundImage: '/shops/Untitled Export/kapok web.JPG',
+    backgroundImage: '/shops/kapok web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -855,28 +855,28 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-  {
-    name: 'King Coffee',
-    slug: 'king-coffee',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
-    logo: '/logo/.jpg',
-    backgroundImage: '/shops/Untitled Export/king coffee web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
+  // {
+  //   name: 'King Coffee',
+  //   slug: 'king-coffee',
+  //   description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+  //   logo: '/logo/.jpg',
+  //   backgroundImage: '/shops/king coffee web.JPG',
+  //   category: 'Lifestyle',
+  //   contact: {
+  //     phone: '+971-50-501-8610'
+  //   },
+  //   location: {
+  //     level: 'Ground Floor',
+  //     parking: 'P1, Main Parking',
+  //     mapPosition: { x: 75, y: 45 }
+  //   }
+  // },
   {
     name: 'Melon Box',
     slug: 'melon-box',
     description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
     logo: '/logo/.jpg',
-    backgroundImage: '/shops/Untitled Export/melon box web.JPG',
+    backgroundImage: '/shops/melon box web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -892,7 +892,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'mi',
     description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
     logo: '/logo/.jpg',
-    backgroundImage: '/shops/Untitled Export/mi web.JPG',
+    backgroundImage: '/shops/mi web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -908,7 +908,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'mr-game',
     description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
     logo: '/logo/.jpg',
-    backgroundImage: '/shops/Untitled Export/mr game web.JPG',
+    backgroundImage: '/shops/mr game web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -924,7 +924,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'pound-store',
     description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
     logo: '/logo/.jpg',
-    backgroundImage: '/shops/Untitled Export/pound store web.JPG',
+    backgroundImage: '/shops/pound store web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -940,7 +940,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'rohi-reet',
     description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
     logo: '/logo/.jpg',
-    backgroundImage: '/shops/Untitled Export/rohi reet web.JPG',
+    backgroundImage: '/shops/rohi reet web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -956,7 +956,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'silver-stition',
     description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
     logo: '/logo/.jpg',
-    backgroundImage: '/shops/Untitled Export/silverstition web.JPG',
+    backgroundImage: '/shops/silverstition web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -972,7 +972,7 @@ export const storeDetails: StoreDetail[] = [
     slug: 'sport-snation',
     description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
     logo: '/logo/.jpg',
-    backgroundImage: '/shops/Untitled Export/sport snation web.JPG',
+    backgroundImage: '/shops/sport snation web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -983,22 +983,22 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-  {
-    name: 'Sweet and Salt',
-    slug: 'sweet-and-salt',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
-    logo: '/logo/.jpg',
-    backgroundImage: '/shops/Untitled Export/sweet and salt web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
+  // {
+  //   name: 'Sweet and Salt',
+  //   slug: 'sweet-and-salt',
+  //   description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+  //   logo: '/logo/.jpg',
+  //   backgroundImage: '/shops/sweet and salt web.JPG',
+  //   category: 'Lifestyle',
+  //   contact: {
+  //     phone: '+971-50-501-8610'
+  //   },
+  //   location: {
+  //     level: 'Ground Floor',
+  //     parking: 'P1, Main Parking',
+  //     mapPosition: { x: 75, y: 45 }
+  //   }
+  // },
   {
     name: 'Balochistan Dry Fruit Marchent',
     slug: 'balochistan-dry-fruit-marchent',
@@ -1046,22 +1046,22 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-  {
-    name: 'Jelly Fish',
-    slug: 'jelly-factory',
-    description: 'A fun and trendy store offering toys, gifts, novelty items, and colorful products for kids and families.',
-    logo: '/logo/jelly factory.jpeg',
-    backgroundImage: '/shops/Jelly Factory web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
+  // {
+  //   name: 'Jelly Fish',
+  //   slug: 'jelly-factory',
+  //   description: 'A fun and trendy store offering toys, gifts, novelty items, and colorful products for kids and families.',
+  //   logo: '/logo/jelly factory.jpeg',
+  //   backgroundImage: '/shops/Jelly Factory web.JPG',
+  //   category: 'Lifestyle',
+  //   contact: {
+  //     phone: '+971-50-501-8610'
+  //   },
+  //   location: {
+  //     level: 'Ground Floor',
+  //     parking: 'P1, Main Parking',
+  //     mapPosition: { x: 75, y: 45 }
+  //   }
+  // },
   {
     name: 'Johri',
     slug: 'johri',
@@ -1171,8 +1171,8 @@ export const storeDetails: StoreDetail[] = [
     name: '1st Step',
     slug: '1st-step',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/1st step web.JPG',
+    logo: '/logo/.jpg',
+    backgroundImage: '/shops/1st step web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1187,8 +1187,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Addidas',
     slug: 'addidas',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/addidas web.JPG',
+    logo: '',
+    backgroundImage: '/shops/addidas web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1203,8 +1203,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Adoro',
     slug: 'adoro',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/adoro web.JPG',
+    logo: '',
+    backgroundImage: '/shops/adoro web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1219,8 +1219,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Almirah',
     slug: 'almirah',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/almirah web.JPG',
+    logo: '',
+    backgroundImage: '/shops/almirah web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1235,8 +1235,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Anta',
     slug: 'anta',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/anta web.JPG',
+    logo: '',
+    backgroundImage: '/shops/anta web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1251,8 +1251,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Apavi',
     slug: 'apavi',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/apavi web.JPG',
+    logo: '',
+    backgroundImage: '/shops/apavi web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1267,8 +1267,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Baskin Robin',
     slug: 'baskin-robin',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/baskin robin 2 web.JPG',
+    logo: '',
+    backgroundImage: '/shops/baskin robin 2 web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1283,8 +1283,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Batik Studio',
     slug: 'batik-studio-3',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/batik studio web.JPG',
+    logo: '',
+    backgroundImage: '/shops/batik studio web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1299,8 +1299,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Charcoal',
     slug: 'charcoal',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/charcoal web.JPG',
+    logo: '',
+    backgroundImage: '/shops/charcoal web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1315,8 +1315,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Cinnabon',
     slug: 'cinnabon',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/cinnabon web.JPG',
+    logo: '',
+    backgroundImage: '/shops/cinnabon web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1331,8 +1331,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Coppelia',
     slug: 'coppelia',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/coppelia web.JPG',
+    logo: '',
+    backgroundImage: '/shops/coppelia web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1347,8 +1347,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Courger',
     slug: 'courger',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/couger web.JPG',
+    logo: '',
+    backgroundImage: '/shops/couger web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1363,8 +1363,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Crocs',
     slug: 'crocs',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/crocs web.JPG',
+    logo: '',
+    backgroundImage: '/shops/crocs web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1379,8 +1379,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Dari Mooch',
     slug: 'dari-mooch',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/dari mooch web.JPG',
+    logo: '',
+    backgroundImage: '/shops/dari mooch web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1395,8 +1395,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Engine',
     slug: 'engine',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/engine web.JPG',
+    logo: '',
+    backgroundImage: '/shops/engine web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1411,8 +1411,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Equator',
     slug: 'equator',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/equator web.JPG',
+    logo: '',
+    backgroundImage: '/shops/equator web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1427,8 +1427,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Ethnc',
     slug: 'ethnc',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/ethnc web.JPG',
+    logo: '',
+    backgroundImage: '/shops/ethnc web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1443,8 +1443,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Focus',
     slug: 'focus',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/focus web.JPG',
+    logo: '',
+    backgroundImage: '/shops/focus web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1459,8 +1459,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'FPL',
     slug: 'fpl',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/fpl web.JPG',
+    logo: '',
+    backgroundImage: '/shops/fpl web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1475,8 +1475,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Goshes',
     slug: 'goshes',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/Goshes web.JPG',
+    logo: '',
+    backgroundImage: '/shops/Goshes web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1491,8 +1491,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Gulzari',
     slug: 'gulzari',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/gulzari web.JPG',
+    logo: '',
+    backgroundImage: '/shops/gulzari web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1507,8 +1507,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Haseen Jewelers',
     slug: 'haseen-jewelers',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/haseen jewelers web.JPG',
+    logo: '',
+    backgroundImage: '/shops/haseen jewelers web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1523,8 +1523,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Hopscotch',
     slug: 'hopscotch',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/hopscotch web.JPG',
+    logo: '',
+    backgroundImage: '/shops/hopscotch web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1539,8 +1539,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Hub',
     slug: 'hub',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/hub web.JPG',
+    logo: '',
+    backgroundImage: '/shops/hub web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1555,8 +1555,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Hunza Emporium',
     slug: 'hunza-emporium',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/hunza emporium web.JPG',
+    logo: '',
+    backgroundImage: '/shops/hunza emporium web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1571,8 +1571,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Hush Puppies',
     slug: 'hush-puppies',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/hush puppies web.JPG',
+    logo: '',
+    backgroundImage: '/shops/hush puppies web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1587,8 +1587,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Insignia',
     slug: 'insignia',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/insignia web.JPG',
+    logo: '',
+    backgroundImage: '/shops/insignia web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1603,8 +1603,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'J. Fragrance and Costmetics',
     slug: 'j.-fragrances-and-costmetics',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/J-fragrance and costmetics web.JPG',
+    logo: '',
+    backgroundImage: '/shops/J-fragrance and costmetics web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1619,8 +1619,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Jafferjees',
     slug: 'jaffer-jees',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/jafferjees web.JPG',
+    logo: '',
+    backgroundImage: '/shops/jafferjees web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1635,8 +1635,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Jc Buckman',
     slug: 'jc-buckman',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/jc buckman web.JPG',
+    logo: '',
+    backgroundImage: '/shops/jc buckman web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1647,28 +1647,28 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-  {
-    name: 'Juice Fruity',
-    slug: 'juice-friuty',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/juice fruity web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
+  // {
+  //   name: 'Juice Fruity',
+  //   slug: 'juice-friuty',
+  //   description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+  //   logo: '',
+  //   backgroundImage: '/shops/juice fruity web.JPG',
+  //   category: 'Lifestyle',
+  //   contact: {
+  //     phone: '+971-50-501-8610'
+  //   },
+  //   location: {
+  //     level: 'Ground Floor',
+  //     parking: 'P1, Main Parking',
+  //     mapPosition: { x: 75, y: 45 }
+  //   }
+  // },
   {
     name: 'Julke',
     slug: 'julke',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/julke web.JPG',
+    logo: '',
+    backgroundImage: '/shops/julke web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1683,8 +1683,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'KefDiamonds',
     slug: 'kef-diamonds',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/kef diamonds web.JPG',
+    logo: '',
+    backgroundImage: '/shops/kef diamonds web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1699,8 +1699,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Khadi',
     slug: 'khadi',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/khadi web.JPG',
+    logo: '',
+    backgroundImage: '/shops/khadi web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1715,8 +1715,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Khusa Factory',
     slug: 'khusa-factory',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/khusa factory web.JPG',
+    logo: '',
+    backgroundImage: '/shops/khusa factory web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1727,44 +1727,29 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-  {
-    name: 'King Corn',
-    slug: 'king-corn',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/king corn web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
-  {
-    name: 'King Corn',
-    slug: 'king-corn',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/king corn web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
+  
+  // {
+  //   name: 'King Corn',
+  //   slug: 'king-corn',
+  //   description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+  //   logo: '',
+  //   backgroundImage: '/shops/king corn web.JPG',
+  //   category: 'Lifestyle',
+  //   contact: {
+  //     phone: '+971-50-501-8610'
+  //   },
+  //   location: {
+  //     level: 'Ground Floor',
+  //     parking: 'P1, Main Parking',
+  //     mapPosition: { x: 75, y: 45 }
+  //   }
+  // },
   {
     name: 'Lady Privacy',
     slug: 'lady-privacy',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/lady privacy web.JPG',
+    logo: '',
+    backgroundImage: '/shops/lady privacy web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1779,8 +1764,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Limelite',
     slug: 'limelite',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/limelite web.JPG',
+    logo: '',
+    backgroundImage: '/shops/limelite web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1795,8 +1780,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Lullusar',
     slug: 'lullusar',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/lullusar web.JPG',
+    logo: '',
+    backgroundImage: '/shops/lullusar web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1811,8 +1796,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Maria B',
     slug: 'maria-b-2',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/maria b 2 web.JPG',
+    logo: '',
+    backgroundImage: '/shops/maria b 2 web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1827,8 +1812,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Mayblline',
     slug: 'maybelline',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/maybelline web.JPG',
+    logo: '',
+    backgroundImage: '/shops/maybelline web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1843,8 +1828,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Miracle',
     slug: 'miracle',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/miracle web.JPG',
+    logo: '',
+    backgroundImage: '/shops/miracle web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1859,8 +1844,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Mocciani',
     slug: 'mocciani',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/mocciani web.JPG',
+    logo: '',
+    backgroundImage: '/shops/mocciani web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1875,8 +1860,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Monark',
     slug: 'monark',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/monark web.JPG',
+    logo: '',
+    backgroundImage: '/shops/monark web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1891,8 +1876,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'MTJ Fragrance',
     slug: 'mtj-fragrance',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/mtj fragrance web.JPG',
+    logo: '',
+    backgroundImage: '/shops/mtj fragrance web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1907,8 +1892,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Nizam Watch House',
     slug: 'nizam-watch-house',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/nizam watch house web.JPG',
+    logo: '',
+    backgroundImage: '/shops/nizam watch house web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1923,8 +1908,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Pop Nosh',
     slug: 'pop-nosh',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/pop nosh web.JPG',
+    logo: '',
+    backgroundImage: '/shops/pop nosh web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1939,8 +1924,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Rivaj',
     slug: 'rivaj',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/rivaj web.JPG',
+    logo: '',
+    backgroundImage: '/shops/rivaj web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1951,28 +1936,13 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-  {
-    name: 'Rivaj',
-    slug: 'rivaj',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/rivaj web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
+
   {
     name: 'Royal Tag',
     slug: 'royal-tag',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/royal tag web.JPG',
+    logo: '',
+    backgroundImage: '/shops/royal tag web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1987,8 +1957,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Sapphire',
     slug: 'sapphire',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/royal tag web.JPG',
+    logo: '',
+    backgroundImage: '/shops/royal tag web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2003,8 +1973,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Saya',
     slug: 'saya',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/saya web.JPG',
+    logo: '',
+    backgroundImage: '/shops/saya web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2019,8 +1989,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Scents and Stories',
     slug: 'scents-and-stories',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/scents and stories web.JPG',
+    logo: '',
+    backgroundImage: '/shops/scents and stories web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2035,8 +2005,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Sketchers',
     slug: 'sketcher',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/sketchers web.JPG',
+    logo: '',
+    backgroundImage: '/shops/sketchers web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2051,8 +2021,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Sona Chandi',
     slug: 'sona-chandi',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/sona chandi web.JPG',
+    logo: '',
+    backgroundImage: '/shops/sona chandi web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2067,8 +2037,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Speed Sports',
     slug: 'speed-sports',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/speed sports web.JPG',
+    logo: '',
+    backgroundImage: '/shops/speed sports web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2083,8 +2053,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Style in Shoes',
     slug: 'speed-sports',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/speed sports web.JPG',
+    logo: '',
+    backgroundImage: '/shops/speed sports web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2099,8 +2069,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Svesto',
     slug: 'svesto',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/svesto web.JPG',
+    logo: '',
+    backgroundImage: '/shops/svesto web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2115,8 +2085,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Swarovski',
     slug: 'swarovski',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/swarovski web.JPG',
+    logo: '',
+    backgroundImage: '/shops/swarovski web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2131,8 +2101,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Syed Royal Optics',
     slug: 'syed-royal-optics',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/syed royal optics web.JPG',
+    logo: '',
+    backgroundImage: '/shops/syed royal optics web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2147,8 +2117,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Tagheuer',
     slug: 'tagheuer',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/tagheuer web.JPG',
+    logo: '',
+    backgroundImage: '/shops/tagheuer web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2163,8 +2133,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Tayyab Jewelers',
     slug: 'tayyab-jewelers',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/tayyab jewelers web.JPG',
+    logo: '',
+    backgroundImage: '/shops/tayyab jewelers web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2179,8 +2149,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Tessoro',
     slug: 'tessoro',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/tesoro web.JPG',
+    logo: '',
+    backgroundImage: '/shops/tesoro web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2195,8 +2165,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'The Body Shop',
     slug: 'the-body-shop',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/the body shop web.JPG',
+    logo: '',
+    backgroundImage: '/shops/the body shop web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2207,28 +2177,28 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-  {
-    name: 'The Hortins',
-    slug: 'the-hortins',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/tim hortins web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
+  // {
+  //   name: 'The Hortins',
+  //   slug: 'the-hortins',
+  //   description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+  //   logo: '',
+  //   backgroundImage: '/shops/tim hortins web.JPG',
+  //   category: 'Lifestyle',
+  //   contact: {
+  //     phone: '+971-50-501-8610'
+  //   },
+  //   location: {
+  //     level: 'Ground Floor',
+  //     parking: 'P1, Main Parking',
+  //     mapPosition: { x: 75, y: 45 }
+  //   }
+  // },
   {
     name: 'Ultra Club',
     slug: 'ultra-club',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/ultra club web.JPG',
+    logo: '',
+    backgroundImage: '/shops/ultra club web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2243,8 +2213,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Wasim Badami by Hemani',
     slug: 'wasim-badami-by-hemani',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/wasim badami by hemani mobile.JPG',
+    logo: '',
+    backgroundImage: '/shops/wasim badami by hemani mobile.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2259,8 +2229,8 @@ export const storeDetails: StoreDetail[] = [
     name: 'Zero',
     slug: 'zero',
     description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/bata.jpeg',
-    backgroundImage: '/shops/GroundFloor/zero web.JPG',
+    logo: '',
+    backgroundImage: '/shops/zero web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -2271,86 +2241,9 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-  {
-    name: '12 STOREEZ',
-    slug: '12-storeez',
-    description: 'An international fashion brand with a clear design DNA and goal to create limited capsules that would easily fit into your life. Perfect cuts, elevated fabrics, attention to detail and composition allow us to provide our customers with a well-curated wardrobe, driven by our client\'s lifestyle rather than trends.',
-    contact: {
-      phone: '+971-50-501-8579'
-    },
-    category: 'Fashion',
-    backgroundImage: '/1-WL_inside-_2732_x_1436_rijsgy-OK.jpg',
-    location: {
-      level: 'First Floor',
-      parking: 'P2, Grand Parking',
-      mapPosition: { x: 45, y: 25 }
-    }
-  },
-  {
-    name: '& Other Stories',
-    slug: 'other-stories',
-    description: 'Discover unique fashion pieces and accessories that tell your story. Our collections blend contemporary design with timeless elegance.',
-    contact: {
-      phone: '+971-50-501-8578'
-    },
-    category: 'Fashion',
-    hasOffers: true,
-    backgroundImage: '/2-ES---WLaMaquinista_OK.jpg',
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 35, y: 50 }
-    }
-  },
-  {
-    name: 'Aesop',
-    slug: 'aesop',
-    description: 'Thoughtfully crafted skin, hair, and body care with a signature sensorial touch. Experience premium quality products designed for everyday use.',
-    contact: {
-      phone: '+971-50-501-8577'
-    },
-    category: 'Beauty',
-    acceptsGiftCard: true,
-    backgroundImage: '/Aesop_Westfield_Stratford_City.jpg',
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 40, y: 65 }
-    }
-  },
-  {
-    name: 'Adidas',
-    slug: 'adidas',
-    description: 'Sport-inspired streetwear and footwear designed for game changers. Discover the latest in athletic performance and style.',
-    contact: {
-      phone: '+971-50-501-8576'
-    },
-    category: 'Sports & Fitness',
-    hasOffers: true,
-    backgroundImage: '/ADIDAS.jpg',
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 45, y: 55 }
-    }
-  },
-  {
-    name: 'Nike',
-    slug: 'nike',
-    description: 'Performance meets style with the latest sneakers, sportswear, and innovations. Just Do It.',
-    logo: '/NIKE_-_WMoN.jpg',
-    contact: {
-      phone: '+971-50-501-8575'
-    },
-    category: 'Sports & Fitness',
-    hasOffers: true,
-    backgroundImage: '/NIKE_-_WMoN.jpg',
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 50, y: 55 }
-    }
-  },
+ 
+  
+ 
   {
     name: 'Sephora',
     slug: 'sephora',
@@ -2372,7 +2265,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Zara',
     slug: 'zara',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/zara-forum6257.jpg',
+    // logo: '',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2395,7 +2288,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/abc fragrance web.JPG',
+    backgroundImage: '/shops/abc fragrance web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2412,7 +2305,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/alkaram web.JPG',
+    backgroundImage: '/shops/alkaram web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2429,7 +2322,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/almas web.JPG',
+    backgroundImage: '/shops/almas web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2446,7 +2339,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/amd web.JPG',
+    backgroundImage: '/shops/amd web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2463,7 +2356,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/amir 2 web.JPG',
+    backgroundImage: '/shops/amir 2 web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2480,7 +2373,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/bareeze web.JPG',
+    backgroundImage: '/shops/bareeze web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2497,7 +2390,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/batik web.JPG',
+    backgroundImage: '/shops/batik web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2508,13 +2401,13 @@ export const storeDetails: StoreDetail[] = [
     name: 'Beech Tree',
     slug: 'beech-tree',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
+    // logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/beech tree web.JPG',
+    backgroundImage: '/shops/beech tree web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2525,13 +2418,13 @@ export const storeDetails: StoreDetail[] = [
     name: 'Bonanza Satrangi Beauty',
     slug: 'bonanza-satrangi-beauty',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/.jpp',
+    // logo: '/.jpp',
     contact: {
       phone: '+971-50-501-8573'
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/bonanza satrangi beauty web.JPG',
+    backgroundImage: '/shops/bonanza satrangi beauty web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2548,7 +2441,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/borjan web.JPG',
+    backgroundImage: '/shops/borjan web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2565,7 +2458,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/brackets web.JPG',
+    backgroundImage: '/shops/brackets web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2582,7 +2475,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/cambridge web.JPG',
+    backgroundImage: '/shops/cambridge web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2599,7 +2492,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/charizma web.JPG',
+    backgroundImage: '/shops/charizma web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2616,7 +2509,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/chinyere web.JPG',
+    backgroundImage: '/shops/chinyere web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2633,7 +2526,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/chunri web.JPG',
+    backgroundImage: '/shops/chunri web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2650,7 +2543,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/corio web.JPG',
+    backgroundImage: '/shops/corio web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2667,7 +2560,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/dinners web.JPG',
+    backgroundImage: '/shops/dinners web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2684,7 +2577,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/dynasty web.JPG',
+    backgroundImage: '/shops/dynasty web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2701,7 +2594,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/ecs web.JPG',
+    backgroundImage: '/shops/ecs web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2718,7 +2611,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/eden robe web.JPG',
+    backgroundImage: '/shops/eden robe web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2735,7 +2628,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/eklairs web.JPG',
+    backgroundImage: '/shops/eklairs web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2752,7 +2645,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/elegant web.JPG',
+    backgroundImage: '/shops/elegant web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2769,7 +2662,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/excel web.JPG',
+    backgroundImage: '/shops/excel web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2786,7 +2679,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/frutastic web.JPG',
+    backgroundImage: '/shops/frutastic web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2803,7 +2696,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/furor web.JPG',
+    backgroundImage: '/shops/furor web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2820,7 +2713,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/generation web.JPG',
+    backgroundImage: '/shops/generation web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2837,7 +2730,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/gloria jeans web.JPG',
+    backgroundImage: '/shops/gloria jeans web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2854,7 +2747,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/hi volts web.JPG',
+    backgroundImage: '/shops/hi volts web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2871,7 +2764,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/ideas web.JPG',
+    backgroundImage: '/shops/ideas web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2888,7 +2781,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/islamic honey center web.JPG',
+    backgroundImage: '/shops/islamic honey center web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2905,7 +2798,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/jiyas creation web.JPG',
+    backgroundImage: '/shops/jiyas creation web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2922,7 +2815,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/junaid jamshed web.JPG',
+    backgroundImage: '/shops/junaid jamshed web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2939,7 +2832,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/kayseria web.JPG',
+    backgroundImage: '/shops/kayseria web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2957,7 +2850,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/lawrancepur web.JPG',
+    backgroundImage: '/shops/lawrancepur web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2974,7 +2867,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/little people web.JPG',
+    backgroundImage: '/shops/little people web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2991,7 +2884,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/logo web.JPG',
+    backgroundImage: '/shops/logo web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3008,7 +2901,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/m basic web.JPG',
+    backgroundImage: '/shops/m basic web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3025,7 +2918,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/maria b web.JPG',
+    backgroundImage: '/shops/maria b web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3042,7 +2935,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/minnie-mirrors web.JPG',
+    backgroundImage: '/shops/minnie-mirrors web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3059,7 +2952,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/mona web.JPG',
+    backgroundImage: '/shops/mona web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3076,7 +2969,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/nakoosh web.JPG',
+    backgroundImage: '/shops/nakoosh web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3093,7 +2986,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/nishat web.JPG',
+    backgroundImage: '/shops/nishat web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3110,7 +3003,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/oaks web.JPG',
+    backgroundImage: '/shops/oaks web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3127,7 +3020,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/one web.JPG',
+    backgroundImage: '/shops/one web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3144,7 +3037,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/outfitters web.JPG',
+    backgroundImage: '/shops/outfitters web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3161,7 +3054,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/potato factory web.JPG',
+    backgroundImage: '/shops/potato factory web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3178,7 +3071,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/revolution london web.JPG',
+    backgroundImage: '/shops/revolution london web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3195,7 +3088,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/rth web.JPG',
+    backgroundImage: '/shops/rth web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3212,7 +3105,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/sana safinaz web.JPG',
+    backgroundImage: '/shops/sana safinaz web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3229,7 +3122,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/siraj sons silver shop web.JPG',
+    backgroundImage: '/shops/siraj sons silver shop web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3246,7 +3139,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/sohaye web.JPG',
+    backgroundImage: '/shops/sohaye web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3263,7 +3156,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/sowearg web.JPG',
+    backgroundImage: '/shops/sowearg web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3280,7 +3173,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/stylo web.JPG',
+    backgroundImage: '/shops/stylo web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3297,7 +3190,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/swiss arabia web.JPG',
+    backgroundImage: '/shops/swiss arabia web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3314,7 +3207,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/threads and motys web.JPG',
+    backgroundImage: '/shops/threads and motys web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3331,7 +3224,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/tiny years web.JPG',
+    backgroundImage: '/shops/tiny years web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3348,7 +3241,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/toy club web.JPG',
+    backgroundImage: '/shops/toy club web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3365,7 +3258,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/umaiza web.JPG',
+    backgroundImage: '/shops/umaiza web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3382,7 +3275,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/uniworth web.JPG',
+    backgroundImage: '/shops/uniworth web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3399,7 +3292,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/unze web.JPG',
+    backgroundImage: '/shops/unze web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3416,7 +3309,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/vereity bags and costmetics web.JPG',
+    backgroundImage: '/shops/vereity bags and costmetics web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3433,7 +3326,7 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/zeen web.JPG',
+    backgroundImage: '/shops/zeen web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3450,7 +3343,25 @@ export const storeDetails: StoreDetail[] = [
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/shops/1st floor/zubaidas web.JPG',
+    backgroundImage: '/shops/zubaidas web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+ 
+  {
+    name: '361',
+    slug: '361',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/361 web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -3458,170 +3369,159 @@ export const storeDetails: StoreDetail[] = [
     }
   },
   {
-    name: 'Starbucks',
-    slug: 'starbucks',
-    description: 'Your favourite handcrafted beverages, from classic coffees to seasonal specials. Experience the perfect cup every time.',
+    name: 'a and i',
+    slug: 'a-and-i',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
     contact: {
-      phone: '+971-50-501-8572'
+      phone: '+971-501-8573'
     },
-    category: 'Food & Beverage',
-    backgroundImage: '/Starbucks.jpg',
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/a and i web.JPG',
     location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 30, y: 60 }
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
     }
   },
   {
-    name: 'Bvlgari',
-    slug: 'bvlgari',
-    description: 'Luxury Italian jewelry, watches, and accessories. Timeless elegance meets contemporary design.',
+    name: 'Al Baik',
+    slug: 'al-baik',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
     contact: {
-      phone: '+971-50-501-8571'
-    },
-    category: 'Luxury',
-    acceptsGiftCard: true,
-    backgroundImage: '/3-Mall-of-Scandinavia-OK.jpg'
-  },
-  {
-    name: 'Cartier',
-    slug: 'cartier',
-    description: 'French luxury goods manufacturer of jewelry, watches, and accessories. Craftsmanship and elegance since 1847.',
-    contact: {
-      phone: '+971-50-501-8570'
-    },
-    category: 'Luxury',
-    acceptsGiftCard: true,
-    backgroundImage: '/4-WChodov-OK.jpg'
-  },
-  {
-    name: 'CHANEL',
-    slug: 'chanel',
-    description: 'French luxury fashion house specializing in haute couture, ready-to-wear, luxury goods, and accessories.',
-    contact: {
-      phone: '+971-50-501-8569'
-    },
-    category: 'Luxury',
-    acceptsGiftCard: true,
-    backgroundImage: '/Victoria_s_Secret_Westfield_Stratford_City.jpg'
-  },
-  {
-    name: 'Louis Vuitton',
-    slug: 'louis-vuitton',
-    description: 'French luxury fashion house and luxury goods company. Known for its LV monogram and leather goods.',
-    contact: {
-      phone: '+971-50-501-8568'
-    },
-    category: 'Luxury',
-    acceptsGiftCard: true,
-    backgroundImage: '/Jok_Air_4TEMPS_CNIT_carrousel_homepage_2732x1436px.jpg'
-  },
-  {
-    name: '100% Capri',
-    slug: '100-capri',
-    description: 'Discover premium Italian fashion and accessories inspired by the beautiful island of Capri.',
-    contact: {
-      phone: '+971-50-501-8567'
-    },
-    category: 'Fashion',
-    backgroundImage: '/2-OK.jpg'
-  },
-  {
-    name: '1847 Executive Grooming for Men',
-    slug: '1847-executive-grooming',
-    description: 'Premium grooming services and products for the modern gentleman. Experience luxury barbering and skincare.',
-    contact: {
-      phone: '+971-50-501-8566'
-    },
-    category: 'Grooming',
-    backgroundImage: '/DSC05412Food_OK_1.jpg'
-  },
-  {
-    name: 'Chloé',
-    slug: 'chloe',
-    description: 'French luxury fashion house known for its feminine, bohemian aesthetic and ready-to-wear collections.',
-    contact: {
-      phone: '+971-50-501-8565'
+      phone: '+971-501-8573'
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/DSC07199.jpg'
+    backgroundImage: '/shops/al baik web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
   },
   {
-    name: 'Chopard',
-    slug: 'chopard',
-    description: 'Swiss luxury watchmaker and jeweler. Crafting timepieces and jewelry with precision and elegance.',
+    name: 'Ali Baba',
+    slug: 'ali-baba',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
     contact: {
-      phone: '+971-50-501-8564'
-    },
-    category: 'Luxury',
-    backgroundImage: '/DSC07836.jpg'
-  },
-  {
-    name: 'Christian Louboutin',
-    slug: 'christian-louboutin',
-    description: 'French luxury footwear and accessories designer. Famous for red-soled high-heeled shoes.',
-    contact: {
-      phone: '+971-50-501-8563'
-    },
-    category: 'Luxury',
-    acceptsGiftCard: true,
-    backgroundImage: '/DSC07876.jpg'
-  },
-  {
-    name: 'Henry Jacques',
-    slug: 'henry-jacques',
-    description: 'Luxury French perfumer creating bespoke fragrances with the finest ingredients and craftsmanship.',
-    contact: {
-      phone: '+971-50-501-8562'
-    },
-    category: 'Luxury',
-    backgroundImage: '/DSC07901.jpg'
-  },
-  {
-    name: 'Level Shoes',
-    slug: 'level-shoes',
-    description: 'The world\'s largest luxury shoe store. Discover an extensive collection of designer footwear.',
-    contact: {
-      phone: '+971-50-501-8561'
+      phone: '+971-501-8573'
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/DSC08041.jpg'
+    backgroundImage: '/shops/alibaba web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
   },
   {
-    name: 'LONGINES',
-    slug: 'longines',
-    description: 'Swiss luxury watchmaker with over 190 years of tradition. Elegance is an attitude.',
+    name: 'Anamta Fateh',
+    slug: 'anamta-fateh',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
     contact: {
-      phone: '+971-50-501-8560'
-    },
-    category: 'Luxury',
-    hasOffers: true,
-    backgroundImage: '/DSC08196.jpg'
-  },
-  {
-    name: 'Tiffany & Co.',
-    slug: 'tiffany-co',
-    description: 'American luxury jewelry and specialty retailer. Known for its distinctive blue boxes and timeless designs.',
-    contact: {
-      phone: '+971-50-501-8559'
-    },
-    category: 'Luxury',
-    acceptsGiftCard: true,
-    backgroundImage: '/Swarovski_in_Scandinavia_2_784e0db59b.webp'
-  },
-  {
-    name: 'Tommy Hilfiger Kids',
-    slug: 'tommy-hilfiger-kids',
-    description: 'Classic American cool style for kids. Quality clothing that combines comfort and style.',
-    contact: {
-      phone: '+971-50-501-8558'
+      phone: '+971-501-8573'
     },
     category: 'Fashion',
     hasOffers: true,
-    backgroundImage: '/H and M.jpg'
-  }
+    backgroundImage: '/shops/anamta fateh web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Anaya Jewelery',
+    slug: 'anaya-jewelery',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/anaya jewelery web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Apavi Shoes',
+    slug: 'apavi-shoes',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/apavi shoes web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Bling Collection',
+    slug: 'bling-collection',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/bling collection web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Minime Kids Mobile',
+    slug: 'minime-kids-mobile',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/minime kids web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Dare to Dazzle',
+    slug: 'minime-kids-mobile',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/minime kids web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+ 
 ];
 
 export function getStoreBySlug(slug: string): StoreDetail | undefined {

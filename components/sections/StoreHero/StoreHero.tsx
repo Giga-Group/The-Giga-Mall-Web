@@ -1,25 +1,137 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Box, Typography, Link, useMediaQuery, useTheme } from "@mui/material";
 import { Phone } from "@mui/icons-material";
 import Image from "next/image";
-import { StoreDetail } from "@/lib/utils/storeData";
-import { getMobileBrandImage } from "@/lib/utils/constants"; 
+import { StoreDetail, storeDetails } from "@/lib/utils/storeData";
+import { getMobileBrandImage } from "@/lib/utils/constants";
+import { serviceDetails } from "@/lib/utils/servicesData";
 
 interface StoreHeroProps {
   store: StoreDetail;
 }
 
+// Helper function to get logo path from store slug - matches StoreGrid logic
+const getStoreLogo = (slug?: string): string | null => {
+  if (!slug) return null;
+
+  // First, try to get logo from storeDetails
+  const storeDetail = storeDetails.find(store => store.slug === slug);
+  if (storeDetail?.logo) {
+    // Check if logo path is valid (not empty, not just .jpg, etc.)
+    const logoPath = storeDetail.logo.trim();
+    // Filter out invalid paths like '/logo/.jpg', '/.jpg', or paths ending with '/.jpg' or '/.png'
+    if (logoPath && 
+        logoPath !== '/logo/.jpg' && 
+        logoPath !== '/.jpg' && 
+        !logoPath.endsWith('/.jpg') && 
+        !logoPath.endsWith('/.png') &&
+        logoPath.length > 5) { // Ensure it's a real path, not just a placeholder
+      return logoPath;
+    }
+  }
+
+  // Also check serviceDetails for services
+  const serviceDetail = serviceDetails.find(service => service.slug === slug);
+  if (serviceDetail?.logo) {
+    // Check if logo path is valid (not empty, not just .jpg, etc.)
+    const logoPath = serviceDetail.logo.trim();
+    // Filter out invalid paths like '/logo/.jpg', '/.jpg', or paths ending with '/.jpg' or '/.png'
+    if (logoPath && 
+        logoPath !== '/logo/.jpg' && 
+        logoPath !== '/.jpg' && 
+        !logoPath.endsWith('/.jpg') && 
+        !logoPath.endsWith('/.png') &&
+        logoPath.length > 5) { // Ensure it's a real path, not just a placeholder
+      return logoPath;
+    }
+  }
+
+  // Map of slug to logo filename - prioritizing dedicated logo files
+  const logoMap: Record<string, string> = {
+    // Shop logos - using dedicated logo files
+    'alkaram': '/logo/alkaram logo.jpg',
+    'almas': '/logo/almas logo.png',
+    'almirah': '/logo/almirah logo.png',
+    'batik-studio': '/logo/batik studio logo.jpg',
+    'bloon': '/logo/bloon logo.jpg',
+    'bonanza': '/logo/bonanza satrangi logo.jpg',
+    'breakout': '/logo/Breakout logo.png',
+    'cambridge': '/logo/cambridge logo.jpg',
+    'junaid-jamshed': '/logo/junaid jamshed logo.png',
+    'kayseria': '/logo/kayseria logo.jpg',
+    'miniso': '/logo/miniso logo.jpg',
+    // Restaurant/Dine logos
+    'macdonalds': '/logo/Macdonalds logo.jpg',
+    'mcdonalds': '/logo/Macdonalds logo.jpg',
+    'hardees': '/logo/hardees logo.jpg',
+    'pizzahut': '/logo/pizza hut logo.jpg',
+    'pizza-hut': '/logo/pizza hut logo.jpg',
+    'cheezious': '/logo/cheezious logo.jpg',
+    'wild-wings': '/logo/wings logo.jpg',
+    'redapple': '/logo/red apple logo.jpg',
+    'optp': '/logo/optp logo.jpg',
+    'chachajee': '/logo/chachajee logo.jpg',
+    'simplysufi': '/logo/simplysufi logo.jpg',
+    'rewayat': '/logo/rewayat logo.jpg',
+    'spicefactory': '/logo/spice factory logo.jpg',
+    'chinagrill': '/logo/china grill logo.jpg',
+    'kababjees': '/logo/kabab jees logo.jpg',
+  };
+
+  return logoMap[slug] || null;
+};
+
 const StoreHero = ({ store }: StoreHeroProps) => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("lg"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("lg"), { noSsr: true });
 
-  // Get mobile or desktop image based on screen size
-  const backgroundImageSrc = store.backgroundImage
-    ? isMobile
-      ? getMobileBrandImage(store.backgroundImage, store.name, store.slug)
-      : store.backgroundImage
-    : null;
+  // Use state to ensure server and client render the same initially (desktop version)
+  const [backgroundImageSrc, setBackgroundImageSrc] = useState<string | null>(
+    store.backgroundImage || null
+  );
+  const [objectPosition, setObjectPosition] = useState<string>("50% 12%");
+
+  // Update image source and position after hydration to match actual screen size
+  useEffect(() => {
+    if (store.backgroundImage) {
+      setBackgroundImageSrc(
+        isMobile
+          ? getMobileBrandImage(store.backgroundImage, store.name, store.slug)
+          : store.backgroundImage
+      );
+      setObjectPosition(isMobile ? "center center" : "50% 12%");
+    }
+  }, [isMobile, store.backgroundImage, store.name, store.slug]);
+
+  // Get logo from StoreGrid mapping, fallback to store.logo if available
+  // Validate logo path to ensure it's not an invalid placeholder
+  const getValidLogoPath = (): string | null => {
+    const path = getStoreLogo(store.slug) || store.logo || null;
+    
+    if (!path) return null;
+    
+    const trimmedPath = path.trim();
+    
+    // Check for invalid paths: empty, just extensions, or placeholder paths
+    if (
+      !trimmedPath ||
+      trimmedPath === '/logo/.jpg' ||
+      trimmedPath === '/.jpg' ||
+      trimmedPath === '/logo/.png' ||
+      trimmedPath === '/.png' ||
+      trimmedPath.endsWith('/.jpg') ||
+      trimmedPath.endsWith('/.png') ||
+      trimmedPath.length <= 5 // Too short to be a real path
+    ) {
+      return null;
+    }
+    
+    return trimmedPath;
+  };
+
+  const logoPath = getValidLogoPath();
 
   return (
     <Box
@@ -64,7 +176,7 @@ const StoreHero = ({ store }: StoreHeroProps) => {
             sizes="100vw"
             style={{
               objectFit: "cover",
-              objectPosition: isMobile ? "center center" : "50% 12%"
+              objectPosition: objectPosition
             }}
           />
         ) : (
@@ -110,7 +222,7 @@ const StoreHero = ({ store }: StoreHeroProps) => {
             position: "relative",
           }}
         >
-          {store.logo ? (
+          {logoPath ? (
             <Box
               sx={{
                 width: "100%",
@@ -126,7 +238,7 @@ const StoreHero = ({ store }: StoreHeroProps) => {
               }}
             >
               <Image
-                src={store.logo}
+                src={logoPath}
                 alt={store.name}
                 fill
                 sizes="(max-width: 600px) 100px, (max-width: 960px) 120px, (max-width: 1280px) 150px, 180px"
