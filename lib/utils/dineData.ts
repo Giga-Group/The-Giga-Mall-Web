@@ -153,6 +153,22 @@ export const dineDetails: DineDetail[] = [
     }
   },
   {
+    name: 'Cinnabon',
+    slug: 'cinnabon',
+    description: 'A bakery and dessert store specializing in warm, gooey cinnamon rolls, pastries, and sweet treats. Indulge in freshly baked goods and delicious desserts.',
+    logo: '/logo/cionnabon.jpg',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    category: 'Desserts & Beverages',
+    backgroundImage: '/dine/cinnabon web.JPG',
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
     name: 'Simply Sufi',
     slug: 'simplysufi',
     description: 'Authentic flavors and traditional recipes served in a warm and inviting atmosphere.',

@@ -250,7 +250,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Aroma Concepts',
     slug: 'aroma-concepts',
     description: 'A fragrance and home scents store offering perfumes, candles, and aromatic products.',
-    logo: '/logo/pop nosh.jpg',
+    // logo: '/logo/pop nosh.jpg',
     backgroundImage: '/shops/Aroma Concepts web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -266,7 +266,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Eastern Art and HandiCraft',
     slug: 'eastern-art-and-handicraft',
     description: 'A handicraft store showcasing traditional art, décor, and handmade cultural pieces.',
-    logo: '/logo/location.jpg',
+    // logo: '/logo/location.jpg',
     backgroundImage: '/shops/Eastern Art and HandiCraft web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -282,7 +282,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Taana Baana',
     slug: 'taana-baana',
     description: 'A textile and fashion brand offering premium fabrics, ethnic wear, and custom tailoring services.',
-    logo: '/logo/1st step.jpg',
+    // logo: '/logo/1st step.jpg',
     backgroundImage: '/shops/Taana Baana web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -345,8 +345,8 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Thai Zone',
     slug: 'thai-zone',
-    description: 'A dining outlet offering authentic Thai cuisine with fresh ingredients and traditional flavors.',
-    logo: '/logo/location.jpg',
+    description: 'A bag store offering a wide selection of bags, backpacks, and luggage. Discover quality bags for travel, work, and everyday use.',
+    // logo: '/logo/location.jpg',
     backgroundImage: '/shops/Thai Zone web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -361,7 +361,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Tajik',
     slug: 'tajik',
-    description: 'A footwear and fashion accessories store offering comfortable and stylish designs.',
+    description: 'A jewelry and gift shop offering fine jewelry, accessories, and gift items. Discover elegant jewelry pieces and thoughtful gifts for every occasion.',
     backgroundImage: '/shops/Tajik web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -421,7 +421,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Taarkashi',
     slug: 'taarkashi',
-    description: 'A decorative art store specializing in intricate taarkashi artwork and handicrafts.',
+    description: 'A clothing brand offering stylish apparel for men and women. Discover contemporary fashion with modern designs and quality fabrics.',
     backgroundImage: '/shops/Taarkashi web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -530,7 +530,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Mini Try',
     slug: 'mini-try',
-    description: 'A trendy accessories and essentials store offering small lifestyle products, gifts, and daily-use items.',
+    description: 'A clothing brand offering trendy and stylish apparel. Discover contemporary fashion with modern designs for everyday wear.',
     backgroundImage: '/shops/Mini Try web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -545,7 +545,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Mr Kazi',
     slug: 'mr-kazi',
-    description: 'A men’s fashion brand offering traditional and modern wear including formal, casual, and ethnic clothing.',
+    description: 'A mobile accessories store offering phone cases, chargers, cables, headphones, and mobile gadgets. Discover quality accessories for your mobile devices.',
     logo: '/logo/Mr kazi.jpg',
     backgroundImage: '/shops/Mr Kazi web.JPG',
     category: 'Lifestyle',
@@ -704,7 +704,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Zero',
     slug: 'zero',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort and style.',
     logo: '/logo/zero.jpg',
     backgroundImage: '/shops/Zero web.JPG',
     category: 'Lifestyle',
@@ -717,26 +717,10 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-  // {
-  //   name: 'Corn Station',
-  //   slug: 'corn-station',
-  //   description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
-  //   logo: '/logo/corn station.jpg',
-  //   backgroundImage: '/shops/corn station web.JPG',
-  //   category: 'Lifestyle',
-  //   contact: {
-  //     phone: '+971-50-501-8610'
-  //   },
-  //   location: {
-  //     level: 'Ground Floor',
-  //     parking: 'P1, Main Parking',
-  //     mapPosition: { x: 75, y: 45 }
-  //   }
-  // },
   {
     name: 'F Optical and Watch',
     slug: 'f-optical-and-watch',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    description: 'An optical and watch store offering prescription glasses, sunglasses, and stylish timepieces. Find the perfect eyewear and watch to complement your style.',
     logo: '/logo/F optical and watch.jpg',
     backgroundImage: '/shops/f optical and watch web.JPG',
     category: 'Lifestyle',
@@ -752,7 +736,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Foot and Leather',
     slug: 'foot-and-leather',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    description: 'A footwear and leather goods store offering quality shoes, bags, and leather accessories. Discover durable and stylish leather products for everyday use.',
     logo: '/logo/foot and leathers.jpg',
     backgroundImage: '/shops/foot and leather web.JPG',
     category: 'Lifestyle',
@@ -784,7 +768,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'H n H Decor',
     slug: 'h-n-h-decor',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    description: 'A home décor and furnishings store offering decorative items, furniture, and interior design accessories. Transform your living space with stylish home essentials.',
     logo: '/logo/H&H decore.jpg',
     backgroundImage: '/shops/h n h decor web.JPG',
     category: 'Lifestyle',
@@ -800,7 +784,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Kapok',
     slug: 'kapok',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    description: 'A lifestyle and home goods store offering quality products for modern living. Discover a curated selection of home essentials and lifestyle items.',
     logo: '/logo/kapok.jpg',
     backgroundImage: '/shops/kapok web.JPG',
     category: 'Lifestyle',
@@ -832,7 +816,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Melon Box',
     slug: 'melon-box',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    description: 'A lifestyle store offering a variety of products and essentials for everyday needs. Discover quality items at great value.',
     backgroundImage: '/shops/melon box web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -847,7 +831,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Mi',
     slug: 'mi',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    description: 'A mobile and accessories store offering smartphones, phone cases, chargers, cables, and mobile gadgets. Discover quality mobile devices and accessories.',
     logo: '/logo/MI.jpg',
     backgroundImage: '/shops/mi web.JPG',
     category: 'Lifestyle',
@@ -863,7 +847,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Mr Game',
     slug: 'mr-game',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    description: 'A gaming and entertainment store offering video games, gaming accessories, and entertainment products. Discover the latest games and gaming gear.',
     logo: '/logo/mr games.jpg',
     backgroundImage: '/shops/mr game web.JPG',
     category: 'Lifestyle',
@@ -879,7 +863,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Pound Store',
     slug: 'pound-store',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    description: 'A discount variety store offering affordable household items, kitchenware, and everyday essentials. Great value on a wide range of products.',
     logo: '/logo/pound stoore.jpg',
     backgroundImage: '/shops/pound store web.JPG',
     category: 'Lifestyle',
@@ -895,7 +879,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Rohi Reet',
     slug: 'rohi-reet',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    description: 'A fashion and lifestyle store offering traditional and contemporary clothing and accessories. Discover elegant designs for every occasion.',
     logo: '/logo/rohi reet.jpg',
     backgroundImage: '/shops/rohi reet web.JPG',
     category: 'Lifestyle',
@@ -911,7 +895,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Silver Stition',
     slug: 'silver-stition',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    description: 'A jewelry store specializing in silver jewelry, accessories, and decorative items. Discover elegant silver pieces for every occasion.',
     logo: '/logo/silverstation.jpg',
     backgroundImage: '/shops/silverstition web.JPG',
     category: 'Lifestyle',
@@ -927,7 +911,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Sport Snation',
     slug: 'sport-snation',
-    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    description: 'A sports and athletic store offering sports apparel, footwear, and equipment. Find everything you need for your active lifestyle.',
     logo: '/logo/sport snation.jpg',
     backgroundImage: '/shops/sport snation web.JPG',
     category: 'Lifestyle',
@@ -973,7 +957,7 @@ export const storeDetails: StoreDetail[] = [
   }, {
     name: 'Haroons',
     slug: 'haroons',
-    description: 'A well-known fashion and fabric store offering quality clothing, textiles, and accessories for all occasions.',
+    description: 'A variety store offering different items including clocks, decorative pieces, home décor, and various household essentials. Discover a wide range of products for your home and lifestyle.',
     logo: '/logo/Haroons.jpg',
     backgroundImage: '/shops/Haroons web.JPG',
     category: 'Lifestyle',
@@ -1094,7 +1078,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Bata',
     slug: 'bata',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A globally recognized footwear brand offering affordable, durable, and stylish shoes for men, women, and children. Quality footwear for everyday wear.',
     logo: '/logo/bata.jpeg',
     backgroundImage: '/shops/Bata web.JPG',
     category: 'Lifestyle',
@@ -1110,7 +1094,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: '1st Step',
     slug: '1st-step',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A children\'s footwear brand specializing in comfortable and durable shoes for kids. Quality footwear designed for growing feet.',
     logo: '/logo/1st step.jpg',
     backgroundImage: '/shops/1st step web.JPG',
     category: 'Lifestyle',
@@ -1126,7 +1110,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Addidas',
     slug: 'addidas',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A sportswear and athletic footwear brand offering performance shoes, apparel, and accessories. Discover athletic gear for sports and active lifestyle.',
     logo: '/logo/addidas.jpg',
     backgroundImage: '/shops/addidas web.JPG',
     category: 'Lifestyle',
@@ -1142,7 +1126,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Adoro',
     slug: 'adoro',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A handbag and footwear store for women offering elegant handbags, purses, and stylish shoes. Discover quality bags and footwear with contemporary designs.',
     logo: '/logo/adoro.jpg',
     backgroundImage: '/shops/adoro web.JPG',
     category: 'Lifestyle',
@@ -1158,7 +1142,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Anta',
     slug: 'anta',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A sportswear and athletic footwear brand offering performance shoes and athletic gear. Discover quality sports footwear and activewear.',
     logo: '/logo/anta.jpg',
     backgroundImage: '/shops/anta web.JPG',
     category: 'Lifestyle',
@@ -1174,7 +1158,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Apavi',
     slug: 'apavi',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A footwear brand offering quality shoes for men and women. Discover stylish and comfortable footwear with modern designs.',
     logo: '/logo/apavi.jpg',
     backgroundImage: '/shops/apavi web.JPG',
     category: 'Lifestyle',
@@ -1187,26 +1171,26 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
-  {
-    name: 'Baskin Robin',
-    slug: 'baskin-robin',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/BR BASKIN.jpg',
-    backgroundImage: '/shops/baskin robin 2 web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
+  // {
+  //   name: 'Baskin Robin',
+  //   slug: 'baskin-robin',
+  //   description: 'An ice cream and dessert store offering a wide variety of premium ice cream flavors, sundaes, and delicious ice cream cakes. Experience the joy of 31 flavors and more.',
+  //   // logo: '/logo/BR BASKIN.jpg',
+  //   backgroundImage: '/shops/baskin robin 2 web.JPG',
+  //   category: 'Lifestyle',
+  //   contact: {
+  //     phone: '+971-50-501-8610'
+  //   },
+  //   location: {
+  //     level: 'Ground Floor',
+  //     parking: 'P1, Main Parking',
+  //     mapPosition: { x: 75, y: 45 }
+  //   }
+  // },
   {
     name: 'Charcoal',
     slug: 'charcoal',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A footwear brand offering stylish and contemporary shoes for men and women. Discover quality footwear with modern designs.',
     logo: '/logo/charcol.jpg',
     backgroundImage: '/shops/charcoal web.JPG',
     category: 'Lifestyle',
@@ -1220,25 +1204,9 @@ export const storeDetails: StoreDetail[] = [
     }
   },
   {
-    name: 'Cinnabon',
-    slug: 'cinnabon',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/cionnabon.jpg',
-    backgroundImage: '/shops/cinnabon web.JPG',
-    category: 'Lifestyle',
-    contact: {
-      phone: '+971-50-501-8610'
-    },
-    location: {
-      level: 'Ground Floor',
-      parking: 'P1, Main Parking',
-      mapPosition: { x: 75, y: 45 }
-    }
-  },
-  {
     name: 'Coppelia',
     slug: 'coppelia',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A jewelry store offering fine jewelry, accessories, and elegant pieces. Discover quality jewelry with timeless designs for every occasion.',
     logo: '/logo/coppelia.jpg',
     backgroundImage: '/shops/coppelia web.JPG',
     category: 'Lifestyle',
@@ -1254,7 +1222,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Courger',
     slug: 'courger',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A clothing brand offering stylish apparel for men and women. Discover contemporary fashion including casual wear, shirts, and modern clothing designs.',
     logo: '/logo/cougar.jpg',
     backgroundImage: '/shops/couger web.JPG',
     category: 'Lifestyle',
@@ -1270,7 +1238,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Crocs',
     slug: 'crocs',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A lifestyle brand offering comfortable footwear including clogs, sandals, and slippers, plus apparel like jackets and shirts. Discover versatile and comfortable products for men, women, and children.',
     logo: '/logo/crocs.jpg',
     backgroundImage: '/shops/crocs web.JPG',
     category: 'Lifestyle',
@@ -1286,7 +1254,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Dari Mooch',
     slug: 'dari-mooch',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A grooming and personal care brand specializing in beard and mustache care products. Discover quality grooming essentials, oils, and accessories for men.',
     logo: '/logo/dahri mouch.jpg',
     backgroundImage: '/shops/dari mooch web.JPG',
     category: 'Lifestyle',
@@ -1302,7 +1270,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Engine',
     slug: 'engine',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A clothing brand offering stylish apparel for men and women. Discover contemporary fashion with modern designs and quality fabrics.',
     logo: '/logo/engine.jpg',
     backgroundImage: '/shops/engine web.JPG',
     category: 'Lifestyle',
@@ -1318,7 +1286,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Equator',
     slug: 'equator',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A clothing brand offering stylish apparel for men and women. Discover contemporary fashion including shirts, jackets, and casual wear with modern designs.',
     logo: '/logo/equator.jpg',
     backgroundImage: '/shops/equator web.JPG',
     category: 'Lifestyle',
@@ -1334,7 +1302,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Ethnc',
     slug: 'ethnc',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A clothing brand offering traditional and ethnic-inspired apparel. Discover quality garments with cultural designs, authentic craftsmanship, and contemporary styles.',
     logo: '/logo/ethnc.jpg',
     backgroundImage: '/shops/ethnc web.JPG',
     category: 'Lifestyle',
@@ -1350,7 +1318,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Focus',
     slug: 'focus',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A clothing brand offering stylish apparel for men and women. Discover contemporary fashion with modern designs and quality fabrics.',
     logo: '/logo/focus.jpg',
     backgroundImage: '/shops/focus web.JPG',
     category: 'Lifestyle',
@@ -1366,7 +1334,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'FPL',
     slug: 'fpl',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A clothing brand offering stylish apparel for men and women. Discover contemporary fashion with modern designs and quality fabrics.',
     logo: '/logo/FPL.jpg',
     backgroundImage: '/shops/fpl web.JPG',
     category: 'Lifestyle',
@@ -1382,7 +1350,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Goshes',
     slug: 'goshes',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A footwear brand offering quality shoes for men and women. Discover stylish and comfortable footwear with modern designs.',
     logo: '/logo/coshes.jpg',
     backgroundImage: '/shops/Goshes web.JPG',
     category: 'Lifestyle',
@@ -1398,7 +1366,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Gulzari',
     slug: 'gulzari',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'An optical store offering prescription glasses, sunglasses, and eye care services. Find quality eyewear from top brands including Prada, Giorgio Armani, Ray-Ban, and Porsche.',
     logo: '/logo/gulzari optics.jpg',
     backgroundImage: '/shops/gulzari web.JPG',
     category: 'Lifestyle',
@@ -1411,10 +1379,11 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
+
   {
-    name: 'Haseen Jewelers',
-    slug: 'haseen-jewelers',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    name: 'Hussain Jewelers',
+    slug: 'hussain-jewelers',
+    description: 'A premium jewelry store offering exquisite gold, diamond, and gemstone collections. Discover elegant jewelry pieces for special occasions and everyday wear.',
     logo: '/logo/hussain jewellers.jpg',
     backgroundImage: '/shops/haseen jewelers web.JPG',
     category: 'Lifestyle',
@@ -1430,7 +1399,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Hopscotch',
     slug: 'hopscotch',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A children\'s clothing and accessories store offering colorful and playful apparel for kids. Discover fun designs and comfortable outfits for little ones.',
     logo: '/logo/hopscotch.jpg',
     backgroundImage: '/shops/hopscotch web.JPG',
     category: 'Lifestyle',
@@ -1446,7 +1415,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Hub',
     slug: 'hub',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A lifestyle and accessories store offering a variety of products for modern living. Discover quality items and everyday essentials.',
     logo: '/logo/hub.jpg',
     backgroundImage: '/shops/hub web.JPG',
     category: 'Lifestyle',
@@ -1462,7 +1431,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Hunza Emporium',
     slug: 'hunza-emporium',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A specialty store offering traditional handicrafts, textiles, and cultural items from the Hunza region. Discover authentic artisanal products and unique finds.',
     logo: '/logo/hunza emporium.jpg',
     backgroundImage: '/shops/hunza emporium web.JPG',
     category: 'Lifestyle',
@@ -1478,7 +1447,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Hush Puppies',
     slug: 'hush-puppies',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A footwear brand specializing in comfortable casual shoes for men, women, and children. Discover quality footwear known for comfort and style.',
     logo: '/logo/hush dog.jpg',
     backgroundImage: '/shops/hush puppies web.JPG',
     category: 'Lifestyle',
@@ -1494,7 +1463,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Insignia',
     slug: 'insignia',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A footwear brand offering quality shoes for men and women. Discover stylish and comfortable footwear with contemporary designs.',
     logo: '/logo/insignia.jpg',
     backgroundImage: '/shops/insignia web.JPG',
     category: 'Lifestyle',
@@ -1510,7 +1479,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'J. Fragrance and Costmetics',
     slug: 'j.-fragrances-and-costmetics',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A beauty and fragrance store offering perfumes, cosmetics, and personal care products. Discover premium fragrances and beauty essentials.',
     logo: '/logo/J. frag.jpg',
     backgroundImage: '/shops/J-fragrance and costmetics web.JPG',
     category: 'Lifestyle',
@@ -1526,7 +1495,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Jafferjees',
     slug: 'jaffer-jees',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A handbag store offering a wide selection of bags, purses, and accessories. Discover quality handbags with elegant designs for every occasion.',
     logo: '/logo/jaffer jees.jpg',
     backgroundImage: '/shops/jafferjees web.JPG',
     category: 'Lifestyle',
@@ -1542,7 +1511,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Jc Buckman',
     slug: 'jc-buckman',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A lifestyle and accessories store offering quality products for everyday needs. Discover stylish essentials and functional items.',
     logo: '/logo/juice fruity.jpg',
     backgroundImage: '/shops/jc buckman web.JPG',
     category: 'Lifestyle',
@@ -1574,8 +1543,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Julke',
     slug: 'julke',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/khadi.jpg',
+    description: 'A lifestyle and accessories store offering quality products for modern living. Discover stylish essentials and everyday items.',
     backgroundImage: '/shops/julke web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -1590,7 +1558,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'KefDiamonds',
     slug: 'kef-diamonds',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A premium jewelry store specializing in diamonds and fine jewelry. Discover exquisite diamond collections and elegant jewelry pieces.',
     logo: '/logo/zero.jpg',
     backgroundImage: '/shops/kef diamonds web.JPG',
     category: 'Lifestyle',
@@ -1606,7 +1574,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Khadi',
     slug: 'khadi',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A traditional clothing and textile store offering handwoven khadi fabrics and garments. Discover authentic traditional wear and natural fabrics.',
     logo: '/logo/khadi.jpg',
     backgroundImage: '/shops/khadi web.JPG',
     category: 'Lifestyle',
@@ -1622,7 +1590,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Khusa Factory',
     slug: 'khusa-factory',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A traditional footwear store specializing in handcrafted khussa and jutti shoes. Discover intricately designed traditional footwear with ethnic patterns.',
     logo: '/logo/khussa factory.jpg',
     backgroundImage: '/shops/khusa factory web.JPG',
     category: 'Lifestyle',
@@ -1655,8 +1623,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Lady Privacy',
     slug: 'lady-privacy',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
-    logo: '/logo/tesoro.jpg',
+    description: 'A women\'s fashion and accessories store offering elegant clothing and accessories. Discover stylish pieces designed for the modern woman.',
     backgroundImage: '/shops/lady privacy web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -1671,7 +1638,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Limelite',
     slug: 'limelite',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A lifestyle and accessories store offering quality products for everyday needs. Discover stylish essentials and functional items.',
     logo: '/logo/lime light.jpg',
     backgroundImage: '/shops/limelite web.JPG',
     category: 'Lifestyle',
@@ -1687,7 +1654,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Lullusar',
     slug: 'lullusar',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A lifestyle and accessories store offering quality products for modern living. Discover stylish essentials and everyday items.',
     logo: '/logo/lulusar.jpg',
     backgroundImage: '/shops/lullusar web.JPG',
     category: 'Lifestyle',
@@ -1703,7 +1670,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Maria B',
     slug: 'maria-b-2',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A premium fashion brand offering elegant clothing and accessories for women. Discover sophisticated designs and contemporary style.',
     logo: '/logo/MARIA B.jpg',
     backgroundImage: '/shops/maria b 2 web.JPG',
     category: 'Lifestyle',
@@ -1719,7 +1686,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Mayblline',
     slug: 'maybelline',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A cosmetics and beauty store offering makeup, skincare, and personal care products. Discover quality beauty essentials and cosmetics.',
     logo: '/logo/maybelline.jpg',
     backgroundImage: '/shops/maybelline web.JPG',
     category: 'Lifestyle',
@@ -1735,7 +1702,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Miracle',
     slug: 'miracle',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A lifestyle and accessories store offering quality products for everyday needs. Discover stylish essentials and functional items.',
     logo: '/logo/mircel.jpg',
     backgroundImage: '/shops/miracle web.JPG',
     category: 'Lifestyle',
@@ -1751,7 +1718,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Mocciani',
     slug: 'mocciani',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A footwear brand offering stylish and comfortable shoes. Discover quality footwear designed for everyday wear and special occasions.',
     logo: '/logo/mocciani.jpg',
     backgroundImage: '/shops/mocciani web.JPG',
     category: 'Lifestyle',
@@ -1767,7 +1734,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Monark',
     slug: 'monark',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A footwear brand offering quality shoes for men, women, and children. Discover stylish and durable footwear for every occasion.',
     logo: '/logo/monark.jpg',
     backgroundImage: '/shops/monark web.JPG',
     category: 'Lifestyle',
@@ -1783,7 +1750,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'MTJ Fragrance',
     slug: 'mtj-fragrance',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A fragrance store offering premium perfumes and colognes for men and women. Discover exclusive scents and gift sets.',
     logo: '/logo/MTJ.jpg',
     backgroundImage: '/shops/mtj fragrance web.JPG',
     category: 'Lifestyle',
@@ -1799,7 +1766,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Nizam Watch House',
     slug: 'nizam-watch-house',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A watch store offering premium timepieces and watch accessories. Discover elegant watches for men and women.',
     logo: '/logo/nizam watch.jpg',
     backgroundImage: '/shops/nizam watch house web.JPG',
     category: 'Lifestyle',
@@ -1816,7 +1783,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Royal Tag',
     slug: 'royal-tag',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A lifestyle and accessories store offering quality products for everyday needs. Discover stylish essentials and functional items.',
     logo: '/logo/royal tag.jpg',
     backgroundImage: '/shops/royal tag web.JPG',
     category: 'Lifestyle',
@@ -1832,7 +1799,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Sapphire',
     slug: 'sapphire',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A jewelry store offering fine gemstone jewelry, including sapphires and other precious stones. Discover elegant jewelry pieces and accessories.',
     logo: '/logo/sapphire.jpg',
     backgroundImage: '/shops/royal tag web.JPG',
     category: 'Lifestyle',
@@ -1848,7 +1815,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Saya',
     slug: 'saya',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A lifestyle and accessories store offering quality products for everyday needs. Discover stylish essentials and functional items.',
     logo: '/logo/saya.jpg',
     backgroundImage: '/shops/saya web.JPG',
     category: 'Lifestyle',
@@ -1864,7 +1831,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Scents and Stories',
     slug: 'scents-and-stories',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A fragrance boutique offering premium perfumes and colognes with unique stories. Discover exclusive scents and gift sets for men and women.',
     logo: '/logo/scents n stories.jpg',
     backgroundImage: '/shops/scents and stories web.JPG',
     category: 'Lifestyle',
@@ -1880,7 +1847,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Sketchers',
     slug: 'sketcher',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A footwear brand offering comfortable and stylish shoes for men, women, and children. Discover quality athletic and casual footwear.',
     logo: '/logo/skecher.jpg',
     backgroundImage: '/shops/sketchers web.JPG',
     category: 'Lifestyle',
@@ -1896,7 +1863,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Sona Chandi',
     slug: 'sona-chandi',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A jewelry store specializing in gold and silver jewelry. Discover traditional and contemporary jewelry pieces with elegant craftsmanship.',
     backgroundImage: '/shops/sona chandi web.JPG',
     category: 'Lifestyle',
     contact: {
@@ -1911,7 +1878,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Style in Shoes',
     slug: 'style-in-shoes',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A footwear store offering stylish and comfortable shoes for men, women, and children. Discover quality footwear for every occasion.',
     logo: '/logo/style in shoes.jpg',
     backgroundImage: '/shops/speed sports web.JPG',
     category: 'Lifestyle',
@@ -1927,7 +1894,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Svesto',
     slug: 'svesto',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A watch brand offering stylish timepieces that combine modern design with reliable performance. Discover elegant watches for men and women.',
     logo: '/logo/sveston.jpg',
     backgroundImage: '/shops/svesto web.JPG',
     category: 'Lifestyle',
@@ -1943,7 +1910,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Swarovski',
     slug: 'swarovski',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A luxury crystal and jewelry store offering exquisite crystal figurines, jewelry, and accessories. Discover premium crystal products and elegant designs.',
     logo: '/logo/swaro visky.jpg',
     backgroundImage: '/shops/swarovski web.JPG',
     category: 'Lifestyle',
@@ -1959,7 +1926,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Syed Royal Optics',
     slug: 'syed-royal-optics',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'An optical store offering prescription glasses, sunglasses, and eye care services. Find the perfect eyewear to match your style and vision needs.',
     logo: '/logo/syed royal optics.jpg',
     backgroundImage: '/shops/syed royal optics web.JPG',
     category: 'Lifestyle',
@@ -1975,7 +1942,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Tagheuer',
     slug: 'tagheuer',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A luxury watch brand offering premium Swiss timepieces. Discover precision-engineered watches combining elegance with performance.',
     logo: '/logo/tag heuer.jpg',
     backgroundImage: '/shops/tagheuer web.JPG',
     category: 'Lifestyle',
@@ -1991,7 +1958,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Tayyab Jewelers',
     slug: 'tayyab-jewelers',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A premium jewelry store offering fine gold, diamond, and gemstone collections. Discover elegant jewelry pieces with exquisite craftsmanship.',
     logo: '/logo/tayyab.jpg',
     backgroundImage: '/shops/tayyab jewelers web.JPG',
     category: 'Lifestyle',
@@ -2005,9 +1972,9 @@ export const storeDetails: StoreDetail[] = [
     }
   },
   {
-    name: 'Tessoro',
-    slug: 'tessoro',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    name: 'Tesoro',
+    slug: 'tesoro',
+    description: 'A lifestyle and accessories store offering quality products for everyday needs. Discover stylish essentials and functional items.',
     logo: '/logo/tesoro.jpg',
     backgroundImage: '/shops/tesoro web.JPG',
     category: 'Lifestyle',
@@ -2023,7 +1990,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'The Body Shop',
     slug: 'the-body-shop',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A beauty and skincare store offering natural and ethically sourced cosmetics, skincare, and personal care products. Discover quality beauty essentials.',
     logo: '/logo/the body shop.jpg',
     backgroundImage: '/shops/the body shop web.JPG',
     category: 'Lifestyle',
@@ -2055,7 +2022,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Ultra Club',
     slug: 'ultra-club',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A footwear brand offering quality shoes for men and women. Discover stylish and comfortable footwear with modern designs.',
     logo: '/logo/ultra club.jpg',
     backgroundImage: '/shops/ultra club web.JPG',
     category: 'Lifestyle',
@@ -2071,7 +2038,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Wasim Badami by Hemani',
     slug: 'wasim-badami-by-hemani',
-    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    description: 'A jewelry and accessories store offering fine jewelry and fashion accessories. Discover elegant pieces designed by Wasim Badami.',
     logo: '/logo/wasim badami.jpg',
     backgroundImage: '/shops/wasim badami by hemani mobile.JPG',
     category: 'Lifestyle',
@@ -2087,7 +2054,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Abc Fragrance',
     slug: 'abc-fragrance',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fragrance store offering premium perfumes and colognes for men and women. Discover exclusive scents and gift sets.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2103,7 +2070,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'AMD',
     slug: 'amd',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     logo: '/logo/MARIA B.jpg',
     contact: {
       phone: '+971-50-501-8573'
@@ -2120,7 +2087,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Amir',
     slug: 'amir',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering elegant clothing and accessories. Discover sophisticated designs for contemporary style.',
     logo: '/logo/kayseria logo.jpg',
     contact: {
       phone: '+971-50-501-8573'
@@ -2137,7 +2104,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Bareeze',
     slug: 'bareeze',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A premium fashion brand offering quality clothing and textiles. Discover elegant designs and premium fabrics for men and women.',
     logo: '/logo/junaid jamshed logo.png',
     contact: {
       phone: '+971-50-501-8573'
@@ -2154,7 +2121,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Batik',
     slug: 'batik',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand specializing in traditional batik designs and contemporary clothing. Discover unique patterns and modern styles.',
     logo: '/logo/batik studio logo.jpg',
     contact: {
       phone: '+971-50-501-8573'
@@ -2171,7 +2138,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Beech Tree',
     slug: 'beech-tree',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday style.',
     // logo: '/logo/bonanza satrangi.jpg',
     contact: {
       phone: '+971-50-501-8573'
@@ -2188,7 +2155,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Bonanza Satrangi Beauty',
     slug: 'bonanza-satrangi-beauty',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A beauty and cosmetics store offering makeup, skincare, and personal care products. Discover quality beauty essentials from Bonanza Satrangi.',
     // logo: '/logo/bonanza satrangi.jpg',
     contact: {
       phone: '+971-50-501-8573'
@@ -2205,7 +2172,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Borjan',
     slug: 'borjan',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A footwear brand offering stylish and comfortable shoes, bags, and accessories. Discover quality leather products for men and women.',
     logo: '/logo/monark.jpg',
     contact: {
       phone: '+971-50-501-8573'
@@ -2222,7 +2189,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Brackets',
     slug: 'brackets',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     logo: '/logo/MARIA B.jpg',
     contact: {
       phone: '+971-50-501-8573'
@@ -2239,7 +2206,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Charizma',
     slug: 'charizma',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     logo: '/logo/junaid jamshed logo.png',
     contact: {
       phone: '+971-50-501-8573'
@@ -2256,7 +2223,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Chinyere',
     slug: 'chinyere',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2272,7 +2239,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Chunri',
     slug: 'chunri',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2288,7 +2255,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Corio',
     slug: 'corio',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2304,7 +2271,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Dinners',
     slug: 'dinners',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2320,7 +2287,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Dynasty',
     slug: 'dynasty',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2336,7 +2303,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'ECS',
     slug: 'ecs',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2352,7 +2319,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Edenrobe',
     slug: 'edenrobe',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2368,7 +2335,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Elegant',
     slug: 'elegant',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2384,7 +2351,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Excel',
     slug: 'excel',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2400,7 +2367,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Furor',
     slug: 'furor',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2416,7 +2383,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Generation',
     slug: 'generation',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2432,7 +2399,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Hi Volts',
     slug: 'hi-volts',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2448,7 +2415,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Ideas',
     slug: 'ideas',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2462,26 +2429,9 @@ export const storeDetails: StoreDetail[] = [
     }
   },
   {
-    name: 'Islamic Honey Center',
-    slug: 'ilamic-honey-center',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/logo/MI.jpg',
-    contact: {
-      phone: '+971-50-501-8573'
-    },
-    category: 'Fashion',
-    hasOffers: true,
-    backgroundImage: '/shops/islamic honey center web.JPG',
-    location: {
-      level: 'First Floor',
-      parking: 'P2, Grand Parking',
-      mapPosition: { x: 20, y: 50 }
-    }
-  },
-  {
     name: 'Jiyas Creation',
     slug: 'jiyas-creation',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2498,7 +2448,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Lawrancepur',
     slug: 'lawrancepur',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2514,7 +2464,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Little People',
     slug: 'little-people',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2530,7 +2480,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Logo',
     slug: 'logo',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     logo: '/logo/Breakout logo.png',
     contact: {
       phone: '+971-50-501-8573'
@@ -2547,7 +2497,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'M/Basic',
     slug: 'm-basic',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2563,7 +2513,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Maria B',
     slug: 'maria-b',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     logo: '/logo/MARIA B.jpg',
     contact: {
       phone: '+971-50-501-8573'
@@ -2578,16 +2528,15 @@ export const storeDetails: StoreDetail[] = [
     }
   },
   {
-    name: 'Minnie Mirrors',
-    slug: 'minnie-mirrors',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '/logo/MI.jpg',
+    name: 'Minnie Minors',
+    slug: 'minnie-minors',
+    description: 'A vibrant children\'s clothing store offering a wide selection of colorful apparel and accessories for kids. Discover fun designs, characters, and stylish outfits perfect for little ones.',
     contact: {
       phone: '+971-50-501-8573'
     },
-    category: 'Fashion',
+    category: 'Kids & Baby',
     hasOffers: true,
-    backgroundImage: '/shops/minnie-mirrors web.JPG',
+    backgroundImage: '/shops/minnie minors web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
@@ -2597,7 +2546,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Mona',
     slug: 'mona',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     logo: '/logo/monark.jpg',
     contact: {
       phone: '+971-50-501-8573'
@@ -2614,7 +2563,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Nakoosh',
     slug: 'nakoosh',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2630,7 +2579,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Nishat',
     slug: 'nishat',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2646,7 +2595,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Oaks',
     slug: 'oaks',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2662,7 +2611,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'One',
     slug: 'one',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2678,7 +2627,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Out Fitters',
     slug: 'out-fitters',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -2694,7 +2643,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Revolution London',
     slug: 'revolution-london',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2710,7 +2659,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'RTH',
     slug: 'rth',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2726,7 +2675,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Sana Safinaz',
     slug: 'sana-safinaz',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2742,7 +2691,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Siraj Sons Silver Shop',
     slug: 'siraj-sons-silver-shop',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2758,7 +2707,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Sohaye',
     slug: 'sohaye',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2774,7 +2723,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Sowearg',
     slug: 'sowearg',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2790,7 +2739,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Stylo',
     slug: 'stylo',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2806,7 +2755,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Swiss Arabia',
     slug: 'swiss-arabia',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2822,7 +2771,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Threads and Motys',
     slug: 'threads-and-motys',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2838,7 +2787,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Tiny Years',
     slug: 'tiny-years',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2854,7 +2803,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Toy Club',
     slug: 'toy-club',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2870,7 +2819,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Umaiza',
     slug: 'umaiza',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2886,7 +2835,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Uniworth',
     slug: 'uniworth',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2902,7 +2851,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Unze',
     slug: 'unze',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2918,7 +2867,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Vereity Bags and Costmetics',
     slug: 'vereity-bags-and-costmetics',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2934,7 +2883,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Zeen',
     slug: 'zeen',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2950,7 +2899,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Zubaidas',
     slug: 'zubaidas',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     contact: {
       phone: '+971-501-8573'
     },
@@ -2967,7 +2916,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: '361',
     slug: '361',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     // logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
@@ -2984,7 +2933,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'a and i',
     slug: 'a-and-i',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     // logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
@@ -3001,7 +2950,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Ali Baba',
     slug: 'ali-baba',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     // logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
@@ -3018,7 +2967,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Anamta Fateh',
     slug: 'anamta-fateh',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     // logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
@@ -3035,7 +2984,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Anaya Jewelery',
     slug: 'anaya-jewelery',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     // logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
@@ -3052,7 +3001,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Apavi Shoes',
     slug: 'apavi-shoes',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     // logo: '/logo/apavi.jpg',
     contact: {
       phone: '+971-501-8573'
@@ -3069,7 +3018,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Bling Collection',
     slug: 'bling-collection',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     // logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'
@@ -3086,7 +3035,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Dare to Dazzle',
     slug: 'dare-to-dazzle',
-    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    description: 'A fashion brand offering contemporary clothing and accessories. Discover stylish designs for modern everyday wear.',
     // logo: '/.jpp',
     contact: {
       phone: '+971-501-8573'

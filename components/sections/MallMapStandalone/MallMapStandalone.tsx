@@ -46,7 +46,7 @@
 //     ],
 //   },
 
-//   "Jafeer Jees": {
+//   "Jaffer Jees": {
 //     points: [
 //       { x: 49.5, y: 28.8 },
 //       { x: 52.2, y: 30 },
@@ -582,7 +582,7 @@ const SHOP_AREAS: Record<string, ShopArea> = {
     ],
   },
 
-  "Jafeer Jees": {
+  "Jaffer Jees": {
     points: [
       { x: 49.2, y: 28.4 },
       { x: 51.7, y: 29.5 },
@@ -600,7 +600,7 @@ const SHOP_AREAS: Record<string, ShopArea> = {
       { x: 51.8, y: 36.5 },
     ],
   },
-  "Hussain Jewlers": {
+  "Hussain Jewelers": {
     points: [
       { x: 54.6, y: 30.3 },
       { x: 56.8, y: 30.1 },
@@ -637,6 +637,14 @@ const SHOP_AREAS: Record<string, ShopArea> = {
       { x: 73.5, y: 43.8 }, 
       { x: 70.6, y: 43.8 }, 
 
+    ],
+  },
+  "LADY PRIVACY":{
+    points: [
+      { x: 73.5, y: 30.6 },
+      { x: 76.1, y: 31.8 },
+      { x: 76.1, y: 36.2 },
+      { x: 73.5, y: 36.2 },
     ],
   },
   FPL: {
@@ -689,7 +697,7 @@ const SHOP_AREAS: Record<string, ShopArea> = {
       { x: 19.4, y: 63 },
     ],
   },
-  TESRO:{
+  TESORO:{
     points: [
       { x: 20.7, y: 53.9 },
       { x: 22, y: 53.9 },
@@ -697,7 +705,7 @@ const SHOP_AREAS: Record<string, ShopArea> = {
       { x: 20.7, y: 63 },
     ],  
   },
-  HOPNOTCH:{
+  'HOP SCOTCH':{
     points: [
       { x: 22.2, y: 53.9 },
       { x: 24.8, y: 53.9 },
@@ -776,6 +784,40 @@ const SHOP_AREAS: Record<string, ShopArea> = {
       
     ],
   },
+  "AL SYED OPTICS":{
+    points:[
+      { x: 46.6, y: 60.8 },
+      { x: 48, y: 60.8 },
+      { x: 48, y: 63 },
+      { x: 46.6, y: 63 },
+
+    ]
+  },
+  "TEST JEWELERS":{
+    points:[
+      { x: 48, y: 60.8 },
+      { x: 48.95, y: 60.8 },
+      { x: 48.95, y: 63 },
+      { x: 48, y: 63 },
+    ]
+  },
+  "JUICE FRUITY":{
+    points:[
+      { x: 48.99, y: 60.8 },
+      { x: 49.9, y: 60.8 },
+      { x: 49.9, y: 63 },
+      { x: 48.99, y: 63 },
+    ]
+  },
+  "GULZARI OPTICS":{
+    points:[
+      { x: 50.1, y: 60.8 },
+      { x: 51.6, y: 60.8 },
+      { x: 51.6, y: 63 },
+      { x: 50.1, y: 63 },
+    ]
+  },
+ 
   "BODY SHOP":{
     points: [
       { x: 51.8, y: 61.2 },
@@ -941,7 +983,7 @@ const SHOP_AREAS: Record<string, ShopArea> = {
       { x: 41, y: 36.6 },
     ],
   },
-  Lulusa: {
+  LULLUSAR: {
     points: [
       { x: 47.2, y: 30.8 },
       { x: 49, y: 30.8 },

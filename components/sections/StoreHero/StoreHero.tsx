@@ -167,7 +167,7 @@ const StoreHero = ({ store }: StoreHeroProps) => {
           },
         }}
       >
-        {backgroundImageSrc ? (
+                {backgroundImageSrc ? (
           <Image
             src={backgroundImageSrc}
             alt={store.name}
@@ -176,7 +176,8 @@ const StoreHero = ({ store }: StoreHeroProps) => {
             sizes="100vw"
             style={{
               objectFit: "cover",
-              objectPosition: objectPosition
+              objectPosition: objectPosition,
+              transform: "scale(1)",
             }}
           />
         ) : (
