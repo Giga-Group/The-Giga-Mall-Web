@@ -164,6 +164,7 @@ export const getMobileBrandImage = (originalImage: string, brandName?: string, b
     'f-optical-and-watch': '/shops/f optical and watch mobile.JPG',
     'foot-and-leather': '/shops/foot and leather mobile.JPG',
     'h-n-h-decor': '/shops/h n h decor mobile.JPG',
+    // 'imc': '/shops/imc mobile.JPG',
     'kapok': '/shops/kapok mobile.JPG',
     'king-coffee': '/shops/king coffee mobile.JPG',
     'melon-box': '/shops/melon box mobile.JPG',
@@ -238,6 +239,17 @@ export const getMobileBrandImage = (originalImage: string, brandName?: string, b
     'zeen': '/shops/zeen mobile.JPG',
     'zubaidas': '/shops/zubaidas mobile.JPG',
     
+    '361':'/shops/361 mobile.JPG',
+    'a-and-i': '/shops/a and i mobile.JPG',
+    'al-baik': '/shops/al baik mobile.JPG',
+    'ali-baba': '/shops/alibaba mobile.JPG',
+    'anamta-fateh': '/shops/anamta fateh mobile.JPG',
+    'anaya-jewelery': '/shops/anaya jewelery mobile.JPG',
+    'apavi-shoes': '/shops/apavi shoes mobile.JPG',
+    'bling-collection': '/shops/bling collection mobile.JPG',
+    'minime-kids-mobile': '/shops/minime kids mobile.JPG',
+    'dare-to-dazzle': '/shops/dare to dazzle mobile.JPG'
+
   };
 
   // Try to find mobile image by slug first (most reliable)

@@ -376,6 +376,33 @@ const defaultStores: Store[] = [
   { name: 'Vereity Bags and Costmetics', slug: 'vereity-bags-and-costmetics'},
   { name: 'Zeen', slug:'zeen'},
   { name: 'Zubaidas', slug:'zubaidas'},
+  { name: '361', slug: '361'},
+  { name: 'a and i', slug: 'a-and-i'},
+  { name: 'Al Baik', slug: 'al-baik'},
+  { name: 'Ali Baba', slug: 'ali-baba'},
+  { name: 'Anamta Fateh', slug: 'anamta-fateh'},
+  { name: 'Anaya Jewelery', slug: 'anaya-jewelery'},
+  { name: 'Apavi Shoes', slug: 'apavi-shoes'},
+  { name: 'Bling Collection', slug: 'bling-collection'},
+  { name: 'Minime Kids Mobile', slug: 'minime-kids-mobile'},
+  { name: 'Ciggeretes and Choclates', slug: 'ciggerete-and-choclates'},
+  { name: 'Dare to Dazzle', slug: 'dare-to-dazzle'},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
+  { name: '', slug: ''},
 ];
 
 // Helper function to check if a name matches viewBy filter
@@ -402,7 +429,7 @@ const matchesViewBy = (name: string, viewBy: string): boolean => {
 
 const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps) => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'), { noSsr: true });
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const { filters } = useFilters();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -410,17 +437,16 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
   const itemsPerPage = 5;
   
   // Get initial count from URL or default
-  // Default to desktop (10) on server to avoid hydration mismatch
   const getInitialCount = () => {
+    if (typeof window === 'undefined') return isMobile ? 6 : 10;
+    
     const urlCount = searchParams.get('show');
     if (urlCount) {
       const count = parseInt(urlCount);
-      // Ensure the count is valid - default to 10 (desktop) on server
-      if (isNaN(count)) return 10;
-      return Math.max(count, 10);
+      // Ensure the count is valid
+      return isNaN(count) ? (isMobile ? 6 : 10) : Math.max(count, isMobile ? 6 : 10);
     }
-    // Default to desktop count (10) to match server render
-    return 10;
+    return isMobile ? 6 : 10;
   };
   
   const [visibleCount, setVisibleCount] = useState(getInitialCount);

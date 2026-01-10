@@ -2265,7 +2265,7 @@ export const storeDetails: StoreDetail[] = [
     name: 'Zara',
     slug: 'zara',
     description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
-    logo: '',
+    // logo: '',
     contact: {
       phone: '+971-50-501-8573'
     },
@@ -3344,6 +3344,177 @@ export const storeDetails: StoreDetail[] = [
     category: 'Fashion',
     hasOffers: true,
     backgroundImage: '/shops/zubaidas web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+ 
+  {
+    name: '361',
+    slug: '361',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/361 web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'a and i',
+    slug: 'a-and-i',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/a and i web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Al Baik',
+    slug: 'al-baik',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/al baik web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Ali Baba',
+    slug: 'ali-baba',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/alibaba web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Anamta Fateh',
+    slug: 'anamta-fateh',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/anamta fateh web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Anaya Jewelery',
+    slug: 'anaya-jewelery',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/anaya jewelery web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Apavi Shoes',
+    slug: 'apavi-shoes',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/apavi shoes web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Bling Collection',
+    slug: 'bling-collection',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/bling collection web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Minime Kids Mobile',
+    slug: 'minime-kids-mobile',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/minime kids web.JPG',
+    location: {
+      level: 'First Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 20, y: 50 }
+    }
+  },
+  {
+    name: 'Dare to Dazzle',
+    slug: 'minime-kids-mobile',
+    description: 'Runway-inspired collections, refreshed weekly, for modern everyday style. Fast fashion that doesn\'t compromise on quality.',
+    // logo: '/.jpp',
+    contact: {
+      phone: '+971-501-8573'
+    },
+    category: 'Fashion',
+    hasOffers: true,
+    backgroundImage: '/shops/minime kids web.JPG',
     location: {
       level: 'First Floor',
       parking: 'P2, Grand Parking',
