@@ -106,7 +106,33 @@ export default function EntertainPage() {
       link: "/fun-city",
     },
   ];
-
+const entertainmentCards = [
+  {
+    title: "Cinepax Cinema",
+    image: "/Entertain/SpaceCraft Horizontal.jpg",
+    link: "/entertain/cinepax"
+  },
+  {
+    title: "Bowling Alley",
+    image: "/Entertain/bowling 3.jpg",
+    link: "/entertain/bowling-alley"
+  },
+  {
+    title: "VI Rides Arcade",
+    image: "/Entertain/Vi Rides Horizontal.jpg",
+    link: "/entertain/vi-rides"
+  },
+  {
+    title: "VR Kings",
+    image: "/Entertain/VR Kings Horizontal.jpg",
+    link: "/entertain/vr-kings"
+  },
+  {
+    title: "VR Kings",
+    image: "/Entertain/VR Kings Horizontal.jpg",
+    link: "/entertain/vr-kings"
+  },
+];
   return (
     <>
       <Header />
@@ -276,36 +302,111 @@ export default function EntertainPage() {
           </Box>
         </Box>
         {/* ================= END HERO SECTION ================= */}
+        
+       {/* ================= MINIMAL ENTERTAINMENT CARDS SECTION ================= */}
+<Box
+  sx={{
+    backgroundColor: "#f9f9f9",
+    py: { xs: 8, md: 10 },
+    position: "relative",
+  }}
+>
+  <Box sx={{ maxWidth: "1600px", mx: "auto", px: { xs: 3, md: 6 } }}>
+    {/* Section Heading - WITHOUT MOTION TEMPORARILY */}
+    <Box>
+      <Typography
+        sx={{
+          fontFamily: '"Arvo", serif',
+          fontSize: { xs: "1.8rem", md: "2.5rem" },
+          color: "#D19F3B",
+          mb: 2,
+          textAlign: "left",
+        }}
+      >
+        Entertainment & Attractions
+      </Typography>
+    </Box>
 
-        {/* ================= ATTRACTIONS & ACTIVITIES ================= */}
-        <Box
-          id="attractions"
-          sx={{
-            backgroundColor: "#fdfdfd",
-            py: { xs: 8, md: 8 },
-            overflow: "hidden",
-          }}
-        >
-          <Box sx={{ maxWidth: "1600px", mx: "auto", px: { xs: 3, md: 6 } }}>
-            {/* HEADING - WITH ZOOM ANIMATION */}
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+    {/* Image Cards with Title Below */}
+    <Box
+      sx={{
+        display: "grid",
+        gridTemplateColumns: {
+          xs: "1fr",
+          sm: "repeat(2, 1fr)",
+          md: "repeat(5, 1fr)",
+        },
+        gap: { xs: 3, md: 4 },
+      }}
+    >
+      {entertainmentCards.map((card, index) => (
+        <Box key={`entertainment-card-${index}`}>
+          <Link
+            href={card.link}
+            style={{ textDecoration: "none", display: "block" }}
+          >
+            <Box
+              sx={{
+                position: "relative",
+                height: { xs: "200px", md: "250px" },
+                overflow: "hidden",
+                boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                border: "2px solid transparent",
+                transition: "all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+                "&:hover": {
+                  transform: "translateY(-8px)",
+                  boxShadow: "0 15px 35px rgba(209, 159, 59, 0.2)",
+                  border: "2px solid #D19F3B",
+                },
+              }}
             >
-              <Typography
-                sx={{
-                  fontFamily: '"Arvo", serif',
-                  fontSize: { xs: "2rem", sm: "2.5rem", md: "3.2rem" },
-                  color: "#D19F3B",
-                  mb: { xs: 4, md: 6 },
-                  textAlign: { xs: "center", md: "left" },
+              <Image
+                src={card.image}
+                alt={card.title}
+                fill
+                style={{
+                  objectFit: "cover",
                 }}
-              >
-                Attractions & Activities
-              </Typography>
-            </motion.div>
+              />
+            </Box>
+          </Link>
+        </Box>
+      ))}
+    </Box>
+  </Box>
+</Box>
+{/* ================= END MINIMAL ENTERTAINMENT CARDS SECTION ================= */}
+       {/* ================= ATTRACTIONS & ACTIVITIES ================= */}
+<Box
+  id="attractions"
+  sx={{
+    backgroundColor: "#fdfdfd",
+    py: { xs: 8, md: 8 },
+    overflow: "hidden",
+  }}
+>
+  <Box sx={{ maxWidth: "1600px", mx: "auto", px: { xs: 3, md: 6 } }}>
+    {/* HEADING - WITH ZOOM ANIMATION - ADD A KEY HERE */}
+    <motion.div
+      key="attractions-heading" // ADD THIS
+      initial={{ scale: 0.8, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      <Typography
+        sx={{
+          fontFamily: '"Arvo", serif',
+          fontSize: { xs: "2rem", sm: "2.5rem", md: "3.2rem" },
+          color: "#D19F3B",
+          mb: { xs: 4, md: 6 },
+          textAlign: { xs: "center", md: "left" },
+        }}
+      >
+        Attractions & Activities
+      </Typography>
+    </motion.div>
+    {/* ... rest of your attractions section code ... */}
 
             {/* ================= MOBILE CAROUSEL ================= */}
             {isMobile ? (
