@@ -353,40 +353,52 @@ export default function EntertainPage() {
     {/* Search and Filter Section - Full Width */}
     <Box
       sx={{
-        width: "100vw",
-        position: "relative",
-        left: "50%",
-        right: "50%",
-        marginLeft: "-50vw",
-        marginRight: "-50vw",
+        display: "grid",
+        gridTemplateColumns: {
+          xs: "repeat(2, 1fr)",
+          sm: "repeat(2, 1fr)",
+          md: "repeat(5, 1fr)",
+        },
+        gap: { xs: 3, md: 4 },
       }}
     >
-      <Suspense fallback={<Box sx={{ py: 4, px: { xs: 2, sm: 4, md: 6, lg: 10 } }}>Loading filters...</Box>}>
-        <SearchAndFilter 
-          pageType="shop"
-          categories={[
-            { value: '', label: 'All Categories' },
-            { value: 'cinema', label: 'Cinema' },
-            { value: 'arcade', label: 'Arcade & Gaming' },
-            { value: 'sports', label: 'Sports & Recreation' },
-            { value: 'family', label: 'Family Entertainment' }
-          ]}
-          subcategories={[
-            { value: '', label: 'All Subcategories' }
-          ]}
-          searchPlaceholder="Search for entertainment or attractions"
-          offersLabel="Show entertainment with offers only"
-        />
-      </Suspense>
+      {entertainmentCards.map((card, index) => (
+        <Box key={`entertainment-card-${index}`}>
+          <Link
+            href={card.link}
+            style={{ textDecoration: "none", display: "block" }}
+          >
+            <Box
+              sx={{
+                position: "relative",
+                height: { xs: "200px", md: "250px" },
+                overflow: "hidden",
+                boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+                border: "2px solid transparent",
+                transition: "all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+                "&:hover": {
+                  transform: "translateY(-8px)",
+                  boxShadow: "0 15px 35px rgba(209, 159, 59, 0.2)",
+                  border: "2px solid #D19F3B",
+                },
+              }}
+            >
+              <Image
+                src={card.image}
+                alt={card.title}
+                fill
+                style={{
+                  objectFit: "cover",
+                }}
+              />
+            </Box>
+          </Link>
+        </Box>
+      ))}
     </Box>
-
-    {/* Store Grid Section */}
-    <Suspense fallback={<Box sx={{ py: 4, px: { xs: 2, sm: 4, md: 6, lg: 10 } }}>Loading entertainment...</Box>}>
-      <StoreGrid items={entertainmentItems} basePath="/entertain" />
-    </Suspense>
-  </FilterProvider>
+  </Box>
 </Box>
-{/* ================= END ENTERTAINMENT & ATTRACTIONS GRID SECTION ================= */}
+{/* ================= END MINIMAL ENTERTAINMENT CARDS SECTION ================= */}
        {/* ================= ATTRACTIONS & ACTIVITIES ================= */}
 <Box
   id="attractions"

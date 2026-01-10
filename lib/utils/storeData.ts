@@ -924,6 +924,22 @@ export const storeDetails: StoreDetail[] = [
       mapPosition: { x: 75, y: 45 }
     }
   },
+  {
+    name: 'Speed Sport',
+    slug: 'speed-sports',
+    description: 'A footwear and fashion accessories brand offering sleek designs with everyday comfort.',
+    // logo: '/logo/sport snation.jpg',
+    backgroundImage: '/shops/sport snation web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
   // {
   //   name: 'Sweet and Salt',
   //   slug: 'sweet-and-salt',
@@ -1221,8 +1237,8 @@ export const storeDetails: StoreDetail[] = [
   },
   {
     name: 'Courger',
-    slug: 'courger',
-    description: 'A clothing brand offering stylish apparel for men and women. Discover contemporary fashion including casual wear, shirts, and modern clothing designs.',
+    slug: 'cougar',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
     logo: '/logo/cougar.jpg',
     backgroundImage: '/shops/couger web.JPG',
     category: 'Lifestyle',
@@ -1241,6 +1257,22 @@ export const storeDetails: StoreDetail[] = [
     description: 'A lifestyle brand offering comfortable footwear including clogs, sandals, and slippers, plus apparel like jackets and shirts. Discover versatile and comfortable products for men, women, and children.',
     logo: '/logo/crocs.jpg',
     backgroundImage: '/shops/crocs web.JPG',
+    category: 'Lifestyle',
+    contact: {
+      phone: '+971-50-501-8610'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 75, y: 45 }
+    }
+  },
+  {
+    name: 'Cross Stitch',
+    slug: 'cross-stitch',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
+    // logo: '/logo/crocs.jpg',
+    backgroundImage: '/shops/cross stitch web.JPG',
     category: 'Lifestyle',
     contact: {
       phone: '+971-50-501-8610'
@@ -1300,9 +1332,9 @@ export const storeDetails: StoreDetail[] = [
     }
   },
   {
-    name: 'Ethnc',
-    slug: 'ethnc',
-    description: 'A clothing brand offering traditional and ethnic-inspired apparel. Discover quality garments with cultural designs, authentic craftsmanship, and contemporary styles.',
+    name: 'Ethnic',
+    slug: 'ethnic',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
     logo: '/logo/ethnc.jpg',
     backgroundImage: '/shops/ethnc web.JPG',
     category: 'Lifestyle',
@@ -1383,7 +1415,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Hussain Jewelers',
     slug: 'hussain-jewelers',
-    description: 'A premium jewelry store offering exquisite gold, diamond, and gemstone collections. Discover elegant jewelry pieces for special occasions and everyday wear.',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
     logo: '/logo/hussain jewellers.jpg',
     backgroundImage: '/shops/haseen jewelers web.JPG',
     category: 'Lifestyle',
@@ -1572,9 +1604,9 @@ export const storeDetails: StoreDetail[] = [
     }
   },
   {
-    name: 'Khadi',
-    slug: 'khadi',
-    description: 'A traditional clothing and textile store offering handwoven khadi fabrics and garments. Discover authentic traditional wear and natural fabrics.',
+    name: 'Khaadi',
+    slug: 'khaadi',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
     logo: '/logo/khadi.jpg',
     backgroundImage: '/shops/khadi web.JPG',
     category: 'Lifestyle',
@@ -1636,9 +1668,9 @@ export const storeDetails: StoreDetail[] = [
     }
   },
   {
-    name: 'Limelite',
-    slug: 'limelite',
-    description: 'A lifestyle and accessories store offering quality products for everyday needs. Discover stylish essentials and functional items.',
+    name: 'Limelight',
+    slug: 'limelight',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
     logo: '/logo/lime light.jpg',
     backgroundImage: '/shops/limelite web.JPG',
     category: 'Lifestyle',
@@ -1845,9 +1877,9 @@ export const storeDetails: StoreDetail[] = [
     }
   },
   {
-    name: 'Sketchers',
-    slug: 'sketcher',
-    description: 'A footwear brand offering comfortable and stylish shoes for men, women, and children. Discover quality athletic and casual footwear.',
+    name: 'Skechers',
+    slug: 'skechers',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
     logo: '/logo/skecher.jpg',
     backgroundImage: '/shops/sketchers web.JPG',
     category: 'Lifestyle',
@@ -1974,7 +2006,7 @@ export const storeDetails: StoreDetail[] = [
   {
     name: 'Tesoro',
     slug: 'tesoro',
-    description: 'A lifestyle and accessories store offering quality products for everyday needs. Discover stylish essentials and functional items.',
+    description: 'A globally recognized footwear brand offering stylish, durable, and affordable shoes for men, women, and children.',
     logo: '/logo/tesoro.jpg',
     backgroundImage: '/shops/tesoro web.JPG',
     category: 'Lifestyle',
