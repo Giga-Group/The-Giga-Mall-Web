@@ -23,7 +23,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { motion} from "framer-motion";
-import { useState, useEffect, Suspense } from "react";
+import { Suspense } from "react";
 import { FilterProvider } from "@/lib/contexts/FilterContext";
 import SearchAndFilter from "@/components/sections/SearchAndFilter";
 import StoreGrid from "@/components/sections/StoreGrid";
@@ -40,7 +40,6 @@ const entertainmentItems: Store[] = [
   {
     name: "Bowling Alley",
     slug: "bowling-alley",
-    logo: null,
     category: "sports",
   },
   {
@@ -58,13 +57,11 @@ const entertainmentItems: Store[] = [
   {
     name: "Funcity",
     slug: "funcity",
-    logo: null,
     category: "family",
   },
   {
     name: "SpaceCraft",
     slug: "spacecraft",
-    logo: null,
     category: "cinema",
   },
 ];

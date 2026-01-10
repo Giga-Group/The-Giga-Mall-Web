@@ -46,7 +46,6 @@ export const entertainDetails: EntertainDetail[] = [
     name: 'Bowling Alley',
     slug: 'bowling-alley',
     description: 'Strike up some fun at our modern bowling alley! Perfect for families, friends, and corporate events. Enjoy state-of-the-art lanes, scoring systems, and a vibrant atmosphere.',
-    logo: null,
     backgroundImage: '/Entertain/bowling 3.jpg',
     category: 'Sports & Recreation',
     contact: {
@@ -94,7 +93,6 @@ export const entertainDetails: EntertainDetail[] = [
     name: 'Funcity',
     slug: 'funcity',
     description: 'The ultimate family entertainment destination! Funcity offers a wide range of activities including rides, games, and attractions designed for the whole family.',
-    logo: null,
     backgroundImage: '/Entertain/Funcity Horizontal.jpg',
     category: 'Family Entertainment',
     contact: {
@@ -110,7 +108,6 @@ export const entertainDetails: EntertainDetail[] = [
     name: 'SpaceCraft',
     slug: 'spacecraft',
     description: 'Embark on a cinematic journey at SpaceCraft! Premium movie experience with cutting-edge technology, luxury seating, and an immersive atmosphere.',
-    logo: null,
     backgroundImage: '/Entertain/SpaceCraft Horizontal.jpg',
     category: 'Cinema',
     contact: {
