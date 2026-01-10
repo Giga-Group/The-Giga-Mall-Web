@@ -178,7 +178,7 @@ const serviceHighlights = [
 ];
 
 export default function ServicesPage() {
-  const [expanded, setExpanded] = useState<string | false>("opening-hours");
+  const [expanded, setExpanded] = useState<string | false>(false);
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
@@ -212,7 +212,7 @@ export default function ServicesPage() {
               px: { xs: 2, sm: 4, md: 6, lg: 10 },
               mt: { xs: "auto", sm: "auto", md: "auto", lg: "4rem" },
               // pt: { xs: 4, sm: 5, md: 6 },
-              pb: { xs: 3, sm: 4, md: 5 },
+              // pb: { xs: 3, sm: 4, md: 5 },
             }}
           >
             <Typography
@@ -227,7 +227,7 @@ export default function ServicesPage() {
                 },
                 fontWeight: 400,
                 color: "#000000",
-                marginBottom: { xs: 2, md: 3 },
+                // marginBottom: { xs: 2, md: 2 },
                 letterSpacing: "0.02em",
                 lineHeight: 1.3,
               }}
@@ -380,8 +380,8 @@ export default function ServicesPage() {
                       {/* Image */}
                       <Box
                         sx={{
-                          width: 180,
-                          height: 180,
+                          width: 120,
+                          height: 120,
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
@@ -446,8 +446,8 @@ export default function ServicesPage() {
                     {/* Image container */}
                     <Box
                       sx={{
-                        width: { xs: 150, sm: 140, md: 160 },
-                        height: { xs: 150, sm: 140, md: 160 },
+                        width: { xs: 100, sm: 110, md: 120 },
+                        height: { xs: 100, sm: 110, md: 120 },
                         borderRadius: "12px",
                         display: "flex",
                         alignItems: "center",

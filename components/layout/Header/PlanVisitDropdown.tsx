@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useState } from "react";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import LocalParkingIcon from "@mui/icons-material/LocalParking";
 
 interface PlanVisitDropdownProps {
   isOpen: boolean;
@@ -23,11 +22,6 @@ const planVisitItems = [
     label: "Getting here",
     href: "/opening-hours?tab=getting-here",
     icon: <LocationOnIcon />,
-  },
-  {
-    label: "Parking",
-    href: "/opening-hours?tab=parking",
-    icon: <LocalParkingIcon />,
   },
 ];
 

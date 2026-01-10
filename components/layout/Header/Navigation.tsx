@@ -16,7 +16,9 @@ interface NavigationProps {
 }
 
 const Navigation = ({ navItems, onShopHover, onDineHover, /* onStayHover, */ onServicesHover, /* onEntertainHover, onPlanVisitHover, */ onClearHover, isSmallScreen }: NavigationProps) => {
-  if (isSmallScreen) return null;
+  if (isSmallScreen) {
+    return <Box sx={{ display: 'none' }} />;
+  }
 
   return (
     <Box sx={{ 

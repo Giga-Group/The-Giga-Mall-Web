@@ -2,6 +2,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ServicesPageClient from '@/components/sections/ServicesPageClient';
 import type { Store } from '@/components/sections/StoreGrid/StoreGrid';
+import type { PickItem } from '@/components/sections/OurPicks/OurPicks';
 import { serviceDetails } from '@/lib/utils/servicesData';
 
 // Convert serviceDetails to Store format - this runs on the server
@@ -13,6 +14,25 @@ const services: Store[] = serviceDetails.map(service => ({
   category: service.category,
   logo: service.logo,
 }));
+
+// Get top picks for services
+const servicePicks: PickItem[] = [
+  {
+    image: '/Services/Carrefour web.JPG',
+    name: 'Carrefour',
+    slug: 'carrefour'
+  },
+  {
+    image: '/Services/Dubai Islamic Bank web.JPG',
+    name: 'Dubai Islamic',
+    slug: 'dubai-islamic'
+  },
+  {
+    image: '/Services/derma orchid web.JPG',
+    name: 'Derma Orchid',
+    slug: 'derma-orchid'
+  }
+];
 
 // Add revalidation for ISR (Incremental Static Regeneration)
 export const revalidate = 3600; // Revalidate every hour
@@ -58,7 +78,7 @@ export default function ServicesDirectoryPage() {
           </div>
 
           {/* Client component with FilterProvider */}
-          <ServicesPageClient services={services} />
+          <ServicesPageClient services={services} servicePicks={servicePicks} />
         </div>
       </main>
       <Footer />

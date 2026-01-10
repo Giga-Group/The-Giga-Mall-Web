@@ -461,27 +461,47 @@ const matchesViewBy = (name: string, viewBy: string): boolean => {
 
 const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps) => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'), { noSsr: true });
   const { filters } = useFilters();
   const router = useRouter();
   const searchParams = useSearchParams();
   
   const itemsPerPage = 5;
   
-  // Get initial count from URL or default
+  // Get initial count - use consistent default for SSR (assume desktop)
+  // This ensures server and client render the same initial HTML
   const getInitialCount = () => {
-    if (typeof window === 'undefined') return isMobile ? 6 : 10;
+    // Always return a consistent default for SSR (assume desktop = 10)
+    // We'll update this after mount to match actual screen size
+    if (typeof window === 'undefined') return 10;
     
+    // On client, try to get from URL first
     const urlCount = searchParams.get('show');
     if (urlCount) {
       const count = parseInt(urlCount);
-      // Ensure the count is valid
-      return isNaN(count) ? (isMobile ? 6 : 10) : Math.max(count, isMobile ? 6 : 10);
+      if (!isNaN(count) && count >= 6) {
+        return count;
+      }
     }
-    return isMobile ? 6 : 10;
+    // Default to desktop (10) for initial render to match SSR
+    return 10;
   };
   
   const [visibleCount, setVisibleCount] = useState(getInitialCount);
+  
+  // Update visible count after mount to match actual screen size and URL
+  useEffect(() => {
+    const urlCount = searchParams.get('show');
+    if (urlCount) {
+      const count = parseInt(urlCount);
+      if (!isNaN(count) && count >= 6) {
+        setVisibleCount(Math.max(count, isMobile ? 6 : 10));
+        return;
+      }
+    }
+    // Set to correct default based on screen size
+    setVisibleCount(isMobile ? 6 : 10);
+  }, [isMobile, searchParams]);
 
   // Update URL when visibleCount changes
   useEffect(() => {
@@ -502,18 +522,7 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
     router.replace(newUrl, { scroll: false });
   }, [visibleCount, router, searchParams, isMobile]);
 
-  // Update visible count when mobile/desktop changes
-  useEffect(() => {
-    const urlCount = searchParams.get('show');
-    if (urlCount) {
-      const count = parseInt(urlCount);
-      if (!isNaN(count)) {
-        setVisibleCount(count);
-      }
-    } else {
-      setVisibleCount(isMobile ? 6 : 10);
-    }
-  }, [isMobile, searchParams]);
+  // This effect is now handled in the mounted effect above
 
   // Filter items based on search query, category, viewBy, and offers
   const filteredItems = useMemo(() => {

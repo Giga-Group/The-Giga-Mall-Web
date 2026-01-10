@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { Box, Typography, Link, useMediaQuery, useTheme } from '@mui/material';
 import { Phone } from '@mui/icons-material';
 import Image from 'next/image'; 
@@ -38,12 +39,23 @@ const getDineLogo = (slug?: string): string | null => {
 
 const DineHero = ({ dine }: DineHeroProps) => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('lg'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('lg'), { noSsr: true });
   
-  // Get mobile or desktop image based on screen size
-  const backgroundImageSrc = dine.backgroundImage 
-    ? (isMobile ? getMobileDineImage(dine.backgroundImage, dine.name, dine.slug) : dine.backgroundImage)
-    : null;
+  // Use state to ensure server and client render the same initially (desktop version)
+  const [backgroundImageSrc, setBackgroundImageSrc] = useState<string | null>(
+    dine.backgroundImage || null
+  );
+  
+  // Update image source after hydration to match actual screen size
+  useEffect(() => {
+    if (dine.backgroundImage) {
+      setBackgroundImageSrc(
+        isMobile 
+          ? getMobileDineImage(dine.backgroundImage, dine.name, dine.slug) 
+          : dine.backgroundImage
+      );
+    }
+  }, [isMobile, dine.backgroundImage, dine.name, dine.slug]);
   
   // Get logo from StoreGrid mapping, fallback to dine.logo if available
   let logoPath = getDineLogo(dine.slug) || dine.logo || null;

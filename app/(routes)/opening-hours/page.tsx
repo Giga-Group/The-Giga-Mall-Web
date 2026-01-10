@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 
-const tabItems = ['OPENING HOURS', 'GETTING HERE', 'PARKING'] as const;
+const tabItems = ['OPENING HOURS', 'GETTING HERE'] as const;
 
 // Opening hours data for each category
 interface OpeningHours {
@@ -196,8 +196,6 @@ function OpeningHoursContent() {
     const index =
       tab === 'getting-here'
         ? 1
-        : tab === 'parking'
-        ? 2
         : 0;
 
     setActiveTab(index);
@@ -205,7 +203,6 @@ function OpeningHoursContent() {
 
   const getTabSlug = (index: number) => {
     if (index === 1) return 'getting-here';
-    if (index === 2) return 'parking';
     return 'opening-hours';
   };
 
@@ -216,12 +213,9 @@ function OpeningHoursContent() {
   };
 
   const isGettingHere = activeTab === 1;
-  const isParking = activeTab === 2;
 
   const heroTitle = isGettingHere
     ? 'Getting here'
-    : isParking
-    ? 'Parking'
     : 'Opening hours';
 
   // Get the correct image path from "plan your visit" folder
@@ -232,8 +226,6 @@ function OpeningHoursContent() {
 
   const heroImage = isGettingHere
     ? getHeroImagePath('getting-here.jpg')
-    : isParking
-    ? getHeroImagePath('hallway-garage.jpg')
     : getHeroImagePath('opening-hours.jpg');
 
   return (
@@ -598,124 +590,6 @@ function OpeningHoursContent() {
             </>
           )}
 
-          {activeTab === 2 && (
-            <Box
-              sx={{
-                maxWidth: '1400px',
-                margin: '0 auto',
-                px: { xs: 2, sm: 4, md: 6, lg: 10 },
-                py: { xs: 4, md: 6 },
-                display: 'flex',
-                flexDirection: { xs: 'column', md: 'row' },
-                gap: { xs: 4, md: 6 },
-              }}
-            >
-              {/* Left parking options */}
-              <Box
-                sx={{
-                  flexBasis: { md: '32%' },
-                  maxWidth: { md: '32%' },
-                  borderTop: '1px solid #f0f0f0',
-                }}
-              >
-                {['AVAILABLE PARKING', 'FIND MY CAR', 'VALET PARKING'].map((item, idx) => (
-                  <Box
-                    key={item}
-                    sx={{
-                      borderBottom: '1px solid #f0f0f0',
-                      py: 1.5,
-                      cursor: 'pointer',
-                      fontSize: '0.85rem',
-                      letterSpacing: '0.12em',
-                      textTransform: 'uppercase',
-                      color: idx === 0 ? '#000000' : '#c0c0c0',
-                      fontWeight: idx === 0 ? 600 : 400,
-                    }}
-                  >
-                    {item}
-                  </Box>
-                ))}
-              </Box>
-
-              {/* Right parking list */}
-              <Box
-                sx={{
-                  flex: 1,
-                }}
-              >
-                {[
-                  { name: 'Fashion Parking', slots: 2690, status: 'Available' },
-                  { name: 'Cinema Parking', slots: 4371, status: 'Available' },
-                  { name: 'Zabeel Parking', slots: 2144, status: 'Available' },
-                  { name: 'Fountain Views', slots: 2200, status: 'Available' },
-                ].map((p, idx) => (
-                  <Box
-                    key={p.name}
-                    sx={{
-                      display: 'grid',
-                      gridTemplateColumns: { xs: '1fr', md: 'minmax(0, 1.2fr) minmax(0, 1.2fr) auto' },
-                      alignItems: 'center',
-                      gap: { xs: 1.5, md: 2 },
-                      py: 2.5,
-                      borderBottom: idx === 3 ? 'none' : '1px solid #f0f0f0',
-                    }}
-                  >
-                    <Typography
-                      component="h3"
-                      sx={{
-                        fontFamily: '"Arvo", serif',
-                        fontSize: { xs: '1.2rem', md: '1.4rem' },
-                        fontWeight: 400,
-                      }}
-                    >
-                      {p.name}
-                    </Typography>
-                    <Typography
-                      component="p"
-                      sx={{
-                        fontSize: '0.95rem',
-                      }}
-                    >
-                      Slots:{p.slots}
-                      {' '}
-                      |
-                      {' '}
-                      Status:
-                      {' '}
-                      <Box
-                        component="span"
-                        sx={{
-                          color: '#188038',
-                        }}
-                      >
-                        {p.status}
-                      </Box>
-                    </Typography>
-                    <Box
-                      component="button"
-                      sx={{
-                        justifySelf: { xs: 'flex-start', md: 'flex-end' },
-                        border: '1px solid #000000',
-                        backgroundColor: 'transparent',
-                        padding: '10px 28px',
-                        fontSize: '0.75rem',
-                        letterSpacing: '0.16em',
-                        textTransform: 'uppercase',
-                        cursor: 'pointer',
-                        transition: 'background-color 0.2s ease, color 0.2s ease',
-                        '&:hover': {
-                          backgroundColor: '#000000',
-                          color: '#ffffff',
-                        },
-                      }}
-                    >
-                      Show on map
-                    </Box>
-                  </Box>
-                ))}
-              </Box>
-            </Box>
-          )}
         </Box>
       </main>
       <Footer />

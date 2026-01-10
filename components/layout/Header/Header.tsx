@@ -18,7 +18,7 @@ import { NAV_ITEMS } from '@/lib/utils/constants';
 
 const Header = () => {
   const theme = useTheme();
-  const muiIsSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
+  const muiIsSmallScreen = useMediaQuery(theme.breakpoints.down('md'), { noSsr: true });
   // Default to mobile view to prevent flash on initial load
   const [isSmallScreen, setIsSmallScreen] = useState(true);
   
