@@ -207,7 +207,7 @@ export default function EntertainPage() {
           <Box
             sx={{
               position: "relative",
-              zIndex: 3,
+              zIndex: 3, 
               width: "100%",
               maxWidth: "1400px",
               margin: {
