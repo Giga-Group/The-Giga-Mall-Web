@@ -329,6 +329,7 @@ export default function LeasingPage() {
                 onSubmit={handleSubmit}
                 sx={{
                   position: 'relative',
+                  overflow: 'hidden',
                   backgroundColor: '#ffffff',
                   padding: { xs: '32px 24px', sm: '40px 32px', md: '48px 40px' },
                   borderRadius: '8px',
@@ -337,7 +338,7 @@ export default function LeasingPage() {
                   overflow: 'hidden',
                 }}
               >
-                {/* Gradient background matching footer */}
+                {/* Decorative gradient background - matching footer */}
                 <Box
                   sx={{
                     position: 'absolute',
@@ -352,9 +353,10 @@ export default function LeasingPage() {
                     backgroundBlendMode: 'soft-light, normal',
                   }}
                 />
-                <Box sx={{ position: 'relative', zIndex: 1 }}>
-                  <Typography
+                <Typography
                   sx={{
+                    position: 'relative',
+                    zIndex: 1,
                     fontFamily: '"Arvo", serif',
                     fontWeight: 400,
                     fontSize: { xs: '24px', sm: '28px', md: '32px' },
@@ -368,6 +370,8 @@ export default function LeasingPage() {
 
               <Box
                 sx={{
+                  position: 'relative',
+                  zIndex: 1,
                   display: 'flex',
                   flexDirection: 'column',
                   gap: { xs: 2.5, md: 3 },
@@ -645,7 +649,6 @@ export default function LeasingPage() {
                   Submit Leasing Inquiry
                 </Button>
                 </Box>
-              </Box>
               </Box>
             </Box>
           </Box>

@@ -98,6 +98,68 @@ export const serviceDetails: ServiceDetail[] = [
       parking: 'P1, Main Parking',
       mapPosition: { x: 50, y: 60 }
     }
+  },
+  {
+    name: 'Derma Orchid',
+    slug: 'derma-orchid',
+    description: 'Aesthetic & Skincare Clinic. Highly qualified team of dermatologists, cosmetologists, and certified aestheticians. Offering a wide range of treatments including laser hair removal, whitening, HIFU, BB Glow, PRP, Hydra Facial, hair transplant, chemical peeling, thread lifting, Botox, fillers, Pico Laser, carbon facial, permanent makeup, tattoo removal, and slimming drips. Ladies only.',
+    backgroundImage: '/Services/derma orchid web.JPG',
+    category: 'Clinic',
+    contact: {
+      phone: '+92-332-9785371',
+      email: 'info@dermaorchid.com'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 55, y: 65 }
+    }
+  },
+  {
+    name: 'Aesthetics and Dental Works',
+    slug: 'aesthetics-and-dental-works',
+    description: 'Dental Clinic & Cosmetic Centre offering comprehensive dental and aesthetic services. Services include Dental Implants/Bridges, Dentures/Crowns, Dental cleaning & whitening, Fixed Braces, Hydrafacial/Chemical peel, PRP for Hair & face, and Full body whitening. Experience expert care for your dental and cosmetic needs.',
+    backgroundImage: '/Services/aesthetic n dental work web.JPG',
+    category: 'Clinic',
+    contact: {
+      phone: '+92-333-5545887'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 60, y: 70 }
+    }
+  },
+  {
+    name: 'IMC Integrative Medical Center',
+    slug: 'imc',
+    description: 'Integrative Medical Center offering comprehensive dental care, holistic skin care, and advanced IV therapies. Services include Integrative Dental Care, Holistic Skin Care, Whitening Injections, Glutathione Drips, Skin Brightening Shots, Fat Loss Drips, Stamina Boosters, Immunity Support Drips, IV Probiotics & Peptides, Nutritional Intravenous Therapy, NAD+ Glutathione Therapy, IV for Anti Aging, and Male Hormone Enhancers. Your family dental clinic and skin care destination.',
+    backgroundImage: '/Services/imc web.JPG',
+    category: 'Clinic',
+    contact: {
+      phone: '+92-51-6107253',
+      location: '2A Floor, Shop # 44-47'
+    },
+    location: {
+      level: 'Second Floor',
+      parking: 'P2, Grand Parking',
+      mapPosition: { x: 65, y: 75 }
+    }
+  },
+  {
+    name: 'Pakistan Currency Exchange',
+    slug: 'pakistan-currency-exchange',
+    description: 'Professional currency exchange services for all major currencies. We buy and sell currencies at competitive rates. Also offering international money transfer services through Western Union, MoneyGram, and Ria Money Transfer. Convenient and secure currency exchange for all your travel and business needs.',
+    backgroundImage: '/Services/pakistan currency exchange web.JPG',
+    category: 'Currency Exchange',
+    contact: {
+      phone: '+971-50-501-8611'
+    },
+    location: {
+      level: 'Ground Floor',
+      parking: 'P1, Main Parking',
+      mapPosition: { x: 70, y: 80 }
+    }
   }
 ];
 

@@ -2,14 +2,14 @@
 
 import { Box, Typography, Link, useMediaQuery, useTheme } from '@mui/material';
 import { Phone } from '@mui/icons-material';
-import Image from 'next/image';
+import Image from 'next/image'; 
 import { DineDetail } from '@/lib/utils/dineData';
 import { getMobileDineImage } from '@/lib/utils/constants';
 
 interface DineHeroProps {
   dine: DineDetail;
 }
-
+//Test
 // Helper function to get logo path from dine slug - matches StoreGrid logic
 const getDineLogo = (slug?: string): string | null => {
   if (!slug) return null;

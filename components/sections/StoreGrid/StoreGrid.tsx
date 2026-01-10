@@ -66,7 +66,7 @@ const getStoreLogo = (slug?: string): string | null => {
     'almas': '/logo/almas logo.png',
     'almirah': '/logo/almirah logo.png',
     'batik-studio': '/logo/batik studio logo.jpg',
-    'bloon': '/logo/bloon logo.jpg',
+    'bloon': '/logo/bloon.jpg',
     'bonanza': '/logo/bonanza satrangi logo.jpg',
     'breakout': '/logo/Breakout logo.png',
     'cambridge': '/logo/cambridge logo.jpg',
@@ -89,79 +89,81 @@ const getStoreLogo = (slug?: string): string | null => {
     'spicefactory': '/logo/spice factory logo.jpg',
     'chinagrill': '/logo/china grill logo.jpg',
     'kababjees': '/logo/kabab jees logo.jpg',
+    'bonanza satrangi': '/logo/bonanza satrangi.jpg'
   };
 
   return logoMap[slug] || null;
 };
 
 // Store Card Component with image error handling
-const StoreCard = ({ store, basePath, logoPath }: { store: Store; basePath: string; logoPath: string | null }) => {
-  const [imageError, setImageError] = useState(false);
+// Currently unused - component uses inline JSX instead
+// const StoreCard = ({ store, basePath, logoPath }: { store: Store; basePath: string; logoPath: string | null }) => {
+//   const [imageError, setImageError] = useState(false);
 
-  return (
-    <Link
-      href={`${basePath}/${store.slug || store.name.toLowerCase().replace(/\s+/g, '-')}`}
-      style={{ textDecoration: 'none' }}
-    >
-      <Box
-        sx={{
-          position: 'relative',
-          aspectRatio: '1 / 1',
-          border: '1px solid #e0e0e0',
-          borderRadius: '4px',
-          backgroundColor: '#ffffff',
-          transition: 'all 0.3s ease',
-          cursor: 'pointer',
-          overflow: 'hidden',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          '&:hover': {
-            borderColor: '#D19F3B',
-            transform: 'translateY(-2px)',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-          }
-        }}
-      >
-        {logoPath && !imageError ? (
-          <Image
-            src={logoPath}
-            alt={store.name}
-            fill
-            sizes="(max-width: 600px) 50vw, (max-width: 960px) 33vw, (max-width: 1280px) 25vw, 20vw"
-            loading="lazy"
-            quality={75}
-            style={{
-              objectFit: 'contain',
-              padding: '12px'
-            }}
-            onError={() => setImageError(true)}
-          />
-        ) : (
-          <Typography
-            className="store-name"
-            sx={{
-              fontFamily: '"Arvo", serif',
-              fontSize: { xs: '2rem', sm: '2.25rem', md: '2.5rem', lg: '6rem' },
-              color: '#333333',
-              fontWeight: 400,
-              lineHeight: 1,
-              transition: 'color 0.3s ease',
-              textAlign: 'center',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: '100%',
-              height: '100%'
-            }}
-          >
-            {store.name.charAt(0).toUpperCase()}
-          </Typography>
-        )}
-      </Box>
-    </Link>
-  );
-};
+//   return (
+//     <Link
+//       href={`${basePath}/${store.slug || store.name.toLowerCase().replace(/\s+/g, '-')}`}
+//       style={{ textDecoration: 'none' }}
+//     >
+//       <Box
+//         sx={{
+//           position: 'relative',
+//           aspectRatio: '1 / 1',
+//           border: '1px solid #e0e0e0',
+//           borderRadius: '4px',
+//           backgroundColor: '#ffffff',
+//           transition: 'all 0.3s ease',
+//           cursor: 'pointer',
+//           overflow: 'hidden',
+//           display: 'flex',
+//           alignItems: 'center',
+//           justifyContent: 'center',
+//           '&:hover': {
+//             borderColor: '#D19F3B',
+//             transform: 'translateY(-2px)',
+//             boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+//           }
+//         }}
+//       >
+//         {logoPath && !imageError ? (
+//           <Image
+//             src={logoPath}
+//             alt={store.name}
+//             fill
+//             sizes="(max-width: 600px) 50vw, (max-width: 960px) 33vw, (max-width: 1280px) 25vw, 20vw"
+//             loading="lazy"
+//             quality={75}
+//             style={{
+//               objectFit: 'contain',
+//               padding: '12px'
+//             }}
+//             onError={() => setImageError(true)}
+//           />
+//         ) : (
+//           <Typography
+//             className="store-name"
+//             sx={{
+//               fontFamily: '"Arvo", serif',
+//               fontSize: { xs: '2rem', sm: '2.25rem', md: '2.5rem', lg: '6rem' },
+//               color: '#333333',
+//               fontWeight: 400,
+//               lineHeight: 1,
+//               transition: 'color 0.3s ease',
+//               textAlign: 'center',
+//               display: 'flex',
+//               alignItems: 'center',
+//               justifyContent: 'center',
+//               width: '100%',
+//               height: '100%'
+//             }}
+//           >
+//             {store.name.charAt(0).toUpperCase()}
+//           </Typography>
+//         )}
+//       </Box>
+//     </Link>
+//   );
+// };
 
 // Sample store data - in a real app, this would come from an API
 const defaultStores: Store[] = [
@@ -246,7 +248,7 @@ const defaultStores: Store[] = [
   { name: 'FPL', slug: 'fpl'},
   { name: 'Goshes', slug: 'goshes'},
   { name: 'Gulzari', slug: 'gulzari'},
-  { name: 'Haseen', slug: 'haseen'},
+  { name: 'Haseen Jewelers', slug: 'haseen-jewelers'},
   { name: 'Hopscotch', slug: 'hopscotch'},
   { name: 'Hub', slug: 'hub'},
   { name: 'Hunza Emporium', slug: 'hunza-emporium'},
@@ -257,16 +259,123 @@ const defaultStores: Store[] = [
   { name: 'Jc Buckman', slug: 'jc-buckman'},
   { name: 'Juice Fruity', slug: 'juice-fruity'},
   { name: 'Julke', slug: 'julke'},
-  { name: '', slug: ''},
-  { name: '', slug: ''},
-  { name: '', slug: ''},
-  { name: '', slug: ''},
-  { name: '', slug: ''},
-  { name: '', slug: ''},
-  { name: '', slug: ''},
-  { name: '', slug: ''},
-  { name: '', slug: ''},
-  { name: '', slug: ''},
+  { name: 'KefDiamonds', slug: 'kef-diamonds'},
+  { name: 'Khadi', slug: 'khadi'},
+  { name: 'Khusa Factory', slug: 'khusa-factory'},
+  { name: 'King Corn', slug: 'king-corn'},
+  { name: 'Lady Privacy', slug: 'lady-privacy'},
+  { name: 'Limelite', slug: 'limelite'},
+  { name: 'Lullusar', slug: 'lullusar'},
+  { name: 'Maria B 2', slug: 'maria-b-2'},
+  { name: 'Maria B 3', slug: 'maria-b-3'},
+  { name: 'Maybelline', slug: 'maybelline'},
+  { name: 'Miracle', slug: 'miracle'},
+  { name: 'Mocciani', slug: 'mocciani'},
+  { name: 'Monark', slug: 'monark'},
+  { name: 'MTJ Fragrance', slug: 'mtj-fragrance'},
+  { name: 'Nizam Watch House', slug: 'nizam-watch-house'},
+  { name: 'Pop Nosh', slug: 'pop-nosh'},
+  { name: 'Rivaj', slug: 'rivaj'},
+  { name: 'Royal Tag', slug: 'royal-tag'},
+  { name: 'Sapphire0', slug: 'sapphire'},
+  { name: 'Saya', slug: 'saya'},
+  { name: 'Scents and Stories', slug: 'scents-and-stories'},
+  { name: 'Sketchers', slug: 'sketcher'},
+  { name: 'Sona Chandi', slug: 'sona-chandi'},
+  { name: 'Speed Sports', slug: 'speed-sports'},
+  { name: 'Style in Shoes', slug: 'style-in-shoes'},
+  { name: 'Svesto', slug: 'svesto'},
+  { name: 'Swarovski', slug: 'swarovski'},
+  { name: 'Syed Royal Optics', slug: 'syed-royal-optics'},
+  { name: 'Tagheuer', slug: 'tagheuer'},
+  { name: 'Tayyab Jewelers', slug: 'tayyab-jewelers'},
+  { name: 'Tessoro', slug: 'tessoro'},
+  { name: 'The Body Shop', slug: 'the-body-shop'},
+  { name: 'Tim Hortins', slug: 'tim-hortins'},
+  { name: 'Ultra Club', slug: 'ultra-club'},
+  { name: 'Wasim Badami by Hemani', slug: 'wasim-badami-by-hemani'},
+  { name: 'Zero', slug: 'zero'},
+  { name: 'Ashraf Naturals', slug: 'ashraf-naturals'},
+  { name: 'Asian Fusion', slug: 'asian-fusion'},
+  { name: 'Corn Station', slug: 'corn-station'},
+  { name: 'F Optical and Watch', slug: 'f-optical-and-watch'},
+  { name: 'Foot and Leather', slug: 'foot-and-leather'},
+  { name: 'H n H Decor', slug: 'h-n-h-decor'},
+  { name: 'IMC', slug: 'imc'},
+  { name: 'Kapok', slug: 'kapok'},
+  { name: 'King Coffee', slug: 'king-coffee'},
+  { name: 'Melon Box', slug: 'melon-box'},
+  { name: 'Mi', slug: 'mi'},
+  { name: 'Mr Game', slug: 'mr-game'},
+  { name: 'Pound Store', slug: 'pound-store'},
+  { name: 'Rohi Reet', slug: 'rohi-reet'},
+  { name: 'Silver Stition', slug: 'silver-stition'},
+  { name: 'Sport Snation', slug: 'sport-snation'},
+  { name: 'Sweet and Salt', slug: 'sweet-and-salt'},
+  // first floor
+  { name: 'Abc Fragrance', slug: 'abc-fragrance'},
+  { name: 'Alkaram', slug: 'alkaram'},
+  { name: 'Almas', slug: 'almas'},
+  { name: 'AMD', slug: 'amd'},
+  { name: 'Amir', slug: 'amir'},
+  { name: 'Bareeze', slug: 'bareeze'},
+  { name: 'Batik', slug: 'batik'},
+  { name: 'Beech Tree', slug: 'beech-tree'},
+  { name: 'Bonanza Satrangi Beauty', slug: 'bonanza-satrangi-beauty'},
+  { name: 'Borjan', slug: 'borjan'},
+  { name: 'Brackets', slug: 'brackets'},
+  { name: 'Cambridge', slug: 'cambridge'},
+  { name: 'Charizma', slug: 'charizma'},
+  { name: 'Chinyere', slug: 'chinyere'},
+  { name: 'Chunri', slug: 'chunri'},
+  { name: 'Corio', slug: 'corio'},
+  { name: 'Dinners', slug: 'dinners'},
+  { name: 'Dynasty', slug: 'dynasty'},
+  { name: 'ECS', slug: 'ecs'},
+  { name: 'Edenrobe', slug: 'edenrobe'},
+  { name: 'Eklairs', slug: 'eklairs'},
+  { name: 'Elegant', slug: 'elegant'},
+  { name: 'Excel', slug: 'excel'},
+  { name: 'Frutastic', slug: 'frutastic'},
+  { name: 'Furor', slug: 'furor'},
+  { name: 'Generation', slug: 'generation'},
+  { name: 'Gloria Jeans', slug: 'gloria-jeans'},
+  { name: 'Hi Volts', slug: 'hi-volts'},
+  { name: 'Ideas', slug: 'ideas'},
+  { name: 'Islamic Honey Center', slug: 'islamic-honey-center'},
+  { name: 'Jiyas creation', slug: 'jiyas-creation'},
+  { name: 'Junaid Jamshed', slug: 'junaid-jamshed'},
+  { name: 'Kayseria', slug: 'kayseria'},
+  { name: 'Lawrancepur', slug: 'lawrancepur'},
+  { name: 'Little People', slug: 'little-people'},
+  { name: 'Logo', slug: 'logo'},
+  { name: 'M/Basic', slug: 'm-basic'},
+  { name: 'Maria B', slug: 'maria-b'},
+  { name: 'Minnie Mirrors', slug: 'minnie-mirrors'},
+  { name: 'Mona', slug: 'mona'},
+  { name: 'Nakoosh', slug: 'nakoosh'},
+  { name: 'Nishat', slug: 'nishat'},
+  { name: 'Oaks', slug: 'oaks'},
+  { name: 'One', slug: 'one'},
+  { name: 'Out Fitters', slug: 'out-fitters'},
+  { name: 'Potato Factory', slug: 'potato-factory'},
+  { name: 'Revolution London', slug: 'revolution-london'},
+  { name: 'RTH', slug: 'rth'},
+  { name: 'Sana Safinaz', slug: 'sana-safinaz'},
+  { name: 'Siraj Sons Silver Shop', slug: 'siraj-sons-silver-shop'},
+  { name: 'Sohaye', slug: 'sohaye'},
+  { name: 'Sowearg', slug: 'sowearg'},
+  { name: 'Stylo', slug: 'stylo'},
+  { name: 'Swiss Arabia', slug: 'swiss-arabia'},
+  { name: 'Threads and Motys', slug: 'threads-and-motys'},
+  { name: 'Tiny Years', slug: 'tiny-years'},
+  { name: 'Toy Club', slug: 'toy-club'},
+  { name: 'Umaiza', slug: 'umaiza'},
+  { name: 'Uniworth', slug: 'uniworth'},
+  { name: 'Unze', slug: 'unze'},
+  { name: 'Vereity Bags and Costmetics', slug: 'vereity-bags-and-costmetics'},
+  { name: 'Zeen', slug:'zeen'},
+  { name: 'Zubaidas', slug:'zubaidas'},
 ];
 
 // Helper function to check if a name matches viewBy filter
@@ -490,7 +599,7 @@ const StoreGrid = ({ items = defaultStores, basePath = '/shop' }: StoreGridProps
                     key={index}
                     href={`${basePath}/${store.slug || store.name.toLowerCase().replace(/\s+/g, '-')}`}
                     style={{ textDecoration: 'none' }}
-                    onClick={(e) => {
+                    onClick={() => {
                       // Preserve the URL parameters when navigating to store page
                       const params = new URLSearchParams(searchParams.toString());
                       const currentUrl = `${window.location.pathname}?${params.toString()}`;

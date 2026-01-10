@@ -99,19 +99,19 @@ const ContactSection = () => {
           <Box
             sx={{
               position: 'relative',
+              overflow: 'hidden',
               backgroundColor: '#ffffff',
               padding: { xs: '32px 24px', sm: '40px 32px', md: '48px 40px' },
               borderRadius: '8px',
               boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
               border: '1px solid rgba(209, 159, 59, 0.1)',
               transition: 'all 0.3s ease',
-              overflow: 'hidden',
               '&:hover': {
                 boxShadow: '0 8px 30px rgba(0, 0, 0, 0.12)',
               },
             }}
           >
-            {/* Gradient background matching footer */}
+            {/* Decorative gradient background - matching footer */}
             <Box
               sx={{
                 position: 'absolute',
@@ -126,28 +126,31 @@ const ContactSection = () => {
                 backgroundBlendMode: 'soft-light, normal',
               }}
             />
-            <Box sx={{ position: 'relative', zIndex: 1 }}>
-              <Typography
-                sx={{
-                  fontFamily: '"Arvo", serif',
-                  fontWeight: 400,
-                  fontSize: { xs: '24px', sm: '26px', md: '28px' },
-                  color: '#D19F3B',
-                  marginBottom: { xs: 3, md: 4 },
-                  letterSpacing: '0.02em',
-                }}
-              >
-                Get in Touch
-              </Typography>
-              <Box
-                component="form"
-                onSubmit={handleSubmit}
-                sx={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: { xs: 2.5, md: 3 },
-                }}
-              >
+            <Typography
+              sx={{
+                position: 'relative',
+                zIndex: 1,
+                fontFamily: '"Arvo", serif',
+                fontWeight: 400,
+                fontSize: { xs: '24px', sm: '26px', md: '28px' },
+                color: '#D19F3B',
+                marginBottom: { xs: 3, md: 4 },
+                letterSpacing: '0.02em',
+              }}
+            >
+              Get in Touch
+            </Typography>
+            <Box
+              component="form"
+              onSubmit={handleSubmit}
+              sx={{
+                position: 'relative',
+                zIndex: 1,
+                display: 'flex',
+                flexDirection: 'column',
+                gap: { xs: 2.5, md: 3 },
+              }}
+            >
               <TextField
                 name="name"
                 label="Name"
@@ -340,7 +343,6 @@ const ContactSection = () => {
                 Send Message
               </Button>
               </Box>
-            </Box>
 
             {/* Leasing Query Section */}
             <Box
@@ -401,20 +403,20 @@ const ContactSection = () => {
             <Box
               sx={{
                 position: 'relative',
+                overflow: 'hidden',
                 padding: { xs: '28px', sm: '32px', md: '36px' },
                 backgroundColor: '#ffffff',
                 borderRadius: '8px',
                 border: '1px solid rgba(209, 159, 59, 0.1)',
                 boxShadow: '0 2px 12px rgba(0, 0, 0, 0.06)',
                 transition: 'all 0.3s ease',
-                overflow: 'hidden',
                 '&:hover': {
                   boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)',
                   borderColor: 'rgba(209, 159, 59, 0.3)',
                 },
               }}
             >
-              {/* Gradient background matching footer */}
+              {/* Decorative gradient background - matching footer */}
               <Box
                 sx={{
                   position: 'absolute',
@@ -429,9 +431,10 @@ const ContactSection = () => {
                   backgroundBlendMode: 'soft-light, normal',
                 }}
               />
-              <Box sx={{ position: 'relative', zIndex: 1 }}>
-                <Typography
+              <Typography
                 sx={{
+                  position: 'relative',
+                  zIndex: 1,
                   fontFamily: '"Arvo", serif',
                   fontWeight: 400,
                   fontSize: { xs: '24px', sm: '26px', md: '28px' },
@@ -443,7 +446,7 @@ const ContactSection = () => {
                 Contact Information
               </Typography>
 
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 2.5, md: 3 } }}>
+              <Box sx={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', gap: { xs: 2.5, md: 3 } }}>
                 {/* Phone */}
                 <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
                   <Box
@@ -587,21 +590,34 @@ const ContactSection = () => {
                     >
                       Address
                     </Typography>
-                    <Typography
-                      sx={{
-                        fontFamily: '"Quicksand", sans-serif',
-                        fontSize: { xs: '15px', sm: '16px' },
-                        color: '#333333',
-                        lineHeight: 1.7,
-                        fontWeight: 500,
-                      }}
-                    >
-                      Giga City, DHA Phase 5<br />
-                      Islamabad, Pakistan
-                    </Typography>
+                    <Box>
+                      <Typography
+                        sx={{
+                          fontFamily: '"Quicksand", sans-serif',
+                          fontSize: { xs: '15px', sm: '16px' },
+                          color: '#333333',
+                          lineHeight: 1.7,
+                          fontWeight: 500,
+                          display: 'block',
+                        }}
+                      >
+                        Giga City, DHA Phase 5
+                      </Typography>
+                      <Typography
+                        sx={{
+                          fontFamily: '"Quicksand", sans-serif',
+                          fontSize: { xs: '15px', sm: '16px' },
+                          color: '#333333',
+                          lineHeight: 1.7,
+                          fontWeight: 500,
+                          display: 'block',
+                        }}
+                      >
+                        Islamabad, Pakistan
+                      </Typography>
+                    </Box>
                   </Box>
                 </Box>
-              </Box>
               </Box>
             </Box>
 
@@ -609,15 +625,15 @@ const ContactSection = () => {
             <Box
               sx={{
                 position: 'relative',
+                overflow: 'hidden',
                 padding: { xs: '24px', sm: '28px' },
                 backgroundColor: '#ffffff',
                 borderRadius: '8px',
                 border: '1px solid rgba(209, 159, 59, 0.1)',
                 boxShadow: '0 2px 12px rgba(0, 0, 0, 0.06)',
-                overflow: 'hidden',
               }}
             >
-              {/* Gradient background matching footer */}
+              {/* Decorative gradient background - matching footer */}
               <Box
                 sx={{
                   position: 'absolute',
@@ -632,9 +648,10 @@ const ContactSection = () => {
                   backgroundBlendMode: 'soft-light, normal',
                 }}
               />
-              <Box sx={{ position: 'relative', zIndex: 1 }}>
-                <Typography
+              <Typography
                 sx={{
+                  position: 'relative',
+                  zIndex: 1,
                   fontFamily: '"Arvo", serif',
                   fontWeight: 400,
                   fontSize: { xs: '18px', sm: '20px' },
@@ -645,7 +662,7 @@ const ContactSection = () => {
               >
                 Opening Hours
               </Typography>
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 1.5, md: 2 } }}>
+              <Box sx={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', gap: { xs: 1.5, md: 2 } }}>
                 <Box>
                   <Typography
                     sx={{
@@ -691,22 +708,21 @@ const ContactSection = () => {
                   </Typography>
                 </Box>
               </Box>
-              </Box>
             </Box>
 
             {/* Social Media */}
             <Box
               sx={{
                 position: 'relative',
+                overflow: 'hidden',
                 padding: { xs: '24px', sm: '28px' },
                 backgroundColor: '#ffffff',
                 borderRadius: '8px',
                 border: '1px solid rgba(209, 159, 59, 0.1)',
                 boxShadow: '0 2px 12px rgba(0, 0, 0, 0.06)',
-                overflow: 'hidden',
               }}
             >
-              {/* Gradient background matching footer */}
+              {/* Decorative gradient background - matching footer */}
               <Box
                 sx={{
                   position: 'absolute',
@@ -721,9 +737,10 @@ const ContactSection = () => {
                   backgroundBlendMode: 'soft-light, normal',
                 }}
               />
-              <Box sx={{ position: 'relative', zIndex: 1 }}>
-                <Typography
+              <Typography
                 sx={{
+                  position: 'relative',
+                  zIndex: 1,
                   fontFamily: '"Arvo", serif',
                   fontWeight: 400,
                   fontSize: { xs: '18px', sm: '20px' },
@@ -734,7 +751,7 @@ const ContactSection = () => {
               >
                 Follow Us
               </Typography>
-              <Box sx={{ display: 'flex', flexDirection: 'row', gap: 2.5, alignItems: 'center' }}>
+              <Box sx={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'row', gap: 2.5, alignItems: 'center' }}>
                 <Link
                   href="#"
                   sx={{
@@ -801,7 +818,6 @@ const ContactSection = () => {
                 >
                   <Twitter sx={{ fontSize: { xs: '20px', sm: '22px' } }} />
                 </Link>
-              </Box>
               </Box>
             </Box>
           </Box>
